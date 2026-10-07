@@ -26,29 +26,48 @@ Once state detection is reliable, expose those values as user-facing sliders.
 ```text
 .
 ├── AGENTS.md
-├── src/                  # Our mod source only
-├── reference/            # Local copies of existing mods for research; ignored by Git
+├── src/                          # Our mod source only
+├── reference/                    # Local research copies; extracted files ignored by Git
 │   ├── only-story-music/
+│   │   ├── story-only/
+│   │   ├── story-gwent-tavern/
+│   │   ├── story-combat/
+│   │   └── story-exploration/
 │   ├── less-is-more/
 │   └── fmc-audio-remaster/
-├── research/             # Tracing notes, findings, hypotheses, symbol maps
-├── tools/                # Project-local helper scripts
-├── build/                # Generated build output; ignored by Git
-└── deploy/               # Generated ready-to-install output; ignored by Git
+├── research/                     # Tracing notes, findings, hypotheses, symbol maps
+├── tools/                        # Project-local helper scripts
+├── build/                        # Generated build output; ignored by Git
+└── deploy/                       # Generated ready-to-install output; ignored by Git
 ```
 
 ## Reference mods
 
-Download and extract the archive contents directly into the corresponding folder while preserving each archive's internal hierarchy:
+Download the reference archives manually and extract each archive into its matching folder while preserving the archive's internal hierarchy.
 
-1. `reference/only-story-music/`
-   - Primary reference for how Remastered separates ordinary music from story/quest music.
-2. `reference/less-is-more/`
-   - Primary reference for runtime state handling in Remastered.
-3. `reference/fmc-audio-remaster/`
-   - Reference for contextual exploration/combat/dialogue volume controls.
+### Only Story Music
 
-The contents of these folders are intentionally ignored by Git. Only the small README placeholder in each folder is tracked.
+Download all four current Remastered variants and keep them separate:
+
+1. `reference/only-story-music/story-only/`
+   - Baseline: story music only.
+2. `reference/only-story-music/story-gwent-tavern/`
+   - Diff against the baseline to isolate Gwent/tavern-specific changes.
+3. `reference/only-story-music/story-combat/`
+   - Diff against the baseline to isolate combat-specific changes.
+4. `reference/only-story-music/story-exploration/`
+   - Diff against the baseline to isolate exploration-specific changes.
+
+The four-way comparison is especially useful because it turns the mod into a controlled differential reference: files/settings that differ between the baseline and one variant are evidence for that music category.
+
+### Other references
+
+- `reference/less-is-more/`
+  - Primary reference for runtime state handling in Remastered.
+- `reference/fmc-audio-remaster/`
+  - Reference for contextual exploration/combat/dialogue volume controls.
+
+Third-party extracted files are intentionally ignored by Git. Only the small guidance READMEs are tracked.
 
 ## Toolchain
 

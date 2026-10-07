@@ -1,11 +1,20 @@
 # Reference mods
 
-These folders are for local research copies of existing mods. Their contents are ignored by Git and must not be redistributed through this repository.
+These folders are for local research copies of existing mods. Their extracted contents are ignored by Git and must not be redistributed through this repository.
 
-After cloning, download each mod yourself and extract the archive contents directly into the matching folder, preserving the archive's internal structure:
+After cloning, download each reference manually and extract each archive into its matching folder while preserving the archive's internal structure.
 
-- `only-story-music/`
-- `less-is-more/`
-- `fmc-audio-remaster/`
+```text
+reference/
+├── only-story-music/
+│   ├── story-only/
+│   ├── story-gwent-tavern/
+│   ├── story-combat/
+│   └── story-exploration/
+├── less-is-more/
+└── fmc-audio-remaster/
+```
 
-The tracked README in each subfolder explains what that reference is primarily useful for.
+For **Only Story Music**, download all four current Remastered variants rather than choosing one. Keeping them separate allows direct differential analysis of which files/settings correspond to exploration, combat, and Gwent/tavern music.
+
+The tracked README in each folder explains the main research question for that reference.

@@ -46,9 +46,10 @@ Before substantial implementation:
 2. Trace the path from those states into music control.
 3. Identify music-related WitcherScript managers, events, callbacks and native calls.
 4. Identify relevant Wwise events, states, switches and RTPCs if exposed.
-5. Compare the three reference mods and record which layer each one modifies.
-6. Determine the smallest stable hook point for contextual volume multipliers.
-7. Only then implement a minimal prototype.
+5. Differentially compare the four Only Story Music variants before inferring category-specific behaviour.
+6. Compare those results with Less Is More and FMC Audio Remaster, and record which layer each mod modifies.
+7. Determine the smallest stable hook point for contextual volume multipliers.
+8. Only then implement a minimal prototype.
 
 Record findings under `research/` with exact file paths, class/function names, and enough context to reproduce the conclusion.
 
@@ -81,9 +82,27 @@ Third-party reference files live under `reference/` and are intentionally ignore
 
 Treat them as read-only evidence. Do not edit them, redistribute their files, or copy large bodies of their code into this repository. When useful, describe mechanisms and cite exact local paths/symbols in research notes.
 
-Reference roles:
+### Only Story Music differential set
 
-- `reference/only-story-music/`: strongest reference for ordinary vs story/quest music separation
+Use these as a controlled comparison, not as four unrelated mods:
+
+- `reference/only-story-music/story-only/` — baseline
+- `reference/only-story-music/story-gwent-tavern/` — baseline + Gwent/tavern
+- `reference/only-story-music/story-combat/` — baseline + combat
+- `reference/only-story-music/story-exploration/` — baseline + exploration
+
+For each variant:
+
+1. Inventory files and sizes.
+2. Diff text/config/script files directly where possible.
+3. Identify files present only in one variant.
+4. For binary resources, compare paths, hashes and metadata before attempting deeper decoding.
+5. Record category-specific differences under `research/` and distinguish observed facts from inferred meaning.
+
+A difference between the baseline and one variant is evidence for that category, but not automatically proof of its semantic role. Verify against current vanilla/REDkit resources.
+
+### Other reference roles
+
 - `reference/less-is-more/`: strongest reference for runtime state handling in Remastered
 - `reference/fmc-audio-remaster/`: reference for separate exploration/combat/dialogue volume controls
 
