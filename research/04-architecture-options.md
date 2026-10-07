@@ -1,80 +1,101 @@
 # Architecture options and prototype recommendation
 
-## Evidence boundary
+## Revised requirement and conclusion
 
-The current Remastered script already classifies several contexts and sends a Wwise `game_state`. The current REDkit Wwise project has state-specific Music-bus volume overrides, but no exposed vanilla contextual volume parameters. The two reference styles therefore demonstrate different layers:
+Exploration/traversal, generic dialogue, and combat music need independent multipliers, initially 0%, 0%, and 100%. Explicitly authored quest/story music during dialogue **or gameplay** must retain a 100% multiplier. Cutscene/movie/music-only music must also retain a 100% multiplier. These multipliers must sit above the user's normal music setting and preserve authored fades and native movie/loading behavior.
 
-- Only Story Music and Less Is More alter `engine/sound.ws` state-to-string behaviour.
-- FMC uses local menu wrappers plus custom Wwise resources and global parameters.
+**Observed fact:** gameplay context and music provenance are separate selectors. `game_state` represents exploration/dialogue/combat/cutscene context; `music_type` selects regional `world_music` versus `quests_and_cutscenes`. The detailed GUID-resolved trace is in [03-vanilla-music-path.md](03-vanilla-music-path.md), including exact local paths and line references.
 
-Claims below are labelled by evidence. “Observed” means directly present in the cited local files; “inference” connects those facts; “hypothesis” requires runtime/compiler testing.
+**Inference:** a common Music-bus dialogue mute cannot satisfy the requirement. A state-only suppression copied from Only Story Music is also insufficient: six quest-branch containers use `game_state`, so blanking exploration/dialogue can deselect intentionally authored music. The strongest structural mix boundary is the regional `world_music` ancestor, with the quest branch left intact.
 
-## Working state matrix
+## Working matrix
 
-| Context | Desired prototype volume | Observed engine signal | Reference evidence | Confidence / open problem |
-|---|---:|---|---|---|
-| Exploration / traversal | 0% | `ESGS_Exploration` / `ESGS_ExplorationNight` from `CollectSoundStates` | Only Story Music exploration variant; Less Is More | High signal confidence; volume routing still unverified |
-| Ordinary dialogue | 0% | `ESGS_Dialog` / `ESGS_DialogNight` from `CStoryScenePlayer.Blocking` | Only Story Music exploration variant; vanilla scene player | High for authored blocking scenes; player-control dialogue needs trace |
-| Cinematic / story | 100% | `ESGS_Cutscene`, `ESGS_Movie`, or `ESGS_MusicOnly` | vanilla scene player and Wwise state group | High state separation; authored quest music outside scenes remains open |
-| Combat | 100% | `ShouldEnableCombatMusic()` → combat enum | vanilla `r4Player.ws`; Only Story Music combat variant | High classifier evidence; scripted combat precedence needs trace |
-| Quest gameplay / scripted sequence | TBD | explicit `EnterGameState(soundState)` is available | `quest_function.ws:4521-4524` | Low until representative quests are traced |
-| Tavern / bard / diegetic | TBD | emitter/entity and bank path, not necessarily global state | Less Is More inn/bard scan; REDkit music emitters | Low; must keep separate from global interactive music |
-| Gwent | TBD | explicit `ESGS_Gwent` | `gwintGameMenu.ws`, `deckBuilderMenu.ws`, Wwise `game_state` | High signal confidence; desired policy not chosen |
+| Music origin / context | Default multiplier | Signal / boundary | Confidence and limitation |
+|---|---:|---|---|
+| World music / exploration | 0% | `music_type=world_music`, exploration/focus/boat/underwater context | Structural boundary observed; traversal policy needs tests |
+| World music / generic dialogue | 0% | world branch plus `dialog_scene` / `dialog_scene_night` | Can be the same media as exploration |
+| World music / combat | 100% | world branch plus combat enum membership | Use vanilla music classifier; do not replace it with only `IsInCombat` |
+| Quest/story music / dialogue or gameplay | 100% | `quests_and_cutscenes` branch, regardless of gameplay enum | Strong protection boundary; not proof of audible cue activity |
+| Cutscene/movie/music-only | 100% | retain native routing; no additional attenuation | Movie has native Music-bus mute; preserve it |
+| Quest-specific locations within world music | preserve if explicitly authored | container/event-specific evidence still needed | Branch naming is not a perfect author-intent classification |
+| Gwent / bard / diegetic | policy unresolved | Gwent state; separate emitter paths | Do not silently treat as ordinary dialogue |
+
+Evidence root for Wwise citations below: `L:\Games\Steam\steamapps\common\The Witcher 3 REDkit\assets\w3_audio\`. Script citations use `C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\content\content0\scripts\`.
 
 ## A. Pure WitcherScript contextual mixer
 
-**Mechanism:** observe accepted `ESoundGameState` transitions at the central sound-system path and apply hard-coded or configurable values through existing script calls, while leaving banks/assets unchanged. Candidate observation points are `SoundGameStateChange`, `EnterGameState`, and `GameStateToString` in `engine/sound.ws`.
+**Mechanism:** observe gameplay sound-state changes and use only existing native script controls, with no audio-resource changes.
 
-**Supporting evidence:** `SoundGameStateChange` is the central function that calls `SoundState("game_state", ...)` (`C:\Program Files (x86)\Steam\steamapps\common\The Witcher 3\content\content0\scripts\engine\sound.ws:156-190`). The enum already separates exploration, combat, dialog, cutscene, movie, Gwent, and underwater states (`sound.ws:6-29`). FMC shows that `SoundGlobalParameter` calls are available from local script (`reference/fmc-audio-remaster/mods/modFMCAudioRemaster/content/scripts/local/FMCAudio.ws:15-18`).
+**Supporting evidence:** `engine/sound.ws:156-190` centrally maps an accepted enum transition to `SoundState("game_state", ...)`; `:78-93` exposes event, switch, parameter, save, and debug operations. Only Story Music demonstrates state-string filtering. `SoundEventScene` and `SoundEventQuest` dispatch separate events (`game/scenes/scene_functions.ws:6-18`, `game/quests/quest_function.ws:1893-1905`).
 
-**Contexts:** strong for the existing global states; weaker for diegetic tavern/bard music, quest-specific cues, and dialogue that does not create a blocking scene state.
+**Contexts it can distinguish:** the gameplay enum distinguishes ordinary blocking dialogue from cutscene/movie, but cannot distinguish generic and authored music when both play during dialogue. An event log can recognize requests by resolved switch targets; it cannot establish actual current playback without further native information.
 
-**Compatibility/conflict risk:** low only if a narrow local override is supported. High if it requires replacing `engine/sound.ws`, as in Only Story Music and Less Is More. Calling a nonexistent global parameter would fail silently or do nothing; vanilla does not expose contextual volume parameters.
+**Compatibility/conflict risk:** a local context logger could have a small footprint if wrapping is supported. A full engine-script replacement has high merge risk. Manipulating the global game state affects six authored quest selectors. Applying `menu_volume_music` globally would attenuate both branches.
 
-**Complexity:** low for a logger; medium for a working mixer; high if a new native/Wwise parameter is assumed without resource support.
+**Complexity:** low for diagnostics; unresolved for a complete mixer. No existing script-visible authored-cue-active getter or generic-only volume control was verified.
 
-**Failure modes:** misclassifying threat as combat; suppressing authored quest music; losing state after load/black screen; overriding movie/music-only transitions; changing a global state without changing the Music-bus volume.
+**Failure modes:** authored cues muted during dialogue; state-dependent quest cues deselected; last-event flags stale after silent cues, cue completion, root stops, native dispatch, or save replay. Prefixes misclassify return/location events.
 
-**Unresolved:** whether Remastered scope/local syntax can wrap the private transition method; whether an existing native global parameter can be repurposed safely; whether `SoundGlobalParameter` affects the vanilla Music bus without a custom bank.
+**Unresolved questions:** local wrapper support for private/imported sound methods; complete event interception; availability of a generic-only native parameter or a playback query. A pure script solution is not established for the revised requirement.
 
 ## B. Audio/Wwise-resource approach
 
-**Mechanism:** add or edit Wwise state/bus/RTPC routing so the existing `game_state` values drive contextual volume, or add global parameters such as FMC's `fmc_explorationMusic`, `fmc_combatMusic`, and `fmc_dialogueMusic`.
+**Mechanism:** leave both selectors unchanged. Apply configurable gain to the eight regional `world_music` ancestors through a container-level RTPC or a correctly routed dedicated generic-music bus. Use gameplay state only inside that branch to select exploration/dialogue/combat gains. Leave `quests_and_cutscenes` at multiplier 100%.
 
-**Supporting evidence:** `States/global_states.wwu` defines the state group and transitions; `Master-Mixer Hierarchy/Default Work Unit.wwu:9136-9328` shows the Music bus with state-specific volume overrides and `menu_volume_music` RTPC; FMC ships a replacement `Init.bnk` and `soundspc.cache` and sets its custom global parameters from script.
+**Supporting evidence:** `Switches/switches.wwu:434-439` supplies the music-type split; prologue root entries at `Interactive Music Hierarchy/music.wwu:139843-139887` select sibling world/quest branches. An XML-wide GUID audit resolves 1,630 world AudioNode entries within the world branch and 734 quest entries within the quest branch. The generic prologue and NML selectors map dialogue and exploration to the same playlist (`:124764-124835`, `:269387-269440`). The existing Music bus at `Master-Mixer Hierarchy/Default Work Unit.wwu:9136-9328` has state volumes and the user-volume RTPC.
 
-**Contexts:** strong for every context represented by `game_state`; can preserve cinematic overrides and support independent multipliers. It still cannot automatically classify a diegetic bard or authored quest cue unless those resources/events are separately routed.
+**Contexts it can distinguish:** the structural split protects quest cues during any gameplay context, including the six state-dependent quest containers. It can independently attenuate generic dialogue and exploration without listing individual media. It cannot automatically decide author intent for special quest/location music routed under world music.
 
-**Compatibility/conflict risk:** high. A custom `Init.bnk`/cache or Wwise project change can conflict with other audio mods and game updates. The reference FMC replacement demonstrates the footprint.
+**Compatibility/conflict risk:** resource generation/packaging may conflict with other audio mods. Container-level gain avoids rerouting buses but still changes bank content; a new bus requires explicit correct output overrides. Neither path has been built or verified.
 
-**Complexity:** high: resource authoring, bank/cache generation, packaging, and version compatibility are required.
+**Complexity:** medium to high. Identify a minimal resource delta, validate inherited gain and transitions, and establish compatible deployment without replacing audio media.
 
-**Failure modes:** wrong bank/platform, missing IDs, stale cache, state transitions with no corresponding routing, volume affecting dialogue/ambience through an incorrectly placed bus, or conflict with another Init/bank replacement.
+**Failure modes:** modifying the common Music bus; changing root state mappings; overwriting user volume; incorrect output inheritance; generic gain applied to authored cue crossfades; omitted regional roots; stale or overly broad bank/cache replacements.
 
-**Unresolved:** whether the available REDkit can safely build only the needed routing; whether the user's target install accepts a minimal bank/cache delta; exact runtime semantics of the custom FMC parameters.
+**Unresolved questions:** minimal bank/init/cache footprint; whether state volume properties suffice for future sliders or a new parameter is necessary; exceptional world-branch quest music; exact movie/main-menu routing. Existing `Master Audio Bus` references inside children must not be mistaken for enabled bus overrides.
 
 ## C. Hybrid approach
 
-**Mechanism:** use a narrow WitcherScript hook only to observe/normalize context and set a small number of Wwise global parameters; keep state selection and smooth volume curves in Wwise. Preserve explicit `cutscene`, `movie`, `music_only`, Gwent, and quest states as higher-priority cases.
+**Mechanism:** a small script hook supplies contextual gain to a Wwise parameter attached **only** within the world branches. Vanilla events continue selecting quest/cutscene cues. The script does not need an authored-cue-active boolean to protect the quest branch. Keep authored quest gains at 100% and do not blank gameplay-state strings.
 
-**Supporting evidence:** the script already provides the context signal and event boundary; Wwise already provides state transitions and state-specific bus volumes; FMC proves the script-to-global-parameter call pattern and resource-backed parameter names.
+**Supporting evidence:** native `SoundGlobalParameter(parameterName, value, optional duration)` exists (`engine/sound.ws:82`). FMC calls custom parameters from local menu wrappers (`C:\Dev\witcher-music-control\reference\fmc-audio-remaster\mods\modFMCAudioRemaster\content\scripts\local\FMCAudio.ws:15-17,151-164`). Current Wwise has the required world/quest topology, but FMC's binaries do not establish that its dialogue parameter protects authored cues.
 
-**Contexts:** best coverage for exploration, combat, ordinary dialogue, and cinematic overrides; can explicitly log and later handle Gwent and quest states. Diegetic music still needs a separate policy.
+**Contexts it can distinguish:** exploration/dialogue/combat are classified by the existing sound state; branch placement supplies provenance. The authored conversation event can select exploration-named media, so keep provenance separate from track labels. Cutscene/movie/music-only receive no added attenuation, while retaining native fades/mutes.
 
-**Compatibility/conflict risk:** medium. It avoids replacing the full sound script but still needs a compatible Wwise resource mechanism. If an existing parameter cannot be reused, the resource footprint becomes closer to option B.
+**Compatibility/conflict risk:** smaller script scope than the full replacements, but resource conflicts remain until a minimal routing delta is verified. Local override support for the selected method remains unknown.
 
-**Complexity:** medium to high, but separable: first validate state detection and hook scope, then validate one parameter and one bus route.
+**Complexity:** medium to high, split into independent context diagnostics and resource gain validation. No UI is needed first.
 
-**Failure modes:** incorrect priority between script parameters and Wwise states; stale parameter values after loading; a parameter routed to the wrong bus; local override not accepted for the sound-system class.
+**Failure modes:** wrong hook ordering; using combined dialogue/cutscene boolean as the whole classifier; gain leaking above the world ancestor; parameter not initialized after load; unsupported wrapper; confusing event request with playing music.
 
-**Unresolved:** the exact supported Remastered override syntax for `CScriptSoundSystem`; whether a parameter can be added without replacing `Init.bnk`; and which Wwise bus receives only interactive music rather than diegetic emitters.
+**Unresolved questions:** supported local hook; safe generated routing footprint; branch-level inheritance in runtime; author-intent exceptions within world music. No parameter name or new API should be assumed until authored and verified.
 
-## Recommendation
+## Robustness of an authored-cue-active signal
 
-Recommend option C as the target architecture, but prototype only its diagnostic half first. Prototype #1 should be a no-UI, no-bank, no-asset diagnostic logger that observes every sound-state transition at the narrowest hook that the Remastered compiler accepts. It should record the enum, mapped Wwise string, previous/current state, whether the state is one of the combat states, whether the game reports a combined dialog/cutscene flag, and the reason for explicit transitions where available. It should not change volume yet.
+`music_type=quests_cutscenes` is a real selected-branch signal. It is not equivalent to audible music: a selected cue can be silent, finished, faded, stopped, or unloaded. The inspected script exposes setters/events/debugging, not a getter for that switch or a current-segment/playing-ID/completion callback. Native `EnableMusicDebug` exists; the content of its output has not been observed.
 
-The prototype test matrix must cover: free exploration day/night; combat start/end and monster hunt; ordinary blocking dialogue with and without player control; scripted walks; authored cutscene; movie/loading screen; combat entered during a quest scene; Gwent; tavern/bard music; pause/menu; black screen; and save/load while a special state is active. The expected result is a transition log that shows whether the global state is stable and whether ordinary dialogue and cinematics are reliably separated.
+A logger around the scene/quest helpers would cover those script requests only. The helpers do not establish coverage of native scene events, restoration, or other direct event calls. Reconstructing a cue-active boolean from prefixes or a fixed timer is therefore not recommended. For volume isolation, a structural branch multiplier is stronger than an unverified boolean.
 
-Only after that log is stable should prototype #2 apply the requested hard-coded levels (exploration/dialogue 0%, combat/cinematic 100%) through the smallest proven routing mechanism. UI sliders and broader special-case support should wait until the signal and Wwise routing are demonstrated.
+## Recommended prototype #1 — diagnostic only
 
-The biggest unresolved implementation issue is not state discovery; it is whether a Remastered-compatible local/scope override can observe `CScriptSoundSystem.SoundGameStateChange` without replacing the whole engine sound script, and whether the vanilla bank exposes a safe contextual volume parameter. The reports intentionally stop before implementing or altering any source.
+Recommend the hybrid architecture provisionally, with a **two-selector diagnostic investigation** first. The earlier state-only logger recommendation is insufficient for the stronger requirement.
+
+1. Validate a minimal Remastered local hook for gameplay transitions and log the old/new sound enum and mapped Wwise state without changing them.
+2. Exercise the existing native music-debug facility and determine whether it exposes regional root, `music_type`, quest/cue selectors, or current segment. Do not assume its output format.
+3. Correlate gameplay-state transitions with event requests from the verified scene/quest dispatch paths. Resolve event targets to switch groups in the project data; do not use `mus_q*` or `mus_loc*` prefixes as an authoritative classifier.
+4. Compare ordinary area dialogue, the explicit tavern conversation, and the six quest selectors that also depend on gameplay states. Record unknown native dispatch and save replay as unknown, not inactive.
+5. Apply no volume changes, no sliders, and no bank edits in prototype #1.
+
+The next gain experiment should attenuate a **generic branch**, never the global dialogue state or common Music bus. Test simultaneous source/destination crossfades, an authored conversation reusing exploration media, a state-dependent quest cue, and save/load restoration before extending it to all regions.
+
+Acceptance criterion: generic dialogue at 0% leaves explicitly authored story cues at their normal authored/user-volume mix even while both share `dialog_scene`. Authored gameplay cues must also survive exploration at 0%. A recorded `dialog_scene` transition alone cannot establish either result.
+
+## What would falsify this architecture?
+
+- A resolved ordinary quest cue runs outside the protected quest branch and is attenuated by the proposed world gain.
+- Child playback fails to inherit the proposed container gain, or an output override changes its scope.
+- A world-to-quest crossfade keeps both voices subject to a global/script-only gain.
+- A native music event changes provenance without any diagnostic coverage and the design relies on a script flag for protection.
+- Save/load resets parameter state or restores an authored cue through an unobserved path.
+
+These are future validation requirements. This task changed research reports only.

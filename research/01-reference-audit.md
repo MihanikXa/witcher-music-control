@@ -60,3 +60,11 @@ The XML exposes independent 0–100 exploration, combat, and dialogue sliders an
 - Less Is More uses the current-looking `ESoundGameState` names and `SoundState` path, but replaces the complete engine sound script. That is useful behavioural evidence and a high conflict risk; it is not evidence that a small local override of `CScriptSoundSystem` is supported.
 - FMC is the strongest evidence that contextual music multipliers can be implemented in Wwise with global parameters, but its script does not discover gameplay context. It sets parameters from menu/config callbacks; the resource side must associate those parameters with music content.
 - The reference trees do not establish that a `story` runtime state exists. The controlled Only Story Music diff shows a different mechanism.
+
+## Follow-up implications for reference applicability
+
+**Observed fact:** current Wwise has a `music_type` SwitchGroup separating regional `world_music` from `quests_and_cutscenes` (`L:\Games\Steam\steamapps\common\The Witcher 3 REDkit\assets\w3_audio\Switches\switches.wwu:434-439`; prologue root entries in `Interactive Music Hierarchy/music.wwu:139843-139887`). Most explicit quest/cutscene events select this branch independently of `game_state`; generic area dialogue uses the world branch's state selector.
+
+**Inference:** Only Story Music and Less Is More often preserve explicitly authored cues because they filter named gameplay-state selection rather than apply a common Music-bus mute. However, neither state-suppression mechanism guarantees the new requirement: six current quest-branch containers also depend on `game_state`. The exact examples and counts are in [03-vanilla-music-path.md](03-vanilla-music-path.md). Preserving cutscene/movie states does not protect authored music during ordinary dialogue/gameplay.
+
+FMC's separate parameter names and menu labels do not establish that its dialogue slider affects only generic dialogue. Its binary resources have not been decoded into a verified container-routing map. **Unresolved:** whether FMC preserves authored dialogue/quest cues at 100% when `fmc_dialogueMusic=0`. Do not adopt that parameter as a solution to the stronger requirement without this additional evidence.
