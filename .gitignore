@@ -1,0 +1,28 @@
+# Third-party reference mods: keep local, never commit their contents.
+reference/only-story-music/*
+!reference/only-story-music/README.md
+reference/less-is-more/*
+!reference/less-is-more/README.md
+reference/fmc-audio-remaster/*
+!reference/fmc-audio-remaster/README.md
+
+# Generated outputs.
+build/*
+!build/README.md
+deploy/*
+!deploy/README.md
+
+# Local-only workspace/config.
+.local/
+*.log
+*.tmp
+*.bak
+*.zip
+*.7z
+*.rar
+
+# OS/editor noise.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
