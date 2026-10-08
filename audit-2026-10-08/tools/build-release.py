@@ -26,7 +26,7 @@ def main():
  assert game not in OUT.resolve().parents and docs not in OUT.resolve().parents
  assert not OUT.is_symlink()
  OUT.mkdir(parents=True,exist_ok=True)
- expected={x['path'].lower():x['sha256'] for n in ['installed-files.json','other-game-files.json'] for x in json.loads((ROOT/'evidence'/n).read_text())}
+ expected={x['path'].lower():x['sha256'] for n in ['installed-files.json','other-game-files.json','current-gwent-layout.json'] for x in json.loads((ROOT/'evidence'/n).read_text())}
  sources={};changes=[]
  def source(p):
   p=p.resolve();h=digest(p);assert expected.get(str(p).lower())==h,('Source changed or unpinned',str(p));sources[str(p)]=h;return p
@@ -34,7 +34,7 @@ def main():
  def edit(p,name,callback):
   before=p.read_text(encoding='utf-8-sig');after=callback(before);assert before!=after,name
   p.write_text(after,encoding='utf-8',newline='\r\n');changes.append(dict(file=str(p.relative_to(OUT)),purpose=name,before_text_sha256=hashlib.sha256(before.encode()).hexdigest(),after_sha256=digest(p)))
- core=OUT/'payloads/core';loc=OUT/'payloads/localization';arrow=OUT/'payloads/arrow';merged=OUT/'payloads/merged'
+ core=OUT/'payloads/core';loc=OUT/'payloads/localization';arrow=OUT/'payloads/arrow';merged=OUT/'payloads/merged';gwent=OUT/'payloads/gwent'
  refresh=json.loads((ROOT/'evidence/steam-update-merges.json').read_text())
  for row in refresh:
   resource=row['resource'];vanilla=game/'content/content0'/resource.removeprefix('content/')
@@ -153,6 +153,13 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
  for p in (game/'ArrowParryManual/Mods/modArrowParryManual').rglob('*'):
   if p.is_file() and '__folder_managed_by_vortex' not in p.name:copy(p,arrow/'Mods/modArrowParryManual'/p.relative_to(game/'ArrowParryManual/Mods/modArrowParryManual'))
  copy(game/pc/'modArrowParryManual.xml',arrow/pc/'modArrowParryManual.xml')
+ # Keep the author's complete vanilla-Gwent variant, compiled scripts and DLC.
+ # Correct layout only; do not include the incompatible Gwent My Way variant.
+ gwent_info=json.loads((ROOT/'evidence/gwent-integration.json').read_text(encoding='utf-8'))
+ for root,target in [(game/'Gwent Deck Choice - Vanilla Gwent/mods/mod_GwentDeckChoice',gwent/'Mods/mod_GwentDeckChoice'),(game/'DLC/dlcGwentDeckChoice',gwent/'DLC/dlcGwentDeckChoice')]:
+  for p in root.rglob('*'):
+   if p.is_file() and '__folder_managed_by_vortex' not in p.name:copy(p,target/p.relative_to(root))
+ copy(game/pc/'GwentDeckChoice.xml',gwent/pc/'GwentDeckChoice.xml')
  # The settings transformer operates only on user-selected copies and preserves
  # unrelated sections/lines. No settings are baked into game-root archives.
  profile={'BaS_Main':{'BaS_CustomAttackEnabled':'false','BaS_CustomDodgeEnabled':'false','BaS_DamageIncrease':'0','BaS_CloseCamera':'false'},'csmGeneral':{'CSM_On':'1','CSM_HCap':'1','CSM_LCap':'1','CSM_MinSpeed':'50','CSM_MaxSpeed':'200','CSM_ApplyToFinishers':'0'},'csmBaseSpeed':{'CSM_Base':'0'},'csmSkillSpeed':{'CSM_SR':'0'},'csmArmorSpeed':{'CSM_Arm':'0'},'csmAdrenaline':{'CSM_Adren':'0','CSM_RFSR':'0'},'fhudHUD':{k:'false' for k in ['fhudEnableCombatModules','fhudEnableCombatModulesOnUnsheathe','fhudEnableWolfModuleOnVitalityChanged','fhudEnableWitcherSensesModules','fhudEnableMeditationModules','fhudEnableRadialMenuModules']},'fhudMarkers':{'fhud3DMarkersEnabled':'false','fhudCompassMarkersEnabled':'false'}}
@@ -168,9 +175,10 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
  order=json.loads((ROOT/'evidence/mods-settings.json').read_text());names=sorted(order,key=lambda n:int(order[n]['priority']))
  names.remove('modunreasonableplotredesigned');names.insert(names.index('modbrothersinarms'),'modunreasonableplotredesigned');names.remove('modSeamlessAdaptiveHUD');names.insert(names.index('modBestGsSchoolStances'),'modSeamlessAdaptiveHUD');names.insert(1,'mod0000_CompatibilityText');names.append('modGeraltOutfitWheel')
  plan={n:dict(priority=i+1,enabled=True) for i,n in enumerate(names)};save(OUT/'load-order.json',plan)
- # Newly deployed orphan DLC plus inactive mixed Gwent variants are excluded
- # as one Vortex package, rather than loading an incomplete deck-award system.
- plan['mod_GwentDeckChoice']=dict(priority=len(plan)+1,enabled=False)
+ # GDC author's BIA compatibility relationship; UPR's separate resources stay
+ # ahead of BIA too. Install the complete corrected package, not the orphan DLC.
+ names.insert(names.index('modbrothersinarms'),'mod_GwentDeckChoice')
+ plan={n:dict(priority=i+1,enabled=True) for i,n in enumerate(names)}
  save(OUT/'load-order.json',plan)
  bundle=json.loads((ROOT/'evidence/bundled-collisions.json').read_text());winners={p:('modSeamlessAdaptiveHUD' if p.endswith('.redswf') else 'modunreasonableplotredesigned') for p in bundle if p!='strings.list'}
  effective=[dict(resource=p,winner=n,sha256=next(x['sha256'] for x in bundle[p] if x['mod']==n),bytes=next(x['extracted_size'] for x in bundle[p] if x['mod']==n)) for p,n in winners.items()]
@@ -180,21 +188,25 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
   extracted=Path(chosen['extracted'])
   assert digest(extracted)==chosen['sha256'] and extracted.stat().st_size==chosen['extracted_size']
   assert plan[n]['priority'] < min(plan[x['mod']]['priority'] for x in bundle[p] if x['mod']!=n)
+ for chosen in [x for x in gwent_info['scenes'] if x['mod']=='mod_GwentDeckChoice']:
+  source(Path(chosen['bundle']));assert digest(Path(chosen['extracted']))==chosen['sha256']
+  assert plan['mod_GwentDeckChoice']['priority'] < plan['modbrothersinarms']['priority']
+  effective.append(dict(resource=chosen['resource'],winner=chosen['mod'],sha256=chosen['sha256'],bytes=chosen['extracted_size']))
  save(OUT/'effective-resource-winners.json',effective)
  # Automated release checks.
  checks={'localization_roundtrip':True,'source_hash_guards':True,'archives':[],'script_delimiters':[],'xml':[],'loose_school_timing_single_controller':False,'compile_pass':False,'runtime_test':False}
- for p in list(core.rglob('*.ws'))+list(merged.rglob('*.ws'))+list(arrow.rglob('*.ws')):
+ for p in list(core.rglob('*.ws'))+list(merged.rglob('*.ws'))+list(arrow.rglob('*.ws'))+list(gwent.rglob('*.ws')):
   t=masked(p.read_text(encoding='utf-8-sig'));stack=[]
   for c in t:
    if c in '{([':stack.append(c)
    elif c in '})]':assert stack and stack.pop()=={'}':'{',')':'(',']':'['}[c],str(p)
   assert not stack,str(p);checks['script_delimiters'].append(str(p.relative_to(OUT/'payloads')))
- for p in list(core.rglob('*.xml'))+list(arrow.rglob('*.xml')):ET.parse(p);checks['xml'].append(str(p.relative_to(OUT/'payloads')))
+ for p in list(core.rglob('*.xml'))+list(arrow.rglob('*.xml'))+list(gwent.rglob('*.xml')):ET.parse(p);checks['xml'].append(str(p.relative_to(OUT/'payloads')))
  assert 'SetAnimationSpeedMultiplier(' not in masked(state.read_text())
  assert 'AddTimer' not in masked(body(manager.read_text(),'StartTimer'))
  assert len(re.findall(r'ApplySpeedLimits\s*\(',masked(body(calc.read_text(),'CalculateSpeedMultiplier'))))==1
  checks['loose_school_timing_single_controller']=True
- for number,(name,folder) in enumerate([('core-replacements',core),('localization',loc),('arrow-layout',arrow),('updated-merges',merged)],1):
+ for number,(name,folder) in enumerate([('core-replacements',core),('localization',loc),('arrow-layout',arrow),('updated-merges',merged),('gwent-deck-choice-layout',gwent)],1):
   files=sorted(p for p in folder.rglob('*') if p.is_file());assert files
   archive=OUT/(str(number).zfill(2)+'-'+name+'.zip')
   with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:

@@ -7,7 +7,7 @@ Choice 2.02 (internal info 6.0) adds a sixth DLC folder and 53 payload files
 across mixed inactive variant/root directories, duplicated root DLC and menu
 XML. `mod_GwentDeckChoice` is enabled at priority 36 but absent from Mods;
 `DLC/dlcGwentDeckChoice` is active. Total detected packages: **37**, with
-**35 Mods + 6 DLC folders**. It is excluded from the release profile; no live
+**35 Mods + 6 DLC folders**. Its corrected vanilla variant is included in the release profile; no live
 disable was performed. Current metadata.store matches Steam, superseding the
 earlier concern. See decisions.md, release.md and implementation.md.
 

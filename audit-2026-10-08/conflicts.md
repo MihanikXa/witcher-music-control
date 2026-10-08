@@ -4,7 +4,7 @@
 original mod payloads. decisions.md and implementation.md give current status:
 all original units have mechanisms or deliberate winners. AutoLoot's duplicate
 scheduler and seven additional Steam-update override incompatibilities are
-also corrected. The late Gwent package is excluded; two potential BIA scene
+also corrected. The late Gwent package is corrected and retained; two BIA scene
 overlaps are documented in decisions.md. Earlier preservation/permission gates
 below were superseded by the user's qualitative implementation authorization.
 

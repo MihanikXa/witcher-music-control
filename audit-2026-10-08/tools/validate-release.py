@@ -85,6 +85,29 @@ def main():
  assert added=={('CR4Player','BG2_CompatibilityEvadeFactor','addMethod'):1},added
  assert not removed,removed
  checks['annotations_preserved']=sum(baseline.values());checks['unique_helper_added']=True;checks['utf16_scripts_included']=utf16
+ gwent=OUT/'payloads/gwent';gwent_rows=read(ROOT/'evidence/current-gwent-layout.json')
+ gwent_expected={x['path'].lower():x['sha256'] for x in gwent_rows}
+ for p in gwent.rglob('*'):
+  if not p.is_file():continue
+  rel=p.relative_to(gwent).as_posix()
+  origin=game/('Gwent Deck Choice - Vanilla Gwent/mods/'+rel.removeprefix('Mods/') if rel.startswith('Mods/') else rel)
+  assert sha(p)==gwent_expected[str(origin).lower()],rel
+ for p in gwent.rglob('*.ws'):
+  for m in re.finditer(pattern,build.masked(text(p))):
+   if m[1] in ['addMethod','addField','replaceMethod']:
+    assert (m[2],m[4],m[1]) not in annotations,('Gwent duplicate annotation',m[2],m[4],m[1])
+ retained='\n'.join(build.masked(text(p)) for p in allws.values())
+ for p in gwent.rglob('*.ws'):
+  for name in re.findall(r'\bclass\s+(\w+)',build.masked(text(p))):
+   assert not re.search(r'\bclass\s+'+re.escape(name)+r'\b',retained),('Gwent duplicate class',name)
+ checks['gwent_payload_byte_identical']=True
+ checks['gwent_new_duplicate_add_replace_annotations']=False
+ checks['gwent_bundle_tables']=[dict(path=str(p.relative_to(gwent)),entries=len(list(bundles(p)))) for p in gwent.rglob('*.bundle')]
+ checks['gwent_signature_checks']=len(read(ROOT/'evidence/gwent-integration.json')['signatures'])
+ plan=read(OUT/'load-order.json');assert plan['mod_GwentDeckChoice']['enabled']
+ assert plan['mod_GwentDeckChoice']['priority']<plan['modbrothersinarms']['priority']
+ assert len({x['priority'] for x in plan.values()})==len(plan)
+ checks['gwent_priority_verified']=True
  # Native dodge body remains an ordered subsequence after CSM's lifecycle block.
  vanilla=build.body(text(game/'content/content0/scripts/game/player/r4Player.ws'),'SetIsCurrentlyDodging')
  patch=build.body(text(core/'Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMPlayerHooks.ws'),'SetIsCurrentlyDodging')

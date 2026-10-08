@@ -3,7 +3,7 @@
 **Historical first-pass proposals.** The user subsequently authorized qualitative
 implementation and feature trade-offs. Current staged fixes, chosen winners and
 technical blockers are in decisions.md/implementation.md; install the actual
-four archives using release.md. Earlier conditional preservation/permission
+five archives using release.md. Earlier conditional preservation/permission
 gates below do not govern the completed private release. No live deployment
 was performed.
 

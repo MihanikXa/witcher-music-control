@@ -34,3 +34,5 @@ evidence and game/mod payloads are intentionally not included in Git.
 This repository does not contain enough source assets to reproduce a semantic
 quest/HUD patch or certify compilation. Do not mistake extraction or a clean
 three-way merge for runtime compatibility.
+
+`prepare-gwent.py --game <installed-game>` verifies pinned late Gwent inputs, current vanilla hook signatures, custom CSV dependencies and localization indexes, then extracts the two BIA/GDC scene pairs privately using the existing QuickBMS. Run before build-release.py. The builder emits package 05 with unchanged vanilla-Gwent authored payloads and paired DLC, omitting the Gwent My Way variant. validate-release.py checks payload identity and the required GDC-before-BIA order; neither tool deploys files or proves engine compilation.

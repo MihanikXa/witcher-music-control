@@ -2,8 +2,8 @@
 
 **Release order:** keep mod0000_MergedFiles first (now 12 reviewed paths), then
 mod0000_CompatibilityText; UPR must precede BIA, SAH must precede Bestg, and
-Outfit Wheel must be explicitly enabled. The late partial Gwent Deck Choice
-package is disabled as a whole through Vortex. Original numeric tables below
+Outfit Wheel must be explicitly enabled. The corrected complete Gwent Deck Choice
+package is enabled ahead of BIA (UPR also remains ahead of BIA). Original numeric tables below
 are historical; the authoritative complete reference is local
 release/witcher-compatibility/load-order.json. Persist the relationships in
 Vortex and inspect generated mods.settings after each deployment. See
