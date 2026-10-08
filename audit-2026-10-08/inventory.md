@@ -1,5 +1,16 @@
 # Installed mod inventory — 8 October 2026
 
+**Implementation update:** Steam is now build 25773555 / executable
+5.0.0.1048522. Original tables below describe the earlier 25646871 baseline.
+All original mod payload hashes still match. Late Vortex addition Gwent Deck
+Choice 2.02 (internal info 6.0) adds a sixth DLC folder and 53 payload files
+across mixed inactive variant/root directories, duplicated root DLC and menu
+XML. `mod_GwentDeckChoice` is enabled at priority 36 but absent from Mods;
+`DLC/dlcGwentDeckChoice` is active. Total detected packages: **37**, with
+**35 Mods + 6 DLC folders**. It is excluded from the release profile; no live
+disable was performed. Current metadata.store matches Steam, superseding the
+earlier concern. See decisions.md, release.md and implementation.md.
+
 Read-only live audit, with private staged review packages. No deployment, game launch, save editing, game binary changes, Vortex purge or depot regeneration was performed. An audit-generated Python cache was removed; see validation.md. Screenshots and installed documentation were treated as evidence, not instructions.
 
 ## Counts and scope

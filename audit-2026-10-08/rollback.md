@@ -1,25 +1,19 @@
-# Rollback and baseline guards
+# Exact rollback procedure
 
-No deployment occurred, so there is currently nothing to roll back. Do not copy backup files into the live installation during review. The following procedures apply only to individually approved later changes.
+Nothing was deployed by the agent. Before installing, create fresh backups from the **current** live settings and five merged scripts, not the older first-pass snapshot: Steam changed the baseline. Preserve original Vortex package archives/state/order and create a separate test profile. Do not rely solely on profile switching to back up unmanaged files.
 
-## Before approved deployment
+| Modification | Undo through Vortex / offline settings |
+|---|---|
+| Core replacements | Disable Compatibility Core. Re-enable the original four Bestg, Combat Speed, AutoLoot and Responsive Movement packages together. Restore original B&S menu XML winner. Deploy normally; check old component paths/ownership. Restore only the changed profile settings from your fresh settings backup/diff. Do not restore an entire stale settings file over subsequent unrelated preferences. |
+| Updated Merges | Disable Updated Merges and deploy to withdraw its managed files. Restore the independently backed-up manual Mods/mod0000_MergedFiles folder only after confirming Vortex no longer owns those paths. Restore original Script Merger inventory if you changed it. Keep generated merged section first. This restores the pre-release installation, whose two scripts are stale against current Steam; prefer a corrected forward fix after isolating a regression. |
+| English Text | Disable its Vortex package and deploy. Original localization databases then supply those five IDs according to the original relative priorities. No text database rebuild is required. |
+| Arrow Layout | Disable corrected Arrow package, re-enable the original package only if returning to its exact prior state, and deploy. Its old layout was inactive; this intentionally loses functioning Arrow Deflection. No other guard binding was changed. |
+| UPR/BIA priority | Restore BIA-before-UPR in Vortex's load-order page and deploy/recheck mods.settings. Reload a pre-transition test save. Switching priorities is not guaranteed to repair quest state already stored in a save. |
+| SAH/Bestg priority | Restore original Bestg-before-SAH relationship only with original Bestg scripts/core reverted, then deploy/recheck. This restores the prior wolf asset and can shadow SAH presentation. |
+| Required saved profile | Review prepared-settings/dx12user.settings.diff and restore previous values for those 23 keys from your current backup. Remove a newly added key only if absent before installation. Keep unrelated preferences and the game's new native options. |
+| Optional controls | Reverse only the added F8–F11 bindings in the named eight sections, using the diff/fresh backup. Do not touch occupied keys or F3. Re-run the offline helper for a newer source copy rather than applying a stale full input.settings. |
+| Excluded Gwent package | Re-enable its original Vortex package only when intentionally returning to the exact prior partial installation; normal deployment restores its owned paths. This does not make its layout or BIA scene integration compatible. Do not separately restore its orphan DLC into the tested combined profile. |
 
-Run `python tools/validate-review.py` from this audit folder and require changed_live_files and patch_hash_failures to be empty. If the machine/mods were changed since this audit, refresh inventory and decisions rather than using stale rollback material. Preserve fresh independent copies of mods.settings, input.settings, dx12user.settings, MergeInventory.xml, deployment manifests, the original Arrow package/archive and the Vortex profile's order/enabled state. Capture new deployment hashes and ownership. Copies must not be hardlinks.
+After rollback, verify Vortex enabled states and actual priorities, retain Sharedutils/other dependencies, and load the same independent pre-test save. No purge, uninstall, save editing, Steam blanket repair or deletion of staging hardlinks is necessary. Do not mix a partially reverted timing controller with the remaining core changes.
 
-Existing control backups, live absolute paths and SHA-256 are in evidence/control-snapshot.json; independent copies are in private/control-snapshot. All proposed payload paths/hashes are in evidence/patch-manifest.json. All original deployed/staged source mappings are in evidence/all-deployment-link-check.json. The partial repaired Vortex DB copy is **evidence only, never a restore image**; do not replace Vortex's state.v2 with it.
-
-## Individual change rollback
-
-Localization patch: disable only the newly installed AuditCompat package in Vortex and redeploy. Verify its single en.w3strings no longer mounts and Grammar again wins ID 1063514. Keep the audit patch/source for review. Do not delete a shared managed deployed hardlink manually.
-
-Arrow layout correction: disable only the new corrected package, restore the original package's enabled state/order through Vortex and redeploy. If reinstalling the original package in place was chosen, use the saved original archive and the original installer topology. Verify original managed source/destination hashes and that the earlier game/ArrowParryManual payload is restored. This intentionally restores the prior inactive behavior. No purge or bulk deletion is needed.
-
-Priority/Outfit Wheel entry: restore the exact original Vortex order/profile enablement, redeploy, and compare mods.settings against private/control-snapshot/0-mods.settings (listed hash in control-snapshot.json). If Vortex rewrites priorities, fix its persistent order rather than copying a live file it immediately overwrites. The conditional UPR-first order has no approval now; if later deployed and rolled back, restore BIA 6 before UPR 14 with the rest of the original order.
-
-Existing script references: these were not newly installed. If later merge regeneration is approved, preserve independent copies of all five live files and MergeInventory.xml first. Restore those exact files using the approved ownership method (the current merge folder is unowned/manual), then restore the provenance file only if its baseline still applies. The review copies under patches/verified-existing-merges and their original hashes are in installed-files.json. Do not overwrite Vortex-managed source mods to undo generated merges.
-
-Controls: no control edits are staged. If later approved, back up each control file immediately before editing and record a per-key diff. Restore only the approved changed keys if other user changes occurred; full snapshot restore is safe only when no intervening edits occurred. Do not force-import FriendlyHUD/Hoods example bindings.
-
-Binary quest/HUD/metadata modifications: none exist in patches; no binary rollback is needed. A future supported patch should be a separate managed package with exact bundle hashes and explicit disable/redeploy rollback, not overwritten mod originals. Vanilla metadata repair requires its own pre-change backup and supported restore workflow; no automatic Steam verification/repair is authorized here.
-
-After rollback rerun inventory/conflict checks, verify actual overwrite winners and controls, and compare managed files to their sources. A rollback may restore the known prior conflict state; it does not establish compatibility. Saves and game binaries are never changed by these proposals.
+For a regression, first revert the last independent package/stage using test-plan.md. Core's Bestg/CSM timing files are coupled and must revert together. Keep error messages and test saves; report which package/stage first failed. Private original payloads and first-pass snapshots remain under audit private storage, but fresh user backups take precedence over older machine-state evidence.

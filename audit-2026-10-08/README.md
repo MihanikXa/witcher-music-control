@@ -1,17 +1,28 @@
-# Witcher mod audit — review checkpoint
+# Witcher mod compatibility — private release ready for testing
 
-Git publication includes reports and original helper scripts only. Evidence, private machine-state snapshots, extracted game/mod resources, third-party tooling and actual patch payloads remain local and ignored. References to those paths describe the private audit workspace; they are not missing downloads from this repository.
+Four installable archives contain 144 real payload files. Start with
+[release.md](release.md) for installation/hashes, [decisions.md](decisions.md)
+for trade-offs, [implementation.md](implementation.md) for actual changes, and
+[test-plan.md](test-plan.md). validation.md and rollback.md contain current
+results and exact recovery steps.
 
-36 mod packages; 35 Mods folders and 5 paired DLC folders (40 content folders including generated output). 18 confirmed file/text conflict units: 5 script, 8 quest/scene, 1 HUD, 4 English text IDs; plus 1 combat-behavior overlap requiring validation. Five existing merges verified for source inclusion; one localization merge staged; one Arrow installation correction staged. Twelve confirmed conflicts and the combat overlap remain unresolved for preservation. Additional control/provenance/integrity issues are listed separately.
+Target: Steam 25773555 / 5.0.0.1048522 after an update during this work.
+Two existing merges and seven independent overrides were adapted to current
+vanilla; three existing merges remain byte-identical. Eight UPR quest resources
+and SAH's wolf HUD are deliberate winners, not binary merges. Bestg timing is
+unified through Combat Speed; AutoLoot's duplicate scheduler is corrected.
+B&S custom animation selectors and Bestg's wolf emblem are sacrificed; the
+late partial Gwent Deck Choice package is excluded. Engine compilation and
+quest/combat runtime tests remain required. The live setup was not changed.
 
-The current installation is not certified safe for quest progression. No deployment/game launch took place. The review candidate is not an approved universal fix.
+37 detected packages (36 originally audited plus one late addition), 35 Mods
+folders and 6 DLC mod folders. Original 18 confirmed file/text units plus one
+combat family receive mechanisms or winners. AutoLoot's semantic defect and
+seven new Steam baseline incompatibilities are additionally corrected. Two
+potential BIA/Gwent scene overlaps stay excluded with that incomplete package.
 
-- [Inventory and ownership](inventory.md)
-- [Complete detected conflict matrix](conflicts.md)
-- [Resolutions and exact approval/deployment steps](resolutions.md)
-- [Load-order evidence and candidate](load-order.md)
-- [Validation and limitations](validation.md)
-- [Rollback procedures](rollback.md)
-- [Private patch packages](patches/README.md)
+Git contains reports/original tooling only. Assets, tools from third parties,
+private evidence and installation packages stay local/ignored. Public Git alone
+cannot rebuild copyrighted payloads without the preserved local inputs.
 
-Read the Blood Ties letter preview, then approve only named packages/relationships. Quest/HUD/combat sacrifices require separate explicit decisions. Game launch/testing requires separate approval. Reports and extracted source assets must remain private; .gitignore excludes this audit folder's material.
+Original inventory/resource hashes remain in inventory.md and conflicts.md; their first-pass gates are superseded by the implementation reports.

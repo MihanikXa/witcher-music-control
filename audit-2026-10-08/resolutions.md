@@ -1,5 +1,12 @@
 # Proposed resolutions — review required
 
+**Historical first-pass proposals.** The user subsequently authorized qualitative
+implementation and feature trade-offs. Current staged fixes, chosen winners and
+technical blockers are in decisions.md/implementation.md; install the actual
+four archives using release.md. Earlier conditional preservation/permission
+gates below do not govern the completed private release. No live deployment
+was performed.
+
 No live installation changes are authorized by this audit's first-pass scope. All payloads are private local review artifacts. Six file/text conflict units are covered: five existing script merges plus one newly staged English localization merge. One additional installation correction is staged. Twelve confirmed conflicts plus one combat overlap remain unresolved; eight have a conditional priority proposal, which is not a merged quest patch.
 
 ## Safe/reversible review packages

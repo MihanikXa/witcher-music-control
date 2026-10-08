@@ -1,5 +1,13 @@
 # Conflict matrix
 
+**Historical first-pass matrix.** Exact paths/hashes remain valid for unchanged
+original mod payloads. decisions.md and implementation.md give current status:
+all original units have mechanisms or deliberate winners. AutoLoot's duplicate
+scheduler and seven additional Steam-update override incompatibilities are
+also corrected. The late Gwent package is excluded; two potential BIA scene
+overlaps are documented in decisions.md. Earlier preservation/permission gates
+below were superseded by the user's qualitative implementation authorization.
+
 ## Counting and confidence
 
 **18 confirmed file/text conflict units plus 1 combat-behavior overlap requiring validation: 19 review units.** These comprise 5 same-path script conflicts, 8 quest/scene resource conflicts, 1 HUD resource conflict, 4 meaningful English string-ID conflicts, and 1 combat-behavior family. The combat family's three shared annotation targets are counted once to avoid inflating the total; its incompatible runtime outcome is not proven. Five script conflicts are covered by existing merges; one English string conflict has a staged patch; 12 confirmed conflicts and the combat overlap remain unresolved for preservation. “Covered” does not mean compiled or game-tested.

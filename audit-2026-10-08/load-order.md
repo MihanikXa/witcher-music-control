@@ -1,5 +1,14 @@
 # Load order and actual overwrite rules
 
+**Release order:** keep mod0000_MergedFiles first (now 12 reviewed paths), then
+mod0000_CompatibilityText; UPR must precede BIA, SAH must precede Bestg, and
+Outfit Wheel must be explicitly enabled. The late partial Gwent Deck Choice
+package is disabled as a whole through Vortex. Original numeric tables below
+are historical; the authoritative complete reference is local
+release/witcher-compatibility/load-order.json. Persist the relationships in
+Vortex and inspect generated mods.settings after each deployment. See
+release.md for exact steps; previous conditional trade-off gates are superseded.
+
 ## Evidence
 
 Lower numeric Priority wins for explicitly configured Mods. This was checked against the installed Vortex Witcher plugin (ascending numbers, merged output locked at the top), primary Script Merger source (LoadOrderComparer ascending priority; explicitly configured enabled candidates preferred), and the CDPR-forum-hosted mods.settings guide. Default unset order is case-insensitive alphanumeric according to these tools; the current 5.0 engine was not launched to empirically verify unspecified/default/DLC precedence. [Script Merger source](https://github.com/IDCs/WitcherScriptMerger), [mods.settings guide](https://forums.cdprojektred.com/index.php?attachments/mods_settings-pdf.6711517/).

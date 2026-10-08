@@ -8,6 +8,10 @@
 !load-order.md
 !validation.md
 !rollback.md
+!decisions.md
+!implementation.md
+!release.md
+!test-plan.md
 !tools/
 tools/*
 !tools/*.py

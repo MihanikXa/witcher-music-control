@@ -1,5 +1,14 @@
 # Audit tools
 
+Implementation tools: refresh-merges.py stages current Steam native changes
+using preserved diffs and reviewed override hunks; build-release.py builds four
+private deterministic ZIPs from pinned local sources; prepare-settings.py
+creates narrow offline settings copies/diffs; validate-release.py validates
+the combined overlay, current Steam scripts, archives and retained settings.
+All require the preserved private evidence. Public Git deliberately omits
+third-party/game payloads. Do not rerun the historical build-reports.py over
+phase-two reports without adapting it; it writes first-pass report content.
+
 These are original helper scripts for the private audit. Machine-specific paths
 in their source are **example inputs from the audited installation**; adapt them
 before reuse. Reports document the tested versions and limitations. No script

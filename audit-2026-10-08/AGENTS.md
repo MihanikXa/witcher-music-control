@@ -6,7 +6,11 @@ project files unchanged. Do not install its experimental music mod.
 
 Live game/Vortex files are read-only until the user explicitly approves a named
 deployment. Game launch requires separate approval. Do not regenerate REDkit's
-depot, purge Vortex, edit saves or game binaries, or disable mods to hide conflicts.
+depot, purge Vortex, or edit saves or game binaries. The user's implementation
+request authorizes private replacement builds and documented qualitative feature
+trade-offs, including recommended package disables. Do not apply those disables
+to the live Vortex profile. The current user instruction takes precedence over
+the earlier first-pass feature-preservation gate.
 
 Commit reports and original audit-tool source only. Keep evidence, extracted
 resources, private database/control snapshots, third-party tools/source clones,

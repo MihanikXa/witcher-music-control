@@ -1,5 +1,9 @@
 # Private review packages
 
+These are historical first-pass reference packages. The installable integrated
+release is now under ../release/witcher-compatibility/ (four new archives).
+Follow ../release.md rather than the older conditional proposals below.
+
 - verified-existing-merges: five current merge reference copies; no new deployment needed.
 - localization: one English Blood Ties letter ID, preserving expansion and grammar; new staged patch.
 - arrow-deflection-layout: unchanged Arrow gameplay payload/menu with corrected install topology.
