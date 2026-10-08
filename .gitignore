@@ -1,44 +1,5 @@
-# Third-party reference mods: keep local, never commit their contents.
-
-# Only Story Music variants: keep the tracked guidance files, ignore extracted mod contents.
-reference/only-story-music/*
-!reference/only-story-music/README.md
-!reference/only-story-music/story-only/
-!reference/only-story-music/story-gwent-tavern/
-!reference/only-story-music/story-combat/
-!reference/only-story-music/story-exploration/
-
-reference/only-story-music/story-only/*
-!reference/only-story-music/story-only/README.md
-reference/only-story-music/story-gwent-tavern/*
-!reference/only-story-music/story-gwent-tavern/README.md
-reference/only-story-music/story-combat/*
-!reference/only-story-music/story-combat/README.md
-reference/only-story-music/story-exploration/*
-!reference/only-story-music/story-exploration/README.md
-
-reference/less-is-more/*
-!reference/less-is-more/README.md
-reference/fmc-audio-remaster/*
-!reference/fmc-audio-remaster/README.md
-
-# Generated outputs.
-build/*
-!build/README.md
-deploy/*
-!deploy/README.md
-
-# Local-only workspace/config.
-.local/
-*.log
-*.tmp
-*.bak
-*.zip
-*.7z
-*.rar
-
-# OS/editor noise.
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+# Publish only the audit's explicit allowlist. Keep all private assets local.
+/*
+!/.gitignore
+!/README.md
+!/audit-2026-10-08/
