@@ -18,6 +18,10 @@ Clean, light, breathable and modern, **with character**. Use *Ghost of Tsushima*
 
 Focus on replacing thick hard-edged black text outlines, overly saturated red/green text, cramped labels and inconsistent emphasis with precise typography, a restrained palette and context-sensitive readability. Do not merely desaturate all UI elements globally.
 
+## Broader presentation roadmap
+
+The project also has an accepted longer-term [presentation and interaction roadmap](design/presentation-roadmap.md): contextual exploration information, navigation/discovery, menu composition, notification restraint, camera/audio coordination and unified UI polish. This extends the **long-term design target**, not the immediate implementation authorization. Finish the existing NPC-nameplate and typography build gates first.
+
 ## Project boundaries
 
 - `main` is a **different music-control project**.
