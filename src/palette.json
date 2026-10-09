@@ -1,0 +1,13 @@
+{
+  "scope": "English UI design tokens; proposed, not deployed",
+  "colors": {
+    "primary": "#E9E2D2",
+    "secondary": "#C0BBB0",
+    "friendly": "#B4C0A0",
+    "hostile": "#D6A093",
+    "selected_vip": "#D5C08E",
+    "axii": "#B4C2D1",
+    "disabled_dark_menu": "#8D8A81",
+    "contrast_surface": "#141718"
+  }
+}

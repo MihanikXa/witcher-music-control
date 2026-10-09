@@ -1,6 +1,10 @@
 # Design brief — Quiet Editorial
 
 ## Target
+
+Scope update, 9 October 2026: the user requires **English only**. Preserve
+English punctuation and accented names; do not replace Russian/Ukrainian or
+other language libraries. Cyrillic validation is outside the acceptance scope.
 Make The Witcher 3's interface feel lighter, modern, spacious and deliberately designed while retaining warmth and literary texture.
 
 References:

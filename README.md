@@ -2,6 +2,14 @@
 
 An independent, research-first project for refining typography, text effects, NPC nameplates and interface colors in **The Witcher 3 Remastered 5.01**.
 
+Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
+research is in [research/findings.md](research/findings.md). The supplied
+Alignment Fix is not recommended unchanged for this runtime; see its
+[assessment](research/alignment-fix.md). Explore the original
+[typography comparison](design/comparison.html) and
+[prototype plan](design/implementation-plan.md). No overhaul package is built
+or deployed yet.
+
 ## Visual target
 
 Clean, light, breathable and modern, **with character**. Use *Ghost of Tsushima* as a reference for restraint, hierarchy and environmental integration, **not** for copying its Japanese visual motifs. Retain the Witcher world's distinctive texture. The user prefers the **Gentium Book** reference over the original or an undifferentiated sans-serif.
