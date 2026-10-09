@@ -44,3 +44,8 @@ The five rebuilt ZIPs pass archive/static checks; only Core and Updated Merges p
 
 
 Final handoff: [handoff.md](handoff.md) is the short ordered installation checklist, exact saved settings, first-startup evidence procedure and paired rollback guide. All five hashes were reverified unchanged on 9 October after review of 21a0e442.
+
+
+### Deployed-profile movement update
+
+Movement hotfix: update only existing package 04 using [movement-fix.md](movement-fix.md). The original five archives/hashes remain preserved; use the new 04 movement-fix archive for the next test. No reinstall of the profile or other packages is needed.

@@ -38,3 +38,8 @@ Before validation, regenerate offline settings with the release helper if the pe
 ## 9 October review repairs
 
 `native_change_policy.py` replaces marker-based whole-hunk suppression with pinned reviewed independent-change decisions. `review-release.py` checks retained Bestg control flow, reset ownership, the two melee guards, six CSM pre-write cleanup calls and RM's unchanged end/reset helper. Core and updated-merges archives changed; localization, Arrow and Gwent archives remain unchanged. Two original CSM/Bestg helper annotations are now added, with 799 original annotations retained. Official compiler outputs stay in the isolated project/private evidence and are **not** shipped as a global replacement script cache. See review.md and validation.md for scope and caveats.
+
+
+### Deployed-profile movement update
+
+The deployed release now compiles/loads gameplay with 15 menus per the user. Movement runtime testing exposed a sprint flag contract missed by earlier source-preservation checks. The incremental builder changes only package 04/playerinput.ws; see movement-fix.md. User-selected controls retain walk-by-default, restore held sprint and add an on-foot jog toggle.
