@@ -1,3 +1,7 @@
+## Subsequent runtime report — 9 October 2026
+
+**User statement (verbatim):** "Everything works". This followed installation and the focused analog gait/held sprint verification request in the existing Vortex Compatibility Test profile. The requested controller movement is **user-reported working in-game**. This updates the test-release-only status below; it is not an agent-run test and does not independently confirm each special-state/quest/animation edge case or resolve the existing opaque-blob compilation caveats. See [analog-gait.md](analog-gait.md) for context.
+
 # Analog gait test-release validation
 
 The user reports the deployed baseline now compiles and plays; earlier statements
