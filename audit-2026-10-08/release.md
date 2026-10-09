@@ -1,5 +1,16 @@
 # Private installable release
 
+**Current deployed-profile update:** the original installation steps below are
+historical. The user has completed deployment and reports successful gameplay.
+For the new analog gait test, follow [analog-gait.md](analog-gait.md): replace
+only package 04 with `analog-gait/04-updated-merges-analog-gait.zip` (13 files;
+SHA-256 `fbbe3b2ecfeab77965f13b4e7386c8891167f37f8d770b20a37c7c7fd9539909`).
+Its twelve previous movement-hotfix files are unchanged. Packages 01/02/03/05,
+the existing profile and load order stay unchanged. Do not repeat the initial
+installation, backup-folder relocation or full settings application below.
+Official compilation/static checks pass for the new override; controller runtime
+testing remains pending. Keep the old movement-hotfix ZIP for one-package rollback.
+
 Location: `C:\Dev\witcher-mods-merger\audit-2026-10-08\release\witcher-compatibility\`.
 
 Target: Steam **25773555**, executable **5.0.0.1048522**, current installed mod versions from inventory.md plus its late-update note. Five archives passed CRC, per-file SHA-256, root-layout and repeat-build checks. Official compiler results and their scope are recorded in validation.md; deployment and runtime compatibility remain untested. These are private personal integration packages containing third-party/game payloads; do not upload them to GitHub.

@@ -1,3 +1,13 @@
+# Analog gait update rollback
+
+For this incremental test, close the game, disable the new analog-gait package
+04 and re-enable the retained 6e01460 movement-hotfix version in the existing
+Compatibility Test profile. Deploy with Vortex; preserve packages 01/02/03/05,
+their settings and priorities. Verify Vortex withdraws the added merged
+locomotion override. Do not manually delete managed files or follow historical
+whole-suite rollback steps below. Exact archive/hash and optional setting
+restoration: [analog-gait.md](analog-gait.md).
+
 # Exact rollback procedure
 
 Nothing was deployed by the agent. Before installing, create fresh backups from the **current** live settings and five merged scripts, not the older first-pass snapshot: Steam changed the baseline. Preserve original Vortex package archives/state/order and create a separate test profile. Do not rely solely on profile switching to back up unmanaged files.

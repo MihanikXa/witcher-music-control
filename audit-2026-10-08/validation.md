@@ -1,3 +1,20 @@
+# Analog gait test-release validation
+
+The user reports the deployed baseline now compiles and plays; earlier statements
+about that baseline being uninstalled are historical. The new analog override
+has not been deployed. Official REDkit wcc compilation of the preserved working
+source assembly plus the override succeeded, exit 0, with the same 379 warnings
+and 23,591 assertions as the assembled baseline. Opaque compiled dependencies
+remain outside that compilation scope.
+
+Generated-source numeric tests pass 2,002 proportional samples, threshold and
+bounded transition checks, sprint passthrough and excluded-context passthrough.
+CRC, deterministic rebuild, thirteen-file Vortex routing and identity of the
+twelve preserved files pass. All original five ZIP hashes, the working hotfix
+ZIP, and six protected deployed-script/Documents hashes remain unchanged.
+Actual mixed-input dispatch, animations, saved state and engine behavior require
+the focused [analog-gait.md](analog-gait.md) tests; no runtime success is claimed.
+
 # Release validation — actual results
 
 The five private release archives passed applicable automated static checks. Focused official WitcherScript compilation now succeeds; the complete deployment has not received a clean annotation-context compile pass or runtime compatibility certification. No game was launched and no deployment/save modification occurred.

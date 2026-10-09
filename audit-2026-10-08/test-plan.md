@@ -1,3 +1,11 @@
+# Current incremental controller test
+
+The compatibility suite is already deployed and working by user report. Do not
+repeat initial installation tests as a prerequisite to this update. Follow the
+seven focused analog/sprint/mixed-input and special-state cases in
+[analog-gait.md](analog-gait.md), starting in Running the Walls with existing RM
+locomotion effects off. Revert only package 04 if a regression appears.
+
 # Incremental in-game acceptance tests
 
 Use independent test saves/copies and a compatibility-test Vortex profile. Never overwrite your only campaign save. Record package toggles, load order, game build, settings and screenshots/error text for each failure.
