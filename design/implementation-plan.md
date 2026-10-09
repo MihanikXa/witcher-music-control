@@ -3,8 +3,12 @@
 Current Phase 2 update: importing the installed native authoring SWF restores
 the texture array. Including the official GUIWithAlpha texture-group definition
 also restores the full embedded mip structure. The resource-state assertion
-persists, and the additive script fallback has no compiler acceptance. The gate
-remains failed; no visual variants or ZIP exist. See the current
+persists across EnemyFocus and unrelated controls after bootstrap/depot repairs.
+Loaded resave/cook succeeds, but fresh import risk remains unresolved. The
+corrected additive script fallback compiles in the known source assembly;
+exact deployed compiled-mod coverage remains incomplete. No visual variants or
+ZIP exist. See the current
+[controlled investigation](../research/swf-state-investigation.md),
 [native validation](../research/native-npc-validation.md) and earlier
 [reconstruction investigation](../research/phase2-validation.md).
 The package boundaries and first-proof specification below remain proposals.
@@ -63,10 +67,14 @@ current official tool, re-extract it, check exact keys/hashes/metadata and valid
 Vortex layout before any color/shadow variation. No older movie or guessed
 header is an acceptable workaround. See native validation for exact commands.
 
-The original additive color wrapper is a separately gated fallback. Its staged
-baseline and candidate both fail on an existing loot-feed struct before testing
-the wrapper, with seven opaque compiled-script mods omitted. Do not alter working
-merges to make that diagnostic pass. No existing REDkit project is modified.
+The original additive color wrapper is a separately gated fallback. The earlier
+loot-feed failure is a base/patch type-order problem: the known working source
+assembly resolves it. Baseline and corrected candidate now compile in copied
+assembly sources, including the OnTick wrapper and current Flash APIs. Seven
+opaque compiled mods and exact deployed load order remain outside that proof.
+Do not alter working merges to bridge this gap. No existing REDkit project is
+modified. The next asset comparison is one supported Editor import in a new
+isolated project; repeated CLI bootstrap changes have reached their useful limit.
 
 Verified inspection command:
 

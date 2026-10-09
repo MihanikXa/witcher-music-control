@@ -1,5 +1,11 @@
 # Native NPC SWF import investigation — 2026-10-09
 
+Historical first native investigation. The subsequent
+[controlled state investigation](swf-state-investigation.md) tests unrelated
+movies, repairs depot attachment, demonstrates loaded resave/cook and compiles
+the corrected script fallback in the known source assembly. Fresh import risk
+and exact profile compatibility remain unresolved; no ZIP exists.
+
 **Status: blocked; no ZIP and no visual variants.** The native authoring route
 fixes the missing texture array. A missing official texture-group definition
 caused a second, independently reproduced texture-cooking failure. Including

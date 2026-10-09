@@ -1642,5 +1642,1490 @@
   "package_built": false,
   "zip_path": null,
   "deployed": false,
-  "game_tested": false
+  "game_tested": false,
+  "assertion_investigation": {
+    "report": "research/swf-state-investigation.md",
+    "classification": "unresolved shared fresh-import/creation path; no verified serialized-resource defect",
+    "cases": [
+      {
+        "bootstrap": "minimal",
+        "official_layout": true,
+        "complete_depot": false,
+        "inputs_ledger_sha256": "fc73750a418c229fe505ae3e9eb18a3ba3b7b5cbed94678ad98ee43f3ed98733",
+        "commands": [
+          {
+            "label": "help",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\x64_RedKit\\wcc_lite.exe",
+              "help",
+              "swfimport"
+            ],
+            "exit_code": 0,
+            "log_sha256": "06f9cfbe9b9bd5e81b9e1031e97829163e8c5b7e94c8fe631d7c1827e7d3ab35",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 320,
+                "games\\r4\\commonMapManager.cpp:6206": 1,
+                "games\\r4\\commonMapManager.cpp:6216": 1,
+                "games\\r4\\commonMapManager.cpp:6230": 1,
+                "games\\r4\\commonMapManager.cpp:6244": 1,
+                "games\\r4\\commonMapManager.cpp:8707": 1,
+                "games\\r4\\commonMapManager.cpp:8708": 1,
+                "games\\r4\\commonMapManager.cpp:8709": 1,
+                "games\\r4\\commonMapManager.cpp:8710": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:21:21][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 343
+            }
+          },
+          {
+            "label": "import",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\x64_RedKit\\wcc_lite.exe",
+              "swfimport",
+              "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\input",
+              "-toDepotPath=gameplay/gui_new/swf/hud"
+            ],
+            "exit_code": 0,
+            "log_sha256": "254a385d78ac08ac0f56ffbba41e816f9920e9d37fc4a668dad91a01b73a0694",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 320,
+                "games\\r4\\commonMapManager.cpp:6206": 1,
+                "games\\r4\\commonMapManager.cpp:6216": 1,
+                "games\\r4\\commonMapManager.cpp:6230": 1,
+                "games\\r4\\commonMapManager.cpp:6244": 1,
+                "games\\r4\\commonMapManager.cpp:8707": 1,
+                "games\\r4\\commonMapManager.cpp:8708": 1,
+                "games\\r4\\commonMapManager.cpp:8709": 1,
+                "games\\r4\\commonMapManager.cpp:8710": 1,
+                "common\\core\\diskFile.cpp:2633": 3
+              },
+              "resource_assertions": [
+                "[2026.10.09 23:21:23][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf'",
+                "[2026.10.09 23:21:24][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'",
+                "[2026.10.09 23:21:24][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf'"
+              ],
+              "depot_assertions": [
+                "[2026.10.09 23:21:23][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 346
+            }
+          },
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\cooked"
+            ],
+            "exit_code": 0,
+            "log_sha256": "3688527dc8d87bb37c62f43f1678fa0a3da5382e4786120edb23bae645c087e4",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 320,
+                "games\\r4\\commonMapManager.cpp:6206": 1,
+                "games\\r4\\commonMapManager.cpp:6216": 1,
+                "games\\r4\\commonMapManager.cpp:6230": 1,
+                "games\\r4\\commonMapManager.cpp:6244": 1,
+                "games\\r4\\commonMapManager.cpp:8707": 1,
+                "games\\r4\\commonMapManager.cpp:8708": 1,
+                "games\\r4\\commonMapManager.cpp:8709": 1,
+                "games\\r4\\commonMapManager.cpp:8710": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:21:25][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 344
+            }
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\validation"
+            ],
+            "exit_code": 0,
+            "log_sha256": "b2aa6fed6a48efb81bbdc57932e3b8b410be7432a1806a54d0bc49ac1a2fbad7",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 320,
+                "games\\r4\\commonMapManager.cpp:6206": 1,
+                "games\\r4\\commonMapManager.cpp:6216": 1,
+                "games\\r4\\commonMapManager.cpp:6230": 1,
+                "games\\r4\\commonMapManager.cpp:6244": 1,
+                "games\\r4\\commonMapManager.cpp:8707": 1,
+                "games\\r4\\commonMapManager.cpp:8708": 1,
+                "games\\r4\\commonMapManager.cpp:8709": 1,
+                "games\\r4\\commonMapManager.cpp:8710": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:21:26][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 343
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "bytes": 156285,
+            "sha256": "7e597a4e22af4388a76884f3e43e8d60e6baf462b9efa5e86e52c046edf1e412"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "bytes": 87143,
+            "sha256": "d73a8d82c0f567f3ad16664ecd51b13454e54ce3983bb71b2be98b5b2b310970"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "bytes": 81152,
+            "sha256": "f92e3f5a28b4e43250ff4d9ff5fd48f1b64fd6d2ea853af5913e7625f26fcdcc"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "bytes": 43821,
+            "sha256": "a5967c65b52ad36406f78c2792978af6cec6d478a0ec7c49afed01e63b35a7ef"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "bytes": 88805,
+            "sha256": "70fed7e6dd8eefbf178f2b2712b06e0f6db61820a63b2c0cb4fd20db82469a47"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "bytes": 40473,
+            "sha256": "a4be9b17b71b5faa8a6ac4134ad1d073922f59928accbf1b93d390513f0e578e"
+          }
+        ],
+        "installed_inputs_unchanged": true,
+        "documents_unchanged": true,
+        "pipeline_verified": false,
+        "zip_path": null,
+        "input_records": 213,
+        "input_bytes_with_duplicate_records": 727711589,
+        "native_control_inputs": [
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+            "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+            "bytes": 66944,
+            "mtime_ns": 1791389794385568500,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\input\\hud_enemyfocus.swf"
+          },
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.swf",
+            "sha256": "5256cae12ab73aa3402152c3e3ee7967dfcc53a191939d048cfd937a018adf3a",
+            "bytes": 42787,
+            "mtime_ns": 1791389752840678700,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\input\\hud_crosshair.swf"
+          },
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_watermark.swf",
+            "sha256": "f4378bc7aac493950881a96625f67816613390c675a626bcbc7258baa1d8e994",
+            "bytes": 40100,
+            "mtime_ns": 1791389752822444200,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-layout\\input\\hud_watermark.swf"
+          }
+        ]
+      },
+      {
+        "bootstrap": "expanded",
+        "official_layout": true,
+        "complete_depot": false,
+        "inputs_ledger_sha256": "a3d96cab5be55e7427b0fbf56e492800919ffee419a58225f7f818f98480b27b",
+        "commands": [
+          {
+            "label": "help",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "help",
+              "swfimport"
+            ],
+            "exit_code": 0,
+            "log_sha256": "235b6a26f8b3a5f84e56f899c16478405662cae10000906cbbeac1fc55b2ed65",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:21:57][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 14
+            }
+          },
+          {
+            "label": "import",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "swfimport",
+              "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input",
+              "-toDepotPath=gameplay/gui_new/swf/hud"
+            ],
+            "exit_code": 0,
+            "log_sha256": "87ff816e1cc83b846a811b347c841bf66fe379a7ba3cf39f2c28d749f48f4f21",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 1,
+                "common\\core\\diskFile.cpp:2633": 3
+              },
+              "resource_assertions": [
+                "[2026.10.09 23:22:36][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf'",
+                "[2026.10.09 23:22:36][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'",
+                "[2026.10.09 23:22:36][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf'"
+              ],
+              "depot_assertions": [
+                "[2026.10.09 23:22:17][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 17
+            }
+          },
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked"
+            ],
+            "exit_code": 0,
+            "log_sha256": "4590970b09bbbca1436c4108ca96bf617606f9b5479e5dcbd1d587dff847e330",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:22:37][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 15
+            }
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\validation"
+            ],
+            "exit_code": 0,
+            "log_sha256": "03a91a2be7c22e90191e085af23b1f81996ca94af74380e16772985a3f9a5047",
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\core\\depotDirectory.cpp:11": 1,
+                "common\\engine\\soundFileLoader.cpp:101": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [
+                "[2026.10.09 23:22:56][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /"
+              ],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 14
+            }
+          }
+        ],
+        "outputs": [
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "bytes": 156286,
+            "sha256": "6cdddf9b01be452d9a3e9f997e0517eadee0707cad454c784049a72fe83bb9e6"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "bytes": 87146,
+            "sha256": "6d5ba5cfe8dbac6b0559036d46ae669aeeb7db52a5dfed7bb268ed7ab6e9fb55"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "bytes": 81155,
+            "sha256": "04bd72e0c30996f15ee078f6c6780ee4f4d37914bdc6fb6024ceb83b3d3e558f"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "bytes": 43822,
+            "sha256": "33cd93ea615bac3365e7fdae5760ea1c15c72a2fe58cb3aa9c18b2376b960f05"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "bytes": 88804,
+            "sha256": "badd9e39090105f33cfe9c7b6826237f3a826aa93fc145629ef2d9ac33280111"
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "bytes": 40474,
+            "sha256": "5f8e8a13b340113cb0a6cdc64124b4bbf2a8d1a30006d41920e26c4e1307beb5"
+          }
+        ],
+        "installed_inputs_unchanged": true,
+        "documents_unchanged": true,
+        "pipeline_verified": false,
+        "zip_path": null,
+        "input_records": 4956,
+        "input_bytes_with_duplicate_records": 3534989603,
+        "native_control_inputs": [
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+            "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+            "bytes": 66944,
+            "mtime_ns": 1791389794385568500,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input\\hud_enemyfocus.swf"
+          },
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.swf",
+            "sha256": "5256cae12ab73aa3402152c3e3ee7967dfcc53a191939d048cfd937a018adf3a",
+            "bytes": 42787,
+            "mtime_ns": 1791389752840678700,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input\\hud_crosshair.swf"
+          },
+          {
+            "source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_watermark.swf",
+            "sha256": "f4378bc7aac493950881a96625f67816613390c675a626bcbc7258baa1d8e994",
+            "bytes": 40100,
+            "mtime_ns": 1791389752822444200,
+            "local": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input\\hud_watermark.swf"
+          }
+        ]
+      }
+    ],
+    "followups": {
+      "attached-help": {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "help",
+          "swfimport",
+          "-uncookDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+          "-workspaceDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-workspace\\"
+        ],
+        "exit_code": 3221225477,
+        "diagnostics": {
+          "assertion_sites": {
+            "common\\engine\\soundFileLoader.cpp:101": 1
+          },
+          "resource_assertions": [],
+          "depot_assertions": [],
+          "overwrite_cancelled": false,
+          "script_errors": [],
+          "error_count": 4
+        }
+      },
+      "attached-import": {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "swfimport",
+          "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input",
+          "-toDepotPath=gameplay/gui_new/swf/hud",
+          "-uncookDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+          "-workspaceDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-workspace\\"
+        ],
+        "exit_code": 0,
+        "diagnostics": {
+          "assertion_sites": {
+            "common\\engine\\soundFileLoader.cpp:101": 1,
+            "common\\core\\diskFile.cpp:2633": 3
+          },
+          "resource_assertions": [
+            "[2026.10.09 23:28:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf'",
+            "[2026.10.09 23:28:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'",
+            "[2026.10.09 23:28:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf'"
+          ],
+          "depot_assertions": [],
+          "overwrite_cancelled": false,
+          "script_errors": [],
+          "error_count": 18
+        },
+        "outputs": [
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-workspace\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "sha256": "842b3e43c9e4a2374eb49061ec9a9e0866150b66e4f0223095c9c1567b2214ad",
+            "bytes": 87146
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-workspace\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "sha256": "8137294b8a6dad5a82b27c8b3c7ec0d063255a3fc4c2dba54aeb0840d42de2b3",
+            "bytes": 156286
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-workspace\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "sha256": "04bd72e0c30996f15ee078f6c6780ee4f4d37914bdc6fb6024ceb83b3d3e558f",
+            "bytes": 81155
+          }
+        ],
+        "explicit_workspace_routing_verified": true,
+        "documents_unchanged": true,
+        "pipeline_verified": false
+      },
+      "serial-state": {
+        "commands": [
+          {
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "swfimport",
+              "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input",
+              "-toDepotPath=gameplay/gui_new/swf/hud",
+              "-uncookDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+              "-workspaceDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\"
+            ],
+            "exit_code": 0,
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\engine\\soundFileLoader.cpp:101": 1,
+                "common\\core\\diskFile.cpp:2633": 3
+              },
+              "resource_assertions": [
+                "[2026.10.09 23:29:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf'",
+                "[2026.10.09 23:29:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'",
+                "[2026.10.09 23:29:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf'"
+              ],
+              "depot_assertions": [],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 16
+            },
+            "log_sha256": "0d45cda41671e4d5d18c1ba4ef39ba2d230e60aebab5b48898f701fea4affd51"
+          },
+          {
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "resave",
+              "-tmpdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-serial",
+              "-path=gameplay/gui_new/swf/hud",
+              "-ext=redswf",
+              "-ignorefileversion",
+              "-uncookDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+              "-workspaceDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\"
+            ],
+            "exit_code": 1,
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\engine\\soundFileLoader.cpp:101": 1,
+                "common\\core\\directory.cpp:83": 1,
+                "common\\core\\directory.cpp:132": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 17
+            },
+            "log_sha256": "9f666be5704c8d97bcbdf36660b0c73ac00d31d2708c4da2139ece2d1716349e"
+          }
+        ],
+        "documents_unchanged": true,
+        "outputs": [
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "sha256": "9c9a05d84c95497c248e7856f2acace8d102bb3bdc2a7b3c6790aeedca37da72",
+            "bytes": 87146
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "sha256": "0c94522f7f9e9caa460d00ebda0f0f97bf9540140519bdefdf70cafa8b2782d5",
+            "bytes": 156286
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "sha256": "04bd72e0c30996f15ee078f6c6780ee4f4d37914bdc6fb6024ceb83b3d3e558f",
+            "bytes": 81155
+          }
+        ],
+        "pipeline_verified": false
+      },
+      "windows-state": {
+        "commands": [
+          {
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "swfimport",
+              "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input",
+              "-toDepotPath=gameplay\\gui_new\\swf\\hud",
+              "-uncookDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+              "-workspaceDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-windows\\"
+            ],
+            "exit_code": 0,
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\engine\\soundFileLoader.cpp:101": 1,
+                "common\\core\\diskFile.cpp:2633": 3
+              },
+              "resource_assertions": [
+                "[2026.10.09 23:31:12][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf'",
+                "[2026.10.09 23:31:12][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'",
+                "[2026.10.09 23:31:12][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf'"
+              ],
+              "depot_assertions": [],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 16
+            },
+            "log_sha256": "d1879ae8a9669093b965fffa23ba3c750c2a25b585ddf202c0a29e3d3e3c7c53"
+          },
+          {
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "resave",
+              "-tmpdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-windows",
+              "-path=gameplay\\gui_new\\swf\\hud",
+              "-ext=redswf",
+              "-ignorefileversion",
+              "-uncookDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+              "-workspaceDir",
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-serial\\workspace\\"
+            ],
+            "exit_code": 1,
+            "diagnostics": {
+              "assertion_sites": {
+                "common\\engine\\soundFileLoader.cpp:101": 1
+              },
+              "resource_assertions": [],
+              "depot_assertions": [],
+              "overwrite_cancelled": false,
+              "script_errors": [],
+              "error_count": 15
+            },
+            "log_sha256": "f5fdfe8fe17a180c34b992c7daa2a222cad43ed5549597d4244ebd4c4b4e010a"
+          }
+        ],
+        "documents_unchanged": true,
+        "pipeline_verified": false
+      },
+      "project-resave": {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "resave",
+          "-tmpdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-project",
+          "-path=gameplay\\gui_new\\swf\\hud",
+          "-ext=redswf",
+          "-ignorefileversion",
+          "-uncookDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+          "-workspaceDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-windows\\"
+        ],
+        "exit_code": 0,
+        "diagnostics": {
+          "assertion_sites": {
+            "common\\engine\\soundFileLoader.cpp:101": 1
+          },
+          "resource_assertions": [],
+          "depot_assertions": [],
+          "overwrite_cancelled": false,
+          "script_errors": [],
+          "error_count": 16
+        },
+        "log_sha256": "42a6ef912a7fb31f30e0e6cb42e90d451fcd82b7c097a42812d8972c039ca210",
+        "documents_unchanged": true,
+        "outputs": [
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-project\\gameplay\\gui_new\\swf\\hud\\hud_crosshair.redswf",
+            "sha256": "842b3e43c9e4a2374eb49061ec9a9e0866150b66e4f0223095c9c1567b2214ad",
+            "bytes": 87146
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-project\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+            "sha256": "e1fc4c2e8f9e2016ffe3e76d07c284d0aeba802d422edbdc42930fbcf2a34f6f",
+            "bytes": 156286
+          },
+          {
+            "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-project\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+            "sha256": "04bd72e0c30996f15ee078f6c6780ee4f4d37914bdc6fb6024ceb83b3d3e558f",
+            "bytes": 81155
+          }
+        ],
+        "pipeline_verified": false
+      },
+      "resaved-cook": {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\resaved-project",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked-resaved",
+          "-uncookDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\isolated-uncook\\",
+          "-workspaceDir",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\project-windows\\"
+        ],
+        "exit_code": 0,
+        "log_sha256": "17c2b428b7a7382e971032c74a204dcb44b50aae5ec232404a841779d0665e3d",
+        "diagnostics": {
+          "assertion_sites": {
+            "common\\engine\\soundFileLoader.cpp:101": 1
+          },
+          "resource_assertions": [],
+          "depot_assertions": [],
+          "overwrite_cancelled": false,
+          "script_errors": [],
+          "error_count": 14
+        }
+      }
+    },
+    "expanded_contracts": {
+      "inputs": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input\\hud_enemyfocus.swf",
+          "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+          "bytes": 66944
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+          "bytes": 88805
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "badd9e39090105f33cfe9c7b6826237f3a826aa93fc145629ef2d9ac33280111",
+          "bytes": 88804
+        }
+      ],
+      "native_bitmaps": [
+        {
+          "character": 6,
+          "format": 5,
+          "width": 40,
+          "height": 39,
+          "decoded_sha256": "583fa9ad5caec7e14d2eb1871ce65d2e562a88ee7dca14c1518930c62ee78b1c"
+        },
+        {
+          "character": 10,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "43beb746eea7865466a1aa889d664227db97fff0e481d7a23a85c9c9b2b4a03f"
+        },
+        {
+          "character": 13,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "b6eced086af97ef9b30a336720af707b63ffcad8291f19c9b81fff3b58162042"
+        },
+        {
+          "character": 32,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "fbde4654385535497e15ce26ba809efc117330846a28dae9414982f5c98300d2"
+        },
+        {
+          "character": 35,
+          "format": 5,
+          "width": 47,
+          "height": 44,
+          "decoded_sha256": "6d822f50daf0b1f0fd12897fd6929b584bb254969653ba3f3c17329cb98fb3bf"
+        },
+        {
+          "character": 56,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "c91950e53a0f0cd5dacb8d8cc817e82b28ae46840ce595db73eb6a450843e75b"
+        },
+        {
+          "character": 59,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "22f51ded3645acfa55217e59411c9cc57e98caf18ce165a55cdd33b0f75112ba"
+        }
+      ],
+      "tag_counts": [
+        73,
+        75,
+        75
+      ],
+      "frame_rect_rate_count_version_equal": true,
+      "native_nonimage_tags_byte_identical": true,
+      "cooked_nonimage_tags_byte_identical": true,
+      "atlas_placements_byte_identical": true,
+      "vanilla_atlas_linkage_matches": true,
+      "cooked_atlas_linkage_matches": true,
+      "vanilla_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53598,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54130,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "cooked_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53597,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{b22bd276}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54129,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{b22bd276}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "vanilla_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "4672bf1d2bc9c77b62dcb3741641d44cdaf97944094108d467adff5beeb67569"
+      },
+      "cooked_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "e7e89704ffa50d2cf31fe114a5344b07482e61467c35c7ebe91e3daefb8d4b25"
+      },
+      "atlas_pixel_differences": [
+        {
+          "character": 6,
+          "rectangle": [
+            247,
+            0,
+            287,
+            39
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 10,
+          "rectangle": [
+            289,
+            0,
+            413,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 13,
+          "rectangle": [
+            415,
+            0,
+            539,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 32,
+          "rectangle": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 35,
+          "rectangle": [
+            198,
+            0,
+            245,
+            44
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 56,
+          "rectangle": [
+            66,
+            0,
+            130,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 59,
+          "rectangle": [
+            132,
+            0,
+            196,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        }
+      ],
+      "full_atlas_visible_pixel_differences": 560,
+      "full_atlas_transparent_rgb_differences": 26,
+      "pipeline_verified": false,
+      "runtime_tested": false,
+      "zip_path": null
+    },
+    "resaved_contracts": {
+      "inputs": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\input\\hud_enemyfocus.swf",
+          "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+          "bytes": 66944
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+          "bytes": 88805
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked-resaved\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "c725dbbbd53c32df0f7bd5ee28973d55eba4b2869fc3ff25955e7311a9e72633",
+          "bytes": 88804
+        }
+      ],
+      "native_bitmaps": [
+        {
+          "character": 6,
+          "format": 5,
+          "width": 40,
+          "height": 39,
+          "decoded_sha256": "583fa9ad5caec7e14d2eb1871ce65d2e562a88ee7dca14c1518930c62ee78b1c"
+        },
+        {
+          "character": 10,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "43beb746eea7865466a1aa889d664227db97fff0e481d7a23a85c9c9b2b4a03f"
+        },
+        {
+          "character": 13,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "b6eced086af97ef9b30a336720af707b63ffcad8291f19c9b81fff3b58162042"
+        },
+        {
+          "character": 32,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "fbde4654385535497e15ce26ba809efc117330846a28dae9414982f5c98300d2"
+        },
+        {
+          "character": 35,
+          "format": 5,
+          "width": 47,
+          "height": 44,
+          "decoded_sha256": "6d822f50daf0b1f0fd12897fd6929b584bb254969653ba3f3c17329cb98fb3bf"
+        },
+        {
+          "character": 56,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "c91950e53a0f0cd5dacb8d8cc817e82b28ae46840ce595db73eb6a450843e75b"
+        },
+        {
+          "character": 59,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "22f51ded3645acfa55217e59411c9cc57e98caf18ce165a55cdd33b0f75112ba"
+        }
+      ],
+      "tag_counts": [
+        73,
+        75,
+        75
+      ],
+      "frame_rect_rate_count_version_equal": true,
+      "native_nonimage_tags_byte_identical": true,
+      "cooked_nonimage_tags_byte_identical": true,
+      "atlas_placements_byte_identical": true,
+      "vanilla_atlas_linkage_matches": true,
+      "cooked_atlas_linkage_matches": true,
+      "vanilla_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53598,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54130,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "cooked_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53597,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{b22bd276}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54129,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{b22bd276}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "vanilla_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "4672bf1d2bc9c77b62dcb3741641d44cdaf97944094108d467adff5beeb67569"
+      },
+      "cooked_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "50ab5407295bc951f49d511e86403fdabd111e512dbeb4e1b886b43ec4ed50c5"
+      },
+      "atlas_pixel_differences": [
+        {
+          "character": 6,
+          "rectangle": [
+            247,
+            0,
+            287,
+            39
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 10,
+          "rectangle": [
+            289,
+            0,
+            413,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 13,
+          "rectangle": [
+            415,
+            0,
+            539,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 32,
+          "rectangle": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 35,
+          "rectangle": [
+            198,
+            0,
+            245,
+            44
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 56,
+          "rectangle": [
+            66,
+            0,
+            130,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 59,
+          "rectangle": [
+            132,
+            0,
+            196,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        }
+      ],
+      "full_atlas_visible_pixel_differences": 609,
+      "full_atlas_transparent_rgb_differences": 46,
+      "pipeline_verified": false,
+      "runtime_tested": false,
+      "zip_path": null
+    },
+    "padding": {
+      "inputs": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e"
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "badd9e39090105f33cfe9c7b6826237f3a826aa93fc145629ef2d9ac33280111"
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc\\native.xml",
+          "sha256": "9c3a40417183110638a1ee121706d756c0418763ac66eeb38c2dbeffaf3a15de"
+        }
+      ],
+      "mip_count": 1,
+      "fill_references": [
+        {
+          "bitmap": 6,
+          "type": 65
+        },
+        {
+          "bitmap": 10,
+          "type": 65
+        },
+        {
+          "bitmap": 13,
+          "type": 65
+        },
+        {
+          "bitmap": 13,
+          "type": 65
+        },
+        {
+          "bitmap": 32,
+          "type": 65
+        },
+        {
+          "bitmap": 32,
+          "type": 65
+        },
+        {
+          "bitmap": 35,
+          "type": 67
+        },
+        {
+          "bitmap": 6,
+          "type": 65
+        },
+        {
+          "bitmap": 56,
+          "type": 65
+        },
+        {
+          "bitmap": 59,
+          "type": 65
+        }
+      ],
+      "all_real_bitmap_references_use_subimages": true,
+      "all_real_bitmap_fills_are_clipped": true,
+      "alpha_pixel_differences": 560,
+      "transparent_rgb_pixel_differences": 26,
+      "visible_pixel_difference_distances": {
+        "2": 138,
+        "3": 134,
+        "4": 135,
+        "5": 132,
+        "10": 4,
+        "11": 4,
+        "12": 5,
+        "13": 5,
+        "14": 1,
+        "15": 1,
+        "16": 1
+      },
+      "clipped_nearest_or_bilinear_model_unaffected": true,
+      "renderer_sampler_state_verified": false,
+      "runtime_tested": false
+    },
+    "resaved_padding": {
+      "inputs": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e"
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\cooked-resaved\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "c725dbbbd53c32df0f7bd5ee28973d55eba4b2869fc3ff25955e7311a9e72633"
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc\\native.xml",
+          "sha256": "9c3a40417183110638a1ee121706d756c0418763ac66eeb38c2dbeffaf3a15de"
+        }
+      ],
+      "mip_count": 1,
+      "fill_references": [
+        {
+          "bitmap": 6,
+          "type": 65
+        },
+        {
+          "bitmap": 10,
+          "type": 65
+        },
+        {
+          "bitmap": 13,
+          "type": 65
+        },
+        {
+          "bitmap": 13,
+          "type": 65
+        },
+        {
+          "bitmap": 32,
+          "type": 65
+        },
+        {
+          "bitmap": 32,
+          "type": 65
+        },
+        {
+          "bitmap": 35,
+          "type": 67
+        },
+        {
+          "bitmap": 6,
+          "type": 65
+        },
+        {
+          "bitmap": 56,
+          "type": 65
+        },
+        {
+          "bitmap": 59,
+          "type": 65
+        }
+      ],
+      "all_real_bitmap_references_use_subimages": true,
+      "all_real_bitmap_fills_are_clipped": true,
+      "alpha_pixel_differences": 608,
+      "transparent_rgb_pixel_differences": 46,
+      "visible_pixel_difference_distances": {
+        "2": 151,
+        "3": 146,
+        "4": 147,
+        "5": 144,
+        "10": 4,
+        "11": 4,
+        "12": 5,
+        "13": 5,
+        "14": 1,
+        "15": 1,
+        "16": 1
+      },
+      "clipped_nearest_or_bilinear_model_unaffected": true,
+      "renderer_sampler_state_verified": false,
+      "runtime_tested": false
+    },
+    "complete_editor_initialization_verified": false,
+    "confirmed_root_cause": false,
+    "all_runtime_rendering_contracts_verified": false,
+    "next_step": "Supported Editor import/checkout in a fresh isolated project with current uncooked depot read-only; compare EnemyFocus and Watermark creation state.",
+    "package_built": false,
+    "zip_path": null
+  },
+  "script_fallback_current": {
+    "settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "scope": "known-source-assembly",
+    "assembly": "C:\\REDkitProjects\\witchercompatibility\\compatibility-validation\\analog-gait",
+    "whole_file_winners": {},
+    "opaque_mods": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "results": [
+      {
+        "label": "baseline",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\baseline"
+        ],
+        "exit_code": 0,
+        "compiler_pass": true,
+        "errors": [],
+        "output_files": [
+          {
+            "name": "blob.rsblob",
+            "sha256": "617e34ffb5fe0556e1b7bf92751d1100cb1486e552de3f248c7bde6bc45af779",
+            "bytes": 52978
+          }
+        ],
+        "warning_count": 819,
+        "assertion_count": 23591
+      },
+      {
+        "label": "candidate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\candidate"
+        ],
+        "exit_code": 0,
+        "compiler_pass": true,
+        "errors": [],
+        "output_files": [
+          {
+            "name": "blob.rsblob",
+            "sha256": "cfdefa114d16265e2bc7d037b82179b6e37ad3d7ba198685355015bc4678fcb0",
+            "bytes": 53657
+          }
+        ],
+        "warning_count": 819,
+        "assertion_count": 23592
+      }
+    ],
+    "packaging_allowed": false,
+    "deployed": false,
+    "zip_path": null,
+    "source_records": 1712,
+    "receipt_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-fallback-assembly-fixed\\receipt.json",
+    "receipt_sha256": "5c0f1d2d4a345e0710ff14f02c6b0bde43901d207a345fcb225cc2fa6e5f5656",
+    "source_sha256": "137ac629ede38563d4af666e05e17b956bd8170fbf0bedd670080afe8c6cd90e",
+    "enemyfocus_normalized_equal_to_live_friendlyhud": true,
+    "additional_candidate_assertion": {
+      "site": "common/core/scriptCompiledCode.cpp:56",
+      "condition": "!m_sourceFile.Empty()",
+      "count": 1,
+      "resolved": false
+    }
+  }
 }

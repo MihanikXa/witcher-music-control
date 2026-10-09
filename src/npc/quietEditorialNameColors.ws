@@ -11,12 +11,12 @@ function OnTick(timeDelta : float)
     var newColor : int;
 
     wrappedMethod(timeDelta);
+    // Flash handles are not Witcher object references and have no supported
+    // Boolean conversion. Follow the module's existing initialized OnTick
+    // lifecycle; its vanilla/FriendlyHUD handlers use the same bindings.
     movie = GetModuleFlash();
-    if (!movie) { return; }
     focus = movie.GetChildFlashSprite("mcNPCFocus");
-    if (!focus) { return; }
     label = focus.GetMemberFlashObject("tfName");
-    if (!label) { return; }
     originalColor = (int)label.GetMemberFlashNumber("textColor");
     newColor = originalColor;
     switch (originalColor)

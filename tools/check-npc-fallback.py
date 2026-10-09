@@ -18,7 +18,7 @@ def sha(p):
 
 def text(p):
     b = p.read_bytes()
-    return b.decode('utf-16' if b.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig')
+    return b.decode('utf-16' if b.startswith((b'\xff\xfe', b'\xfe\xff')) else 'utf-8-sig').replace('\r\n', '\n').replace('\r', '\n')
 
 def main():
     ap = argparse.ArgumentParser()
@@ -26,6 +26,8 @@ def main():
     ap.add_argument('--settings', type=Path, required=True)
     ap.add_argument('--runtime', type=Path, required=True)
     ap.add_argument('--out', type=Path, required=True)
+    ap.add_argument('--assembly', type=Path,
+                    help='Read-only known-working base/patch assembly; diagnostic scope only')
     args = ap.parse_args()
     runtime = args.runtime.resolve()
     if ROOT / 'build' not in runtime.parents or not (runtime / 'wcc_lite.exe').is_file():
@@ -48,12 +50,13 @@ def main():
 
     def copy(p, q, owner):
         q.parent.mkdir(parents=True, exist_ok=True)
-        q.write_text(text(p), encoding='utf-8')
+        q.write_text(text(p), encoding='utf-8', newline='\n')
         sources.append(dict(path=str(p), sha256=sha(p), owner=owner))
 
     vanilla = args.game / 'content/content0/scripts'
-    for p in vanilla.rglob('*.ws'):
-        copy(p, base / p.relative_to(vanilla), 'vanilla')
+    if not args.assembly:
+        for p in vanilla.rglob('*.ws'):
+            copy(p, base / p.relative_to(vanilla), 'vanilla')
     opaque = []
     mods = sorted((s for s in cfg.sections() if cfg[s].get('Enabled') == '1'),
                   key=lambda s: int(cfg[s].get('Priority', '999999')))
@@ -63,6 +66,8 @@ def main():
         if info.exists() and json.loads(info.read_text(encoding='utf-8-sig')).get('useLooseScripts') is False:
             opaque.append(mod)
         script_root = content / 'scripts'
+        if args.assembly:
+            continue
         for p in script_root.rglob('*.ws'):
             rel = p.relative_to(script_root)
             key = rel.as_posix().lower()
@@ -74,6 +79,17 @@ def main():
             else:
                 copy(p, patch / mod / rel, mod)
 
+    if args.assembly:
+        for group in ('base', 'patch'):
+            source = args.assembly.resolve() / group
+            if not source.is_dir():
+                raise ValueError('Assembly must contain both base/ and patch/')
+            for p in source.rglob('*.ws'):
+                copy(p, work / group / p.relative_to(source), 'known-working-assembly')
+        live = args.game / 'Mods/modFriendlyHUD/content/scripts/game/gui/hud/modules/hudModuleEnemyFocus.ws'
+        staged = base / 'game/gui/hud/modules/hudModuleEnemyFocus.ws'
+        if text(live) != text(staged):
+            raise ValueError('Known assembly EnemyFocus differs from deployed provider')
     results = []
     for label in ['baseline', 'candidate']:
         if label == 'candidate':
@@ -89,15 +105,18 @@ def main():
         log = full_log.read_text(errors='replace') if full_log.exists() else ''
         (work / (label + '.full.log')).write_text(log)
         errors = [line for line in log.splitlines() if '[Error][Script]' in line or '[Error][WCC]' in line]
-        passed = proc.returncode == 0 and 'Success! Patch scripts blob saved' in log and (output / 'blob.rsblob').is_file()
+        blob = output / 'blob.rsblob'
+        passed = proc.returncode == 0 and 'Success! Patch scripts blob saved' in log and blob.is_file() and blob.stat().st_size > 0
         results.append(dict(label=label, command=cmd, exit_code=proc.returncode,
                             compiler_pass=passed, errors=errors,
-                            output_files=[dict(name=p.name, sha256=sha(p)) for p in output.iterdir() if p.is_file()]))
+                            output_files=[dict(name=p.name, bytes=p.stat().st_size, sha256=sha(p)) for p in output.iterdir() if p.is_file()]))
         if sha(args.settings) != settings_hash:
             raise RuntimeError('Settings changed during read-only validation; do not package')
     receipt = dict(settings_sha256=settings_hash, compiler_sha256=sha(runtime / 'wcc_lite.exe'),
+                   scope='known-source-assembly' if args.assembly else 'live-loose-approximation',
+                   assembly=str(args.assembly.resolve()) if args.assembly else None,
                    sources=sources, whole_file_winners=winners, opaque_mods=opaque,
-                   results=results, packaging_allowed=all(r['compiler_pass'] for r in results) and not opaque,
+                   results=results, packaging_allowed=all(r['compiler_pass'] for r in results) and not opaque and not args.assembly,
                    deployed=False, zip_path=None)
     (work / 'receipt.json').write_text(json.dumps(receipt, indent=2))
     print(json.dumps(dict(results=results, opaque_mods=opaque, packaging_allowed=receipt['packaging_allowed']), indent=2))

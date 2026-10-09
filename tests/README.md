@@ -8,4 +8,7 @@ unknown formats and stripped zero-glyph fonts. Native inspection tests cover
 known BC3 color/alpha selectors, partial blocks, truncated textures and invalid
 CR2W version/table bounds. Synthetic fixtures contain no
 game or author assets. A successful test run does not prove engine loading.
+Controlled-investigation tests distinguish resource assertions from successful
+or cancelled saves, check exclusive sampling rectangles and prevent staged
+UTF-8/UTF-16 newline corruption. Current suite: fourteen tests.
 In-game acceptance criteria are in design/implementation-plan.md.
