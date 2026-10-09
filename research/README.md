@@ -2,6 +2,9 @@
 
 Record verified vanilla/REDkit UI resource paths, text styling mechanics, reference-mod diffs, exact evidence and collisions with the deployed `general-merge` Vortex profile. Keep user observations separate from agent inferences.
 
+Phase 2: [failed unchanged resource gate](phase2-validation.md),
+[input/command/validation manifest](phase2-manifest.json). No ZIP was generated.
+
 Research phase 1, 9 October 2026:
 
 - [Findings and provenance](findings.md)

@@ -1,5 +1,9 @@
 # Research validation and remaining gates
 
+This records Phase 1. Phase 2 resolved local tool initialization and reached
+import/cooking, but failed texture preservation; current status is in
+[phase2-validation.md](phase2-validation.md). The full asset gate remains closed.
+
 9 October 2026; English-only acceptance scope.
 
 ## Completed

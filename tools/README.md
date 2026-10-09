@@ -29,6 +29,15 @@ xml/, decompiled/ and surface-facts.json. Full strings/decompiled game code
 are never committed. Avoid interpreting character IDs across different movie
 versions without matching sprite/linkage context.
 
+## Phase 2 probes
+
+Phase 2 diagnostics: `probe-enemyfocus.py` pins the runtime input and checks the
+inner round-trip. `probe-redkit-ui.py` stages current official tools locally and
+records import/cook/validate commands and hashes. It deliberately fails closed,
+with no packaging command. See [Phase 2 validation](../research/phase2-validation.md)
+for reproduction and the failed texture gate. These are diagnostic probes,
+not an approved mod builder.
+
 ## Licensed browser preview
 
 ```powershell

@@ -37,4 +37,4 @@ Reduce thick solid black strokes. Prefer subtle shadow or small translucent back
 The floating NPC nameplate shown in the user's Yennefer screenshot: muted color, less outlined, smaller/airier proportions, readable against dark interiors and bright daylight. Compare neutral, friendly, hostile and special targets using the same system. Preserve targeting and interaction cues.
 
 ## Validation before rollout
-Character names; hostile targets; quests; dialogue choices; subtitle sequences; inventory; item rarity; loot names; skill screens; Gwent; options menus; day/night/snow; native language and Cyrillic glyph coverage; 1080p vs 4K; current Seamless Adaptive HUD/FriendlyHUD coexistence.
+Character names; hostile targets; quests; dialogue choices; subtitle sequences; inventory; item rarity; loot names; skill screens; Gwent; options menus; day/night/snow; English punctuation and accented names; 1080p vs 4K; current Seamless Adaptive HUD/FriendlyHUD coexistence.

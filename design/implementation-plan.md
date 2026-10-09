@@ -1,5 +1,11 @@
 # Modular implementation plan — no deployment
 
+Phase 2 update: the unchanged inner movie was reassembled, then imported and
+cooked with current installed tools, but the rebuilt resource lost its embedded
+texture atlas and emitted an import assertion. The gate is failed; no visual
+transformation or ZIP exists. See [validation](../research/phase2-validation.md).
+The package boundaries and first-proof specification below remain proposals.
+
 ## Package boundaries
 
 1. **NPC presentation proof:** one current `hud_enemyfocus.redswf` replacement;

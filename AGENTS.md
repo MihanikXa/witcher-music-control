@@ -11,7 +11,7 @@ Do not modify the user's installed game, Vortex deployment/staging, Documents se
 - Eliminate thick black text strokes where possible; retain sufficient dynamic contrast on bright snow, overcast sky, bright UI, daylight, fire, caves and night.
 - Replace excessively saturated friendly/hostile/name/highlight colors with restrained semantic colors (warm ivory, stone, sage, muted oxide and aged brass are provisional examples). Preserve hostility, focus, interactability and selection distinctions.
 - Favor spacing and typographic hierarchy over boxes, ornament, clutter or indiscriminate hiding.
-- Preserve practical controller readability, legibility on 1080p and 4K, Latin/Cyrillic coverage and localization.
+- Preserve practical controller readability, legibility on 1080p and 4K, English punctuation and accented names. Acceptance scope is English only; Russian/Ukrainian and Cyrillic validation are not required.
 
 ## Reference locations
 The user will supply extracted mods locally under `reference/`. Read `reference/README.md`. All reference asset contents are gitignored. Use them as evidence; do not republish or edit authors' binaries. Obtain fonts under appropriate licenses and use vanilla game resources plus original modifications where feasible.
@@ -23,7 +23,7 @@ The user will supply extracted mods locally under `reference/`. Read `reference/
 4. Verify any claimed technical recipe against the current installed resource format and toolchain. Never invent WitcherScript APIs, resource paths or Scaleform behavior.
 5. Compare 2–3 coherent visual options. Preserve the user's Gentium preference while leaving room for licensed alternatives. Validate outlines and semantic colors independently before a global rewrite.
 6. Prototype NPC nameplates as a separate Vortex mod with reversible deployment and no modification of existing managed files.
-7. Check script/binary/resource priority collisions, potential font clipping, multilanguage fallback, contrast, prompts and controller/keyboard input.
+7. Check script/binary/resource priority collisions, potential font clipping, English glyph coverage, contrast, prompts and controller/keyboard input.
 
 ## Tooling, safety, and repository hygiene
 Track original design documents, research findings, reproducible scripts/tests under `design/`, `research/`, `src/`, `tools/`, `tests/`. Keep generated files in ignored `build/` and `deploy/`; never force-add vendor mods, extracted game files, original game binaries, proprietary fonts or generated mod assets.

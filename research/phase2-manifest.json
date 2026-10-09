@@ -1,0 +1,158 @@
+{
+  "status": "blocked",
+  "date": "2026-10-09",
+  "scope": "English only",
+  "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+  "inner": {
+    "resource": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+    "resource_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+    "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+    "payload_offset": 592,
+    "payload_signature": "CFX",
+    "tag_count": 75,
+    "reassembled_sha256": "96d1158303405227a18cade993e7a6f5524855f4096893789d233022f3d40474",
+    "changed_tags": [
+      {
+        "index": 5,
+        "before_code": 22,
+        "after_code": 22,
+        "before_hash": "f0cec3939373d1cc5c89bd7c66703f9a938c4b960a6de438c80e16a42b9a6948",
+        "after_hash": "dff308f5a2e4b7d097280c427034960b9f50afbe5c2b7b695201223ea8ee615d"
+      },
+      {
+        "index": 11,
+        "before_code": 32,
+        "after_code": 32,
+        "before_hash": "ffff960bc052aff48526c5ec57c405f11ad44f5531a2a9bae595ad4d6201ba3f",
+        "after_hash": "b41efa66ab5401d2fbc5e2e459ac70f07b29284b614102fc3d3905a293dff68d"
+      },
+      {
+        "index": 12,
+        "before_code": 2,
+        "after_code": 2,
+        "before_hash": "49f9b16dba88c22fb168160f08c9b209789ea320d196df5ebda86241863dc494",
+        "after_hash": "b40ea21a8d8384f631111dd21e1c2f459e440359e9d9fc6297a50c0c683e4384"
+      },
+      {
+        "index": 26,
+        "before_code": 22,
+        "after_code": 22,
+        "before_hash": "35cbab23bbbbaa7945f7f22afaffbda19b96f3dd1015e7feb33857c4bbdfa8ac",
+        "after_hash": "ec586b22a90ad01c0f98d8d5e1547f214f5bb25246f92076c01b57c10b4a7448"
+      },
+      {
+        "index": 51,
+        "before_code": 22,
+        "after_code": 22,
+        "before_hash": "e819cf30e1b3875e8db7fbc49ae7d4b4aeeedca2531c4ef2d7460ca20e04bd83",
+        "after_hash": "0954757e34f437dac60052cda25878e912f90fedf2ee05ae0ac41160e7191308"
+      },
+      {
+        "index": 53,
+        "before_code": 22,
+        "after_code": 22,
+        "before_hash": "580a259439dc256e3fbaf1affc43103ebeb2dea03d34cf2e05be12603521b414",
+        "after_hash": "2d00faf5e62ef390b6ba4b6b62f950eeaea5de4a4825b22c1a494229a6fe88dd"
+      },
+      {
+        "index": 55,
+        "before_code": 22,
+        "after_code": 22,
+        "before_hash": "fe34de8d03e85815f9b63b9740631dcf0ad0f1262951c210ef4cd187882eec79",
+        "after_hash": "43f48605f30330f380fe69d8dcd7a5ba55252f2981e9873c1e24c51661d70898"
+      }
+    ],
+    "critical_tags_byte_identical": true,
+    "normalized_xml_semantically_equal": true,
+    "cr2w_import_verified": false,
+    "cook_verified": false,
+    "bundle_verified": false,
+    "pipeline_verified": false,
+    "zip_path": null,
+    "runtime_tested": false
+  },
+  "official_tools": [
+    {
+      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\wcc_lite.exe",
+      "sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+      "bytes": 150762960
+    },
+    {
+      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
+      "sha256": "8a2855422ce87ffb8a4b809780081d3dd23f40ef831972605762a5bbb1d06a41",
+      "bytes": 4830672
+    },
+    {
+      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+      "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+      "bytes": 66944
+    }
+  ],
+  "current_wcc_version": "5.0.1048625 / P4CL 13413172 / Oct 7 2026",
+  "official_commands": [
+    {
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+        "help",
+        "swfimport"
+      ],
+      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+        "swfimport",
+        "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\phase2\\probe\\input",
+        "-toDepotPath=gameplay/gui_new/swf/hud"
+      ],
+      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked"
+      ],
+      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validation"
+      ],
+      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+      "exit_code": 0
+    }
+  ],
+  "cooked_sha256": "bf645f678c3af47cbf3f1e8ff24d52810e8188cd8de35987e7e36434b1cfee57",
+  "cooked_bytes": 53858,
+  "texture_array_preserved": false,
+  "import_resource_assertion": true,
+  "validator_resource_errors": 0,
+  "logs": [
+    {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\import.full.log",
+      "sha256": "5a7e89cfffc9a6b69bce67293f31d429aa34f15ccbc007a577f618f7ee5186a4"
+    },
+    {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cook.full.log",
+      "sha256": "a3a613bced2d66189201cb529f17235f1b5427f292a627a73db40af74b65fd36"
+    },
+    {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validate.full.log",
+      "sha256": "9a6e955446a9f3a68eb01728f0d30751a673e327e5972761b869b06c4b896e02"
+    }
+  ],
+  "installed_authoring_swf_abc_and_symbols_match": true,
+  "package_built": false,
+  "zip_path": null,
+  "deployed": false,
+  "game_tested": false
+}

@@ -8,7 +8,9 @@ Alignment Fix is not recommended unchanged for this runtime; see its
 [assessment](research/alignment-fix.md). Explore the original
 [typography comparison](design/comparison.html) and
 [prototype plan](design/implementation-plan.md). No overhaul package is built
-or deployed yet.
+or deployed yet. Phase 2's current-toolchain probe reached import and cooking,
+but lost the vanilla embedded texture atlas. The unchanged round-trip gate
+therefore failed; see [Phase 2 validation](research/phase2-validation.md).
 
 ## Visual target
 
@@ -29,7 +31,7 @@ Focus on replacing thick hard-edged black text outlines, overly saturated red/gr
 3. Propose and compare 2–3 precise typography/color treatments with real-game examples.
 4. Prototype **one small, independently reversible NPC-nameplate treatment** first.
 5. Extend incrementally to dialogue/subtitles, notifications, inventory and menus; package optional modules when feasible.
-6. Validate visual contrast, clipping, localization and coexistence with current Vortex mods before any live deployment.
+6. Validate visual contrast, clipping, English text coverage and coexistence with current Vortex mods before any live deployment.
 
 Codex development instructions: [AGENTS.md](AGENTS.md). Design brief: [design/brief.md](design/brief.md). Reference locations: [reference/README.md](reference/README.md).
 
