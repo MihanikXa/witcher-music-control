@@ -1,9 +1,12 @@
 # Modular implementation plan — no deployment
 
-Phase 2 update: the unchanged inner movie was reassembled, then imported and
-cooked with current installed tools, but the rebuilt resource lost its embedded
-texture atlas and emitted an import assertion. The gate is failed; no visual
-transformation or ZIP exists. See [validation](../research/phase2-validation.md).
+Current Phase 2 update: importing the installed native authoring SWF restores
+the texture array. Including the official GUIWithAlpha texture-group definition
+also restores the full embedded mip structure. The resource-state assertion
+persists, and the additive script fallback has no compiler acceptance. The gate
+remains failed; no visual variants or ZIP exist. See the current
+[native validation](../research/native-npc-validation.md) and earlier
+[reconstruction investigation](../research/phase2-validation.md).
 The package boundaries and first-proof specification below remain proposals.
 
 ## Package boundaries
@@ -45,24 +48,25 @@ versions. Public Git contains original scripts/plans, no cooked/game/author data
 | License | Game-derived resource subject to installed game/REDkit terms; private test package only until redistribution terms reviewed. Original code/design belongs in repository. No proprietary PF Din font redistribution |
 | Expected packaged layout | `Mods/modQuietEditorialNPC/content/blob0.bundle` and tool-generated `metadata.store`; exact current cook output must be confirmed before writing archive |
 | Collision impact | No existing movie owner; behavior depends on FriendlyHUD and SAH contracts. Do not alter package04 or introduce duplicate whole-file WS |
-| Build command | **Not yet established**. Inspector command below is verified; no working 5.01 cook command is invented |
+| Build command | Native import/cook diagnostic commands are reproduced in native validation; an accepted assertion-free end-to-end bundle build is not established |
 | One-package rollback | Disable only modQuietEditorialNPC in Vortex and deploy; inspect absent payload/winner. Vanilla movie restores. Other modules and existing profile stay enabled |
 
 ## Precise next step: prove an unchanged round trip
 
-In a fresh ignored build directory, extract the recorded current NPC payload
-and compute its hash. Use its validated nested GFx (observed offset 592, located
-by the inspector rather than hardcoded in a writer). JPEXS can export its XML
-and current class. Before changing appearance, validate an **unchanged** GFx
-read/write and official wrapping/cook/bundle path on isolated copies, then
-re-extract and compare contracts/filter/font/text geometry and bundle keys.
+Continue from the native authoring SWF, not the texture-stripped runtime
+reconstruction. Establish complete supported isolated REDkit initialization
+and eliminate the importer monitor-state assertion while retaining the official
+texture-group definition. The native source, cooked non-image tags and seven
+atlas footprints now match the runtime evidence; whole-atlas differences and
+runtime behavior remain unaccepted. Then pack one unchanged resource with the
+current official tool, re-extract it, check exact keys/hashes/metadata and validate
+Vortex layout before any color/shadow variation. No older movie or guessed
+header is an acceptable workaround. See native validation for exact commands.
 
-Read the installed GFxExport usage and current wcc commandlet help from a
-separately staged runtime/configuration within this workspace. The earlier
-isolated wcc help call failed due to missing gameconf.cfg; selecting a valid
-read-only source configuration and proving offline commandlet behavior is the
-first unresolved gate. Do not run extraction/depot regeneration, write logs
-inside installed tools, or change the existing REDkit compatibility project.
+The original additive color wrapper is a separately gated fallback. Its staged
+baseline and candidate both fail on an existing loot-feed struct before testing
+the wrapper, with seven opaque compiled-script mods omitted. Do not alter working
+merges to make that diagnostic pass. No existing REDkit project is modified.
 
 Verified inspection command:
 

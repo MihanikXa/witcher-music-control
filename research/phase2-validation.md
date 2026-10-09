@@ -1,5 +1,12 @@
 # Phase 2 — unchanged resource gate failed
 
+**Historical runtime-reconstruction investigation.** The subsequent
+[native SWF investigation](native-npc-validation.md) restores the texture array
+and embedded mip structure using the official texture-group configuration.
+The importer assertion remains unresolved, so the current gate still fails.
+Use the new report and current manifest for active status; the evidence below
+records the earlier failed reconstruction route.
+
 9 October 2026. Branch `ui-overhaul`; research baseline `7a25630`.
 English-only acceptance scope. **No variants, bundles or ZIP generated.**
 
@@ -56,7 +63,7 @@ its code matches, or advance to visual variations from the inner movie alone.
 
 ```powershell
 python tools/probe-enemyfocus.py --ffdec build/tools/ffdec/ffdec.jar --resource build/audit/vanilla/gameplay/gui_new/swf/hud/hud_enemyfocus.redswf --out build/phase2/probe
-python tools/probe-redkit-ui.py --redkit 'L:\Games\Steam\steamapps\common\The Witcher 3 REDkit' --probe build/phase2/probe --out build/phase2-fresh
+python tools/probe-redkit-ui.py --redkit 'L:\Games\Steam\steamapps\common\The Witcher 3 REDkit' --probe build/phase2/probe --settings-directory 'C:\Users\micha\OneDrive - hull.ac.uk\Documents\The Witcher 3' --out build/phase2-fresh
 ```
 
 The second command needs a fresh output directory and deliberately exits

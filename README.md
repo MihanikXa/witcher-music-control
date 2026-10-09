@@ -8,9 +8,12 @@ Alignment Fix is not recommended unchanged for this runtime; see its
 [assessment](research/alignment-fix.md). Explore the original
 [typography comparison](design/comparison.html) and
 [prototype plan](design/implementation-plan.md). No overhaul package is built
-or deployed yet. Phase 2's current-toolchain probe reached import and cooking,
-but lost the vanilla embedded texture atlas. The unchanged round-trip gate
-therefore failed; see [Phase 2 validation](research/phase2-validation.md).
+or deployed yet. The native REDkit SWF now cooks with its embedded atlas after
+including the official texture-group configuration. The importer still emits a
+resource-state assertion, so the unchanged round-trip gate remains blocked.
+The additive color fallback also lacks compiler acceptance. See the current
+[native NPC validation](research/native-npc-validation.md) and earlier
+[Phase 2 investigation](research/phase2-validation.md). No test ZIP exists.
 
 ## Visual target
 

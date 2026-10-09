@@ -1,7 +1,8 @@
 """Reproduce the isolated official importer/cooker diagnostic, with no ZIP.
 
-Requires probe-enemyfocus.py output. Copies official installed tools/data only
-into ignored build/. A successful subprocess or cook is NOT a pipeline pass.
+Uses probe-enemyfocus.py output or the installed native authoring SWF. Copies
+official installed tools/data only into ignored build/. A successful subprocess
+or cook is NOT a pipeline pass. No package operation is implemented.
 """
 import argparse
 import hashlib
@@ -20,10 +21,27 @@ def sha(p):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--redkit', type=Path, required=True)
-    ap.add_argument('--probe', type=Path, required=True)
+    ap.add_argument('--probe', type=Path, help='Previous inner-movie probe directory')
+    ap.add_argument('--native', action='store_true', help='Import unchanged installed authoring SWF instead')
+    ap.add_argument('--resource', type=Path, help='Required runtime baseline when using --native')
+    ap.add_argument('--settings-directory', type=Path, required=True,
+                    help='Read-only settings/saves directory to fingerprint before and after')
     ap.add_argument('--out', type=Path, required=True)
     args = ap.parse_args()
-    kit, probe, work = args.redkit.resolve(), args.probe.resolve(), args.out.resolve()
+    def snapshot():
+        return {str(p): dict(sha256=sha(p), mtime_ns=p.stat().st_mtime_ns)
+                for p in args.settings_directory.rglob('*') if p.is_file()}
+    settings_before = snapshot()
+    kit, work = args.redkit.resolve(), args.out.resolve()
+    if args.native:
+        if not args.resource:
+            ap.error('--native requires --resource')
+        original = args.resource.resolve()
+    elif args.probe:
+        probe = args.probe.resolve()
+        original = Path(json.loads((probe / 'receipt.json').read_text())['resource'])
+    else:
+        ap.error('Provide --native --resource or --probe')
     if ROOT / 'build' not in work.parents or work.exists():
         raise ValueError('Use a fresh directory under workspace build/')
     runtime = work / 'runtime'
@@ -46,10 +64,11 @@ def main():
         copy(p, work / 'data' / p.name)
     for p in (kit / 'r4data/gameplay/globals').glob('*.csv'):
         copy(p, work / 'data/gameplay/globals' / p.name)
-    for rel in ['soundbanks/pc/Init.bnk', 'game/dlctable.csv', 'dep.cache']:
+    for rel in ['soundbanks/pc/Init.bnk', 'game/dlctable.csv', 'dep.cache',
+                'engine/textures/texturegroups.xml']:
         copy(kit / 'r4data' / rel, work / 'data' / rel)
     # Config paths are relative to wcc's root (the parent's parent of runtime).
-    data = work.name + '/data'
+    data = work.name + '/data/'
     (work / 'gameconf.cfg').write_text('r4 {\n title "The Witcher 3"\n'
         f' data "{data}"\n bundle "bundles"\n config "config"\n'
         f' scripts "{data}/scripts"\n splash "splashscreen.bmp"\n'
@@ -60,6 +79,11 @@ def main():
     temp.mkdir()
     env = dict(os.environ, TEMP=str(temp), TMP=str(temp))
     commands = []
+    if args.native:
+        input_dir = work / 'input'
+        copy(kit / 'r4data' / KEY.with_suffix('.swf'), input_dir / 'hud_enemyfocus.swf')
+    else:
+        input_dir = probe / 'input'
 
     def wcc(label, argv):
         cmd = [str(runtime / 'wcc_lite.exe')] + argv
@@ -68,11 +92,13 @@ def main():
         log = work / 'wcc.log'
         if log.exists():
             shutil.copyfile(log, work / (label + '.full.log'))
-        commands.append(dict(command=cmd, cwd=str(runtime), exit_code=result.returncode))
+        log_text = (work / (label + '.full.log')).read_text(errors='replace') if log.exists() else ''
+        commands.append(dict(command=cmd, cwd=str(runtime), exit_code=result.returncode,
+                             assertions=[line for line in log_text.splitlines() if '[Error][Assert]' in line]))
         return result.returncode
 
     wcc('help-import', ['help', 'swfimport'])
-    wcc('import', ['swfimport', '-fromAbsPath=' + str(probe / 'input'),
+    wcc('import', ['swfimport', '-fromAbsPath=' + str(input_dir),
                    '-toDepotPath=gameplay/gui_new/swf/hud'])
     imported = work / 'workspace' / KEY
     cooked = work / 'cooked' / KEY
@@ -82,18 +108,19 @@ def main():
         if cooked.is_file():
             wcc('validate', ['validate', '-db=' + str(work / 'cooked/cook.db'),
                              '-outdir=' + str(work / 'validation')])
-    original_receipt = json.loads((probe / 'receipt.json').read_text())
-    original = Path(original_receipt['resource'])
     # Conservative observed-contract screen, not a complete CR2W decoder.
     texture_type = b'array:2,0,handle:CSwfTexture'
     before = texture_type in original.read_bytes()
     after = cooked.is_file() and texture_type in cooked.read_bytes()
-    receipt = dict(inputs=sources, commands=commands,
+    receipt = dict(source_route='native-authoring-swf' if args.native else 'runtime-reconstruction',
+        inputs=sources, commands=commands,
         original_sha256=sha(original), imported_sha256=sha(imported) if imported.exists() else None,
         cooked_sha256=sha(cooked) if cooked.exists() else None,
         vanilla_texture_array_type_present=before, cooked_texture_array_type_present=after,
         rendering_dependency_gate=bool(before and after), pipeline_verified=False,
         zip_path=None, reason='Full rendering contracts and assertion-free import are not verified; no packaging permitted.')
+    receipt['settings_directory_unchanged'] = settings_before == snapshot()
+    (work / 'settings-before.json').write_text(json.dumps(settings_before, indent=2))
     (work / 'official-receipt.json').write_text(json.dumps(receipt, indent=2))
     print(json.dumps({k: v for k, v in receipt.items() if k not in ['inputs', 'commands']}, indent=2))
     raise SystemExit(2)  # Deliberately fail closed: this is not a mod builder.

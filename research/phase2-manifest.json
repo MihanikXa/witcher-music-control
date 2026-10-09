@@ -1,156 +1,1644 @@
 {
   "status": "blocked",
   "date": "2026-10-09",
-  "scope": "English only",
+  "scope": "English NPC typography/text-color/text-rendering only; broader roadmap deferred",
   "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
-  "inner": {
-    "resource": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
-    "resource_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
-    "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
-    "payload_offset": 592,
-    "payload_signature": "CFX",
-    "tag_count": 75,
-    "reassembled_sha256": "96d1158303405227a18cade993e7a6f5524855f4096893789d233022f3d40474",
-    "changed_tags": [
+  "native_route": {
+    "pipeline_verified": false,
+    "commands": [
       {
-        "index": 5,
-        "before_code": 22,
-        "after_code": 22,
-        "before_hash": "f0cec3939373d1cc5c89bd7c66703f9a938c4b960a6de438c80e16a42b9a6948",
-        "after_hash": "dff308f5a2e4b7d097280c427034960b9f50afbe5c2b7b695201223ea8ee615d"
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "help",
+          "swfimport"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime",
+        "exit_code": 0,
+        "assertion_count": 329,
+        "resource_assertions": []
       },
       {
-        "index": 11,
-        "before_code": 32,
-        "after_code": 32,
-        "before_hash": "ffff960bc052aff48526c5ec57c405f11ad44f5531a2a9bae595ad4d6201ba3f",
-        "after_hash": "b41efa66ab5401d2fbc5e2e459ac70f07b29284b614102fc3d3905a293dff68d"
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "swfimport",
+          "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\input",
+          "-toDepotPath=gameplay/gui_new/swf/hud"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime",
+        "exit_code": 0,
+        "assertion_count": 330,
+        "resource_assertions": [
+          "[2026.10.09 23:07:48][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\diskFile.cpp:2633] ( m_monitorData->m_isLoaded == 1 ). Corrupted internal flag state for resource 'gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf'"
+        ]
       },
       {
-        "index": 12,
-        "before_code": 2,
-        "after_code": 2,
-        "before_hash": "49f9b16dba88c22fb168160f08c9b209789ea320d196df5ebda86241863dc494",
-        "after_hash": "b40ea21a8d8384f631111dd21e1c2f459e440359e9d9fc6297a50c0c683e4384"
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\workspace",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\cooked"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime",
+        "exit_code": 0,
+        "assertion_count": 329,
+        "resource_assertions": []
       },
       {
-        "index": 26,
-        "before_code": 22,
-        "after_code": 22,
-        "before_hash": "35cbab23bbbbaa7945f7f22afaffbda19b96f3dd1015e7feb33857c4bbdfa8ac",
-        "after_hash": "ec586b22a90ad01c0f98d8d5e1547f214f5bb25246f92076c01b57c10b4a7448"
-      },
-      {
-        "index": 51,
-        "before_code": 22,
-        "after_code": 22,
-        "before_hash": "e819cf30e1b3875e8db7fbc49ae7d4b4aeeedca2531c4ef2d7460ca20e04bd83",
-        "after_hash": "0954757e34f437dac60052cda25878e912f90fedf2ee05ae0ac41160e7191308"
-      },
-      {
-        "index": 53,
-        "before_code": 22,
-        "after_code": 22,
-        "before_hash": "580a259439dc256e3fbaf1affc43103ebeb2dea03d34cf2e05be12603521b414",
-        "after_hash": "2d00faf5e62ef390b6ba4b6b62f950eeaea5de4a4825b22c1a494229a6fe88dd"
-      },
-      {
-        "index": 55,
-        "before_code": 22,
-        "after_code": 22,
-        "before_hash": "fe34de8d03e85815f9b63b9740631dcf0ad0f1262951c210ef4cd187882eec79",
-        "after_hash": "43f48605f30330f380fe69d8dcd7a5ba55252f2981e9873c1e24c51661d70898"
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "validate",
+          "-db=C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\cooked\\cook.db",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\validation"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime",
+        "exit_code": 0,
+        "assertion_count": 329,
+        "resource_assertions": []
       }
     ],
-    "critical_tags_byte_identical": true,
-    "normalized_xml_semantically_equal": true,
-    "cr2w_import_verified": false,
-    "cook_verified": false,
-    "bundle_verified": false,
-    "pipeline_verified": false,
-    "zip_path": null,
-    "runtime_tested": false
+    "inputs": [
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\amd_ags_x64.dll",
+        "sha256": "c0e177d72cc061853802f2ceca10f6766f60f2c43c56134f7cecbcf8642bce4e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\amd_ags_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\amd_fidelityfx_framegeneration_dx12.dll",
+        "sha256": "02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\amd_fidelityfx_framegeneration_dx12.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\amd_fidelityfx_loader_dx12.dll",
+        "sha256": "e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\amd_fidelityfx_loader_dx12.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\amd_fidelityfx_upscaler_dx12.dll",
+        "sha256": "d0dcccc74a43c44ba435b7a369b456e0970d8a4464e4bd683119b374f2c9fb46",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\amd_fidelityfx_upscaler_dx12.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\cudart64_50_35.dll",
+        "sha256": "84e4d028a6ff3d1c29c4c9e50d418f1ebf14b4f5402bd00da8303ac3329aedab",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\cudart64_50_35.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\d3d11on12.dll",
+        "sha256": "bb0ab4905e48cd9c54c75057aafa2a4f057c3f026eacfaff1d01c12013c09708",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\d3d11on12.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\d3dcompiler_46.dll",
+        "sha256": "b1a06f7aa52439a948a152bfd3301d9b595c78969bb77c9741bba935139f58a0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\d3dcompiler_46.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\d3dcompiler_47.dll",
+        "sha256": "dd43906ff5de21a9257205db8a6348d5f63620a87a2faeaab8425973e5987cf9",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\d3dcompiler_47.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\dbghelp.dll",
+        "sha256": "7460518255f4c024b81f171ef7f5c0671b0a2b1d64f509cac848c6c8da7ba241",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\dbghelp.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\DevIL.dll",
+        "sha256": "80ae8c1799eb2bf21bce7ea269262474d59c04fdae1347216785d95785bf53e2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\DevIL.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\dxcompiler.dll",
+        "sha256": "b86a738ece4c05dbe2d9bbb29668a2ccb28a0740773c9b027cdc61e8d07b4d75",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\dxcompiler.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\DXGIDebug.dll",
+        "sha256": "b16459359dedb9ab7eed23ccbfd27cacfdac04f5383948b9b79814f038235ac2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\DXGIDebug.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\dxil.dll",
+        "sha256": "058f2f52a680c38b223a5615b7df969def21f77e577562e5099d971dede992de",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\dxil.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\Galaxy64.dll",
+        "sha256": "02f5b18e8b62d1d941497ab18de591d68ea4868d9d76df02abf38e982ae57ae7",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\Galaxy64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GFSDK_Aftermath_Lib.x64.dll",
+        "sha256": "4177e09de4bbcc168deeb4f2d88f8961fe98009fae8046d08b418e725414de42",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GFSDK_Aftermath_Lib.x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GFSDK_HairWorks.win64.dll",
+        "sha256": "f0a18b481c623bfde4182941fc6caeaab29cdc5ed3a05c2255aaa7366e887f73",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GFSDK_HairWorks.win64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GFSDK_SSAO.win64.dll",
+        "sha256": "7cec7fdb8c77a5b2597b5df5f8b5d53f705bce4f8ba0ee15670abc21e9d15faf",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GFSDK_SSAO.win64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GFSDK_SSAO_D3D12.win32.dll",
+        "sha256": "7ee807e5d18116d4a95a3cb4bb7d3acaa52aa6960ea3856055a0173b927b2c80",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GFSDK_SSAO_D3D12.win32.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GFSDK_SSAO_D3D12.win64.dll",
+        "sha256": "d6f68229a5835f73edc1435d47af32dedb54b70283c8ceec216af3e87f42fd37",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GFSDK_SSAO_D3D12.win64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\glew32.dll",
+        "sha256": "b2c96e8614fc9a7e26dcc5200f343d966ce55cc1c9f4acab409f188bbe118e5a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\glew32.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GRBCHECKED_1_1_api3_x64.dll",
+        "sha256": "dd51ed0e9298e073cac427ff3035aa30370169e4dbd8c7fba815c1b3ef472e94",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GRBCHECKED_1_1_api3_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\GRB_1_1_api3_x64.dll",
+        "sha256": "7e7873fc0ba89d8a2e7df4b2a8f4769b4303ce4e8b3207abe4601f0a89734c3c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\GRB_1_1_api3_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\igxess.dll",
+        "sha256": "9fb2137f744904bd4010d42953578909d8ba55925012ffafc83f3e7c0b5b39a1",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\igxess.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\ILU.dll",
+        "sha256": "5b22b57ba84c489ef53e3a14e9825080682e7abafab648cf91d40262e23bee89",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\ILU.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libcurl.dll",
+        "sha256": "261ce7ea2f473f52c3e791806b6c9b4e553208fd4c1918bed02e56f9be20d1fc",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libcurl.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libfbxsdk.dll",
+        "sha256": "135c4353c604efc94f5bf8a43a15e10bc60df94dcf075b4dcd1c00d23163e8f3",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libfbxsdk.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libxell.dll",
+        "sha256": "7d1133af79d1ef02e214a91680d6622037583eee09b0667544bb92e3553118a9",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libxell.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libxess.dll",
+        "sha256": "251659dd84a3e84de67c886a4186e01f3eca49b00641906fe38bb6b807e5d5b7",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libxess.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libxess_dx11.dll",
+        "sha256": "c7cfe86f0c9d94e4fb3696d3cd5035e2bbb6a8b1b0572f8b7395a4cdfd0c625e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libxess_dx11.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\libxess_fg.dll",
+        "sha256": "e042a111df5e4d3e5fe9d1779b54890f42a54d3ea47487673b07003b931f2568",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\libxess_fg.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\llvm_7_0_1.dll",
+        "sha256": "52849500a0cf3976d01969b49b7d8a3243ec1522bc23255e9dcc8a70932e3e25",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\llvm_7_0_1.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\loopback-capture.dll",
+        "sha256": "8ae793998f81679aba50642fca1c331ae7ec2e0d39fd89990460204c4ccee8a4",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\loopback-capture.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\MarkersSystemDB_x64.dll",
+        "sha256": "630fba6cdcb1f8eb4a33922f389211566089ec374cf035e3824762b6dddf8d6b",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\MarkersSystemDB_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\msvcr110.dll",
+        "sha256": "ae996edb9b050677c4f82d56092efdc75f0addc97a14e2c46753e2db3f6bd732",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\msvcr110.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\msvcr110d.dll",
+        "sha256": "d6ff919766153ea2b6d7df6955aff0b3b504280ecca7ca8b032a967ac25b9591",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\msvcr110d.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\NvCameraSDK64.dll",
+        "sha256": "1d6db7a346dbd2b0b50fe180bd217d1dd3bf11d321a886c374984129cba7e4ec",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\NvCameraSDK64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\NVHairExt_x64.dll",
+        "sha256": "78d9e7832c77c8879c53f55bdf9ac70fafb584a2768d90e9402981db528b89b8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\NVHairExt_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\NVHair_x64.dll",
+        "sha256": "db9145a3926423553e5987c4ad34058cf3bf8a0b2ac6cb89e696981fa144b481",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\NVHair_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\nvngx_dlss.dll",
+        "sha256": "3975567b8943c53acce397f2b72380092f84f162d00b0d2c7d08a1025c563983",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\nvngx_dlss.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\nvngx_dlssd.dll",
+        "sha256": "4bc7ea5fcb2f32cf86bc2cb072e8d2860914a0be511cbdcb2fc206c1d9d83b80",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\nvngx_dlssd.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\nvngx_dlssg.dll",
+        "sha256": "ff6e90eb78b827927dff5b4ecc6b1c870c2e9bca29ed9f48c7d348cc9e170b82",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\nvngx_dlssg.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\nvToolsExt64_1.dll",
+        "sha256": "3e78d11d716e0d550a6206d1116448c9ab655c2732acb46848d42be34545fca2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\nvToolsExt64_1.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\PhysX3CommonCHECKED_x64.dll",
+        "sha256": "c0aa8489c0249db66960e001a6c60a65ec9672b8448870ec6b8c6d1489e241d4",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\PhysX3CommonCHECKED_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\PhysX3Common_x64.dll",
+        "sha256": "494ee4a88a03589a594b30b77f0f32e42b6e180c7f49f701551a9ceabc9efcfd",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\PhysX3Common_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\REDGalaxy64.dll",
+        "sha256": "4e2cec308acec1a30562fe1d3bf50de9941125d9311d312a663eb4529f10e5b6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\REDGalaxy64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\redscm.dll",
+        "sha256": "d82870abf58c6a034441fc98cfda00273cf718b0a86e07b0eda529d8ba473008",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\redscm.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\RedTelemetryLib.dll",
+        "sha256": "c21d2b99474bf63a546bdc8b80d36705ef39322174b7bf78d8cafce75d4138bd",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\RedTelemetryLib.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.common.dll",
+        "sha256": "82924a8954dd671e09351c5de0eb87ad0eb25b944cc9f9ab955ca1d9950de15d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.common.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.dlss.dll",
+        "sha256": "73bf52c0cfaa5900a8f3f4a91306e4625e7cca696dfb305aae44c9f97b582e1f",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.dlss.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.dlss_d.dll",
+        "sha256": "026b9f4f9ea848f2f5aa0e2024fc6b1c885f57eea5d41078124dba14f873b86b",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.dlss_d.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.dlss_g.dll",
+        "sha256": "f4a6b2b14dcc0b1485989e430d3b4e3a44ac1800b92ba1ad74f476e64fb2b09c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.dlss_g.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.interposer.dll",
+        "sha256": "8c87c9499461da561edd529aa9bf7831d67d7b94ebb1c1a5ed54ef4934e1ea4c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.interposer.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.pcl.dll",
+        "sha256": "f13d51cfa05f4cd514df2026049e2db8adf359221713170ad386fd499915b582",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.pcl.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\sl.reflex.dll",
+        "sha256": "0ce9725e3e03ea9e7f81d008b57f33ee365973d2e349131c8b1c3e3378fe2db0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\sl.reflex.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\steam_api64.dll",
+        "sha256": "e6d9bafb9a41e42fba7b21553db49f8719027af3f0deb23ff86cfc44d60e776d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\steam_api64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\stringdb_x64.dll",
+        "sha256": "690f90c5551badcedfc50cb2bf0cdee6bc7c1942f373334379366715d97d5993",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\stringdb_x64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\symsrv.dll",
+        "sha256": "a79fa77930173e5e1deb5cdf02460d50363da34b78a73b72664b260537324445",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\symsrv.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\telemetry32.dll",
+        "sha256": "905e639907dc9480e14ee63e2adc2f9b6ad0f8fbdb88b284f75ac552678a974c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\telemetry32.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\telemetry32c.dll",
+        "sha256": "05f488e89052772abb9882c7b207efc4a9a2257cbf1498536f498faf233c0864",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\telemetry32c.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\telemetry64.dll",
+        "sha256": "80abb621048c19ba25f5608e842fc23e1dd048e7a24169b0c178c822422cac0b",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\telemetry64.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\telemetry64c.dll",
+        "sha256": "75e28f07a60e9c9614554fb0a43f482616bb6442987244ba09f54a4ef99320d1",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\telemetry64c.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\vcomp110.dll",
+        "sha256": "30dbc138c12eca9cd0721c2208fd8c657090ac39b1cb7d20f1aa19935cdd946d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\vcomp110.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\vcomp110d.dll",
+        "sha256": "c95a3a353df628d70a54e183130652aa8e8f26f7b40c60456936d1bec9974a69",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\vcomp110d.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\wcc_lite.exe",
+        "sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\WinPixEventRuntime.dll",
+        "sha256": "9982b53014d1ed241f803561b9f93dc40cb263fff96fc606d5ef92524e8313c8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\WinPixEventRuntime.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\xaudio2_9redist.dll",
+        "sha256": "f1fc84807c8f25849b604eb091d62dda5f81e5108c3b53e7cbc542df1f5f289c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\xaudio2_9redist.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\XeFX.dll",
+        "sha256": "0c6db9f1cf1eaab8a4cf5147889ad7e84f2001c591db619d0dec29011b8d3e58",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\XeFX.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\XeFX_Loader.dll",
+        "sha256": "553dc5eb663cb0bb44ad27c063e9b32f54b0f770fb188adfdab737a90b008fc7",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\XeFX_Loader.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\config_description.xml",
+        "sha256": "5b681e667f13fa3ce1704a29f887584f1eb70e02e03f5abaf6f7ad6f5c9be9eb",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\config_description.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\io_priority_table.xml",
+        "sha256": "b1c0c5ec6dd59ac45148e80177c0a9dcd7ab4d73b3ad5cb1dd08f50034e09e40",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\io_priority_table.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\item_icon_generation.xml",
+        "sha256": "2b1e8208d6aa9265c50a99eb4be232fdbcadb9506889ab927265e05a8732ce09",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\item_icon_generation.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\keyboard_layouts_description.xml",
+        "sha256": "0b33d976e8bef0abe69765c41342e3144adf3236f916bd11baec6656f2c7a142",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\keyboard_layouts_description.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\performance.xml",
+        "sha256": "43f601db0ea5309e0f6a63ac6431a6fbd477f102fe9901761d300ba1dc4bd3ed",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\performance.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\readme.txt",
+        "sha256": "27fea5fee8b212337d6a875d50f41d330224e67b7aeebb27bce37ab796b7ad8c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\readme.txt"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\audio.ini",
+        "sha256": "bb5db573d4be4263b2254adccee46c4fad9e15c7deb09492de282237472bc4c2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\audio.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\dlc.ini",
+        "sha256": "da68206c99189841425139ce6d8435c06017b58139d8449360024f5c77086ca9",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\dlc.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\engine.ini",
+        "sha256": "393501c1e03571c4f98504b70a32ade6488fdd55adb9340bb03b946d3666614b",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\engine.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\freecamera.ini",
+        "sha256": "37e74c0b052dc28cf1d3fdc442036003dfade4a5dd482038df044d017a8c7521",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\freecamera.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\gameplay.ini",
+        "sha256": "0ca89b1293511421030ff89f981430c6b63b4b6ff08be49ef7841d0153db003a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\gameplay.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\gc.ini",
+        "sha256": "1be9254cdf2ab6431ed227bbb28c3c0440505d78fc587cb3af56d928666329f6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\gc.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\general.ini",
+        "sha256": "a9750eeabb62948d661a3ec785c82919eb4075dad9de6e35aaf9a4a1bc9f86b2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\general.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\hidden.ini",
+        "sha256": "6919e785f5441faf82f8e09bec7e67f8014bd280e68acd748d36c585ef45a572",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\hidden.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\hud.ini",
+        "sha256": "35931c131c2e5e81c43ee50e5730537ee6a435190e1f206687da3acbd2b942bd",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\hud.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\localization.ini",
+        "sha256": "ec248a3b628a28323422eeb378be5d1bc6c1c7c68a40169ca5beb830fa62c8b6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\localization.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\profiler.ini",
+        "sha256": "c090f8558bffaf5d15c499327a306b6023a89124c0a92eacb3ac19f10f34b8af",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\profiler.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\rendering.ini",
+        "sha256": "47c3424a432c06c4e1326ed5d807d9367e10df34de5b0d7e4b82cc36d6182a00",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\rendering.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\resources.ini",
+        "sha256": "7cd70c22f8c41c2a4498aa9ac90a0c5f28bd508304be78a41d432d095ddf3d71",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\resources.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\base\\visuals.ini",
+        "sha256": "749aba1b59f4eed3fe4990504324bb039be32099d72352e271ed9a2380a7705a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\base\\visuals.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\developer\\database.ini",
+        "sha256": "2a3eebee94aafad4d3102cd77c9e209ad93ffa8564d4299a1cd51992d1cd8353",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\developer\\database.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\ingameconfig.ini",
+        "sha256": "a87eebc6038bdd6e5f1bb5b1d7e22e32ed0b09ab2d598dfe9ad33c95960c0016",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\ingameconfig.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\readme.txt",
+        "sha256": "5c5f63eb149fef7617ccc3defd661a9192e3ab2cf50292a0ba0f0f6c914fa16d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\readme.txt"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\scenes.ini",
+        "sha256": "eddbd0468c90d09f8693335356bc1afe673142e4981882ffe978dbc90c763861",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\scenes.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\readme.txt",
+        "sha256": "2630555a6f451502261e2c960f78a76e19e8ab7a887d4445a46a9557d7a49d65",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\readme.txt"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\audio.xml",
+        "sha256": "e768b00aa67528fea52d0676f726ba2cd4dc7775de56d389eaa57060054a0e23",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\audio.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\display.xml",
+        "sha256": "6e5bdaed016b8dcc9ffe16e7e8a0fe19a659ea78f9acaa40d594e93e2485ce32",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\display.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\gameplay.xml",
+        "sha256": "7007d3822490dd8586c456ed4120e297e475ca31a2d63527a9e3499650aa6471",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\gameplay.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\gamma.xml",
+        "sha256": "5350b519a0bf20a5b09f4fc98481ee7ffbb97b0c3a2b171c7a9aa0c6a242bdd5",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\gamma.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\graphics.xml",
+        "sha256": "8f4319e4e58f7617525dd8ae9866a4c538218626a6cba9a2ce062cb443e10558",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\graphics.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\hdr.xml",
+        "sha256": "9bb047a728b4f3a6cec129dfb643302ea1ddddc1a53021c5081d2a92291840eb",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\hdr.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\hidden.xml",
+        "sha256": "d540ed920761fc6614365eac332683153aa7027b459ffb8dd40e7b80e9cbc9b4",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\hidden.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\hud.xml",
+        "sha256": "a173c5cd61265c00c4c98846eac39b0959fcd896f03544e111e8a91dcaa3db04",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\hud.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\input.xml",
+        "sha256": "05ece96524090442817b10c3f76d4c015ed4cae0d99eae80987ae1faac4361fb",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\input.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\pc\\localization.xml",
+        "sha256": "123d672484e4b7082afa25f830f6cd1a24dda7cf0df9f7e6d4531482ca904de5",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\pc\\localization.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\audio.xml",
+        "sha256": "e768b00aa67528fea52d0676f726ba2cd4dc7775de56d389eaa57060054a0e23",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\audio.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\gameplay.xml",
+        "sha256": "c496fe45fa978339642b32e2736dfb59116d54bb1d5775e61d75d22aa9458a34",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\gameplay.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\hdr.xml",
+        "sha256": "f5425c441e798cf83d601148e0613996b59a7b4ea07da3c535f1e4738c047332",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\hdr.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\hidden.xml",
+        "sha256": "8a6bcbead326de1373770b10936219d8be7d950eecd17c94ab3c4e7f88fdbc74",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\hidden.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\hud.xml",
+        "sha256": "6287d8ee94faeee17eef1b0304170666ef09d6276ecb82506b03a060cc0c27cc",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\hud.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\localization.xml",
+        "sha256": "123d672484e4b7082afa25f830f6cd1a24dda7cf0df9f7e6d4531482ca904de5",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\localization.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\user_config_matrix\\switch2\\rendering.xml",
+        "sha256": "ddd9c59dfd980851aa90fbfd5da15fdba6ea677e0a3b220fc88e72e0b4b042ac",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\user_config_matrix\\switch2\\rendering.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\community.ini",
+        "sha256": "97457dcd70ca0cf162656d6aac0e368902f154d0b1dc585636eea079fbcf6eb0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\community.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\debug_data_service_config.ini",
+        "sha256": "704263834e36f4579e285585a0a239ba70e105cadac68b4d99a104ff96c1ce7f",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\debug_data_service_config.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\explorations.ini",
+        "sha256": "c595984536d7602bae3409505ae99d19b7b9a7dfe9100a8614ada984c782ac37",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\explorations.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\gameplay.ini",
+        "sha256": "d932b034dde0ee6280f7ab095697eb597cda2985c8d08f9af6a6a72a1b654b0f",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\gameplay.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\google_analytics_config.ini",
+        "sha256": "6e62ca57a198f8011948dd476f7274b9ae75f22a65c087a169694e5561861144",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\google_analytics_config.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\input_azerty.ini",
+        "sha256": "d7aa84503843de944088346a15b282c4c70be209f644ea2897ecaa92c149e323",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\input_azerty.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\input_qwerty.ini",
+        "sha256": "b234c27862eeb914ee857d118b099d11d7840924d1f7d35a58d30be1d799b0f6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\input_qwerty.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\input_qwertz.ini",
+        "sha256": "69b96567a9ff0195554dc8bbcf2e649d20fb2a01e091575fca8aaed89523e146",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\input_qwertz.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\override_input_switch2.ini",
+        "sha256": "dc852b2c42fa7d360dd331d42b3d84334201a4fdcf342adcbdb0c98438090367",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\override_input_switch2.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\telemetry_service_config.ini",
+        "sha256": "b02ea8e5b5a940ec1bdd4d06a0eae9fe7ee3354408264a1796e51601cd93fcfe",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\telemetry_service_config.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\r4game\\legacy\\base\\user.ini",
+        "sha256": "35881103823c614661f0cd5ac1d6ef1f9c3fefaadc573789f6bbf00dcc111f37",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\r4game\\legacy\\base\\user.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\base_hud.ini",
+        "sha256": "edd17834c64362865e0a2de34f3eaa3bb84ef5471ee9b26b43b4129dfd1bc554",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\base_hud.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\GalaxyPeer.json",
+        "sha256": "d1ea6c862a0cb67e5c0cd2d269cd8ea695244e525abc26379a3c56424694d0ae",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\GalaxyPeer.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\handheld_hud.ini",
+        "sha256": "350e65b6437021b07750dbc5ed83f91dd982e2b1fc66e016302dc7648ad6e7da",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\handheld_hud.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\platformgameplay.ini",
+        "sha256": "5e3f06a34cf66b2455107c09cdf435200cc41dfad513d588552c072ec9fab927",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\platformgameplay.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\readme.txt",
+        "sha256": "6f35b17a761a6888f25dbecd6442363062cdfefd0e55b705cbaf0d7288956a3c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\readme.txt"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\REDGalaxyPeer.json",
+        "sha256": "d1ea6c862a0cb67e5c0cd2d269cd8ea695244e525abc26379a3c56424694d0ae",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\REDGalaxyPeer.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\pc\\rendering.ini",
+        "sha256": "aa7686a63ad6bbe759e6815a269b42b052d81c0bde6b8b24fdc4059f9516fc7a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\pc\\rendering.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\ps5pro\\rendering.ini",
+        "sha256": "94ea3381774ef98b3b4da2f3ea844cb75b45da15c393dbd7a024e06cb72beabf",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\ps5pro\\rendering.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\hud.ini",
+        "sha256": "82353eabb9f9b60802dac71717f34df33244101b952cb68e4607b7575e669c4f",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\hud.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\platformgameplay.ini",
+        "sha256": "7f28aaca911a36b3c05aee7da9dfc4153f47e1884fad8d5fe759e43ed48febfe",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\platformgameplay.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\rendering.ini",
+        "sha256": "0048fe7eb941ec14c4f2ae2e9f7f585640016432d3f6ba62c82e7a95161e5bef",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\rendering.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\bombthrow.json",
+        "sha256": "3150635631c565f29e4fa09897c91183b6c9bbf747e883de7542a001e28a7a4a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\bombthrow.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\callhorse.json",
+        "sha256": "81e9414c692061e0153908d5565a6060d7c4817a032db5bb9d224693101cf5f0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\callhorse.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\crossbow.json",
+        "sha256": "21855309666fdaf9e3560166d89780c442de9ccaaf8d69d4d891e239089a40e0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\crossbow.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\horseacceleration.json",
+        "sha256": "9f8395663bbcf124085c6665a134195b4da1bc53268a9c43536a71a3464936e8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\horseacceleration.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\horsestop.json",
+        "sha256": "f66c4e16b8b3bc9a9d713c2e502b14dc55ed726b5bf241998a9f3a5cba973133",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\horsestop.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\signgeneral.json",
+        "sha256": "8925fd1e940950a4e08620b19bcf22fb0827b2cad1b78d3cdf60df5c88c79a68",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\signgeneral.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\useconsumabledown.json",
+        "sha256": "4aaf18ba0d98f736803e416efb82691440f60dfd9a5808b465ce59b0bcb4b521",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\useconsumabledown.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\patterns\\useconsumableup.json",
+        "sha256": "b08960f937face5e6a00ea063a2d2638768a37b5165fe7df496a1c8111c604fd",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\patterns\\useconsumableup.json"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\profiles\\console_performance.ini",
+        "sha256": "76dbb8c93fb5e402e6d206e8490f7e31d6eab4d320c662d10e0a62f0e9a8c361",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\profiles\\console_performance.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\profiles\\console_quality.ini",
+        "sha256": "60b3275dc15b7e068bee4ddee72610ad5d7152c89648c8eb938b41b7ef829036",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\profiles\\console_quality.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\profiles\\handheld_performance.ini",
+        "sha256": "78c655bf35596cd2f7ead284cede44e016673a70adbdb6a220c618c6510fbfe6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\profiles\\handheld_performance.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\config\\platform\\switch2\\profiles\\handheld_quality.ini",
+        "sha256": "816fac055ea1b2723c22c04aba145608162f8c48d89269ca210e086e6f48b7a2",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\config\\platform\\switch2\\profiles\\handheld_quality.ini"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\fmodex.dll",
+        "sha256": "690bc98dccf194f4eb02ccb74b5149a5c3a51bf8be6ef470127e2e004d9a26d5",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\tools\\GFx4\\fmodex.dll"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
+        "sha256": "8a2855422ce87ffb8a4b809780081d3dd23f40ef831972605762a5bbb1d06a41",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\tools\\GFx4\\gfxexport_mult4fix.exe"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe.txt",
+        "sha256": "386a407a3f53ad05c05c94d101b24f88d2999219833ebe570e9db53f42650248",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\tools\\GFx4\\gfxexport_mult4fix.exe.txt"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\staticshader.cache",
+        "sha256": "f21469a437f0489a42a9d7d7c8f5b7a64c909545a046aad42b6be2ce70ab7434",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\staticshader.cache"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\staticshaderDx12.cache",
+        "sha256": "53822fd0cce0fff65723a070afc1e8a0ace70c9206bda3a0e81fb0501a05e395",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\staticshaderDx12.cache"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\staticshaderDx12_0.cache",
+        "sha256": "1b40ee4dd7749e5445cb45879f504fe0c424e0cd0aca42bcf31bb92738db9355",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\staticshaderDx12_0.cache"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\action_categories.csv",
+        "sha256": "655f6b361716fc2314a017648b1be8e891da25b635ccd66bb7501e2d8a94335d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\action_categories.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\animations.csv",
+        "sha256": "fbc9576c3cd2764b2dfd78ff6eb2b783916e5133f2611278de5ee1c813191fb6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\animations.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\attitude_groups.csv",
+        "sha256": "ab745c2aa8812a0c4e0fcbef01d0d7fff1e52d7fbcd16eeab51ea52759fb1ae9",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\attitude_groups.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\card_sources.csv",
+        "sha256": "99e9c43e26ff3e2db8f9bab8823758d4d417b67a5740e7a778286658162755a5",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\card_sources.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\carryable_items.csv",
+        "sha256": "97fc356b86425bbdda1f28f5dd07f31cb071bf127631f79c3db8a1d8022e28cf",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\carryable_items.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\collision_matrix.csv",
+        "sha256": "c95d8dc37a25fcfce9859f05e9a1a82a631fdb0f696461c0a4b2a2b68511eaa4",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\collision_matrix.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\controls.csv",
+        "sha256": "2a0c05fb100635a3267104fda0683ea0266090a09b78c5bfe04a4305417c7641",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\controls.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\credits.csv",
+        "sha256": "e1a805c834decb8768c21ffa1d9bd48066587465caeadb56bf1653be911f363e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\credits.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\credits_ep1.csv",
+        "sha256": "2acae8a3b3184906fb0c6587471fefe94620558ce287768c7878ebb9f6095a8d",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\credits_ep1.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\credits_ep2.csv",
+        "sha256": "f95823d134bf6d8d53254fb7ccdcee959a6e741527b9b76ee185ef977fd261d0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\credits_ep2.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\credits_ng.csv",
+        "sha256": "6fcc6fee6e85fae0854db68af1c6eac29c23437fe95047ac4a85a20700be93e8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\credits_ng.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\default_characters.csv",
+        "sha256": "0641aff8e93df734789607239b2f07711ae99cc061d28c3fc4e0c753c93430d9",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\default_characters.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\dynamic_clue_ranges.csv",
+        "sha256": "e5272ae3b13d22b7c0243e716aafa7ef825dc419b34e672d9459cf9e9ef19836",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\dynamic_clue_ranges.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\dynamic_tags.csv",
+        "sha256": "8a49f8e73f3d29d6f1e3fb22df04ee1294b99fc5afd2b26571b3a5c53b56de0c",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\dynamic_tags.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\economy_damagecurves.csv",
+        "sha256": "77c214d87f7f1e081885db2d19624a6c0e5b11bf7676fd285388cbe9c5d66ee4",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\economy_damagecurves.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\economy_tagmodifiers.csv",
+        "sha256": "6402f18a483006496ac76048423739f1f2916a9d7e40afe3f471893e81826604",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\economy_tagmodifiers.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\entityeventsnames.csv",
+        "sha256": "bf74f9e4c33f99d64c4b3c041fe5bcf733e2c39cf7c3be22b43d4fc4edacc0ef",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\entityeventsnames.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\eula.csv",
+        "sha256": "79beeedfdfff4d1f05da8818d6c56620360bb17b7f2bd1d15693744f2ecd0047",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\eula.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\exp_mods.csv",
+        "sha256": "a1fbad33a47d9e4b1892f10a2f85c462b7702e3b9bc6bbbdac41f8c2dd667fad",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\exp_mods.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\facts_disabling.csv",
+        "sha256": "a8e7c7a1d0ead28d487e63612ce268a82e2edd963461ad668f83ca9ce3b67681",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\facts_disabling.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\focus_clues_ranges.csv",
+        "sha256": "8bead77aa51eddc3fcde7244dfdc44fdf2af61dc349ab0e15e6c3e324293f44a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\focus_clues_ranges.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\gameplayfx_focusmode_groups.csv",
+        "sha256": "a24680cc9838dbea3d9e3b4d3e916fe14f7849c5ff8d1dc3676aae37cbdb4ced",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\gameplayfx_focusmode_groups.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\gameplayfx_outline_groups.csv",
+        "sha256": "412b34ac7585351abba749dc608a701b8f5fa8fe739af84718e4547d05195e65",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\gameplayfx_outline_groups.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\gameplay_tags.csv",
+        "sha256": "b3cc9139398d48fb0978fe64984fca49dd2f2d401de170c518d77e05f8d35e76",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\gameplay_tags.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\gameworlds.csv",
+        "sha256": "1b6450fc87d272618afc40a39ead1f59343c786de28cf2a50cf191ecd03e9ce7",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\gameworlds.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\game_inputs_order.csv",
+        "sha256": "9840afc97e7bdf062c2fb7c7661ebab99547a6554e3c21ed9f5929e927eb677a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\game_inputs_order.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\hud_settings.csv",
+        "sha256": "f59008d135bcf7d590a9104e2366512008769ed65b70f6bf5e04f2076b658ad8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\hud_settings.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\initialfacts.csv",
+        "sha256": "728240ae5fc898e9c70306cc1ea51307d5bc5977404046200da3898448901705",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\initialfacts.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\initialfacts_censored.csv",
+        "sha256": "d1172c0776f0b0b7003e882040a0937456a3b3d14c2e526d667b2fe08ca635b3",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\initialfacts_censored.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\loadingscreen_paths.csv",
+        "sha256": "558922688c56b03315521d0a1c1607b5bf5dce5a45dd0c0bce46e0eb2c8d534f",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\loadingscreen_paths.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\map_scales.csv",
+        "sha256": "4f0880865297aef6fe5e8ad0a4fef0ffa78a55bb68c58bee5a8c3247e2cc7ce8",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\map_scales.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\minimap_settings.csv",
+        "sha256": "8edeb4a02cb1d0034a5cb8a363ec22111d29098637f7e50c4702cab95a2adb57",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\minimap_settings.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\physical_materials.csv",
+        "sha256": "9b5899a9d6a262b37be1530045aec60360965feb3a60546672998b6887e7224a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\physical_materials.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\player_statistics_settings.csv",
+        "sha256": "98e028dd4e9844a0a82a84697c6b75733b56fec94b6f42f19394369aa001a23b",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\player_statistics_settings.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\quest_levels.csv",
+        "sha256": "2b460c81de901a6344ed8fff9cc97845f87cdf21da44744f7369a52c5d0aa691",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\quest_levels.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\reactionfields.csv",
+        "sha256": "00d62aa15ef15b239056ef21fbfb2d7280002b999f006a874c1c65f6a310752e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\reactionfields.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\scene_body_animations.csv",
+        "sha256": "ff509ca7c5be3f76064eecc4beac46cfa9255839b1a8f842a27962499e6c04ad",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\scene_body_animations.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\scene_body_parts.csv",
+        "sha256": "087440ae242584e41fbec5f3fc8dbe7fb836e58e8285ef948bb58635ed70fffd",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\scene_body_parts.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\scene_mimics_animations.csv",
+        "sha256": "909b77df522e222a9ae8aa9eaa02bcc97bdade2445dd06760df387bf9915f74e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\scene_mimics_animations.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\scene_mimics_emotional_states.csv",
+        "sha256": "62d88499bafcc6da5b014612e9d00a181278157b13774edda7e257f003c0dcf0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\scene_mimics_emotional_states.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\scene_voice_tags.csv",
+        "sha256": "696393bc6753e0ce3e51b76088be8bb0929570d00f057451d92e578832ab6660",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\scene_voice_tags.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\soundbanks_always_load.csv",
+        "sha256": "92cb85e2b960cc801f6bdabdd893e6e6f56cb43bf7d4eabbb31a2ed4d42fa9b0",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\soundbanks_always_load.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\soundevents_to_switch_conversion.csv",
+        "sha256": "6589c2b2b98282685c747b32e91a64c3f7656a22300a0cbc04426fe9339d92ce",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\soundevents_to_switch_conversion.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\sound_threat_settings.csv",
+        "sha256": "a023ff144241782583201c48807c56e55373a0c0cb7170a213363d5e6525f49e",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\sound_threat_settings.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\temp_spawner.csv",
+        "sha256": "c67371bb291fe76019e2a1d78e8f9b1198181ed392692017c4d39247a90556de",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\temp_spawner.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\terrain_textures_physical_materials.csv",
+        "sha256": "aa712ba64fe22b8b96ddcfac255fd4d3ac2557a6751cbeec079d6bd56c044a86",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\terrain_textures_physical_materials.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\tooltip_settings.csv",
+        "sha256": "08a3afb4bb16fee13ff964906d8c6b36b43f478b2b34b90e9fbf32e510fe8638",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\tooltip_settings.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\globals\\w2import.csv",
+        "sha256": "287afbeab85a25d0e9db784f1f77aa06db86eed434e28303e3605e683b52f80a",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\gameplay\\globals\\w2import.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\soundbanks\\pc\\Init.bnk",
+        "sha256": "2dcb418b9f96389a57341a49e86cdcb0c18d95552a0e17dccf10d4df1d54d277",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\soundbanks\\pc\\Init.bnk"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\game\\dlctable.csv",
+        "sha256": "62bd0fb7eccd5496ef3398053698aa0ec17d4e2d2d0f19396ccaa729742f5e05",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\game\\dlctable.csv"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\dep.cache",
+        "sha256": "fe200a377f52aff3ea3e3e1f9d90285c3e9c22f8c7db5584b77cdc873925d7c6",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\dep.cache"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\engine\\textures\\texturegroups.xml",
+        "sha256": "8c22259fabd1ee8e63c2df12419cbc6732cd4d3fa6dd997947a9a29cec5c3c22",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\data\\engine\\textures\\texturegroups.xml"
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+        "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+        "output": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\input\\hud_enemyfocus.swf"
+      }
+    ],
+    "contracts": {
+      "inputs": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\input\\hud_enemyfocus.swf",
+          "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+          "bytes": 66944
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+          "bytes": 88805
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "c3b9949c0c31481263a57185bde84c0161590d345f22561d5a0888af7b29dd92",
+          "bytes": 88805
+        }
+      ],
+      "native_bitmaps": [
+        {
+          "character": 6,
+          "format": 5,
+          "width": 40,
+          "height": 39,
+          "decoded_sha256": "583fa9ad5caec7e14d2eb1871ce65d2e562a88ee7dca14c1518930c62ee78b1c"
+        },
+        {
+          "character": 10,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "43beb746eea7865466a1aa889d664227db97fff0e481d7a23a85c9c9b2b4a03f"
+        },
+        {
+          "character": 13,
+          "format": 5,
+          "width": 124,
+          "height": 7,
+          "decoded_sha256": "b6eced086af97ef9b30a336720af707b63ffcad8291f19c9b81fff3b58162042"
+        },
+        {
+          "character": 32,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "fbde4654385535497e15ce26ba809efc117330846a28dae9414982f5c98300d2"
+        },
+        {
+          "character": 35,
+          "format": 5,
+          "width": 47,
+          "height": 44,
+          "decoded_sha256": "6d822f50daf0b1f0fd12897fd6929b584bb254969653ba3f3c17329cb98fb3bf"
+        },
+        {
+          "character": 56,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "c91950e53a0f0cd5dacb8d8cc817e82b28ae46840ce595db73eb6a450843e75b"
+        },
+        {
+          "character": 59,
+          "format": 5,
+          "width": 64,
+          "height": 64,
+          "decoded_sha256": "22f51ded3645acfa55217e59411c9cc57e98caf18ce165a55cdd33b0f75112ba"
+        }
+      ],
+      "tag_counts": [
+        73,
+        75,
+        75
+      ],
+      "frame_rect_rate_count_version_equal": true,
+      "native_nonimage_tags_byte_identical": true,
+      "cooked_nonimage_tags_byte_identical": true,
+      "atlas_placements_byte_identical": true,
+      "vanilla_atlas_linkage_matches": true,
+      "cooked_atlas_linkage_matches": true,
+      "vanilla_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53598,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54130,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{576aea93}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "cooked_chunks": [
+        {
+          "class_name": "CSwfResource",
+          "flags": 8192,
+          "parent": 0,
+          "size": 53598,
+          "offset": 532,
+          "properties": {
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{37259a9a}.gfx"
+            },
+            "textures": {
+              "type": "array:2,0,handle:CSwfTexture",
+              "value": "0100000002000000"
+            }
+          },
+          "crc_valid": true
+        },
+        {
+          "class_name": "CSwfTexture",
+          "flags": 8192,
+          "parent": 1,
+          "size": 34675,
+          "offset": 54130,
+          "properties": {
+            "width": {
+              "type": "Uint32",
+              "value": 540
+            },
+            "height": {
+              "type": "Uint32",
+              "value": 64
+            },
+            "compression": {
+              "type": "ETextureCompression",
+              "value": "TCM_DXTAlpha"
+            },
+            "textureGroup": {
+              "type": "CName",
+              "value": "GUIWithAlpha"
+            },
+            "linkageName": {
+              "type": "String",
+              "value": "hud-enemyfocus{37259a9a}_i6.dds"
+            }
+          },
+          "crc_valid": true
+        }
+      ],
+      "vanilla_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "4672bf1d2bc9c77b62dcb3741641d44cdaf97944094108d467adff5beeb67569"
+      },
+      "cooked_texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "908bfff60f9636f325841bea5737676749b97afcb472a3f4a144d7e87316e57e"
+      },
+      "atlas_pixel_differences": [
+        {
+          "character": 6,
+          "rectangle": [
+            247,
+            0,
+            287,
+            39
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 10,
+          "rectangle": [
+            289,
+            0,
+            413,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 13,
+          "rectangle": [
+            415,
+            0,
+            539,
+            7
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 32,
+          "rectangle": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 35,
+          "rectangle": [
+            198,
+            0,
+            245,
+            44
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 56,
+          "rectangle": [
+            66,
+            0,
+            130,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        },
+        {
+          "character": 59,
+          "rectangle": [
+            132,
+            0,
+            196,
+            64
+          ],
+          "visible_differences_including_one_pixel_border": 0,
+          "max_channel_difference": 0,
+          "mean_channel_difference": 0.0
+        }
+      ],
+      "full_atlas_visible_pixel_differences": 555,
+      "full_atlas_transparent_rgb_differences": 21,
+      "pipeline_verified": false,
+      "runtime_tested": false,
+      "zip_path": null
+    },
+    "settings_directory_unchanged": true,
+    "imported_bytes": 156289,
+    "imported_sha256": "80cc3441a6f6839e94f1cf38d600c3dd929e4daf2c39c23cf3eac0b74f4405fa",
+    "validator_resource_errors": 0,
+    "unresolved": [
+      "New-resource importer monitor-state assertion",
+      "Incomplete isolated startup emits assertions",
+      "Atlas texels beyond tested one-pixel footprints differ",
+      "Bundle/metadata/Vortex and runtime gates not reached"
+    ],
+    "logs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\cook.full.log",
+        "sha256": "0438dcb38bdc48b47225ed1493bd46804c92866125b25df3cc8afb2341963961"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\cook.stdout.log",
+        "sha256": "a9e14ee73b05ebe33e130fc90bc4452404fb092f0b9672606efe3cea51643bb4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\help-import.full.log",
+        "sha256": "cef129aa57bd8d10ccc02dcb3bcacb7568da2fd05319e90bd9cb1fb21b3591d3"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\help-import.stdout.log",
+        "sha256": "e8019852f37e81e9fbac7f81b7101b8a806b7eafdd4cb7c86e0fa2b8b779b139"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\import.full.log",
+        "sha256": "584f3074b8c54bf11e1010238346d989766f5dc5b3a65298279fa2b97193b360"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\import.stdout.log",
+        "sha256": "064b6b62b99fb4970c159e7244670a0cd70a4b76be548ed8b4d9c6cf6d12fb42"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\validate.full.log",
+        "sha256": "32d8d6c6db7be214d2a34a0279d7174fe1b65180328cea7696fffa11a79e8d98"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\validate.stdout.log",
+        "sha256": "8c940fc108de9fa9f722efcc775500199a82afa3c862280d41047688e2ed72f4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\wcc.log",
+        "sha256": "32d8d6c6db7be214d2a34a0279d7174fe1b65180328cea7696fffa11a79e8d98"
+      }
+    ]
   },
-  "official_tools": [
-    {
-      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\wcc_lite.exe",
-      "sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
-      "bytes": 150762960
-    },
-    {
-      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
-      "sha256": "8a2855422ce87ffb8a4b809780081d3dd23f40ef831972605762a5bbb1d06a41",
-      "bytes": 4830672
-    },
-    {
-      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
-      "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
-      "bytes": 66944
-    }
-  ],
-  "current_wcc_version": "5.0.1048625 / P4CL 13413172 / Oct 7 2026",
-  "official_commands": [
-    {
-      "command": [
-        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
-        "help",
-        "swfimport"
+  "script_fallback": {
+    "source": "src/npc/quietEditorialNameColors.ws",
+    "source_sha256": "4bacc87ff89e1ad288e2bce82b07895d17feb3d15de61fee9e98957c37c473e7",
+    "settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+    "whole_file_enemyfocus_winner": "modFriendlyHUD",
+    "opaque_mods": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "results": [
+      {
+        "label": "baseline",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\baseline"
+        ],
+        "exit_code": 1,
+        "compiler_pass": false,
+        "errors": [
+          "[2026.10.09 23:04:11][Error][WCC] [8]: Unknown type 'array:2,0,SAutoLootFeedItem' for property 'm_feedQueue'.",
+          "[2026.10.09 23:04:11][Error][WCC] [8]: Property 'CR4HudModuleLootFeed::m_feedQueue' could not be created.",
+          "[2026.10.09 23:04:11][Error][WCC] [466]: Unknown type 'SAutoLootFeedItem' for property 'feedItem'.",
+          "[2026.10.09 23:04:11][Error][WCC] [466]: Could not create property for variable 'feedItem' in function 'AddItemToQueue'.",
+          "[2026.10.09 23:04:11][Error][WCC] Could not start a scripting system update.",
+          "[2026.10.09 23:04:11][Error][WCC] Wcc operation failed"
+        ],
+        "output_files": []
+      },
+      {
+        "label": "candidate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\candidate"
+        ],
+        "exit_code": 1,
+        "compiler_pass": false,
+        "errors": [
+          "[2026.10.09 23:04:22][Error][WCC] [8]: Unknown type 'array:2,0,SAutoLootFeedItem' for property 'm_feedQueue'.",
+          "[2026.10.09 23:04:22][Error][WCC] [8]: Property 'CR4HudModuleLootFeed::m_feedQueue' could not be created.",
+          "[2026.10.09 23:04:22][Error][WCC] [466]: Unknown type 'SAutoLootFeedItem' for property 'feedItem'.",
+          "[2026.10.09 23:04:22][Error][WCC] [466]: Could not create property for variable 'feedItem' in function 'AddItemToQueue'.",
+          "[2026.10.09 23:04:22][Error][WCC] Could not start a scripting system update.",
+          "[2026.10.09 23:04:22][Error][WCC] Wcc operation failed"
+        ],
+        "output_files": []
+      }
+    ],
+    "packaging_allowed": false,
+    "receipt_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\receipt.json",
+    "receipt_sha256": "c219c9b594474fd9c462c63bb865d16f218e40328681e270e452dfd53f875194"
+  },
+  "current_movie_collisions": [],
+  "current_settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+  "runtime_reconstruction_history": {
+    "status": "blocked",
+    "date": "2026-10-09",
+    "scope": "English only",
+    "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+    "inner": {
+      "resource": "C:\\Dev\\witcher-ui-overhaul\\build\\audit\\vanilla\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+      "resource_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+      "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+      "payload_offset": 592,
+      "payload_signature": "CFX",
+      "tag_count": 75,
+      "reassembled_sha256": "96d1158303405227a18cade993e7a6f5524855f4096893789d233022f3d40474",
+      "changed_tags": [
+        {
+          "index": 5,
+          "before_code": 22,
+          "after_code": 22,
+          "before_hash": "f0cec3939373d1cc5c89bd7c66703f9a938c4b960a6de438c80e16a42b9a6948",
+          "after_hash": "dff308f5a2e4b7d097280c427034960b9f50afbe5c2b7b695201223ea8ee615d"
+        },
+        {
+          "index": 11,
+          "before_code": 32,
+          "after_code": 32,
+          "before_hash": "ffff960bc052aff48526c5ec57c405f11ad44f5531a2a9bae595ad4d6201ba3f",
+          "after_hash": "b41efa66ab5401d2fbc5e2e459ac70f07b29284b614102fc3d3905a293dff68d"
+        },
+        {
+          "index": 12,
+          "before_code": 2,
+          "after_code": 2,
+          "before_hash": "49f9b16dba88c22fb168160f08c9b209789ea320d196df5ebda86241863dc494",
+          "after_hash": "b40ea21a8d8384f631111dd21e1c2f459e440359e9d9fc6297a50c0c683e4384"
+        },
+        {
+          "index": 26,
+          "before_code": 22,
+          "after_code": 22,
+          "before_hash": "35cbab23bbbbaa7945f7f22afaffbda19b96f3dd1015e7feb33857c4bbdfa8ac",
+          "after_hash": "ec586b22a90ad01c0f98d8d5e1547f214f5bb25246f92076c01b57c10b4a7448"
+        },
+        {
+          "index": 51,
+          "before_code": 22,
+          "after_code": 22,
+          "before_hash": "e819cf30e1b3875e8db7fbc49ae7d4b4aeeedca2531c4ef2d7460ca20e04bd83",
+          "after_hash": "0954757e34f437dac60052cda25878e912f90fedf2ee05ae0ac41160e7191308"
+        },
+        {
+          "index": 53,
+          "before_code": 22,
+          "after_code": 22,
+          "before_hash": "580a259439dc256e3fbaf1affc43103ebeb2dea03d34cf2e05be12603521b414",
+          "after_hash": "2d00faf5e62ef390b6ba4b6b62f950eeaea5de4a4825b22c1a494229a6fe88dd"
+        },
+        {
+          "index": 55,
+          "before_code": 22,
+          "after_code": 22,
+          "before_hash": "fe34de8d03e85815f9b63b9740631dcf0ad0f1262951c210ef4cd187882eec79",
+          "after_hash": "43f48605f30330f380fe69d8dcd7a5ba55252f2981e9873c1e24c51661d70898"
+        }
       ],
-      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
-      "exit_code": 0
+      "critical_tags_byte_identical": true,
+      "normalized_xml_semantically_equal": true,
+      "cr2w_import_verified": false,
+      "cook_verified": false,
+      "bundle_verified": false,
+      "pipeline_verified": false,
+      "zip_path": null,
+      "runtime_tested": false
     },
-    {
-      "command": [
-        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
-        "swfimport",
-        "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\phase2\\probe\\input",
-        "-toDepotPath=gameplay/gui_new/swf/hud"
-      ],
-      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
-      "exit_code": 0
-    },
-    {
-      "command": [
-        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
-        "cook",
-        "-platform=pc",
-        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\workspace",
-        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked"
-      ],
-      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
-      "exit_code": 0
-    },
-    {
-      "command": [
-        "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
-        "validate",
-        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked\\cook.db",
-        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validation"
-      ],
-      "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
-      "exit_code": 0
-    }
-  ],
-  "cooked_sha256": "bf645f678c3af47cbf3f1e8ff24d52810e8188cd8de35987e7e36434b1cfee57",
-  "cooked_bytes": 53858,
-  "texture_array_preserved": false,
-  "import_resource_assertion": true,
-  "validator_resource_errors": 0,
-  "logs": [
-    {
-      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\import.full.log",
-      "sha256": "5a7e89cfffc9a6b69bce67293f31d429aa34f15ccbc007a577f618f7ee5186a4"
-    },
-    {
-      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cook.full.log",
-      "sha256": "a3a613bced2d66189201cb529f17235f1b5427f292a627a73db40af74b65fd36"
-    },
-    {
-      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validate.full.log",
-      "sha256": "9a6e955446a9f3a68eb01728f0d30751a673e327e5972761b869b06c4b896e02"
-    }
-  ],
-  "installed_authoring_swf_abc_and_symbols_match": true,
+    "official_tools": [
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\x64_RedKit\\wcc_lite.exe",
+        "sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "bytes": 150762960
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
+        "sha256": "8a2855422ce87ffb8a4b809780081d3dd23f40ef831972605762a5bbb1d06a41",
+        "bytes": 4830672
+      },
+      {
+        "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+        "sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+        "bytes": 66944
+      }
+    ],
+    "current_wcc_version": "5.0.1048625 / P4CL 13413172 / Oct 7 2026",
+    "official_commands": [
+      {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+          "help",
+          "swfimport"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+          "swfimport",
+          "-fromAbsPath=C:\\Dev\\witcher-ui-overhaul\\build\\phase2\\probe\\input",
+          "-toDepotPath=gameplay/gui_new/swf/hud"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\workspace",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime\\wcc_lite.exe",
+          "validate",
+          "-db=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cooked\\cook.db",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validation"
+        ],
+        "cwd": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\runtime",
+        "exit_code": 0
+      }
+    ],
+    "cooked_sha256": "bf645f678c3af47cbf3f1e8ff24d52810e8188cd8de35987e7e36434b1cfee57",
+    "cooked_bytes": 53858,
+    "texture_array_preserved": false,
+    "import_resource_assertion": true,
+    "validator_resource_errors": 0,
+    "logs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\import.full.log",
+        "sha256": "5a7e89cfffc9a6b69bce67293f31d429aa34f15ccbc007a577f618f7ee5186a4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\cook.full.log",
+        "sha256": "a3a613bced2d66189201cb529f17235f1b5427f292a627a73db40af74b65fd36"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\phase2-reproduce\\validate.full.log",
+        "sha256": "9a6e955446a9f3a68eb01728f0d30751a673e327e5972761b869b06c4b896e02"
+      }
+    ],
+    "installed_authoring_swf_abc_and_symbols_match": true,
+    "package_built": false,
+    "zip_path": null,
+    "deployed": false,
+    "game_tested": false
+  },
+  "texture_array_preserved": true,
+  "unchanged_roundtrip_verified": false,
   "package_built": false,
   "zip_path": null,
   "deployed": false,
