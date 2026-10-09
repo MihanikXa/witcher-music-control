@@ -82,9 +82,9 @@ def main():
   for m in re.finditer(pattern,build.masked(text(p))):baseline[(m[2],m[4],m[1])]+=1
  counts=collections.Counter({k:len(v) for k,v in annotations.items()})
  added=counts-baseline;removed=baseline-counts
- assert added=={('CR4Player','BG2_CompatibilityEvadeFactor','addMethod'):1},added
+ assert added=={('CR4Player','BG2_CompatibilityEvadeFactor','addMethod'):1,('CR4Player','CSM_EndExplorationTiming','addMethod'):1},added
  assert not removed,removed
- checks['annotations_preserved']=sum(baseline.values());checks['unique_helper_added']=True;checks['utf16_scripts_included']=utf16
+ checks['annotations_preserved']=sum(baseline.values());checks['unique_helpers_added']=2;checks['utf16_scripts_included']=utf16
  gwent=OUT/'payloads/gwent';gwent_rows=read(ROOT/'evidence/current-gwent-layout.json')
  gwent_expected={x['path'].lower():x['sha256'] for x in gwent_rows}
  for p in gwent.rglob('*'):
@@ -172,6 +172,6 @@ def main():
     import hashlib
     assert hashlib.sha256(z.read(f['path'])).hexdigest()==f['sha256']
   assert sha(OUT/x['name'])==x['sha256']
- checks['archives_checked']=len(v['archives']);checks['compile_pass']=False;checks['runtime_pass']=False
+ checks['archives_checked']=len(v['archives']);checks['compilation']='static checks only; see compiler receipts';checks['runtime_pass']=False
  (OUT/'integration-validation.json').write_text(json.dumps(checks,indent=2),encoding='utf-8');print(json.dumps(checks))
 if __name__=='__main__':main()

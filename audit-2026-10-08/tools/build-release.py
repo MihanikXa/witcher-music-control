@@ -69,18 +69,18 @@ def main():
  state=core/'Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceState.ws'
  original=state.read_text(encoding='utf-8-sig');evade=body(original,'SetIsCurrentlyDodging');a=evade.index('factor = 1.f;');b=evade.index('bg2_evadeSpeedId = SetAnimationSpeedMultiplier');factor=evade[a:b]
  def state_edit(t):
-  t=replace_body(t,'OnCombatActionStart','''    BG2_RestoreReadyPose();
-    if(this == GetWitcherPlayer() && !IsCiri() && bg2_stance == BG2_Brawler)
-        BG2_RefreshBrawlerWeapon();
-    BG2_InitSpeed();
-    BG2_ResetAttackSpeed();
-    return wrappedMethod();''')
-  t=replace_body(t,'SetIsCurrentlyDodging','''    if(enable) BG2_RestoreReadyPose();
-    wrappedMethod(enable, isRolling);
-    if(this != GetWitcherPlayer() || IsCiri()) return;
-    BG2_InitSpeed();
-    BG2_ResetAttackSpeed();
-    BG2_ResetEvadeSpeed();''')
+  # Remove only the superseded timing writes, preserving original control flow,
+  # wrapper call order, guards, last-evade state and branch-specific cleanup.
+  assert t.count(factor)==1
+  t=t.replace(factor,'').replace('    var factor : float;\n','')
+  for line in t.splitlines(True):
+   if 'SetAnimationSpeedMultiplier(' in line or "AddTimer('BG2_AttackFallback'" in line or "AddTimer('BG2_EvadeFallback'" in line:
+    t=t.replace(line,'')
+  assert 'factor' not in body(t,'SetIsCurrentlyDodging')
+  for name,field in [('BG2_ResetAttackSpeed','bg2_attackSpeedId'),('BG2_ResetEvadeSpeed','bg2_evadeSpeedId')]:
+   old=body(t,name);removed='    if(bg2_speedInitialized && '+field+' != -1)\n        ResetAnimationSpeedMultiplier('+field+');\n'
+   assert old.count(removed)==1
+   t=replace_body(t,name,old.replace(removed,''))
   return t+'''\n// Compatibility: one owner applies timing; school factors remain configurable.
 @addMethod(CR4Player)
 function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
@@ -98,8 +98,8 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
     {
         switch(action)
         {
-            case CSMAction_LightAttack: mult *= p.BG2_AttackFactor(false); break;
-            case CSMAction_HeavyAttack: mult *= p.BG2_AttackFactor(true); break;
+            case CSMAction_LightAttack: if(p.GetWeaponHolster().IsMeleeWeaponReady()) mult *= p.BG2_AttackFactor(false); break;
+            case CSMAction_HeavyAttack: if(p.GetWeaponHolster().IsMeleeWeaponReady()) mult *= p.BG2_AttackFactor(true); break;
             case CSMAction_Dodge: mult *= p.BG2_CompatibilityEvadeFactor(false); break;
             case CSMAction_Roll: mult *= p.BG2_CompatibilityEvadeFactor(true); break;
         }
@@ -112,6 +112,24 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
  def enabled(t):
   old=body(t,'Enabled');return replace_body(t,'Enabled','    if(!thePlayer || thePlayer.IsCiri()) return false;\n'+old)
  edit(conf,'Exclude Ciri from school-combat controller',enabled)
+ hooks=core/'Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMPlayerHooks.ws'
+ def evade_lifecycle(t):
+  old=body(t,'SetIsCurrentlyDodging')
+  old=old.replace('var combatSpeed : CombatSpeed;','var combatSpeed : CombatSpeed;\n\tvar wasDodging : bool;')
+  old=old.replace('super.SetIsCurrentlyDodging(enable, isRolling);','wasDodging = IsCurrentlyDodging();\n\tsuper.SetIsCurrentlyDodging(enable, isRolling);\n\tif(enable && !wasDodging) ResetCombatSpeedForFinisher();')
+  return replace_body(t,'SetIsCurrentlyDodging',old)
+ edit(hooks,'Accepted evade clears prior CSM attack channels before applying evade',evade_lifecycle)
+ animation=core/'Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMAnimation.ws'
+ def exploration_cleanup(t):
+  assert t.count('= thePlayer.SetAnimationSpeedMultiplier(')==6
+  return re.sub(r'(\t\w+ = thePlayer.SetAnimationSpeedMultiplier\()',r'\tthePlayer.CSM_EndExplorationTiming();\n\1',t)+'''\n@addMethod(CR4Player)
+public final function CSM_EndExplorationTiming() : void
+{
+    if(defaultLocomotionController)
+        ResponsiveMovementEndTransitionAnimation(defaultLocomotionController);
+}
+'''
+ edit(animation,'Release the RM transition causer before each CSM timing write',exploration_cleanup)
  med=core/'Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceMedallion.ws'
  def medallion(t):
   t=replace_body(t,'BG2_UpdateStanceMedallion','    return false;')
@@ -194,7 +212,7 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
   effective.append(dict(resource=chosen['resource'],winner=chosen['mod'],sha256=chosen['sha256'],bytes=chosen['extracted_size']))
  save(OUT/'effective-resource-winners.json',effective)
  # Automated release checks.
- checks={'localization_roundtrip':True,'source_hash_guards':True,'archives':[],'script_delimiters':[],'xml':[],'loose_school_timing_single_controller':False,'compile_pass':False,'runtime_test':False}
+ checks={'localization_roundtrip':True,'source_hash_guards':True,'archives':[],'script_delimiters':[],'xml':[],'loose_school_timing_single_controller':False,'compilation':'not performed by build-release; see compiler receipts','runtime_test':False}
  for p in list(core.rglob('*.ws'))+list(merged.rglob('*.ws'))+list(arrow.rglob('*.ws'))+list(gwent.rglob('*.ws')):
   t=masked(p.read_text(encoding='utf-8-sig'));stack=[]
   for c in t:
@@ -219,5 +237,5 @@ function BG2_CompatibilityEvadeFactor(isRolling : bool) : float
    for p in files:assert hashlib.sha256(z.read(p.relative_to(folder).as_posix())).hexdigest()==digest(p)
   checks['archives'].append(dict(name=archive.name,sha256=digest(archive),bytes=archive.stat().st_size,files=[dict(path=p.relative_to(folder).as_posix(),sha256=digest(p),bytes=p.stat().st_size) for p in files],crc_pass=True,payload_hashes_pass=True))
  save(OUT/'source-manifest.json',sources);save(OUT/'changes.json',changes);save(OUT/'validation.json',checks)
- print(json.dumps({'archives':[(x['name'],x['bytes'],len(x['files'])) for x in checks['archives']],'changed_files':len(changes),'localization_ids':list(strings),'compiler_pass':False}))
+ print(json.dumps({'archives':[(x['name'],x['bytes'],len(x['files'])) for x in checks['archives']],'changed_files':len(changes),'localization_ids':list(strings),'compilation':'see compiler receipts'}))
 if __name__=='__main__':main()

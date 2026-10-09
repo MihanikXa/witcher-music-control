@@ -105,3 +105,6 @@ BloodAndSteel ships compiled scripts without loose source. BIA, Evils and Shared
 No experimental music mod was found in the active content folders. The separate witcher-music-control repository was not modified or used as a patch source.
 
 Exact package archives, authors, Nexus IDs, installation times and staging paths: evidence/vortex-mod-metadata.json. Whole third-party packages and extracted game assets are kept private and excluded by this audit folder's .gitignore.
+
+
+9 October toolchain update: regenerated E:\TheWitcher3RMDepot is now valid per the user; current editor logs confirm that E: mount. Relocated C:\REDkitProjects\WitcherCompatibility project JSON is accessible. Official compiler now runs with the installed current runtime; see validation.md for actual scope/results. Historical incomplete-depot findings above describe the earlier audit only. No depot regeneration occurred in this review.

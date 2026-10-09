@@ -3,6 +3,7 @@ import argparse,difflib,hashlib,json,re,subprocess,sys
 from pathlib import Path
 sys.dont_write_bytecode=True
 from inventory import ROOT,sha
+from native_change_policy import POLICY
 def reverse_diff(new,diff):
  lines=new.splitlines(True);patch=diff.splitlines(True);out=[];cursor=0;i=2
  while i<len(patch):
@@ -13,25 +14,25 @@ def reverse_diff(new,diff):
    if line.startswith((' ','+')):assert lines[cursor]==line[1:];cursor+=1
    if line.startswith((' ','-')):out.append(line[1:])
  out.extend(lines[cursor:]);return ''.join(out)
-def native_hunks(source,vanilla):
- patch=list(difflib.unified_diff(source.splitlines(True),vanilla.splitlines(True)));hunks=[]
- for line in patch[2:]:
-  if line.startswith('@@'):hunks.append([line])
-  else:hunks[-1].append(line)
- selected=[]
- for h in hunks:
-  deleted=''.join(line[1:] for line in h[1:] if line.startswith('-'))
-  # Human-reviewed changed files use these markers for the retained mod logic.
-  if re.search(r'modFriendlyHUD|GetOWManager|OnOW|potionsHelper',deleted):continue
-  selected.append(h)
- lines=source.splitlines(True);out=[];cursor=0
- for h in selected:
-  m=re.match(r'@@ -(\d+)(?:,(\d+))? ',h[0]);start=int(m[1])-1
-  out.extend(lines[cursor:start]);cursor=start
-  for line in h[1:]:
-   if line.startswith((' ','-')):assert lines[cursor]==line[1:];cursor+=1
-   if line.startswith((' ','+')):out.append(line[1:])
- out.extend(lines[cursor:]);return ''.join(out),len(selected)
+def native_hunks(source,vanilla,policy):
+ # No marker heuristic: source and vanilla must match the reviewed text pair.
+ # Change blocks have no surrounding context, so unrelated adjacent native
+ # changes cannot be skipped merely because they share a unified-diff hunk.
+ assert hashlib.sha256(source.encode()).hexdigest()==policy['source_sha256'],'Unreviewed mod text'
+ assert hashlib.sha256(vanilla.encode()).hexdigest()==policy['vanilla_sha256'],'Unreviewed vanilla text'
+ a=source.splitlines(True);b=vanilla.splitlines(True);out=[];ledger=[]
+ ops=difflib.SequenceMatcher(None,a,b,autojunk=False).get_opcodes()
+ retain=set(policy['retain_opcodes']);seen=set()
+ for index,(tag,i1,i2,j1,j2) in enumerate(ops):
+  if tag=='equal':
+   assert index not in retain
+   out.extend(a[i1:i2]);continue
+  keep=index in retain
+  if keep:seen.add(index)
+  out.extend(a[i1:i2] if keep else b[j1:j2])
+  ledger.append(dict(opcode=index,source_lines=[i1+1,i2],vanilla_lines=[j1+1,j2],decision='retain_mod' if keep else 'apply_native'))
+ assert seen==retain,'Review indices do not match change blocks'
+ return ''.join(out),ledger
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--game',type=Path,required=True);a=ap.parse_args();game=a.game.resolve()
  rows=json.loads((ROOT/'evidence/merge-source-check.json').read_text());unique={x['resource']:x for x in rows};out=ROOT/'private/steam-update-merges';out.mkdir(exist_ok=True)
@@ -72,14 +73,11 @@ def main():
     proposed=proposed.replace(native,'//'+native+' // modBetterTorchesNextGen')
    hunks=0
   else:
-   proposed,hunks=native_hunks(current,new)
-   if rel.endswith('hudModuleRadialMenu.ws'):
-    assert not re.search(r'var\s+m_desaturatedFields\b',proposed)
-    anchor='private var potionsHelper : CModRadialMenuPotions;';assert proposed.count(anchor)==1
-    proposed=proposed.replace(anchor,anchor+'\n\tprivate var m_desaturatedFields : array<string>;')
+   proposed,ledger=native_hunks(current,new,POLICY[Path(rel).name])
+   hunks=sum(x['decision']=='apply_native' for x in ledger)
   target=out/'payload/Mods/mod0000_MergedFiles/content'/rel;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(proposed,encoding='utf-8',newline='\r\n')
   residual=''.join(difflib.unified_diff(new.splitlines(True),proposed.splitlines(True)))
   (out/(mod+'-'+Path(rel).stem+'-retained-mod.diff')).write_text(residual,encoding='utf-8')
-  supplemental.append(dict(resource='content/'+rel,source_mod=mod,source_sha256=sha(p),current_vanilla_sha256=sha(vanilla),output_sha256=sha(target),native_hunks_applied=hunks,residual_diff=str(out/(mod+'-'+Path(rel).stem+'-retained-mod.diff'))))
+  supplemental.append(dict(resource='content/'+rel,source_mod=mod,source_sha256=sha(p),current_vanilla_sha256=sha(vanilla),output_sha256=sha(target),native_change_blocks_applied=hunks,change_review=[] if mod=='modBetterTorchesNextGen' else ledger,residual_diff=str(out/(mod+'-'+Path(rel).stem+'-retained-mod.diff'))))
  (ROOT/'evidence/steam-update-merges.json').write_text(json.dumps(results,indent=2),encoding='utf-8');(ROOT/'evidence/steam-update-overrides.json').write_text(json.dumps(supplemental,indent=2),encoding='utf-8');print(json.dumps({'merges':results,'supplemental':supplemental}))
 if __name__=='__main__':main()

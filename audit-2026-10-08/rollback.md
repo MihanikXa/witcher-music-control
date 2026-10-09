@@ -17,3 +17,8 @@ Nothing was deployed by the agent. Before installing, create fresh backups from 
 After rollback, verify Vortex enabled states and actual priorities, retain Sharedutils/other dependencies, and load the same independent pre-test save. No purge, uninstall, save editing, Steam blanket repair or deletion of staging hardlinks is necessary. Do not mix a partially reverted timing controller with the remaining core changes.
 
 For a regression, first revert the last independent package/stage using test-plan.md. Core's Bestg/CSM timing files are coupled and must revert together. Keep error messages and test saves; report which package/stage first failed. Private original payloads and first-pass snapshots remain under audit private storage, but fresh user backups take precedence over older machine-state evidence.
+
+
+### Reviewed release rollback dependency
+
+Treat Compatibility Core and Updated Merges as one tested rollback unit: disable both, restore the backed-up manual merged folder only after Vortex ownership is removed, re-enable original four component packages, and restore the saved profile settings/order. Do not roll back by copying over managed hardlinks. Arrow and localization can revert independently. Gwent Mods/DLC must revert together and only with a matching pre-GDC/new-game test save; removing it from a changed campaign may invalidate decks. Keep the previous ZIPs outside Vortex deployment for version rollback.

@@ -12,8 +12,8 @@ vanilla; three existing merges remain byte-identical. Eight UPR quest resources
 and SAH's wolf HUD are deliberate winners, not binary merges. Bestg timing is
 unified through Combat Speed; AutoLoot's duplicate scheduler is corrected.
 B&S custom animation selectors and Bestg's wolf emblem are sacrificed; the
-Gwent Deck Choice is retained through a complete corrected-layout package. Engine compilation and
-quest/combat runtime tests remain required. The live setup was not changed.
+Gwent Deck Choice is retained through a complete corrected-layout package. Focused official compilation succeeds; clean full annotation/compiled-blob context validation and
+quest/combat runtime tests remain required. See review.md for the 9 October repairs. The live setup was not changed.
 
 37 detected packages (36 originally audited plus one late addition), 35 Mods
 folders and 6 DLC mod folders. Original 18 confirmed file/text units plus one
