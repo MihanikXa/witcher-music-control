@@ -1,5 +1,11 @@
 # Incremental analog gait test release — 9 October 2026
 
+## Subsequent in-game user report — 9 October 2026
+
+After the user installed and tested the analog-gait update, they reported verbatim: **"Everything works"**.
+
+Context: this was the response to the focused controller analog Walk/Jog and held-sprint test instructions for the existing **Witcher Compatibility Test** Vortex profile. Treat this as a **positive user-reported in-game acceptance of the requested movement behavior**, not as agent-executed verification, full quest validation, proof that all seven listed edge-case tests were performed, or certification of every combined mod. The disabled Over 9000 zero-capacity issue was independently resolved earlier by the user. Preserve the working analog-gait package 04 as the tested movement baseline; do not undo/rebuild it incidentally during unrelated tasks.
+
 This update targets the already deployed Compatibility Test profile and working
 6e01460 movement hotfix. The user reports successful compilation/gameplay,
 keyboard gait toggling and held sprint. Those resolved issues are not reopened.
