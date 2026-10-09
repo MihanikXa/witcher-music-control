@@ -22,3 +22,5 @@ patches/*
 !patches/README.md
 
 !review.md
+
+!handoff.md
