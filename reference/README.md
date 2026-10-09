@@ -1,20 +1,19 @@
-# Reference mods
+# Local reference mods — read-only
 
-These folders are for local research copies of existing mods. Their extracted contents are ignored by Git and must not be redistributed through this repository.
-
-After cloning, download each reference manually and extract each archive into its matching folder while preserving the archive's internal structure.
+Extract the **four reference packages** into these locations beneath the local clone, preserving each archive's own internal folder layout:
 
 ```text
 reference/
-├── only-story-music/
-│   ├── story-only/
-│   ├── story-gwent-tavern/
-│   ├── story-combat/
-│   └── story-exploration/
-├── less-is-more/
-└── fmc-audio-remaster/
+├── easier-to-read/
+│   ├── gentium-book/
+│   └── alignment-fix/
+├── font-of-life/
+└── configurable-name-colors/
 ```
 
-For **Only Story Music**, download all four current Remastered variants rather than choosing one. Keeping them separate allows direct differential analysis of which files/settings correspond to exploration, combat, and Gwent/tavern music.
+- `easier-to-read/gentium-book/`: the user's preferred literary-font direction. Source: Easier to Read (Nexus 11657).
+- `easier-to-read/alignment-fix/`: separate alignment fix from Easier to Read; investigate install impact independently.
+- `font-of-life/`: secondary typography/toolchain reference (Nexus 13507).
+- `configurable-name-colors/`: source for semantic NPC/name-color control (Nexus 11614).
 
-The tracked README in each folder explains the main research question for that reference.
+All extracted binaries, author scripts and files are intentionally ignored by Git. Do not redistribute third-party modified assets or fonts without an appropriate license. These references are **not approved live deployment packages**. Install the standalone alignment fix in Vortex only after checking its actual contents for collisions with Seamless Adaptive HUD/FriendlyHUD.

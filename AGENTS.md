@@ -1,141 +1,33 @@
-# Codex project instructions
+# Codex instructions — independent Witcher 3 UI project
 
-## Goal
+## Scope and authority
+Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do not alter `main` or `general-merge`. The primary authority for runtime resources is the *installed* The Witcher 3 Remastered 5.01/REDkit version; downloaded font/name-color mods are references, not guaranteed compatibility.
 
-Build a Witcher 3 Remastered mod that gives the player independent control over music volume by gameplay context.
+Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-Primary target contexts:
+## User's visual direction
+- Quiet, modern, beautiful and airy, but with character and Witcher identity; *Ghost of Tsushima* is a restraint/hierarchy reference, not a template.
+- Prefer Gentium Book as a **starting taste reference** instead of a generic sans-serif. Test literary serif body styles versus a restrained serif/sans hierarchy before choosing.
+- Eliminate thick black text strokes where possible; retain sufficient dynamic contrast on bright snow, overcast sky, bright UI, daylight, fire, caves and night.
+- Replace excessively saturated friendly/hostile/name/highlight colors with restrained semantic colors (warm ivory, stone, sage, muted oxide and aged brass are provisional examples). Preserve hostility, focus, interactability and selection distinctions.
+- Favor spacing and typographic hierarchy over boxes, ornament, clutter or indiscriminate hiding.
+- Preserve practical controller readability, legibility on 1080p and 4K, Latin/Cyrillic coverage and localization.
 
-- exploration / traversal
-- ordinary dialogue
-- combat
-- cinematic / important story moments
+## Reference locations
+The user will supply extracted mods locally under `reference/`. Read `reference/README.md`. All reference asset contents are gitignored. Use them as evidence; do not republish or edit authors' binaries. Obtain fonts under appropriate licenses and use vanilla game resources plus original modifications where feasible.
 
-Potential later contexts:
+## Investigation before implementation
+1. Inventory actual font, Flash/Scaleform/REDkit, menu, dialogue, subtitles, combat HUD, quest, inventory and NPC label resources used by current Remastered. Separate source-observed facts from inferences.
+2. Determine exactly where typeface, weight, stroke/outline, glow/shadow, RGBA/name colors, sizes and alignment originate. Not every element shares a rendering path.
+3. Map intersections with Seamless Adaptive HUD, FriendlyHUD, Mod Settings Menu Fix and compatibility package 04. Use `general-merge` only as read-only evidence; don't assume any UI asset can be replaced safely.
+4. Verify any claimed technical recipe against the current installed resource format and toolchain. Never invent WitcherScript APIs, resource paths or Scaleform behavior.
+5. Compare 2–3 coherent visual options. Preserve the user's Gentium preference while leaving room for licensed alternatives. Validate outlines and semantic colors independently before a global rewrite.
+6. Prototype NPC nameplates as a separate Vortex mod with reversible deployment and no modification of existing managed files.
+7. Check script/binary/resource priority collisions, potential font clipping, multilanguage fallback, contrast, prompts and controller/keyboard input.
 
-- Gwent
-- tavern / bard / diegetic music
-- quest gameplay / scripted sequences
-- other special states discovered during tracing
+## Tooling, safety, and repository hygiene
+Track original design documents, research findings, reproducible scripts/tests under `design/`, `research/`, `src/`, `tools/`, `tests/`. Keep generated files in ignored `build/` and `deploy/`; never force-add vendor mods, extracted game files, original game binaries, proprietary fonts or generated mod assets.
 
-The desired first prototype is intentionally hard-coded:
+Start with an evidence-backed resource map, collision report, visual design specification and a minimal prototype plan. Do **not** begin by rebuilding the complete UI. Stop before Vortex installation and get explicit approval.
 
-- exploration = 0%
-- ordinary dialogue = 0%
-- combat = 100%
-- cinematic / story = 100%
-
-Do not implement sliders until contextual state detection is shown to be reliable.
-
-## Authority order
-
-When sources disagree, use this order:
-
-1. current Witcher 3 Remastered / REDkit 5.x vanilla scripts and resources
-2. current Remastered-compatible reference mods
-3. older Next-Gen reference implementations
-4. assumptions or memory
-
-Never invent WitcherScript APIs, event names, RTPC names, Wwise states, file paths, or engine behaviour. Search for them in the available sources.
-
-## Investigation order
-
-Before substantial implementation:
-
-1. Trace where Remastered detects or represents exploration, dialogue, combat and cinematic states.
-2. Trace the path from those states into music control.
-3. Identify music-related WitcherScript managers, events, callbacks and native calls.
-4. Identify relevant Wwise events, states, switches and RTPCs if exposed.
-5. Differentially compare the four Only Story Music variants before inferring category-specific behaviour.
-6. Compare those results with Less Is More and FMC Audio Remaster, and record which layer each mod modifies.
-7. Determine the smallest stable hook point for contextual volume multipliers.
-8. Only then implement a minimal prototype.
-
-Record findings under `research/` with exact file paths, class/function names, and enough context to reproduce the conclusion.
-
-## Architecture constraints
-
-Prefer:
-
-- Remastered scope-based/local WitcherScript overrides
-- small, isolated hooks
-- contextual multipliers on top of the user's normal music volume
-- event/state transitions rather than constant per-frame polling where possible
-- smooth transitions/fades where the engine already supports them
-- logging during the prototype so misclassified states can be observed
-
-Avoid unless demonstrated necessary:
-
-- replacing entire vanilla script files
-- large copied chunks of vanilla code
-- modifying music assets themselves
-- editing Wwise banks/projects
-- hard-coding track lists as the primary classification mechanism
-- adding dependencies merely to create the settings UI
-- touching unrelated gameplay systems
-
-If script-level control cannot produce the required separation, document why before moving to Wwise-level work.
-
-## Reference material
-
-Third-party reference files live under `reference/` and are intentionally ignored by Git.
-
-Treat them as read-only evidence. Do not edit them, redistribute their files, or copy large bodies of their code into this repository. When useful, describe mechanisms and cite exact local paths/symbols in research notes.
-
-### Only Story Music differential set
-
-Use these as a controlled comparison, not as four unrelated mods:
-
-- `reference/only-story-music/story-only/` — baseline
-- `reference/only-story-music/story-gwent-tavern/` — baseline + Gwent/tavern
-- `reference/only-story-music/story-combat/` — baseline + combat
-- `reference/only-story-music/story-exploration/` — baseline + exploration
-
-For each variant:
-
-1. Inventory files and sizes.
-2. Diff text/config/script files directly where possible.
-3. Identify files present only in one variant.
-4. For binary resources, compare paths, hashes and metadata before attempting deeper decoding.
-5. Record category-specific differences under `research/` and distinguish observed facts from inferred meaning.
-
-A difference between the baseline and one variant is evidence for that category, but not automatically proof of its semantic role. Verify against current vanilla/REDkit resources.
-
-### Other reference roles
-
-- `reference/less-is-more/`: strongest reference for runtime state handling in Remastered
-- `reference/fmc-audio-remaster/`: reference for separate exploration/combat/dialogue volume controls
-
-## Repository hygiene
-
-- Our source belongs in `src/`.
-- Investigation notes belong in `research/`.
-- Helper scripts belong in `tools/`.
-- Generated intermediate output belongs in `build/`.
-- Ready-to-install generated output belongs in `deploy/`.
-- Do not commit REDkit depots, game files, Wwise installations, downloaded reference mods, archives, or generated build output.
-- Do not put machine-specific absolute paths into tracked source/config unless they are examples clearly marked as such.
-
-## Testing discipline
-
-For every state classifier or hook, note:
-
-- what signal is being used
-- why it should represent the intended context
-- known ambiguous cases
-- what in-game situation would falsify the assumption
-
-Important edge cases include:
-
-- dialogue while retaining player control
-- scripted walks
-- cutscenes vs ordinary dialogue scenes
-- combat entered/exited during quest scripts
-- tavern/bard music
-- Gwent
-- races and minigames
-- quest-specific music outside cinematics
-- loading/menu transitions
-- save/load while a special state is active
-
-Keep the first implementation observable and easy to revert.
+For each proposed patch, report the input resources/hashes, exact changed resource keys/paths, source provenance and license, build command, collision impact, game test criteria, and one-package rollback procedure.

@@ -1,5 +1,3 @@
-# Build
+# Generated build outputs
 
-Generated intermediate build output goes here.
-
-Everything in this directory except this README is ignored by Git.
+Untracked local build intermediates go here. Never commit actual extracted game assets or generated binaries.

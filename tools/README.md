@@ -1,5 +1,3 @@
 # Tools
 
-Project-local helper scripts belong here.
-
-Do not vendor REDkit, Wwise, Script Merger, game binaries, or other third-party executables into this repository.
+Reproducible local resource analysis, build and validation helpers belong here. No live game changes without explicit approval.
