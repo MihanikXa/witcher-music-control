@@ -1,3 +1,26 @@
+## Active direction — subordinate interaction prompts and restrained shadows (11 October 2026)
+
+**Most recent user instruction is authoritative over earlier visual candidate sizes.**
+The working Field & Folio interaction v1 currently shows `Talk` too large/
+heavy next to Gentium NPC names. Target 17px Source Sans Regular with the
+accepted NPC-family gentle shadow as a separate v2 trial; an independent
+16px alternative may be needed. Interaction labels are functional secondary
+instructions, not peers of the character name. Preserve v1 as rollback.
+See [updated v2 implementation](field-folio-interactions-v2.md).
+
+The user also wants the accepted NPC Shadow v1 **treatment across stronger
+ordinary-text effects throughout the UI**. Proceed with the
+[field-scoped text shadow unification program](text-shadow-unification.md):
+inventory the actually selected current-version movie/field filters and
+dynamic overrides; soften strong black outlines/glows/shadows, preserving
+semantic focus/effects, contrast, text layouts, visibility and mod owners.
+A perceptual match is required, not blindly copied binary filters.
+Start with interaction v2 and one separate subtitle/dialogue test, then
+quest tracker/oneliners and other safe movies, then collision-sensitive
+menus/inventory. Full rollout has not been built or accepted in-game.
+Accepted NPC Colors v4, NPC Shadow v1, QuietFolio Gentium v1 and working
+combat/movement compatibility packages must remain unchanged.
+
 ## User-accepted English typography trial — 10 October 2026
 
 The user reports “QuietFolio is a success by the way.” Thus English Gentium Book
