@@ -3,6 +3,7 @@ import importlib.util
 from pathlib import Path
 import unittest
 import struct
+import tempfile
 
 spec = importlib.util.spec_from_file_location('convert', Path(__file__).resolve().parents[1] / 'tools/build-gentium-swf.py')
 convert = importlib.util.module_from_spec(spec)
@@ -82,6 +83,35 @@ class SerializationTests(unittest.TestCase):
             return b'FWS\x0a' + struct.pack('<I', len(body) + 8) + body
         self.assertEqual(verify.movie_tags(fixture(88))[2], [(0, b'')])
         self.assertEqual(len(verify.movie_tags(fixture(87))[2]), 2)
+
+    def test_reused_workspace_restored_after_exception(self):
+        with tempfile.TemporaryDirectory(dir=verify.ROOT/'build', prefix='font-mount-test-') as tmp:
+            root=Path(tmp); runner=root/'runner'; out=root/'output'; out.mkdir()
+            old=runner/'bin/workspace/original.dat'; old.parent.mkdir(parents=True); old.write_bytes(b'original')
+            resource=root/'input.redswf'; resource.write_bytes(b'synthetic-resource')
+            with self.assertRaisesRegex(RuntimeError, 'controlled failure'):
+                with verify.mounted_input(runner,out,resource) as workspace:
+                    self.assertEqual((workspace/verify.KEY).read_bytes(), b'synthetic-resource')
+                    self.assertFalse((workspace/'original.dat').exists())
+                    raise RuntimeError('controlled failure')
+            self.assertEqual(old.read_bytes(), b'original')
+            self.assertEqual((out/'staged-workspace'/verify.KEY).read_bytes(), b'synthetic-resource')
+            self.assertFalse((runner/'bin/workspace-font-backup').exists())
+
+    def test_initially_absent_workspace_remains_absent(self):
+        with tempfile.TemporaryDirectory(dir=verify.ROOT/'build', prefix='font-mount-test-') as tmp:
+            root=Path(tmp); runner=root/'runner'; (runner/'bin').mkdir(parents=True)
+            out=root/'output'; out.mkdir(); resource=root/'input.redswf'; resource.write_bytes(b'synthetic')
+            with verify.mounted_input(runner,out,resource): pass
+            self.assertFalse((runner/'bin/workspace').exists())
+            self.assertTrue((out/'staged-workspace'/verify.KEY).exists())
+
+    def test_workspace_mount_rejects_outputs_inside_runner(self):
+        with tempfile.TemporaryDirectory(dir=verify.ROOT/'build', prefix='font-mount-test-') as tmp:
+            root=Path(tmp); runner=root/'runner'; out=runner/'output'; out.mkdir(parents=True)
+            resource=root/'input.redswf'; resource.write_bytes(b'synthetic')
+            with self.assertRaises(ValueError):
+                with verify.mounted_input(runner,out,resource): pass
 
 
 if __name__ == '__main__':

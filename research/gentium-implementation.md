@@ -1,6 +1,8 @@
 # English Gentium implementation — 10 October 2026
 
-**Implemented and independently decoded SWF source; not an installable mod.**
+**SWF source implemented; unchanged Editor/CLI round trip verified; modified
+Gentium SWF awaits manual Editor import. No installable font mod yet.**
+See the [current control proof and import handoff](gentium-editor-control.md).
 NPC Colors v4 and NPC Shadow v1 are accepted and unchanged. This work targets
 only `gameplay/gui_new/swf/witcher3/fonts_en.redswf`. No installation, game
 launch, live settings changes, compatibility merge, RU/UA font change or other
@@ -97,11 +99,11 @@ Private preview `build/gentium-font-source-final/decoded-swf-preview.png` uses
 JPEXS-exported fonts. It demonstrates decoded glyph appearance at an enlarged
 size, **not in-game rendering**. JPEXS's preview TTF exporter adds a head-table
 trailing-byte warning; those TTFs are never production inputs.
-48 synthetic repository tests pass. Repeated complete source conversions
+51 synthetic repository tests pass. Repeated complete source conversions
 produce identical candidate/control SWF hashes; packaging determinism is not
 claimed because packaging has not passed its gates.
 
-## Official asset control: partial pass, concrete remaining failure
+## Earlier official asset control and metadata stall (historical)
 
 The existing current REDkit `r4data/.../fonts_en.redswf` has the same movie
 contracts as the installed resource. Its saved-file SHA-256 is
@@ -132,7 +134,7 @@ assertions are disabled. No assertion suppression, settings reset or opaque
 header workaround was attempted. Only our launched processes were stopped.
 No NPC resource was imported, cooked or packaged during that comparison.
 
-The full unchanged pipeline therefore **does not pass yet**. The candidate
+At that earlier stopping point the unchanged pipeline did not pass. The candidate
 exists as a structurally verified SWF only: no official candidate import/cook,
 metadata, Vortex ZIP, deployed path or in-game acceptance is claimed.
 Reading 32 currently installed Mod/DLC bundles plus loose font resources found
@@ -153,35 +155,35 @@ For an independent fresh reproduction (choose unused output directories):
 ```
 
 `tools/verify-font-asset.py` verifies an officially saved resource against an
-expected SWF, then performs isolated cook/validate/pack/metadatastore and exact
-re-extraction. It now journals command outcomes/timeouts incrementally.
-Do not repeat successful cook/validate/pack merely to retry metadata. Investigate
-the pre-log command stall once with captured process evidence before claiming
-the gate passed; do not fabricate or reuse another resource's metadata.
+expected SWF, then performs cook/validate/pack/metadatastore and exact
+re-extraction. It now reuses `build/npc-state-expanded` instead of copying the
+toolchain, temporarily mounts only the input, and restores the original runner
+workspace on success/failure. New outputs and logs remain separate. Command
+outcomes/timeouts are journaled incrementally. The metadata retry and the
+subsequent newly imported control both succeeded; the earlier stall's cause is
+still unknown. No metadata was fabricated or borrowed from another resource.
 
 Fresh CLI SWF creation still has the previously documented unresolved resource
 monitor assertion. Editor import is the established supported route. Computer
 Use is prohibited by the user and AGENTS.md: any necessary import must be manual.
-The **next manual action is only one unchanged English-font import**, providing
-current font-specific creation evidence without reopening any NPC project:
+The unchanged English-font import and complete round trip are now verified.
+The **next manual action is the modified Gentium SWF import**:
 
 1. Launch `C:\Dev\witcher-ui-overhaul\build\npc-editor-run\bin\x64_RedKit\editor.exe`.
    If it requests depot generation, stop; do not Generate or alter the depot.
-2. Create **QuietFolioEnglishTrial**, location
-   `C:\Dev\witcher-ui-overhaul\build\npc-editor-run\projects`.
+2. Open the existing **QuietFolioEnglishTrial** project under
+   `C:\Dev\witcher-ui-overhaul\build\npc-editor-run\projects\quietfolioenglishtrial`.
    Do not open the compatibility/NPC projects, load a world or press Play.
 3. In Asset Browser (Ctrl+A), select `gameplay\gui_new\swf\witcher3`.
    Right-click → Import → Flash SWF; choose exactly
-   `C:\Dev\witcher-ui-overhaul\build\gentium-font-source-final\input\fonts_en_qf_unchanged.swf`.
+   `C:\Dev\witcher-ui-overhaul\build\gentium-font-source-final\input\fonts_en_qf_book_v1.swf`.
    This unique basename creates a new resource; do not replace depot fonts_en.
 4. Save into the new project's workspace, close the Editor, and report the
    saved result and any dialog/assertion. Do not choose Ignore/Ignore All.
    Expected output ends in
-   `quietfolioenglishtrial\workspace\gameplay\gui_new\swf\witcher3\fonts_en_qf_unchanged.redswf`.
+   `quietfolioenglishtrial\workspace\gameplay\gui_new\swf\witcher3\fonts_en_qf_book_v1.redswf`.
 
-Leave that resource and logs in place. The source candidate
-`build/gentium-font-source-final/input/fonts_en_qf_book_v1.swf` is ready for a
-subsequent uniquely named import **after** the unchanged gates are complete.
+Leave that resource and logs in place. Do not repeat the unchanged import.
 The agent stages saved output at the canonical key in a fresh private runner;
 the user need not rename resources or cook/build/install anything manually.
 

@@ -1,5 +1,5 @@
 {
-  "status": "SWF source verified; official metadata control blocked; candidate import/cook pending",
+  "status": "Unchanged Editor import/cook/bundle/metadata/re-extraction verified; modified Gentium SWF awaiting manual import",
   "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
   "runtime_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
   "candidate_path": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\input\\fonts_en_qf_book_v1.swf",
@@ -175,26 +175,110 @@
   },
   "unchanged_control": {
     "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
-    "installed_bundles_scanned": 32,
-    "installed_resource_collisions": [],
-    "cooked_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
-    "bundle_sha256": "2c3282eaac39b36e422ea26ac47b5e47fac16be7ba8f90e42255920bb747a6e1",
+    "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quietfolioenglishtrial\\workspace\\gameplay\\gui_new\\swf\\witcher3\\fonts_en_qf_unchanged.redswf",
+    "source_sha256": "cf4d0cccdf06e9278714e9d4ff95dc22ee4264250db66b742faee52d51256531",
+    "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\input\\fonts_en_qf_unchanged.swf",
+    "expected_swf_sha256": "076e0fa9b7c9d14bcb7679ea60fc9729517c7f31000efd837ebe318f054bc998",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "commands": [
+      {
+        "label": "cook",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\cooked"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:31:03][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:31:03][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "validate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "validate",
+          "-db=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\cooked\\cook.db",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\validation"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:31:23][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:31:23][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "pack",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "pack",
+          "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\pack-input",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\packed",
+          "-compression=ZLIB"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:31:41][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:31:41][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "metadata",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "metadatastore",
+          "-path=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-editor-control-v2\\packed"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:32:01][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:32:01][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      }
+    ],
+    "sources_unchanged": true,
+    "cooked_sha256": "9f73b3132161957b61397c3b250833d32fc5e932d261cf7b1ca1e40d24e0538c",
+    "cooked_bytes": 105400,
+    "font_tags_identical_to_source": true,
+    "chunk_crc_valid": true,
+    "texture_array_empty": true,
+    "bundle_sha256": "eedfdfe2eeb4f9608432c3da9de8ca32b3ea997853c03620f5417aedbd5642a3",
+    "metadata_sha256": "060ec79608514c5fd5b0a6259a9786f9d85b83e89cdbc2319a0acb026414a459",
+    "entry": {
+      "resource": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+      "offset": 336,
+      "size": 105400,
+      "packed": 104299,
+      "codec": 1
+    },
     "exact_reextraction": true,
-    "metadata_present": false,
-    "full_pipeline_verified": false
+    "offline_build_verified": true,
+    "runtime_tested": false,
+    "package_path": null,
+    "metadata_validation": "official producer and single-entry key checked; independent store consumer untested",
+    "runner_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded",
+    "runner_workspace_restored": true,
+    "toolchain_copied": false,
+    "runtime_font_descriptors_identical": true,
+    "exporter_linkage_consistent": true,
+    "linkage_name": "fonts-en-qf-unchanged{cc7f3e7d}.gfx"
   },
   "control_command_outcomes": {
     "cook": 0,
     "validate": 0,
     "pack": 0,
-    "metadatastore": "60-second subprocess timeout; ~3-minute direct retry stopped; ~1-minute previously successful runner comparison stopped; no stdout/log content or metadata.store"
+    "metadata": 0,
+    "prior_metadata_stall": "Resolved on subsequent unchanged invocation; cause unknown"
   },
   "modified_asset_imported": false,
   "modified_asset_cooked": false,
   "offline_pipeline_verified": false,
   "package_path": null,
   "runtime_tested": false,
-  "tests_passed": 48,
+  "tests_passed": 51,
   "report": "research/gentium-implementation.md",
   "computer_use": false,
   "live_game_changed": false,
@@ -203,5 +287,12 @@
     "build/gentium-font-source-final/OFL-SIL.txt",
     "build/gentium-font-source-final/OFL-Noto.txt",
     "build/gentium-font-source-final/FONT-NOTICES.txt"
-  ]
+  ],
+  "unchanged_asset_pipeline_verified": true,
+  "control_receipt": "build/gentium-editor-control-v2/receipt.json",
+  "control_run_size_mib": 1.22,
+  "toolchain_copied": false,
+  "editor_assertion_state": "Unknown; log says Asserts Disabled ON. No fresh resource-state assertion logged; CLI gates reported ordinary two baseline assertions.",
+  "editor_evidence": "build/gentium-editor-control-evidence/editor.log",
+  "next_manual_input": "C:/Dev/witcher-ui-overhaul/build/gentium-font-source-final/input/fonts_en_qf_book_v1.swf"
 }

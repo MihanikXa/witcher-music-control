@@ -1,7 +1,7 @@
 """Official single English font resource cook/validate/bundle round trip.
 
-Only copies saved resources into a fresh private runner. Never creates a CR2W
-header, imports SWF, edits a source project, deploys or launches the game.
+Reuses one private runner, temporarily mounting a single saved resource.
+Never creates a CR2W header, imports SWF, edits a source project or deploys.
 """
 import argparse
 import importlib.util
@@ -10,12 +10,52 @@ from pathlib import Path
 import shutil
 import subprocess
 import zlib
+from contextlib import contextmanager
 
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('native',ROOT/'tools/compare-native-npc.py')
 native=importlib.util.module_from_spec(spec); spec.loader.exec_module(native)
 audit=native.audit
 KEY='gameplay/gui_new/swf/witcher3/fonts_en.redswf'
+COMPILER_SHA='9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc'
+BASELINE_SHA='a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81'
+
+
+def private_path(path):
+    path=path.resolve()
+    if ROOT/'build' not in path.parents:
+        raise ValueError('Private build path required')
+    return path
+
+
+def workspace_inventory(path):
+    return {str(p.relative_to(path)): audit.sha(p.read_bytes())
+            for p in path.rglob('*') if p.is_file()} if path.exists() else None
+
+
+@contextmanager
+def mounted_input(runner, out, resource):
+    runner=private_path(runner); out=private_path(out)
+    if runner in out.parents or out in runner.parents:
+        raise ValueError('Runner and output must be separate directories')
+    workspace=runner/'bin/workspace'
+    backup=runner/'bin/workspace-font-backup'
+    preserved=out/'staged-workspace'
+    if backup.exists() or preserved.exists() or workspace.is_symlink() or workspace.is_junction():
+        raise ValueError('Workspace mount is not safe or another build is active')
+    if workspace.exists() and any(p.is_symlink() or p.is_junction() for p in workspace.rglob('*')):
+        raise ValueError('Workspace contains linked paths')
+    before=workspace_inventory(workspace)
+    if workspace.exists(): workspace.rename(backup)
+    try:
+        dest=workspace/KEY; dest.parent.mkdir(parents=True)
+        shutil.copy2(resource,dest)
+        yield workspace
+    finally:
+        if workspace.exists(): workspace.rename(preserved)
+        if backup.exists(): backup.rename(workspace)
+        if workspace_inventory(workspace)!=before:
+            raise ValueError('Original private runner workspace was not restored')
 
 
 def movie_tags(data):
@@ -29,7 +69,8 @@ def movie_tags(data):
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument('--layout',type=Path,required=True)
+    ap.add_argument('--runner',type=Path,default=ROOT/'build/npc-state-expanded',
+                    help='Existing private CLI runner; no installation/depot copies')
     ap.add_argument('--resource',type=Path,required=True)
     ap.add_argument('--expected-swf',type=Path,required=True)
     ap.add_argument('--out',type=Path,required=True)
@@ -37,15 +78,22 @@ def main():
     resource=a.resource.resolve(); expected=a.expected_swf.resolve()
     source=resource.read_bytes(); swf=expected.read_bytes()
     if movie_tags(source)!=movie_tags(swf): raise ValueError('Saved font movie does not match intended SWF; no cooker executed')
-    out=a.out.resolve()
-    if ROOT/'build' not in out.parents or out.exists(): raise ValueError('Fresh private output required')
+    runner=private_path(a.runner); out=private_path(a.out)
+    if out.exists(): raise ValueError('Fresh private output required')
+    if (runner/'projects').exists() or (runner/'bin/x64_RedKit/editor.exe').exists():
+        raise ValueError('Use a private CLI runner, not an Editor environment')
+    exe=runner/'bin/x64_RedKit/wcc_lite.exe'
+    if audit.sha(exe.read_bytes())!=COMPILER_SHA: raise ValueError('Current verified compiler required')
+    if shutil.disk_usage(out.parent).free < 32*1024**2: raise ValueError('At least 32 MiB free space required')
     out.mkdir()
-    for rel in ('bin/x64_RedKit','bin/config','r4data'):
-        shutil.copytree(a.layout/rel,out/rel)
-    for rel in ('bin/gameconf.cfg','bin/redscripts.ini'):
-        shutil.copy2(a.layout/rel,out/rel)
-    dest=out/'bin/workspace'/KEY; dest.parent.mkdir(parents=True); shutil.copy2(resource,dest)
-    exe=out/'bin/x64_RedKit/wcc_lite.exe'
+    with mounted_input(runner,out,resource) as workspace:
+        receipt=execute_pipeline(out,resource,expected,source,swf,exe,workspace)
+    receipt.update(runner_path=str(runner),runner_workspace_restored=True,toolchain_copied=False)
+    (out/'receipt.json').write_text(json.dumps(receipt,indent=2))
+    print(json.dumps(receipt,indent=2))
+
+
+def execute_pipeline(out,resource,expected,source,swf,exe,workspace):
     commands=[]
 
     def run(label,args):
@@ -58,7 +106,7 @@ def main():
             (out/'commands.json').write_text(json.dumps(commands,indent=2))
             raise
         (out/(label+'.stdout.log')).write_bytes(p.stdout+p.stderr)
-        log=(out/'bin/wcc.log').read_text(errors='replace')
+        log=(exe.parent.parent/'wcc.log').read_text(errors='replace')
         (out/(label+'.full.log')).write_text(log)
         assertions=[s for s in log.splitlines() if '[Error][Assert]' in s]
         commands.append(dict(label=label,command=cmd,exit_code=p.returncode,assertions=assertions))
@@ -67,7 +115,7 @@ def main():
             raise ValueError('Official command failed/resource-state assertion: '+label)
         return log
 
-    run('cook',['cook','-platform=pc','-mod='+str(out/'bin/workspace'),'-outdir='+str(out/'cooked')])
+    run('cook',['cook','-platform=pc','-mod='+str(workspace),'-outdir='+str(out/'cooked')])
     log=run('validate',['validate','-db='+str(out/'cooked/cook.db'),'-outdir='+str(out/'validation')])
     if 'Errors found in 0 resources:' not in log or 'Found 1 files to validate' not in log:
         raise ValueError('Single resource validation failed')
@@ -76,6 +124,14 @@ def main():
     chunks=native.chunks(cooked)
     if [c['class_name'] for c in chunks]!=['CSwfResource'] or not all(c['crc_valid'] for c in chunks):
         raise ValueError('Unexpected font resource structure/CRC')
+    baseline=(ROOT/'build/gentium-font-source-final/fonts_en.redswf').read_bytes()
+    if audit.sha(baseline)!=BASELINE_SHA: raise ValueError('Verified runtime font baseline required')
+    if chunks[0]['properties'].get('fonts')!=native.chunks(baseline)[0]['properties'].get('fonts'):
+        raise ValueError('Runtime font registration descriptors changed')
+    linkage=chunks[0]['properties']['linkageName']['value']
+    exporters=[b for c,b in audit.swf_tags(cooked)[2] if c==1000]
+    if len(exporters)!=1 or not linkage.endswith('.gfx') or linkage[:-4].encode() not in exporters[0]:
+        raise ValueError('Official resource linkage and movie exporter descriptor disagree')
     # The official cooker omits the empty default array for this font library.
     textures=chunks[0]['properties'].get('textures')
     if textures is not None and textures['value']!='00000000':
@@ -103,11 +159,11 @@ def main():
                  expected_swf=str(expected),expected_swf_sha256=audit.sha(swf),compiler_sha256=audit.sha(exe.read_bytes()),
                  commands=commands,sources_unchanged=True,cooked_sha256=audit.sha(cooked),cooked_bytes=len(cooked),
                  font_tags_identical_to_source=True,chunk_crc_valid=True,texture_array_empty=True,
+                 runtime_font_descriptors_identical=True,exporter_linkage_consistent=True,linkage_name=linkage,
                  bundle_sha256=audit.sha(bundle.read_bytes()),metadata_sha256=audit.sha(metadata),
                  entry=e,exact_reextraction=True,offline_build_verified=True,runtime_tested=False,package_path=None,
                  metadata_validation='official producer and single-entry key checked; independent store consumer untested')
-    (out/'receipt.json').write_text(json.dumps(receipt,indent=2))
-    print(json.dumps(receipt,indent=2))
+    return receipt
 
 
 if __name__=='__main__': main()
