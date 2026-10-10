@@ -9,6 +9,14 @@ are declared in the installed `flashScriptImports.ws`; the native implementation
 and exact v2 returned values have not been traced. V3 also differed in timing,
 registration and write sequence. V4 still requires its own in-game acceptance.
 
+## User-reported v4 runtime acceptance — 10 October 2026
+
+**Explicit user statement (verbatim):** “Everything works, haven't seen the enemies, but light green, whitish neutral, pale vip work”.
+
+This is the first successful **v4** gameplay report, distinct from the earlier v3 probe. User confirms the green-tinted category, whitish neutral names and pale VIP names have the expected appearance in live gameplay. This supports working recoloring for **friendly/light green, neutral and VIP** categories, including two mappings that failed in v2. Treat as user-reported observation rather than independently observed game output. Their broad “Everything works” does not establish specific reload, flicker, rollback or combat tests.
+
+**Coverage still open:** hostile/enemy red and Axii categories were not observed in this test; the user explicitly says enemies have not yet been encountered. No numeric screenshot/color capture, rapid switching/reacquisition or HUD lifecycle test detail was provided. Do not mark all five mappings or full-profile compatibility completely verified. Next in-game encounter should check hostile red→soft oxide and, when feasible, Axii; meanwhile existing three categories are provisionally accepted. Shadow/font resource pipeline remains blocked and outside the v4 color package.
+
 ## Smallest original correction
 
 `src/npc/quietEditorialNameColors.ws` now contains one additive EnemyFocus
