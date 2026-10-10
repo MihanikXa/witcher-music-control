@@ -1,5 +1,25 @@
 # First user-operated Editor import: save blocked
 
+**Resolved on retry:** both workspace resources now exist at the intended
+keys (EnemyFocus 156,310 bytes; Watermark 81,177 bytes). The new log records both
+exporters and no overwrite/save cancellation, only failed thumbnail generation.
+All non-image SWF tags in both saved files match their unchanged native inputs.
+Hashes are recorded in `shadow-font-manifest.json`.
+
+The new log still records `Asserts Disabled: ON`; this has not been clarified.
+The unchanged pipeline is not yet validated. One copied two-resource cook request
+returned exit 1 because Watermark failed to load. It emitted an EnemyFocus file
+whose hash and contracts match the previous CLI cooked candidate, including
+restored texture structure and unchanged used image regions. That result alone
+does not prove that this runner resolved both new Editor workspace inputs.
+The initial staging command used the wrong relative working directory and was
+corrected to absolute private paths before the two-file request; no live/project
+resource was altered. No pack/shadow modification/ZIP followed the failed cook.
+The shortest remaining clarification from the user is whether Ignore All was
+selected; the agent must separately establish cooker input resolution before
+calling this an Editor round trip. The historical retry instructions below
+need not be repeated just to create the files again.
+
 The user's new project exists at
 `build/npc-editor-run/projects/quieteditorialnpcshadowgate/quieteditorialnpcshadowgate.w3edit`.
 The copied Editor configuration selects this project and the existing uncooked
