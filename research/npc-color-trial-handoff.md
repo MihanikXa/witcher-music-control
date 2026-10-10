@@ -1,5 +1,14 @@
 # Private NPC color-only trial
 
+## User in-game observation — 10 October 2026 (first trial)
+
+**Explicit user report (verbatim):** “Yep, Vesimir is still bright green”. This followed installation instructions for the `QuietEditorial-NPC-Colors-private-test.zip` v2 package and the question whether the colors changed. The reported green NPC name is **not consistent with the intended VIP recolor** (`#5AFF00` to `#D5C08E`).
+
+**Status: failed visual acceptance for this observed target; root cause undetermined.** Do not mark the palette runtime-valid. The report alone does not verify whether Vortex installed/enabled/deployed the correct v2 package, which profile was active at launch, whether the loose script loaded, whether `OnTick` executed, whether the actual label was `mcNPCFocus.tfName`, or whether another renderer subsequently overrode its `textColor`. The current code's exact-value mapping also ignores any variant RGB. Do not assert any of these explanations as established.
+
+**Safe next diagnostic:** (1) confirm correct Vortex profile, mod enabled, deployed path and source hash, plus game startup/compile diagnostics; (2) if loaded, instrument the hook in a separate non-destructive build to distinguish method execution, target Flash-object path, read color, write result and subsequent resets. Avoid changing package 04, FriendlyHUD or SAH and do not rebuild Script Merger outputs. Compare another observed NPC category as a control. Disable the trial and redeploy while diagnosing if it produces no useful visual change. This report is a user observation, not an agent-run game test.
+
+
 This is an original additive WitcherScript runtime experiment for English NPC
 names. The movie, fonts and strong name shadow are unchanged. It does not
 resolve the asset-import gate or claim completed visual acceptance.
