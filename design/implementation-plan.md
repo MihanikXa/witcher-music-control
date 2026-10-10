@@ -11,7 +11,11 @@ loose-script ZIP passed controlled no-op/compiler and current source
 intersection checks but failed the user's Roach neutral and Vesemir VIP test.
 The user observed the diagnostic change both names and retain palette-like colors.
 The clean v4 UInt trial preserves the event result and five mappings without
-diagnostic state; its own target-switch/reload/visibility acceptance is pending.
+diagnostic state; the user reported neutral/friendly/VIP working, and explicitly
+accepted all five mappings (including unobserved hostile/Axii) as confirmed for
+now. Color work is closed by user decision, not by five observed category tests.
+Keep v4 unchanged and in its separate mod. Next active work: shadow and English
+typography, with the existing isolated Editor/SWF pipeline constraints.
 See the [v4 handoff](../research/npc-colors-v4-handoff.md).
 Asset/shadow variants remain
 blocked. The isolated copied Editor reached Create Project, but desktop input
@@ -22,6 +26,28 @@ failed before project creation/import. See the current
 [native validation](../research/native-npc-validation.md) and earlier
 [reconstruction investigation](../research/phase2-validation.md).
 The package boundaries and first-proof specification below remain proposals.
+
+## Current next milestone — shadows and typography (active)
+
+Color mapping is user-accepted and should not be rebuilt into the HUD movie as
+a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
+EnemyFocus movie (current font and colors controlled by existing v4 script);
+separately research/prepare a licensed English Gentium Book font-library trial.
+Do not conflate these assets, prematurely replace PF Din metrics globally, or
+reuse the third-party reference-mod font binaries.
+
+The exact blocking gate is a supported unchanged Editor import, then official
+cook/pack/single-key bundle/re-extract and isolated Vortex test with full
+non-style contract preservation. The already copied REDkit Editor reached
+Create Project but automated desktop control failed; follow the bounded manual
+Editor workflow rather than spending another iteration varying broken CLI
+importer startup flags. If user interaction is needed, supply exact minimal
+steps and resume from the saved isolated project afterward. Keep visual trials
+private and reversible; do not overwrite installed assets or compatibility
+scripts. Shadow trial initially targets only character38/depth35/tfName's filter,
+then assess dialogue/subtitle/oneliner filters independently; first Gentium
+trial touches only the English font library and tests normal/bold/italic/glyph
+coverage. Field & Folio dual-family binding remains a later second step.
 
 ## Package boundaries
 
