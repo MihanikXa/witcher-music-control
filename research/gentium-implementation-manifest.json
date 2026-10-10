@@ -1,0 +1,207 @@
+{
+  "status": "SWF source verified; official metadata control blocked; candidate import/cook pending",
+  "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+  "runtime_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
+  "candidate_path": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\input\\fonts_en_qf_book_v1.swf",
+  "candidate_sha256": "4d7964fe5679bbd69fddb7d5ab8cd5ee8a7b41e4701f832c9fc0aab0962674c3",
+  "control_swf_sha256": "076e0fa9b7c9d14bcb7679ea60fc9729517c7f31000efd837ebe318f054bc998",
+  "styles": [
+    {
+      "font_id": 1,
+      "style": "Regular",
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 6775,
+      "payload_sha256": "fb951fbd6a713c614a70f74cb1d1a60ae719390636e9bbdeae2a9de17c7cec73",
+      "ttf_sha256": "50c95ce717f0468f6750084036d75cfea5445e44f9e584f14c20e769c49bb859",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1538
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1846
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1732
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1704
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1242
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ]
+    },
+    {
+      "font_id": 3,
+      "style": "Italic",
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 7057,
+      "payload_sha256": "bda9ddae5ae69657092f4e9133d77ba38837220a58a66fdcdf31974c397abda7",
+      "ttf_sha256": "25514fc20aa8ed71b7e05ad12c576bcab2ea5ad722267454a500d666b9405681",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1374
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1652
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1554
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1484
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1163
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ]
+    },
+    {
+      "font_id": 5,
+      "style": "Bold",
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 6775,
+      "payload_sha256": "f52a37955c5237cac6e67d21bdd784f1d2d21434b9adf68128b9d8c0db865bf9",
+      "ttf_sha256": "436b268f8967f0807d5645b1045005ea10e5fcc478f284ae1255c25e3d9e164e",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1671
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1891
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1792
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1764
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1309
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ]
+    }
+  ],
+  "independent_xml_geometry_metrics_verified": true,
+  "nonfont_tags_identical": true,
+  "alignment_zones": "none in runtime baseline; no stale zones copied",
+  "repeat_swf_hashes_identical": true,
+  "source_runs": [
+    "build/gentium-font-source-v2",
+    "build/gentium-font-source-v3",
+    "build/gentium-font-source-v4",
+    "build/gentium-font-source-final"
+  ],
+  "source_libraries": {
+    "fonttools": "4.60.1",
+    "uharfbuzz": "0.56.3",
+    "Pillow": "12.3.0",
+    "JPEXS": "26.3.0"
+  },
+  "unchanged_control": {
+    "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+    "installed_bundles_scanned": 32,
+    "installed_resource_collisions": [],
+    "cooked_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
+    "bundle_sha256": "2c3282eaac39b36e422ea26ac47b5e47fac16be7ba8f90e42255920bb747a6e1",
+    "exact_reextraction": true,
+    "metadata_present": false,
+    "full_pipeline_verified": false
+  },
+  "control_command_outcomes": {
+    "cook": 0,
+    "validate": 0,
+    "pack": 0,
+    "metadatastore": "60-second subprocess timeout; ~3-minute direct retry stopped; ~1-minute previously successful runner comparison stopped; no stdout/log content or metadata.store"
+  },
+  "modified_asset_imported": false,
+  "modified_asset_cooked": false,
+  "offline_pipeline_verified": false,
+  "package_path": null,
+  "runtime_tested": false,
+  "tests_passed": 48,
+  "report": "research/gentium-implementation.md",
+  "computer_use": false,
+  "live_game_changed": false,
+  "accepted_npc_packages_unchanged": true,
+  "license_notices": [
+    "build/gentium-font-source-final/OFL-SIL.txt",
+    "build/gentium-font-source-final/OFL-Noto.txt",
+    "build/gentium-font-source-final/FONT-NOTICES.txt"
+  ]
+}

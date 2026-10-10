@@ -1,5 +1,11 @@
 # Shadow and English Gentium source phase — 10 October 2026
 
+**Superseded status:** Colors v4 and Shadow v1 are now accepted in-game and
+remain unchanged. English font conversion is implemented; current validation,
+the metadata blocker and the one-font manual handoff are recorded in
+[Gentium implementation](gentium-implementation.md). The Track A instructions
+and font-preparation limitations below describe earlier stages, not new work.
+
 Color work is closed by user acceptance. Original v4 source and private ZIP
 remain unchanged (SHA-256 `1b9d70f775ac1cf4173739fa01325d65ead2bdb9c1aeb363dac548c03f6b82b7`
 and `94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e`).

@@ -1,5 +1,12 @@
 # Modular implementation plan — no deployment
 
+Current English font implementation: all 383 mappings per style are converted
+and independently decoded; the unchanged control cooks, validates and
+re-extracts byte-identically. Metadata generation is blocked before logging;
+the modified SWF still needs a manual isolated Editor import. No font ZIP is
+installable. See [current checks and handoff](../research/gentium-implementation.md).
+Accepted NPC Colors v4 and NPC Shadow v1 remain unchanged.
+
 Current Phase 2 update: importing the installed native authoring SWF restores
 the texture array. Including the official GUIWithAlpha texture-group definition
 also restores the full embedded mip structure. The resource-state assertion

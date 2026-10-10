@@ -1,5 +1,5 @@
 {
-  "status": "private shadow-only v1 ZIP passes offline build/static gates; runtime acceptance pending",
+  "status": "NPC Colors v4 and NPC Shadow v1 accepted in-game; English font implementation in progress",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -387,7 +387,9 @@
     },
     "shadow_trial_report": "research/npc-shadow-v1-handoff.md",
     "editor_import_log_sha256": "357fbba15edff7fc46244a370f05c772c98e662394f3d8d42ac40df1436365f8",
-    "shadow_package_repeat_identical": true
+    "shadow_package_repeat_identical": true,
+    "runtime_tested": true,
+    "acceptance": "User confirmed successful in-game test; preserved unchanged"
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",
@@ -723,7 +725,9 @@
     "private_receipt": "build/gentium-english-source-verified/receipt.json",
     "receipt_sha256": "2c5e421a36ecc922545a379ce2c789d048a28876774e695468ce798b0b85bf53",
     "repeat_preparation_equal": true,
-    "fonttools_version": "4.60.1"
+    "fonttools_version": "4.60.1",
+    "current_implementation": "research/gentium-implementation-manifest.json",
+    "preparation_summary_is_historical": true
   },
   "report": "research/shadow-font-manual-gate.md",
   "tests_passed": 39,
