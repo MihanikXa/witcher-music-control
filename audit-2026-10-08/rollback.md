@@ -1,5 +1,11 @@
 # Analog gait update rollback
 
+**Current Brawler-only candidate:** roll back Core 01 only, retaining the accepted
+analog-gait package 04. Restore only the changed B&S keys and remove the two new
+F6 lines, using the pre-test settings/save backups. Follow the exact bounded
+[Brawler rollback](brawler-only.md). Do not roll back movement or the full suite
+for this combat experiment.
+
 For this incremental test, close the game, disable the new analog-gait package
 04 and re-enable the retained 6e01460 movement-hotfix version in the existing
 Compatibility Test profile. Deploy with Vortex; preserve packages 01/02/03/05,

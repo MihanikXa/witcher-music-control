@@ -1,5 +1,11 @@
 # Current incremental controller test
 
+**Current Brawler test candidate:** movement is now user-accepted. First test
+startup and normal-mode B&S Less Spins combat, then F6/fists, light/heavy guard,
+counters, damage/defense neutrality after exit, save/death and scripted contexts.
+Recheck movement as a regression check; do not reinstall it. The bounded ordered
+[Brawler test plan](brawler-only.md) includes the compiled-only risk and rollback.
+
 The compatibility suite is already deployed and working by user report. Do not
 repeat initial installation tests as a prerequisite to this update. Follow the
 seven focused analog/sprint/mixed-input and special-state cases in

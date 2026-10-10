@@ -1,5 +1,10 @@
 # Proposed Blood and Steel-first combat with a Brawler-only toggle
 
+**Implementation status:** the user approved this direction; the offline
+Core-only candidate and official source compilation are complete. See
+[brawler-only.md](brawler-only.md) and brawler-manifest.json. This plan remains
+the requirements record. No deployment or runtime acceptance is implied.
+
 **Decision source:** User requests proceeding with a dedicated Brawler toggle,
 while removing the remaining Bestg school stances and restoring Blood and Steel
 as the main sword-combat system (10 October 2026).

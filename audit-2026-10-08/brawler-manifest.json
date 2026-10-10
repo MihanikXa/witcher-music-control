@@ -1,0 +1,396 @@
+{
+  "format": 1,
+  "archive": "01-brawler-only-core.zip",
+  "sha256": "4a0d5a4fea809600dd08a42e07e20ec803bf6c43635d514d4c77836586f1ae3d",
+  "baseline_core_sha256": "0e63fc2f62fc73d3e325e4f698e62735cbaa12bf8977ce136676a48d547950f9",
+  "preserved_package04_sha256": "fbbe3b2ecfeab77965f13b4e7386c8891167f37f8d770b20a37c7c7fd9539909",
+  "source_inventory_sha256": "b0f0689de0c89ed47ec7bb4d3c5b45e582762ef567513682082c3424817f9c4c",
+  "files": [
+    {
+      "path": "Mods/modAutoLoot/content/scripts/game/gameplay/containers/container.ws",
+      "sha256": "f7d8423d7c0af917ca98d0ad9b3c7c7be4ea916eef3488adc4589f01719646f2",
+      "bytes": 32427,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/game/gui/hud/modules/hudModuleLootFeed.ws",
+      "sha256": "72005f74ff18c7f3f508597c889d1776b651c90b800f9bdc9e5e55fcbfa81777",
+      "bytes": 14075,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/game/gui/popups/LootPopup.ws",
+      "sha256": "3d298f6bc91c30b62184e0ab0b81634087770d457950de418c4cc10479ee8710",
+      "bytes": 20731,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/game/player/playerWitcher.ws",
+      "sha256": "819e711f51554118405b846140439ce1d205d9f0f09962912657a2111538d460",
+      "bytes": 357257,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/local/modAutoLootConfig.ws",
+      "sha256": "7a6fc99214eb6f7ea460dfd5f8ca560ee39e7eda32c7a885428e48dcdde8b656",
+      "bytes": 14306,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/local/modAutoLootLoc.ws",
+      "sha256": "b02fb61244c7f9843dd5c3ac3c8818612f8da4312c024136dd5ad6ec0acc7a42",
+      "bytes": 47820,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/local/modAutoLootManager.ws",
+      "sha256": "56b46b3cec74cbd63ea50957dcef28c536ad4a6cee1b8449b3562a2556dd24c9",
+      "bytes": 51656,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modAutoLoot/content/scripts/local/modAutoLootMenuWrapper.ws",
+      "sha256": "4677dbfd1d1aec6ba0b61a7cadfb4298a1f60c643eab76cd7874e0189c802066",
+      "bytes": 2549,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/ar.w3strings",
+      "sha256": "7b75e4b2afb6d14418ef8c48d66404b50820f86da40911b3b9a7e84626dc83b3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/br.w3strings",
+      "sha256": "7b75e4b2afb6d14418ef8c48d66404b50820f86da40911b3b9a7e84626dc83b3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/cz.w3strings",
+      "sha256": "26337f5d3379a3dc990333cd2fe9d238b8c3a514d2843ebd09765f56c055a6a5",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/de.w3strings",
+      "sha256": "fee06a8cff136af38a9523c03e740a7b3080f703a848d8197c12c4cbbea3f659",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/en.w3strings",
+      "sha256": "dd6cb50090e187dcbc0078987a89d31292d64074e232f46b32c3157cb7ca6d05",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/es.w3strings",
+      "sha256": "bd8b0a4b04faeb5717048e4c03be9c5468eaf73727465f143140a20e659d90f3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/esMX.w3strings",
+      "sha256": "7b75e4b2afb6d14418ef8c48d66404b50820f86da40911b3b9a7e84626dc83b3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/fr.w3strings",
+      "sha256": "b25eb8a223a5edab48aea195b32af2cf8e3b84ca3717afd718abfae035711bd6",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/hu.w3strings",
+      "sha256": "f7f61fd15713a3b1fdb2e56042e1a580e218570fe1bf4b39fef963597690d943",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/it.w3strings",
+      "sha256": "af532ba7b4e6516468d3181b15af064c40e566232b21d16e9c4d32985cc486dc",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/jp.w3strings",
+      "sha256": "c00a471c736f14b9639f606250f91ef241851c18d322966cbe153f0314dc24d0",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/kr.w3strings",
+      "sha256": "7b75e4b2afb6d14418ef8c48d66404b50820f86da40911b3b9a7e84626dc83b3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/pl.w3strings",
+      "sha256": "31035fd48c20b17c2cffa988ef6e0af1292009a71052752fc742d33daf3def26",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/ru.w3strings",
+      "sha256": "37c467c68a1e8c5bad461ee9998e1f5971ae2e507e561332180f4485818307d9",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/scripts/local/CompatBrawlerConfig.ws",
+      "sha256": "8bde9fec274912abe45a3813a72ed76b690b208cc3bd3bef5a50be7df5897605",
+      "bytes": 363,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/scripts/local/CompatBrawlerController.ws",
+      "sha256": "f21e796ace399453810b160dfbaa1adc08b3bd9644c24e9a8e86bcf4dc5d3466",
+      "bytes": 4507,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/scripts/local/CompatBrawlerMechanics.ws",
+      "sha256": "110477ef7167abfd9eb73f337c336b175622880349aa9ab76fc6df85b1351239",
+      "bytes": 3862,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/tr.w3strings",
+      "sha256": "7b75e4b2afb6d14418ef8c48d66404b50820f86da40911b3b9a7e84626dc83b3",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modBestGsSchoolStances/content/zh.w3strings",
+      "sha256": "97942c7315438dec8ae6192d292e590b10efc6b0a397c4138a8d9d2f91cb95e6",
+      "bytes": 4073,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/ar.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/br.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/cn.w3strings",
+      "sha256": "babb91f2fe10d1f8edd539ad05d212e761b363063b64923ea0aef9a2ff189ade",
+      "bytes": 1301,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/cz.w3strings",
+      "sha256": "cbf48dad44bf7ce7962e714ba75aec5aa0d0b6bb4084fed8ecb7ab4d97279cc2",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/de.w3strings",
+      "sha256": "9071ede7890ccadbcd37b36e07c29862e57c0724ac6a27c01e35cbd41acf54b1",
+      "bytes": 1583,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/en.w3strings",
+      "sha256": "067bab9ab99a77895740baa339e21a4b460299b365b70361b4af5337384b5320",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/es.w3strings",
+      "sha256": "4e44f0154d597db9ba8d1e499159d3ab953fdccbf431375d67b96c4614c369eb",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/esmx.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/fr.w3strings",
+      "sha256": "4a9cb50662eebe085f7c69d9f41d0db91a04fd3f9421061504fdfca670531c2f",
+      "bytes": 1568,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/hu.w3strings",
+      "sha256": "89327748aa7e0fd399820c5eca00fc9e8c46165a2454fea4375e1d4743f0202d",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/it.w3strings",
+      "sha256": "ecb4d8760da19b36f018d4d45a7ac3bb20c42a97485a9388a1b7f0a33cfe3945",
+      "bytes": 1616,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/jp.w3strings",
+      "sha256": "4bce2f3a6295223cbd8e68e1a63dee48f0ef1fa5d54e06cb34030999974b2256",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/kr.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/pl.w3strings",
+      "sha256": "5e82405beef464d5081700631acd36ce27ca339332ebe58a70f8b1dd1d980689",
+      "bytes": 1575,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/ru.w3strings",
+      "sha256": "41578829ce2f4360c2e55b1fd4722e4fa5ad961161909596a3ae963548ac0b36",
+      "bytes": 2104,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/scripts/local/responsiveMovement.ws",
+      "sha256": "e7bfa3f702b8c960e8e6bbc0040c4fb57073408ff190a90be18d289faaf74dc2",
+      "bytes": 40209,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/tr.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/ua.w3strings",
+      "sha256": "4e60f8fed01760c1d8a1c722918bf829a0d0352e6f15515fff77738fee0e4934",
+      "bytes": 1461,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "Mods/modResponsiveMovement/content/zh.w3strings",
+      "sha256": "b866bd96d2079cb93e9cab8a90f9aa7cb815010ec04aacee46128db96644480f",
+      "bytes": 1325,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "bin/config/base/autoloot.ini",
+      "sha256": "f7ef221a630190b9b6dab084e70aa301b184d4646d512f0446b10d46ca9be425",
+      "bytes": 817,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modAutoLoot.xml",
+      "sha256": "e65c43aeb0014d631960d709545be6fd28cf5b8a8f7fbfe71394594a7116fd7c",
+      "bytes": 8200,
+      "unchanged_from_core": true
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modBestGsStances.xml",
+      "sha256": "57fc5c3aa6d27377c21b7d9fe7a43ac97fec5629e61406593013f9f4de518dff",
+      "bytes": 1695,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modBloodAndSteel.xml",
+      "sha256": "67f279a123d00a38a897cce10741671e92161bc0476dc3492c1e8d9625672294",
+      "bytes": 2530,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modCombatSpeed.xml",
+      "sha256": "f451fbbb5e5f1a896b1d6014f4361864834489a4d7262d9b2b2761193ecf46d9",
+      "bytes": 54,
+      "unchanged_from_core": false
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modResponsiveMovement.xml",
+      "sha256": "678883d14c0ed0b7771b57a5db09808685c6dd2c7f7202f1910b69fd1fc8d675",
+      "bytes": 16778,
+      "unchanged_from_core": true
+    }
+  ],
+  "removed_core_paths": [
+    "Mods/modBestGsSchoolStances/content/bundles/bestgs_stance_hud.bundle",
+    "Mods/modBestGsSchoolStances/content/metadata.store",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceAttackStyles.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceConfig.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceDamage.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceFeatures.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceHud.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceInput.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceMedallion.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStancePoses.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceRadial.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsStanceState.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsViperAlchemy.ws",
+    "Mods/modBestGsSchoolStances/content/scripts/local/BestGsViperStrikeHud.ws",
+    "Mods/modBestGsSchoolStances/content/texture.cache",
+    "Mods/modCombatSpeed/content/ar.w3strings",
+    "Mods/modCombatSpeed/content/br.w3strings",
+    "Mods/modCombatSpeed/content/cn.w3strings",
+    "Mods/modCombatSpeed/content/cz.w3strings",
+    "Mods/modCombatSpeed/content/de.w3strings",
+    "Mods/modCombatSpeed/content/en.w3strings",
+    "Mods/modCombatSpeed/content/es.w3strings",
+    "Mods/modCombatSpeed/content/esMX.w3strings",
+    "Mods/modCombatSpeed/content/fr.w3strings",
+    "Mods/modCombatSpeed/content/hu.w3strings",
+    "Mods/modCombatSpeed/content/it.w3strings",
+    "Mods/modCombatSpeed/content/jp.w3strings",
+    "Mods/modCombatSpeed/content/kr.w3strings",
+    "Mods/modCombatSpeed/content/pl.w3strings",
+    "Mods/modCombatSpeed/content/ru.w3strings",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMAnimation.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMCalculation.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMConfiguration.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMConsole.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMFinishers.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMPlayerHooks.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMPlayerState.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMPlayerStats.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMSwordHooks.ws",
+    "Mods/modCombatSpeed/content/scripts/local/combat_speed/CSMTypes.ws",
+    "Mods/modCombatSpeed/content/tr.w3strings",
+    "Mods/modCombatSpeed/content/ua.w3strings",
+    "Mods/modCombatSpeed/content/zh.w3strings",
+    "Mods/modCombatSpeed/localization/ar.w3strings.csv",
+    "Mods/modCombatSpeed/localization/br.w3strings.csv",
+    "Mods/modCombatSpeed/localization/cn.w3strings.csv",
+    "Mods/modCombatSpeed/localization/cz.w3strings.csv",
+    "Mods/modCombatSpeed/localization/de.w3strings.csv",
+    "Mods/modCombatSpeed/localization/en.w3strings.csv",
+    "Mods/modCombatSpeed/localization/es.w3strings.csv",
+    "Mods/modCombatSpeed/localization/esMX.w3strings.csv",
+    "Mods/modCombatSpeed/localization/fr.w3strings.csv",
+    "Mods/modCombatSpeed/localization/hu.w3strings.csv",
+    "Mods/modCombatSpeed/localization/it.w3strings.csv",
+    "Mods/modCombatSpeed/localization/jp.w3strings.csv",
+    "Mods/modCombatSpeed/localization/kr.w3strings.csv",
+    "Mods/modCombatSpeed/localization/pl.w3strings.csv",
+    "Mods/modCombatSpeed/localization/ru.w3strings.csv",
+    "Mods/modCombatSpeed/localization/tr.w3strings.csv",
+    "Mods/modCombatSpeed/localization/ua.w3strings.csv",
+    "Mods/modCombatSpeed/localization/zh.w3strings.csv",
+    "Mods/modCombatSpeed/readme.txt"
+  ],
+  "compiler": {
+    "exit_code": 0,
+    "success": true,
+    "warnings": 374,
+    "assertions": 23441,
+    "script_errors": [],
+    "output_sha256": "e811bd5f93d68e18a63ea3da3e0be55716200f53f8bf08c718d1c086837a6839",
+    "opaque_blobs_recompiled": false
+  },
+  "runtime_test": false
+}

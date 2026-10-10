@@ -1,5 +1,13 @@
 # Implemented compatibility decisions
 
+**10 October approved offline variant:** Blood and Steel-first sword combat plus
+Brawler-only F6 toggle is implemented and officially source-compiled. See
+[brawler-only.md](brawler-only.md) for the function map, deliberate feature losses,
+runtime gates and single-Core rollback. The school-first choices below remain
+historical evidence of the accepted baseline, not the recommended test variant.
+No live switch has been performed. Compiled B&S fist compatibility is still a
+gameplay gate; no resource binary was edited or declared semantically merged.
+
 This implementation supersedes the first-pass preservation gates in conflicts.md and resolutions.md. The user explicitly delegated qualitative choices. No deployment or game launch was performed. The release targets Steam build **25773555 / executable 5.0.0.1048522**, discovered after Steam updated during this work.
 
 ## Quest resources: UPR wins all eight

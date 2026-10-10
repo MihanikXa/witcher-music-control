@@ -1,5 +1,13 @@
 # Private installable release
 
+**10 October private combat test candidate:** replace only Core 01 with
+`brawler-only/01-brawler-only-core.zip`, SHA-256
+`4a0d5a4fea809600dd08a42e07e20ec803bf6c43635d514d4c77836586f1ae3d`.
+52 files; 46 preserved members and six changed/new files; no CSM source.
+Keep the deployed, user-accepted analog-gait package 04 and all other packages.
+[Brawler-only instructions](brawler-only.md) supersede the initial whole-suite
+installation below for this candidate. Do not deploy until user approval.
+
 **Current deployed-profile update:** the original installation steps below are
 historical. The user has completed deployment and reports successful gameplay.
 For the new analog gait test, follow [analog-gait.md](analog-gait.md): replace

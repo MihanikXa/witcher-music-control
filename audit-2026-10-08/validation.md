@@ -4,6 +4,16 @@
 
 # Analog gait test-release validation
 
+**Brawler-only offline gate (10 October):** official wcc source-context compile
+passes, exit 0, no WCC script errors, 374 warnings/23,441 environment/resource
+assertions. The final 52-member Core variant passes CRC, deterministic rebuild,
+per-member preservation and Vortex menu-root routing. Generated-body fixtures
+pass neutral/sword damage passthrough, fist/socket math, heavy-counter limits,
+pending/repeat toggle behavior and invalid-context cleanup. All 128 protected
+inputs remain unchanged; package 04 is not rebuilt. B&S's compiled blob and
+engine/save behavior remain untested. Exact evidence: [brawler-only.md](brawler-only.md)
+and brawler-manifest.json. This is an offline candidate, not runtime acceptance.
+
 The user reports the deployed baseline now compiles and plays; earlier statements
 about that baseline being uninstalled are historical. The new analog override
 has not been deployed. Official REDkit wcc compilation of the preserved working

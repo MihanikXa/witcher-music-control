@@ -27,3 +27,6 @@ patches/*
 
 !movement-fix.md
 !analog-gait.md
+!brawler-only.md
+!brawler-manifest.json
+!tools/brawler-controller.ws
