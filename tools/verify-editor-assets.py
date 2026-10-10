@@ -19,12 +19,26 @@ spec.loader.exec_module(audit)
 KEY = 'gameplay/gui_new/swf/hud/hud_enemyfocus.redswf'
 
 
+def verify_source_movie(native, resource):
+    # Official import replaces bitmap storage/export records only. A checked-out
+    # unchanged resource must never be mistaken for the newly imported trial.
+    excluded = {36, 1000, 1008, 1009}
+    expected = [(c, b) for c, b in audit.swf_tags(native)[2] if c not in excluded]
+    actual = [(c, b) for c, b in audit.swf_tags(resource)[2] if c not in excluded]
+    if actual != expected:
+        raise ValueError('Saved EnemyFocus movie differs from expected native source; no cooker executed')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--layout', type=Path, required=True)
     ap.add_argument('--workspace', type=Path, required=True)
     ap.add_argument('--control-workspace', type=Path,
                     help='Read unchanged Watermark from a separate baseline project')
+    ap.add_argument('--expected-native', type=Path,
+                    help='Require saved EnemyFocus contracts to match this native SWF before cooking')
+    ap.add_argument('--enemyfocus-file', type=Path,
+                    help='Explicit separately named Editor output; stage at canonical resource key')
     ap.add_argument('--out', type=Path, required=True)
     args = ap.parse_args()
     out = args.out.resolve()
@@ -35,9 +49,16 @@ def main():
         rel = Path(KEY).with_name(name + '.redswf')
         workspace = args.control_workspace if name == 'hud_watermark' and args.control_workspace else args.workspace
         source = workspace / rel
+        if name == 'hud_enemyfocus' and args.enemyfocus_file:
+            source = args.enemyfocus_file
         if not source.is_file():
             raise ValueError('Saved Editor resource missing; no cooker executed: ' + str(source.resolve()))
         inputs.append((rel, source))
+    expected_native = None
+    if args.expected_native:
+        native = args.expected_native.read_bytes()
+        verify_source_movie(native, inputs[0][1].read_bytes())
+        expected_native = dict(path=str(args.expected_native.resolve()), sha256=audit.sha(native))
     out.mkdir()
     for rel in ('bin/x64_RedKit', 'bin/config', 'r4data'):
         shutil.copytree(args.layout / rel, out / rel)
@@ -97,6 +118,7 @@ def main():
            Path(s['path']).stat().st_mtime_ns != s['mtime_ns'] for s in sources):
         raise ValueError('Original Editor workspace changed')
     receipt = dict(commands=commands, sources=sources, sources_unchanged=True,
+                   expected_native=expected_native,
                    compiler_sha256=audit.sha(exe.read_bytes()), entry=entry,
                    bundle_sha256=audit.sha(bundle.read_bytes()),
                    metadata_sha256=audit.sha(metadata.read_bytes()),

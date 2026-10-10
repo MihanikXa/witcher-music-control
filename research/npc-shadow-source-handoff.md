@@ -1,10 +1,11 @@
 # NPC shadow-only source trial: manual changed-input gate
 
 **Changed-input save blocker:** the user created/imported/saved and observed no
-assertion, but the current log records exporter success followed by cancelled
-overwrite/save. The new project has no workspace resource yet. See the
-[specific checkout/save retry](npc-shadow-save-blocker.md). Only this changed
-candidate needs retry; the successful unchanged baseline is intact.
+assertion, but the log records exporter success followed by cancelled
+overwrite/save. Checkout now exists, yet it still contains the unchanged
+movie. See the [current unique-name import alternative](npc-shadow-save-blocker.md).
+Only this changed candidate needs a manual action; the successful unchanged
+baseline is intact. The original import instructions below are historical.
 
 The unchanged saved Editor-output pipeline is verified offline; see
 [the corrected cook/bundle evidence](editor-cli-roundtrip.md). This continuation

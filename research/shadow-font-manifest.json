@@ -1,5 +1,5 @@
 {
-  "status": "changed shadow import attempted; Editor cancelled overwrite/save; manual checkout retry needed",
+  "status": "checkout succeeded but shadow replacement still cancelled; unique-name import prepared",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -237,7 +237,22 @@
         "shadow_source_sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17"
       }
     },
-    "shadow_editor_save_report": "research/npc-shadow-save-blocker.md"
+    "shadow_editor_save_report": "research/npc-shadow-save-blocker.md",
+    "shadow_checked_out_file_exists": true,
+    "shadow_checkout_retry": {
+      "saved_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowtrial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+      "saved_sha256": "68d9ab2eb9eb65b8f935b334beb46f39d43dc05755145a2ae2ad8d60a3d41f8d",
+      "saved_bytes": 156120,
+      "saved_is_original_movie": true,
+      "saved_matches_shadow": false,
+      "user_reports_no_replacement_prompt": true,
+      "editor_assertion_state": "unknown",
+      "import_save_cancelled": true,
+      "cooker_executed": false,
+      "package_path": null,
+      "unique_source": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-source-v1\\input\\hud_enemyfocus_qe_shadow_v1.swf",
+      "unique_source_sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17"
+    }
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",
