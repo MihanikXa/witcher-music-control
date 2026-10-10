@@ -1,6 +1,9 @@
 # Native NPC SWF import investigation — 2026-10-09
 
-Historical first native investigation. The subsequent
+Historical first native investigation; the "no ZIP" statements below describe
+the asset investigation at that time. A separate original
+[color-only script trial](npc-color-trial-handoff.md) is now available, while
+[Editor import](editor-workflow-bounded.md) and shadow assets remain blocked. The subsequent
 [controlled state investigation](swf-state-investigation.md) tests unrelated
 movies, repairs depot attachment, demonstrates loaded resave/cook and compiles
 the corrected script fallback in the known source assembly. Fresh import risk

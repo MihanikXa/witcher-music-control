@@ -6,8 +6,13 @@ also restores the full embedded mip structure. The resource-state assertion
 persists across EnemyFocus and unrelated controls after bootstrap/depot repairs.
 Loaded resave/cook succeeds, but fresh import risk remains unresolved. The
 corrected additive script fallback compiles in the known source assembly;
-exact deployed compiled-mod coverage remains incomplete. No visual variants or
-ZIP exist. See the current
+exact deployed compiled-mod coverage remains incomplete. A private color-only
+loose-script ZIP now passes controlled no-op/compiler and current source
+intersection checks; it preserves the event result. Asset/shadow variants remain
+blocked. The isolated copied Editor reached Create Project, but desktop input
+failed before project creation/import. See the current
+[Editor outcome/manual steps](../research/editor-workflow-bounded.md),
+[color-only test handoff](../research/npc-color-trial-handoff.md),
 [controlled investigation](../research/swf-state-investigation.md),
 [native validation](../research/native-npc-validation.md) and earlier
 [reconstruction investigation](../research/phase2-validation.md).
@@ -97,11 +102,17 @@ If a current-tool round trip cannot be verified, stop before packaging and
 consider a narrowly original RGB-only script proof; its wrapper/compiler
 compatibility with FriendlyHUD must be demonstrated before calling it viable.
 
-After the unchanged gate succeeds, produce separate color-only and shadow-only
+Current narrow fallback handoff: [private color-only trial](../research/npc-color-trial-handoff.md).
+The controlled no-op diagnostic criterion replaces the earlier blanket
+zero-additional-assertion/full-opaque-recompile packaging block for this original
+loose-script experiment. It does not validate the asset pipeline or retail runtime.
+
+After the unchanged asset gate succeeds, produce separate color-only and shadow-only
 trial outputs for private comparison, then one combined movie. Preserve the
 existing WS. Only after baseline and combined prototype differences have been
-reviewed should a single Vortex archive be prepared for approval. This research
-turn stops before those changes, archive generation or installation.
+reviewed should an asset Vortex archive be prepared. These asset changes remain
+gated; the separate original color-only script archive has its own handoff and
+does not resolve shadows. Installation remains user-only.
 
 ## Future English font trial manifest
 

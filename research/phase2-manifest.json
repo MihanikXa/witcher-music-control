@@ -1,6 +1,6 @@
 {
-  "status": "blocked",
-  "date": "2026-10-09",
+  "status": "asset-route-blocked; private-color-only-trial-ready",
+  "date": "2026-10-10",
   "scope": "English NPC typography/text-color/text-rendering only; broader roadmap deferred",
   "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
   "native_route": {
@@ -1475,7 +1475,9 @@
     ],
     "packaging_allowed": false,
     "receipt_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-color-fallback\\receipt.json",
-    "receipt_sha256": "c219c9b594474fd9c462c63bb865d16f218e40328681e270e452dfd53f875194"
+    "receipt_sha256": "c219c9b594474fd9c462c63bb865d16f218e40328681e270e452dfd53f875194",
+    "historical": true,
+    "superseded_by": "private_color_trial"
   },
   "current_movie_collisions": [],
   "current_settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
@@ -1639,8 +1641,8 @@
   },
   "texture_array_preserved": true,
   "unchanged_roundtrip_verified": false,
-  "package_built": false,
-  "zip_path": null,
+  "package_built": true,
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v2\\QuietEditorial-NPC-Colors-private-test.zip",
   "deployed": false,
   "game_tested": false,
   "assertion_investigation": {
@@ -3052,7 +3054,178 @@
     "package_built": false,
     "zip_path": null
   },
-  "script_fallback_current": {
+  "editor_workflow_bounded": {
+    "editor_executed": true,
+    "editor_import_executed": false,
+    "project_created": false,
+    "game_launched": false,
+    "import_assertion_result": "untested",
+    "desktop_input_error": "foreground window did not report a process id",
+    "protected_snapshot_files": 41,
+    "protected_differences": [],
+    "pipeline_verified": false,
+    "shadow_zip_path": null,
+    "report": "research/editor-workflow-bounded.md",
+    "preparation": {
+      "redkit_source": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit",
+      "copied_runtime_and_r4data": true,
+      "source_audio_not_copied": true,
+      "uncook_read_only": "E:\\TheWitcher3RMDepot",
+      "working_project_selected": false,
+      "editor_exe_sha256": "ed2a89f9dc05a7f75ba56caee0eb5320ca90325d03ddbbbd856dd1941d4d2b0f",
+      "gui_with_alpha_sha256": "8c22259fabd1ee8e63c2df12419cbc6732cd4d3fa6dd997947a9a29cec5c3c22",
+      "editor_executed": true
+    },
+    "critical_copied_inputs_equal_to_installed": true
+  },
+  "private_color_trial": {
+    "status": "private-color-only-runtime-trial",
+    "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v2\\QuietEditorial-NPC-Colors-private-test.zip",
+    "zip_sha256": "2ca0ca2ccded4d216aa2843021a24e570bbd959f8d2e916e79c7a5e62a69ba9d",
+    "zip_bytes": 1001,
+    "member": "Mods/modQuietEditorialNPCColors/content/scripts/local/quietEditorialNameColors.ws",
+    "member_sha256": "533d039bd5e1c44059691b69695a287a381133199d594c972d0457cf5096a260",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "controls_sha256": "94fa81a6c60c2219d7ea72c18dd9852a2eef8c7fddcda7deae4f36a7e1563b8a",
+    "settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+    "on_tick_intersections": [
+      {
+        "mod": "modMonsterHuntContracts",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modMonsterHuntContracts\\content\\scripts\\local\\mhcContractBossBar.ws",
+        "sha256": "32d4e556c05d722846eb64d3bcc8e0b45e06cc09bed9e9ebef64dc60bf8da59c",
+        "source_assembly_covered": true
+      }
+    ],
+    "providers": [
+      {
+        "mod": "modFriendlyHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws",
+        "sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+        "source_assembly_covered": true
+      },
+      {
+        "mod": "modSeamlessAdaptiveHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hooks.ws",
+        "sha256": "21251f33625f039622da3fe92d1ebc23fd9b72663caaad631bd6f8cb11db4ca8",
+        "source_assembly_covered": true
+      }
+    ],
+    "opaque_mods_not_recompiled": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "vortex_route": "witcher3tl installer preserves Mods/; witcher3tl deploys at game root",
+    "runtime_tested": false,
+    "vortex_preview_executed": false,
+    "deployed": false,
+    "shadow_changes": false,
+    "resource_replacements": [],
+    "compiled_blobs_packaged": false,
+    "report": "research/npc-color-trial-handoff.md",
+    "compiler_controls": [
+      {
+        "label": "baseline",
+        "exit_code": 0,
+        "success": true,
+        "blob_sha256": "8b2941f7f5ea723604f3657f37e927cd4ccdec143164783fbd7b751a80ced06b",
+        "blob_bytes": 52978,
+        "source_sha256": null,
+        "assertion_count": 23591,
+        "warning_count": 819,
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\baseline"
+        ]
+      },
+      {
+        "label": "npc_noop",
+        "exit_code": 0,
+        "success": true,
+        "blob_sha256": "77a140d6d77837bfb666d2ce26e3837135d911a3763380291eabdf4670a1247d",
+        "blob_bytes": 53101,
+        "source_sha256": "2871e362bfb3de14fc4f3a8927939cd8f5d195605e0bb6b9ad8f9b2549d14293",
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {},
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\npc_noop"
+        ]
+      },
+      {
+        "label": "hud_noop",
+        "exit_code": 0,
+        "success": true,
+        "blob_sha256": "575f2a7ca99e81b61255f5830493879ec1b1b0f0f30c634412cbf43bd7f3c814",
+        "blob_bytes": 53058,
+        "source_sha256": "45f031fd5108ee80ff87348c179c62f27e529e6adc7fc71e1d00139786315bd5",
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {},
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\hud_noop"
+        ]
+      },
+      {
+        "label": "candidate",
+        "exit_code": 0,
+        "success": true,
+        "blob_sha256": "19e50d305a65e5881ab1d3da46bb7e68057365d62cddef422ce1b18e34171e17",
+        "blob_bytes": 53692,
+        "source_sha256": "533d039bd5e1c44059691b69695a287a381133199d594c972d0457cf5096a260",
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {},
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-wrapper-controls\\candidate"
+        ]
+      }
+    ],
+    "regression_criterion": "Successful fresh baseline, no-op NPC, no-op HUD and exact RGB candidate; no warnings/errors delta; exactly one identical scriptCompiledCode.cpp:56 (!m_sourceFile.Empty()) diagnostic in each wrapper case; unchanged compiler/source inputs; live FHUD/SAH/MHC provider source hashes covered. Retail multi-blob/runtime acceptance remains untested.",
+    "deterministic_rebuild_zip_sha256": "2ca0ca2ccded4d216aa2843021a24e570bbd959f8d2e916e79c7a5e62a69ba9d",
+    "vortex_extension": {
+      "version": "1.7.5",
+      "path": "C:/Program Files/Vortex/resources/app.asar.unpacked/bundledPlugins/game-witcher3/index.cjs",
+      "sha256": "52de6d815469d6361d72b94a11bfff79527b3846e644c2f8d471bbf2efcc3983",
+      "evidence": "testSupportedTL/installTL/testTL/getTLPath; read-only source map inspection; no actual install"
+    }
+  },
+  "asset_package_built": false,
+  "script_fallback_at_33ae2f6": {
     "settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
     "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
     "scope": "known-source-assembly",
@@ -3126,6 +3299,17 @@
       "condition": "!m_sourceFile.Empty()",
       "count": 1,
       "resolved": false
-    }
+    },
+    "historical": true
+  },
+  "script_fallback_current": {
+    "source": "src/npc/quietEditorialNameColors.ws",
+    "source_sha256": "533d039bd5e1c44059691b69695a287a381133199d594c972d0457cf5096a260",
+    "compiler_pass": true,
+    "private_trial_packaging_allowed": true,
+    "runtime_tested": false,
+    "full_retail_multiblob_simulation": false,
+    "event_return_preserved": true,
+    "details": "private_color_trial"
   }
 }

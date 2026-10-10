@@ -1,5 +1,12 @@
 # Controlled SWF state investigation
 
+**Historical report at commit 33ae2f6.** The 10 October
+[bounded Editor investigation](editor-workflow-bounded.md) reached project setup
+but desktop input failed before import. The asset gate remains blocked. The
+[color-only handoff](npc-color-trial-handoff.md) supersedes this report's fallback
+packaging block: two valid no-op wrappers reproduce its single extra metadata
+diagnostic without warning regressions, enabling a narrow private RGB trial.
+
 9 October 2026; starting commit `6555e46`; English NPC typography/text styling
 only. **Asset pipeline remains blocked. No bundle, ZIP or visual variants.**
 

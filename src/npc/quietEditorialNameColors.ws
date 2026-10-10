@@ -1,6 +1,6 @@
 // Original experimental fallback: recolor only known vanilla NPC-name colors.
 // Keep the current movie, all merged methods, visibility and health logic.
-// Not approved for packaging until the full profile compile gate passes.
+// Private color-only trial; compile and diagnostic controls required.
 @wrapMethod(CR4HudModuleEnemyFocus)
 function OnTick(timeDelta : float)
 {
@@ -9,8 +9,9 @@ function OnTick(timeDelta : float)
     var label : CScriptedFlashObject;
     var originalColor : int;
     var newColor : int;
+    var nativeResult : bool;
 
-    wrappedMethod(timeDelta);
+    nativeResult = wrappedMethod(timeDelta);
     // Flash handles are not Witcher object references and have no supported
     // Boolean conversion. Follow the module's existing initialized OnTick
     // lifecycle; its vanilla/FriendlyHUD handlers use the same bindings.
@@ -31,4 +32,5 @@ function OnTick(timeDelta : float)
     {
         label.SetMemberFlashNumber("textColor", (float)newColor);
     }
+    return nativeResult;
 }

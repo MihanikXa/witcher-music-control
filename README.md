@@ -7,16 +7,21 @@ research is in [research/findings.md](research/findings.md). The supplied
 Alignment Fix is not recommended unchanged for this runtime; see its
 [assessment](research/alignment-fix.md). Explore the original
 [typography comparison](design/comparison.html) and
-[prototype plan](design/implementation-plan.md). No overhaul package is built
-or deployed yet. The native REDkit SWF now cooks with its embedded atlas after
+[prototype plan](design/implementation-plan.md). No asset overhaul package is built
+or deployed yet. A private original **color-only** script trial is now available;
+see the [exact archive, compiler controls and user-only handoff](research/npc-color-trial-handoff.md).
+The native REDkit SWF now cooks with its embedded atlas after
 including the official texture-group configuration. The importer still emits a
 resource-state assertion, shared by unrelated controls, so the unchanged
 round-trip gate remains blocked. Loaded resave/cook succeeds; the cause and
 runtime risk of fresh creation remain unresolved. The additive color fallback
-now compiles in the known source assembly but lacks full-profile coverage.
+now compiles in the known source assembly. Its single added metadata assertion
+also occurs with two no-op wrappers, with no warning or other diagnostic delta.
+Full retail multi-blob coverage and in-game acceptance remain untested.
 See the current [controlled investigation](research/swf-state-investigation.md),
+[bounded Editor test and manual import steps](research/editor-workflow-bounded.md),
 [native NPC validation](research/native-npc-validation.md) and earlier
-[Phase 2 investigation](research/phase2-validation.md). No test ZIP exists.
+[Phase 2 investigation](research/phase2-validation.md). No asset/shadow ZIP exists.
 
 ## Visual target
 
