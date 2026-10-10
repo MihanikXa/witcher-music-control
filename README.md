@@ -7,8 +7,8 @@ The Watermark failure was a stale workspace resolution issue. Editor assertion
 state remains unknown; no successful imports need repeating. Computer Use is
 prohibited. Independent SIL Gentium source preparation is verified; no Gentium
 font archive exists yet. The [private shadow-only v1 trial](research/npc-shadow-v1-handoff.md)
-now passes offline cook/validate/bundle/atlas/ZIP gates and awaits user in-game
-acceptance. Its unique-name Editor import resolved the save dependency; no
+passed offline cook/validate/bundle/atlas/ZIP gates and is now reported working
+in-game by the user, alongside accepted NPC colors v4. Its unique-name Editor import resolved the save dependency; no
 successful imports need repeating. Keep accepted v4 unchanged.
 
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
@@ -40,7 +40,8 @@ See the current [controlled investigation](research/swf-state-investigation.md),
 [bounded Editor test and manual import steps](research/editor-workflow-bounded.md),
 [native NPC validation](research/native-npc-validation.md) and earlier
 [Phase 2 investigation](research/phase2-validation.md). The private shadow v1 ZIP
-is available locally; its existence does not establish runtime acceptance.
+is available locally and user-reported working in-game; evidence for individual
+stress-test and other HUD surfaces remains limited.
 
 ## Visual target
 
