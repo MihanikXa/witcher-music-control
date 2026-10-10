@@ -7,6 +7,12 @@ remain intact. This is a **shadow-only** package; accepted v4 remains separate
 and unchanged. No game launch, deployment, Computer Use, assertion suppression
 or installed-resource/settings modification was performed.
 
+## User-reported in-game outcome — 10 October 2026
+
+**Explicit user statement (verbatim):** “Alright, everything works, check repo, shadows work”.
+
+**Disposition:** NPC nameplate shadow v1 is user-accepted as working in-game alongside already accepted NPC colors v4. The offline asset contract and packaging gates were documented before the test; this report adds live visual acceptance. User did not provide screenshots, color/snow stress-test details or separate reports on every HUD subsystem, so do not invent those observations or imply that unrelated subtitle/menu text shadows were changed. No further NPC shadow iterations are requested unless user reports a visual problem. Move the active milestone to independent English Gentium Book typography, maintaining separate reversible modules and the no-Computer-Use instruction.
+
 ## Exact private package and input provenance
 
 ZIP:
@@ -134,7 +140,7 @@ does not regenerate the working compatibility assembly.
    disabling/re-enabling **only** the shadow mod between fully exited sessions.
    Report missing UI, clipping, flicker, color changes or inadequate contrast.
 
-This is a private runtime experiment, not in-game acceptance. Native sampler
+This package has now been accepted by the user as visually working in-game. The detailed stress-test and compatibility coverage limitations described here remain distinct from that acceptance. Native sampler
 state, full independent metadata-store consumer decoding and retail resolution
 of the new internal linkage prefix are unverified; the static contracts and
 official producer checks support testing, not certainty of runtime behavior.
@@ -151,5 +157,4 @@ resource selection; no saves, settings or compatibility merges need restoring.
 ## Independent typography status
 
 Gentium English source preparation is retained unchanged. There is still no
-cooked Gentium font module or font ZIP. Finish this shadow visual acceptance
-before extending to other text surfaces; no broader roadmap work was performed.
+cooked Gentium font module or font ZIP. NPC shadow visual acceptance is now user-confirmed. Proceed with the independent English Gentium Book font-library trial before extending to other text surfaces; no broader roadmap work was performed.
