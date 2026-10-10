@@ -1,5 +1,12 @@
 # Verified UI resource map
 
+Current verified follow-ups supersede the historical build gate below:
+[accepted English Gentium v1](gentium-v1-handoff.md) and
+[Field & Folio interaction source proof](field-folio-phase1.md). The official
+font pipeline passed and v1 is user-accepted. The new interaction-local family
+passes serialization/GFx export; its Editor import, cook, textures and runtime
+resolution are still pending. No global auxiliary alias is assumed.
+
 **NPC live-binding update:** the authored `mcNPCFocus.tfName` hierarchy is
 verified. The user observed the generic field accessor with UInt writes working
 in v3 and accepted all v4 mappings (three categories directly observed). Color

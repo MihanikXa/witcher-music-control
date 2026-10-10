@@ -1,0 +1,545 @@
+{
+  "status": "Source validated; unchanged and candidate Editor imports required",
+  "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+  "native_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
+  "runtime_sha256": "5e1ce7d3be052cea8a0ea9d1d744a3fe059fd367bc4bd7ed951fa76d599780e9",
+  "source_provenance": {
+    "repository": "adobe-fonts/source-sans",
+    "release": "3.052R",
+    "commit": "87b37a2daaed80fcb8e8ccb0085c4d72ddade12e",
+    "files": {
+      "SourceSans3-Regular.ttf": {
+        "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/TTF/SourceSans3-Regular.ttf",
+        "sha256": "4644c81b86ec9caaa76b634889968ed3c4f4f52f054855933acc7c2b21e53b0f"
+      },
+      "SourceSans3-Medium.ttf": {
+        "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/TTF/SourceSans3-Medium.ttf",
+        "sha256": "a7af35c1cab5dd0b29d742f86f2edfdf83fa7ec213643e765c5c51a2dc24edbc"
+      },
+      "LICENSE.md": {
+        "url": "https://raw.githubusercontent.com/adobe-fonts/source-sans/87b37a2daaed80fcb8e8ccb0085c4d72ddade12e/LICENSE.md",
+        "sha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328"
+      }
+    }
+  },
+  "control_path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_unchanged.swf",
+  "control_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
+  "candidates": [
+    {
+      "weight": "Regular",
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_regular.swf",
+      "sha256": "f24e345a29be63ed19d3c414e34f9147d5b03a8bc741f80daf0de23ff341f2d4",
+      "delta": {
+        "only_field_font_binding_changed": true,
+        "other_tags_byte_identical": true,
+        "abc_symbols_timelines_images_filters_preserved": true
+      }
+    },
+    {
+      "weight": "Medium",
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_medium.swf",
+      "sha256": "ae6e7a961b6784f0440d1c061d62e343407faace66cb04e44d19d7e3c7ac77b1",
+      "delta": {
+        "only_field_font_binding_changed": true,
+        "other_tags_byte_identical": true,
+        "abc_symbols_timelines_images_filters_preserved": true
+      }
+    }
+  ],
+  "styles": [
+    {
+      "font_id": 218,
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        20480,
+        6676,
+        0
+      ],
+      "kerning_count": 16912,
+      "min_y": -18248,
+      "max_y": 5120,
+      "outlines_sha256": "ce9523985dca6bf04d9614676fa6a76c869cef0474ad5826acf23d758421191d",
+      "payload_sha256": "1e0d344d0c538fee77fbb33cd137bcee41da0a462784d51f832d08faadce3ed3",
+      "style": "Regular",
+      "alias": "Quiet Folio Utility",
+      "constructions": [
+        {
+          "code": "U+2103",
+          "components": [
+            "U+00B0",
+            "U+0043"
+          ],
+          "advance": 902
+        },
+        {
+          "code": "U+2109",
+          "components": [
+            "U+00B0",
+            "U+0046"
+          ],
+          "advance": 825
+        },
+        {
+          "code": "U+215F",
+          "components": [
+            "U+00B9",
+            "U+2044"
+          ],
+          "advance": 453
+        },
+        {
+          "code": "U+212B",
+          "canonical_equivalent": "U+00C5"
+        }
+      ]
+    },
+    {
+      "font_id": 219,
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        20480,
+        6676,
+        0
+      ],
+      "kerning_count": 16893,
+      "min_y": -18330,
+      "max_y": 5120,
+      "outlines_sha256": "9e48a3914901c21785187838568cdcd24591359eef43b6bf8ac64ea8f6ac2582",
+      "payload_sha256": "8f7cc73da00bfee35e4f22dc5c4e5572d30e21a4820bd3ba1e0f8bce1fe353a8",
+      "style": "Medium",
+      "alias": "Quiet Folio Utility Medium",
+      "constructions": [
+        {
+          "code": "U+2103",
+          "components": [
+            "U+00B0",
+            "U+0043"
+          ],
+          "advance": 914
+        },
+        {
+          "code": "U+2109",
+          "components": [
+            "U+00B0",
+            "U+0046"
+          ],
+          "advance": 842
+        },
+        {
+          "code": "U+215F",
+          "components": [
+            "U+00B9",
+            "U+2044"
+          ],
+          "advance": 459
+        },
+        {
+          "code": "U+212B",
+          "canonical_equivalent": "U+00C5"
+        }
+      ]
+    }
+  ],
+  "selected_trial": "Regular",
+  "linkage": "movie-local DefineFont3 IDs 218/219; DefineEditText 215 direct FontID; no new global alias",
+  "narrative_font_library_changed": false,
+  "original_font_212_preserved": true,
+  "original_importassets2_preserved": true,
+  "scanned_installed_bundles": 32,
+  "installed_resource_collisions": [],
+  "independent_geometry_and_binding_verified": true,
+  "official_import_verified": false,
+  "official_cook_verified": false,
+  "package_path": null,
+  "runtime_tested": false,
+  "report": "research/field-folio-phase1.md",
+  "tests_passed": 64,
+  "repeat_source_hashes_identical": true,
+  "exporter_probe": {
+    "commands": [
+      {
+        "weight": "unchanged",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_unchanged.swf",
+          "-c",
+          "-i",
+          "DDS",
+          "-d1c",
+          "-d5",
+          "-quick",
+          "-pack",
+          "-ptresize",
+          "mult4",
+          "-share_images",
+          "-ne",
+          "-list",
+          "-lwr",
+          "-o",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-export-verified\\unchanged",
+          "-p",
+          "ff-interactions-probe"
+        ],
+        "exit_code": 0,
+        "source_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
+        "gfx_sha256": "dc00b83370a2f823c5bb63076691f380249cdcbc4d0fc37729f27ad5d626dbfe",
+        "font_and_nonimage_payloads_identical": true,
+        "exported_texture_pixels": false
+      },
+      {
+        "weight": "regular",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\bin\\tools\\GFx4\\gfxexport_mult4fix.exe",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_regular.swf",
+          "-c",
+          "-i",
+          "DDS",
+          "-d1c",
+          "-d5",
+          "-quick",
+          "-pack",
+          "-ptresize",
+          "mult4",
+          "-share_images",
+          "-ne",
+          "-list",
+          "-lwr",
+          "-o",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-export-verified\\regular",
+          "-p",
+          "ff-interactions-probe"
+        ],
+        "exit_code": 0,
+        "source_sha256": "f24e345a29be63ed19d3c414e34f9147d5b03a8bc741f80daf0de23ff341f2d4",
+        "gfx_sha256": "f5710e43cebbf520e4ba347734050123acdf16ffbeac9789c4bcb490a2501dda",
+        "font_and_nonimage_payloads_identical": true,
+        "exported_texture_pixels": false
+      }
+    ],
+    "exporter_sha256": "8a2855422ce87ffb8a4b809780081d3dd23f40ef831972605762a5bbb1d06a41",
+    "semantic_atlas_contracts_identical": true,
+    "subimages": 141,
+    "atlas_records": 2,
+    "atlas_ids_may_be_reassigned": true,
+    "texture_pixels_verified": false,
+    "editor_import_verified": false,
+    "cooked_resource_verified": false,
+    "package_path": null
+  },
+  "layout": {
+    "font_size_px": 22,
+    "bounds_width_px": 400,
+    "bounds_height_px": 30.2,
+    "layout_changed": false,
+    "styles": [
+      {
+        "style": "Regular",
+        "font_id": 218,
+        "digit_advances": [
+          10179,
+          10179,
+          10179,
+          10179,
+          10179,
+          10179,
+          10179,
+          10179,
+          10179,
+          10179
+        ],
+        "tabular_digits": true,
+        "samples": [
+          {
+            "text": "Talk",
+            "width_px": 37.774,
+            "gentium_width_px": 39.112,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00017
+          },
+          {
+            "text": "Loot",
+            "width_px": 41.337,
+            "gentium_width_px": 40.938,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00099
+          },
+          {
+            "text": "Open",
+            "width_px": 49.764,
+            "gentium_width_px": 47.91,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00026
+          },
+          {
+            "text": "Ignite",
+            "width_px": 52.36,
+            "gentium_width_px": 54.334,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00043
+          },
+          {
+            "text": "Extinguish",
+            "width_px": 94.731,
+            "gentium_width_px": 98.42,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00095
+          },
+          {
+            "text": "Mount",
+            "width_px": 59.356,
+            "gentium_width_px": 61.284,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 4e-05
+          },
+          {
+            "text": "Dismount",
+            "width_px": 89.76,
+            "gentium_width_px": 89.493,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00043
+          },
+          {
+            "text": "Investigate",
+            "width_px": 100.098,
+            "gentium_width_px": 101.868,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00215
+          },
+          {
+            "text": "Use Witcher Senses",
+            "width_px": 177.451,
+            "gentium_width_px": 178.267,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00073
+          },
+          {
+            "text": "Read Notice Board",
+            "width_px": 169.376,
+            "gentium_width_px": 169.028,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00163
+          },
+          {
+            "text": "Fast Travel",
+            "width_px": 97.503,
+            "gentium_width_px": 99.795,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00146
+          },
+          {
+            "text": "Hold to examine",
+            "width_px": 149.973,
+            "gentium_width_px": 150.853,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00125
+          },
+          {
+            "text": "Inspect the mysterious object",
+            "width_px": 270.091,
+            "gentium_width_px": 270.907,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00318
+          },
+          {
+            "text": "Caf\u00e9 \u2014 \u0141\u00f3d\u017a\u2026",
+            "width_px": 132.241,
+            "gentium_width_px": 125.673,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00137
+          },
+          {
+            "text": "0123456789",
+            "width_px": 109.345,
+            "gentium_width_px": 105.918,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00473
+          },
+          {
+            "text": "100 / 250",
+            "width_px": 82.107,
+            "gentium_width_px": 83.617,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00284
+          }
+        ],
+        "maximum_sample_width_px": 270.091
+      },
+      {
+        "style": "Medium",
+        "font_id": 219,
+        "digit_advances": [
+          10342,
+          10342,
+          10342,
+          10342,
+          10342,
+          10342,
+          10342,
+          10342,
+          10342,
+          10342
+        ],
+        "tabular_digits": true,
+        "samples": [
+          {
+            "text": "Talk",
+            "width_px": 38.544,
+            "gentium_width_px": 39.112,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 4e-05
+          },
+          {
+            "text": "Loot",
+            "width_px": 41.887,
+            "gentium_width_px": 40.938,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00099
+          },
+          {
+            "text": "Open",
+            "width_px": 50.203,
+            "gentium_width_px": 47.91,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00146
+          },
+          {
+            "text": "Ignite",
+            "width_px": 53.416,
+            "gentium_width_px": 54.334,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00047
+          },
+          {
+            "text": "Extinguish",
+            "width_px": 96.469,
+            "gentium_width_px": 98.42,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00086
+          },
+          {
+            "text": "Mount",
+            "width_px": 60.169,
+            "gentium_width_px": 61.284,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00086
+          },
+          {
+            "text": "Dismount",
+            "width_px": 90.948,
+            "gentium_width_px": 89.493,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00034
+          },
+          {
+            "text": "Investigate",
+            "width_px": 102.036,
+            "gentium_width_px": 101.868,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00026
+          },
+          {
+            "text": "Use Witcher Senses",
+            "width_px": 179.694,
+            "gentium_width_px": 178.267,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00176
+          },
+          {
+            "text": "Read Notice Board",
+            "width_px": 171.4,
+            "gentium_width_px": 169.028,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.0018
+          },
+          {
+            "text": "Fast Travel",
+            "width_px": 99.286,
+            "gentium_width_px": 99.795,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00026
+          },
+          {
+            "text": "Hold to examine",
+            "width_px": 151.907,
+            "gentium_width_px": 150.853,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00258
+          },
+          {
+            "text": "Inspect the mysterious object",
+            "width_px": 274.203,
+            "gentium_width_px": 270.907,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00507
+          },
+          {
+            "text": "Caf\u00e9 \u2014 \u0141\u00f3d\u017a\u2026",
+            "width_px": 133.605,
+            "gentium_width_px": 125.673,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00112
+          },
+          {
+            "text": "0123456789",
+            "width_px": 111.096,
+            "gentium_width_px": 105.918,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.0043
+          },
+          {
+            "text": "100 / 250",
+            "width_px": 83.092,
+            "gentium_width_px": 83.617,
+            "within_authored_400px": true,
+            "full_run_rounding_error_px": 0.00211
+          }
+        ],
+        "maximum_sample_width_px": 274.203
+      }
+    ],
+    "full_run_gpos_samples_verified": true,
+    "runtime_baseline_clipping_and_autosizing_verified": false
+  },
+  "next_user_action": "Create new QuietFolioUtilityTrial project, import unchanged and Regular source SWFs, save both, close Editor",
+  "computer_use": false,
+  "live_files_modified": false,
+  "pipeline_status": {
+    "source_and_glyphs": "passed",
+    "official_gfx_export": "passed",
+    "editor_import": "pending manual user action",
+    "cook_validate_bundle_metadata_reextraction": "not executed for this resource",
+    "private_zip": "not built",
+    "runtime": "untested"
+  },
+  "accepted_packages": {
+    "deploy/gentium-english-private-v1/QuietFolio-English-Gentium-Book-v1-private-test.zip": {
+      "sha256": "220a4d1427544567210e66d55a797cd909fd0d337a1fc7c7e4ef78ad114f37da",
+      "unchanged": true
+    },
+    "deploy/npc-colors-private-v4/QuietEditorial-NPC-Colors-v4-private-test.zip": {
+      "sha256": "94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e",
+      "unchanged": true
+    },
+    "deploy/npc-shadow-private-v1/QuietEditorial-NPC-Shadow-v1-private-test.zip": {
+      "sha256": "fc70ac02870ca08998c37df03215d84783a5a013e2e8ea681ba920c2a922fc51",
+      "unchanged": true
+    }
+  },
+  "installed_redkit_crosscheck": {
+    "native_source_path": "L:/Games/Steam/steamapps/common/The Witcher 3 REDkit/r4data/gameplay/gui_new/swf/hud/hud_interactions.swf",
+    "native_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
+    "copied_source_identical": true,
+    "fonts_xml_sha256": "a8e0725a7e6aab385de41d5f71760c61381598be0817d0afbc69a148fac3e3b9",
+    "copied_fonts_xml_identical": true
+  }
+}

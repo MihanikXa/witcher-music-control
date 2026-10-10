@@ -310,16 +310,21 @@ def font_payload(baseline, source, font_id):
     return payload, stats, records, bounds, advances, pairs
 
 
-def verify_xml(path, expected):
+def verify_xml(path, expected, bindings=None):
+    """Independent glyph validation; default bindings preserve the v1 contract."""
+    if bindings is None:
+        bindings = {i: (r'PF Din Text Cond Pro\u0000', i == 3, i == 5) for i in (1,3,5)}
     root = ET.parse(path).getroot()
     fonts = [n for n in root.iter() if n.get('type')=='DefineFont3Tag']
-    if len(fonts) != 3:
+    if len(fonts) != len(expected):
         raise ValueError('Independent font count mismatch')
+    if sorted(int(n.get('fontID')) for n in fonts) != sorted(expected):
+        raise ValueError('Independent font IDs missing or duplicated')
     for node in fonts:
         fid = int(node.get('fontID'))
-        if fid not in (1, 3, 5) or node.get('fontName') != r'PF Din Text Cond Pro\u0000':
+        if fid not in bindings or node.get('fontName') != bindings[fid][0]:
             raise ValueError('Runtime font alias/ID changed')
-        if (node.get('fontFlagsItalic') == 'true') != (fid == 3) or (node.get('fontFlagsBold') == 'true') != (fid == 5):
+        if (node.get('fontFlagsItalic') == 'true') != bindings[fid][1] or (node.get('fontFlagsBold') == 'true') != bindings[fid][2]:
             raise ValueError('Runtime style binding changed')
         stats, records, bounds, advances, pairs = expected[fid]
         codes = [int(c.text) for c in node.find('codeTable')]

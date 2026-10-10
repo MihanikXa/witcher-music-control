@@ -25,6 +25,13 @@ Matching apparent x-height at controller distance is more important than equal
 nominal sizes. Maintain EN punctuation/diacritics and test bold/italic use.
 Russian/Ukrainian support is no longer a project requirement.
 
+Current Field & Folio implementation is limited to the interaction action
+field: [source and linkage proof](../research/field-folio-phase1.md). Two local
+utility font definitions avoid changing the accepted narrative English library.
+The official GFx exporter preserves the direct FontID selector; full Editor/
+cook/texture and runtime acceptance are pending. No broader two-family rollout
+or shadow/color change is included.
+
 ## Provisional palette
 
 RGB values are ordinary sRGB design tokens; `textColor` uses 24-bit RGB, with

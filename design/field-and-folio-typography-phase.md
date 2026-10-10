@@ -4,6 +4,16 @@
 2026. QuietFolio Gentium Book v1 is already user-accepted working in-game.
 This is a **new limited typography prototype**, not authority to overhaul all UI.
 
+## Current implementation gate
+
+Movie-local Source Sans 3 Regular/Medium conversion and the exact action-field
+font-ID selector are implemented and independently validated. Official GFx
+export preserves both fonts and the selector. This leaves the accepted English
+Gentium library unchanged. Manual unchanged/control and Regular candidate
+Editor imports are required before cook/texture/package validation.
+See [the source proof and two-file manual handoff](../research/field-folio-phase1.md).
+No Vortex package exists yet; renderer runtime acceptance remains pending.
+
 ## Design intent
 
 Keep the accepted independently licensed Quiet Folio Book (Gentium Book
