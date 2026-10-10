@@ -1,0 +1,195 @@
+{
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\gentium-english-private-v1\\QuietFolio-English-Gentium-Book-v1-private-test.zip",
+  "zip_sha256": "220a4d1427544567210e66d55a797cd909fd0d337a1fc7c7e4ef78ad114f37da",
+  "zip_bytes": 196881,
+  "members": {
+    "Mods/modQuietFolioEnglish/FONT-NOTICES.txt": "65a0f14b503ea24aa783eeddfa62d5e15c2292d1e68754703d834a28358be127",
+    "Mods/modQuietFolioEnglish/OFL-Noto.txt": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+    "Mods/modQuietFolioEnglish/OFL-SIL.txt": "dcae5818b104b6cb24334bb4c92f7896d1ac988529ca4654ff21361a7b5b94ee",
+    "Mods/modQuietFolioEnglish/content/blob0.bundle": "17f82a1af81221ba41742edd0f1e3130b2fc00054454b9e8305f9d43a38ff9af",
+    "Mods/modQuietFolioEnglish/content/metadata.store": "fad0e235232f60fac4c5fd95bba9bfbde0aa1e0879e99f96e97bc5ca07be68d1"
+  },
+  "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+  "vanilla_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
+  "cooked_sha256": "9bc41144a3fcfc32377b41bebf9698ac8c80ebaee0f621fc64f22a8ed16a0e9e",
+  "source_sha256": "4d7964fe5679bbd69fddb7d5ab8cd5ee8a7b41e4701f832c9fc0aab0962674c3",
+  "delta": {
+    "changed_font_ids": [
+      1,
+      3,
+      5
+    ],
+    "nonfont_tags_identical": true,
+    "movie_header_identical": true,
+    "aliases_styles_and_coverage_preserved": true
+  },
+  "official_receipt": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\receipt.json",
+  "styles": [
+    {
+      "font_id": 1,
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 6775,
+      "min_y": -20620,
+      "max_y": 5640,
+      "outlines_sha256": "09312bb39b61d324004fb5b8045a6a77192feb047b74c462025b21cbbc84d495",
+      "payload_sha256": "fb951fbd6a713c614a70f74cb1d1a60ae719390636e9bbdeae2a9de17c7cec73",
+      "style": "Regular",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1538
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1846
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1732
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1704
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1242
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ],
+      "ttf_sha256": "50c95ce717f0468f6750084036d75cfea5445e44f9e584f14c20e769c49bb859"
+    },
+    {
+      "font_id": 3,
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 7057,
+      "min_y": -20350,
+      "max_y": 5370,
+      "outlines_sha256": "131897beedabfe5498426f57109532bec59ad8038a4682bdf9cfaf4833fc4558",
+      "payload_sha256": "bda9ddae5ae69657092f4e9133d77ba38837220a58a66fdcdf31974c397abda7",
+      "style": "Italic",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1374
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1652
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1554
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1484
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1163
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ],
+      "ttf_sha256": "25514fc20aa8ed71b7e05ad12c576bcab2ea5ad722267454a500d666b9405681"
+    },
+    {
+      "font_id": 5,
+      "glyphs": 383,
+      "visible_nonempty": 381,
+      "spacing_glyphs": [
+        32,
+        160
+      ],
+      "metrics": [
+        19400,
+        5500,
+        0
+      ],
+      "kerning_count": 6775,
+      "min_y": -21010,
+      "max_y": 5630,
+      "outlines_sha256": "c7a1563b09ff208af65d93dd2b8460b23ac1670171e58a85f3c1fa6d2dfbf95b",
+      "payload_sha256": "f52a37955c5237cac6e67d21bdd784f1d2d21434b9adf68128b9d8c0db865bf9",
+      "style": "Bold",
+      "constructions": [
+        {
+          "code": "U+0149",
+          "construction": "Unicode compatibility composition modifier apostrophe + n",
+          "advance": 1671
+        },
+        {
+          "code": "U+2103",
+          "construction": "degree + capital C",
+          "advance": 1891
+        },
+        {
+          "code": "U+2109",
+          "construction": "degree + capital F",
+          "advance": 1792
+        },
+        {
+          "code": "U+2105",
+          "construction": "original diagonal care-of c/o composition",
+          "advance": 1764
+        },
+        {
+          "code": "U+212B",
+          "construction": "canonical Unicode equivalent U+00C5",
+          "advance": 1309
+        },
+        {
+          "code": "U+212E",
+          "construction": "independent Noto Sans estimated symbol, same style",
+          "advance": 1268
+        }
+      ],
+      "ttf_sha256": "436b268f8967f0807d5645b1045005ea10e5fcc478f284ae1255c25e3d9e164e"
+    }
+  ],
+  "scanned_installed_bundles": 32,
+  "installed_resource_collisions": [],
+  "deterministic_archive": true,
+  "offline_build_verified": true,
+  "runtime_tested": false,
+  "font_name_tags": "Three source attribution tags stripped by official GFx import; external notices included",
+  "metadata_validation": "official producer and single-entry key checked; independent store consumer untested"
+}

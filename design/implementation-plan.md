@@ -1,11 +1,10 @@
 # Modular implementation plan — no deployment
 
 Current English font implementation: all 383 mappings per style are converted
-and independently decoded; the unchanged control cooks, validates and
-re-extracts byte-identically. The complete unchanged Editor/CLI round trip now
-passes, including official metadata generation;
-the modified SWF still needs a manual isolated Editor import. No font ZIP is
-installable. See [current checks and handoff](../research/gentium-implementation.md).
+and independently decoded. Unchanged and modified resources pass official
+cook, validation, bundle, metadata and exact re-extraction. The separate English
+v1 private ZIP is ready for user runtime acceptance; no deployment occurred.
+See [current package and handoff](../research/gentium-v1-handoff.md).
 Accepted NPC Colors v4 and NPC Shadow v1 remain unchanged.
 
 Current Phase 2 update: importing the installed native authoring SWF restores
@@ -46,16 +45,11 @@ closed by user acceptance. Preserve both independent Vortex modules, and do not
 replace the script palette in the edited SWF. No screenshots, all-scene contrast
 tests or universal HUD compatibility claims were supplied.
 
-**Next development task:** finish the standalone English Gentium Book Regular,
-Italic and Bold font-library source/conversion/coverage gates, followed by an
-unchanged fonts_en.redswf cook/bundle/roundtrip and a private reversible EN-only
-font mod. The upstream Gentium 7.000 source and licenses are prepared, but six
-of the current vanilla code points are missing and SWF shape/metric/kerning
-conversion is not yet validated. Do not drop missing glyphs or copy proprietary
-PF Din/reference-mod outlines. Keep existing text bounds, runtime subtitle
-scaling, dialogue/UI behavior and font aliases, and treat wider metrics and
-wrapping as acceptance risks. Verify against the current installed runtime,
-not legacy source assets, before installing.
+**Next action:** user tests the standalone English v1 package. Regular/Italic/Bold
+conversion, all six missing points, GPOS pair kerning and official build gates
+are complete. Preserve existing text bounds, subtitle scaling and accepted NPC
+mods. Wider metrics, wrapping, quest-icon spacing and vertical clipping remain
+in-game acceptance risks. No further UI development is authorized by this gate.
 
 No Computer Use or desktop automation. If a supported isolated Editor
 import step is needed, provide the smallest manual user action and wait.
@@ -162,7 +156,7 @@ reviewed should an asset Vortex archive be prepared. These asset changes remain
 gated; the separate original color-only script archive has its own handoff and
 does not resolve shadows. Installation remains user-only.
 
-## Future English font trial manifest
+## English font trial inputs
 
 Input current EN library SHA-256:
 `a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81`,
@@ -170,8 +164,8 @@ from `content/content0/bundles/r4gui.bundle`;
 key `gameplay/gui_new/swf/witcher3/fonts_en.redswf`.
 Replace only glyph shapes/code/advance/layout metrics for three style records
 after compiling static regular/bold/italic upstream Gentium. Preserve alias
-resolution; inspect reserved-name and internal-binding distinction. Exact
-glyph subset and build command await the current-toolchain gate.
+resolution; inspect reserved-name and internal-binding distinction. The 383-point subset per style and current-toolchain gates are verified;
+see the v1 handoff for exact commands and output hashes.
 Upstream GentiumBook-Regular SHA-256:
 `2027f6a864e5a9907c113438969d1d03fa91dfdd1a3885fa0fdeb496f0f682e4`;
 Bold `ed788447ea4298dd44ac62034b9a6849003bdfea256757cb4a5d599c8b09a365`;

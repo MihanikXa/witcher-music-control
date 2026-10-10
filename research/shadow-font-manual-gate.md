@@ -2,8 +2,8 @@
 
 **Superseded status:** Colors v4 and Shadow v1 are now accepted in-game and
 remain unchanged. English font conversion is implemented; current validation,
-the completed unchanged font control and modified-font manual handoff are recorded in
-[Gentium implementation](gentium-implementation.md). The Track A instructions
+the completed unchanged/modified pipeline and private v1 package are recorded in
+[the current font handoff](gentium-v1-handoff.md). The Track A instructions
 and font-preparation limitations below describe earlier stages, not new work.
 
 Color work is closed by user acceptance. Original v4 source and private ZIP

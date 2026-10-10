@@ -1,7 +1,10 @@
 # English Gentium implementation — 10 October 2026
 
-**SWF source implemented; unchanged Editor/CLI round trip verified; modified
-Gentium SWF awaits manual Editor import. No installable font mod yet.**
+**Unchanged and modified official round trips verified. English v1 private ZIP
+is ready for user testing; in-game acceptance is pending.**
+See [the v1 package, hashes and installation/rollback handoff](gentium-v1-handoff.md).
+
+The preparation and manual-import sections below record earlier stages.
 See the [current control proof and import handoff](gentium-editor-control.md).
 NPC Colors v4 and NPC Shadow v1 are accepted and unchanged. This work targets
 only `gameplay/gui_new/swf/witcher3/fonts_en.redswf`. No installation, game
@@ -50,7 +53,8 @@ sans family or Source Sans trial. The pinned upstream commit, URLs and hashes
 are in `src/fonts/noto-estimated-source.json`. Both sources use SIL OFL 1.1.
 The Gentium/SIL reserved font names are not used as the derivative family or
 PostScript/unique ID. Upstream copyright/license attribution remains. Any final
-private package must carry **both complete OFL notices**; none exists yet.
+private package carries **both complete OFL notices**. Official GFx import strips
+the optional DefineFontName tags; external derivative attribution is included.
 
 Primary format reference: [Adobe SWF 19 specification](https://open-flash.github.io/mirrors/swf-spec-19.pdf).
 Independent sources: [SIL Gentium Book 7.000](https://software.sil.org/downloads/r/gentium/GentiumBook-7.000.zip)
@@ -99,9 +103,9 @@ Private preview `build/gentium-font-source-final/decoded-swf-preview.png` uses
 JPEXS-exported fonts. It demonstrates decoded glyph appearance at an enlarged
 size, **not in-game rendering**. JPEXS's preview TTF exporter adds a head-table
 trailing-byte warning; those TTFs are never production inputs.
-51 synthetic repository tests pass. Repeated complete source conversions
-produce identical candidate/control SWF hashes; packaging determinism is not
-claimed because packaging has not passed its gates.
+56 synthetic repository tests pass. Repeated complete source conversions
+produce identical candidate/control SWF hashes. Two packaging runs from the
+validated cooked inputs produce identical ZIP hashes.
 
 ## Earlier official asset control and metadata stall (historical)
 
@@ -141,7 +145,7 @@ Reading 32 currently installed Mod/DLC bundles plus loose font resources found
 no competing EN resource owners. Recheck immediately before eventual packaging.
 The accepted NPC packages use different resource/script paths and remain intact.
 
-## Reproduction and bounded continuation
+## Reproduction and historical manual handoff
 
 Existing source preparation is reused. In the local venv, install pinned
 `fonttools==4.60.1 uharfbuzz==0.56.3 Pillow==12.3.0`; no global Python changes.
@@ -192,4 +196,5 @@ collision recheck may a deterministic ZIP be produced, with precisely
 `Mods/modQuietFolioEnglish/content/{blob0.bundle,metadata.store}` plus both
 license notices outside content. The bundle must own only fonts_en.redswf.
 Eventual rollback is disabling that one font mod and redeploying; leave accepted
-Colors v4 and Shadow v1 enabled. **No archive is currently approved to install.**
+Colors v4 and Shadow v1 enabled. **This historical dependency is complete; use only the validated v1 archive
+and current instructions in gentium-v1-handoff.md.**

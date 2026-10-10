@@ -1,5 +1,5 @@
 {
-  "status": "NPC Colors v4 and NPC Shadow v1 accepted in-game; English font implementation in progress",
+  "status": "NPC Colors v4 and Shadow v1 accepted unchanged; English font v1 offline validated, runtime pending",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -718,7 +718,7 @@
         ]
       }
     ],
-    "package_path": null,
+    "package_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\gentium-english-private-v1\\QuietFolio-English-Gentium-Book-v1-private-test.zip",
     "cooked": false,
     "runtime_tested": false,
     "source_tool": "tools/prepare-english-gentium.py",
@@ -727,7 +727,10 @@
     "repeat_preparation_equal": true,
     "fonttools_version": "4.60.1",
     "current_implementation": "research/gentium-implementation-manifest.json",
-    "preparation_summary_is_historical": true
+    "preparation_summary_is_historical": true,
+    "current_handoff": "research/gentium-v1-handoff.md",
+    "package_sha256": "220a4d1427544567210e66d55a797cd909fd0d337a1fc7c7e4ef78ad114f37da",
+    "offline_pipeline_verified": true
   },
   "report": "research/shadow-font-manual-gate.md",
   "tests_passed": 39,

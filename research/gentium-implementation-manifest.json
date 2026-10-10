@@ -1,5 +1,5 @@
 {
-  "status": "Unchanged Editor import/cook/bundle/metadata/re-extraction verified; modified Gentium SWF awaiting manual import",
+  "status": "Unchanged and modified official pipeline verified; private English v1 ZIP ready for user runtime acceptance",
   "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
   "runtime_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
   "candidate_path": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\input\\fonts_en_qf_book_v1.swf",
@@ -273,12 +273,12 @@
     "metadata": 0,
     "prior_metadata_stall": "Resolved on subsequent unchanged invocation; cause unknown"
   },
-  "modified_asset_imported": false,
-  "modified_asset_cooked": false,
-  "offline_pipeline_verified": false,
-  "package_path": null,
+  "modified_asset_imported": true,
+  "modified_asset_cooked": true,
+  "offline_pipeline_verified": true,
+  "package_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\gentium-english-private-v1\\QuietFolio-English-Gentium-Book-v1-private-test.zip",
   "runtime_tested": false,
-  "tests_passed": 51,
+  "tests_passed": 56,
   "report": "research/gentium-implementation.md",
   "computer_use": false,
   "live_game_changed": false,
@@ -294,5 +294,100 @@
   "toolchain_copied": false,
   "editor_assertion_state": "Unknown; log says Asserts Disabled ON. No fresh resource-state assertion logged; CLI gates reported ordinary two baseline assertions.",
   "editor_evidence": "build/gentium-editor-control-evidence/editor.log",
-  "next_manual_input": "C:/Dev/witcher-ui-overhaul/build/gentium-font-source-final/input/fonts_en_qf_book_v1.swf"
+  "next_manual_input": null,
+  "package_sha256": "220a4d1427544567210e66d55a797cd909fd0d337a1fc7c7e4ef78ad114f37da",
+  "modified_asset_receipt": {
+    "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+    "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quietfolioenglishtrial\\workspace\\gameplay\\gui_new\\swf\\witcher3\\fonts_en_qf_book_v1.redswf",
+    "source_sha256": "80dbe1de28645d7100f14b497b7e2ad6dc4fa8eda6e4e5e4d6c47113b1bb10c1",
+    "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\input\\fonts_en_qf_book_v1.swf",
+    "expected_swf_sha256": "4d7964fe5679bbd69fddb7d5ab8cd5ee8a7b41e4701f832c9fc0aab0962674c3",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "commands": [
+      {
+        "label": "cook",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\cooked"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:44:09][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:44:10][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "validate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "validate",
+          "-db=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\cooked\\cook.db",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\validation"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:44:28][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:44:28][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "pack",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "pack",
+          "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\pack-input",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\packed",
+          "-compression=ZLIB"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:44:45][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:44:46][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "metadata",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+          "metadatastore",
+          "-path=C:\\Dev\\witcher-ui-overhaul\\build\\gentium-candidate-v1\\packed"
+        ],
+        "exit_code": 0,
+        "assertions": [
+          "[2026.10.10 16:45:06][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.10 16:45:06][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      }
+    ],
+    "sources_unchanged": true,
+    "cooked_sha256": "9bc41144a3fcfc32377b41bebf9698ac8c80ebaee0f621fc64f22a8ed16a0e9e",
+    "cooked_bytes": 219902,
+    "font_tags_identical_to_source": true,
+    "chunk_crc_valid": true,
+    "texture_array_empty": true,
+    "runtime_font_descriptors_identical": true,
+    "exporter_linkage_consistent": true,
+    "linkage_name": "fonts-en-qf-book-v1{6cbb57b3}.gfx",
+    "bundle_sha256": "17f82a1af81221ba41742edd0f1e3130b2fc00054454b9e8305f9d43a38ff9af",
+    "metadata_sha256": "fad0e235232f60fac4c5fd95bba9bfbde0aa1e0879e99f96e97bc5ca07be68d1",
+    "entry": {
+      "resource": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+      "offset": 336,
+      "size": 219902,
+      "packed": 191469,
+      "codec": 1
+    },
+    "exact_reextraction": true,
+    "offline_build_verified": true,
+    "runtime_tested": false,
+    "package_path": null,
+    "metadata_validation": "official producer and single-entry key checked; independent store consumer untested",
+    "runner_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded",
+    "runner_workspace_restored": true,
+    "toolchain_copied": false
+  },
+  "next_user_action": "Install only font trial via Vortex and perform research/gentium-v1-handoff.md runtime acceptance"
 }
