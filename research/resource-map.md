@@ -1,13 +1,24 @@
 # Verified UI resource map
 
+**11 October 2026 runtime and active work update:** The Field & Folio
+interaction v1 movie-local Source Sans Regular selector is user-observed
+**working in-game**, but `Talk` is too large/heavy, so visual acceptance is
+withheld. The requested v2 tests a subordinate 17px hint and a soft local
+shadow. The user now requests that overly strong ordinary-text effects
+throughout the UI match the accepted NPC shadow's restrained appearance.
+The full surface/parent/filter audit and staged implementation criteria are
+in [text shadow unification](../design/text-shadow-unification.md).
+These new work items are **not implemented** yet.
+
 Current verified follow-ups supersede the historical build gate below:
 [accepted English Gentium v1](gentium-v1-handoff.md) and
 [Field & Folio interaction v1 offline handoff](field-folio-v1-handoff.md). The
 English font pipeline passed and v1 is user-accepted. The new interaction-local
 family passes serialization/GFx export, user-performed Editor import and the
 official cook/validate/bundle/metadata pipeline. Both full atlases match vanilla;
-exact bundle re-extraction passes. Runtime font resolution remains untested.
-No global auxiliary alias is assumed.
+exact bundle re-extraction passes. Runtime font resolution is now positively observed in-game for the interaction
+field, but the size/heaviness is rejected; other dynamic input/prompt cases
+remain untested. No global auxiliary alias is assumed.
 
 **NPC live-binding update:** the authored `mcNPCFocus.tfName` hierarchy is
 verified. The user observed the generic field accessor with UInt writes working
