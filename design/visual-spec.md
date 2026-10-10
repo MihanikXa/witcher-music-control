@@ -1,5 +1,22 @@
 # Three literary directions — English scope
 
+## New accepted direction — text hierarchy and shadow consistency
+
+Latest explicit feedback: working `Talk` interaction labels are too big and
+heavy next to Gentium NPC names; the 19px interim proposal is superseded by
+a 17px Source Sans Regular trial, with 16px as a bounded alternative. The
+NPC name stays 20px and visually primary. The existing glow can produce
+bold-looking edges even though the face is Regular.
+[Field & Folio interaction v2](field-folio-interactions-v2.md).
+
+The user also requests that **every overly strong ordinary-text shadow** in
+the visible interface be reconciled with the accepted NPC Shadow v1 optical
+treatment. Distinguish text-outline-like black glows from semantic UI glows
+and dynamic/parent filters; do not indiscriminately swap all filters or
+reduce accessibility on snow/fire. First verify one dialogue/subtitle movie,
+then continue the staged audited set. See
+[text shadow unification](text-shadow-unification.md).
+
 ## Recommended: Field & Folio
 
 Use Gentium Book Regular for names, subtitles/dialogue and reading; restrained
