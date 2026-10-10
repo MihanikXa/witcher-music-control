@@ -8,6 +8,11 @@ observation. No new color work is required.
 
 ## Track A: manual Editor dependency, no shadow package
 
+**New user-operated result:** the project exists and both exporters ran, but
+both saves were cancelled by the engine and no workspace resources were written.
+See the [short checkout/import retry](editor-import-save-blocker.md).
+The unchanged import gate remains blocked.
+
 The existing copied Editor is `build/npc-editor-run`. Before the user's new
 no-Computer-Use instruction, one supported launch call was issued and returned
 without an error. No GUI input, project creation, checkout or import followed.

@@ -1,5 +1,5 @@
 {
-  "status": "manual-Editor-import-required; Gentium-source-only",
+  "status": "Editor-project-created; both-import-saves-blocked; Gentium-source-only",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -22,11 +22,20 @@
       "angle_passes_flags": "preserve"
     },
     "transform_applied": false,
-    "editor_import_executed": false,
+    "editor_import_executed": true,
     "unchanged_roundtrip_verified": false,
     "bundle_reextraction_verified": false,
     "package_path": null,
-    "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowGate"
+    "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowGate",
+    "editor_saved_resources": false,
+    "editor_result": "Both native exporters ran; engine cancelled overwrite/save; no project workspace resources",
+    "editor_log_sha256": "51aa0b88ef8310f39bd517eb7b3c9869006269869d204fe371cd72a4621a9719",
+    "editor_log_private_copy": "build/editor-user-import-1/editor.log",
+    "editor_project": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowgate\\quieteditorialnpcshadowgate.w3edit",
+    "monitor_assertion_found": false,
+    "editor_asserts_disabled_logged": true,
+    "absence_of_assertion_is_pipeline_proof": false,
+    "manual_retry_report": "research/editor-import-save-blocker.md"
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",
