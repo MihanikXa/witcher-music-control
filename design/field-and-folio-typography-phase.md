@@ -14,7 +14,7 @@ Editor imports are complete. Unchanged and Regular candidate cook, validation,
 bundle, metadata and exact re-extraction pass; both full atlases match vanilla
 byte-for-byte. A private interaction-only v1 ZIP exists.
 See [the validated trial handoff](../research/field-folio-v1-handoff.md).
-Renderer runtime acceptance remains pending; no further Editor action is needed.
+Runtime font rendering is now confirmed by the user, who reports the v1 action names look “very bold and big.” This is functional success but not aesthetic acceptance. The next bounded task is a quieter ~19px interaction v2 with softer field-local text treatment; see [v2 design gate](field-folio-interactions-v2.md). No further Editor action is needed to reproduce v1; v2 may require a separate manual import.
 
 ## Design intent
 
