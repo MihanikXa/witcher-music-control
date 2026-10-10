@@ -29,6 +29,10 @@ Read [design/presentation-roadmap.md](design/presentation-roadmap.md) for the ap
 7. Check script/binary/resource priority collisions, potential font clipping, English glyph coverage, contrast, prompts and controller/keyboard input.
 
 ## Tooling, safety, and repository hygiene
+Do not use Computer Use under any circumstances, per the user's explicit
+instruction. Necessary GUI steps must be performed manually by the user;
+provide exact isolated-project instructions and stop at that dependency.
+
 Track original design documents, research findings, reproducible scripts/tests under `design/`, `research/`, `src/`, `tools/`, `tests/`. Keep generated files in ignored `build/` and `deploy/`; never force-add vendor mods, extracted game files, original game binaries, proprietary fonts or generated mod assets.
 
 Start with an evidence-backed resource map, collision report, visual design specification and a minimal prototype plan. Do **not** begin by rebuilding the complete UI. Stop before Vortex installation and get explicit approval.

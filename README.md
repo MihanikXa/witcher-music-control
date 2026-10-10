@@ -2,6 +2,10 @@
 
 An independent, research-first project for refining typography, text effects, NPC nameplates and interface colors in **The Witcher 3 Remastered 5.01**.
 
+Current shadow/font work is at a [manual Editor import gate](research/shadow-font-manual-gate.md).
+Computer Use is prohibited. Independent SIL Gentium source preparation is
+verified; no shadow or font archive is installable yet. Keep accepted v4 unchanged.
+
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
 research is in [research/findings.md](research/findings.md). The supplied
 Alignment Fix is not recommended unchanged for this runtime; see its

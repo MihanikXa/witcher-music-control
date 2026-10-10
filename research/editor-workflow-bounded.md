@@ -1,5 +1,10 @@
 # Bounded current Editor workflow investigation — 10 October 2026
 
+**Current continuation:** Computer Use is now prohibited by the user. Use the
+[short manual shadow gate](shadow-font-manual-gate.md) for the two unchanged
+imports. Keep accepted v4 unchanged; asset colors/combined color-shadow output
+are superseded by a shadow-only movie and independent font module.
+
 Outcome **B**: the current copied Editor starts and accepts the existing depot,
 but supported GUI project creation/import could not be operated with the
 available desktop input tool. No Editor-imported SWF exists and no asset/shadow
@@ -124,9 +129,9 @@ resave/cook and matching contracts do not discharge that gate.
    fresh-import, load, resave, cook and validate diagnostics separately.
 7. Only if those gates pass, prove the single EnemyFocus resource bundle and
    re-extraction before styling. Current bundle/re-extraction and asset ZIP gates
-   remain unexecuted. Then produce independent color/shadow movies and a combined
-   proof, preserving every non-style contract. Do not use the fallback script
-   simultaneously for the asset color comparison.
+   remain unexecuted. Then produce a shadow-only movie preserving every other
+   contract and all original color constants. Keep the accepted separate v4
+   script enabled; no asset color comparison is required.
 
 This is the shortest remaining shadow path: one user-operated import/control in
 the already prepared current Editor. No more CLI bootstrap variations are

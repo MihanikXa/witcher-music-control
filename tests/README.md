@@ -14,5 +14,6 @@ UTF-8/UTF-16 newline corruption. Five color-package gate tests reject changed
 source, failed controls, extra assertions and warning regressions while allowing
 the exact shared no-op diagnostic. Probe tests preserve declarations and wrapper
 delegation in the matched control and reject mismatched diagnostic deltas.
-Current suite: twenty-three tests.
+Font-preparation tests reject truncated bounds/layout and unexpected trailing
+data using synthetic fixtures. Current suite: twenty-seven tests.
 In-game acceptance criteria are in design/implementation-plan.md.

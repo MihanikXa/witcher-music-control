@@ -29,6 +29,10 @@ The package boundaries and first-proof specification below remain proposals.
 
 ## Current next milestone — shadows and typography (active)
 
+Current executable handoff: [manual Editor gate and verified Gentium source
+preparation](../research/shadow-font-manual-gate.md). Computer Use is prohibited;
+the user must perform the isolated import steps. No shadow/font ZIP exists.
+
 Color mapping is user-accepted and should not be rebuilt into the HUD movie as
 a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
 EnemyFocus movie (current font and colors controlled by existing v4 script);
@@ -52,7 +56,8 @@ coverage. Field & Folio dual-family binding remains a later second step.
 ## Package boundaries
 
 1. **NPC presentation proof:** one current `hud_enemyfocus.redswf` replacement;
-   target-name color constants and its named text-field shadow only. No global
+   its named text-field shadow only. Keep all movie color constants unchanged;
+   the accepted separate v4 script handles semantic colors. No global
    font, name/health visibility, input mapping, movement or combat change.
 2. **English literary font trial:** one `fonts_en.redswf` library, independently
    obtained Gentium Book glyphs/metrics. Normal/bold/italic bindings and other
@@ -81,10 +86,10 @@ versions. Public Git contains original scripts/plans, no cooked/game/author data
 | Runtime input | `content/content0/bundles/startup.bundle` → `gameplay/gui_new/swf/hud/hud_enemyfocus.redswf` |
 | Input payload SHA-256 | `8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e` |
 | Target resource key | Same `gameplay/gui_new/swf/hud/hud_enemyfocus.redswf` only |
-| Color changes | Current runtime `HudModuleEnemyFocus.setVisibility`: neutral0 → ivory, friendly1 → sage, enemy2 → oxide, axii3 → slate, vip4 → brass. Retain the branch visibility logic and all function signatures |
-| Filter change | Sprite 63 / named tfName placement / character 38 / depth 35: existing DROPSHADOWFILTER color, alpha, blurX/Y, strength only as trial in visual-spec; do not edit level/damage filters |
+| Color changes | None in the movie; preserve all five original constants and branch logic. Keep the accepted v4 script separately enabled |
+| Filter change | Sprite 63 / named tfName placement / character 38 / depth 35: existing DROPSHADOWFILTER RGB141718, alpha166/255, blurX/Y2, strength1, distance1; preserve angle/passes/flags; do not edit level/damage filters |
 | Unchanged first proof | Font family, text box/leading/position, SetScaleFromWS, exports/imports, timers, bars, quest icons, lock/dodge/stamina/essence and damage colors |
-| Source provenance | Current installed vanilla payload; original semantic mapping/filter transform. No Alignment/Gentium/FoL/CNC asset copied |
+| Source provenance | Current installed vanilla/native payload; original filter transform only. No Alignment/Gentium/FoL/CNC asset copied |
 | License | Game-derived resource subject to installed game/REDkit terms; private test package only until redistribution terms reviewed. Original code/design belongs in repository. No proprietary PF Din font redistribution |
 | Expected packaged layout | `Mods/modQuietEditorialNPC/content/blob0.bundle` and tool-generated `metadata.store`; exact current cook output must be confirmed before writing archive |
 | Collision impact | No existing movie owner; behavior depends on FriendlyHUD and SAH contracts. Do not alter package04 or introduce duplicate whole-file WS |

@@ -1,0 +1,371 @@
+{
+  "status": "manual-Editor-import-required; Gentium-source-only",
+  "computer_use_prohibited": true,
+  "v4_unchanged": true,
+  "shadow": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+    "runtime_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+    "target": {
+      "sprite": 63,
+      "character": 38,
+      "depth": 35,
+      "path": "mcNPCFocus.tfName"
+    },
+    "proposed_filter": {
+      "type": "DROPSHADOWFILTER",
+      "rgb": "#141718",
+      "alpha": 166,
+      "blurX": 2,
+      "blurY": 2,
+      "strength": 1,
+      "distance": 1,
+      "angle_passes_flags": "preserve"
+    },
+    "transform_applied": false,
+    "editor_import_executed": false,
+    "unchanged_roundtrip_verified": false,
+    "bundle_reextraction_verified": false,
+    "package_path": null,
+    "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowGate"
+  },
+  "english_font": {
+    "status": "source-preparation-only; no-converted-resource",
+    "resource_key": "gameplay/gui_new/swf/witcher3/fonts_en.redswf",
+    "runtime_sha256": "a1223e1a26e0c541a69cb1c6ad8bffbd70c074f1d4603193758b2bf220e95f81",
+    "upstream_url": "https://software.sil.org/downloads/r/gentium/GentiumBook-7.000.zip",
+    "upstream_zip_sha256": "fa4e35bcea62dd68befabf4bb7c2765aacd2691f51ec8ae008f5f913ef49f419",
+    "ofl_sha256": "dcae5818b104b6cb24334bb4c92f7896d1ac988529ca4654ff21361a7b5b94ee",
+    "styles": [
+      {
+        "style": "Regular",
+        "font_id": 1,
+        "binding": "PF Din Text Cond Pro",
+        "flags": 140,
+        "baseline_glyphs": 383,
+        "baseline_metrics": {
+          "ascent": 18100,
+          "descent": 4240,
+          "leading": 1860,
+          "kerning_count": 809
+        },
+        "baseline_font_payload_sha256": "f66af78f6534a88ae231ac49cdc38e774983ca29908e6f4c9b430358bc700c29",
+        "ttf_sha256": "2027f6a864e5a9907c113438969d1d03fa91dfdd1a3885fa0fdeb496f0f682e4",
+        "units_per_em": 2048,
+        "source_metrics": {
+          "ascent": 1940,
+          "descent": -550,
+          "line_gap": 0,
+          "x_height": 930
+        },
+        "missing_baseline_codes": [
+          "U+0149",
+          "U+2103",
+          "U+2105",
+          "U+2109",
+          "U+212B",
+          "U+212E"
+        ],
+        "glyph_sources": 377,
+        "outline_source_sha256": "5009d6a4d5150b9d736379663aa7af6839996e83cf366dfbcd2d29ca1ef8b7ca",
+        "digit_advances": [
+          986,
+          986,
+          986,
+          986,
+          986,
+          986,
+          986,
+          986,
+          986,
+          986
+        ],
+        "gpos_features": [
+          "kern",
+          "mark",
+          "mkmk"
+        ],
+        "legacy_kern_present": false,
+        "widths": [
+          {
+            "text": "Roach",
+            "vanilla_em": 2.193359375,
+            "gentium_em": 2.5634765625,
+            "unkerned_ratio": 1.1687444345503117
+          },
+          {
+            "text": "Vesemir",
+            "vanilla_em": 2.931640625,
+            "gentium_em": 3.5,
+            "unkerned_ratio": 1.1938707528314456
+          },
+          {
+            "text": "Geralt of Rivia",
+            "vanilla_em": 4.9892578125,
+            "gentium_em": 5.95654296875,
+            "unkerned_ratio": 1.1938735564689764
+          },
+          {
+            "text": "Kaer Morhen",
+            "vanilla_em": 4.5888671875,
+            "gentium_em": 5.50048828125,
+            "unkerned_ratio": 1.1986592892104704
+          },
+          {
+            "text": "Witcher silver sword",
+            "vanilla_em": 7.3115234375,
+            "gentium_em": 8.71142578125,
+            "unkerned_ratio": 1.1914652063576867
+          },
+          {
+            "text": "0123456789",
+            "vanilla_em": 4.404296875,
+            "gentium_em": 4.814453125,
+            "unkerned_ratio": 1.0931263858093125
+          },
+          {
+            "text": "AV To Wa",
+            "vanilla_em": 3.35546875,
+            "gentium_em": 4.09521484375,
+            "unkerned_ratio": 1.2204598370197905
+          },
+          {
+            "text": "Dandelion\u2019s lute \u2014 \u201cA tale\u2026\u201d",
+            "vanilla_em": 10.48828125,
+            "gentium_em": 12.029296875,
+            "unkerned_ratio": 1.146927374301676
+          },
+          {
+            "text": "\u00c9 \u0141 \u0152 \u00df \u00e6",
+            "vanilla_em": 3.6025390625,
+            "gentium_em": 3.97900390625,
+            "unkerned_ratio": 1.1044998644619137
+          }
+        ]
+      },
+      {
+        "style": "Italic",
+        "font_id": 3,
+        "binding": "PF Din Text Cond Pro",
+        "flags": 142,
+        "baseline_glyphs": 383,
+        "baseline_metrics": {
+          "ascent": 18440,
+          "descent": 4240,
+          "leading": 2200,
+          "kerning_count": 706
+        },
+        "baseline_font_payload_sha256": "3d324613f18b450e2b86a66f888595fa8cb80e1e08b0de19a1c458a85d9ced9e",
+        "ttf_sha256": "ed128fd9370533c796219d48aaf17b55d0562791f8cc49e83a6c607c5680bea2",
+        "units_per_em": 2048,
+        "source_metrics": {
+          "ascent": 1940,
+          "descent": -550,
+          "line_gap": 0,
+          "x_height": 930
+        },
+        "missing_baseline_codes": [
+          "U+0149",
+          "U+2103",
+          "U+2105",
+          "U+2109",
+          "U+212B",
+          "U+212E"
+        ],
+        "glyph_sources": 377,
+        "outline_source_sha256": "ceeb47fe088e508ed5dc6efa1d7ea59658f42e3b6f2a5c14684f74e575ad83d0",
+        "digit_advances": [
+          859,
+          859,
+          859,
+          859,
+          859,
+          859,
+          859,
+          859,
+          859,
+          859
+        ],
+        "gpos_features": [
+          "kern",
+          "mark",
+          "mkmk"
+        ],
+        "legacy_kern_present": false,
+        "widths": [
+          {
+            "text": "Roach",
+            "vanilla_em": 2.201171875,
+            "gentium_em": 2.33203125,
+            "unkerned_ratio": 1.059449866903283
+          },
+          {
+            "text": "Vesemir",
+            "vanilla_em": 2.90625,
+            "gentium_em": 3.12744140625,
+            "unkerned_ratio": 1.076108870967742
+          },
+          {
+            "text": "Geralt of Rivia",
+            "vanilla_em": 4.9716796875,
+            "gentium_em": 5.41552734375,
+            "unkerned_ratio": 1.0892751915144372
+          },
+          {
+            "text": "Kaer Morhen",
+            "vanilla_em": 4.5771484375,
+            "gentium_em": 4.95849609375,
+            "unkerned_ratio": 1.083315553659057
+          },
+          {
+            "text": "Witcher silver sword",
+            "vanilla_em": 7.23046875,
+            "gentium_em": 7.806640625,
+            "unkerned_ratio": 1.0796866558616964
+          },
+          {
+            "text": "0123456789",
+            "vanilla_em": 4.404296875,
+            "gentium_em": 4.1943359375,
+            "unkerned_ratio": 0.9523281596452328
+          },
+          {
+            "text": "AV To Wa",
+            "vanilla_em": 3.34375,
+            "gentium_em": 3.7548828125,
+            "unkerned_ratio": 1.1229556074766356
+          },
+          {
+            "text": "Dandelion\u2019s lute \u2014 \u201cA tale\u2026\u201d",
+            "vanilla_em": 10.4619140625,
+            "gentium_em": 10.91650390625,
+            "unkerned_ratio": 1.0434518808923738
+          },
+          {
+            "text": "\u00c9 \u0141 \u0152 \u00df \u00e6",
+            "vanilla_em": 3.5771484375,
+            "gentium_em": 3.6337890625,
+            "unkerned_ratio": 1.0158340158340158
+          }
+        ]
+      },
+      {
+        "style": "Bold",
+        "font_id": 5,
+        "binding": "PF Din Text Cond Pro",
+        "flags": 141,
+        "baseline_glyphs": 383,
+        "baseline_metrics": {
+          "ascent": 18900,
+          "descent": 4400,
+          "leading": 2820,
+          "kerning_count": 0
+        },
+        "baseline_font_payload_sha256": "c3c6b44072e66e3b45f53c81711269c990abaa923280a9a91435c500f09c3493",
+        "ttf_sha256": "ed788447ea4298dd44ac62034b9a6849003bdfea256757cb4a5d599c8b09a365",
+        "units_per_em": 2048,
+        "source_metrics": {
+          "ascent": 1940,
+          "descent": -550,
+          "line_gap": 0,
+          "x_height": 930
+        },
+        "missing_baseline_codes": [
+          "U+0149",
+          "U+2103",
+          "U+2105",
+          "U+2109",
+          "U+212B",
+          "U+212E"
+        ],
+        "glyph_sources": 377,
+        "outline_source_sha256": "29e0c950ed0d2f9ab4ff7ad883508f83a0f96a2444c5ee852bc574f07eb7bd74",
+        "digit_advances": [
+          1061,
+          1061,
+          1061,
+          1061,
+          1061,
+          1061,
+          1061,
+          1061,
+          1061,
+          1061
+        ],
+        "gpos_features": [
+          "kern",
+          "mark",
+          "mkmk"
+        ],
+        "legacy_kern_present": false,
+        "widths": [
+          {
+            "text": "Roach",
+            "vanilla_em": 2.3740234375,
+            "gentium_em": 2.716796875,
+            "unkerned_ratio": 1.1443850267379678
+          },
+          {
+            "text": "Vesemir",
+            "vanilla_em": 3.2421875,
+            "gentium_em": 3.7080078125,
+            "unkerned_ratio": 1.1436746987951807
+          },
+          {
+            "text": "Geralt of Rivia",
+            "vanilla_em": 5.61328125,
+            "gentium_em": 6.34619140625,
+            "unkerned_ratio": 1.1305671537926236
+          },
+          {
+            "text": "Kaer Morhen",
+            "vanilla_em": 5.0234375,
+            "gentium_em": 5.83984375,
+            "unkerned_ratio": 1.1625194401244168
+          },
+          {
+            "text": "Witcher silver sword",
+            "vanilla_em": 8.1708984375,
+            "gentium_em": 9.2109375,
+            "unkerned_ratio": 1.1272857655073503
+          },
+          {
+            "text": "0123456789",
+            "vanilla_em": 4.90234375,
+            "gentium_em": 5.1806640625,
+            "unkerned_ratio": 1.0567729083665338
+          },
+          {
+            "text": "AV To Wa",
+            "vanilla_em": 3.705078125,
+            "gentium_em": 4.23388671875,
+            "unkerned_ratio": 1.1427253558249868
+          },
+          {
+            "text": "Dandelion\u2019s lute \u2014 \u201cA tale\u2026\u201d",
+            "vanilla_em": 11.93359375,
+            "gentium_em": 12.93896484375,
+            "unkerned_ratio": 1.0842471358428805
+          },
+          {
+            "text": "\u00c9 \u0141 \u0152 \u00df \u00e6",
+            "vanilla_em": 3.943359375,
+            "gentium_em": 4.1904296875,
+            "unkerned_ratio": 1.0626547795938583
+          }
+        ]
+      }
+    ],
+    "package_path": null,
+    "cooked": false,
+    "runtime_tested": false,
+    "source_tool": "tools/prepare-english-gentium.py",
+    "private_receipt": "build/gentium-english-source-verified/receipt.json",
+    "receipt_sha256": "2c5e421a36ecc922545a379ce2c789d048a28876774e695468ce798b0b85bf53",
+    "repeat_preparation_equal": true,
+    "fonttools_version": "4.60.1"
+  },
+  "report": "research/shadow-font-manual-gate.md",
+  "tests_passed": 27,
+  "installed_game_changed": false,
+  "game_launched": false
+}
