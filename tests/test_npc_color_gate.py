@@ -38,5 +38,14 @@ class ColorGateTests(unittest.TestCase):
         self.receipt['results'][2]['success'] = False
         with self.assertRaises(ValueError): package.gate(self.receipt, self.source)
 
+    def test_declaration_matched_probe_control(self):
+        self.receipt['results'] = [self.receipt['results'][0], self.receipt['results'][1], self.receipt['results'][-1]]
+        self.receipt['results'][1]['label'] = 'paired_noop'
+        for r in self.receipt['results'][1:]:
+            r['assertions_added'] = {'scriptCompiledCode.cpp:56 (!m_sourceFile.Empty())': 6}
+        package.gate(self.receipt, self.source, probe=True)
+        self.receipt['results'][-1]['assertions_added'] = {'scriptCompiledCode.cpp:56 (!m_sourceFile.Empty())': 7}
+        with self.assertRaises(ValueError): package.gate(self.receipt, self.source, probe=True)
+
 
 if __name__ == '__main__': unittest.main()

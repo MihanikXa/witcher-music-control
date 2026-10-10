@@ -1,5 +1,11 @@
 # Verified UI resource map
 
+**NPC live-binding caveat:** the authored `mcNPCFocus.tfName` hierarchy is
+verified, but generic `GetMemberFlashObject("tfName")` and Number access have
+not been verified against the live label. The v2 recolor failed in two categories;
+see the [bounded execution/field/UInt diagnostic](npc-color-failure-diagnostic.md).
+Successful compilation is not evidence of a working native member binding.
+
 Paths below `gameplay/gui_new/swf/` are observed runtime keys, not filesystem
 guesses. `content/content0/bundles/startup.bundle` owns the selected HUD modules
 and inventory; `r4gui.bundle` owns the font libraries, glossary, subtitle movie,

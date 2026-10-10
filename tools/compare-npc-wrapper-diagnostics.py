@@ -9,6 +9,7 @@ import importlib.util
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,11 +22,51 @@ def diagnostic_counter(log, marker):
     return Counter(line.split(marker, 1)[1].strip() for line in log.splitlines() if marker in line)
 
 
+def make_probe_noop(source):
+    """Retain diagnostic declarations/signatures, replace only known bodies.
+
+    Deliberately bounded to this original probe, not a WitcherScript parser.
+    Quoted braces are handled; this supplied source has no braces in comments.
+    """
+    bodies = {'QEProbeNotice': 'return;', 'QEProbePalette': 'return original;',
+              'OnTick': 'var result : bool; result = wrappedMethod(timeDelta); return result;',
+              'UpdateName': 'wrappedMethod(enemyName);',
+              'qeprobe': 'return;'}
+    pattern = re.compile(r'\bfunction\s+(\w+)\s*\([^)]*\)\s*(?::\s*\w+\s*)?\{')
+    edits = []
+    names = []
+    for match in pattern.finditer(source):
+        name = match.group(1)
+        if name not in bodies:
+            raise ValueError('Unexpected probe function')
+        depth, pos = 1, match.end()
+        quoted = False
+        escaped = False
+        while depth and pos < len(source):
+            char = source[pos]
+            if char == '"' and not escaped:
+                quoted = not quoted
+            if not quoted:
+                depth += (char == '{') - (char == '}')
+            escaped = char == '\\' and not escaped
+            pos += 1
+        if depth:
+            raise ValueError('Unclosed diagnostic body')
+        edits.append((match.end(), pos - 1, '\n    ' + bodies[name] + '\n'))
+        names.append(name)
+    if sorted(names) != sorted(['QEProbeNotice', 'QEProbePalette', 'OnTick', 'OnTick', 'UpdateName', 'qeprobe']):
+        raise ValueError('Exact six-function diagnostic shape required')
+    for start, end, replacement in reversed(edits):
+        source = source[:start] + replacement + source[end:]
+    return source
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--runtime', type=Path, required=True)
     ap.add_argument('--assembly', type=Path, required=True)
     ap.add_argument('--out', type=Path, required=True)
+    ap.add_argument('--candidate', type=Path, help='Original diagnostic source; declaration-matched no-op control')
     a = ap.parse_args()
     work, runtime = a.out.resolve(), a.runtime.resolve()
     if ROOT / 'build' not in work.parents or work.exists() or ROOT / 'build' not in runtime.parents:
@@ -48,6 +89,11 @@ def main():
         'hud_noop': '@wrapMethod(CR4ScriptedHud)\nfunction OnTick(timeDelta : float) { wrappedMethod(timeDelta); }\n',
         'candidate': fallback.text(ROOT / 'src/npc/quietEditorialNameColors.ws'),
     }
+    if a.candidate:
+        candidate = fallback.text(a.candidate)
+        cases = {'baseline': None,
+                 'paired_noop': make_probe_noop(candidate),
+                 'candidate': candidate}
     results = []
     for label, source in cases.items():
         if source is not None:

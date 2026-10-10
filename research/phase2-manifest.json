@@ -1,5 +1,5 @@
 {
-  "status": "asset-route-blocked; private-color-only-trial-ready",
+  "status": "asset-route-blocked; v2-runtime-failed; bounded-npc-name-diagnostic-ready",
   "date": "2026-10-10",
   "scope": "English NPC typography/text-color/text-rendering only; broader roadmap deferred",
   "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
@@ -1480,7 +1480,7 @@
     "superseded_by": "private_color_trial"
   },
   "current_movie_collisions": [],
-  "current_settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+  "current_settings_sha256": "42068953d6acd01ddcf17201af4c72abdbb7a395ebcf913bf49b5ee17f571423",
   "runtime_reconstruction_history": {
     "status": "blocked",
     "date": "2026-10-09",
@@ -1642,7 +1642,7 @@
   "texture_array_preserved": true,
   "unchanged_roundtrip_verified": false,
   "package_built": true,
-  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v2\\QuietEditorial-NPC-Colors-private-test.zip",
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-nameprobe-v3\\QuietEditorial-NPC-NameProbe-private-test.zip",
   "deployed": false,
   "game_tested": false,
   "assertion_investigation": {
@@ -3079,7 +3079,7 @@
     "critical_copied_inputs_equal_to_installed": true
   },
   "private_color_trial": {
-    "status": "private-color-only-runtime-trial",
+    "status": "user-runtime-tested; failed-neutral-and-VIP",
     "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v2\\QuietEditorial-NPC-Colors-private-test.zip",
     "zip_sha256": "2ca0ca2ccded4d216aa2843021a24e570bbd959f8d2e916e79c7a5e62a69ba9d",
     "zip_bytes": 1001,
@@ -3120,9 +3120,9 @@
       "modEvilsOfRivia"
     ],
     "vortex_route": "witcher3tl installer preserves Mods/; witcher3tl deploys at game root",
-    "runtime_tested": false,
+    "runtime_tested": true,
     "vortex_preview_executed": false,
-    "deployed": false,
+    "deployed": true,
     "shadow_changes": false,
     "resource_replacements": [],
     "compiled_blobs_packaged": false,
@@ -3222,7 +3222,16 @@
       "path": "C:/Program Files/Vortex/resources/app.asar.unpacked/bundledPlugins/game-witcher3/index.cjs",
       "sha256": "52de6d815469d6361d72b94a11bfff79527b3846e644c2f8d471bbf2efcc3983",
       "evidence": "testSupportedTL/installTL/testTL/getTLPath; read-only source map inspection; no actual install"
-    }
+    },
+    "runtime_outcome": {
+      "Roach": "neutral name remained light blue; expected #E9E2D2",
+      "Vesemir": "VIP name remained bright green; expected #D5C08E",
+      "compilation_error_reported": false,
+      "agent_launched_game": false
+    },
+    "superseded_for_testing_by": "npc_nameprobe",
+    "agent_deployed": false,
+    "deployed_source_hash_verified": true
   },
   "asset_package_built": false,
   "script_fallback_at_33ae2f6": {
@@ -3307,9 +3316,151 @@
     "source_sha256": "533d039bd5e1c44059691b69695a287a381133199d594c972d0457cf5096a260",
     "compiler_pass": true,
     "private_trial_packaging_allowed": true,
-    "runtime_tested": false,
+    "runtime_tested": true,
     "full_retail_multiblob_simulation": false,
     "event_return_preserved": true,
-    "details": "private_color_trial"
+    "details": "private_color_trial",
+    "runtime_outcome": "failed-neutral-and-VIP",
+    "next_test": "npc_nameprobe"
+  },
+  "npc_nameprobe": {
+    "status": "private-bounded-name-diagnostic",
+    "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-nameprobe-v3\\QuietEditorial-NPC-NameProbe-private-test.zip",
+    "zip_sha256": "3d6803e582227c3d967bf189c1465b71df3523a541ba65ee6edc4fcd1540326b",
+    "zip_bytes": 2514,
+    "member": "Mods/modQuietEditorialNPCProbe/content/scripts/local/quietEditorialNameProbe.ws",
+    "member_sha256": "0d3cff26d1188c8a523fb4a108f51149b17e118b06ae157334e473dc5075600a",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "controls_sha256": "0ada08e0bc72ed1e7cf3dc0513f15a35f0c2ceb26209444a0dcf722105848abd",
+    "settings_sha256": "42068953d6acd01ddcf17201af4c72abdbb7a395ebcf913bf49b5ee17f571423",
+    "on_tick_intersections": [
+      {
+        "mod": "modSeamlessAdaptiveHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hooks.ws",
+        "sha256": "21251f33625f039622da3fe92d1ebc23fd9b72663caaad631bd6f8cb11db4ca8",
+        "source_assembly_covered": true
+      },
+      {
+        "mod": "modMonsterHuntContracts",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modMonsterHuntContracts\\content\\scripts\\local\\mhcContractBossBar.ws",
+        "sha256": "32d4e556c05d722846eb64d3bcc8e0b45e06cc09bed9e9ebef64dc60bf8da59c",
+        "source_assembly_covered": true
+      }
+    ],
+    "must_disable_mods": [
+      "modQuietEditorialNPCColors"
+    ],
+    "currently_enabled_superseded_mods": [
+      "modQuietEditorialNPCColors"
+    ],
+    "providers": [
+      {
+        "mod": "modFriendlyHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws",
+        "sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+        "source_assembly_covered": true
+      },
+      {
+        "mod": "modSeamlessAdaptiveHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hooks.ws",
+        "sha256": "21251f33625f039622da3fe92d1ebc23fd9b72663caaad631bd6f8cb11db4ca8",
+        "source_assembly_covered": true
+      }
+    ],
+    "opaque_mods_not_recompiled": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "vortex_route": "witcher3tl installer preserves Mods/; witcher3tl deploys at game root",
+    "runtime_tested": false,
+    "vortex_preview_executed": false,
+    "deployed": false,
+    "shadow_changes": false,
+    "resource_replacements": [],
+    "compiled_blobs_packaged": false,
+    "report": "research/npc-color-failure-diagnostic.md",
+    "source": "src/npc/quietEditorialNameProbe.ws",
+    "source_provenance": "Original additive diagnostic; installed signatures used as evidence; no third-party implementation or game assets packaged",
+    "license": "Private test; no third-party assets or fonts included",
+    "compiler_controls": [
+      {
+        "label": "baseline",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\baseline"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "277dd2c1cf02dae00a2348e1df8268d47fc1dcad54bc6392ca091f979828c6af",
+        "blob_bytes": 52978,
+        "source_sha256": null,
+        "assertion_count": 23591,
+        "warning_count": 819
+      },
+      {
+        "label": "paired_noop",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\paired_noop"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "fcad658402095cdf3bb8145a3f477e44b04408ba59a8e73ea4712e063750e5a2",
+        "blob_bytes": 53731,
+        "source_sha256": "09c0b7fe0109c96268fe1e3d77603dae9d43f3bc16c87fd72b3e5588f528e6af",
+        "assertion_count": 23597,
+        "warning_count": 819,
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 6
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {}
+      },
+      {
+        "label": "candidate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-nameprobe-safe-controls\\candidate"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "79737a5dde9548206715838812da9f356733e2cc9681e2ebb130a591df01c7e1",
+        "blob_bytes": 58113,
+        "source_sha256": "0d3cff26d1188c8a523fb4a108f51149b17e118b06ae157334e473dc5075600a",
+        "assertion_count": 23597,
+        "warning_count": 819,
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 6
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {}
+      }
+    ],
+    "source_records": 1711,
+    "source_inputs_unchanged": true,
+    "regression_criterion": "Candidate and declaration-matched no-op add the same six source-metadata assertions; no other assertion or warning delta; zero Script/WCC errors and nonempty compiled outputs. This does not prove live Flash binding or full retail multiblob behavior.",
+    "deterministic_rebuild_zip_sha256": "3d6803e582227c3d967bf189c1465b71df3523a541ba65ee6edc4fcd1540326b",
+    "runtime_movie_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+    "runtime_movie_replacement_owners": [],
+    "test_notifications_limit": 12
   }
 }

@@ -8,8 +8,10 @@ Alignment Fix is not recommended unchanged for this runtime; see its
 [assessment](research/alignment-fix.md). Explore the original
 [typography comparison](design/comparison.html) and
 [prototype plan](design/implementation-plan.md). No asset overhaul package is built
-or deployed yet. A private original **color-only** script trial is now available;
-see the [exact archive, compiler controls and user-only handoff](research/npc-color-trial-handoff.md).
+or deployed yet. The private v2 color-only trial failed for both Roach (neutral)
+and Vesemir (VIP). The current [bounded diagnostic and user-only handoff](research/npc-color-failure-diagnostic.md)
+checks hook execution, field identity, numeric access and delayed color resets.
+Disable v2 before testing this separate diagnostic.
 The native REDkit SWF now cooks with its embedded atlas after
 including the official texture-group configuration. The importer still emits a
 resource-state assertion, shared by unrelated controls, so the unchanged
@@ -17,7 +19,9 @@ round-trip gate remains blocked. Loaded resave/cook succeeds; the cause and
 runtime risk of fresh creation remain unresolved. The additive color fallback
 now compiles in the known source assembly. Its single added metadata assertion
 also occurs with two no-op wrappers, with no warning or other diagnostic delta.
-Full retail multi-blob coverage and in-game acceptance remain untested.
+Full retail multi-blob coverage remains incomplete. The v2 visual failure is
+recorded in the [historical trial handoff](research/npc-color-trial-handoff.md);
+the new diagnostic has not been tested in-game.
 See the current [controlled investigation](research/swf-state-investigation.md),
 [bounded Editor test and manual import steps](research/editor-workflow-bounded.md),
 [native NPC validation](research/native-npc-validation.md) and earlier

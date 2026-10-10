@@ -1,5 +1,10 @@
 # Private NPC color-only trial
 
+**Superseded for testing:** v2 failed for Roach neutral and Vesemir VIP. The
+deployed source hash has now been independently verified. Use the separate
+[bounded diagnostic handoff](npc-color-failure-diagnostic.md) with v2 disabled.
+Installation instructions below describe the historical failed trial.
+
 ## User in-game observation — 10 October 2026 (first trial)
 
 **Explicit user report (verbatim):** “Yep, Vesimir is still bright green”. This followed installation instructions for the `QuietEditorial-NPC-Colors-private-test.zip` v2 package and the question whether the colors changed. The reported green NPC name is **not consistent with the intended VIP recolor** (`#5AFF00` to `#D5C08E`).
