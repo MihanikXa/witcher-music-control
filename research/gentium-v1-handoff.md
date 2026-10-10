@@ -1,6 +1,12 @@
 # English Gentium Book v1 private trial — 10 October 2026
 
-**Offline validation passed; in-game acceptance is pending.** No installation,
+## User-reported runtime acceptance — 10 October 2026
+
+**Explicit user report (verbatim):** “QuietFolio is a success by the way.”
+
+**Status:** the private English Gentium Book v1 (QuietFolio) is user-accepted as successfully working in-game alongside previously accepted NPC Colors v4 and NPC Shadow v1. This report does **not** separately certify all sample names, rare glyphs, every regular/italic/bold surface, screen resolutions, clipping/kerning edge cases, menu wrapping or all other installed mods. Preserve the accepted package and its hashes unchanged. Treat any future improvements as an independent follow-up only if the user identifies a defect or asks for further typography work. No new gameplay deployment or rebuild was performed by recording this report.
+
+**Offline validation passed; user reports successful in-game operation.** No installation,
 deployment, game launch or live settings change was performed. NPC Colors v4
 and NPC Shadow v1 source/package hashes remain unchanged.
 
@@ -154,5 +160,4 @@ No global shrinking or condensation was applied to conceal these risks.
 **One-mod rollback:** close the game; disable or uninstall only
 `modQuietFolioEnglish` in this profile and redeploy. Keep Colors v4, Shadow v1
 and compatibility packages enabled. No saves or settings need restoration.
-The next required user action is this reversible in-game trial; no further
-manual Editor import is needed.
+The user has completed a successful in-game trial. No new manual Editor import or repeat installation is needed unless an issue is reported.
