@@ -47,27 +47,34 @@ Editor assertion state and live rendering remain unverified. See the historical
 [reconstruction investigation](../research/phase2-validation.md).
 The package boundaries and first-proof specification below remain proposals.
 
-## Current next milestone — English typography (active)
+## Current next milestone — Field & Folio utility typography (active)
 
-The user explicitly accepted all five colors, with neutral/friendly/VIP observed
-in-game. The user also explicitly reported NPC shadow v1 working in-game on 10
-October 2026. The current NPC nameplate color-and-shadow proof is therefore
-closed by user acceptance. Preserve both independent Vortex modules, and do not
-replace the script palette in the edited SWF. No screenshots, all-scene contrast
-tests or universal HUD compatibility claims were supplied.
+The user reports QuietFolio Gentium Book v1 working in-game, alongside
+accepted NPC Colors v4 and Shadow v1. The 383-codepoint licensed English
+Regular/Italic/Bold asset and offline round trip are complete. Preserve all
+three user-accepted modules and their hashes.
 
-**Next action:** user tests the standalone English v1 package. Regular/Italic/Bold
-conversion, all six missing points, GPOS pair kerning and official build gates
-are complete. Preserve existing text bounds, subtitle scaling and accepted NPC
-mods. Wider metrics, wrapping, quest-icon spacing and vertical clipping remain
-in-game acceptance risks. No further UI development is authorized by this gate.
+The user now asks to **continue font replacement work**. Next implement the
+already proposed selective **two-family Field & Folio** hierarchy:
+retain Gentium for names/dialogue/subtitles/reading and investigate licensed
+Source Sans 3 for small utility labels, interactions, numeric/status text.
+See the scoped technical gates and packaging constraints in
+[Field & Folio phase](field-and-folio-typography-phase.md).
+Start with a demonstrably supported extra-font registration/linkage and
+one small, independent `hud_interactions.redswf` text field if compatible.
+Do not blindly switch the global `$NormalFont` alias to sans.
 
-No Computer Use or desktop automation. If a supported isolated Editor
-import step is needed, provide the smallest manual user action and wait.
-Preserve main/general-merge, existing working Vortex mods, accepted v4 and
-shadow v1; keep any generated archive private until static validation gates pass.
-Other surface-specific shadows (subtitles, quest labels, dialogue) remain later
-independent work, not part of the completed NPC proof.
+Because v1 QuietFolio already owns `fonts_en.redswf`, a combined family
+resource is a **replacement version**, never a concurrently installed
+second owner. If registration cannot be verified, stop and report a concrete
+blocker or a safely supported local-embedding alternative. Preserve all
+font shapes, icons, dialogue choices, text-state bindings and other
+resource contracts outside the selected utility field.
+
+No Computer Use or desktop automation. Any manual Editor import is
+user-operated with exact short instructions. No Vortex, live game, settings,
+saves, music `main` or combat `general-merge` edits without separate
+authorization. Keep local private packages/reproducibility gates isolated.
 
 ## Package boundaries
 
