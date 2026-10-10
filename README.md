@@ -43,6 +43,8 @@ See the current [controlled investigation](research/swf-state-investigation.md),
 is available locally and user-reported working in-game; evidence for individual
 stress-test and other HUD surfaces remains limited.
 
+**Next typography phase:** [Field & Folio selective utility typography](design/field-and-folio-typography-phase.md). QuietFolio already supplies the shared English literary font; the next prototype investigates an additional Source Sans 3 utility role in one safe UI movie, not a second global font replacement. The accepted v1 remains a separate rollback package.
+
 ## Current user acceptance — 10 October 2026
 
 NPC Colors v4, NPC Shadow v1 and English Gentium Book v1 (QuietFolio) are
