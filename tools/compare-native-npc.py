@@ -53,9 +53,9 @@ def chunks(data):
                 value = struct.unpack('<I', value)[0]
             elif kind in ('CName', 'ETextureCompression'):
                 value = names[struct.unpack('<H', value)[0]]
-            elif kind == 'String':
-                # Only the observed short ANSI linkage strings, not a generic
-                # REDengine string serializer.
+            elif kind == 'String' and names[name] == 'linkageName':
+                # Only linkage names are decoded. Editor-only source-path
+                # strings use other encodings and remain opaque bytes below.
                 if not value or value[0] & 0xc0 != 0x80 or len(value) != (value[0] & 0x3f) + 1:
                     raise ValueError('Unsupported linkage string encoding')
                 value = value[1:].decode('ascii')

@@ -2,9 +2,11 @@
 
 An independent, research-first project for refining typography, text effects, NPC nameplates and interface colors in **The Witcher 3 Remastered 5.01**.
 
-Current shadow/font work is at a [manual Editor import gate](research/shadow-font-manual-gate.md).
-Computer Use is prohibited. Independent SIL Gentium source preparation is
-verified; no shadow or font archive is installable yet. Keep accepted v4 unchanged.
+The saved Editor assets now pass a reproducible [offline cook/bundle round trip](research/editor-cli-roundtrip.md).
+The Watermark failure was a stale workspace resolution issue. Editor assertion
+state remains unknown; no successful imports need repeating. Computer Use is
+prohibited. Independent SIL Gentium source preparation is verified; no shadow
+or font archive is installable yet. Keep accepted v4 unchanged.
 
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
 research is in [research/findings.md](research/findings.md). The supplied
@@ -22,9 +24,9 @@ observed. Color is a closed milestone by user acceptance; shadow and typography 
 Keep v2 and v3 disabled, and preserve working v4 separately.
 The native REDkit SWF now cooks with its embedded atlas after
 including the official texture-group configuration. The importer still emits a
-resource-state assertion, shared by unrelated controls, so the unchanged
-round-trip gate remains blocked. Loaded resave/cook succeeds; the cause and
-runtime risk of fresh creation remain unresolved. The additive color fallback
+resource-state assertion, shared by unrelated controls. Saved Editor outputs
+now load, cook, validate, pack and re-extract reproducibly without that assertion;
+the cause and runtime risk of fresh creation remain unresolved. The additive color fallback
 now compiles in the known source assembly. Its single added metadata assertion
 also occurs with two no-op wrappers, with no warning or other diagnostic delta.
 Full retail multi-blob coverage remains incomplete. The v2 visual failure is

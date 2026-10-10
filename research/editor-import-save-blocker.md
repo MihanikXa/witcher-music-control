@@ -6,19 +6,14 @@ exporters and no overwrite/save cancellation, only failed thumbnail generation.
 All non-image SWF tags in both saved files match their unchanged native inputs.
 Hashes are recorded in `shadow-font-manifest.json`.
 
-The new log still records `Asserts Disabled: ON`; this has not been clarified.
-The unchanged pipeline is not yet validated. One copied two-resource cook request
-returned exit 1 because Watermark failed to load. It emitted an EnemyFocus file
-whose hash and contracts match the previous CLI cooked candidate, including
-restored texture structure and unchanged used image regions. That result alone
-does not prove that this runner resolved both new Editor workspace inputs.
-The initial staging command used the wrong relative working directory and was
-corrected to absolute private paths before the two-file request; no live/project
-resource was altered. No pack/shadow modification/ZIP followed the failed cook.
-The shortest remaining clarification from the user is whether Ignore All was
-selected; the agent must separately establish cooker input resolution before
-calling this an Editor round trip. The historical retry instructions below
-need not be repeated just to create the files again.
+**CLI follow-up:** the failed cooker used its stale mounted workspace rather
+than the supplied Editor assets. Correct isolated workspace staging now cooks
+both files and verifies repeatable single-resource pack/metadata/re-extraction.
+See [current evidence and limits](editor-cli-roundtrip.md). The Editor log's
+`Asserts Disabled: ON` remains of unknown provenance/effect; the user did not
+intentionally disable assertions. No recollection or repeated import is required.
+The historical initial-failure and retry record below is superseded by the saved
+outputs and CLI follow-up, not a description of the current project contents.
 
 The user's new project exists at
 `build/npc-editor-run/projects/quieteditorialnpcshadowgate/quieteditorialnpcshadowgate.w3edit`.

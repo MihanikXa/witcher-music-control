@@ -1,5 +1,5 @@
 {
-  "status": "Editor-imports-saved; unchanged-roundtrip-not-yet-validated",
+  "status": "saved-Editor-output CLI roundtrip reproduced; shadow transformation pending",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -24,7 +24,7 @@
     "transform_applied": false,
     "editor_import_executed": true,
     "unchanged_roundtrip_verified": false,
-    "bundle_reextraction_verified": false,
+    "bundle_reextraction_verified": true,
     "package_path": null,
     "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowGate",
     "editor_saved_resources": true,
@@ -58,9 +58,106 @@
         "editor_tag_count": 12
       }
     ],
-    "cook_request_exit_code": 1,
-    "cook_request_result": "Copied two-resource cook request failed to load Watermark; emitted EnemyFocus matches prior CLI cooked hash. Full Editor input provenance/roundtrip not established",
-    "candidate_enemyfocus_sha256": "c3b9949c0c31481263a57185bde84c0161590d345f22561d5a0888af7b29dd92"
+    "cook_request_exit_code": 0,
+    "cook_request_result": "Old request read stale workspace; corrected physical workspace cooks both Editor inputs",
+    "candidate_enemyfocus_sha256": "cebda92df66714090e38be95c33b5037973b0ff0c035300620c839e68b01589a",
+    "editor_assertion_state": "unknown; no intentional disabling reported",
+    "editor_creation_assertion_free_verified": false,
+    "offline_roundtrip_verified": true,
+    "cli_roundtrip": {
+      "commands": [
+        {
+          "label": "cook",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\bin\\x64_RedKit\\wcc_lite.exe",
+            "cook",
+            "-platform=pc",
+            "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\bin\\workspace",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\cooked"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "validate",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\bin\\x64_RedKit\\wcc_lite.exe",
+            "validate",
+            "-db=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\cooked\\cook.db",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\validation"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "pack",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\bin\\x64_RedKit\\wcc_lite.exe",
+            "pack",
+            "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\pack-input",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\packed",
+            "-compression=ZLIB"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "metadata",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\bin\\x64_RedKit\\wcc_lite.exe",
+            "metadatastore",
+            "-path=C:\\Dev\\witcher-ui-overhaul\\build\\editor-roundtrip-repeat\\packed"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        }
+      ],
+      "sources": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowgate\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
+          "sha256": "08c9576c3b7398b8ffe3613d416d58a67629bed8326e1a5a8eebdf47585cf791",
+          "bytes": 156310,
+          "mtime_ns": 1791606612606224800
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowgate\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+          "sha256": "3b7b6498100c0f2894488d33e9fc3e4d7537ff8d17cbeba673f06ab83ccbecac",
+          "bytes": 81177,
+          "mtime_ns": 1791606632356697300
+        }
+      ],
+      "sources_unchanged": true,
+      "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+      "entry": {
+        "resource": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+        "offset": 336,
+        "size": 88806,
+        "packed": 59951,
+        "codec": 1
+      },
+      "bundle_sha256": "bf42601cab7cd32a867032ec9781cb2c01baee07b985d0e2d75720de4f1fe339",
+      "metadata_sha256": "143930c12e176fb6681500c8f4cbfaee931915a377bc6817c03665c25ef1b367",
+      "reextracted_sha256": "cebda92df66714090e38be95c33b5037973b0ff0c035300620c839e68b01589a",
+      "exact_reextraction": true,
+      "metadata_validation": "official generator, one bundle/entry and embedded key; not a full independent store decoder",
+      "editor_assertion_state": "unknown",
+      "runtime_tested": false,
+      "package_path": null
+    },
+    "nonimage_contracts_identical": true,
+    "used_regions_and_border_identical": true,
+    "full_atlas_visible_differences": 560,
+    "full_atlas_transparent_rgb_differences": 48,
+    "clipped_nearest_or_bilinear_model_unaffected": true,
+    "renderer_sampler_state_verified": false,
+    "repeat_cooked_bytes_identical": true,
+    "repeat_bundle_bytes_identical": true,
+    "current_report": "research/editor-cli-roundtrip.md",
+    "unchanged_roundtrip_scope": "offline saved-output build verified; retail/runtime and Editor creation state remain unverified"
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",

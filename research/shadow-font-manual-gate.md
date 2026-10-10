@@ -6,7 +6,17 @@ and `94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e`).
 Neutral/friendly/VIP were observed; hostile/Axii were accepted without direct
 observation. No new color work is required.
 
-## Track A: manual Editor dependency, no shadow package
+## Track A: saved-output round trip verified offline, no shadow package
+
+**Current follow-up:** both user-imported resources were saved successfully.
+The stale-workspace Watermark cook failure is resolved. Both assets cook and
+validate; EnemyFocus packs/re-extracts byte-identically in two independent runs.
+See [CLI verification and remaining limits](editor-cli-roundtrip.md).
+Editor assertion state remains unknown. No successful imports need repeating;
+the manual instructions below are historical. A changed-input shadow import,
+if necessary, will require a separate manual action. No live rendering is verified.
+
+### Historical initial attempt and manual instructions
 
 **New user-operated result:** the project exists and both exporters ran, but
 both saves were cancelled by the engine and no workspace resources were written.

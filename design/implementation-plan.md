@@ -17,9 +17,11 @@ now. Color work is closed by user decision, not by five observed category tests.
 Keep v4 unchanged and in its separate mod. Next active work: shadow and English
 typography, with the existing isolated Editor/SWF pipeline constraints.
 See the [v4 handoff](../research/npc-colors-v4-handoff.md).
-Asset/shadow variants remain
-blocked. The isolated copied Editor reached Create Project, but desktop input
-failed before project creation/import. See the current
+Asset/shadow variants have not been generated. The user subsequently created
+the isolated project and saved EnemyFocus and Watermark. Corrected workspace
+resolution now proves repeated offline cook/validate/pack/metadata/re-extraction;
+see [current verification and limits](../research/editor-cli-roundtrip.md).
+Editor assertion state and live rendering remain unverified. See the historical
 [Editor outcome/manual steps](../research/editor-workflow-bounded.md),
 [color-only test handoff](../research/npc-color-trial-handoff.md),
 [controlled investigation](../research/swf-state-investigation.md),
@@ -29,9 +31,10 @@ The package boundaries and first-proof specification below remain proposals.
 
 ## Current next milestone — shadows and typography (active)
 
-Current executable handoff: [manual Editor gate and verified Gentium source
-preparation](../research/shadow-font-manual-gate.md). Computer Use is prohibited;
-the user must perform the isolated import steps. No shadow/font ZIP exists.
+Current executable evidence: [saved Editor output round trip](../research/editor-cli-roundtrip.md)
+and [verified Gentium source preparation](../research/shadow-font-manual-gate.md).
+Computer Use is prohibited. The successful unchanged imports need no repetition.
+No shadow/font ZIP exists.
 
 Color mapping is user-accepted and should not be rebuilt into the HUD movie as
 a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
@@ -40,12 +43,12 @@ separately research/prepare a licensed English Gentium Book font-library trial.
 Do not conflate these assets, prematurely replace PF Din metrics globally, or
 reuse the third-party reference-mod font binaries.
 
-The exact blocking gate is a supported unchanged Editor import, then official
-cook/pack/single-key bundle/re-extract and isolated Vortex test with full
-non-style contract preservation. The already copied REDkit Editor reached
-Create Project but automated desktop control failed; follow the bounded manual
-Editor workflow rather than spending another iteration varying broken CLI
-importer startup flags. If user interaction is needed, supply exact minimal
+The saved unchanged inputs now pass official cook/validate/single-key
+bundle/re-extraction and observed non-image/used-atlas contracts. Full atlas
+padding differs outside image footprints, and retail renderer behavior remains
+untested. Next create an original filter-only source transformation and verify
+its changed asset before a private Vortex test; do not repeat CLI bootstrap
+variations. If a changed-input Editor import needs user interaction, supply exact minimal
 steps and resume from the saved isolated project afterward. Keep visual trials
 private and reversible; do not overwrite installed assets or compatibility
 scripts. Shadow trial initially targets only character38/depth35/tfName's filter,
