@@ -45,6 +45,8 @@ stress-test and other HUD surfaces remains limited.
 
 **Next typography phase:** [Field & Folio selective utility typography](design/field-and-folio-typography-phase.md). QuietFolio already supplies the shared English literary font; the next prototype investigates an additional Source Sans 3 utility role in one safe UI movie, not a second global font replacement. The accepted v1 remains a separate rollback package.
 
+**New text-effect direction (11 October 2026):** Interaction names must be unequivocally subordinate to NPC names (trial 17px Source Sans Regular, optional 16px), and heavy ordinary-text glows/shadows throughout the in-use UI should be audited and softened toward the accepted NPC Shadow v1 appearance. See [interaction v2](design/field-folio-interactions-v2.md) and [text-shadow unification](design/text-shadow-unification.md). This does not change installed assets or mean all text filters are equivalent.
+
 ## Current user acceptance — 10 October 2026
 
 NPC Colors v4, NPC Shadow v1 and English Gentium Book v1 (QuietFolio) are
