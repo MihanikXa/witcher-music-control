@@ -1,5 +1,5 @@
 {
-  "status": "checkout succeeded but shadow replacement still cancelled; unique-name import prepared",
+  "status": "private shadow-only v1 ZIP passes offline build/static gates; runtime acceptance pending",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -23,9 +23,9 @@
     },
     "transform_applied": true,
     "editor_import_executed": true,
-    "unchanged_roundtrip_verified": false,
+    "unchanged_roundtrip_verified": true,
     "bundle_reextraction_verified": true,
-    "package_path": null,
+    "package_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-shadow-private-v1\\QuietEditorial-NPC-Shadow-v1-private-test.zip",
     "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowTrial",
     "editor_saved_resources": true,
     "editor_result": "Both unchanged imports saved at correct workspace keys; non-image tag contracts equal native authoring movies",
@@ -157,7 +157,7 @@
     "repeat_cooked_bytes_identical": true,
     "repeat_bundle_bytes_identical": true,
     "current_report": "research/editor-cli-roundtrip.md",
-    "unchanged_roundtrip_scope": "offline saved-output build verified; retail/runtime and Editor creation state remain unverified",
+    "unchanged_roundtrip_scope": "offline saved Editor-output build, contracts, used atlas, bundle and exact re-extraction verified; retail rendering and creation assertion state unverified",
     "shadow_source": {
       "input_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
       "input_sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
@@ -216,12 +216,12 @@
       "package_path": null
     },
     "shadow_source_repeat_identical": true,
-    "shadow_candidate_editor_imported": false,
-    "shadow_candidate_cooked": false,
-    "shadow_candidate_package_path": null,
+    "shadow_candidate_editor_imported": true,
+    "shadow_candidate_cooked": true,
+    "shadow_candidate_package_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-shadow-private-v1\\QuietEditorial-NPC-Shadow-v1-private-test.zip",
     "shadow_source_report": "research/npc-shadow-source-handoff.md",
     "shadow_candidate_import_attempted": true,
-    "shadow_candidate_saved": false,
+    "shadow_candidate_saved": true,
     "shadow_editor_save_blocker": {
       "expected_saved_resource": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowtrial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.redswf",
       "saved_resource_exists": false,
@@ -252,7 +252,142 @@
       "package_path": null,
       "unique_source": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-source-v1\\input\\hud_enemyfocus_qe_shadow_v1.swf",
       "unique_source_sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17"
-    }
+    },
+    "private_trial": {
+      "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-shadow-private-v1\\QuietEditorial-NPC-Shadow-v1-private-test.zip",
+      "zip_sha256": "fc70ac02870ca08998c37df03215d84783a5a013e2e8ea681ba920c2a922fc51",
+      "zip_bytes": 60887,
+      "members": {
+        "Mods/modQuietEditorialNPCShadow/content/blob0.bundle": "2bb62213b08f87969a08ec49f22694feef7951ee461e85337ccbb25bcc150bfd",
+        "Mods/modQuietEditorialNPCShadow/content/metadata.store": "802d59f610cf43e096a046c6b4830f727ad84c900c1d80c09bb2075b5f0bf016"
+      },
+      "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+      "cooked_sha256": "2f8e36a9d1d4e8598f889e85c3b1f9fdb28e8804e46e30ba520f0559d5c53ddd",
+      "vanilla_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
+      "source": {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-source-v1\\input\\hud_enemyfocus_qe_shadow_v1.swf",
+        "sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17"
+      },
+      "delta": {
+        "nonimage_changed_tag_index": 60,
+        "sprite": 63,
+        "filter_offset_in_sprite": 207,
+        "only_approved_filter_changed": true,
+        "other_nonimage_tags_identical": true
+      },
+      "texture": {
+        "resident": 0,
+        "mip_count": 1,
+        "width": 540,
+        "height": 64,
+        "pitch": 2160,
+        "bytes": 34560,
+        "alignment": 16,
+        "sha256": "840487eb269a7aac30521c3d92d310962ff578e0e06f001b531f790efd5f0258"
+      },
+      "full_atlas_visible_differences": 560,
+      "full_atlas_transparent_rgb_differences": 45,
+      "used_regions_and_border_match": true,
+      "scanned_installed_bundles": 31,
+      "installed_resource_collisions": [],
+      "v4_source_unchanged": true,
+      "offline_build_verified": true,
+      "renderer_sampler_verified": false,
+      "runtime_tested": false,
+      "metadata_validation": "official generator, one bundle/entry and embedded key; not a full independent store decoder",
+      "editor_assertion_state": "unknown"
+    },
+    "shadow_candidate_build": {
+      "commands": [
+        {
+          "label": "cook",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\bin\\x64_RedKit\\wcc_lite.exe",
+            "cook",
+            "-platform=pc",
+            "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\bin\\workspace",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\cooked"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "validate",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\bin\\x64_RedKit\\wcc_lite.exe",
+            "validate",
+            "-db=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\cooked\\cook.db",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\validation"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "pack",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\bin\\x64_RedKit\\wcc_lite.exe",
+            "pack",
+            "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\pack-input",
+            "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\packed",
+            "-compression=ZLIB"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        },
+        {
+          "label": "metadata",
+          "command": [
+            "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\bin\\x64_RedKit\\wcc_lite.exe",
+            "metadatastore",
+            "-path=C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\packed"
+          ],
+          "exit_code": 0,
+          "resource_assertions": [],
+          "assertion_count": 2
+        }
+      ],
+      "sources": [
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowtrial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus_qe_shadow_v1.redswf",
+          "sha256": "c331cdc12e8aae350d1dbbc1d3712df24ec0c108aa4d5544b97a8c56b1ab81ff",
+          "bytes": 158302,
+          "mtime_ns": 1791608949211028500
+        },
+        {
+          "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quieteditorialnpcshadowgate\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_watermark.redswf",
+          "sha256": "3b7b6498100c0f2894488d33e9fc3e4d7537ff8d17cbeba673f06ab83ccbecac",
+          "bytes": 81177,
+          "mtime_ns": 1791606632356697300
+        }
+      ],
+      "sources_unchanged": true,
+      "expected_native": {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-source-v1\\input\\hud_enemyfocus_qe_shadow_v1.swf",
+        "sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17"
+      },
+      "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+      "entry": {
+        "resource": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+        "offset": 336,
+        "size": 88872,
+        "packed": 60187,
+        "codec": 1
+      },
+      "bundle_sha256": "2bb62213b08f87969a08ec49f22694feef7951ee461e85337ccbb25bcc150bfd",
+      "metadata_sha256": "802d59f610cf43e096a046c6b4830f727ad84c900c1d80c09bb2075b5f0bf016",
+      "reextracted_sha256": "2f8e36a9d1d4e8598f889e85c3b1f9fdb28e8804e46e30ba520f0559d5c53ddd",
+      "exact_reextraction": true,
+      "metadata_validation": "official generator, one bundle/entry and embedded key; not a full independent store decoder",
+      "editor_assertion_state": "unknown",
+      "runtime_tested": false,
+      "package_path": null
+    },
+    "shadow_trial_report": "research/npc-shadow-v1-handoff.md",
+    "editor_import_log_sha256": "357fbba15edff7fc46244a370f05c772c98e662394f3d8d42ac40df1436365f8",
+    "shadow_package_repeat_identical": true
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",
@@ -591,7 +726,7 @@
     "fonttools_version": "4.60.1"
   },
   "report": "research/shadow-font-manual-gate.md",
-  "tests_passed": 27,
+  "tests_passed": 39,
   "installed_game_changed": false,
   "game_launched": false
 }

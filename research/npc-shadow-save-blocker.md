@@ -1,5 +1,11 @@
 # Shadow trial Editor import: no saved candidate yet
 
+**Resolved via unique-name import:** a saved 158,302-byte changed resource now
+passes offline consumer and packaging gates. See [private v1 trial](npc-shadow-v1-handoff.md).
+Existing-resource overwrite cancellation's internal cause remains unresolved;
+the new-file import avoids it. The retry/investigation below is historical and
+does not require another user import.
+
 ## Current follow-up: checkout exists, replacement still cancelled
 
 The user completed checkout/import/save and then clarified: **no

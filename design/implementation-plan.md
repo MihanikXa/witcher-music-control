@@ -17,7 +17,7 @@ now. Color work is closed by user decision, not by five observed category tests.
 Keep v4 unchanged and in its separate mod. Next active work: shadow and English
 typography, with the existing isolated Editor/SWF pipeline constraints.
 See the [v4 handoff](../research/npc-colors-v4-handoff.md).
-Asset/shadow variants have not been generated. The user subsequently created
+The shadow-only v1 candidate is now packaged privately. The user created
 the isolated project and saved EnemyFocus and Watermark. Corrected workspace
 resolution now proves repeated offline cook/validate/pack/metadata/re-extraction;
 see [current verification and limits](../research/editor-cli-roundtrip.md).
@@ -34,12 +34,14 @@ The package boundaries and first-proof specification below remain proposals.
 Current executable evidence: [saved Editor output round trip](../research/editor-cli-roundtrip.md)
 and [verified Gentium source preparation](../research/shadow-font-manual-gate.md).
 Computer Use is prohibited. The successful unchanged imports need no repetition.
-No shadow/font ZIP exists.
+The [private shadow v1 ZIP](../research/npc-shadow-v1-handoff.md) passes offline
+gates and awaits in-game acceptance. No font ZIP exists.
 
 The [first shadow-only SWF source](../research/npc-shadow-source-handoff.md)
-now passes byte-level and XML contract guards. Only seven decompressed bytes
-change in the target filter. A separate manual changed-input Editor import is
-required before cooking this candidate; preserve the unchanged baseline project.
+passes byte-level and XML contract guards. Only seven decompressed bytes
+change in the target filter. The user saved a uniquely named changed-input
+Editor resource; its copied canonical-key cook/validate/pack/re-extraction and
+private ZIP checks pass. The unchanged baseline project is preserved.
 
 Color mapping is user-accepted and should not be rebuilt into the HUD movie as
 a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
@@ -51,9 +53,9 @@ reuse the third-party reference-mod font binaries.
 The saved unchanged inputs now pass official cook/validate/single-key
 bundle/re-extraction and observed non-image/used-atlas contracts. Full atlas
 padding differs outside image footprints, and retail renderer behavior remains
-untested. Next create an original filter-only source transformation and verify
-its changed asset before a private Vortex test; do not repeat CLI bootstrap
-variations. If a changed-input Editor import needs user interaction, supply exact minimal
+untested. The original filter-only source and changed-asset build gates now pass;
+next perform the bounded user-only Vortex visual trial. Do not repeat CLI bootstrap
+variations. For any later changed-input Editor import that needs user interaction, supply exact minimal
 steps and resume from the saved isolated project afterward. Keep visual trials
 private and reversible; do not overwrite installed assets or compatibility
 scripts. Shadow trial initially targets only character38/depth35/tfName's filter,

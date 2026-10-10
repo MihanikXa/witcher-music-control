@@ -1,10 +1,11 @@
 # Verified UI resource map
 
-**NPC live-binding caveat:** the authored `mcNPCFocus.tfName` hierarchy is
-verified, but generic `GetMemberFlashObject("tfName")` and Number access have
-not been verified against the live label. The v2 recolor failed in two categories;
-see the [bounded execution/field/UInt diagnostic](npc-color-failure-diagnostic.md).
-Successful compilation is not evidence of a working native member binding.
+**NPC live-binding update:** the authored `mcNPCFocus.tfName` hierarchy is
+verified. The user observed the generic field accessor with UInt writes working
+in v3 and accepted all v4 mappings (three categories directly observed). Color
+work is closed; Number-versus-UInt remains the leading, unproven v2 failure
+hypothesis. See the [v4 evidence](npc-colors-v4-handoff.md) and independent
+[shadow-only v1 trial](npc-shadow-v1-handoff.md), whose runtime appearance is pending.
 
 Paths below `gameplay/gui_new/swf/` are observed runtime keys, not filesystem
 guesses. `content/content0/bundles/startup.bundle` owns the selected HUD modules

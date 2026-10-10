@@ -5,12 +5,11 @@ An independent, research-first project for refining typography, text effects, NP
 The saved Editor assets now pass a reproducible [offline cook/bundle round trip](research/editor-cli-roundtrip.md).
 The Watermark failure was a stale workspace resolution issue. Editor assertion
 state remains unknown; no successful imports need repeating. Computer Use is
-prohibited. Independent SIL Gentium source preparation is verified; no shadow
-or font archive is installable yet. The [shadow-only source is prepared](research/npc-shadow-source-handoff.md)
-but its first changed-input save was cancelled by REDkit. The
-[save investigation and unique-name import](research/npc-shadow-save-blocker.md)
-affect only that separate trial project; the unchanged imports need no repetition.
-Keep accepted v4 unchanged.
+prohibited. Independent SIL Gentium source preparation is verified; no Gentium
+font archive exists yet. The [private shadow-only v1 trial](research/npc-shadow-v1-handoff.md)
+now passes offline cook/validate/bundle/atlas/ZIP gates and awaits user in-game
+acceptance. Its unique-name Editor import resolved the save dependency; no
+successful imports need repeating. Keep accepted v4 unchanged.
 
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
 research is in [research/findings.md](research/findings.md). The supplied
@@ -40,7 +39,8 @@ The exact v2 failure mechanism remains inferred.
 See the current [controlled investigation](research/swf-state-investigation.md),
 [bounded Editor test and manual import steps](research/editor-workflow-bounded.md),
 [native NPC validation](research/native-npc-validation.md) and earlier
-[Phase 2 investigation](research/phase2-validation.md). No asset/shadow ZIP exists.
+[Phase 2 investigation](research/phase2-validation.md). The private shadow v1 ZIP
+is available locally; its existence does not establish runtime acceptance.
 
 ## Visual target
 

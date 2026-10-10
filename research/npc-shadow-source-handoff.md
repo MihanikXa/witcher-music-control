@@ -1,5 +1,11 @@
 # NPC shadow-only source trial: manual changed-input gate
 
+**Current result:** the unique-name changed import saved successfully and passes
+offline cook/validate/contract/atlas/bundle/ZIP gates. See the
+[private v1 test handoff](npc-shadow-v1-handoff.md). No manual import retry is
+needed; the remaining action is user in-game acceptance. The source/import
+history below records earlier gates, not a current blocker.
+
 **Changed-input save blocker:** the user created/imported/saved and observed no
 assertion, but the log records exporter success followed by cancelled
 overwrite/save. Checkout now exists, yet it still contains the unchanged
