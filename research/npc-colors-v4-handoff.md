@@ -7,7 +7,7 @@ readings were supplied. **Number-versus-UInt conversion is the leading v2
 failure hypothesis, not a proven diagnosis.** The separate primitive accessors
 are declared in the installed `flashScriptImports.ws`; the native implementation
 and exact v2 returned values have not been traced. V3 also differed in timing,
-registration and write sequence. V4 still requires its own in-game acceptance.
+registration and write sequence. The user has now accepted v4's five-color palette for current use; see explicit acceptance and evidence limits below.
 
 ## User-reported v4 runtime acceptance — 10 October 2026
 
@@ -15,7 +15,9 @@ registration and write sequence. V4 still requires its own in-game acceptance.
 
 This is the first successful **v4** gameplay report, distinct from the earlier v3 probe. User confirms the green-tinted category, whitish neutral names and pale VIP names have the expected appearance in live gameplay. This supports working recoloring for **friendly/light green, neutral and VIP** categories, including two mappings that failed in v2. Treat as user-reported observation rather than independently observed game output. Their broad “Everything works” does not establish specific reload, flicker, rollback or combat tests.
 
-**Coverage still open:** hostile/enemy red and Axii categories were not observed in this test; the user explicitly says enemies have not yet been encountered. No numeric screenshot/color capture, rapid switching/reacquisition or HUD lifecycle test detail was provided. Do not mark all five mappings or full-profile compatibility completely verified. Next in-game encounter should check hostile red→soft oxide and, when feasible, Axii; meanwhile existing three categories are provisionally accepted. Shadow/font resource pipeline remains blocked and outside the v4 color package.
+**Explicit user decision (verbatim, 10 October 2026):** “Sure, let's put all those as confirmed for now though even though I haven't seen them, let's move to shadows and typography”.
+
+**Current disposition: user-confirmed / accepted for all five v4 mappings.** This supersedes the previous *pending acceptance* status and is sufficient to close the color-work milestone and proceed with shadow/typography development without further color testing. **Evidence retained separately:** neutral, friendly/light green and VIP/pale colors were directly reported working in the game; hostile/red and Axii were accepted by the user without direct observation. This is explicit acceptance, not a claim that all five were independently observed or that reload/flicker/rollback tests were performed. Keep v4 as the current color module, v2/v3 superseded/disabled, and revisit only if an actual regression is reported. Shadow and font work must remain independent of this working color mod.
 
 ## Smallest original correction
 
