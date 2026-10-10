@@ -6,6 +6,20 @@ branches. The new package is a diagnostic, not a runtime-proven correction.
 No installed script, settings, Vortex deployment or compatibility merge was
 changed; no game was launched. Font/shadow work remains outside this task.
 
+## User-reported in-game v3 outcome — 10 October 2026
+
+**Explicit user feedback, preserved verbatim:**
+- “Test successful”
+- “Yes, and not only cyan, also whitish colors too, and stayed on these whitish didn't return”
+
+The latter answers the question whether both Roach and Vesemir changed color during the test and whether the changes persisted. User confirms they saw the diagnostic colors (cyan followed by whitish/palette colors), which remained instead of reverting during observation. This is **user-reported live gameplay evidence**; the agent has not inspected screenshots, the numerical READ/NUMBER/UINT/PALETTE/FINAL messages, or timing details.
+
+**What this supports:** The separately installed v3 diagnostic executes enough to alter the visible name colors for the two observed targets, and a palette-like final color is achievable/persistent over the observed interval. Thus the game can render the desired muted colors without replacing the movie, and the underlying Flash path is at least functional in this test.
+
+**What remains inferred rather than demonstrated:** Exact source RGB returned by `GetMemberFlashNumber` versus `GetMemberFlashUInt`, whether Number setter independently succeeded, whether UInt getter / setter is the crucial v2/v3 difference, which phase caused each visual change, whether the original v2 wrapper ever ran, and persistence after target switching, HUD reload, fast travel, dialogue, or save reload. The diagnostic does not isolate those facts purely from visible colors. The strongest targeted next hypothesis is that v2's `GetMemberFlashNumber("textColor")` exact-value mapping misses the actual runtime read while v3's UInt-based path reaches a suitable RGB. Do not declare that as the confirmed root cause without exact diagnostic readings or a narrow controlled v4 comparison.
+
+**Next step:** Implement an original, minimal production color-only v4 in a separate removable mod, preferentially using the working v3 UInt-access pattern with exact palette values and safely handling unknown color values. Preserve wrapper return/chain and all other HUD behaviour. Compile with matched no-op controls, package privately, disable both v2 and v3 before testing, and request in-game Roach/Vesemir plus rapid focus/reacquisition, HUD reload, and rollback checks. Do not prematurely claim the problem fully solved or expand scope to shadows or fonts.
+
 ## Verified evidence, in requested order
 
 ### A. Loading and execution
