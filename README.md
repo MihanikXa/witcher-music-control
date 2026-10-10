@@ -12,7 +12,10 @@ or deployed yet. The private v2 color-only trial failed for both Roach (neutral)
 and Vesemir (VIP). The user then observed both names change and persist in the
 [v3 diagnostic](research/npc-color-failure-diagnostic.md). The current
 [clean v4 UInt color trial](research/npc-colors-v4-handoff.md) removes all diagnostic
-instrumentation and awaits its own gameplay acceptance. Disable v2 and v3 before testing v4.
+instrumentation. The user directly observed neutral, friendly and VIP colors working and
+explicitly accepted all five categories for now, including hostile/Axii not personally
+observed. Color is a closed milestone by user acceptance; shadow and typography are next.
+Keep v2 and v3 disabled, and preserve working v4 separately.
 The native REDkit SWF now cooks with its embedded atlas after
 including the official texture-group configuration. The importer still emits a
 resource-state assertion, shared by unrelated controls, so the unchanged
@@ -22,7 +25,8 @@ now compiles in the known source assembly. Its single added metadata assertion
 also occurs with two no-op wrappers, with no warning or other diagnostic delta.
 Full retail multi-blob coverage remains incomplete. The v2 visual failure is
 recorded in the [historical trial handoff](research/npc-color-trial-handoff.md);
-v4 has not been tested in-game. The exact v2 failure mechanism remains inferred.
+v4 has been observed working in three categories and accepted in all five by the user.
+The exact v2 failure mechanism remains inferred.
 See the current [controlled investigation](research/swf-state-investigation.md),
 [bounded Editor test and manual import steps](research/editor-workflow-bounded.md),
 [native NPC validation](research/native-npc-validation.md) and earlier
