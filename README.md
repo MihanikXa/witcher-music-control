@@ -5,8 +5,8 @@ An independent, research-first project for refining typography, text effects, NP
 The saved Editor assets now pass a reproducible [offline cook/bundle round trip](research/editor-cli-roundtrip.md).
 The Watermark failure was a stale workspace resolution issue. Editor assertion
 state remains unknown; no successful imports need repeating. Computer Use is
-prohibited. Independent SIL Gentium source preparation is verified; no Gentium
-font archive exists yet. The [private shadow-only v1 trial](research/npc-shadow-v1-handoff.md)
+prohibited. Independent SIL Gentium Book 7.000 English font conversion now has a validated private
+QuietFolio v1 archive, and the user reports that QuietFolio works in-game. The [private shadow-only v1 trial](research/npc-shadow-v1-handoff.md)
 passed offline cook/validate/bundle/atlas/ZIP gates and is now reported working
 in-game by the user, alongside accepted NPC colors v4. Its unique-name Editor import resolved the save dependency; no
 successful imports need repeating. Keep accepted v4 unchanged.
@@ -42,6 +42,14 @@ See the current [controlled investigation](research/swf-state-investigation.md),
 [Phase 2 investigation](research/phase2-validation.md). The private shadow v1 ZIP
 is available locally and user-reported working in-game; evidence for individual
 stress-test and other HUD surfaces remains limited.
+
+## Current user acceptance — 10 October 2026
+
+NPC Colors v4, NPC Shadow v1 and English Gentium Book v1 (QuietFolio) are
+all user-accepted working in-game. Acceptance is a positive user report, not
+independent confirmation of every glyph, scene or resolution. Preserve these
+three independently reversible mods and their recorded hashes. Further UI
+improvements are separate work, not automatic edits to accepted packages.
 
 ## Visual target
 
