@@ -36,6 +36,11 @@ and [verified Gentium source preparation](../research/shadow-font-manual-gate.md
 Computer Use is prohibited. The successful unchanged imports need no repetition.
 No shadow/font ZIP exists.
 
+The [first shadow-only SWF source](../research/npc-shadow-source-handoff.md)
+now passes byte-level and XML contract guards. Only seven decompressed bytes
+change in the target filter. A separate manual changed-input Editor import is
+required before cooking this candidate; preserve the unchanged baseline project.
+
 Color mapping is user-accepted and should not be rebuilt into the HUD movie as
 a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
 EnemyFocus movie (current font and colors controlled by existing v4 script);

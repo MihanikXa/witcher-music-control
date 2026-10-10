@@ -1,5 +1,5 @@
 {
-  "status": "saved-Editor-output CLI roundtrip reproduced; shadow transformation pending",
+  "status": "shadow-only native source verified; separate manual changed-input Editor import required",
   "computer_use_prohibited": true,
   "v4_unchanged": true,
   "shadow": {
@@ -21,12 +21,12 @@
       "distance": 1,
       "angle_passes_flags": "preserve"
     },
-    "transform_applied": false,
+    "transform_applied": true,
     "editor_import_executed": true,
     "unchanged_roundtrip_verified": false,
     "bundle_reextraction_verified": true,
     "package_path": null,
-    "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowGate",
+    "required_manual_project": "C:/Dev/witcher-ui-overhaul/build/npc-editor-run/projects/QuietEditorialNPCShadowTrial",
     "editor_saved_resources": true,
     "editor_result": "Both unchanged imports saved at correct workspace keys; non-image tag contracts equal native authoring movies",
     "editor_log_sha256": "eb4c64611a4c12b1b448e7e92fa42cb68a9c67c0844b38b008ee3bd0c29a5b1d",
@@ -157,7 +157,69 @@
     "repeat_cooked_bytes_identical": true,
     "repeat_bundle_bytes_identical": true,
     "current_report": "research/editor-cli-roundtrip.md",
-    "unchanged_roundtrip_scope": "offline saved-output build verified; retail/runtime and Editor creation state remain unverified"
+    "unchanged_roundtrip_scope": "offline saved-output build verified; retail/runtime and Editor creation state remain unverified",
+    "shadow_source": {
+      "input_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_enemyfocus.swf",
+      "input_sha256": "f84544e26c27b38e8b1f64ff8f77775743e1e6ecd7a4f1972fce381ed9a9e819",
+      "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+      "output_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-source-v1\\input\\hud_enemyfocus.swf",
+      "output_sha256": "64ad2c80b96770ed0d09fa59f6ac4b00f5beb859276b8b0d60ace27d0a16cc17",
+      "before": {
+        "type": "DROPSHADOWFILTER",
+        "angle": "0.7853851318359375",
+        "blurX": "4.0",
+        "blurY": "4.0",
+        "compositeSource": "true",
+        "distance": "1.0",
+        "id": "0",
+        "innerShadow": "false",
+        "knockout": "false",
+        "passes": "1",
+        "strength": "3.0",
+        "color": {
+          "type": "RGBA",
+          "alpha": "255",
+          "blue": "0",
+          "green": "0",
+          "red": "0"
+        }
+      },
+      "after": {
+        "type": "DROPSHADOWFILTER",
+        "angle": "0.7853851318359375",
+        "blurX": "2.0",
+        "blurY": "2.0",
+        "compositeSource": "true",
+        "distance": "1.0",
+        "id": "0",
+        "innerShadow": "false",
+        "knockout": "false",
+        "passes": "1",
+        "strength": "1.0",
+        "color": {
+          "type": "RGBA",
+          "alpha": "166",
+          "blue": "24",
+          "green": "23",
+          "red": "20"
+        }
+      },
+      "decompressed_byte_differences": 7,
+      "approved_filter_record_offset_in_body": 26150,
+      "movie_bytes_outside_filter_identical": true,
+      "unchanged_target_sprite_identical": true,
+      "final_xml_matches_filter_only_source": true,
+      "editor_imported": false,
+      "cooked": false,
+      "packaged": false,
+      "runtime_tested": false,
+      "package_path": null
+    },
+    "shadow_source_repeat_identical": true,
+    "shadow_candidate_editor_imported": false,
+    "shadow_candidate_cooked": false,
+    "shadow_candidate_package_path": null,
+    "shadow_source_report": "research/npc-shadow-source-handoff.md"
   },
   "english_font": {
     "status": "source-preparation-only; no-converted-resource",

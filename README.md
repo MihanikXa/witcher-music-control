@@ -6,7 +6,9 @@ The saved Editor assets now pass a reproducible [offline cook/bundle round trip]
 The Watermark failure was a stale workspace resolution issue. Editor assertion
 state remains unknown; no successful imports need repeating. Computer Use is
 prohibited. Independent SIL Gentium source preparation is verified; no shadow
-or font archive is installable yet. Keep accepted v4 unchanged.
+or font archive is installable yet. The [shadow-only source is prepared](research/npc-shadow-source-handoff.md)
+and needs one manual changed-input import into a separate test project.
+Keep accepted v4 unchanged.
 
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1
 research is in [research/findings.md](research/findings.md). The supplied

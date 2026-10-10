@@ -1,9 +1,12 @@
 # Bounded current Editor workflow investigation — 10 October 2026
 
-**Current continuation:** Computer Use is now prohibited by the user. Use the
-[short manual shadow gate](shadow-font-manual-gate.md) for the two unchanged
-imports. Keep accepted v4 unchanged; asset colors/combined color-shadow output
-are superseded by a shadow-only movie and independent font module.
+**Current continuation:** Computer Use is prohibited. The user subsequently
+saved both unchanged imports, and their [offline round trip](editor-cli-roundtrip.md)
+is reproduced. Only the [new shadow-source import](npc-shadow-source-handoff.md)
+needs a manual action now. Keep accepted v4 unchanged; asset colors/combined
+color-shadow output are superseded by a shadow-only movie and independent font
+module. The execution/outcome narrative below describes the earlier bounded
+attempt, not the current saved outputs.
 
 Outcome **B**: the current copied Editor starts and accepts the existing depot,
 but supported GUI project creation/import could not be operated with the
