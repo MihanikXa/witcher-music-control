@@ -7,7 +7,9 @@ The Watermark failure was a stale workspace resolution issue. Editor assertion
 state remains unknown; no successful imports need repeating. Computer Use is
 prohibited. Independent SIL Gentium source preparation is verified; no shadow
 or font archive is installable yet. The [shadow-only source is prepared](research/npc-shadow-source-handoff.md)
-and needs one manual changed-input import into a separate test project.
+but its first changed-input save was cancelled by REDkit. The
+[checkout/save retry](research/npc-shadow-save-blocker.md) affects only that
+separate trial project; the unchanged imports need no repetition.
 Keep accepted v4 unchanged.
 
 Current scope: **English only**, per the user's 9 October 2026 update. Phase 1

@@ -1,5 +1,11 @@
 # NPC shadow-only source trial: manual changed-input gate
 
+**Changed-input save blocker:** the user created/imported/saved and observed no
+assertion, but the current log records exporter success followed by cancelled
+overwrite/save. The new project has no workspace resource yet. See the
+[specific checkout/save retry](npc-shadow-save-blocker.md). Only this changed
+candidate needs retry; the successful unchanged baseline is intact.
+
 The unchanged saved Editor-output pipeline is verified offline; see
 [the corrected cook/bundle evidence](editor-cli-roundtrip.md). This continuation
 prepares the first original shadow-only **native SWF**, not an installable mod.
@@ -70,7 +76,8 @@ Keep their existing project/workspace intact as the comparison baseline.
    Use the existing `E:\TheWitcher3RMDepot\` depot; do not generate a depot or
    open the working compatibility project.
 2. In Asset Browser, navigate to `gameplay/gui_new/swf/hud`. Use the same
-   successful **Import → Flash SWF** workflow, selecting only
+   successful checkout workflow: first check out `hud_enemyfocus.redswf` into
+   this new project's workspace. Then **Import → Flash SWF**, selecting only
    `C:\Dev\witcher-ui-overhaul\build\npc-shadow-source-v1\input\hud_enemyfocus.swf`.
    Confirm replacement/checkout into this **new project workspace**, then Save.
    Do not overwrite an installed/depot source or import Watermark again.

@@ -67,6 +67,6 @@ Computer Use remains prohibited.
    fails, report the exact dialog text; do not change resource paths or suppress
    assertions to proceed. Do not choose Ignore All on an assertion dialog.
 
-Also report whether Ignore All was selected in the first run, because the log's
-disabled-assertion state affects how we can interpret that run's diagnostics.
+Assertion state is unknown; the user's clarification supersedes the earlier
+request to recall Ignore All. No recollection is needed to continue validation.
 Do not cook, publish, deploy or launch the game during this retry.

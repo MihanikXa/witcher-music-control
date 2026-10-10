@@ -23,20 +23,28 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--layout', type=Path, required=True)
     ap.add_argument('--workspace', type=Path, required=True)
+    ap.add_argument('--control-workspace', type=Path,
+                    help='Read unchanged Watermark from a separate baseline project')
     ap.add_argument('--out', type=Path, required=True)
     args = ap.parse_args()
     out = args.out.resolve()
     if ROOT / 'build' not in out.parents or out.exists():
         raise ValueError('Fresh private build output required')
+    inputs = []
+    for name in ('hud_enemyfocus', 'hud_watermark'):
+        rel = Path(KEY).with_name(name + '.redswf')
+        workspace = args.control_workspace if name == 'hud_watermark' and args.control_workspace else args.workspace
+        source = workspace / rel
+        if not source.is_file():
+            raise ValueError('Saved Editor resource missing; no cooker executed: ' + str(source.resolve()))
+        inputs.append((rel, source))
     out.mkdir()
     for rel in ('bin/x64_RedKit', 'bin/config', 'r4data'):
         shutil.copytree(args.layout / rel, out / rel)
     for rel in ('bin/gameconf.cfg', 'bin/redscripts.ini'):
         shutil.copy2(args.layout / rel, out / rel)
     sources = []
-    for name in ('hud_enemyfocus', 'hud_watermark'):
-        rel = Path(KEY).with_name(name + '.redswf')
-        source = args.workspace / rel
+    for rel, source in inputs:
         dest = out / 'bin/workspace' / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, dest)
