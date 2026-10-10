@@ -1,7 +1,33 @@
 # Field & Folio interaction typography v1 — private runtime trial
 
+## User-observed runtime result — 11 October 2026
+
+**Explicit user reaction (verbatim):** “Yeah it works, although looks very bold and big”.
+
+Two uploaded in-game screenshots show short `Talk` interaction action names
+rendering in the movie-local sans face above the Gentium Book NPC names
+`Vesemir` and `Peasant`. **Runtime selection/rendering succeeds**, but the
+user considers the current typography **too bold and too large**. This is
+functional proof, **not visual acceptance** or all-behavior certification:
+held prompts, keyboard/controller icon transitions, bright-background
+legibility, long labels and all tested resolutions remain unreported.
+
+The modified `tfActionName` retains the authored 22px font height and the
+existing opaque black GLOWFILTER with blur4/strength3/passes1. It selects
+Source Sans 3 **Regular**, not Medium or Bold. The combined apparent face
+size/x-height, filter and surrounding Gentium contrast plausibly explain why
+`Talk` dominates the NPC name; individual causes have not been A/B verified.
+The intended hierarchy is that character/name is visually primary and action
+hint is secondary. Keep v1 ZIP/hashes unchanged and prepare a separate,
+reversible v2 trial at ~19px with a softer field-local shadow/contrast
+treatment. Maintain clear text in snow/daylight and dark interiors; do not
+silently make instructions illegible. Preserve glyph and controller artwork,
+text/hold state, original renderer bindings and accepted UI packages.
+See [interaction v2 design gate](../design/field-folio-interactions-v2.md).
+
 **Unchanged control and Regular candidate pass the complete official offline
-pipeline. In-game acceptance is pending.** User-performed imports are verified;
+pipeline. In-game font rendering works, but visual acceptance is withheld due
+to excessive apparent size/weight.** User-performed imports are verified;
 no installation, deployment, game launch or live settings change occurred.
 Accepted QuietFolio English v1, NPC Colors v4 and NPC Shadow v1 are unchanged.
 
