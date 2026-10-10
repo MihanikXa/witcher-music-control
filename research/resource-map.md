@@ -2,17 +2,19 @@
 
 Current verified follow-ups supersede the historical build gate below:
 [accepted English Gentium v1](gentium-v1-handoff.md) and
-[Field & Folio interaction source proof](field-folio-phase1.md). The official
-font pipeline passed and v1 is user-accepted. The new interaction-local family
-passes serialization/GFx export; its Editor import, cook, textures and runtime
-resolution are still pending. No global auxiliary alias is assumed.
+[Field & Folio interaction v1 offline handoff](field-folio-v1-handoff.md). The
+English font pipeline passed and v1 is user-accepted. The new interaction-local
+family passes serialization/GFx export, user-performed Editor import and the
+official cook/validate/bundle/metadata pipeline. Both full atlases match vanilla;
+exact bundle re-extraction passes. Runtime font resolution remains untested.
+No global auxiliary alias is assumed.
 
 **NPC live-binding update:** the authored `mcNPCFocus.tfName` hierarchy is
 verified. The user observed the generic field accessor with UInt writes working
 in v3 and accepted all v4 mappings (three categories directly observed). Color
 work is closed; Number-versus-UInt remains the leading, unproven v2 failure
 hypothesis. See the [v4 evidence](npc-colors-v4-handoff.md) and independent
-[shadow-only v1 trial](npc-shadow-v1-handoff.md), whose runtime appearance is pending.
+[shadow-only v1 trial](npc-shadow-v1-handoff.md), now user-accepted in-game.
 
 Paths below `gameplay/gui_new/swf/` are observed runtime keys, not filesystem
 guesses. `content/content0/bundles/startup.bundle` owns the selected HUD modules

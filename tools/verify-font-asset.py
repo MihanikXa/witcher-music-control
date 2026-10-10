@@ -34,7 +34,7 @@ def workspace_inventory(path):
 
 
 @contextmanager
-def mounted_input(runner, out, resource):
+def mounted_input(runner, out, resource, key=KEY):
     runner=private_path(runner); out=private_path(out)
     if runner in out.parents or out in runner.parents:
         raise ValueError('Runner and output must be separate directories')
@@ -46,13 +46,19 @@ def mounted_input(runner, out, resource):
     if workspace.exists() and any(p.is_symlink() or p.is_junction() for p in workspace.rglob('*')):
         raise ValueError('Workspace contains linked paths')
     before=workspace_inventory(workspace)
-    if workspace.exists(): workspace.rename(backup)
+    if key.startswith(('/', '\\')) or '..' in Path(key).parts or ':' in key:
+        raise ValueError('Relative canonical resource key required')
+    existing_empty = workspace.exists() and before == {}
+    if workspace.exists() and not existing_empty: workspace.rename(backup)
     try:
-        dest=workspace/KEY; dest.parent.mkdir(parents=True)
+        dest=workspace/key; dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(resource,dest)
         yield workspace
     finally:
-        if workspace.exists(): workspace.rename(preserved)
+        if existing_empty:
+            target=preserved/key;target.parent.mkdir(parents=True)
+            if dest.exists(): dest.rename(target)
+        elif workspace.exists(): workspace.rename(preserved)
         if backup.exists(): backup.rename(workspace)
         if workspace_inventory(workspace)!=before:
             raise ValueError('Original private runner workspace was not restored')

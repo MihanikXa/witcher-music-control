@@ -1,5 +1,5 @@
 {
-  "status": "Source validated; unchanged and candidate Editor imports required",
+  "status": "Offline validated private interaction-only trial; user runtime acceptance pending",
   "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
   "native_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
   "runtime_sha256": "5e1ce7d3be052cea8a0ea9d1d744a3fe059fd367bc4bd7ed951fa76d599780e9",
@@ -510,15 +510,15 @@
     "full_run_gpos_samples_verified": true,
     "runtime_baseline_clipping_and_autosizing_verified": false
   },
-  "next_user_action": "Create new QuietFolioUtilityTrial project, import unchanged and Regular source SWFs, save both, close Editor",
+  "next_user_action": "Install private Field & Folio interaction v1 ZIP manually in Witcher Compatibility Test; keep all three accepted mods enabled; perform handoff tests",
   "computer_use": false,
   "live_files_modified": false,
   "pipeline_status": {
     "source_and_glyphs": "passed",
     "official_gfx_export": "passed",
-    "editor_import": "pending manual user action",
-    "cook_validate_bundle_metadata_reextraction": "not executed for this resource",
-    "private_zip": "not built",
+    "editor_import": "User completed; saved resources verified",
+    "cook_validate_bundle_metadata_reextraction": "Passed for unchanged and Regular candidate",
+    "private_zip": "Built and deterministic repeat verified",
     "runtime": "untested"
   },
   "accepted_packages": {
@@ -541,5 +541,6 @@
     "copied_source_identical": true,
     "fonts_xml_sha256": "a8e0725a7e6aab385de41d5f71760c61381598be0817d0afbc69a148fac3e3b9",
     "copied_fonts_xml_identical": true
-  }
+  },
+  "validated_trial_manifest": "research/field-folio-v1-manifest.json"
 }

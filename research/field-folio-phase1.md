@@ -1,7 +1,9 @@
 # Field & Folio phase 1 — interaction-only source prototype
 
-**Implemented and independently validated authoring SWFs; official GFx export
-passed. Manual Editor import is the current dependency. No installable ZIP.**
+**Source preparation complete; unchanged and candidate official asset pipelines
+now pass. Private v1 ZIP built; in-game acceptance pending.**
+See [current validation and installation handoff](field-folio-v1-handoff.md).
+The manual import instructions below are historical and already completed.
 QuietFolio English v1, NPC Colors v4 and Shadow v1 are user-accepted and unchanged.
 Only the new interaction font experiment is active. No installed game, REDkit,
 Vortex, settings, saves or compatibility scripts were modified or launched.

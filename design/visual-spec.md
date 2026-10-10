@@ -16,7 +16,7 @@ next font trial, not a prerequisite for the proof.
 | Direction | Typography | Strength | Trade-off and feasibility |
 |---|---|---|---|
 | 01 Quiet Editorial | Gentium Book for reading and auxiliary controls; regular with selective bold | Closest to supplied reference, unified literary tone, simplest global EN library trial | Broad book face is less compact than PF Din; more wrapping, dense small controls and numeric alignment risks. Font library alone changes no sizes/effects |
-| 02 Field & Folio | Gentium Book for reading/names; Source Sans 3 for compact auxiliary roles | Preserves personality while separating reading from action; recommended long-term direction | Requires an additional family and selected TextField bindings, beyond three global normal/bold/italic aliases. Exact export/integration pending |
+| 02 Field & Folio | Gentium Book for reading/names; Source Sans 3 for compact auxiliary roles | Preserves personality while separating reading from action; recommended long-term direction | Requires an additional family and selected TextField bindings, beyond three global normal/bold/italic aliases. Interaction-only offline integration passes; runtime acceptance pending |
 | 03 Humanist Chronicle | Alegreya Regular for reading/names; Source Sans 3 for auxiliary roles | More rhythmic, earthy letterforms; another literary candidate with independently available source | Test figure style, cap texture, width and italics. Do not inherit Font of Life's customized condensation/small caps without independently designing and testing them |
 
 Gentium Book is slightly heavier than Gentium; Regular is the initial weight.
@@ -28,9 +28,12 @@ Russian/Ukrainian support is no longer a project requirement.
 Current Field & Folio implementation is limited to the interaction action
 field: [source and linkage proof](../research/field-folio-phase1.md). Two local
 utility font definitions avoid changing the accepted narrative English library.
-The official GFx exporter preserves the direct FontID selector; full Editor/
-cook/texture and runtime acceptance are pending. No broader two-family rollout
-or shadow/color change is included.
+The official GFx exporter and saved/cooked resource preserve the direct FontID
+selector. Unchanged and Regular candidate official pipelines pass, including
+both full texture atlases and exact bundle re-extraction.
+[Private v1 trial and acceptance tests](../research/field-folio-v1-handoff.md).
+Runtime acceptance is pending. No broader two-family rollout or shadow/color
+change is included.
 
 ## Provisional palette
 
