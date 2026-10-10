@@ -1,3 +1,14 @@
+## User-accepted English typography trial — 10 October 2026
+
+The user reports “QuietFolio is a success by the way.” Thus English Gentium Book
+v1, together with accepted NPC Colors v4 and Shadow v1, is now user-accepted
+in-game. The complete 383-codepoint per-style licensed conversion and current
+single-key cook/bundle/re-extraction gates passed offline as documented in
+`research/gentium-v1-handoff.md`. Record the user's acceptance separately
+from comprehensive typography stress tests; no additional corrective build is
+requested. Preserve the accepted assets unchanged. Any subtitle/menu shadow
+rework is a distinct, opt-in later module and does not affect this status.
+
 # Modular implementation plan — no deployment
 
 Current English font implementation: all 383 mappings per style are converted
