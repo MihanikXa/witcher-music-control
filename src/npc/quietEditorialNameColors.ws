@@ -1,4 +1,4 @@
-// Original experimental fallback: recolor only known vanilla NPC-name colors.
+// Original v4 production trial: recolor only known vanilla NPC-name colors.
 // Keep the current movie, all merged methods, visibility and health logic.
 // Private color-only trial; compile and diagnostic controls required.
 @wrapMethod(CR4HudModuleEnemyFocus)
@@ -18,7 +18,11 @@ function OnTick(timeDelta : float)
     movie = GetModuleFlash();
     focus = movie.GetChildFlashSprite("mcNPCFocus");
     label = focus.GetMemberFlashObject("tfName");
-    originalColor = (int)label.GetMemberFlashNumber("textColor");
+    // Reacquire handles each tick: no stale references across HUD recreation.
+    // Empty/unavailable text during initialization requires no styling.
+    if (label.GetMemberFlashString("text") == "")
+        return nativeResult;
+    originalColor = label.GetMemberFlashUInt("textColor");
     newColor = originalColor;
     switch (originalColor)
     {
@@ -30,7 +34,10 @@ function OnTick(timeDelta : float)
     }
     if (newColor != originalColor)
     {
-        label.SetMemberFlashNumber("textColor", (float)newColor);
+        // UInt is the v3 palette-write path observed working in-game.
+        // Recheck current RGB after the chain to repair game-driven resets;
+        // already-mapped and unknown RGB values cause no write.
+        label.SetMemberFlashUInt("textColor", newColor);
     }
     return nativeResult;
 }

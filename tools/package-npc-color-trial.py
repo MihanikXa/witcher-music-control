@@ -45,12 +45,17 @@ def main():
     ap.add_argument('--settings', type=Path, required=True)
     ap.add_argument('--out', type=Path, required=True)
     ap.add_argument('--probe', action='store_true', help='Package bounded original diagnostic, requiring v2 disabled')
+    ap.add_argument('--v4', action='store_true', help='Package clean UInt color trial, requiring v2 and v3 disabled')
     a = ap.parse_args()
+    if a.probe and a.v4:
+        raise ValueError('Choose one package mode')
     work = a.out.resolve()
     if ROOT / 'deploy' not in work.parents or work.exists():
         raise ValueError('Fresh private deploy directory required')
     source = ROOT / 'src/npc' / ('quietEditorialNameProbe.ws' if a.probe else 'quietEditorialNameColors.ws')
     member = 'Mods/modQuietEditorialNPCProbe/content/scripts/local/quietEditorialNameProbe.ws' if a.probe else MEMBER
+    if a.v4:
+        member = 'Mods/modQuietEditorialNPCColorsV4/content/scripts/local/quietEditorialNameColorsV4.ws'
     candidate = fallback.text(source).encode('utf-8')
     receipt = json.loads(a.controls.read_text())
     gate(receipt, candidate, probe=a.probe)
@@ -63,9 +68,11 @@ def main():
     cfg.read_string(fallback.text(a.settings))
     mods = [s for s in cfg.sections() if cfg[s].get('Enabled') == '1']
     superseded = []
-    if a.probe and 'modQuietEditorialNPCColors' in mods:
-        superseded.append('modQuietEditorialNPCColors')
-        mods.remove('modQuietEditorialNPCColors')
+    must_disable = ['modQuietEditorialNPCColors', 'modQuietEditorialNPCProbe'] if a.v4 else (['modQuietEditorialNPCColors'] if a.probe else [])
+    for old in must_disable:
+        if old in mods:
+            superseded.append(old)
+            mods.remove(old)
     assembly_text_hashes = {hashlib.sha256(fallback.text(Path(s['path'])).encode()).hexdigest()
                             for s in receipt['sources']}
     intersection = []
@@ -95,6 +102,8 @@ def main():
         raise ValueError('Current FriendlyHUD/SAH source mismatch')
     work.mkdir(parents=True)
     archive = work / ('QuietEditorial-NPC-NameProbe-private-test.zip' if a.probe else 'QuietEditorial-NPC-Colors-private-test.zip')
+    if a.v4:
+        archive = work / 'QuietEditorial-NPC-Colors-v4-private-test.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as z:
         info = zipfile.ZipInfo(member, (2026, 10, 9, 0, 0, 0))
         info.compress_type = zipfile.ZIP_DEFLATED
@@ -108,12 +117,16 @@ def main():
                     member=member, member_sha256=hashlib.sha256(candidate).hexdigest(),
                     compiler_sha256=receipt['compiler_sha256'], controls_sha256=fallback.sha(a.controls),
                     settings_sha256=fallback.sha(a.settings), on_tick_intersections=intersection,
-                    must_disable_mods=['modQuietEditorialNPCColors'] if a.probe else [],
+                    must_disable_mods=must_disable,
                     currently_enabled_superseded_mods=superseded,
                     providers=providers, opaque_mods_not_recompiled=opaque,
                     vortex_route='witcher3tl installer preserves Mods/; witcher3tl deploys at game root',
                     runtime_tested=False, vortex_preview_executed=False, deployed=False,
                     shadow_changes=False, resource_replacements=[], compiled_blobs_packaged=False)
+    if a.v4:
+        manifest['trial_version'] = 4
+        manifest['status'] = 'private-clean-UInt-color-trial; runtime-acceptance-pending'
+        manifest['diagnostic_instrumentation'] = False
     (work / 'manifest.json').write_text(json.dumps(manifest, indent=2))
     print(json.dumps(manifest, indent=2))
 

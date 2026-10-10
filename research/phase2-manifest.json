@@ -1,5 +1,5 @@
 {
-  "status": "asset-route-blocked; v2-runtime-failed; bounded-npc-name-diagnostic-ready",
+  "status": "asset-route-blocked; v3-user-visual-success; clean-UInt-v4-trial-ready",
   "date": "2026-10-10",
   "scope": "English NPC typography/text-color/text-rendering only; broader roadmap deferred",
   "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
@@ -1480,7 +1480,7 @@
     "superseded_by": "private_color_trial"
   },
   "current_movie_collisions": [],
-  "current_settings_sha256": "42068953d6acd01ddcf17201af4c72abdbb7a395ebcf913bf49b5ee17f571423",
+  "current_settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
   "runtime_reconstruction_history": {
     "status": "blocked",
     "date": "2026-10-09",
@@ -1642,7 +1642,7 @@
   "texture_array_preserved": true,
   "unchanged_roundtrip_verified": false,
   "package_built": true,
-  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-nameprobe-v3\\QuietEditorial-NPC-NameProbe-private-test.zip",
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v4\\QuietEditorial-NPC-Colors-v4-private-test.zip",
   "deployed": false,
   "game_tested": false,
   "assertion_investigation": {
@@ -3313,15 +3313,15 @@
   },
   "script_fallback_current": {
     "source": "src/npc/quietEditorialNameColors.ws",
-    "source_sha256": "533d039bd5e1c44059691b69695a287a381133199d594c972d0457cf5096a260",
+    "source_sha256": "1b9d70f775ac1cf4173739fa01325d65ead2bdb9c1aeb363dac548c03f6b82b7",
     "compiler_pass": true,
     "private_trial_packaging_allowed": true,
-    "runtime_tested": true,
+    "runtime_tested": false,
     "full_retail_multiblob_simulation": false,
     "event_return_preserved": true,
-    "details": "private_color_trial",
-    "runtime_outcome": "failed-neutral-and-VIP",
-    "next_test": "npc_nameprobe"
+    "details": "npc_colors_v4",
+    "runtime_outcome": "v4-acceptance-pending",
+    "next_test": "npc_colors_v4"
   },
   "npc_nameprobe": {
     "status": "private-bounded-name-diagnostic",
@@ -3377,7 +3377,7 @@
       "modEvilsOfRivia"
     ],
     "vortex_route": "witcher3tl installer preserves Mods/; witcher3tl deploys at game root",
-    "runtime_tested": false,
+    "runtime_tested": true,
     "vortex_preview_executed": false,
     "deployed": false,
     "shadow_changes": false,
@@ -3461,6 +3461,171 @@
     "deterministic_rebuild_zip_sha256": "3d6803e582227c3d967bf189c1465b71df3523a541ba65ee6edc4fcd1540326b",
     "runtime_movie_sha256": "8b5c7cf0cb0e61fd005239689e096c9c5da9e3f1aa2182f9f88c71057903a76e",
     "runtime_movie_replacement_owners": [],
-    "test_notifications_limit": 12
+    "test_notifications_limit": 12,
+    "runtime_outcome": "User observed Roach and Vesemir cyan then lighter palette-like colors, persisting during observation; numeric phase readouts unavailable",
+    "superseded_for_testing_by": "npc_colors_v4"
+  },
+  "npc_colors_v4": {
+    "status": "private-clean-UInt-color-trial; runtime-acceptance-pending",
+    "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\npc-colors-private-v4\\QuietEditorial-NPC-Colors-v4-private-test.zip",
+    "zip_sha256": "94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e",
+    "zip_bytes": 1197,
+    "member": "Mods/modQuietEditorialNPCColorsV4/content/scripts/local/quietEditorialNameColorsV4.ws",
+    "member_sha256": "1b9d70f775ac1cf4173739fa01325d65ead2bdb9c1aeb363dac548c03f6b82b7",
+    "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+    "controls_sha256": "c5061fe189f795a591552fa3e5426689a2374abe949c17b201d6f1deb0d614dd",
+    "settings_sha256": "24c71c98ab6e3c9fddcb7d5fc11d0edf03e700ccf5940b4789f9108e152eb3e4",
+    "on_tick_intersections": [
+      {
+        "mod": "modMonsterHuntContracts",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modMonsterHuntContracts\\content\\scripts\\local\\mhcContractBossBar.ws",
+        "sha256": "32d4e556c05d722846eb64d3bcc8e0b45e06cc09bed9e9ebef64dc60bf8da59c",
+        "source_assembly_covered": true
+      }
+    ],
+    "must_disable_mods": [
+      "modQuietEditorialNPCColors",
+      "modQuietEditorialNPCProbe"
+    ],
+    "currently_enabled_superseded_mods": [],
+    "providers": [
+      {
+        "mod": "modFriendlyHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws",
+        "sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+        "source_assembly_covered": true
+      },
+      {
+        "mod": "modSeamlessAdaptiveHUD",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hooks.ws",
+        "sha256": "21251f33625f039622da3fe92d1ebc23fd9b72663caaad631bd6f8cb11db4ca8",
+        "source_assembly_covered": true
+      }
+    ],
+    "opaque_mods_not_recompiled": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "vortex_route": "witcher3tl installer preserves Mods/; witcher3tl deploys at game root",
+    "runtime_tested": false,
+    "vortex_preview_executed": false,
+    "deployed": false,
+    "shadow_changes": false,
+    "resource_replacements": [],
+    "compiled_blobs_packaged": false,
+    "trial_version": 4,
+    "diagnostic_instrumentation": false,
+    "report": "research/npc-colors-v4-handoff.md",
+    "source": "src/npc/quietEditorialNameColors.ws",
+    "source_provenance": "Original single additive UInt hook; no copied third-party implementation or game binaries",
+    "source_license": "Original private test source; no third-party asset redistribution",
+    "source_records": 1711,
+    "source_inputs_unchanged": true,
+    "deterministic_rebuild_zip_sha256": "94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e",
+    "regression_criterion": "Candidate and both no-op controls share one added scriptCompiledCode.cpp:56 source-metadata assertion; no other assertion or warning delta; nonempty blobs and zero Script/WCC errors",
+    "compiler_controls": [
+      {
+        "label": "baseline",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\baseline"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "d8d9046fdda462171cb857c2eb4a157dc2335458209705e7ce08d44630021530",
+        "blob_bytes": 52978,
+        "source_sha256": null,
+        "assertion_count": 23591,
+        "warning_count": 819
+      },
+      {
+        "label": "npc_noop",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\npc_noop"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "cd2e1a4e85b514f4211fd467f7a6b26fbfe49e2c5be05cd4fe797105149a62cc",
+        "blob_bytes": 53101,
+        "source_sha256": "2871e362bfb3de14fc4f3a8927939cd8f5d195605e0bb6b9ad8f9b2549d14293",
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {}
+      },
+      {
+        "label": "hud_noop",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\hud_noop"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "9c1d4c23b0f6496aea9c5a34aae89250c62f3753d9ad7492e5a41f6e69146928",
+        "blob_bytes": 53058,
+        "source_sha256": "45f031fd5108ee80ff87348c179c62f27e529e6adc7fc71e1d00139786315bd5",
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {}
+      },
+      {
+        "label": "candidate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+          "compilescripts",
+          "C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\base",
+          "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\patch",
+          "-out=C:\\Dev\\witcher-ui-overhaul\\build\\npc-colors-v4-controls\\candidate"
+        ],
+        "exit_code": 0,
+        "errors": [],
+        "success": true,
+        "blob_sha256": "e29ab9a828e1d0ad628a5a57d673fcfd2aa4775f7da2d5b279b2bcc8eb663375",
+        "blob_bytes": 53746,
+        "source_sha256": "1b9d70f775ac1cf4173739fa01325d65ead2bdb9c1aeb363dac548c03f6b82b7",
+        "assertion_count": 23592,
+        "warning_count": 819,
+        "assertions_added": {
+          "[D:\\Main.Lava\\dev\\src\\common\\core\\scriptCompiledCode.cpp:56] ( !m_sourceFile.Empty() ).": 1
+        },
+        "assertions_removed": {},
+        "warnings_added": {},
+        "warnings_removed": {}
+      }
+    ],
+    "palette": {
+      "7977213": 15327954,
+      "13869949": 11845792,
+      "16711680": 14065811,
+      "16561481": 11846353,
+      "5963520": 14008462
+    }
   }
 }

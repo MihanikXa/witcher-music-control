@@ -9,9 +9,10 @@ corrected additive script fallback compiles in the known source assembly;
 exact deployed compiled-mod coverage remains incomplete. A private color-only
 loose-script ZIP passed controlled no-op/compiler and current source
 intersection checks but failed the user's Roach neutral and Vesemir VIP test.
-The current bounded diagnostic preserves the event result and measures execution,
-field identity, Number/UInt access and delayed overwrites before choosing a fix.
-See the [diagnostic handoff](../research/npc-color-failure-diagnostic.md).
+The user observed the diagnostic change both names and retain palette-like colors.
+The clean v4 UInt trial preserves the event result and five mappings without
+diagnostic state; its own target-switch/reload/visibility acceptance is pending.
+See the [v4 handoff](../research/npc-colors-v4-handoff.md).
 Asset/shadow variants remain
 blocked. The isolated copied Editor reached Create Project, but desktop input
 failed before project creation/import. See the current
@@ -106,7 +107,7 @@ If a current-tool round trip cannot be verified, stop before packaging and
 consider a narrowly original RGB-only script proof; its wrapper/compiler
 compatibility with FriendlyHUD must be demonstrated before calling it viable.
 
-Current narrow fallback handoff: [bounded NPC color diagnostic](../research/npc-color-failure-diagnostic.md).
+Current narrow fallback handoff: [clean NPC Colors v4](../research/npc-colors-v4-handoff.md).
 The [v2 color-only trial](../research/npc-color-trial-handoff.md) is failed-test history.
 The controlled no-op diagnostic criterion replaces the earlier blanket
 zero-additional-assertion/full-opaque-recompile packaging block for this original

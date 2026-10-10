@@ -22,6 +22,10 @@ The latter answers the question whether both Roach and Vesemir changed color dur
 
 ## Verified evidence, in requested order
 
+**Follow-up implementation:** [clean NPC Colors v4](npc-colors-v4-handoff.md)
+uses the successful field path and UInt palette-write approach, with all
+instrumentation removed. Disable v2/v3 for that separate acceptance test.
+
 ### A. Loading and execution
 
 Read the deployed v2 file directly. SHA-256
