@@ -2,7 +2,7 @@
 
 ## User feedback and success criterion
 
-11 October 2026 explicit result: **“Yeah it works, although looks very bold and big”**.
+11 October 2026 explicit result: **“Yeah it works, although looks very bold and big”**. Subsequently the user explicitly clarified: **“I think interaction prompts should be subordinate to the names, so maybe even smaller, and I think we need that NPC Shadow v1 treatment everywhere in text where the stronger shadow was used.”** The priority is now an **unambiguous hierarchy**, rather than a mildly smaller alternative.
 Screenshots: `Talk` in utility sans visually dominates `Vesemir` and
 `Peasant` in accepted QuietFolio Gentium Book. Interaction font linkage and
 in-game rendering are therefore successful, but **visual hierarchy is not**
@@ -20,11 +20,10 @@ Gentium. Do not assert which cause dominates until comparing variants.
 
 ## Candidate for the next manual runtime test
 
-Start with **19px Source Sans 3 Regular**, no artificial width scaling or
-font-weight change. The authored field height is 30.2px, field width400px,
+Start with **17px Source Sans 3 Regular**, with a separate 16px source candidate if needed for an even quieter result. This is a visual trial, not a presumption that any fixed pixel target equals a specific apparent size. Aim for approximately 70–80% of the **perceived prominence** of the NPC name without sacrificing readability. Keep the accepted 20px Gentium NPC name unchanged. No artificial width scaling or font-weight change. The authored field height is 30.2px, field width400px,
 centered horizontal alignment; preserve semantic positioning and text setters.
 If fontHeight is encoded as 440 twips at 22px, verify new size through an
-independent decoder (target 380 twips for 19px). Changing font height can alter
+independent decoder (target 340 twips for 17px, 320 twips for 16px). Changing font height can alter
 vertical baseline: check it in the authored movie and then game, and apply
 only a demonstrably needed narrow y-offset if evidence requires it.
 
@@ -35,10 +34,9 @@ not a blind copied filter binary: alpha≈166/255, blur2, strength1, distance1,
 near-charcoal #141718 are candidate values. First inspect exact filter type,
 character/placement path, fields and the control source; preserve all flags,
 angle, passes and unrelated filters unless explicitly part of this patch.
-This is a design candidate, not a proven bright-snow contrast solution.
+This is a design candidate, not a proven bright-snow contrast solution. The same accepted NPC-shadow **visual language** is now the broader cross-UI goal, detailed in [text shadow unification](text-shadow-unification.md). Keep the interaction v2 prototype one resource and one affected field; do not put global patches inside it.
 
-If the combined size/effect change looks too weak, we can test independent
-size-only or shadow-only variants. Do **not** darken/grey/desaturate the
+If the combined size/effect change becomes too small to read, test 18px or a slightly firmer local shadow; if still too dominant, test the separately prepared 16px source candidate. Distinguish size from shadow effects with independent checks where practical. Do **not** darken/grey/desaturate the
 foreground text by default to reduce prominence: background contrast varies.
 Do not hide interaction text as a means of 'fixing' its appearance.
 
@@ -80,8 +78,8 @@ Do not hide interaction text as a means of 'fixing' its appearance.
 ## Bounded runtime acceptance
 
 Compare the same `Talk` over Vesemir and `Talk` over Peasant views with v1
-at unchanged display scale. Confirm smaller and softer action label, NPC name
-still dominant, no overlap with yellow quest icon, no baseline shift or
+at unchanged display scale. Confirm clearly subordinate, smaller and softer action label, NPC name
+visually dominant, no overlap with yellow quest icon, no baseline shift or
 unintended second line. Confirm a held prompt, longer interaction, gamepad
 key-art/hide/show and snow/sky or other bright background along with dark
 interior. Test at the user's actual resolution/viewing distance. On issue,
