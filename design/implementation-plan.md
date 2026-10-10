@@ -29,39 +29,32 @@ Editor assertion state and live rendering remain unverified. See the historical
 [reconstruction investigation](../research/phase2-validation.md).
 The package boundaries and first-proof specification below remain proposals.
 
-## Current next milestone — shadows and typography (active)
+## Current next milestone — English typography (active)
 
-Current executable evidence: [saved Editor output round trip](../research/editor-cli-roundtrip.md)
-and [verified Gentium source preparation](../research/shadow-font-manual-gate.md).
-Computer Use is prohibited. The successful unchanged imports need no repetition.
-The [private shadow v1 ZIP](../research/npc-shadow-v1-handoff.md) passes offline
-gates and awaits in-game acceptance. No font ZIP exists.
+The user explicitly accepted all five colors, with neutral/friendly/VIP observed
+in-game. The user also explicitly reported NPC shadow v1 working in-game on 10
+October 2026. The current NPC nameplate color-and-shadow proof is therefore
+closed by user acceptance. Preserve both independent Vortex modules, and do not
+replace the script palette in the edited SWF. No screenshots, all-scene contrast
+tests or universal HUD compatibility claims were supplied.
 
-The [first shadow-only SWF source](../research/npc-shadow-source-handoff.md)
-passes byte-level and XML contract guards. Only seven decompressed bytes
-change in the target filter. The user saved a uniquely named changed-input
-Editor resource; its copied canonical-key cook/validate/pack/re-extraction and
-private ZIP checks pass. The unchanged baseline project is preserved.
+**Next development task:** finish the standalone English Gentium Book Regular,
+Italic and Bold font-library source/conversion/coverage gates, followed by an
+unchanged fonts_en.redswf cook/bundle/roundtrip and a private reversible EN-only
+font mod. The upstream Gentium 7.000 source and licenses are prepared, but six
+of the current vanilla code points are missing and SWF shape/metric/kerning
+conversion is not yet validated. Do not drop missing glyphs or copy proprietary
+PF Din/reference-mod outlines. Keep existing text bounds, runtime subtitle
+scaling, dialogue/UI behavior and font aliases, and treat wider metrics and
+wrapping as acceptance risks. Verify against the current installed runtime,
+not legacy source assets, before installing.
 
-Color mapping is user-accepted and should not be rebuilt into the HUD movie as
-a prerequisite for shadows. Prioritize one visual shadow-only proof on the native
-EnemyFocus movie (current font and colors controlled by existing v4 script);
-separately research/prepare a licensed English Gentium Book font-library trial.
-Do not conflate these assets, prematurely replace PF Din metrics globally, or
-reuse the third-party reference-mod font binaries.
-
-The saved unchanged inputs now pass official cook/validate/single-key
-bundle/re-extraction and observed non-image/used-atlas contracts. Full atlas
-padding differs outside image footprints, and retail renderer behavior remains
-untested. The original filter-only source and changed-asset build gates now pass;
-next perform the bounded user-only Vortex visual trial. Do not repeat CLI bootstrap
-variations. For any later changed-input Editor import that needs user interaction, supply exact minimal
-steps and resume from the saved isolated project afterward. Keep visual trials
-private and reversible; do not overwrite installed assets or compatibility
-scripts. Shadow trial initially targets only character38/depth35/tfName's filter,
-then assess dialogue/subtitle/oneliner filters independently; first Gentium
-trial touches only the English font library and tests normal/bold/italic/glyph
-coverage. Field & Folio dual-family binding remains a later second step.
+No Computer Use or desktop automation. If a supported isolated Editor
+import step is needed, provide the smallest manual user action and wait.
+Preserve main/general-merge, existing working Vortex mods, accepted v4 and
+shadow v1; keep any generated archive private until static validation gates pass.
+Other surface-specific shadows (subtitles, quest labels, dialogue) remain later
+independent work, not part of the completed NPC proof.
 
 ## Package boundaries
 
