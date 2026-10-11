@@ -1,141 +1,74 @@
-# Codex project instructions
+# Codex instructions — Witcher Music Control
 
-## Goal
+Read the current research reports, particularly `research/04-architecture-options.md` through `research/08-experience-led-music-policy.md`, **before** changing implementation. Earlier initial-stage prompts favoring a script-first solution were superseded by the source-backed Wwise analysis.
 
-Build a Witcher 3 Remastered mod that gives the player independent control over music volume by gameplay context.
+## Outcome and evidence discipline
 
-Primary target contexts:
+Build a Remastered-compatible contextual music-control mod that **preserves the hierarchy of musical importance** rather than simply suppressing every non-cinematic cue.
 
-- exploration / traversal
-- ordinary dialogue
-- combat
-- cinematic / important story moments
+Current explicit user-target defaults, as **additional gains on top of the normal Music setting**:
 
-Potential later contexts:
+- generic exploration / traversal = 0%
+- generic ordinary dialogue = 0%
+- generic combat = 100%
+- deliberately authored story / quest music during dialogue **or gameplay** = 100%
+- cutscene / movie / music-only = 100% additional gain (preserve native muting/fades)
 
-- Gwent
-- tavern / bard / diegetic music
-- quest gameplay / scripted sequences
-- other special states discovered during tracing
+Do not promote assistant suggestions into explicit preferences. The optional intermittent/sparse exploration mode is **deferred and unapproved**; implement only when separately requested and validated. The user values Breath of the Wild (85/100) and Ghost of Tsushima (82/100) overall, but that does not independently establish endorsement of every audio technique. Film observations support score identity, perceptual pacing and meaningful contrast—not automatic preference for maximal silence or constant score prominence.
 
-The desired first prototype is intentionally hard-coded:
+Preserve ambient effects, voices, diegetic bards, Gwent and native combat intensity until their respective policies have been established. Do not equate 100% with forced playback. Do not claim exact digital zero from a finite -96.3 dB Gain floor without measurement.
 
-- exploration = 0%
-- ordinary dialogue = 0%
-- combat = 100%
-- cinematic / story = 100%
+## Technical authority and current architecture
 
-Do not implement sliders until contextual state detection is shown to be reliable.
+Order of technical authority:
 
-## Authority order
+1. installed Witcher 3 Remastered and matching REDkit 5.x scripts/assets
+2. installed matching Wwise 2023.1.19 schema/project and confirmed generated bank structures
+3. current compatible reference mods and empirical runtime tests
+4. hypotheses, older versions, reputation or memory
 
-When sources disagree, use this order:
+For personal-preference claims, newest explicit user statements and the canonical `MihanikXa/prediction` game/film data are stronger than assistant design inference. Keep direct evidence, inference and proposal distinct.
 
-1. current Witcher 3 Remastered / REDkit 5.x vanilla scripts and resources
-2. current Remastered-compatible reference mods
-3. older Next-Gen reference implementations
-4. assumptions or memory
+Source-backed research found:
 
-Never invent WitcherScript APIs, event names, RTPC names, Wwise states, file paths, or engine behaviour. Search for them in the available sources.
+- `game_state` independently identifies the vanilla gameplay/cinematic context;
+- `music_type` selects regional `world_music` or `quests_and_cutscenes`;
+- world and quest branches normally share an ancestral Music bus;
+- muting the common Music bus would also mute authored dialogue cues;
+- changing `game_state` to an empty value can deselect six state-dependent quest-branch containers;
+- twelve world-location quest-resource candidates merit review; twelve are **not** twelve confirmed mandatory exemptions.
 
-## Investigation order
+**Preferred provisional architecture:** leave vanilla `game_state`, `music_type`, native events and intensity systems unchanged. Create a new `WMC_WorldMusic` bus under Music, with three RTPC-driven Gain effects whose EffectSlot.Bypass values follow the existing game_state. Route only each regional world child to the new bus. Keep quest/cutscene paths at their native mix. Later use a minimal settings-only script to write the three custom parameters. **No `SoundGameStateChange` hook is justified by current evidence.** Reassess only if actual tests falsify this design.
 
-Before substantial implementation:
+The mixer is supported by inspected Wwise authoring definitions, **not yet generated or validated in the game**. `research/05-wwise-mixer-proof.md` describes complete bypass truth tables, both FullBand/LFE gain and the non-linear percent-to-dB mapping. `research/06-resource-footprint.md` describes the likely Init and regional bank footprint; minimal cache packaging is unproven.
 
-1. Trace where Remastered detects or represents exploration, dialogue, combat and cinematic states.
-2. Trace the path from those states into music control.
-3. Identify music-related WitcherScript managers, events, callbacks and native calls.
-4. Identify relevant Wwise events, states, switches and RTPCs if exposed.
-5. Differentially compare the four Only Story Music variants before inferring category-specific behaviour.
-6. Compare those results with Less Is More and FMC Audio Remaster, and record which layer each mod modifies.
-7. Determine the smallest stable hook point for contextual volume multipliers.
-8. Only then implement a minimal prototype.
+## Immediate implementation sequence
 
-Record findings under `research/` with exact file paths, class/function names, and enough context to reproduce the conclusion.
+**Milestone 1 — one-region, isolated Wwise proof.**
 
-## Architecture constraints
+1. Copy only the required project/work units into a self-contained, isolated authoring workspace; never edit the installed REDkit/Wwise project.
+2. Verify the matching Wwise version and actual object schema; author new bus, three parameters, three Gain effects and explicit state-controlled bypass gates.
+3. Override only the **prologue `world_music`** output. Do not alter `quests_and_cutscenes`, source audio, vanilla state enums, events or user master Music curve.
+4. Exercise active and inactive parameter values (e.g. -12/-24/-6 dB), dialogue/exploration/combat/cutscene states, transitions and LFE. Test the -96.3 dB floor, bypass clicks, and native fade behavior rather than assuming perfect mute/smoothing.
+5. Selectively generate `Init.bnk` and `music_prologue.bnk` into ignored `build/` outputs. Compare generated bank/HIRC/media payloads with vanilla and document unintended changes.
+6. Prove a loader-compatible **minimal mod soundspc.cache** build or document the exact blocker. Do not assume that SoundBank generation implies successful packaging.
+7. **Stop before installing into the live game** until explicit permission. Later stage in an isolated mod profile, verifying ordinary dialogue versus the q001 authored tavern conversation, overlapping world/quest transitions, combat, cutscenes, save/load and the game Music slider.
 
-Prefer:
+Then expand to the remaining seven regions, investigate *specific* world-location exceptions, and add settings UI/persistence. Sparse exploration or extra category controls are separate later experiments, not prototype #1.
 
-- Remastered scope-based/local WitcherScript overrides
-- small, isolated hooks
-- contextual multipliers on top of the user's normal music volume
-- event/state transitions rather than constant per-frame polling where possible
-- smooth transitions/fades where the engine already supports them
-- logging during the prototype so misclassified states can be observed
+**Milestone 2 — exceptions:** use `research/07-world-music-exceptions.md`; inspect intended scene/function and audible behavior. Do not use a `mus_q*`/file-name heuristic or automatically exempt every quest-named location. Exempt narrow noncombat containers/playlists when justified; exempting whole locations may disable combat-gain control.
 
-Avoid unless demonstrated necessary:
+**Milestone 3 — presentation:** test long periods of environmental audio, score entries, dramatic transitions and authored cues. Music which repeatedly declares minor actions climactic is undesirable; do not use the mod to force greater music density or intensity.
 
-- replacing entire vanilla script files
-- large copied chunks of vanilla code
-- modifying music assets themselves
-- editing Wwise banks/projects
-- hard-coding track lists as the primary classification mechanism
-- adding dependencies merely to create the settings UI
-- touching unrelated gameplay systems
+## Safety, structure and compatibility
 
-If script-level control cannot produce the required separation, document why before moving to Wwise-level work.
-
-## Reference material
-
-Third-party reference files live under `reference/` and are intentionally ignored by Git.
-
-Treat them as read-only evidence. Do not edit them, redistribute their files, or copy large bodies of their code into this repository. When useful, describe mechanisms and cite exact local paths/symbols in research notes.
-
-### Only Story Music differential set
-
-Use these as a controlled comparison, not as four unrelated mods:
-
-- `reference/only-story-music/story-only/` — baseline
-- `reference/only-story-music/story-gwent-tavern/` — baseline + Gwent/tavern
-- `reference/only-story-music/story-combat/` — baseline + combat
-- `reference/only-story-music/story-exploration/` — baseline + exploration
-
-For each variant:
-
-1. Inventory files and sizes.
-2. Diff text/config/script files directly where possible.
-3. Identify files present only in one variant.
-4. For binary resources, compare paths, hashes and metadata before attempting deeper decoding.
-5. Record category-specific differences under `research/` and distinguish observed facts from inferred meaning.
-
-A difference between the baseline and one variant is evidence for that category, but not automatically proof of its semantic role. Verify against current vanilla/REDkit resources.
-
-### Other reference roles
-
-- `reference/less-is-more/`: strongest reference for runtime state handling in Remastered
-- `reference/fmc-audio-remaster/`: reference for separate exploration/combat/dialogue volume controls
-
-## Repository hygiene
-
-- Our source belongs in `src/`.
-- Investigation notes belong in `research/`.
-- Helper scripts belong in `tools/`.
-- Generated intermediate output belongs in `build/`.
-- Ready-to-install generated output belongs in `deploy/`.
-- Do not commit REDkit depots, game files, Wwise installations, downloaded reference mods, archives, or generated build output.
-- Do not put machine-specific absolute paths into tracked source/config unless they are examples clearly marked as such.
-
-## Testing discipline
-
-For every state classifier or hook, note:
-
-- what signal is being used
-- why it should represent the intended context
-- known ambiguous cases
-- what in-game situation would falsify the assumption
-
-Important edge cases include:
-
-- dialogue while retaining player control
-- scripted walks
-- cutscenes vs ordinary dialogue scenes
-- combat entered/exited during quest scripts
-- tavern/bard music
-- Gwent
-- races and minigames
-- quest-specific music outside cinematics
-- loading/menu transitions
-- save/load while a special state is active
-
-Keep the first implementation observable and easy to revert.
+- Third-party copies in `reference/` are read-only and Git-ignored. Do not redistribute them.
+- Installed game, REDkit, Wwise and partial depot files are read-only; never alter in place.
+- Do not repeat the failed 66 GB REDkit depot generation unless an actual required operation is proven impossible otherwise.
+- Author our source in `src/`; helper scripts in `tools/`; notes and validation logs in `research/`; generated outputs in ignored `build/` and `deploy/`.
+- Do not commit game banks, cache output, audio media, installed assets, depots, third-party files or machine-local private paths except as explicitly labeled evidence in research notes.
+- Avoid indiscriminate full script replacements, unverified game hooks and periodic per-frame polling.
+- Keep builds reproducible, stage artifacts outside game directories, check output destination flags, and record version/command/logs and file hashes.
+- For each claim, record observed behavior, supported inference, remaining hypothesis, and a falsifying test.
+- Prefer preserving Wwise-authored transitions and the normal user Music volume; a category multiplier must not rewrite composition, threat weighting or scene-event sequencing.
+- Conflicts with audio mods that replace Init or regional banks must be documented; do not claim automatic cache merging.

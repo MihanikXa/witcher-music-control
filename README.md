@@ -1,99 +1,60 @@
 # Witcher Music Control
 
-A Witcher 3 Remastered mod project for context-aware music volume control.
+A Witcher 3 Remastered mod project for **context-aware music gain**: reduce routine scoring without removing deliberately authored dramatic music or disturbing the game's native soundtrack transitions.
 
-## Target behaviour
+## Current target policy
 
-The intended end state is independent control over music in contexts such as:
+These are **additional gain multipliers relative to the player's normal Music setting**, not absolute output-volume commands.
 
-- exploration / traversal
-- ordinary dialogue
-- combat
-- cinematic / important story moments
-- optionally Gwent, taverns / diegetic music, and other scripted states
+| Source / context | Initial target | Status |
+| --- | ---: | --- |
+| Generic world music during exploration / traversal | 0% | Explicit user target |
+| Generic world music during ordinary dialogue | 0% | Explicit user target |
+| Generic world music during combat | 100% | Explicit user target; retain vanilla combat/intensity behavior |
+| Explicitly authored quest/story music, including gameplay and dialogue | 100% | No added attenuation; preserve authored fades and dynamics |
+| Cutscene / movie / music-only cues | 100% | No added attenuation; do not defeat native movie mutes |
+| Gwent, bards/taverns and other diegetic music | TBD | Preserve existing behavior until a separate policy is established |
 
-The first prototype should keep the behaviour simple and hard-coded:
+"100%" means **unity gain**, not force playback or override the player's master Music slider. The 0% requirement is an intended perceptual mute: the proposed Wwise Gain plugin has a finite -96.3 dB floor, so exact silence remains a prototype test.
 
-- Exploration: 0%
-- Ordinary dialogue: 0%
-- Combat: 100%
-- Cinematic / story: 100%
+**Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 
-Once state detection is reliable, expose those values as user-facing sliders.
+## What the research established
+
+Current Witcher 3 / Wwise uses two different selectors:
+
+- `game_state` distinguishes exploration, ordinary dialogue, combat, cutscene, etc.
+- `music_type` selects `world_music` versus `quests_and_cutscenes` inside eight regional music roots.
+
+Some important authored cues play **during** ordinary dialogue or gameplay, so a global dialogue mute would also mute story music. Conversely, six quest-branch containers still depend on `game_state`, so copying Only Story Music's empty-state strategy can suppress authored cues.
+
+The proposed, **not yet runtime-validated**, solution is a child bus under the existing Music bus containing three state-gated Gain effects. Only the regional `world_music` children route through that bus; the quest/cutscene branch retains vanilla routing. User settings eventually set the three gains without intercepting `SoundGameStateChange`. Some quest-relevant location music lives under `world_music` and requires careful exceptions rather than blanket rules.
+
+Read the evidence and outstanding validation conditions:
+
+- [Architecture and prototype](research/04-architecture-options.md)
+- [Wwise mixer construction](research/05-wwise-mixer-proof.md)
+- [SoundBank/cache footprint](research/06-resource-footprint.md)
+- [World-music exceptions](research/07-world-music-exceptions.md)
+- [Experience-led target policy and test order](research/08-experience-led-music-policy.md)
+
+## Next milestone — one-region proof
+
+1. In an **isolated copy** of the matching Wwise 2023.1.19 project, construct the proposed bus, three Gain instances/RTPCs and state-controlled bypass tables.
+2. Route **prologue `world_music` only** to the new bus. Do not change quest/cutscene routing, player Music volume, media or native events.
+3. Validate gains, state gates, crossfades and sound routing in authoring; then selectively generate `Init.bnk` and `music_prologue.bnk` to ignored build output.
+4. Establish a **minimal mod `soundspc.cache` packaging and load test** before any game deployment. Selective bank generation alone does not prove that a mod cache will load.
+5. Only after this succeeds: test in an isolated mod profile, expand other regions, decide exception policy, then add a settings-only WitcherScript UI.
+
+The REDkit 5.x depot-generation attempt failed during finalization. **Do not re-generate the 66 GB depot as a prerequisite** for this Wwise proof; re-evaluate only if a demonstrable build dependency requires it.
 
 ## Repository layout
 
-```text
-.
-├── AGENTS.md
-├── src/                          # Our mod source only
-├── reference/                    # Local research copies; extracted files ignored by Git
-│   ├── only-story-music/
-│   │   ├── story-only/
-│   │   ├── story-gwent-tavern/
-│   │   ├── story-combat/
-│   │   └── story-exploration/
-│   ├── less-is-more/
-│   └── fmc-audio-remaster/
-├── research/                     # Tracing notes, findings, hypotheses, symbol maps
-├── tools/                        # Project-local helper scripts
-├── build/                        # Generated build output; ignored by Git
-└── deploy/                       # Generated ready-to-install output; ignored by Git
-```
+- `AGENTS.md` — Codex conventions, authority and non-destructive work rules
+- `research/` — source-backed investigations and design decisions
+- `src/` — our future authored mod source
+- `tools/` — reproducible helper scripts
+- `build/`, `deploy/` — ignored generated output
+- `reference/` — local, Git-ignored third-party references (Only Story Music variants, Less Is More, FMC Audio Remaster)
 
-## Reference mods
-
-Download the reference archives manually and extract each archive into its matching folder while preserving the archive's internal hierarchy.
-
-### Only Story Music
-
-Download all four current Remastered variants and keep them separate:
-
-1. `reference/only-story-music/story-only/`
-   - Baseline: story music only.
-2. `reference/only-story-music/story-gwent-tavern/`
-   - Diff against the baseline to isolate Gwent/tavern-specific changes.
-3. `reference/only-story-music/story-combat/`
-   - Diff against the baseline to isolate combat-specific changes.
-4. `reference/only-story-music/story-exploration/`
-   - Diff against the baseline to isolate exploration-specific changes.
-
-The four-way comparison is especially useful because it turns the mod into a controlled differential reference: files/settings that differ between the baseline and one variant are evidence for that music category.
-
-### Other references
-
-- `reference/less-is-more/`
-  - Primary reference for runtime state handling in Remastered.
-- `reference/fmc-audio-remaster/`
-  - Reference for contextual exploration/combat/dialogue volume controls.
-
-Third-party extracted files are intentionally ignored by Git. Only the small guidance READMEs are tracked.
-
-## Toolchain
-
-Expected local tools:
-
-- The Witcher 3 Remastered
-- The Witcher 3 REDkit 5.x
-- Wwise 2023
-- Script Merger - Remastered
-- Git
-- Codex
-
-## First development phase
-
-Do not begin by implementing sliders.
-
-First trace the current Remastered music-control path:
-
-```text
-game state
-    -> exploration / dialogue / combat / cinematic detection
-    -> music manager / script hooks
-    -> Wwise events, states, switches or RTPCs
-    -> actual music-volume behaviour
-```
-
-Use the current REDkit/vanilla scripts as the authority. The reference mods are supporting evidence, not a substitute for tracing current Remastered behaviour.
-
-The preferred architecture is a small script-driven mod using Remastered scope-based/local overrides. Only move into Wwise asset modification if the script layer cannot provide the required separation.
+Game installations, REDkit installations, original Wwise resources and third-party mod payloads are **read-only evidence**, never committed or modified in place. The music-control project is on `main`; `general-merge` is an independent compatibility-audit branch.
