@@ -61,6 +61,10 @@ Clean, light, breathable and modern, **with character**. Use *Ghost of Tsushima*
 
 Focus on replacing thick hard-edged black text outlines, overly saturated red/green text, cramped labels and inconsistent emphasis with precise typography, a restrained palette and context-sensitive readability. Do not merely desaturate all UI elements globally.
 
+## Current design scope — Ink & Iron-first
+
+**Newer user direction (11 October):** retain Ink & Iron's design for most screens; focus major design effort on inventory/shop grids and possibly player stats, with only demonstrated universal font/background/color fixes. See [the selective Ink & Iron scope](design/ink-and-iron-scope.md). This **supersedes the broad redesign mandate**, not the already accepted NPC/font or ongoing shadow work.
+
 ## Broader presentation roadmap
 
 The project also has an accepted longer-term [presentation and interaction roadmap](design/presentation-roadmap.md): contextual exploration information, navigation/discovery, menu composition, notification restraint, camera/audio coordination and unified UI polish. This extends the **long-term design target**, not the immediate implementation authorization. Finish the existing NPC-nameplate and typography build gates first.

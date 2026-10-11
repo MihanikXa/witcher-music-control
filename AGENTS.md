@@ -16,6 +16,10 @@ Do not modify the user's installed game, Vortex deployment/staging, Documents se
 ## Reference locations
 The user will supply extracted mods locally under `reference/`. Read `reference/README.md`. All reference asset contents are gitignored. Use them as evidence; do not republish or edit authors' binaries. Obtain fonts under appropriate licenses and use vanilla game resources plus original modifications where feasible.
 
+## Newest scope correction: selective Ink & Iron refinement
+
+Read [design/ink-and-iron-scope.md](design/ink-and-iron-scope.md) **before** interpreting the older broad redesign roadmap. User wants to keep Ink & Iron for nearly all screens; mainly consider serious redesign of inventory/shop/other grids and player-stats readability. Preserve its coherent dark literary identity, and don't impose sweeping sans typography, brighter backgrounds or a full menu rebuild. Test whether screenshot text compression is real at 1080p/4K. Ink & Iron's supplied files require author permission for modification/reuse; do not copy/repackage them without authorization. Treat installed-mod collisions as real binary resource ownership conflicts. Keep accepted user packages and pending interaction/subtitle trials intact.
+
 ## Long-term roadmap and sequencing
 Read [design/presentation-roadmap.md](design/presentation-roadmap.md) for the approved wider presentation and interaction plan. Its stages are *not* permission to implement or deploy a full overhaul immediately. Keep the current untouched-asset round-trip and NPC-nameplate proof as the first executable gate. Assess configuration-only SAHUD/FriendlyHUD opportunities before writing new logic; keep audio implementation on `main` and compatibility work on `general-merge`.
 
