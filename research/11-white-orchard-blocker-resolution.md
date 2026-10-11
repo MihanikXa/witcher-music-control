@@ -2,6 +2,8 @@
 
 ## Outcome
 
+**Licence follow-up:** [12-init-entitlement-and-native-fade-plan.md](12-init-entitlement-and-native-fade-plan.md) identifies official modding/non-commercial/free Mastering Suite routes, tests supported media reductions, compares their rejected Init output and specifies the production native-fade conversion. A commercial licence purchase is not established as necessary. Complete native Init fidelity remains blocked.
+
 **No deployment candidate.** The complete isolated source project cannot generate Init under the current licences. We have demonstrated a Wwise-native solution to the measured bypass discontinuities and a reproducible native-tool two-bank cache workflow. Those two proofs do not make the existing incomplete Init safe.
 
 No installed game/REDkit/Wwise/reference files were edited, no software or licence was installed, no playthrough/save was changed, and no depot was regenerated. Original report 10 recordings and banks remain in `build/white-orchard/`. Follow-up experiments are separate. No settings UI, other-region routing, or WitcherScript state hook was added.

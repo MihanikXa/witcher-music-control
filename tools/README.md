@@ -38,6 +38,12 @@ and the current Init/cache blockers.
   copying executable tools. It deliberately does not accept the incomplete mixer
   Init or create a deployment candidate. See report 11 for successful commands,
   bootstrap-only CSV changes, nonfatal diagnostics and loader-proof limits.
+- `white_orchard_init_audit.py`: research-only complete-project media controls.
+  Default mode uses localhost WAAPI to remove only unselected banks' media
+  filters; `--exclude-file-leaves` adds supported Inclusion=False to file-backed
+  Sound/MusicTrack leaves outside music_prologue. Neither grants a licence or
+  certifies Init. Both rejected generation controls are documented in report12;
+  preserve native global definitions and never deploy their incomplete output.
 
 Keep the WAAPI server bound to localhost, verify its project path, and stop it
 when finished. Recorders and synthetic source objects stay in the separate
