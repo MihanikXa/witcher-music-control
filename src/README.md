@@ -1,7 +1,8 @@
 # Source
 
-This folder contains only source created for Witcher Music Control.
+Store only project-authored source specifications here; do not commit vanilla Wwise work units, banks, streamed media, REDkit data or downloaded third-party payloads.
 
-Do not place vanilla Witcher 3 files or third-party mod files here.
+- `wwise/white-orchard-state-volume.json` — current **Stage 1** Init-free direct-State Voice Volume policy. The existing game State definitions are reused, with no new global objects.
+- `wwise/white-orchard-mixer.json` — earlier optional adjustable-mixer experiment; keep for reproducibility, **not** the first playable build.
 
-The exact install-shaped source structure should be created only after the Remastered music path has been traced. Prefer the smallest scope-based/local override structure supported by REDkit 5.x rather than prematurely mirroring or replacing whole vanilla script trees.
+The clean Stage 1 authoring helper is in `tools/white_orchard_state_volume_author.py`. No install-shaped source or verified game-compatible audio package exists yet. See research/14-full-context-bank-experiment.md.

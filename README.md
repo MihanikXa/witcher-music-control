@@ -19,34 +19,27 @@ These are **additional gain multipliers relative to the player's normal Music se
 
 **Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 
-## What the research established
+## Current engineering choice (2026-10-11)
 
-Current Witcher 3 / Wwise uses two different selectors:
+**Stage 1: direct, fixed State Voice Volume on the existing `music_prologue/world_music` object.** This was demonstrated in Wwise authoring (report 13): exploration and generic dialogue -200 dB, combat/other states 0 dB, native State fades, and authored q001 quest music on its unchanged sibling branch. A playable soundbank is **not** yet established. There are no new buses, effects, GameParameters or modified global States in this design.
 
-- `game_state` distinguishes exploration, ordinary dialogue, combat, cutscene, etc.
-- `music_type` selects `world_music` versus `quests_and_cutscenes` inside eight regional music roots.
+**Do not confuse the build input with the output.** The preferred next experiment preserves all 1,508 Wwise source work units in a fresh isolated copy, rather than pruning the project to one region. Modify only the existing `world_music` object for White Orchard, then attempt selective regional-bank generation. The experiment may let Wwise incidentally generate an isolated `Init.bnk`; that output must be discarded, not packaged or installed. The native game's Init stays untouched.
 
-Some important authored cues play **during** ordinary dialogue or gameplay, so a global dialogue mute would also mute story music. Conversely, six quest-branch containers still depend on `game_state`, so copying Only Story Music's empty-state strategy can suppress authored cues.
+Preserving complete authoring context might reduce missing dependencies but **does not cure the existing 26,218/200 media trial limit or Mastering Suite licence errors** (report 12). If full-source generation fails, use controlled, supported inclusion tests and compare untouched versus modified outputs; do not call a failed build successful. If valid selected-bank output remains impossible, the official REDkit modding entitlement is the supported no-commercial-purchase request route, requiring separate user action.
 
-The proposed, **not yet runtime-validated**, solution is a child bus under the existing Music bus containing three state-gated Gain effects. Only the regional `world_music` children route through that bus; the quest/cutscene branch retains vanilla routing. User settings eventually set the three gains without intercepting `SoundGameStateChange`. Some quest-relevant location music lives under `world_music` and requires careful exceptions rather than blanket rules.
+**Stage 2 (deferred):** independent live sliders. Reports 05, 10 and 11 demonstrated a more involved mixer in authoring, but its new global objects create an Init-fidelity and licensing problem. Do not reintroduce this architecture during Stage 1.
 
-Read the evidence and outstanding validation conditions:
+Historical research 04–12 documents the earlier mixer, audio exceptions, licence investigations and successful *vanilla-fixture* cache cooking. Current operational decisions are in [13: direct State volume](research/13-world-state-volume-init-free.md) and [14: full-context build experiment](research/14-full-context-bank-experiment.md).
 
-- [Architecture and prototype](research/04-architecture-options.md)
-- [Wwise mixer construction](research/05-wwise-mixer-proof.md)
-- [SoundBank/cache footprint](research/06-resource-footprint.md)
-- [World-music exceptions](research/07-world-music-exceptions.md)
-- [Experience-led target policy and test order](research/08-experience-led-music-policy.md)
+## Next milestone — complete-context White Orchard regional bank
 
-## Next milestone — White Orchard proof (Wwise `music_prologue`)
+1. Prepare a **complete**, separate copy of the existing Wwise 2023.1.19 project using `white_orchard_prepare.py --preserve-hierarchies`. Never write to installed game, REDkit or Wwise files.
+2. Apply only the existing world's 25 State Voice Volume values using the clean author-only helper `tools/white_orchard_state_volume_author.py`. Do not use the test-tone/Recorder workspace as production source.
+3. Select `music_prologue` for the initial bank-generation test, but **do not prune the project or require single-bank generation if it is the blocker**. Allow an incidental isolated Init output solely as evidence; never deploy it.
+4. Compare modified and pristine regional output against each other and vanilla, including BKHD, HIRC State serialization, global references, event/media/stream equivalence and actual Wwise generation errors. No invented binary splice.
+5. Once a valid regional bank is established, use the proven isolated REDkit cooker workflow to package only required changed banks. Validate cache readback, then separately request authorization for an isolated, backed-up White Orchard game test.
 
-1. In an **isolated copy** of the matching Wwise 2023.1.19 project, construct the proposed bus, three Gain instances/RTPCs and state-controlled bypass tables.
-2. Route **`music_prologue/world_music` only** to the new bus, and perform the in-game test **in White Orchard** (village, open countryside, encounters), not in the Kaer Morhen dream/tutorial. The Wwise bank name `music_prologue` includes White Orchard exploration music; it is not a requirement to test a musicless introduction. Do not change quest/cutscene routing, player Music volume, media or native events.
-3. Validate gains, state gates, crossfades and sound routing in authoring; then selectively generate `Init.bnk` and `music_prologue.bnk` to ignored build output.
-4. Establish a **minimal mod `soundspc.cache` packaging and load test** before any game deployment. Selective bank generation alone does not prove that a mod cache will load.
-5. Only after successful packaging and user approval: test on a backed-up White Orchard save in an isolated mod profile, compare unmodded/modded exploration and dialogue, test combat and accessible authored scenes; then expand other regions, decide exception policy and add settings UI. See [White Orchard pilot](research/09-white-orchard-pilot.md).
-
-The REDkit 5.x depot-generation attempt failed during finalization. **Do not re-generate the 66 GB depot as a prerequisite** for this Wwise proof; re-evaluate only if a demonstrable build dependency requires it.
+Project-size minimization is secondary to reliable output. Shipping all eight regional banks is **not** a requirement or a solution to licensing, but may be accepted later if simpler and compatible. No REDkit 66 GB depot rebuild is authorized.
 
 ## Repository layout
 

@@ -1,0 +1,41 @@
+{
+  "schema_version": 119,
+  "wwise_version": "v2023.1.19",
+  "wwise_build": 8928,
+  "regional_root": "music_prologue",
+  "world_id": "{1A59CC64-141A-45A6-8374-EB823D3E9D4F}",
+  "world_short_id": 1033516231,
+  "game_state_group_id": "{27711515-3584-4123-9F09-B90831398B80}",
+  "expected_states": 25,
+  "volume_property": "Volume",
+  "volume_db": {
+    "exploration": -200,
+    "dialogue": -200,
+    "combat": 0,
+    "other": 0
+  },
+  "active_states": {
+    "exploration": [
+      "exploration",
+      "exploration_night",
+      "focus_exploration",
+      "focus_exploration_night",
+      "underwater",
+      "underwater_focus",
+      "boat"
+    ],
+    "dialogue": [
+      "dialog_scene",
+      "dialog_scene_night"
+    ],
+    "combat": [
+      "combat",
+      "combat_monster_hunt",
+      "underwater_combat",
+      "underwater_combat_focus",
+      "focus_combat"
+    ]
+  },
+  "edits_scope": "local StateInfo on world_music only; no new global definitions",
+  "deployment": "not_authorized"
+}

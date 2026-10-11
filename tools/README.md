@@ -57,3 +57,9 @@ ignored validation workspace. The settings UI, script adapter, live-game tests
 and deployment are later work. A rebuild allocates fresh local effect/state
 GUIDs; the recipe reproduces the routing and behaviour, not a byte-identical
 bank. Preserve the generated workspace/manifest when comparing exact builds.
+
+## Active production-source experiment
+
+- `white_orchard_state_volume_author.py`: **new clean, author-only Stage 1 helper**; targets a preserved complete isolated Wwise project, changes only the existing world container's local State Voice Volume and writes an audit manifest. It neither generates banks nor introduces synthetic sounds/recorders. Not yet executed against the user's local Wwise installation.
+- `white_orchard_state_volume.py`: historical fixture-based playback proof (report 13), **not** clean shipping authoring source.
+- Stage 1 does not use `white_orchard_author.py`'s custom-bus mixer or the WMC RTPCs. The full project remains intact; eventual deployment may still contain a single regional bank. See report 14 for generation and licence limitations.
