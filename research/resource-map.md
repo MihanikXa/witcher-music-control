@@ -160,3 +160,10 @@ resource owners, all decoded authored text placements and parent filter chains,
 plus native-AS/installed-WS setter findings. Available assets do not prove
 every movie is live; semantic effects and dynamic/exported renderers remain
 per-surface review gates. Accepted NPC, Gentium and color work is preserved.
+
+## Wave A offline release update — 11 October 2026
+
+Interaction v2 and current-HUD subtitle shadow v1 are now offline-validated
+and privately packaged, awaiting user visual acceptance. The installed-resource
+ledger still describes deployed v1/vanilla, not those uninstalled candidates.
+[Validation, exact package hashes and remaining diagnostics](text-shadow-wave-a-handoff.md).

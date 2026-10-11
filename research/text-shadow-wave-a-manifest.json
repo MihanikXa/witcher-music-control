@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "status": "Source verification passed; three manual Editor imports required; no new ZIP",
+  "status": "Both private trials offline validated and packaged; runtime acceptance pending",
   "resource_keys": [
     "gameplay/gui_new/swf/hud/hud_interactions.redswf",
     "gameplay/gui_new/swf/hud/hud_subtitles.redswf"
@@ -378,11 +378,14 @@
   },
   "subtitle_native_runtime_nonimage_contracts_equal": true,
   "source_repeat_hashes_identical": true,
-  "tests_passed": 79,
-  "cooked": false,
-  "packaged": false,
+  "tests_passed": 83,
+  "cooked": true,
+  "packaged": true,
   "runtime_tested": false,
-  "private_zip_paths": [],
+  "private_zip_paths": [
+    "C:\\Dev\\witcher-ui-overhaul\\deploy\\field-folio-interactions-private-v2\\Field-and-Folio-Interactions-v2-private-test.zip",
+    "C:\\Dev\\witcher-ui-overhaul\\deploy\\subtitle-shadow-private-v1\\QuietEditorial-Subtitle-Shadow-v1-private-test.zip"
+  ],
   "editor_project_requested": "QuietTextShadowWaveA",
   "source_provenance": "Current installed REDkit native SWFs; interactions builds on independently licensed original Source Sans 3 conversion, retaining derivative notices",
   "shadow_filter_provenance": "Original transformation from independently inspected current native filter, using accepted NPC Shadow v1 values; no third-party mod filter asset copied",
@@ -424,5 +427,853 @@
     "decompiled_hud_sha256": "467ec25d84c2da542ad599da25fc0b21c17b980051f0a22faa1b9ad0f8a4ae4e",
     "module_path": "swf\\hud\\hud_subtitles.swf",
     "local_evidence": "build/text-shadow-source-v1/current-root-as/scripts/red/game/witcher3/hud/Hud.as"
+  },
+  "editor_imports_completed": true,
+  "releases": [
+    {
+      "module": "interactions",
+      "mod_folder": "modFieldFolioInteractionsV2",
+      "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+      "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\field-folio-interactions-private-v2\\Field-and-Folio-Interactions-v2-private-test.zip",
+      "zip_sha256": "b9e5b84d9d10b98e2d2818ff538cc0ad210f5922bbe7798862de5f4c455b3a2d",
+      "zip_bytes": 289751,
+      "members": {
+        "Mods/modFieldFolioInteractionsV2/content/blob0.bundle": "f40ea2937e789dfd61bd9e2ded8654143ab712c6faeab6013f9a6ee6c75b789d",
+        "Mods/modFieldFolioInteractionsV2/content/metadata.store": "8ede1bfc79d1f65401c87b9020b8a6020beaba85c97599614b076eeb96a4d12b",
+        "Mods/modFieldFolioInteractionsV2/OFL-Adobe.txt": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+        "Mods/modFieldFolioInteractionsV2/FONT-NOTICES.txt": "6e33cc8419d6397f8ff30b652a6e8a079b20549b96e3d0ebb5095f7b294621ba"
+      },
+      "candidate": {
+        "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+        "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quiettextshadowwavea\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_interactions_ff_v2_17.redswf",
+        "source_sha256": "59f5bbbbecb409c7ce34ee757131908c0a14397c1fa0e361296d5e3714bcba90",
+        "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_interactions_ff_v2_17.swf",
+        "expected_swf_sha256": "f36821c14fa097ca40ff6f98def65bb04c1d840a500914167ea6f12bc8a1fb65",
+        "baseline_path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\runtime.redswf",
+        "baseline_sha256": "5e1ce7d3be052cea8a0ea9d1d744a3fe059fd367bc4bd7ed951fa76d599780e9",
+        "commands": [
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\cooked"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:33:11][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:33:12][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\validation"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:33:29][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:33:30][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "pack",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "pack",
+              "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\pack-input",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\packed",
+              "-compression=ZLIB"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:33:49][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:33:49][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "metadata",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "metadatastore",
+              "-path=C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-candidate-retry\\packed"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:34:11][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:34:12][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          }
+        ],
+        "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "cooked_sha256": "35baf8d672112e3fbc693419d432d3a15d9909f6c3b20c58b855689f01f67a31",
+        "bundle_sha256": "f40ea2937e789dfd61bd9e2ded8654143ab712c6faeab6013f9a6ee6c75b789d",
+        "metadata_sha256": "8ede1bfc79d1f65401c87b9020b8a6020beaba85c97599614b076eeb96a4d12b",
+        "textures": [
+          {
+            "atlas": "_i1.dds",
+            "width": 1024,
+            "height": 592,
+            "full_visible_pixel_differences": 0,
+            "used_and_one_pixel_border_differences": 0,
+            "transparent_rgb_differences": 0,
+            "compressed_payload_identical": true,
+            "original_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621",
+            "candidate_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621"
+          },
+          {
+            "atlas": "_i3b.dds",
+            "width": 40,
+            "height": 48,
+            "full_visible_pixel_differences": 0,
+            "used_and_one_pixel_border_differences": 0,
+            "transparent_rgb_differences": 0,
+            "compressed_payload_identical": true,
+            "original_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af",
+            "candidate_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "font_definitions_identical_to_source": true,
+        "official_font_descriptors_present": true,
+        "sources_unchanged": true,
+        "runner_workspace_restored": true,
+        "toolchain_copied": false,
+        "exact_reextraction": true,
+        "offline_pipeline_verified": true,
+        "runtime_tested": false,
+        "package_path": null
+      },
+      "control": {
+        "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+        "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quietfolioutilitytrial\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_interactions_ff_unchanged.redswf",
+        "source_sha256": "b18f8cfda71aaec3687570d17d8dd729958b399b73b6e695737cd981fe7d63d4",
+        "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_unchanged.swf",
+        "expected_swf_sha256": "075e0cf4fa94ea293ad50d8528d0dc0778546794f53a07655885a6156dc4f03d",
+        "baseline_path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\runtime.redswf",
+        "baseline_sha256": "5e1ce7d3be052cea8a0ea9d1d744a3fe059fd367bc4bd7ed951fa76d599780e9",
+        "commands": [
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\cooked"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.10 18:09:31][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.10 18:09:31][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\validation"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.10 18:10:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.10 18:10:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "pack",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "pack",
+              "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\pack-input",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\packed",
+              "-compression=ZLIB"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.10 18:10:29][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.10 18:10:30][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "metadata",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "metadatastore",
+              "-path=C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\packed"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.10 18:10:53][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.10 18:10:54][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          }
+        ],
+        "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "cooked_sha256": "fa1ceebb34bcbfe463409c898ce89072c7e9ddb213cdf15c8a280d213638508a",
+        "bundle_sha256": "86d1e51ec6d7202f6744fe0eadf470517a1c8ee8f6e27c0e7a49db467b66ac0d",
+        "metadata_sha256": "382262efb8ad159039ee0191ac008ecfbee0c3d28f6eca18ca51dc382fec2ca6",
+        "textures": [
+          {
+            "atlas": "_i1.dds",
+            "width": 1024,
+            "height": 592,
+            "full_visible_pixel_differences": 0,
+            "used_and_one_pixel_border_differences": 0,
+            "transparent_rgb_differences": 0,
+            "compressed_payload_identical": true,
+            "original_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621",
+            "candidate_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621"
+          },
+          {
+            "atlas": "_i3b.dds",
+            "width": 40,
+            "height": 48,
+            "full_visible_pixel_differences": 0,
+            "used_and_one_pixel_border_differences": 0,
+            "transparent_rgb_differences": 0,
+            "compressed_payload_identical": true,
+            "original_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af",
+            "candidate_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "font_definitions_identical_to_source": true,
+        "official_font_descriptors_present": true,
+        "sources_unchanged": true,
+        "runner_workspace_restored": true,
+        "toolchain_copied": false,
+        "exact_reextraction": true,
+        "offline_pipeline_verified": true,
+        "runtime_tested": false,
+        "package_path": null
+      },
+      "source_transform": {
+        "input_path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_regular.swf",
+        "input_sha256": "f24e345a29be63ed19d3c414e34f9147d5b03a8bc741f80daf0de23ff341f2d4",
+        "output_path": "C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-source\\input\\hud_interactions_ff_regular.swf",
+        "output_sha256": "f36821c14fa097ca40ff6f98def65bb04c1d840a500914167ea6f12bc8a1fb65",
+        "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+        "field": 215,
+        "name": "tfActionName",
+        "sprite": 216,
+        "depth": 1,
+        "approved_tag_paths": [
+          [
+            225
+          ],
+          [
+            226,
+            0
+          ]
+        ],
+        "font_height_before": "440",
+        "font_height_after": "340",
+        "before": [
+          "item",
+          [
+            [
+              "blurX",
+              "4.0"
+            ],
+            [
+              "blurY",
+              "4.0"
+            ],
+            [
+              "compositeSource",
+              "true"
+            ],
+            [
+              "id",
+              "2"
+            ],
+            [
+              "innerGlow",
+              "false"
+            ],
+            [
+              "knockout",
+              "false"
+            ],
+            [
+              "passes",
+              "1"
+            ],
+            [
+              "strength",
+              "3.0"
+            ],
+            [
+              "type",
+              "GLOWFILTER"
+            ]
+          ],
+          "",
+          [
+            [
+              "glowColor",
+              [
+                [
+                  "alpha",
+                  "255"
+                ],
+                [
+                  "blue",
+                  "0"
+                ],
+                [
+                  "green",
+                  "0"
+                ],
+                [
+                  "red",
+                  "0"
+                ],
+                [
+                  "type",
+                  "RGBA"
+                ]
+              ],
+              "",
+              []
+            ]
+          ]
+        ],
+        "after": [
+          "item",
+          [
+            [
+              "angle",
+              "0.7853851318359375"
+            ],
+            [
+              "blurX",
+              "2.0"
+            ],
+            [
+              "blurY",
+              "2.0"
+            ],
+            [
+              "compositeSource",
+              "true"
+            ],
+            [
+              "distance",
+              "1.0"
+            ],
+            [
+              "id",
+              "0"
+            ],
+            [
+              "innerShadow",
+              "false"
+            ],
+            [
+              "knockout",
+              "false"
+            ],
+            [
+              "passes",
+              "1"
+            ],
+            [
+              "strength",
+              "1.0"
+            ],
+            [
+              "type",
+              "DROPSHADOWFILTER"
+            ]
+          ],
+          "",
+          [
+            [
+              "dropShadowColor",
+              [
+                [
+                  "alpha",
+                  "166"
+                ],
+                [
+                  "blue",
+                  "24"
+                ],
+                [
+                  "green",
+                  "23"
+                ],
+                [
+                  "red",
+                  "20"
+                ],
+                [
+                  "type",
+                  "RGBA"
+                ]
+              ],
+              "",
+              []
+            ]
+          ]
+        ],
+        "unchanged_selected_tags_exact": true,
+        "independently_decoded_delta_exact": true,
+        "other_tags_retained_from_source": true,
+        "editor_imported": false,
+        "cooked": false,
+        "packaged": false,
+        "runtime_tested": false
+      },
+      "vanilla_sha256": "5e1ce7d3be052cea8a0ea9d1d744a3fe059fd367bc4bd7ed951fa76d599780e9",
+      "textures": [
+        {
+          "atlas": "_i1.dds",
+          "width": 1024,
+          "height": 592,
+          "full_visible_pixel_differences": 0,
+          "used_and_one_pixel_border_differences": 0,
+          "transparent_rgb_differences": 0,
+          "compressed_payload_identical": true,
+          "original_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621",
+          "candidate_sha256": "84966c6937e553a5674cbdd05d95b0df6aba83eaf40821852b5b5500c24c4621"
+        },
+        {
+          "atlas": "_i3b.dds",
+          "width": 40,
+          "height": 48,
+          "full_visible_pixel_differences": 0,
+          "used_and_one_pixel_border_differences": 0,
+          "transparent_rgb_differences": 0,
+          "compressed_payload_identical": true,
+          "original_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af",
+          "candidate_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+        }
+      ],
+      "current_owners": [
+        {
+          "owner": "modFieldFolioInteractions",
+          "bundle": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFieldFolioInteractions\\content\\blob0.bundle",
+          "sha256": "317b4e960a33f8048ba66fa345986d5dcc945ad482b61622f2cb7c878cf3dcaa"
+        }
+      ],
+      "scanned_bundles": 64,
+      "accepted_packages_unchanged": true,
+      "deterministic_zip": true,
+      "exact_zip_readback": true,
+      "offline_validated": true,
+      "runtime_tested": false,
+      "installed": false,
+      "instruction": "Disable interaction v1 before enabling v2",
+      "repeat_package_sha256": "b9e5b84d9d10b98e2d2818ff538cc0ad210f5922bbe7798862de5f4c455b3a2d"
+    },
+    {
+      "module": "subtitles",
+      "mod_folder": "modQuietEditorialSubtitleShadow",
+      "resource_key": "gameplay/gui_new/swf/hud/hud_subtitles.redswf",
+      "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\subtitle-shadow-private-v1\\QuietEditorial-Subtitle-Shadow-v1-private-test.zip",
+      "zip_sha256": "6eb5afeb0459b29a545c29637651d0deb5f4488170c560162d9579c24e1951f3",
+      "zip_bytes": 43962,
+      "members": {
+        "Mods/modQuietEditorialSubtitleShadow/content/blob0.bundle": "5ca9b3123716164326ba5fa9d4fa210755f1fd0ee3d59fb836ebedd5bfd263cc",
+        "Mods/modQuietEditorialSubtitleShadow/content/metadata.store": "59fb314f632adeb4c9db9ac4b5d5b2414fcc6cf9378b80270f06cc544d8990f4"
+      },
+      "candidate": {
+        "resource_key": "gameplay/gui_new/swf/hud/hud_subtitles.redswf",
+        "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quiettextshadowwavea\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_subtitles_qs_v1.redswf",
+        "source_sha256": "93a5fe3ef6496610338ad9beaf5c0b6cecaf5dd3027516aa13cb7a9534ea16e1",
+        "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_subtitles_qs_v1.swf",
+        "expected_swf_sha256": "5b43d16f1a8e3543653f00a034a81835f842beba15e2ab7e2d9e56736657fc60",
+        "baseline_path": "C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\cooked\\gameplay\\gui_new\\swf\\hud\\hud_subtitles.redswf",
+        "baseline_sha256": "125ff8aef4ce2c2a1141c8b9cee69cdcdd95d6ac0355578804743d0d379bb115",
+        "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "commands": [
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\cooked"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:38:26][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:38:27][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\validation"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:38:44][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:38:45][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "pack",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "pack",
+              "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\pack-input",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\packed",
+              "-compression=ZLIB"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:39:01][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:39:02][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "metadata",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "metadatastore",
+              "-path=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-candidate-v1\\packed"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:40:52][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:40:52][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          }
+        ],
+        "cooked_sha256": "b010c79c9e9e067cdbee8512e1676bc5c407d3b68b43ccf7d989ca7ab7d885e4",
+        "bundle_sha256": "5ca9b3123716164326ba5fa9d4fa210755f1fd0ee3d59fb836ebedd5bfd263cc",
+        "metadata_sha256": "59fb314f632adeb4c9db9ac4b5d5b2414fcc6cf9378b80270f06cc544d8990f4",
+        "control": false,
+        "sources_unchanged": true,
+        "runner_workspace_restored": true,
+        "exact_reextraction": true,
+        "offline_pipeline_verified": true,
+        "runtime_tested": false,
+        "metadata_resumed_after_timeout": false,
+        "metadata_timeout_seconds": 120,
+        "chunk_crc_valid": true,
+        "texture_array_empty": true,
+        "font_array_empty": true,
+        "exporter_linkage_consistent": true,
+        "linkage_name": "hud-subtitles-qs-v1{5612df6f}.gfx"
+      },
+      "control": {
+        "resource_key": "gameplay/gui_new/swf/hud/hud_subtitles.redswf",
+        "source_path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-editor-run\\projects\\quiettextshadowwavea\\workspace\\gameplay\\gui_new\\swf\\hud\\hud_subtitles_qs_unchanged.redswf",
+        "source_sha256": "761d72e0a762fa31852d5654fb0f83f6b547d4dfae0beed01bc55288c8565cc5",
+        "expected_swf": "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_subtitles_qs_unchanged.swf",
+        "expected_swf_sha256": "28758214e28e36cf91b9084983edeaa4c0bfa5a683bb395d58285250bb2dd776",
+        "baseline_path": "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-source-v1\\runtime-hud.redswf",
+        "baseline_sha256": "2475d3cee55ff9846be9b2e30490cd16a67ec08283ffe3a88dd3ef2d5c3a504c",
+        "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+        "commands": [
+          {
+            "label": "cook",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "cook",
+              "-platform=pc",
+              "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\cooked"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:34:46][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:34:46][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "validate",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "validate",
+              "-db=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\cooked\\cook.db",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\validation"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:35:03][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:35:03][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "pack",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "pack",
+              "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\pack-input",
+              "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\packed",
+              "-compression=ZLIB"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:35:20][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:35:21][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          },
+          {
+            "label": "metadata",
+            "command": [
+              "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+              "metadatastore",
+              "-path=C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\packed"
+            ],
+            "exit_code": 0,
+            "assertions": [
+              "[2026.10.11 01:37:55][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+              "[2026.10.11 01:37:55][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+            ]
+          }
+        ],
+        "cooked_sha256": "125ff8aef4ce2c2a1141c8b9cee69cdcdd95d6ac0355578804743d0d379bb115",
+        "bundle_sha256": "e0f179f36580f16f210ce4d9ffff2d372278e5fe35d9b90e62765264bf41eef2",
+        "metadata_sha256": "def52687256a19790fccc1c151a9fe549701a3faf95327d2bf019ace9a37b7b4",
+        "control": true,
+        "sources_unchanged": true,
+        "runner_workspace_restored": true,
+        "exact_reextraction": true,
+        "offline_pipeline_verified": true,
+        "runtime_tested": false,
+        "metadata_resumed_after_timeout": true,
+        "metadata_timeout_seconds": 120,
+        "chunk_crc_valid": true,
+        "texture_array_empty": true,
+        "font_array_empty": true,
+        "exporter_linkage_consistent": true,
+        "linkage_name": "hud-subtitles-qs-unchanged{fc13dc97}.gfx"
+      },
+      "source_transform": {
+        "input_path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_subtitles.swf",
+        "input_sha256": "28758214e28e36cf91b9084983edeaa4c0bfa5a683bb395d58285250bb2dd776",
+        "output_path": "C:\\Dev\\witcher-ui-overhaul\\build\\subtitles-hud-shadow-v1-source\\input\\hud_subtitles.swf",
+        "output_sha256": "5b43d16f1a8e3543653f00a034a81835f842beba15e2ab7e2d9e56736657fc60",
+        "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+        "field": 1,
+        "name": "tfSubtitles",
+        "sprite": 0,
+        "depth": 1,
+        "approved_tag_paths": [
+          [
+            5
+          ]
+        ],
+        "font_height_before": "520",
+        "font_height_after": "520",
+        "before": [
+          "item",
+          [
+            [
+              "angle",
+              "0.7853851318359375"
+            ],
+            [
+              "blurX",
+              "1.5"
+            ],
+            [
+              "blurY",
+              "1.5"
+            ],
+            [
+              "compositeSource",
+              "true"
+            ],
+            [
+              "distance",
+              "1.0"
+            ],
+            [
+              "id",
+              "0"
+            ],
+            [
+              "innerShadow",
+              "false"
+            ],
+            [
+              "knockout",
+              "false"
+            ],
+            [
+              "passes",
+              "3"
+            ],
+            [
+              "strength",
+              "20.0"
+            ],
+            [
+              "type",
+              "DROPSHADOWFILTER"
+            ]
+          ],
+          "",
+          [
+            [
+              "dropShadowColor",
+              [
+                [
+                  "alpha",
+                  "255"
+                ],
+                [
+                  "blue",
+                  "0"
+                ],
+                [
+                  "green",
+                  "0"
+                ],
+                [
+                  "red",
+                  "0"
+                ],
+                [
+                  "type",
+                  "RGBA"
+                ]
+              ],
+              "",
+              []
+            ]
+          ]
+        ],
+        "after": [
+          "item",
+          [
+            [
+              "angle",
+              "0.7853851318359375"
+            ],
+            [
+              "blurX",
+              "2.0"
+            ],
+            [
+              "blurY",
+              "2.0"
+            ],
+            [
+              "compositeSource",
+              "true"
+            ],
+            [
+              "distance",
+              "1.0"
+            ],
+            [
+              "id",
+              "0"
+            ],
+            [
+              "innerShadow",
+              "false"
+            ],
+            [
+              "knockout",
+              "false"
+            ],
+            [
+              "passes",
+              "3"
+            ],
+            [
+              "strength",
+              "1.0"
+            ],
+            [
+              "type",
+              "DROPSHADOWFILTER"
+            ]
+          ],
+          "",
+          [
+            [
+              "dropShadowColor",
+              [
+                [
+                  "alpha",
+                  "166"
+                ],
+                [
+                  "blue",
+                  "24"
+                ],
+                [
+                  "green",
+                  "23"
+                ],
+                [
+                  "red",
+                  "20"
+                ],
+                [
+                  "type",
+                  "RGBA"
+                ]
+              ],
+              "",
+              []
+            ]
+          ]
+        ],
+        "unchanged_selected_tags_exact": true,
+        "independently_decoded_delta_exact": true,
+        "other_tags_retained_from_source": true,
+        "editor_imported": false,
+        "cooked": false,
+        "packaged": false,
+        "runtime_tested": false
+      },
+      "vanilla_sha256": "2475d3cee55ff9846be9b2e30490cd16a67ec08283ffe3a88dd3ef2d5c3a504c",
+      "textures": [],
+      "current_owners": [],
+      "scanned_bundles": 64,
+      "accepted_packages_unchanged": true,
+      "deterministic_zip": true,
+      "exact_zip_readback": true,
+      "offline_validated": true,
+      "runtime_tested": false,
+      "installed": false,
+      "instruction": "Independent subtitle-only mod",
+      "repeat_package_sha256": "6eb5afeb0459b29a545c29637651d0deb5f4488170c560162d9579c24e1951f3"
+    }
+  ],
+  "editor_assertion_state": {
+    "reported_asserts_disabled": "ON",
+    "reported_data_asserts_disabled": "OFF",
+    "provenance": "unknown; no suppression performed",
+    "shutdown_resource_state_assertions": 3,
+    "all_new_resources_including_control": true,
+    "serialized_resource_defect_proven": false,
+    "current_saved_consumer_pipeline_passes": true,
+    "editor_log_sha256": "da941026d0779209caeb3573bf29aa76186c557e4a123a99ddfd9ab6484abd21"
+  },
+  "bounded_failures": {
+    "initial_interaction_cook_exit_code": 2147483651,
+    "initial_interaction_cook_log": "build/interactions-v2-candidate/cook.full.log",
+    "logged_windows_error": 1455,
+    "recovered_memory_snapshot": {
+      "physical_available_MiB": 16790,
+      "commit_available_MiB": 7281,
+      "commit_limit_MiB": 34053
+    },
+    "one_unchanged_retry_succeeded": true,
+    "subtitle_control_metadata_initial_timeout_seconds": 60,
+    "one_metadata_only_resume_succeeded": true,
+    "metadata_timeout_seconds": 120
   }
 }

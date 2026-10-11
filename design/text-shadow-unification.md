@@ -170,3 +170,12 @@ Current installed Outfit Wheel root ABC corroborates `swf\\hud\\` plus
 the current HUD route. Source candidates are prepared and independently
 decoded; manual Editor imports are the next dependency. See
 [Wave A implementation and manual handoff](../research/text-shadow-wave-a.md).
+
+## Wave A offline release update — 11 October 2026
+
+Manual imports are complete. Interaction v2 and the current-HUD subtitle
+shadow prototype now pass official cook, validation, bundle, metadata and
+exact re-extraction. Separate private ZIPs exist; neither is installed or
+accepted visually yet. [Exact package hashes, installation, rollback and
+remaining assertion diagnostics](../research/text-shadow-wave-a-handoff.md).
+Other shadow surfaces remain deferred; accepted font/NPC packages are unchanged.

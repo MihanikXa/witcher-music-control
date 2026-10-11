@@ -1,7 +1,9 @@
 # Restrained text shadows — Wave A source implementation
 
 11 October 2026. **Source candidates implemented and independently decoded;
-manual Editor import is the next dependency. No new installable ZIP exists.**
+the manual import dependency is now complete. Separate private ZIPs are
+offline-validated; see [the current release handoff](text-shadow-wave-a-handoff.md).
+The preparation/import steps below are retained as historical source evidence.**
 Accepted NPC Colors v4, NPC Shadow v1, QuietFolio English v1 and archived
 interaction v1 assets/packages are unchanged. No Computer Use, game launch,
 deployment, installed-resource, compatibility, settings or save write occurred.

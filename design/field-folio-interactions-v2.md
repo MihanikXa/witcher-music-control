@@ -103,3 +103,12 @@ unique manual interaction import. The accompanying current-HUD subtitle
 shadow proof needs its own unchanged/candidate imports. See
 [the exact three-file Wave A handoff](../research/text-shadow-wave-a.md).
 No new ZIP is released or installed at this source gate.
+
+## Wave A offline release update — 11 October 2026
+
+Manual imports are complete. Interaction v2 and the current-HUD subtitle
+shadow prototype now pass official cook, validation, bundle, metadata and
+exact re-extraction. Separate private ZIPs exist; neither is installed or
+accepted visually yet. [Exact package hashes, installation, rollback and
+remaining assertion diagnostics](../research/text-shadow-wave-a-handoff.md).
+Other shadow surfaces remain deferred; accepted font/NPC packages are unchanged.

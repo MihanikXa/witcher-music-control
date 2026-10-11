@@ -5,9 +5,10 @@ import json
 from pathlib import Path
 
 
-def disposition(movie):
+def disposition(movie, released_keys=()):
     key=movie['resource_key']
     if movie['status']=='blocked':return 'blocked_static_decode'
+    if key in released_keys:return 'wave_a_private_trial_offline_verified_runtime_pending'
     if key.endswith('/hud_enemyfocus.redswf'):return 'accepted_npc_preserve'
     if key.endswith('/fonts_en.redswf'):return 'accepted_font_library_preserve'
     if key.endswith('/hud_interactions.redswf'):return 'wave_a_source_verified_manual_import_required'
@@ -17,10 +18,10 @@ def disposition(movie):
     return 'wave_c_semantics_and_renderer_review_required'
 
 
-def compact(movie):
+def compact(movie, released_keys=()):
     result={k:movie[k] for k in ('resource_key','selected_owner','selection_confidence','input_sha256','error') if k in movie}
     result['owners']=[{k:e[k] for k in ('owner','bundle','loose','codec','size','configuration') if k in e} for e in movie['owners']]
-    result['disposition']=disposition(movie);result['runtime_verified']=False
+    result['disposition']=disposition(movie,released_keys);result['runtime_verified']=False
     result['base_version_checks']=movie.get('base_version_checks',[])
     placements={};fields=[]
     def remember(p):
@@ -63,8 +64,12 @@ def research_json(report):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--audit',type=Path,required=True)
-    ap.add_argument('--out',type=Path,required=True);a=ap.parse_args()
-    raw=json.loads(a.audit.read_text(encoding='utf-8'));movies=[compact(m) for m in raw['movies']]
+    ap.add_argument('--out',type=Path,required=True);ap.add_argument('--releases',type=Path);a=ap.parse_args()
+    released_keys=[]
+    if a.releases:
+        releases=json.loads(a.releases.read_text(encoding='utf-8'))
+        released_keys=[r['resource_key'] for r in releases.get('releases',[]) if r.get('offline_validated') is True]
+    raw=json.loads(a.audit.read_text(encoding='utf-8'));movies=[compact(m,released_keys) for m in raw['movies']]
     report=dict(date='2026-10-11',scope=raw['scope'],movies=movies,
         mods_settings_sha256=raw.get('mods_settings_sha256'),
         runtime_style_setters=raw.get('runtime_style_setters',[]),excluded_nonenglish_fonts=raw['excluded_nonenglish_fonts'],

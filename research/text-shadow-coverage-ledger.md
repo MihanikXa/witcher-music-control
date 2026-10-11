@@ -45,7 +45,7 @@ White/color effects, selection, focus and non-text art remain untouched.
 | `hud/hud_enemyfocus.redswf` | modQuietEditorialNPCShadow | 4 | 3 | accepted_npc_preserve |
 | `hud/hud_horsepanicbar.redswf` | vanilla | 1 | 1 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_horsestaminabar.redswf` | vanilla | 1 | 1 | wave_c_semantics_and_renderer_review_required |
-| `hud/hud_interactions.redswf` | modFieldFolioInteractions | 8 | 4 | wave_a_source_verified_manual_import_required |
+| `hud/hud_interactions.redswf` | modFieldFolioInteractions | 8 | 4 | wave_a_private_trial_offline_verified_runtime_pending |
 | `hud/hud_iteminfo.redswf` | vanilla | 10 | 3 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_journalupdate.redswf` | vanilla | 24 | 19 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_lootfeed.redswf` | vanilla | 2 | 0 | wave_c_semantics_and_renderer_review_required |
@@ -56,7 +56,7 @@ White/color effects, selection, focus and non-text art remain untouched.
 | `hud/hud_questfeed.redswf` | vanilla | 4 | 0 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_quests.redswf` | vanilla | 3 | 3 | wave_b_deferred_until_wave_a_acceptance |
 | `hud/hud_radialmenu.redswf` | vanilla | 31 | 23 | wave_c_semantics_and_renderer_review_required |
-| `hud/hud_subtitles.redswf` | vanilla | 1 | 1 | wave_a_source_verified_manual_import_required |
+| `hud/hud_subtitles.redswf` | vanilla | 1 | 1 | wave_a_private_trial_offline_verified_runtime_pending |
 | `hud/hud_timelapse.redswf` | vanilla | 2 | 2 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_timeleft.redswf` | vanilla | 1 | 1 | wave_c_semantics_and_renderer_review_required |
 | `hud/hud_watermark.redswf` | vanilla | 1 | 1 | wave_c_semantics_and_renderer_review_required |
