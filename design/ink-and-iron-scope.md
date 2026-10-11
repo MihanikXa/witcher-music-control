@@ -48,7 +48,7 @@ At inspection time, Ink & Iron's **0.7.4** modular distribution (Nexus #13111) i
 - the **whole-file** `.redswf`, `.env` and `fonts.xml` replacements cannot be resolved by Script Merger;
 - UI includes `panel_inventory`, `panel_common`, `panel_overlay`, `panel_worldmap` etc.; HUD includes `hud_enemyfocus`, `hud_wolfstatbars`, `hud_minimap2`; these overlap the working mod stack;
 - some blacksmith/armorer/enchantment UIs are only partly restyled and the beta has limited tested surfaces;
-- author permissions require authorization for **modifying and reusing their supplied files/assets**, with restricted redistribution. Request authorization before building/sharing a derivative from their assets. Reading for analysis and independently authored replacements from vanilla are separate approaches; do not quietly republish proprietary payloads.
+- the author restricts redistribution and reuse outside private play. **Newest explicit user direction permits local, personal modification of extracted assets; do not require permission before private prototyping.** Do not publish or redistribute modified third-party payloads.
 
 **Do not assume 'use Ink & Iron as the base' means that All-in-One can be deployed safely.** Layout/asset research can use its unpacked files read-only; an installable version must respect published module dependencies, real file collisions and the user's accepted patches. Vortex load order is not a true binary merge.
 
@@ -60,7 +60,7 @@ At inspection time, Ink & Iron's **0.7.4** modular distribution (Nexus #13111) i
 4. **Document exceptions** from screenshots and in-game operation: one Inventory case, one Shop case, one player-stats case, and any genuinely illegible repeated typography. Do not broaden automatically.
 5. **Build one focused vertical slice** of Inventory/grid+item details based on actual input resources and working controller, mouse, item selection, comparison, equip, filter, sort and merchant behavior. Preserve Hoods and Outfit Wheel features or document irreducible conflict.
 6. **Reuse only successful patterns** in Shop / Stash / Loot and similar grid-heavy variants. Keep others as published when satisfactory; cosmetics only when actually needed.
-7. **Request asset-edit permission**, or independently author narrow vanilla-derived patches if permission is not available; do not distribute modified Ink & Iron files without authorization. Keep generated/private resources gitignored; one-resource manifests and one-module rollback.
+7. **Build private personal-use adaptations when useful.** Do not commit or redistribute Ink & Iron asset copies or adapted binaries; keep generated/private resources gitignored and record one-resource manifests and rollback.
 8. **Consider optional visual unification** only after real in-game comparison—Gentium, color, backdrop, and subdued shadow should be tuned for legibility but need not override cohesive Ink & Iron styling.
 
 ### Acceptance criteria

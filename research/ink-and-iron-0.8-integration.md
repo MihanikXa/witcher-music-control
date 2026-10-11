@@ -126,7 +126,7 @@ movies, `character/panel_character_perks.redswf`,
 are separate inventory rows. The source includes OFL notices for IM Fell and
 Cormorant. Neither its library nor those alternate menu resources are required
 for the selected Vanilla path. Whole upstream UI/texture assets remain subject
-to the author's permissions regardless of font license.
+to the restriction on publishing third-party assets regardless of font license; the user's personal local edits are not gated on author permission.
 
 ## Exact conflicts and smallest resolutions
 
@@ -160,14 +160,12 @@ Keeping the four original owners is a **deliberate temporary exception**, with
 named lost styling, rather than claiming the collision has been merged. If the
 adapter cannot reliably run after the upstream senders, stop at that gate:
 request an author-approved script variant or combine the two shared movies.
-Adding OW exports to I&I common/overlay is a real binary modification requiring
-permission and a cook/round-trip test, not Script Merger. The existing FFDec/GFx
+Adding OW exports to I&I common/overlay is a real binary modification requiring an isolated cook/round-trip test, not Script Merger. It can be prototyped privately without an author-contact gate. The existing FFDec/GFx
 and official REDkit pipeline can inspect/prototype it; no successful combined
 resource or GUI-free import is claimed. Any necessary REDkit GUI step belongs
 to the user in an isolated project.
 
-Permission must cover I&I assets and any other author's code/art reused in a
-combined movie. No derivative payload was produced by this audit.
+**Superseded personal-use constraint (11 October):** The user intends only local, private modification and testing; permission-seeking is not a blocker to building combined personal-use resources. Do not commit or distribute third-party assets. No derivative payload was produced by this audit.
 
 ### Scripts, dependencies and configuration
 

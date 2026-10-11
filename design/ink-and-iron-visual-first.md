@@ -1,7 +1,7 @@
 # Ink & Iron visual-first integration — current design authority
 
 **Decision date:** 11 October 2026, after the completed 0.8 compatibility audit.  
-**Status:** User-approved *design direction*, not an installed/compiled compatibility solution, license approval, or authorization to alter the live game.  
+**Status:** User-approved *design direction*, not an installed/compiled compatibility solution or authorization to alter the live game.  
 **Supersedes:** The **retained-resource-owner policy** and reduced-visual-coverage *target* in [the 0.8 integration audit](../research/ink-and-iron-0.8-integration.md) and [older selective scope](ink-and-iron-scope.md). Those remain valid **technical evidence of conflicts** and a reversible *interim* fallback, not the desired finished UI.
 
 ## Explicit preference correction
@@ -63,7 +63,7 @@ Validate original separate modular archives and the static Fonts (Vanilla)+Quiet
 
 1. Implement the **small common-menu behavior adapter** (InkArt backgrounds, Smooth Map hints) if it genuinely reduces obstacles; compile with exact current annotations/merge inputs and prove wrapper ordering. The adapter is not the final treatment if retained movies look inconsistent.
 2. Prototype **one representative I&I HUD visual component** combined with SAHUD/FriendlyHUD behavioral contracts, including visibility transitions and relevant exports. Start with a resource having a clear owner and reliable reversible tests; select the first resource *after* inspecting dependency/complexity, not by a guessed priority.
-3. Prefer independent local transforms from current licensed/vanilla resources when author permission is absent. If modification of I&I supplied movies or artwork is required, **request author permission first** and keep the generated derivative out of the public Git history. No unapproved distribution.
+3. The user has explicitly approved **private, personal modification of the extracted Ink & Iron resources**, without intending redistribution. Use them directly for local experiments and integration when technically appropriate. Keep third-party binaries, source extracts, cooked resources and private ZIPs out of public Git; commit only original tools, manifests and non-asset documentation.
 
 **Gate:** complete in-game show/hide, combat activation, target text, icon prompts, map hints, joystick/keyboard, menu transition regression checks. Successful compilation is necessary but not sufficient.
 
@@ -84,10 +84,10 @@ Compile/cook/bundle/validate affected assets against 5.01; test in cloned profil
 - This is **more work than the prior preservation plan**, because maintaining SAHUD/FriendlyHUD features while adopting I&I compiled HUD visuals may require reverse-engineering/rebuilding several UI movies. There is no honest guarantee of an easy whole-HUD merge.
 - **Functionality is a constraint, visual ownership is negotiable.** Hard constraints: no lost basic UI actions, broken focus, missing quest/interaction cues, broken mod menu, movement/quest regressions or invisible map hints.
 - Keep the already accepted QoL and controller/locomotion changes intact; no mass Script Merger rerun or live installed-file overwrite.
-- Preserve copyright/author terms: original I&I packages are installable unchanged for personal use. Author requires permission to modify/reuse their supplied assets; seek permission for derivatives. Fallback to independent, vanilla-derived styling/logic if needed.
+- **Personal-use scope:** no author-permission gate for local changes/testing; no distribution or publication of modified third-party assets. Preserve original author provenance, mod archives and reversible test packages outside Git.
 - Separate test ZIPs and exact rollback. No Computer Use.
 - Codex may research and build isolated original adapters with local assets/tools, but **must not deploy** before an explicit user-run test procedure and approval.
 
 ## Immediate new Codex request
 
-Update the previous binary-owner matrix into a **visual target vs functional contract** integration matrix across I&I HUD, common/overlay, worldmap, Hoods/inventory and accepted NPC components. Identify the **smallest actionable first combination** and whether the common-menu adapter should precede or follow that prototype. Keep the older audit as technical evidence. Deliver a concrete implementation order, author-permission dependencies, acceptance tests and isolated build instructions. **Do not yet rewrite every conflicting mod or overwrite Vortex.**
+Update the previous binary-owner matrix into a **visual target vs functional contract** integration matrix across I&I HUD, common/overlay, worldmap, Hoods/inventory and accepted NPC components. Identify the **smallest actionable first combination** and whether the common-menu adapter should precede or follow that prototype. Keep the older audit as technical evidence. Deliver a concrete implementation order, private-asset boundaries, acceptance tests and isolated build instructions. **Do not yet rewrite every conflicting mod or overwrite Vortex.**
