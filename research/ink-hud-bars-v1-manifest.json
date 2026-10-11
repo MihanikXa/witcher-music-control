@@ -1,0 +1,405 @@
+{
+  "resource_key": "gameplay/gui_new/swf/hud/hud_wolfstatbars.redswf",
+  "mod": "modInkIronAdaptiveBarsTest",
+  "author_bundle_sha256": "275433f331fea237041a5e5d6c7d5bdf90b4b59f1db950928ef7d38a11d0695d",
+  "author_resource_sha256": "7f6b35cc88602523561dd588a24ac725219976c8309370374b8011f91f8c32c1",
+  "cooked_sha256": "7f6b35cc88602523561dd588a24ac725219976c8309370374b8011f91f8c32c1",
+  "adapter_sha256": "2203e286d7de0188c015ea3a13a1c07cd48a5e0f949f51baebc067b122513d40",
+  "owners": [
+    {
+      "owner": "modSeamlessAdaptiveHUD",
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\blob0.bundle",
+      "resource_sha256": "98ca8a2c197b65cc4df11ee387f14519a529f231114d02c7ec0ffce816daa9a7",
+      "enabled": "1",
+      "priority": "29"
+    }
+  ],
+  "loose_owners": [
+    {
+      "owner": "modSeamlessAdaptiveHUD",
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\gameplay\\gui_new\\swf\\hud\\hud_wolfstatbars.redswf",
+      "resource_sha256": "98ca8a2c197b65cc4df11ee387f14519a529f231114d02c7ec0ffce816daa9a7"
+    }
+  ],
+  "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+  "commands": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\cooked"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.11 23:00:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.11 23:00:09][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\validation"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.11 23:00:27][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.11 23:00:27][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\pack-input",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.11 23:00:46][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.11 23:00:46][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "metadata",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "metadatastore",
+        "-path=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\packed"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.11 23:01:06][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.11 23:01:06][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "opaque_mods_not_recompiled": [
+    "modBloodAndSteel",
+    "mod_GwentDeckChoice",
+    "modbrothersinarms",
+    "modzzz_sharedutils",
+    "modTopNotchSwordsFix",
+    "modsmoothmap",
+    "modEvilsOfRivia"
+  ],
+  "bundle_sha256": "3e27328182d65d7b93c0d11cd80456ecc5f28ea98876019b8fb5b5b34ea2fcac",
+  "metadata_sha256": "d6d60877bd8dfed9f4336818cb75fa3e57dd5ca018b2365a391f2bc7a91bdbdd",
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\ink-hud-bars-private-v1\\Ink-Iron-Adaptive-Bars-v1-private-test.zip",
+  "zip_sha256": "4e138f392d24c7475a7c49249214d1aaa6f3439f650a89a5ff17c4b50170db67",
+  "zip_bytes": 108969,
+  "members": {
+    "Mods/modInkIronAdaptiveBarsTest/content/blob0.bundle": "3e27328182d65d7b93c0d11cd80456ecc5f28ea98876019b8fb5b5b34ea2fcac",
+    "Mods/modInkIronAdaptiveBarsTest/content/metadata.store": "d6d60877bd8dfed9f4336818cb75fa3e57dd5ca018b2365a391f2bc7a91bdbdd",
+    "Mods/modInkIronAdaptiveBarsTest/content/scripts/local/inkIronBarsBridge.ws": "2203e286d7de0188c015ea3a13a1c07cd48a5e0f949f51baebc067b122513d40"
+  },
+  "movie_tags_and_atlas_identical": true,
+  "chunk_crcs_valid": true,
+  "exact_reextraction": true,
+  "official_pipeline_verified": true,
+  "live_inputs_unchanged": true,
+  "runner_workspace_restored": true,
+  "runtime_tested": false,
+  "deployed": false,
+  "constraints": {
+    "hudStyle": 0,
+    "hudMinimal": false,
+    "toxicMode": 0
+  },
+  "script_regression": [
+    {
+      "label": "baseline",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+        "compilescripts",
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\base",
+        "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\patch",
+        "-out=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\baseline"
+      ],
+      "exit_code": 0,
+      "errors": [],
+      "success": true,
+      "blob_sha256": "57cb26e5671465dda78d875277ed5c90f668a166b9b190e479d28e769b9ac911",
+      "assertion_count": 337,
+      "warning_count": 819,
+      "diagnostics_sha256": "87d0614467f824c611e94d0b738e5531f606b5b5e416c155d57f92e7ddab047f"
+    },
+    {
+      "label": "noop",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+        "compilescripts",
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\base",
+        "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\patch",
+        "-out=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\noop"
+      ],
+      "exit_code": 0,
+      "errors": [],
+      "success": true,
+      "blob_sha256": "7134c94cad7cdb869cb8e56cd2402ce16ba3e7edc64f86667bec33cfc02a602a",
+      "assertions_added": {},
+      "assertions_removed": {},
+      "assertion_count": 337,
+      "warning_count": 819,
+      "diagnostics_sha256": "87d0614467f824c611e94d0b738e5531f606b5b5e416c155d57f92e7ddab047f"
+    },
+    {
+      "label": "candidate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\native-npc-reproduce\\runtime\\wcc_lite.exe",
+        "compilescripts",
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\base",
+        "-patch=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\patch",
+        "-out=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-bars-v1c\\scripts\\candidate"
+      ],
+      "exit_code": 0,
+      "errors": [],
+      "success": true,
+      "blob_sha256": "eca50efd69ca7656e797b8a9b5840acd6a7b1ff5f621e00031ef1918226b51e6",
+      "assertions_added": {},
+      "assertions_removed": {},
+      "assertion_count": 337,
+      "warning_count": 819,
+      "diagnostics_sha256": "87d0614467f824c611e94d0b738e5531f606b5b5e416c155d57f92e7ddab047f"
+    }
+  ],
+  "log_hashes": {
+    "build\\ink-hud-bars-v1c\\cook.full.log": "b258130d1aec7fa85a3bb8e349e979511cd555ec9a57a668aed4b2af62024d88",
+    "build\\ink-hud-bars-v1c\\metadata.full.log": "b0ba9a19b097d8898bd82e67046e9940eb3b00c6740c1cb4cfd4bd52484c336f",
+    "build\\ink-hud-bars-v1c\\pack.full.log": "fba416d9e117780d1b35581a32edadfe6341b4da8b4643a56282048fde599a8f",
+    "build\\ink-hud-bars-v1c\\scripts\\baseline.full.log": "7f7ebf2288fc77f24c373a6aca3af630f2ee9c9370dc290c654ea4712f6876f1",
+    "build\\ink-hud-bars-v1c\\scripts\\candidate.full.log": "4a0c0a9937282d20a11422a4384a67c3e8c588e855596d5b432ea38953ea88de",
+    "build\\ink-hud-bars-v1c\\scripts\\noop.full.log": "edf5ced3b32c5ebb48021340c3672d81f5f0ee72b194b24f9db1e49b607e668e",
+    "build\\ink-hud-bars-v1c\\validate.full.log": "214c1690a4f052e914028466f25fcf98e9dd9b06c0ab33fc6838027f20fcb39f"
+  },
+  "contract_report_sha256": "b437ca4a9735ba8d0ebbdc5ec6ce4c9434e14e5293ba3256baa01e8afda2c491",
+  "decompiler_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+  "live_snapshot_sha256": "d840294d513457fce40350337974f7bc2d2af20b399e7824c838c108ce0fd432",
+  "current_compiler_input_pins": [
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\r4Game.ws",
+      "sha256": "95b7c4f31f6567f482da423e8215929383871ad2a671a91d4dc0f96e3dfc56c9"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\components\\inventoryComponent.ws",
+      "sha256": "e2da6c7e57c70f9b9bee00d93822a8f5b391374b2c1156667202507ad46f561b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\player\\playerinput.ws",
+      "sha256": "e4b5033d106fd204f755c2a0225458b5a99c1eef002c3f157ab23024f26fc25b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\player\\playerwitcher.ws",
+      "sha256": "21012ab475ea479fe2aff95a8180fb8f4f03ec04a569cc1b2ffc317686e3445e"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\player\\r4player.ws",
+      "sha256": "eb52e8d11e6f12a05276bb9a4eb33cc1113f3f95be2226631701a99e62e4a1a9"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\player\\movement\\locomotionDirectController.ws",
+      "sha256": "3de117761a98828b22fe6060c56e2b997d164466461d172be0a7f5c99ba0b5f2"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\hud\\hud.ws",
+      "sha256": "6dcd42be661b9c59e018529d57184e5f5adc1f28410f9589fe99c0787d4033b9"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\main_menu\\ingameMenu.ws",
+      "sha256": "3f1fd0f1b2f819bb89f7d7c551e0663afcb56da9dca77b10dbc129244cc2d586"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\menus\\commonMenu.ws",
+      "sha256": "d19fe54f3acd1f62512493578ac644b8594a8acfafdfc177c162d9b2d52324da"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\menus\\inventorymenu.ws",
+      "sha256": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\menus\\mapMenu.ws",
+      "sha256": "4d23f560dbf9c0e9a6aae7c6411eab021b5dc288992daaf82595a2a4be76751b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleRadialMenu.ws",
+      "sha256": "1f2a44b28a10aad5a5d37c3a9319fe8f006b3d968803f055f85d64310e91074d"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\explorations\\exploration_movement_system\\exploration_substates\\explorationStateInteraction.ws",
+      "sha256": "14b2c166b4c8c91cb9f55d15ef370f47a514d92a71e8d01daa4bdb1fcb77ad76"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_aware.ws",
+      "sha256": "f58459a4b444fe538a0c61af7c57e4fdbac81ba12563a42cda069643e053ccf2"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_buff_visuals.ws",
+      "sha256": "049380b687e42742a321c83e197879e6712797f7b901668374e490444bb3ed47"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_combat.ws",
+      "sha256": "7584fe75084763f28274a45641adfe47141d0ecf6592a00a549c947e54deac48"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_compass.ws",
+      "sha256": "5a2d7c879deea1abb7631bd398ab191ec00700a5c7566a1e065e5ff4b7c4ac14"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_config.ws",
+      "sha256": "3295661f6464c02531e05570610d8c262151e4ffd596059378368d5f72b022c2"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_console.ws",
+      "sha256": "13ba504954699c384460555cdc4d548d95a0b87d98bcef8e9be326cc23f285b7"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_context.ws",
+      "sha256": "8e103cde0a4b997133203e41fa7bf591a87bcf4bdbbc9394805e513962eb8241"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_core.ws",
+      "sha256": "96315403127354faa4c3c0ac7e3516b90360c66a48bfa24244d49d1a385670e6"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_flat_glyph.ws",
+      "sha256": "d7b33ff727483b31bb5bfe034f3d9a151e8d47d5d41e6e1220645056b7265be2"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_groups.ws",
+      "sha256": "81be97ddc4bf065cfc4a62a19ba3bfc9a2f4dca530428d73a7e37f82a5619d4b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hooks.ws",
+      "sha256": "21251f33625f039622da3fe92d1ebc23fd9b72663caaad631bd6f8cb11db4ca8"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_hud_art.ws",
+      "sha256": "641cf375854e5d11e363b46e27deda0cddd429aaf0529ddbb0c4eeb0c0b0fd4d"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_iconpacks.ws",
+      "sha256": "aa21f74088719ffd1f280066228915080bbdc24adf025fa9b93e70c5acf8f68b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_markers.ws",
+      "sha256": "9664bc86236a4706fa00570cf6fe2080f75d3db27540a3fb1c2e8898d9acec05"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_minimal.ws",
+      "sha256": "77f6ce2cd45bf7fe906e277093d5122cbf7be991a48f2c43f7f69f350ef25266"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_modules.ws",
+      "sha256": "ef66242681ea5f1014cd2945fd0f04694b798f0bfaf14e09c5ab6aaa091634b0"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_policy.ws",
+      "sha256": "a7a48f164828b96b2971521163f17cb5726ae21cfbdde1c4c568b2f79b7d1719"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_presets.ws",
+      "sha256": "ae4ad1aaa6309f12c39075c46b70952b4e0ad3d9258feac0acb11358bdc2b3dc"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_quests.ws",
+      "sha256": "da9afffefa298a7765e4604eb4671d7f2c684f34582632fd10db481b0c5ff891"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_settings.ws",
+      "sha256": "e005b46542c52fe826fff98d4c6eb073c2bc490d77fa9608b9c48dffc22e8979"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_state.ws",
+      "sha256": "e4f92abf56459ff94e871bfb717b59f4cbf2b08c268f51470a3ba1a7b53ae3a5"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_transition.ws",
+      "sha256": "8174ce20edba907d4e1486a0b121b0dfadc6d254d9a9373e9d6abc0eb594ab2b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modSeamlessAdaptiveHUD\\content\\scripts\\local\\SeamlessAdaptiveHUD\\sah_types.ws",
+      "sha256": "046a74da57f26997216d78de2de2590cdd7a188dc2d4bec12ec0838fe515475f"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleBase.ws",
+      "sha256": "5b4735213dbdb7d31244bf35dbb252b247562afbd70c22f3c7671bd768869ac5"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleBuffs.ws",
+      "sha256": "9d32b748314a3a20b55d9262ee8c789d59f7a35612b72f8047f2400bfc9b04e6"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleCompanion.ws",
+      "sha256": "b2f06666fb782ebc940ee3b3b9f3ddd56ab0a0abe11085181faa5b5500eac013"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleControlsFeedback.ws",
+      "sha256": "8630097fee2d9a807db3bcf2c1f38a7138d9f4bd5b3b21d8ba09885bb499b040"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleDamagedItems.ws",
+      "sha256": "562216c0028c0d87bea05a3b6aa7895d1d5ad9fa57ab6aeb070a06bc8f3d4551"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws",
+      "sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleInteractions.ws",
+      "sha256": "030abacdf99db978c32cb0bc12f704df5bc69d151ed0b4de25dacbfc1ae93693"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleItemInfo.ws",
+      "sha256": "0ed3a76b32524c8046a0e53b7dc53c50abc0bac0261fc499a09f3b74f57446f3"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleJournalUpdate.ws",
+      "sha256": "e1e1d6b9b12e3149aca5ad60f61bb7f5671c4c8e494aa46b684835a77814e226"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleMinimap2.ws",
+      "sha256": "dbaab08dd7791b2a91d37b8d869133ded94875420c0af0e8d8ebda677970e976"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleOneliners.ws",
+      "sha256": "e6667b4a46cd2134ca9c350d7433d383c2ceef10c86c8529a95eb09b881bbe38"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleQuests.ws",
+      "sha256": "5dea85d7a200632c1f8dfae76a211b83f40b7604658c55ef027e80dcf04f1fa6"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleWolfHead.ws",
+      "sha256": "fe782a50905dd1a64050e09315f4261b66c7114d1124afb90520a99da613cb3a"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\fhudscripts\\modHUDToggles.ws",
+      "sha256": "7e2275e9074fea4f71cb3b85fc1c2e8efe0f69aa1a1caadb1589f0ce91ba52ad"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\fhudscripts\\modMainMenu.ws",
+      "sha256": "2b00502131e50e058f77b992c836a18cd5592196990e6b2c762c02d976174ccf"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\fhudscripts\\modMarkers.ws",
+      "sha256": "86b36aba769247c7d0013e2d179adcc2d4cabc82638d18dcb5b4e14c7127105b"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\fhudscripts\\modRadialMenuPotions.ws",
+      "sha256": "de3bcffb7bfe708223bf5916bfa56325ee529e81174d6493247e58a97387466e"
+    },
+    {
+      "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modQuietEditorialNPCColorsV4\\content\\scripts\\local\\quietEditorialNameColorsV4.ws",
+      "sha256": "1b9d70f775ac1cf4173739fa01325d65ead2bdb9c1aeb363dac548c03f6b82b7"
+    }
+  ],
+  "script_receipt_sha256": "1e298a72c1505ae9b44a93a9e91a448d474faf0ac3d106073fd40462c741ef1f",
+  "full_source_assembly_is_private": true
+}

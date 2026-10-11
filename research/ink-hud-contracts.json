@@ -1,0 +1,1348 @@
+{
+  "wolfstatbars": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_wolfstatbars.redswf",
+    "resource_sha256": "7f6b35cc88602523561dd588a24ac725219976c8309370374b8011f91f8c32c1",
+    "symbol_classes": {
+      "hud_wolfstatbars_fla.TutorialHighlight_60": 137,
+      "hud_wolfstatbars_fla.MC_SignReadyAnim_55": 123,
+      "hud_wolfstatbars_fla.SignText_47": 120,
+      "hud_wolfstatbars_fla.MC_IMG_AdrenalinePoints_29": 118,
+      "hud_wolfstatbars_fla.mc_blink_45": 117,
+      "hud_wolfstatbars_fla.FocusPoint_3_41": 113,
+      "hud_wolfstatbars_fla.FocusPoint_2_37": 105,
+      "hud_wolfstatbars_fla.FocusPoint_33": 97,
+      "hud_wolfstatbars_fla.MC_IMG_WolfHeadBkg_28": 89,
+      "hud_wolfstatbars_fla.Skull_13": 86,
+      "StaminaStatusIndicator": 79,
+      "hud_wolfstatbars_fla.StaminaBarBck_6": 78,
+      "hud_wolfstatbars_fla.MC_AmountNeeded_2": 72,
+      "ToxicityStatusIndicator": 63,
+      "LockedToxicityStatusIndicator": 60,
+      "HealthStatusIndicator": 54,
+      "hud_wolfstatbars_fla.HealthBar_21": 53,
+      "BackgroundHealthIndicator": 47,
+      "hud_wolfstatbars_fla.mcBackgroundHealthBlink_19": 46,
+      "ExperienceStatusIndicator": 40,
+      "hud_wolfstatbars_fla.MC_VEC_HealthGlowTracer_25": 39,
+      "FocusStatusIndicator": 29,
+      "SignInfo": 18,
+      "hud_wolfstatbars_fla.MC_VEC_Error_51": 17,
+      "SkillListItemIconLoader": 12,
+      "MC_IMG_WolfHead": 9,
+      "red.game.witcher3.hud.modules.HudModuleWolfHead": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "4a79303760814e6b9c7f2b308d39d1bde7022de121546f1b756a082cd686630e"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "setVitality": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "setStamina": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "setToxicity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "setExperience": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "setLockedToxicity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "setDeadlyToxicity": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "showStaminaNeeded": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "switchWolfActivation": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setSignIcon": {
+        "parameters": "param1:String",
+        "returns": "void"
+      },
+      "setSignText": {
+        "parameters": "param1:String",
+        "returns": "void"
+      },
+      "setFocusPoints": {
+        "parameters": "param1:int",
+        "returns": "void"
+      },
+      "UpdateFocusPointsBar": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "lockFocusPoints": {
+        "parameters": "param1:int",
+        "returns": "void"
+      },
+      "setCiriAsMainCharacter": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setCoatOfArms": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setShowNewLevelIndicator": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setAlwaysDisplayed": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "showMutationFeedback": {
+        "parameters": "param1:int",
+        "returns": "*"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleWolfHead.ws",
+    "native_provider_sha256": "fe782a50905dd1a64050e09315f4261b66c7114d1124afb90520a99da613cb3a",
+    "native_bound_functions": [
+      "UpdateFocusPointsBar",
+      "lockFocusPoints",
+      "setAlwaysDisplayed",
+      "setCiriAsMainCharacter",
+      "setCoatOfArms",
+      "setDeadlyToxicity",
+      "setExperience",
+      "setFocusPoints",
+      "setLockedToxicity",
+      "setShowNewLevelIndicator",
+      "setSignIcon",
+      "setSignText",
+      "setStamina",
+      "setToxicity",
+      "setVitality",
+      "showMutationFeedback",
+      "showStaminaNeeded",
+      "switchWolfActivation"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\BackgroundHealthIndicator.as",
+        "sha256": "481fbd0b6f1250666b3cf8d84020b55f06afeba684fa6cdb2615746672770694"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\ExperienceStatusIndicator.as",
+        "sha256": "6e7833fc3d7e70e072906e20bdc6663c3836d449170bc02c40bb07996f5b6caf"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\FocusStatusIndicator.as",
+        "sha256": "01cf640b5a813011c2cb11add8c5f3545096a5469306d8add3dfa8bef8b4573b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\HealthStatusIndicator.as",
+        "sha256": "cead1ab82ffba7eacaf552ba5e40f291c4711e8c2a0b765e811dae5b85a87590"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\LockedToxicityStatusIndicator.as",
+        "sha256": "4600b0d00840105bad607f081fc609d0ea94af4c55f24fa1ac6bfe1a640c0acc"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\MC_IMG_WolfHead.as",
+        "sha256": "c431c98bac93e8034f55cf0b5600f92803b43290f7e1b8640b65fdabf0ae3ef4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\SignInfo.as",
+        "sha256": "96ab424c9cd293d7a4ef595308d11cc1b0893f8146ba1e72f6dd28a9c9003362"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\SkillListItemIconLoader.as",
+        "sha256": "76ff91b955b286a8655ede14d87f1b75dd4dbf794a23048b7723d465d3d98518"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\StaminaStatusIndicator.as",
+        "sha256": "3506b96a5b1e493b12e0edc15d9b1bddf483abaa960ca16e81bcd2fcf5da0d81"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\ToxicityStatusIndicator.as",
+        "sha256": "5b014754670cc4c23c67c8d8c08873671aab7794f95fe7d7e66207b37644d7bb"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\FocusPoint_2_37.as",
+        "sha256": "c4d624c4802d49b28cc18857de121bc04a7f1ca996520e237b41afdc353412e4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\FocusPoint_33.as",
+        "sha256": "700f92a865687fcd96fc8c00d2656081485f0f12d43a4f17ca9311dd49cfc38e"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\FocusPoint_3_41.as",
+        "sha256": "351ad692145c4ca5efcd56e922bde31aa3a1271d74a8a01c52839f230fa0d033"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\HealthBar_21.as",
+        "sha256": "842a3340daf0ea760903abcc9a70b2dc2ecc05b5c00c115f11adca4ca8cd4dc7"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\mcBackgroundHealthBlink_19.as",
+        "sha256": "d9ac6db2f8dfe5b98623baf385630a159313748d4d85560243807c8547ff26ca"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_AmountNeeded_2.as",
+        "sha256": "35377a6f0c77c1f4715522418bd83f58fdc1a7aee3c1e1d16fe182b30dca8265"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\mc_blink_45.as",
+        "sha256": "84a4b7b21cff11af6e98a1165580f6b4ceda9934efedf613b825e3ba53e63f41"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_IMG_AdrenalinePoints_29.as",
+        "sha256": "9e09fe72092ee2b7c613ca4534fa627052e5a5bed9ab5c656962d19c2d980bba"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_IMG_WolfHeadBkg_28.as",
+        "sha256": "6179d6479c21dc1ceaece2c2353908d787be1a162763f5bb321b0a3ec48c59b3"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_SignReadyAnim_55.as",
+        "sha256": "73eeba5a3ef09c54430593aee58d0cec3dda88f868ede1c179ef073b5bfa24df"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_VEC_Error_51.as",
+        "sha256": "a7dad9e721299b6e873caaca80dda706adf894e92e2dc7c88ccbf8e6bff60416"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\MC_VEC_HealthGlowTracer_25.as",
+        "sha256": "6bea9b99e53e475fcbcbf431f4a1d070a83509f44ea35234ef40dd0c47145efa"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\SignText_47.as",
+        "sha256": "fbd52a0f490b584dde94ef25666df2383b47fdce7b159abec5ef5eb586eb8dd5"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\Skull_13.as",
+        "sha256": "6cb8206a011849e1956473ad79606985c1296a585565ba035be73a5ab922e7fd"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\StaminaBarBck_6.as",
+        "sha256": "bd759c02f1f1bc143ff4188c0089fafde85355f0a21ede2488bc9651a185aa52"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\hud_wolfstatbars_fla\\TutorialHighlight_60.as",
+        "sha256": "8e4db8822a437891bc0d09a4ff3a99fdaf65dbac8444e0f3b12b43e3b0801f0d"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\Extensions.as",
+        "sha256": "d55a4f4bf43a31fd315998a56e42f90221c606bdcc4d936c1d5e3a5b30239820"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\FocusEventEx.as",
+        "sha256": "ea3473934aa9fa8ffa6932d1e0754dd12c7e4fd6cfe731407092b9f30e7d4259"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\FocusManager.as",
+        "sha256": "4874640de643f0c1270918b6ebdbf6d6fe4e74bc3a2f5b8c7e2e256322f80342"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\GamePad.as",
+        "sha256": "48402e99c25d18ea8710b0edbd241fe65fc13d342c792c7ec0fe29458efb6277"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\GamePadAnalogEvent.as",
+        "sha256": "72b390258381727326014d7ec653c43b51a49cc6f6d25d80caf453fc8472dc89"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\KeyboardEventEx.as",
+        "sha256": "e89e211bd950e3b337c9cf34f217a5f906dbb1f22690771fa9d055f806154dde"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\gfx\\MouseEventEx.as",
+        "sha256": "aad821d4b9be188e4d05ed18649568ee8b4461b69c8d02236a32c6a439d736bc"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\constants\\ConstrainMode.as",
+        "sha256": "2af3cfcf1cb570b727f07fd6bf17012c4f947a6630a1f5cd38cebb92b7b6e702"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\constants\\FocusMode.as",
+        "sha256": "36b623d6bf09e4460667bd90a0c3838d48cc80994d14dc0664d21043d72d9069"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\constants\\InputValue.as",
+        "sha256": "aa2cf49b91fefd763b44caa958f06799315c60d42e66f23d280ad2bf9a0d15aa"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\constants\\InvalidationType.as",
+        "sha256": "2dcb5f84c29530a85a12251fa5ef66faad92fe82cc898b76f782aa2ab6f5785c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\constants\\NavigationCode.as",
+        "sha256": "57ea71e4079f8d34844a5a67e6a25e01de43c823b0a290c098f3d539202ab97b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\controls\\StatusIndicator.as",
+        "sha256": "b58750edff3fb424b9602c9204d7f4348aff6a7f632f91b3a948d01b001229be"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\controls\\UILoader.as",
+        "sha256": "3c0adce12b359a0d08de1f74e4344797f5a3be5cf315e8ce2d21ba516e99518a"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\core\\CLIK.as",
+        "sha256": "62ea17afb09fb6e2a3d0adcca0a49cb64a8b6ef043fd418eed5246155fd5cedf"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\core\\UIComponent.as",
+        "sha256": "fc99fe17d8ba38d54088c6e96f7fa580ce090af1d41174d046489ad74d068c19"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\data\\ListData.as",
+        "sha256": "7378731ed229d98a954196740d62c1a6ae5f9620bdfb9daa5e01d5c558061c6a"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\events\\ComponentEvent.as",
+        "sha256": "6ef934a1805c73f5056e7d8103894d4347036644234bddab8247ee20d59f1049"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\events\\FocusHandlerEvent.as",
+        "sha256": "4a4900e279eb73170bf380867da2c53be18a5278d6f687469718be5f1f3782d8"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\events\\InputEvent.as",
+        "sha256": "545c5da60fd44f03028e5b53829b92c1183ad147a1cd4087f0ce99204103267e"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\events\\ResizeEvent.as",
+        "sha256": "a223c719125b87d2c076e9f0f4dc689440dddf4316ef2aceb49053310e25b75c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\interfaces\\IListItemRenderer.as",
+        "sha256": "ef9a6019f4f5e940416c5b269b41af20571f6c7951cfe2c758acaa8ed5947a8c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\interfaces\\IUIComponent.as",
+        "sha256": "94519edaa0b42b2b8ca781f37189b97ed78526ca8c4550b523d047338dc325c3"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\layout\\LayoutData.as",
+        "sha256": "75918e08be86bde11d6a306f0548277dca1e2508d5c4737aa9224fe3cf4dc51c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\managers\\FocusHandler.as",
+        "sha256": "ed0b24f2bf7a03a5f22e583f2e6525cb7e3e640e7f06b3bae6c2441d4539b478"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\managers\\InputDelegate.as",
+        "sha256": "36e0d1d33dd068f579a8777a0ae78319fc176f425ade1e636a1544d9557145bc"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\managers\\PopUpManager.as",
+        "sha256": "e12241eeb0a5f79a028164110fe2d19b27c1757c1d90b466270cb03f436bb2f3"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\motion\\Tween.as",
+        "sha256": "06ee785beaf761a573ad10aca1550f860819d19951ea7a8b8a32e7bdc660f560"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\ui\\InputDetails.as",
+        "sha256": "f6fc88e10d769641529fe8b44b5a92893f0ef63a9f8e4b3004725989870f1016"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\utils\\ConstrainedElement.as",
+        "sha256": "4ae35dd8166b10f2f6f71d85253aeb7d50657942d8103f50138025a74d42f3a4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\utils\\Constraints.as",
+        "sha256": "a018780b843bbddddc64454a1f5f502bcb0d9ea5c4a5dce8e18cb47e6b12622a"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\scaleform\\clik\\utils\\WeakReference.as",
+        "sha256": "5468d79c0f4024871677d28185a70503c3df894826bff6dfb6b37fb6484fd934"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\CoreComponent.as",
+        "sha256": "c95cdd82ef3909b38ee586ee14ba25e93a9531147fa5f158bde7cf326dd26f77"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\CoreHud.as",
+        "sha256": "e371a6816e9c6788cd0170ee7f67b5a713660b0024012915d08323b9e858d28d"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\CoreHudModule.as",
+        "sha256": "f0b422cef3acd436bab4e0d1d0a5f0961dc6d0c5b3c3a2fe6b9600b7cccb92c9"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\IGameAdapter.as",
+        "sha256": "985af7cbedd289cbdb38899d780137bcd614dadbd2d2fb7889f583018fa3f718"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\constants\\EInputDeviceType.as",
+        "sha256": "8869f482c5b7b0f68e1d30ba6cd00b843d2c458092339e4b0aef701f1e108f8f"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\constants\\InventorySlotType.as",
+        "sha256": "d5b3404dc6e36a3175ad1579877ee798caf6c4dfdec7be954017c28569dcd1bd"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\constants\\KeyCode.as",
+        "sha256": "2df91ae931cf4f7fad72d7ff30879a44e4907c952836fd4c877a55800cd89869"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\constants\\PlatformType.as",
+        "sha256": "6d6d915913634ca81dce9c4f0ba8e7f98c5bcb060f02147a8b35f321c36dc98d"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\events\\ControllerChangeEvent.as",
+        "sha256": "1ac2d25728d8c25b62d792d779e448ddab5cdf804e5b3978b2492645fcce32ed"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\interfaces\\IBaseSlot.as",
+        "sha256": "9d5bd708e8bf8ce72e5ecb774579797b22781b0a1383a42e7c55bbf47a7d8755"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\interfaces\\IInteractionObject.as",
+        "sha256": "f599dbaeffa75525c8cf0ce7adb87213452e14676021a520de7444a60c96f529"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\managers\\InputManager.as",
+        "sha256": "5eec20a85f8be40ae61c516bd6200301f274b151a8ab62671cdb60840a93bab6"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\managers\\RuntimeAssetsManager.as",
+        "sha256": "5c8639c85a88592ad756565518f877be1806b424259bd0e828854739e28750d7"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\utils\\CommonUtils.as",
+        "sha256": "30d5e0f8a12283a3e8ae6b93813ca817f3270972e77417074adb8b689b27bb32"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\utils\\motion\\TweenEx.as",
+        "sha256": "04b186fb3dd4930bdbd980c7b658b78cc14593df484e721239ae881ddcbfb8e4"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleWolfHead.as",
+        "sha256": "9acce2f2a8e1ff402001ff0dbb27a5d0aeb971b0b4ae63ce40631d7f1fd22a2e"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\BaseState.as",
+        "sha256": "d4fd09fa65e799683fa728cad7f334a378bcdc72e7f6ef16b94aaff984b8710e"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\HideState.as",
+        "sha256": "5875a9e90b9a5934315ad28f700f078f2e5fa8b2b95243fa5173aa7ae4b51891"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\OnDemandState.as",
+        "sha256": "94eec48646126f8a8c0cdcccbc121169364ec0dc614e2a0021813624f8fe71b0"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\OnUpdateState.as",
+        "sha256": "9dc014cb805648861082afdb492d80864b17b68927c5db65a8eed096485142e7"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\ShowState.as",
+        "sha256": "bd4c66d315c287d9eb7f85eed04d769e892b37e3e0f72d2cb409f57ef21ff730"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\states\\StateMachine.as",
+        "sha256": "e4c9821a234ff29bf858ae6a686b4d2f3c7451b488590309ed34f0d88c8eb571"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\signinfo\\HudItemInfo.as",
+        "sha256": "6893d503c7671320e122e7ac006099705c0ca2772f413b55a52e1c6ca627fb33"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\wolfHead\\FocusIndicator.as",
+        "sha256": "2301b22169a2d0cec91a199bec8a1db789aa2bd71333593b573d2f18e7f6a27c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\wolfHead\\StaminaIndicator.as",
+        "sha256": "ead72f165240f9c013476b685b3a6f88b12425326c3de7fed021b480ef8a740e"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\wolfHead\\W3StatIndicator.as",
+        "sha256": "f863675270fe1dbdac59a1e1d86ae98bb92ae63eadf7e1d92480a2bfdb1f7a4a"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\game\\witcher3\\hud\\modules\\wolfHead\\WolfMedallion.as",
+        "sha256": "31f7945193977612d98e8bad9a11e344cf964e0aa864ec066f6d6c40b4d890b6"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\constants\\KeyCode.as",
+        "sha256": "030af61dc36bc71ed00a354260720c8be01028037bea397b3ba77990f2070c79"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\data\\InputAxisData.as",
+        "sha256": "e1ad2c04bbf74eee6ca67a9c131fd75531cc1bd2673ee7e8d30c6492806786e3"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\events\\GameEvent.as",
+        "sha256": "4c8e9bd748d783afcd02b84236c5d9e46b24084a64ddfd8ce6e45e03c2f36d99"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\red\\core\\events\\GestureEventEx.as",
+        "sha256": "e3a780047c0bfc863aaf20b939208ed49b41c72be08321a8e326c27d9f0fa4d5"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\fl\\transitions\\easing\\Strong.as",
+        "sha256": "340d1f34ac7eda8b1adaa0ac27fc25ef53b4150350acb9407cdda3e312fbc909"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\fl\\motion\\easing\\Sine.as",
+        "sha256": "86588938732bc7602f7dd9932c7a2c3897262c41c43b0a56208f206ee8fb67ff"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\com\\gskinner\\motion\\GTween.as",
+        "sha256": "8577355ca76f6917689c010b6fd993297d62032b1c292fba5b50e4dc530b209c"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-bars\\scripts\\com\\gskinner\\motion\\GTweener.as",
+        "sha256": "78b8391d7e612faa769ec89cb183d607d009c5daa7ae4e2c4a82d16f4f69fcb6"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  },
+  "buffs": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+    "resource_sha256": "2cfaaf607107e0250483ddd8c02b4cc34693dd1b6a9fc7571c1dd1fae0f9e0ba",
+    "symbol_classes": {
+      "hud_buffs_fla.TutorialHighlight_3": 40,
+      "W3ScrollingListNoBG": 34,
+      "BuffItemRendererRef": 32,
+      "hud_buffs_fla.mc_buff_stack_indicator_17": 31,
+      "BuffCircle": 23,
+      "hud_buffs_fla.BuffShapeLeft_8": 20,
+      "hud_buffs_fla.mc_buff_glow_anim_13": 14,
+      "IconLoaderRef": 3,
+      "red.game.witcher3.hud.modules.HudModuleBuffs": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "e67f9327f7ffe91e3512adc23bc65fcc14a2fdae868fd7883e99f8f4ce008ad5"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false, param3:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "iaiSetHudK": {
+        "parameters": "k:Number, px:Number, py:Number",
+        "returns": "void"
+      },
+      "setViewMode": {
+        "parameters": "param1:Boolean",
+        "returns": "void"
+      },
+      "setPercent": {
+        "parameters": "param1:int, param2:Number, param3:Number, param4:int",
+        "returns": "void"
+      },
+      "showBuffUpdateFx": {
+        "parameters": "",
+        "returns": "void"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleBuffs.ws",
+    "native_provider_sha256": "9d32b748314a3a20b55d9262ee8c789d59f7a35612b72f8047f2400bfc9b04e6",
+    "native_bound_functions": [
+      "setPercent",
+      "setViewMode",
+      "showBuffUpdateFx"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-buffs\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-buffs\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBuffs.as",
+        "sha256": "ebe8742cb715856c3f72ee40987d1878b2d80773822a19819ae3345a18df1f40"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  },
+  "quests": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_quests.redswf",
+    "resource_sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+    "symbol_classes": {
+      "hud_quests_fla.TutorialHighlight_11": 30,
+      "QuestContainer": 26,
+      "DefaultHudQuestObjectiveListItem": 19,
+      "hud_quests_fla.LineShadowSym_3": 13,
+      "QuestObjectiveList": 7,
+      "hud_quests_fla.QuestLineShadowSym_7": 3,
+      "red.game.witcher3.hud.modules.HudModuleQuests": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "410cf972cb1950d3e8780b9378f83e31321f07b3b0bdc278707e6d243eed19b4"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false, param3:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "ShowTrackedQuest": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "UpdateObjectiveCounter": {
+        "parameters": "param1:int, param2:String",
+        "returns": "void"
+      },
+      "UpdateObjectiveHighlight": {
+        "parameters": "param1:int, param2:Boolean",
+        "returns": "void"
+      },
+      "UpdateObjectiveUnhighlightAll": {
+        "parameters": "",
+        "returns": "void"
+      },
+      "SetSystemQuestInfo": {
+        "parameters": "param1:String, param2:int, param3:Boolean",
+        "returns": "void"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleQuests.ws",
+    "native_provider_sha256": "5dea85d7a200632c1f8dfae76a211b83f40b7604658c55ef027e80dcf04f1fa6",
+    "native_bound_functions": [
+      "SetSystemQuestInfo",
+      "ShowTrackedQuest",
+      "UpdateObjectiveCounter",
+      "UpdateObjectiveHighlight",
+      "UpdateObjectiveUnhighlightAll"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-quests\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-quests\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleQuests.as",
+        "sha256": "66a3485ce9b9d48a0f8c994e958cd19c6b4bedfcba625449e3044ad2c8155d5c"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  },
+  "minimap2": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_minimap2.redswf",
+    "resource_sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+    "symbol_classes": {
+      "hud_minimap2_fla.TutorialHighlight_24": 498,
+      "hud_minimap2_fla.MC_VEC_VisibilityCone_21": 494,
+      "hud_minimap2_fla.MC_IMG_PlayerMark_18": 490,
+      "hud_minimap2_fla.MC_Shading_15": 486,
+      "MC_HighlightedMapPinDistance": 480,
+      "hud_minimap2_fla.MC_DistanceIcon_5": 479,
+      "hud_minimap2_fla.ElevationIndicator_4": 476,
+      "MC_TimeOfDayContainer2": 470,
+      "hud_minimap2_fla.MC_ICO_Weather_8": 468,
+      "HubMap": 429,
+      "HubMapContainer": 428,
+      "InteriorMap": 427,
+      "InteriorMapContainer": 423,
+      "CommonMap": 422,
+      "CommonMapContainer": 421,
+      "AreaBorderRef": 420,
+      "IconLoader": 417,
+      "MapPinInstance": 415,
+      "hud_minimap2_fla.MC_NewPinFeedback_41": 410,
+      "PinGlow": 408,
+      "MapPinRadius": 403,
+      "WaypointInstance": 390,
+      "MC_WayPoint": 389,
+      "MC_MonsterPortrait2": 388,
+      "IconLoaderSmall": 387,
+      "QuestDirectionCurrentMain": 377,
+      "hud_minimap2_fla.MC_ArrowUser_58": 376,
+      "MapPinIco": 355,
+      "classInfestedVineyard": 324,
+      "classInfestedVineyardDisabled": 322,
+      "classWineMerchant": 320,
+      "classDyeMerchant": 318,
+      "classPlegmund": 314,
+      "classWineContract": 312,
+      "classWineContractDisabled": 310,
+      "classStables": 308,
+      "classBed": 306,
+      "classMutagenDismantle": 304,
+      "classAlchemyTable": 302,
+      "classBookshelf": 298,
+      "classKnightErrant": 296,
+      "classKnightErrantDisabled": 294,
+      "classCammerlengo": 292,
+      "classArchmaster": 288,
+      "classEnemy": 286,
+      "classEnemyDead": 285,
+      "classHerb": 282,
+      "classInnkeeper": 280,
+      "classRoadSign": 278,
+      "classUser1": 276,
+      "classUser2": 274,
+      "classUser3": 271,
+      "classUser4": 268,
+      "classNoticeBoard": 265,
+      "classNoticeBoardFull": 263,
+      "classPlayerStash": 261,
+      "classPlayerStashDiscoverable": 260,
+      "classHorse": 258,
+      "classShopkeeper": 256,
+      "classBlacksmith": 254,
+      "classArmorer": 252,
+      "classBoatBuilder": 250,
+      "classHairdresser": 248,
+      "classAlchemic": 246,
+      "classBoat": 244,
+      "classEntrance": 242,
+      "classMonsterNest": 240,
+      "classMonsterNest_1": 238,
+      "classMonsterNest_2": 232,
+      "classMonsterNest_3": 226,
+      "classMonsterNestDisabled": 221,
+      "classMonsterHunt": 219,
+      "classPlaceOfPower": 217,
+      "classPlaceOfPowerDisabled": 215,
+      "classHarbor": 213,
+      "classMagicLamp": 211,
+      "classQuestLoot": 209,
+      "classHerbalist": 207,
+      "classQuestAvailable": 205,
+      "classQuestAvailableHoS": 203,
+      "classQuestAvailableBaW": 201,
+      "classStoryQuest": 199,
+      "classChapterQuest": 198,
+      "classSideQuest": 197,
+      "classMonsterQuest": 196,
+      "classTreasureQuest": 195,
+      "classTreasureHuntMappin": 194,
+      "classTreasureHuntMappin_1": 192,
+      "classTreasureHuntMappin_2": 187,
+      "classTreasureHuntMappin_3": 183,
+      "classTreasureHuntMappinDisabled": 178,
+      "classWhetstone": 176,
+      "classArmorRepairTable": 174,
+      "classBoatRace": 172,
+      "classTeleport": 170,
+      "classGenericFocus": 168,
+      "classCompanion": 166,
+      "classProstitute": 164,
+      "classQuestReturn": 162,
+      "classHorseRacingNPC": 159,
+      "classHorseRace": 155,
+      "classNonQuestHorseRace": 154,
+      "classQuestBelgard": 152,
+      "classQuestCoronata": 151,
+      "classQuestVermentino": 150,
+      "classRift": 144,
+      "classNotDiscoveredPOI": 142,
+      "classNotDiscoveredPOI_1": 140,
+      "classNotDiscoveredPOI_2": 136,
+      "classNotDiscoveredPOI_3": 132,
+      "classSpoilsOfWar": 127,
+      "classSpoilsOfWarDisabled": 125,
+      "classBanditCamp": 123,
+      "classBanditCamp_1": 121,
+      "classBanditCamp_2": 117,
+      "classBanditCamp_3": 113,
+      "classBanditCampDisabled": 108,
+      "classBanditCampfire": 106,
+      "classBanditCampfireDisabled": 104,
+      "classBossAndTreasure": 102,
+      "classBossAndTreasure_1": 100,
+      "classBossAndTreasure_2": 95,
+      "classBossAndTreasure_3": 89,
+      "classBossAndTreasureDisabled": 84,
+      "classContraband": 82,
+      "classContrabandDisabled": 80,
+      "classContrabandShip": 78,
+      "classContrabandShipDisabled": 76,
+      "classRescuingTown": 74,
+      "classRescuingTown_1": 72,
+      "classRescuingTown_2": 68,
+      "classRescuingTown_3": 63,
+      "classRescuingTownDisabled": 58,
+      "classDungeonCrawl": 56,
+      "classDungeonCrawlDisabled": 54,
+      "classEnchanter": 52,
+      "classHideout": 50,
+      "classHideoutDisabled": 48,
+      "classTorch": 46,
+      "classInfestedVineyard_1": 42,
+      "classInfestedVineyard_2": 35,
+      "classInfestedVineyard_3": 28,
+      "classPlegmundDisabled": 20,
+      "classSignalingStake": 18,
+      "classSignalingStakeDisabled": 16,
+      "classWitcherHouse": 14,
+      "classHorseRaceTarget": 12,
+      "classHorseRaceDummy": 9,
+      "classQuestObjective": 6,
+      "classQuestObjectiveOther": 3,
+      "red.game.witcher3.hud.modules.HudModuleMinimap2": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "51e5f8ddb2cc84e26c7d5f07741d51fff90542979bc89b167d820ee140706eb4"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false, param3:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "iaiSetHour": {
+        "parameters": "h:Number",
+        "returns": "void"
+      },
+      "iaiShowClock": {
+        "parameters": "on:Boolean",
+        "returns": "void"
+      },
+      "SetMapSettings": {
+        "parameters": "param1:String, param2:Number, param3:int, param4:int, param5:int",
+        "returns": "*"
+      },
+      "SetTextureExtensions": {
+        "parameters": "param1:String, param2:String",
+        "returns": "*"
+      },
+      "SetZoom": {
+        "parameters": "param1:Number, param2:Boolean",
+        "returns": "*"
+      },
+      "SetPlayerRotation": {
+        "parameters": "param1:Number, param2:Number",
+        "returns": "*"
+      },
+      "SetPlayerPosition": {
+        "parameters": "param1:Number, param2:Number, param3:Number, param4:Boolean",
+        "returns": "*"
+      },
+      "SetPlayerPositionAndRotation": {
+        "parameters": "param1:Number, param2:Number, param3:Number, param4:Boolean, param5:Number, param6:Number",
+        "returns": "*"
+      },
+      "NotifyPlayerEnteredInterior": {
+        "parameters": "param1:Number, param2:Number, param3:Number, param4:String",
+        "returns": "void"
+      },
+      "NotifyPlayerExitedInterior": {
+        "parameters": "",
+        "returns": "void"
+      },
+      "DoFading": {
+        "parameters": "param1:Boolean, param2:Boolean",
+        "returns": "*"
+      },
+      "EnableRotation": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "EnableMask": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "EnableDebug": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "EnableBorders": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleMinimap2.ws",
+    "native_provider_sha256": "dbaab08dd7791b2a91d37b8d869133ded94875420c0af0e8d8ebda677970e976",
+    "native_bound_functions": [
+      "DoFading",
+      "EnableBorders",
+      "EnableDebug",
+      "EnableMask",
+      "EnableRotation",
+      "NotifyPlayerEnteredInterior",
+      "NotifyPlayerExitedInterior",
+      "SetMapSettings",
+      "SetPlayerPosition",
+      "SetPlayerPositionAndRotation",
+      "SetPlayerRotation",
+      "SetTextureExtensions",
+      "SetZoom"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-minimap2\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-minimap2\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleMinimap2.as",
+        "sha256": "18036cf6df90e1146f5fedc18a5fc8dac202d6d0aa78a25a76f46578072b908e"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  },
+  "enemyfocus": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+    "resource_sha256": "2dc4fa590bf7e95ad3abf42979d5e6cdc9a03c67a724a532f611e2c52f4c8bbb",
+    "symbol_classes": {
+      "hud_enemyfocus_fla.MC_IMG_EnemyFocusFeedback_1": 63,
+      "hud_enemyfocus_fla.mcCharacterIcon_15": 55,
+      "hud_enemyfocus_fla.mc_damageTextAnim_13": 41,
+      "hud_enemyfocus_fla.MC_Npc_Level_Feedback_3": 37,
+      "NPCStaminaDelayIndicator": 28,
+      "NPCStaminaIndicator": 25,
+      "InvisibleComponent": 23,
+      "NPCStatusIndicator": 21,
+      "BossStatusIndicator": 5,
+      "hud_enemyfocus_fla.MC_IMG_EnemyHealthBar_27": 4,
+      "red.game.witcher3.hud.modules.HudModuleEnemyFocus": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "21942cafc7ee8f2856464b82fbbc73a5dbad11bc0290654b1b62baae57bd75ee"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false, param3:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "displayMutationEight": {
+        "parameters": "param1:Boolean",
+        "returns": "void"
+      },
+      "setEnemyName": {
+        "parameters": "param1:String",
+        "returns": "*"
+      },
+      "setEnemyHealth": {
+        "parameters": "param1:int",
+        "returns": "*"
+      },
+      "setEnemyStamina": {
+        "parameters": "param1:int",
+        "returns": "*"
+      },
+      "setAttitude": {
+        "parameters": "param1:int",
+        "returns": "*"
+      },
+      "setDodgeFeedback": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "SetBossOrDead": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setDamageText": {
+        "parameters": "param1:String, param2:Number, param3:Number",
+        "returns": "void"
+      },
+      "hideDamageText": {
+        "parameters": "",
+        "returns": "void"
+      },
+      "setStaminaVisibility": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setEssenceBarVisibility": {
+        "parameters": "param1:Boolean, param2:Boolean = false",
+        "returns": "*"
+      },
+      "setShowHardLock": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "setNPCQuestIcon": {
+        "parameters": "param1:String",
+        "returns": "*"
+      },
+      "setEnemyLevel": {
+        "parameters": "param1:String, param2:String",
+        "returns": "*"
+      },
+      "SetGeneralVisibility": {
+        "parameters": "param1:Boolean, param2:Boolean",
+        "returns": "*"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws",
+    "native_provider_sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+    "native_bound_functions": [
+      "SetBossOrDead",
+      "SetGeneralVisibility",
+      "displayMutationEight",
+      "hideDamageText",
+      "setAttitude",
+      "setDamageText",
+      "setDodgeFeedback",
+      "setEnemyHealth",
+      "setEnemyLevel",
+      "setEnemyName",
+      "setEnemyStamina",
+      "setEssenceBarVisibility",
+      "setNPCQuestIcon",
+      "setShowHardLock",
+      "setStaminaVisibility"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-enemyfocus\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-enemyfocus\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleEnemyFocus.as",
+        "sha256": "775f1434d580ec65c55568450af8f7435d89aa234215e00a0c44b7d79eaffd49"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  },
+  "interactions": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+    "resource_sha256": "0eedbe0542704adcac4952ff2af291fd3ace83c91853e584167c34724c129567",
+    "symbol_classes": {
+      "InteractionButton": 217,
+      "InputFeedbackButtonRef": 214,
+      "hud_interactions_fla.InputFeedbackButton_icon_steam_14": 210,
+      "hud_interactions_fla.InputFeedbackButton_icon_switch_13": 209,
+      "hud_interactions_fla.InputFeedbackButton_icon_xbox_10": 208,
+      "hud_interactions_fla.InputFeedbackButton_icon_ps_7": 205,
+      "InputFeedbackButton_kb_background": 197,
+      "InputFeedbackButton_keyboardButton": 194,
+      "ICO_PlayS_Square.png": 190,
+      "ICO_PlayS_X.png": 189,
+      "ICO_PlayS_Circle.png": 188,
+      "ICO_PlayS_Triangle.png": 187,
+      "ICO_PlayS_L1.png": 186,
+      "ICO_PlayS_R1.png": 185,
+      "ICO_PlayS_L2.png": 184,
+      "ICO_PlayS_R2.png": 183,
+      "ICO_PlayS_L3.png": 182,
+      "ICO_PlayS_R3.png": 181,
+      "ICO_PlayS_dpad_up.png": 180,
+      "ICO_PlayS_dpad_down.png": 179,
+      "ICO_PlayS_dpad_right.png": 178,
+      "ICO_PlayS_dpad_left.png": 177,
+      "ICO_PlayS_dpad_left_right.png": 176,
+      "ICO_PlayS_dpad.png": 175,
+      "ICO_PlayS_Touchpad.png": 174,
+      "ICO_PlayS_Options.png": 173,
+      "ICO_PlayS_R3_tabs.png": 172,
+      "ICO_PlayS_R3_scroll.png": 171,
+      "ICO_PlayS_L3_hold.png": 170,
+      "ICO_PlayS_R3_hold.png": 169,
+      "ICO_PlayS_L3_tabs.png": 168,
+      "ICO_PlayS_L3_scroll.png": 167,
+      "ICO_PlayS_R3_down.png": 166,
+      "ICO_PlayS_dpad_up_down.png": 165,
+      "ICO_PlayS_L3_down.png": 164,
+      "ICO_PlayS_L3_left.png": 163,
+      "ICO_PlayS_L3_right.png": 162,
+      "ICO_PlayS_L3_up.png": 161,
+      "ICO_PlayS_R3_left.png": 160,
+      "ICO_PlayS_R3_right.png": 159,
+      "ICO_PlayS_R3_up.png": 158,
+      "ICO_Xbox_X.png": 157,
+      "ICO_Xbox_A.png": 156,
+      "ICO_Xbox_B.png": 155,
+      "ICO_Xbox_Y.png": 154,
+      "ICO_Xbox_LB.png": 153,
+      "ICO_Xbox_RB.png": 152,
+      "ICO_Xbox_LT.png": 151,
+      "ICO_Xbox_RT.png": 150,
+      "ICO_Xbox_L.png": 149,
+      "ICO_Xbox_R.png": 148,
+      "ICO_Xbox_dpad_up.png": 147,
+      "ICO_Xbox_dpad_double_up.png": 146,
+      "ICO_Xbox_dpad_down.png": 145,
+      "ICO_Xbox_dpad_right.png": 144,
+      "ICO_Xbox_dpad_left.png": 143,
+      "ICO_Xbox_dpad_left_right.png": 142,
+      "ICO_Xbox_Start.png": 141,
+      "ICO_Xbox_Back.png": 140,
+      "ICO_Xbox_R_tabs.png": 139,
+      "ICO_Xbox_R_scroll.png": 138,
+      "ICO_Xbox_L_hold.png": 137,
+      "ICO_Xbox_R_hold.png": 136,
+      "ICO_Xbox_L_tabs.png": 135,
+      "ICO_Xbox_L_scroll.png": 134,
+      "ICO_Xbox_R_down.png": 133,
+      "ICO_Xbox_dpad.png": 132,
+      "ICO_Xbox_Home.png": 131,
+      "ICO_Xbox_L_down.png": 130,
+      "ICO_Xbox_L_left.png": 129,
+      "ICO_Xbox_L_right.png": 128,
+      "ICO_Xbox_L_up.png": 127,
+      "ICO_Xbox_R_left.png": 126,
+      "ICO_Xbox_R_right.png": 125,
+      "ICO_Xbox_R_up.png": 124,
+      "ICO_Switch_Square.png": 123,
+      "ICO_Switch_X.png": 122,
+      "ICO_Switch_Circle.png": 121,
+      "ICO_Switch_Triangle.png": 120,
+      "ICO_Switch_L1.png": 119,
+      "ICO_Switch_R1.png": 118,
+      "ICO_Switch_L2.png": 117,
+      "ICO_Switch_R2.png": 116,
+      "ICO_Switch_L3.png": 115,
+      "ICO_Switch_R3.png": 114,
+      "ICO_Switch_dpad_up.png": 113,
+      "ICO_Switch_dpad_down.png": 112,
+      "ICO_Switch_dpad_right.png": 111,
+      "ICO_Switch_dpad_left.png": 110,
+      "ICO_Switch_dpad_left_right.png": 109,
+      "ICO_Switch_dpad_up_down.png": 108,
+      "ICO_Switch_dpad.png": 107,
+      "ICO_Switch_Options.png": 106,
+      "ICO_Switch_Touchpad.png": 105,
+      "ICO_Switch_R3_tabs.png": 104,
+      "ICO_Switch_R3_scroll.png": 103,
+      "ICO_Switch_L3_hold.png": 102,
+      "ICO_Switch_R3_hold.png": 101,
+      "ICO_Switch_L3_tabs.png": 100,
+      "ICO_Switch_L3_scroll.png": 99,
+      "ICO_Switch_R3_down.png": 98,
+      "ICO_Switch_L3_down.png": 97,
+      "ICO_Switch_L3_left.png": 96,
+      "ICO_Switch_L3_right.png": 95,
+      "ICO_Switch_L3_up.png": 94,
+      "ICO_Switch_R3_left.png": 93,
+      "ICO_Switch_R3_right.png": 92,
+      "ICO_Switch_R3_up.png": 91,
+      "ICO_Steam_X.png": 90,
+      "ICO_Steam_A.png": 89,
+      "ICO_Steam_B.png": 88,
+      "ICO_Steam_Y.png": 87,
+      "ICO_Steam_LB.png": 86,
+      "ICO_Steam_RB.png": 85,
+      "ICO_Steam_LT.png": 84,
+      "ICO_Steam_RT.png": 83,
+      "ICO_Steam_L.png": 82,
+      "ICO_Steam_R.png": 81,
+      "ICO_Steam_dpad_up.png": 80,
+      "ICO_Steam_dpad_down.png": 79,
+      "ICO_Steam_dpad_right.png": 78,
+      "ICO_Steam_dpad_left.png": 77,
+      "ICO_Steam_dpad_left_right.png": 76,
+      "ICO_Steam_Start.png": 75,
+      "ICO_Steam_R_tabs.png": 74,
+      "ICO_Steam_R_scroll.png": 73,
+      "ICO_Steam_L_hold.png": 72,
+      "ICO_Steam_R_hold.png": 71,
+      "ICO_Steam_L_tabs.png": 70,
+      "ICO_Steam_L_scroll.png": 69,
+      "ICO_Steam_R_down.png": 68,
+      "InputFeedbackButton_mouseIcon": 67,
+      "Mouse_RightBtn.png": 63,
+      "Mouse_LeftBtn.png": 62,
+      "Mouse_MiddleBtn.png": 61,
+      "Mouse_ScrollUp.png": 60,
+      "Mouse_ScrollDown.png": 59,
+      "tempIcon_new": 58,
+      "hud_interactions_fla.MC_Picture_18": 57,
+      "FocusInteraction": 54,
+      "ButtonSlot": 52,
+      "hud_interactions_fla.ButtonText_31": 51,
+      "tempIcon": 44,
+      "ICO_Switch_Share.png": 1,
+      "red.game.witcher3.hud.modules.HudModuleInteractions": 0
+    },
+    "imports": [
+      "gfxfontlib.swf"
+    ],
+    "abc_sha256": [
+      "e1faacc0c903ddd1465fbffce7c6b6b4e6c40e2aa7ebf87527923265c0a05a8f"
+    ],
+    "public_signatures": {
+      "SetMaxOpacity": {
+        "parameters": "param1:Number",
+        "returns": "*"
+      },
+      "SetEnabled": {
+        "parameters": "param1:Boolean",
+        "returns": "*"
+      },
+      "ShowElement": {
+        "parameters": "param1:Boolean, param2:Boolean = false, param3:Boolean = false",
+        "returns": "void"
+      },
+      "SetScaleFromWS": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "SetVisibility": {
+        "parameters": "param1:Boolean, param2:Boolean",
+        "returns": "*"
+      },
+      "SetVisibilityEx": {
+        "parameters": "param1:Boolean, param2:Boolean, param3:Boolean, param4:Boolean, param5:Boolean",
+        "returns": "*"
+      },
+      "SetPositions": {
+        "parameters": "param1:Number, param2:Number",
+        "returns": "*"
+      },
+      "EnableHoldIndicator": {
+        "parameters": "param1:int, param2:int, param3:String, param4:Number",
+        "returns": "void"
+      },
+      "DisableHoldIndicator": {
+        "parameters": "",
+        "returns": "void"
+      },
+      "SetInteractionIcon": {
+        "parameters": "param1:String",
+        "returns": "*"
+      },
+      "SetInteractionText": {
+        "parameters": "param1:String",
+        "returns": "*"
+      },
+      "SetInteractionKey": {
+        "parameters": "param1:int, param2:int",
+        "returns": "*"
+      },
+      "SetInteractionIconAndText": {
+        "parameters": "param1:String, param2:String",
+        "returns": "*"
+      },
+      "SetInteractionKeyIconAndText": {
+        "parameters": "param1:int, param2:int, param3:String, param4:String",
+        "returns": "*"
+      },
+      "SetHoldDuration": {
+        "parameters": "param1:Number",
+        "returns": "void"
+      },
+      "AddFocusInteractionIcon": {
+        "parameters": "param1:int, param2:String",
+        "returns": "void"
+      },
+      "RemoveFocusInteractionIcon": {
+        "parameters": "param1:int",
+        "returns": "void"
+      },
+      "UpdateFocusInteractionIconPosition": {
+        "parameters": "param1:int, param2:Number, param3:Number",
+        "returns": "void"
+      }
+    },
+    "native_provider": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modFriendlyHUD\\content\\scripts\\game\\gui\\hud\\modules\\hudModuleInteractions.ws",
+    "native_provider_sha256": "030abacdf99db978c32cb0bc12f704df5bc69d151ed0b4de25dacbfc1ae93693",
+    "native_bound_functions": [
+      "AddFocusInteractionIcon",
+      "DisableHoldIndicator",
+      "EnableHoldIndicator",
+      "RemoveFocusInteractionIcon",
+      "SetHoldDuration",
+      "SetInteractionIcon",
+      "SetInteractionIconAndText",
+      "SetInteractionKey",
+      "SetInteractionKeyIconAndText",
+      "SetInteractionText",
+      "SetPositions",
+      "SetVisibility",
+      "SetVisibilityEx",
+      "UpdateFocusInteractionIconPosition"
+    ],
+    "bindings_not_in_exported_module_classes": [],
+    "private_decompiler_inputs": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-interactions\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleBase.as",
+        "sha256": "5e4bd6ec237fdbb29127a1de8b37ab8cdd708f7abf112e417000b5fb43ce5d8b"
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-probe\\ink-interactions\\scripts\\red\\game\\witcher3\\hud\\modules\\HudModuleInteractions.as",
+        "sha256": "bebd9bd554fda9365e81ba1daf381a66c6383b4a69ac596faa22814e1c5b100d"
+      }
+    ],
+    "limitation": "Top-level/public module inventory; nested renderers and data listeners need separate checks"
+  }
+}

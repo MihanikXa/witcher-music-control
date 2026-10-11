@@ -74,3 +74,15 @@ Playwright is an explicit environment prerequisite, not an automatic installer.
 `python tools/contrast.py` reproduces the synthetic contrast table from
 src/palette.json and writes build/comparison/contrast.json. It includes no game
 scene measurements, black-edge contribution or HDR conversion.
+
+## Private Ink & Iron HUD proof
+
+`build-ink-hud-bars.py` builds one author-unchanged 0.8 bars resource plus the
+original `src/hud/inkIronBarsBridge.ws` adapter. It gates current deployed HUD and
+merge sources, official compiler controls, cook/validate/pack/metadata, exact
+movie/atlas identity, re-extraction, deterministic ZIP routing and read-only live
+fingerprints. Outputs stay in ignored build/deploy. See
+`research/ink-hud-integration.md` for exact commands, scope and runtime limits.
+
+`audit-hud-contracts.py` records public bindings, SymbolClass IDs, imports and
+hashes from private JPEXS exports, without copying author implementations into Git.
