@@ -61,6 +61,10 @@ Clean, light, breathable and modern, **with character**. Use *Ghost of Tsushima*
 
 Focus on replacing thick hard-edged black text outlines, overly saturated red/green text, cramped labels and inconsistent emphasis with precise typography, a restrained palette and context-sensitive readability. Do not merely desaturate all UI elements globally.
 
+## Latest visual-first integration direction (11 October 2026)
+
+**Current design authority:** [Ink & Iron visual-first integration](design/ink-and-iron-visual-first.md). Prefer Ink & Iron's visuals for menus **and the gameplay HUD**, while preserving SAHUD/FriendlyHUD/Hoods/Outfit Wheel/Smooth Map functionality through selective adapters, combined resources or restyling of conflicting visual assets. This **supersedes** the earlier assumption that legacy mods' compiled UI movies must always win. Inventory remains a separate **one-screen grid-first redesign**, not the radial Ink & Iron equipment layout. Do not install the full I&I HUD over the working profile without a validated behavioral bridge.
+
 ## Current concrete implementation target
 
 The latest inventory decision is [one-screen inventory-first UX](design/inventory-ux-direction.md): Geralt preview without the orbit of equipment circles, equipped indicators on grid items, focused comparisons, and low-friction filtering of low-value material clutter. This **supersedes** older inventory-screen sketches, not the intent to keep most Ink & Iron menus.

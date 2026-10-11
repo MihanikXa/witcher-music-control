@@ -16,6 +16,10 @@ Do not modify the user's installed game, Vortex deployment/staging, Documents se
 ## Reference locations
 The user will supply extracted mods locally under `reference/`. Read `reference/README.md`. All reference asset contents are gitignored. Use them as evidence; do not republish or edit authors' binaries. Obtain fonts under appropriate licenses and use vanilla game resources plus original modifications where feasible.
 
+## Newest explicit scope authority — visuals and behavior (11 October 2026)
+
+**Read first:** [design/ink-and-iron-visual-first.md](design/ink-and-iron-visual-first.md). User prefers Ink & Iron's visual design **including its HUD**. Preserve SAHUD/FriendlyHUD/Hoods/Outfit Wheel/Smooth Map **functionality**, not necessarily each mod's original appearance or movie resource priority. The older 0.8 auditor's "keep I&I HUD disabled; old owners win" is a safe **interim rollout**, **not** the final UI target. Existing conflicting mods' visible components are eligible for redesign or compatible merged resources after real contract mapping and author-permission check. Never blindly enable overlapping compiled movies; see current canonical plan for gates and sequencing. The inventory still needs a one-screen non-radial layout with equipped-item markers.
+
 ## Latest inventory and installation decisions (11 October 2026)
 
 **Read these first:** [design/inventory-ux-direction.md](design/inventory-ux-direction.md) and [research/ink-and-iron-integration-plan.md](research/ink-and-iron-integration-plan.md). Keep Inventory as **one screen**; user dislikes the **entire circle-based equipment constellation around Geralt**, not just the grid. Geralt becomes a preview, equipped items gain grid markers, and lower-value inventory clutter is reduced by filters/information architecture, without losing actual resources. Shop and related item grids are additional candidates. Keep other Ink & Iron menus largely as published. First run a local exact resource-owner/Fonts-bridge/annotation audit, then install in a cloned profile with user approval. No All-in-One over existing Vortex profile; protect accepted font/NPC/HUD/movement features.

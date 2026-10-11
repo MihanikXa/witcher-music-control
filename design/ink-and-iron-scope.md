@@ -1,5 +1,7 @@
 # Ink & Iron–first, selective UI refinement scope
 
+> **Updated visual ownership policy:** See [Ink & Iron visual-first authority](ink-and-iron-visual-first.md). The user explicitly wants Ink & Iron's HUD visuals, with SAHUD/FriendlyHUD's behavior preserved and conflicting visual assets eligible for redesign. Older "preserve original HUD look" implications below are superseded.
+
 **Decision recorded:** 11 October 2026. This is the user's newer, explicit design preference and supersedes the **scope and priority** of a from-scratch, complete menu/visual-system rebuild in [presentation-roadmap.md](presentation-roadmap.md). The older roadmap and master UI inventory remain coverage/reference documents, **not** a commitment to implement every screen.
 
 **User's position:** They like Ink & Iron's cohesive near-black, parchment/gold, relatively minimal style in screenshots. They are not willing to pursue a labor-intensive redesign across every screen. They propose keeping Ink & Iron for nearly all screens with only selective shared styling changes (font, background and perhaps colors), **except inventory grids/shops and related interfaces**, where a more substantive redesign may be worthwhile. Compressed-looking text in screenshots is a *concern to test in-game*, not a confirmed failure of the shipped assets.

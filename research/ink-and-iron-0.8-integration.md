@@ -1,5 +1,7 @@
 # Ink & Iron 0.8 integration: preserve the working stack first
 
+> **Design policy superseded 11 October 2026:** The explicit user goal now includes **Ink & Iron's HUD appearance**, while retaining SAHUD/FriendlyHUD behavior, and allows redesign of Hoods/Outfit Wheel/Smooth Map visual components to match. The owner-preserving strategy below is a **bounded interim test/rollback plan**, not the desired finished appearance. Technical collision evidence, hashes and risks still apply. See [new visual-first authority](../design/ink-and-iron-visual-first.md).
+
 11 October 2026. Canonical input: `reference/ink-and-iron-0.8/`, as explicitly
 redirected by the user during this audit. No installation, game launch, settings
 edit, script regeneration or asset modification was performed. Earlier 0.7.4
