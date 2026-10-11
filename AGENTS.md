@@ -16,6 +16,10 @@ Do not modify the user's installed game, Vortex deployment/staging, Documents se
 ## Reference locations
 The user will supply extracted mods locally under `reference/`. Read `reference/README.md`. All reference asset contents are gitignored. Use them as evidence; do not republish or edit authors' binaries. Obtain fonts under appropriate licenses and use vanilla game resources plus original modifications where feasible.
 
+## Latest inventory and installation decisions (11 October 2026)
+
+**Read these first:** [design/inventory-ux-direction.md](design/inventory-ux-direction.md) and [research/ink-and-iron-integration-plan.md](research/ink-and-iron-integration-plan.md). Keep Inventory as **one screen**; user dislikes the **entire circle-based equipment constellation around Geralt**, not just the grid. Geralt becomes a preview, equipped items gain grid markers, and lower-value inventory clutter is reduced by filters/information architecture, without losing actual resources. Shop and related item grids are additional candidates. Keep other Ink & Iron menus largely as published. First run a local exact resource-owner/Fonts-bridge/annotation audit, then install in a cloned profile with user approval. No All-in-One over existing Vortex profile; protect accepted font/NPC/HUD/movement features.
+
 ## Newest scope correction: selective Ink & Iron refinement
 
 Read [design/ink-and-iron-scope.md](design/ink-and-iron-scope.md) **before** interpreting the older broad redesign roadmap. User wants to keep Ink & Iron for nearly all screens; mainly consider serious redesign of inventory/shop/other grids and player-stats readability. Preserve its coherent dark literary identity, and don't impose sweeping sans typography, brighter backgrounds or a full menu rebuild. Test whether screenshot text compression is real at 1080p/4K. Ink & Iron's supplied files require author permission for modification/reuse; do not copy/repackage them without authorization. Treat installed-mod collisions as real binary resource ownership conflicts. Keep accepted user packages and pending interaction/subtitle trials intact.

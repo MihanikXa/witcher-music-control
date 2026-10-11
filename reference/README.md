@@ -17,3 +17,7 @@ reference/
 - `configurable-name-colors/`: source for semantic NPC/name-color control (Nexus 11614).
 
 All extracted binaries, author scripts and files are intentionally ignored by Git. Do not redistribute third-party modified assets or fonts without an appropriate license. These references are **not approved live deployment packages**. Install the standalone alignment fix in Vortex only after checking its actual contents for collisions with Seamless Adaptive HUD/FriendlyHUD.
+
+## Additional current baseline reference
+
+See [Ink & Iron folder](ink-and-iron/README.md) for v0.7.4 module extraction names and local-only rules.

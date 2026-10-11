@@ -61,6 +61,12 @@ Clean, light, breathable and modern, **with character**. Use *Ghost of Tsushima*
 
 Focus on replacing thick hard-edged black text outlines, overly saturated red/green text, cramped labels and inconsistent emphasis with precise typography, a restrained palette and context-sensitive readability. Do not merely desaturate all UI elements globally.
 
+## Current concrete implementation target
+
+The latest inventory decision is [one-screen inventory-first UX](design/inventory-ux-direction.md): Geralt preview without the orbit of equipment circles, equipped indicators on grid items, focused comparisons, and low-friction filtering of low-value material clutter. This **supersedes** older inventory-screen sketches, not the intent to keep most Ink & Iron menus.
+
+**Installation before edits:** follow the [Ink & Iron modular integration gate](research/ink-and-iron-integration-plan.md). Use a cloned Vortex profile and an audited UI + compatible font dependency; do not blindly deploy All-in-One over Hoods / Outfit Wheel / Smooth Map / SAHUD / accepted font and NPC patches.
+
 ## Current design scope — Ink & Iron-first
 
 **Newer user direction (11 October):** retain Ink & Iron's design for most screens; focus major design effort on inventory/shop grids and possibly player stats, with only demonstrated universal font/background/color fixes. See [the selective Ink & Iron scope](design/ink-and-iron-scope.md). This **supersedes the broad redesign mandate**, not the already accepted NPC/font or ongoing shadow work.
