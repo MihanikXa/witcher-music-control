@@ -1,5 +1,13 @@
 # Ink & Iron modular baseline — integration and installation gate
 
+**Superseded installation audit:** the user switched the canonical input to
+`reference/ink-and-iron-0.8/` during the 11 October audit. Use the
+[0.8 evidence and installation strategy](ink-and-iron-0.8-integration.md), its
+per-resource matrix and validation checklist. In particular, the 0.8 Vanilla
+Fonts package is alias-only and does not replace QuietFolio's English library.
+The older acquisition map below remains historical planning, not deployment
+instructions.
+
 **11 October 2026; planning only, NOT installed or verified against user's local archives.** User explicitly wants to **adopt almost all of Ink & Iron 0.7.4 as the baseline** for retained interfaces and build only the needed exceptions on top. This document establishes how to do that without overwriting the working mod profile.
 
 Reference: [Ink & Iron v0.7.4 on Nexus](https://www.nexusmods.com/witcher3/mods/13111?tab=files), last updated 10 Oct 2026, by WinterElfeas. Current description says 5.0/Remastered only; same-file `.redswf`, `.env`, `fonts.xml` conflicts cannot be merged by Script Merger. Read-only description evidence is *not* a local installed-file manifest.

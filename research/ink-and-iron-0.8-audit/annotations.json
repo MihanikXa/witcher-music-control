@@ -1,0 +1,689 @@
+[
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleDamagedItems.iaiGearSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleDamagedItems.iaiGearSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleDamagedItems.iaiGearInit",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleDamagedItems.CheckDamagedItems",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleHorseStaminaBar.iaiFearSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleHorseStaminaBar.iaiFearSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleHorseStaminaBar.IaiSendFear",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleHorseStaminaBar.UpdateStamina",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHudScale.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleBase.SnapToAnchorPosition",
+    "existing": [
+      {
+        "module": "modSeamlessAdaptiveHUD",
+        "annotation": "wrapMethod",
+        "path": "Mods/modSeamlessAdaptiveHUD/content/scripts/local/SeamlessAdaptiveHUD/sah_hooks.ws"
+      }
+    ]
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleMinimap2.iaiClockSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleMinimap2.iaiClockSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleMinimap2.iaiClockInit",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleMinimap2.UpdateWeatherDisplay",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleEnemyFocus.IAI_RoleOverride",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleEnemyFocus.IAI_GetNpcRole",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleEnemyFocus.iaiLangSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleEnemyFocus.IAI_SendLang",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleEnemyFocus.IAI_SendLockRingStyle",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleEnemyFocus.UpdateName",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiNpcSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiRowSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiGhostSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiFocusFlash",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiNpcStateSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiPlateSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiHookInit",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiGhostSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiSticky",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiGhostTxt",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleInteractions.iaiGhostTxtFor",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleEnemyFocus.IAI_SetPlateAlpha",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleInteractions.IAI_Focus",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addMethod",
+    "target": "CR4HudModuleInteractions.IAI_Tick",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleInteractions.UpdateFocusInteractionIcons",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleInteractions.GetInteractionScreenPosition",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleInteractions.SetInteractionEntity",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleItemInfo.iaiKeysSent",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleItemInfo.iaiKeysSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleItemInfo.iaiQsPhase",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleItemInfo.SetAlwaysDisplayed",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleItemInfo.UpdateItem",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronQuest.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleJournalUpdate.DoQuestEndingLogic",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronRadialSigns.ws",
+    "annotation": "addField",
+    "target": "CR4HudModuleRadialMenu.iaiSignsSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronRadialSigns.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4HudModuleRadialMenu.ShowRadialMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+    "annotation": "addField",
+    "target": "CR4IngameMenu.inkMmHidden",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+    "annotation": "addMethod",
+    "target": "CR4IngameMenu.InkMmScene",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.OnRequestSubMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.ChildRequestCloseMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkArtKey",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkArtShow",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkArtGlossary",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4CommonMenu.SendTopBarTabSelected",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4CommonMenu.ChildRequestCloseMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4GlossaryMainMenu.SendTopBarTabSelected",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4GlossaryMainMenu.ChildRequestCloseMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4CharacterDupeMenu.GetSkillGFxObject",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4ListBaseMenu.FillItemInformation",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws",
+    "annotation": "wrapMethod",
+    "target": "W3GuiAddSocketsInventoryComponent.SetInventoryFlashObjectForItem",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_charlayout.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4CharacterDupeMenu.UpdateMasterMutation",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "addField",
+    "target": "W3GuiBaseInventoryComponent.iaiEqFirst",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "wrapMethod",
+    "target": "W3GuiBaseInventoryComponent.SetInventoryFlashObjectForItem",
+    "existing": [
+      {
+        "module": "modbrothersinarms",
+        "annotation": "wrapMethod",
+        "path": "Mods/modbrothersinarms/content/scripts/local/anno/bia_guiBaseInventoryComponent_anno.ws"
+      },
+      {
+        "module": "modHoods",
+        "annotation": "wrapMethod",
+        "path": "Mods/modHoods/content/scripts/local/customDyeing.ws"
+      }
+    ]
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.SetInitialTabNewFlags",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "addField",
+    "target": "CR4InventoryMenu.iaiEqOn",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "wrapMethod",
+    "target": "W3InventoryItemContext.HandleUserFeedback",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "wrapMethod",
+    "target": "W3InventoryPaperdollContext.HandleUserFeedback",
+    "existing": [
+      {
+        "module": "modHoods",
+        "annotation": "wrapMethod",
+        "path": "Mods/modHoods/content/scripts/local/mod__hoods_Annotations.ws"
+      }
+    ]
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "annotation": "wrapMethod",
+    "target": "W3InventoryPaperdollContext.updateInputFeedback",
+    "existing": [
+      {
+        "module": "modHoods",
+        "annotation": "wrapMethod",
+        "path": "Mods/modHoods/content/scripts/local/mod__hoods_Annotations.ws"
+      }
+    ]
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "annotation": "addField",
+    "target": "CR4GuiSceneController.iaiInvCam",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "annotation": "addMethod",
+    "target": "CR4GuiSceneController.IaiInventoryCamera",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4GuiSceneController.SetCamera",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4GuiSceneController.ResetEntityPosition",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.UpdateEntityTemplate",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_invheader.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.SetInitialTabNewFlags",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_invheader.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.PaperdollUpdateAll",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws",
+    "annotation": "addMethod",
+    "target": "CR4LootPopup.OnInkLootCard",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4LootPopup.PopulateData",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.PopulateMenuData",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4CommonMenu.UpdateInputFeedback",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkMapHints",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkCommonHintsShown",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "annotation": "addMethod",
+    "target": "CR4CommonMenu.InkGatherHints",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "annotation": "addMethod",
+    "target": "CR4MapMenu.OnInkMapHintsReady",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "annotation": "addField",
+    "target": "CR4IngameMenu.iaiInfoSFF",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "annotation": "addMethod",
+    "target": "CR4IngameMenu.InkSendMenuInfo",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.UpdateUserPanelData",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.PopulateMenuData",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4IngameMenu.ChildRequestCloseMenu",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_rarity.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.PaperdollUpdateAll",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_rarity.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4BlacksmithMenu.ApplyMenuState",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_saveload.ws",
+    "annotation": "addMethod",
+    "target": "CR4IngameMenu.OnInkSaveOverwrite",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4MenuBase.GetNpcInfo",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "annotation": "addMethod",
+    "target": "CR4InventoryMenu.IaiTooltipInventoryOf",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "annotation": "addMethod",
+    "target": "CR4InventoryMenu.IaiShowTooltipFrom",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.ShowItemTooltip",
+    "existing": []
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "annotation": "wrapMethod",
+    "target": "CR4InventoryMenu.ShowItemMouseTooltip",
+    "existing": []
+  }
+]

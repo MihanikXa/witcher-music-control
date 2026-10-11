@@ -1,5 +1,11 @@
 # Verified UI resource map
 
+**Ink & Iron 0.8 integration update, 11 October:** the
+[fresh resource/owner audit](ink-and-iron-0.8-integration.md) supersedes older
+Ink & Iron package assumptions. The accepted typography/nameplate architecture
+below remains the preservation baseline; the current deployed private-trial
+state is recorded separately from visual acceptance.
+
 **11 October 2026 runtime and active work update:** The Field & Folio
 interaction v1 movie-local Source Sans Regular selector is user-observed
 **working in-game**, but `Talk` is too large/heavy, so visual acceptance is

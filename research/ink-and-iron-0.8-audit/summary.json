@@ -1,0 +1,1192 @@
+{
+  "date": "2026-10-11",
+  "reference_layout": "reference/ink-and-iron-0.8/{mods,bin}",
+  "source_url": "https://www.nexusmods.com/witcher3/mods/13111",
+  "extracted_files": 83,
+  "resource_rows": 5793,
+  "counts": {
+    "configuration": 1,
+    "modInkAndIronButtons": 16,
+    "modInkAndIronDialogue": 1,
+    "modInkAndIronFonts": 1,
+    "modInkAndIronGlossary": 706,
+    "modInkAndIronGwent": 11,
+    "modInkAndIronHUD": 102,
+    "modInkAndIronIcons": 2433,
+    "modInkAndIronLoading": 29,
+    "modInkAndIronMainMenu": 21,
+    "modInkAndIronMap_Inked": 2406,
+    "modInkAndIronUI": 59,
+    "Fonts_IM_Fell_archive": 7
+  },
+  "mods_settings_sha256": "b5423e635c495956b9a8f50580046324fa4cf7ee74fce14adcd0d7b29a6a2497",
+  "retained_order": {
+    "mod0000_compatibilitytext": {
+      "enabled": "1",
+      "priority": "1",
+      "package": "02-localization"
+    },
+    "mod0000_mergedfiles": {
+      "enabled": "1",
+      "priority": "2",
+      "package": "04-updated-merges-analog-gait"
+    },
+    "modbettertorchesnextgen": {
+      "enabled": "1",
+      "priority": "3",
+      "package": "Better Torches Next-Gen for W3 Remastered 5.x 7186 5.0.0 2026-09-30T02-04Z yShfiQaYM"
+    },
+    "modbloodandsteel": {
+      "enabled": "1",
+      "priority": "4",
+      "package": "modBloodAndSteel (Remastered) 9674 v3.01 2026-10-05T17-20Z IxfUzRCyw"
+    },
+    "modbloodtrails": {
+      "enabled": "1",
+      "priority": "5",
+      "package": "Blood Trails-8065-1-04-1752156552"
+    },
+    "modz_grammarofthepathremastered": {
+      "enabled": "1",
+      "priority": "6",
+      "package": "Grammar Of The Path Remastered 12992 6.0 2026-10-01T22-07Z iNpQhXo6S"
+    },
+    "modunreasonableplotredesigned": {
+      "enabled": "1",
+      "priority": "7",
+      "package": "Unreasonable Plot Redesigned 12988 5.00.00 2026-09-28T11-56Z KA0dHIpbI"
+    },
+    "mod_gwentdeckchoice": {
+      "enabled": "1",
+      "priority": "8",
+      "package": "05-gwent-deck-choice-layout"
+    },
+    "modbrothersinarms": {
+      "enabled": "1",
+      "priority": "9",
+      "package": "Brothers In Arms - Ultimate Edition (Remastered) 11260 4.0.3 2026-10-04T16-25Z iNpQhXoJj"
+    },
+    "modjumpinshallowwater": {
+      "enabled": "1",
+      "priority": "10",
+      "package": "Jump in Shallow Water 1.3 659 2.0 2026-09-29T19-26Z cYAe9qNky"
+    },
+    "modhoods": {
+      "enabled": "1",
+      "priority": "11",
+      "package": "Hoods 4242 3.6 2026-09-29T09-29Z GpMW8t9gL"
+    },
+    "modlivingcamera": {
+      "enabled": "1",
+      "priority": "12",
+      "package": "Living Camera (Remastered) 12529 1.3 2026-09-30T07-36Z Otuhmpdc1"
+    },
+    "modlookaroundyougeralt": {
+      "enabled": "1",
+      "priority": "13",
+      "package": "Look Around You Geralt 11512 3 2026-10-01T09-05Z GpMW8t91H"
+    },
+    "modzzz_sharedutils": {
+      "enabled": "1",
+      "priority": "14",
+      "package": "Sharedutils - All In One 12997 4.0 2026-09-29T08-06Z vo9LceSYr"
+    },
+    "modslimgloves": {
+      "enabled": "1",
+      "priority": "15",
+      "package": "Slim Gloves-4646-2-1-1704646003"
+    },
+    "modtopnotchswordsfix": {
+      "enabled": "1",
+      "priority": "16",
+      "package": "Top Notch Swords Fix 7897 5.0 2026-09-29T12-04Z Jy2Bxk4Df"
+    },
+    "modweight": {
+      "enabled": "1",
+      "priority": "17",
+      "package": "Weight (Next-Gen 4.04)-7576-0-5-1717914312"
+    },
+    "modautoapplyoilsfix": {
+      "enabled": "1",
+      "priority": "18",
+      "package": "AutoApplyOilsFix Remastered 1.0.0 13232 1 2026-10-01T22-10Z 6VaC3PRoQ"
+    },
+    "modfriendlyhud": {
+      "enabled": "1",
+      "priority": "19",
+      "package": "FriendlyHUDModFiles 13130 0.9.2R 2026-10-04T18-44Z VZrvTcgkm"
+    },
+    "modsmoothmap": {
+      "enabled": "1",
+      "priority": "20",
+      "package": "Smooth Map 13530 0.9 2026-10-04T22-40Z sedaZoQFL"
+    },
+    "modigniwaterfx": {
+      "enabled": "1",
+      "priority": "21",
+      "package": "ModIgniWaterFx 13413 1.4.1 2026-10-04T05-48Z bnSx72VUt"
+    },
+    "modaco-giants": {
+      "enabled": "1",
+      "priority": "22",
+      "package": "Attack Collision Overhaul - Giants-11686-0-1-1767827388"
+    },
+    "modaco-leshens": {
+      "enabled": "1",
+      "priority": "23",
+      "package": "Attack Collision Overhaul - Leshens-10530-0-2-1741366957"
+    },
+    "modgeraltwhitehair": {
+      "enabled": "1",
+      "priority": "24",
+      "package": "Geralt White Hair 11833 1.3 2026-10-05T09-53Z lPL5EVxCp"
+    },
+    "modhitlag": {
+      "enabled": "1",
+      "priority": "25",
+      "package": "Hit Lag Remaster 11901 1.3 2026-10-01T06-31Z q0xDJBMN9"
+    },
+    "modmovementtweaks": {
+      "enabled": "1",
+      "priority": "26",
+      "package": "Movement Tweaks - Remastered 11229 1.0 2026-10-06T23-51Z hw6Xp1EGn"
+    },
+    "modarrowparrymanual": {
+      "enabled": "1",
+      "priority": "27",
+      "package": "03-arrow-layout"
+    },
+    "modultraplussvaxisblood": {
+      "enabled": "1",
+      "priority": "28",
+      "package": "VAXIS_Blood_Physics_v1.4.zip 13506 1.4 2026-10-07T20-54Z hw6Xp1E51"
+    },
+    "modseamlessadaptivehud": {
+      "enabled": "1",
+      "priority": "29",
+      "package": "SeamlessAdaptiveHUDRemastered 2.3.2 13194 2.3.2 2026-10-05T09-43Z 6VaC3PR5J"
+    },
+    "modmonsterhuntcontracts": {
+      "enabled": "1",
+      "priority": "30",
+      "package": "Monster Hunt Contracts V2.0 13635 17 2026-10-08T14-15Z Ukn0RyGbu"
+    },
+    "modmodsettingsmenufix": {
+      "enabled": "1",
+      "priority": "31",
+      "package": "ModSettingsMenuFix 13284 1.1.0 2026-10-03T16-11Z AR7Jbx5zg"
+    },
+    "modevilsofrivia": {
+      "enabled": "1",
+      "priority": "32",
+      "package": "EvilsOfRivia 1.0.2 13560 1.0.2 2026-10-06T23-25Z XMCm1uVWI"
+    },
+    "modgeraltoutfitwheel": {
+      "enabled": "1",
+      "priority": "33",
+      "package": "modGeraltOutfitWheel"
+    },
+    "modquieteditorialnpccolorsv4": {
+      "enabled": "1",
+      "priority": "34",
+      "package": "QuietEditorial-NPC-Colors-v4-private-test"
+    },
+    "modquieteditorialnpcshadow": {
+      "enabled": "1",
+      "priority": "35",
+      "package": "QuietEditorial-NPC-Shadow-v1-private-test"
+    },
+    "modquietfolioenglish": {
+      "enabled": "1",
+      "priority": "36",
+      "package": "QuietFolio-English-Gentium-Book-v1-private-test"
+    },
+    "modautoloot": {
+      "enabled": "1",
+      "priority": "37",
+      "package": "01-brawler-only-core"
+    },
+    "modbestgsschoolstances": {
+      "enabled": "1",
+      "priority": "38",
+      "package": "01-brawler-only-core"
+    },
+    "modresponsivemovement": {
+      "enabled": "1",
+      "priority": "39",
+      "package": "01-brawler-only-core"
+    },
+    "modfieldfoliointeractionsv2": {
+      "enabled": "1",
+      "priority": "40",
+      "package": "Field-and-Folio-Interactions-v2-private-test"
+    },
+    "modquieteditorialsubtitleshadow": {
+      "enabled": "1",
+      "priority": "41",
+      "package": "QuietEditorial-Subtitle-Shadow-v1-private-test"
+    }
+  },
+  "vanilla_fonts_archive": {
+    "name": "Ink and Iron - Fonts (Vanilla) 13111 0.8.0 2026-10-11T16-27Z Q81OXm5Yf.zip",
+    "sha256": "a9ff7e3525de439fc398a461c15ca1d92024a30a2fa57cdd0e534aceeb3d8c5f"
+  },
+  "font_alias_consumers": [
+    {
+      "module": "modInkAndIronDialogue",
+      "resource": "gameplay/gui_new/swf/hud/hud_dialog.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_iteminfo.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_quests.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_timelapse.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+      "aliases": [
+        "$BodyFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_radialmenu.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_bossfocus.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronHUD",
+      "resource": "gameplay/gui_new/swf/hud/hud_journalupdate.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_kaermorhen.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_prologuevillage.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_prologuevillagewinter.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_novigrad.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_wyzima.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_skellige.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_islandofmyst.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_velen.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_spiral.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronLoading",
+      "resource": "gameplay/gui_new/swf/loading/panel_loading_bob.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/common/panel_common.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/common/componentslib.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/overlay/panel_overlay.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/character/panel_character_dupe.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/repair/panel_blacksmith.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/popups/popup_tutorial.redswf",
+      "aliases": [
+        "$BodyFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/popups/popup_message.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf",
+      "aliases": [
+        "$BodyFont",
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/popups/popup_loot.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    },
+    {
+      "module": "modInkAndIronUI",
+      "resource": "gameplay/gui_new/swf/repair/panel_transmog.redswf",
+      "aliases": [
+        "$TitleFont"
+      ]
+    }
+  ],
+  "live_inputs": [
+    {
+      "input": "modFieldFolioInteractionsV2-hud_interactions.redswf",
+      "sha256": "35baf8d672112e3fbc693419d432d3a15d9909f6c3b20c58b855689f01f67a31",
+      "fonts": [
+        {
+          "id": 212,
+          "name": "Times New Roman",
+          "flags": 4,
+          "language": 1,
+          "glyphs": 0,
+          "latin": 0,
+          "cyrillic": 0,
+          "payload_sha256": "17c14451e5c18e8e63cac686f5e38106c74fce4b7732f0e153503c011a73e071"
+        },
+        {
+          "id": 218,
+          "name": "Quiet Folio Utility",
+          "flags": 140,
+          "language": 1,
+          "glyphs": 383,
+          "latin": 329,
+          "cyrillic": 0,
+          "payload_sha256": "1e0d344d0c538fee77fbb33cd137bcee41da0a462784d51f832d08faadce3ed3"
+        },
+        {
+          "id": 219,
+          "name": "Quiet Folio Utility Medium",
+          "flags": 140,
+          "language": 1,
+          "glyphs": 383,
+          "latin": 329,
+          "cyrillic": 0,
+          "payload_sha256": "8f7cc73da00bfee35e4f22dc5c4e5572d30e21a4820bd3ba1e0f8bce1fe353a8"
+        }
+      ]
+    },
+    {
+      "input": "modGeraltOutfitWheel-hud.redswf",
+      "sha256": "2fcffb248b3e858aa28046d750d01f848bfde768d4f95f330dfeb154587c01e7",
+      "fonts": []
+    },
+    {
+      "input": "modGeraltOutfitWheel-panel_common.redswf",
+      "sha256": "5350e33abccb447603a44b14df2db80fcd6a2460c73cc99a15df5ade0f2ee48c",
+      "fonts": []
+    },
+    {
+      "input": "modGeraltOutfitWheel-panel_overlay.redswf",
+      "sha256": "a3d18c548f367875110d1d6dfd6ef9edf47f39a676c6ccce8ef5ef0802ff3e9a",
+      "fonts": []
+    },
+    {
+      "input": "modHoods-panel_inventory.redswf",
+      "sha256": "2a2dacc886c86d4b08fced4cdc68c7882f2017d2f9d850b41b9ef98df060c68e",
+      "fonts": []
+    },
+    {
+      "input": "modQuietEditorialNPCShadow-hud_enemyfocus.redswf",
+      "sha256": "2f8e36a9d1d4e8598f889e85c3b1f9fdb28e8804e46e30ba520f0559d5c53ddd",
+      "fonts": []
+    },
+    {
+      "input": "modQuietFolioEnglish-fonts_en.redswf",
+      "sha256": "9bc41144a3fcfc32377b41bebf9698ac8c80ebaee0f621fc64f22a8ed16a0e9e",
+      "fonts": [
+        {
+          "id": 1,
+          "name": "PF Din Text Cond Pro",
+          "flags": 140,
+          "language": 1,
+          "glyphs": 383,
+          "latin": 329,
+          "cyrillic": 0,
+          "payload_sha256": "fb951fbd6a713c614a70f74cb1d1a60ae719390636e9bbdeae2a9de17c7cec73"
+        },
+        {
+          "id": 3,
+          "name": "PF Din Text Cond Pro",
+          "flags": 142,
+          "language": 1,
+          "glyphs": 383,
+          "latin": 329,
+          "cyrillic": 0,
+          "payload_sha256": "bda9ddae5ae69657092f4e9133d77ba38837220a58a66fdcdf31974c397abda7"
+        },
+        {
+          "id": 5,
+          "name": "PF Din Text Cond Pro",
+          "flags": 141,
+          "language": 1,
+          "glyphs": 383,
+          "latin": 329,
+          "cyrillic": 0,
+          "payload_sha256": "f52a37955c5237cac6e67d21bdd784f1d2d21434b9adf68128b9d8c0db865bf9"
+        }
+      ]
+    },
+    {
+      "input": "modSeamlessAdaptiveHUD-hud_buffs.redswf",
+      "sha256": "fa2b55bb35c86504b1d23b613b9f4b394c66ed1d2af4a5323b0f06d8ad2ad037",
+      "fonts": []
+    },
+    {
+      "input": "modSeamlessAdaptiveHUD-hud_wolfstatbars.redswf",
+      "sha256": "98ca8a2c197b65cc4df11ee387f14519a529f231114d02c7ec0ffce816daa9a7",
+      "fonts": []
+    },
+    {
+      "input": "modsmoothmap-panel_worldmap.redswf",
+      "sha256": "32449ec6c57608f0e96a3fc8f15dbc134d7b33bf5b71599b7a912ac577897574",
+      "fonts": []
+    }
+  ],
+  "limits": [
+    {
+      "path": "Mods/modunreasonableplotredesigned/content/texture.cache",
+      "error": "Truncated cache"
+    }
+  ],
+  "all_in_one_archive": {
+    "name": "Ink and Iron - All in One 13111 0.8.0 2026-10-11T16-27Z sedaZoAhj.zip",
+    "sha256": "091727b3e49ea667ffe72c79f6308f37887924cdad5535eaaa9c0f03fe326b26"
+  },
+  "provenance": [
+    {
+      "path": "mods/modInkAndIronUI/content/blob0.bundle",
+      "canonical_sha256": "50ac5536db19cde6fe167f04dcbad199fb270a7ec8a9f54c284b21baa02937f0",
+      "archive_member_sha256": "50ac5536db19cde6fe167f04dcbad199fb270a7ec8a9f54c284b21baa02937f0"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/metadata.store",
+      "canonical_sha256": "e4a5b2646b65fd5b316b77031f046a6ac41083fb32bc0394ba69819bca418cff",
+      "archive_member_sha256": "e4a5b2646b65fd5b316b77031f046a6ac41083fb32bc0394ba69819bca418cff"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+      "canonical_sha256": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5",
+      "archive_member_sha256": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws",
+      "canonical_sha256": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1",
+      "archive_member_sha256": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_charlayout.ws",
+      "canonical_sha256": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db",
+      "archive_member_sha256": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+      "canonical_sha256": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+      "archive_member_sha256": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+      "canonical_sha256": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840",
+      "archive_member_sha256": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_invheader.ws",
+      "canonical_sha256": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+      "archive_member_sha256": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws",
+      "canonical_sha256": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+      "archive_member_sha256": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+      "canonical_sha256": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+      "archive_member_sha256": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+      "canonical_sha256": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f",
+      "archive_member_sha256": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_rarity.ws",
+      "canonical_sha256": "3e904d4a482856ba968bae689ad9d6b5e95c0af85a90058ec832ef53b1815373",
+      "archive_member_sha256": "3e904d4a482856ba968bae689ad9d6b5e95c0af85a90058ec832ef53b1815373"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_saveload.ws",
+      "canonical_sha256": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+      "archive_member_sha256": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+      "canonical_sha256": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+      "archive_member_sha256": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6"
+    },
+    {
+      "path": "mods/modInkAndIronUI/content/texture.cache",
+      "canonical_sha256": "3ece4a1216b625400f09eebd96059c71cdc621d93888c3409785e6f533d613ed",
+      "archive_member_sha256": "3ece4a1216b625400f09eebd96059c71cdc621d93888c3409785e6f533d613ed"
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modInkAndIron.xml",
+      "canonical_sha256": "2ceda6025bf8a6716b1f9a49c85eeb5313833fc08bb809cf9ce47542d2ed8558",
+      "archive_member_sha256": "2ceda6025bf8a6716b1f9a49c85eeb5313833fc08bb809cf9ce47542d2ed8558"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/ar.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/blob0.bundle",
+      "canonical_sha256": "275433f331fea237041a5e5d6c7d5bdf90b4b59f1db950928ef7d38a11d0695d",
+      "archive_member_sha256": "275433f331fea237041a5e5d6c7d5bdf90b4b59f1db950928ef7d38a11d0695d"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/br.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/cn.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/cz.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/de.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/en.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/es.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/esmx.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/fr.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/hu.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/it.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/jp.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/kr.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/metadata.store",
+      "canonical_sha256": "1ad79f95fe9cb2a2b86744a3137b870037681fe9f04ed128e27fb6582a878d73",
+      "archive_member_sha256": "1ad79f95fe9cb2a2b86744a3137b870037681fe9f04ed128e27fb6582a878d73"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/pl.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/ru.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+      "canonical_sha256": "ae0afa77aa117fcb76eab25d4f0320c96e3179c8e96a21cc902ea188d0f70ee5",
+      "archive_member_sha256": "ae0afa77aa117fcb76eab25d4f0320c96e3179c8e96a21cc902ea188d0f70ee5"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+      "canonical_sha256": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24",
+      "archive_member_sha256": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHudScale.ws",
+      "canonical_sha256": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262",
+      "archive_member_sha256": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+      "canonical_sha256": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5",
+      "archive_member_sha256": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+      "canonical_sha256": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687",
+      "archive_member_sha256": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronQuest.ws",
+      "canonical_sha256": "80910839841d6ed52245024399abdb9597b6fee47f3f8ee675fc8e6f73b6f8e2",
+      "archive_member_sha256": "80910839841d6ed52245024399abdb9597b6fee47f3f8ee675fc8e6f73b6f8e2"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronRadialSigns.ws",
+      "canonical_sha256": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d",
+      "archive_member_sha256": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/texture.cache",
+      "canonical_sha256": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7",
+      "archive_member_sha256": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/tr.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/ua.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronHUD/content/zh.w3strings",
+      "canonical_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "archive_member_sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "mods/modInkAndIronFonts/content/blob0.bundle",
+      "canonical_sha256": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06",
+      "archive_member_sha256": "46394bb19fb4431247301b9e73548ea02a33e1d14efd9354fc5dbb30f0de1875"
+    },
+    {
+      "path": "mods/modInkAndIronFonts/content/metadata.store",
+      "canonical_sha256": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee",
+      "archive_member_sha256": "92ca8ed989f950da43c98ba7f40b8ce9191469514a1d440b9a83efbbc1d5793d"
+    },
+    {
+      "path": "mods/modInkAndIronIcons/content/metadata.store",
+      "canonical_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e",
+      "archive_member_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+    },
+    {
+      "path": "mods/modInkAndIronIcons/content/texture.cache",
+      "canonical_sha256": "bedaa7026864f41589e5cd8d1b5edd4aa405d50d3608768ff4ce5d465ee28781",
+      "archive_member_sha256": "bedaa7026864f41589e5cd8d1b5edd4aa405d50d3608768ff4ce5d465ee28781"
+    },
+    {
+      "path": "mods/modInkAndIronGlossary/content/metadata.store",
+      "canonical_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e",
+      "archive_member_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+    },
+    {
+      "path": "mods/modInkAndIronGlossary/content/texture.cache",
+      "canonical_sha256": "571632f27965479c4c78c0b72b3a5560e99128537aa720fa0af7a27c7d99e4b5",
+      "archive_member_sha256": "571632f27965479c4c78c0b72b3a5560e99128537aa720fa0af7a27c7d99e4b5"
+    },
+    {
+      "path": "mods/modInkAndIronMainMenu/content/blob0.bundle",
+      "canonical_sha256": "a1d3df7a495987ae5b774db66c20b3844bb4f93aa44b00ad4ca7c1cdb8331e30",
+      "archive_member_sha256": "a1d3df7a495987ae5b774db66c20b3844bb4f93aa44b00ad4ca7c1cdb8331e30"
+    },
+    {
+      "path": "mods/modInkAndIronMainMenu/content/metadata.store",
+      "canonical_sha256": "f406c9693d112981bffeaf4122a13ee381eaf5c077edd31c993b9adecae95f39",
+      "archive_member_sha256": "f406c9693d112981bffeaf4122a13ee381eaf5c077edd31c993b9adecae95f39"
+    },
+    {
+      "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+      "canonical_sha256": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff",
+      "archive_member_sha256": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff"
+    },
+    {
+      "path": "mods/modInkAndIronMainMenu/content/texture.cache",
+      "canonical_sha256": "8b8b5095c5800311a7f8531cd466d342c4d9ed1e78bdf8def0329b7b56ae8a28",
+      "archive_member_sha256": "8b8b5095c5800311a7f8531cd466d342c4d9ed1e78bdf8def0329b7b56ae8a28"
+    },
+    {
+      "path": "mods/modInkAndIronGwent/content/blob0.bundle",
+      "canonical_sha256": "88ca8f713623b3177acca4f800a11d274953fd6cba81b9d99473403eb5bb9703",
+      "archive_member_sha256": "88ca8f713623b3177acca4f800a11d274953fd6cba81b9d99473403eb5bb9703"
+    },
+    {
+      "path": "mods/modInkAndIronGwent/content/metadata.store",
+      "canonical_sha256": "7f709f73d0c4e07d826720fb735abc26e7f0da3b0c4bb48f3e3932cf04c9ec8d",
+      "archive_member_sha256": "7f709f73d0c4e07d826720fb735abc26e7f0da3b0c4bb48f3e3932cf04c9ec8d"
+    },
+    {
+      "path": "mods/modInkAndIronGwent/content/texture.cache",
+      "canonical_sha256": "025c068fe8de8040b7e90bccf0a309323368096988389a07c7d62c2c429f2a36",
+      "archive_member_sha256": "025c068fe8de8040b7e90bccf0a309323368096988389a07c7d62c2c429f2a36"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/ar.w3strings",
+      "canonical_sha256": "9d2c8eeacefbe61dae50bb7e77fba215099904ff06a833cdb97ffd79cfb756ae",
+      "archive_member_sha256": "9d2c8eeacefbe61dae50bb7e77fba215099904ff06a833cdb97ffd79cfb756ae"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/blob0.bundle",
+      "canonical_sha256": "832709e0d9e00373d0cbe5677fe3436a7121ea7140d520bedc3c495bf1e464b5",
+      "archive_member_sha256": "832709e0d9e00373d0cbe5677fe3436a7121ea7140d520bedc3c495bf1e464b5"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/br.w3strings",
+      "canonical_sha256": "145ada5ac1973faa262f3d8575fd2c0b1dd8f3d676477fcfaa195281474e31b4",
+      "archive_member_sha256": "145ada5ac1973faa262f3d8575fd2c0b1dd8f3d676477fcfaa195281474e31b4"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/cn.w3strings",
+      "canonical_sha256": "19aae7f6d2543fe7b57e2e40a573169a713ab697b6407bdf7720dae6cf85e9a4",
+      "archive_member_sha256": "19aae7f6d2543fe7b57e2e40a573169a713ab697b6407bdf7720dae6cf85e9a4"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/cz.w3strings",
+      "canonical_sha256": "bdf9a96a70ad99b93e9ed92ab96a1626a2d26da120c8259985f35702f16e2008",
+      "archive_member_sha256": "bdf9a96a70ad99b93e9ed92ab96a1626a2d26da120c8259985f35702f16e2008"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/de.w3strings",
+      "canonical_sha256": "ac7e93eb793279256d35b7e64a0b033c16aed31e07c30512cfecce95a47a6f82",
+      "archive_member_sha256": "ac7e93eb793279256d35b7e64a0b033c16aed31e07c30512cfecce95a47a6f82"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/en.w3strings",
+      "canonical_sha256": "43d5324d8d40f160d7d33f6fb496f51c6bc5a493ba764799ef88c8934abc932f",
+      "archive_member_sha256": "43d5324d8d40f160d7d33f6fb496f51c6bc5a493ba764799ef88c8934abc932f"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/es.w3strings",
+      "canonical_sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86",
+      "archive_member_sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/esmx.w3strings",
+      "canonical_sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86",
+      "archive_member_sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/fr.w3strings",
+      "canonical_sha256": "8f40ffb564c67d7eb524dd2779b6540a9a2e843ac4f6c8dde138999ad2e1e493",
+      "archive_member_sha256": "8f40ffb564c67d7eb524dd2779b6540a9a2e843ac4f6c8dde138999ad2e1e493"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/hu.w3strings",
+      "canonical_sha256": "7d6db693400a321067d0de58d2308a2319accb1979ef70821f395ce4c00eb1bc",
+      "archive_member_sha256": "7d6db693400a321067d0de58d2308a2319accb1979ef70821f395ce4c00eb1bc"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/it.w3strings",
+      "canonical_sha256": "2bbf5d533efbef05095fb4e27479880156f35ef2350a85ccdb27bfd85e3aede3",
+      "archive_member_sha256": "2bbf5d533efbef05095fb4e27479880156f35ef2350a85ccdb27bfd85e3aede3"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/jp.w3strings",
+      "canonical_sha256": "f84175897fee334d1bd824bb9d4ec876841b5a37811baff4221618624dec0615",
+      "archive_member_sha256": "f84175897fee334d1bd824bb9d4ec876841b5a37811baff4221618624dec0615"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/kr.w3strings",
+      "canonical_sha256": "32ae4323c1fab5dedf46a01c521f4048cce8c83d29087ce755a79976c64e4413",
+      "archive_member_sha256": "32ae4323c1fab5dedf46a01c521f4048cce8c83d29087ce755a79976c64e4413"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/metadata.store",
+      "canonical_sha256": "feb24b09d132a70669b6bdcb713032cc762e998ce341d16fb4c21ea91d86b29c",
+      "archive_member_sha256": "feb24b09d132a70669b6bdcb713032cc762e998ce341d16fb4c21ea91d86b29c"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/pl.w3strings",
+      "canonical_sha256": "f6411ec6668e76a00b330647f1616e1bf27774f1329f94657fb9d40f770e4787",
+      "archive_member_sha256": "f6411ec6668e76a00b330647f1616e1bf27774f1329f94657fb9d40f770e4787"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/ru.w3strings",
+      "canonical_sha256": "c48b9b7c14bf3f66b0dd6e8cbbb24e9b63a5157f73d120f15c15666fd2c1adb6",
+      "archive_member_sha256": "c48b9b7c14bf3f66b0dd6e8cbbb24e9b63a5157f73d120f15c15666fd2c1adb6"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/tr.w3strings",
+      "canonical_sha256": "504394939b71609f853a46b0eed9bea7f9f86914d8cda66efcd8bb7b6dfacb06",
+      "archive_member_sha256": "504394939b71609f853a46b0eed9bea7f9f86914d8cda66efcd8bb7b6dfacb06"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/ua.w3strings",
+      "canonical_sha256": "22f0eea6a9630d0e5b9b89bcd36b2a29f334bd9c32b9cb0d7062fc4eac01d986",
+      "archive_member_sha256": "22f0eea6a9630d0e5b9b89bcd36b2a29f334bd9c32b9cb0d7062fc4eac01d986"
+    },
+    {
+      "path": "mods/modInkAndIronLoading/content/zh.w3strings",
+      "canonical_sha256": "dac938d153f1dfb1fbd8727007b3077590f8b7284196e2c63cd34c1076a829d4",
+      "archive_member_sha256": "dac938d153f1dfb1fbd8727007b3077590f8b7284196e2c63cd34c1076a829d4"
+    },
+    {
+      "path": "mods/modInkAndIronDialogue/content/blob0.bundle",
+      "canonical_sha256": "3b0682e579a413827b04f13ba0be6a44e7b84dab5c30b636fa59d62881d02e8e",
+      "archive_member_sha256": "3b0682e579a413827b04f13ba0be6a44e7b84dab5c30b636fa59d62881d02e8e"
+    },
+    {
+      "path": "mods/modInkAndIronDialogue/content/metadata.store",
+      "canonical_sha256": "23f6171714c4e4c29aa36b0ed2fa0697752884cf0d82ab3c4ada9aec42eb4907",
+      "archive_member_sha256": "23f6171714c4e4c29aa36b0ed2fa0697752884cf0d82ab3c4ada9aec42eb4907"
+    },
+    {
+      "path": "mods/modInkAndIronButtons/content/blob0.bundle",
+      "canonical_sha256": "fb99fd6624dfbdfbb131280f37d231ba9d5089b1970a8b7173c994d907d21589",
+      "archive_member_sha256": "fb99fd6624dfbdfbb131280f37d231ba9d5089b1970a8b7173c994d907d21589"
+    },
+    {
+      "path": "mods/modInkAndIronButtons/content/metadata.store",
+      "canonical_sha256": "d2150abf716910bb9fdf399c88b174a32eceaa90fce6a0249680378161677b9c",
+      "archive_member_sha256": "d2150abf716910bb9fdf399c88b174a32eceaa90fce6a0249680378161677b9c"
+    },
+    {
+      "path": "mods/modInkAndIronMap_Inked/content/metadata.store",
+      "canonical_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e",
+      "archive_member_sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+    },
+    {
+      "path": "mods/modInkAndIronMap_Inked/content/texture.cache",
+      "canonical_sha256": "2391d8077fc11cb6e3e5572d00f480e366d399a1121f1f350363ea034940f6e2",
+      "archive_member_sha256": "2391d8077fc11cb6e3e5572d00f480e366d399a1121f1f350363ea034940f6e2"
+    }
+  ],
+  "alternative_font_input_files": [
+    {
+      "module": "Fonts_IM_Fell_archive",
+      "path": "mods/modInkAndIronFonts/content/blob0.bundle",
+      "bytes": 5759735,
+      "sha256": "46394bb19fb4431247301b9e73548ea02a33e1d14efd9354fc5dbb30f0de1875"
+    },
+    {
+      "module": "Fonts_IM_Fell_archive",
+      "path": "mods/modInkAndIronFonts/content/metadata.store",
+      "bytes": 1265,
+      "sha256": "92ca8ed989f950da43c98ba7f40b8ce9191469514a1d440b9a83efbbc1d5793d"
+    },
+    {
+      "module": "Fonts_IM_Fell_archive",
+      "path": "mods/modInkAndIronFonts/OFL_cormorant.txt",
+      "bytes": 4387,
+      "sha256": "60700d351cac4650c51f3f9db318d2a420f8b45052dba2715eb5fec41f0f6956"
+    },
+    {
+      "module": "Fonts_IM_Fell_archive",
+      "path": "mods/modInkAndIronFonts/OFL_imfellenglish.txt",
+      "bytes": 4452,
+      "sha256": "2a3ca501fc4d5efcad9798531e3e06962b1e20c60e464f6cbd6c17630112c773"
+    },
+    {
+      "module": "Fonts_IM_Fell_archive",
+      "path": "mods/modInkAndIronFonts/OFL_imfellenglishsc.txt",
+      "bytes": 4452,
+      "sha256": "2a3ca501fc4d5efcad9798531e3e06962b1e20c60e464f6cbd6c17630112c773"
+    }
+  ],
+  "canonical_resource_rows": 5786,
+  "retained_merge_inputs": [
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/components/inventoryComponent.ws",
+      "sha256": "e2da6c7e57c70f9b9bee00d93822a8f5b391374b2c1156667202507ad46f561b"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/explorations/exploration_movement_system/exploration_substates/explorationStateInteraction.ws",
+      "sha256": "14b2c166b4c8c91cb9f55d15ef370f47a514d92a71e8d01daa4bdb1fcb77ad76"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/hud/hud.ws",
+      "sha256": "6dcd42be661b9c59e018529d57184e5f5adc1f28410f9589fe99c0787d4033b9"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/hud/modules/hudModuleRadialMenu.ws",
+      "sha256": "1f2a44b28a10aad5a5d37c3a9319fe8f006b3d968803f055f85d64310e91074d"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/main_menu/ingameMenu.ws",
+      "sha256": "3f1fd0f1b2f819bb89f7d7c551e0663afcb56da9dca77b10dbc129244cc2d586"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/menus/commonMenu.ws",
+      "sha256": "d19fe54f3acd1f62512493578ac644b8594a8acfafdfc177c162d9b2d52324da"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/menus/inventorymenu.ws",
+      "sha256": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/gui/menus/mapMenu.ws",
+      "sha256": "4d23f560dbf9c0e9a6aae7c6411eab021b5dc288992daaf82595a2a4be76751b"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/player/movement/locomotionDirectController.ws",
+      "sha256": "3de117761a98828b22fe6060c56e2b997d164466461d172be0a7f5c99ba0b5f2"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/player/playerinput.ws",
+      "sha256": "e4b5033d106fd204f755c2a0225458b5a99c1eef002c3f157ab23024f26fc25b"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/player/playerwitcher.ws",
+      "sha256": "21012ab475ea479fe2aff95a8180fb8f4f03ec04a569cc1b2ffc317686e3445e"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/player/r4player.ws",
+      "sha256": "eb52e8d11e6f12a05276bb9a4eb33cc1113f3f95be2226631701a99e62e4a1a9"
+    },
+    {
+      "path": "Mods/mod0000_MergedFiles/content/scripts/game/r4Game.ws",
+      "sha256": "95b7c4f31f6567f482da423e8215929383871ad2a671a91d4dc0f96e3dfc56c9"
+    }
+  ],
+  "deployment_manifest_hashes": [
+    {
+      "file": "vortex.deployment.json",
+      "sha256": "0b651d2995169b14d7dea074633c3fea44ef66af65864c279d12bb801e748005",
+      "deploymentTime": 1791742782293
+    },
+    {
+      "file": "vortex.deployment.witcher3menumodroot.json",
+      "sha256": "6ce24caa31d28155a0f5cfd4407d5f4648ef6b43a08ad3f03424b12b1a3d8836",
+      "deploymentTime": 1791742781775
+    },
+    {
+      "file": "vortex.deployment.witcher3tl.json",
+      "sha256": "1e85fa4feb86d8e00291a3901023b2080b82ea1b9f8ab80b712e3845d9367f7e",
+      "deploymentTime": 1791742781991
+    }
+  ]
+}

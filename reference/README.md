@@ -20,4 +20,9 @@ All extracted binaries, author scripts and files are intentionally ignored by Gi
 
 ## Additional current baseline reference
 
+The **canonical integration input is now `ink-and-iron-0.8/`**, per the user's
+11 October update. Its unmodified module payloads and Fonts (Vanilla) override
+are local-only. See the [0.8 audit](../research/ink-and-iron-0.8-integration.md).
+The older `ink-and-iron/` extraction is historical comparison evidence.
+
 See [Ink & Iron folder](ink-and-iron/README.md) for v0.7.4 module extraction names and local-only rules.

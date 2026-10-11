@@ -1,0 +1,500 @@
+[
+  {
+    "module": "configuration",
+    "path": "bin/config/r4game/user_config_matrix/pc/modInkAndIron.xml",
+    "bytes": 6185,
+    "sha256": "2ceda6025bf8a6716b1f9a49c85eeb5313833fc08bb809cf9ce47542d2ed8558"
+  },
+  {
+    "module": "modInkAndIronButtons",
+    "path": "mods/modInkAndIronButtons/content/blob0.bundle",
+    "bytes": 15974337,
+    "sha256": "fb99fd6624dfbdfbb131280f37d231ba9d5089b1970a8b7173c994d907d21589"
+  },
+  {
+    "module": "modInkAndIronButtons",
+    "path": "mods/modInkAndIronButtons/content/metadata.store",
+    "bytes": 2914,
+    "sha256": "d2150abf716910bb9fdf399c88b174a32eceaa90fce6a0249680378161677b9c"
+  },
+  {
+    "module": "modInkAndIronDialogue",
+    "path": "mods/modInkAndIronDialogue/content/blob0.bundle",
+    "bytes": 401532,
+    "sha256": "3b0682e579a413827b04f13ba0be6a44e7b84dab5c30b636fa59d62881d02e8e"
+  },
+  {
+    "module": "modInkAndIronDialogue",
+    "path": "mods/modInkAndIronDialogue/content/metadata.store",
+    "bytes": 346,
+    "sha256": "23f6171714c4e4c29aa36b0ed2fa0697752884cf0d82ab3c4ada9aec42eb4907"
+  },
+  {
+    "module": "modInkAndIronFonts",
+    "path": "mods/modInkAndIronFonts/content/blob0.bundle",
+    "bytes": 4805,
+    "sha256": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06"
+  },
+  {
+    "module": "modInkAndIronFonts",
+    "path": "mods/modInkAndIronFonts/content/metadata.store",
+    "bytes": 298,
+    "sha256": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee"
+  },
+  {
+    "module": "modInkAndIronGlossary",
+    "path": "mods/modInkAndIronGlossary/content/metadata.store",
+    "bytes": 110,
+    "sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+  },
+  {
+    "module": "modInkAndIronGlossary",
+    "path": "mods/modInkAndIronGlossary/content/texture.cache",
+    "bytes": 94184226,
+    "sha256": "571632f27965479c4c78c0b72b3a5560e99128537aa720fa0af7a27c7d99e4b5"
+  },
+  {
+    "module": "modInkAndIronGwent",
+    "path": "mods/modInkAndIronGwent/content/blob0.bundle",
+    "bytes": 7946276,
+    "sha256": "88ca8f713623b3177acca4f800a11d274953fd6cba81b9d99473403eb5bb9703"
+  },
+  {
+    "module": "modInkAndIronGwent",
+    "path": "mods/modInkAndIronGwent/content/metadata.store",
+    "bytes": 350,
+    "sha256": "7f709f73d0c4e07d826720fb735abc26e7f0da3b0c4bb48f3e3932cf04c9ec8d"
+  },
+  {
+    "module": "modInkAndIronGwent",
+    "path": "mods/modInkAndIronGwent/content/texture.cache",
+    "bytes": 742507,
+    "sha256": "025c068fe8de8040b7e90bccf0a309323368096988389a07c7d62c2c429f2a36"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/ar.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/blob0.bundle",
+    "bytes": 2781336,
+    "sha256": "275433f331fea237041a5e5d6c7d5bdf90b4b59f1db950928ef7d38a11d0695d"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/br.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/cn.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/cz.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/de.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/en.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/es.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/esmx.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/fr.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/hu.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/it.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/jp.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/kr.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/metadata.store",
+    "bytes": 2897,
+    "sha256": "1ad79f95fe9cb2a2b86744a3137b870037681fe9f04ed128e27fb6582a878d73"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/pl.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/ru.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronGear.ws",
+    "bytes": 1452,
+    "sha256": "ae0afa77aa117fcb76eab25d4f0320c96e3179c8e96a21cc902ea188d0f70ee5"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHorse.ws",
+    "bytes": 1208,
+    "sha256": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronHudScale.ws",
+    "bytes": 2299,
+    "sha256": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronMinimapClock.ws",
+    "bytes": 1379,
+    "sha256": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronNpcPlate.ws",
+    "bytes": 17137,
+    "sha256": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronQuest.ws",
+    "bytes": 1365,
+    "sha256": "80910839841d6ed52245024399abdb9597b6fee47f3f8ee675fc8e6f73b6f8e2"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/scripts/local/inkIronRadialSigns.ws",
+    "bytes": 973,
+    "sha256": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/texture.cache",
+    "bytes": 6060146,
+    "sha256": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/tr.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/ua.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronHUD",
+    "path": "mods/modInkAndIronHUD/content/zh.w3strings",
+    "bytes": 88,
+    "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  {
+    "module": "modInkAndIronIcons",
+    "path": "mods/modInkAndIronIcons/content/metadata.store",
+    "bytes": 110,
+    "sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+  },
+  {
+    "module": "modInkAndIronIcons",
+    "path": "mods/modInkAndIronIcons/content/texture.cache",
+    "bytes": 11244769,
+    "sha256": "bedaa7026864f41589e5cd8d1b5edd4aa405d50d3608768ff4ce5d465ee28781"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/ar.w3strings",
+    "bytes": 116,
+    "sha256": "9d2c8eeacefbe61dae50bb7e77fba215099904ff06a833cdb97ffd79cfb756ae"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/blob0.bundle",
+    "bytes": 27629493,
+    "sha256": "832709e0d9e00373d0cbe5677fe3436a7121ea7140d520bedc3c495bf1e464b5"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/br.w3strings",
+    "bytes": 53,
+    "sha256": "145ada5ac1973faa262f3d8575fd2c0b1dd8f3d676477fcfaa195281474e31b4"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/cn.w3strings",
+    "bytes": 48,
+    "sha256": "19aae7f6d2543fe7b57e2e40a573169a713ab697b6407bdf7720dae6cf85e9a4"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/cz.w3strings",
+    "bytes": 48,
+    "sha256": "bdf9a96a70ad99b93e9ed92ab96a1626a2d26da120c8259985f35702f16e2008"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/de.w3strings",
+    "bytes": 48,
+    "sha256": "ac7e93eb793279256d35b7e64a0b033c16aed31e07c30512cfecce95a47a6f82"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/en.w3strings",
+    "bytes": 49,
+    "sha256": "43d5324d8d40f160d7d33f6fb496f51c6bc5a493ba764799ef88c8934abc932f"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/es.w3strings",
+    "bytes": 51,
+    "sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/esmx.w3strings",
+    "bytes": 51,
+    "sha256": "285efad60f9e9ad6276486b8c2784263e1b8f9d39e0f9e25baae72ef16d1ff86"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/fr.w3strings",
+    "bytes": 53,
+    "sha256": "8f40ffb564c67d7eb524dd2779b6540a9a2e843ac4f6c8dde138999ad2e1e493"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/hu.w3strings",
+    "bytes": 48,
+    "sha256": "7d6db693400a321067d0de58d2308a2319accb1979ef70821f395ce4c00eb1bc"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/it.w3strings",
+    "bytes": 52,
+    "sha256": "2bbf5d533efbef05095fb4e27479880156f35ef2350a85ccdb27bfd85e3aede3"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/jp.w3strings",
+    "bytes": 48,
+    "sha256": "f84175897fee334d1bd824bb9d4ec876841b5a37811baff4221618624dec0615"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/kr.w3strings",
+    "bytes": 48,
+    "sha256": "32ae4323c1fab5dedf46a01c521f4048cce8c83d29087ce755a79976c64e4413"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/metadata.store",
+    "bytes": 2088,
+    "sha256": "feb24b09d132a70669b6bdcb713032cc762e998ce341d16fb4c21ea91d86b29c"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/pl.w3strings",
+    "bytes": 50,
+    "sha256": "f6411ec6668e76a00b330647f1616e1bf27774f1329f94657fb9d40f770e4787"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/ru.w3strings",
+    "bytes": 63,
+    "sha256": "c48b9b7c14bf3f66b0dd6e8cbbb24e9b63a5157f73d120f15c15666fd2c1adb6"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/tr.w3strings",
+    "bytes": 54,
+    "sha256": "504394939b71609f853a46b0eed9bea7f9f86914d8cda66efcd8bb7b6dfacb06"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/ua.w3strings",
+    "bytes": 57,
+    "sha256": "22f0eea6a9630d0e5b9b89bcd36b2a29f334bd9c32b9cb0d7062fc4eac01d986"
+  },
+  {
+    "module": "modInkAndIronLoading",
+    "path": "mods/modInkAndIronLoading/content/zh.w3strings",
+    "bytes": 48,
+    "sha256": "dac938d153f1dfb1fbd8727007b3077590f8b7284196e2c63cd34c1076a829d4"
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/blob0.bundle",
+    "bytes": 245939,
+    "sha256": "a1d3df7a495987ae5b774db66c20b3844bb4f93aa44b00ad4ca7c1cdb8331e30"
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/metadata.store",
+    "bytes": 730,
+    "sha256": "f406c9693d112981bffeaf4122a13ee381eaf5c077edd31c993b9adecae95f39"
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/scripts/local/inkmainmenu_modmenu.ws",
+    "bytes": 1455,
+    "sha256": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff"
+  },
+  {
+    "module": "modInkAndIronMainMenu",
+    "path": "mods/modInkAndIronMainMenu/content/texture.cache",
+    "bytes": 19081005,
+    "sha256": "8b8b5095c5800311a7f8531cd466d342c4d9ed1e78bdf8def0329b7b56ae8a28"
+  },
+  {
+    "module": "modInkAndIronMap_Inked",
+    "path": "mods/modInkAndIronMap_Inked/content/metadata.store",
+    "bytes": 110,
+    "sha256": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+  },
+  {
+    "module": "modInkAndIronMap_Inked",
+    "path": "mods/modInkAndIronMap_Inked/content/texture.cache",
+    "bytes": 426855250,
+    "sha256": "2391d8077fc11cb6e3e5572d00f480e366d399a1121f1f350363ea034940f6e2"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/blob0.bundle",
+    "bytes": 36165394,
+    "sha256": "50ac5536db19cde6fe167f04dcbad199fb270a7ec8a9f54c284b21baa02937f0"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/metadata.store",
+    "bytes": 4684,
+    "sha256": "e4a5b2646b65fd5b316b77031f046a6ac41083fb32bc0394ba69819bca418cff"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws",
+    "bytes": 2577,
+    "sha256": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws",
+    "bytes": 2289,
+    "sha256": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_charlayout.ws",
+    "bytes": 1556,
+    "sha256": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws",
+    "bytes": 5175,
+    "sha256": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws",
+    "bytes": 1800,
+    "sha256": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_invheader.ws",
+    "bytes": 1989,
+    "sha256": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws",
+    "bytes": 1955,
+    "sha256": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws",
+    "bytes": 3889,
+    "sha256": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws",
+    "bytes": 1306,
+    "sha256": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_rarity.ws",
+    "bytes": 2106,
+    "sha256": "3e904d4a482856ba968bae689ad9d6b5e95c0af85a90058ec832ef53b1815373"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_saveload.ws",
+    "bytes": 1388,
+    "sha256": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws",
+    "bytes": 4036,
+    "sha256": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6"
+  },
+  {
+    "module": "modInkAndIronUI",
+    "path": "mods/modInkAndIronUI/content/texture.cache",
+    "bytes": 16423040,
+    "sha256": "3ece4a1216b625400f09eebd96059c71cdc621d93888c3409785e6f533d613ed"
+  }
+]

@@ -1,5 +1,11 @@
 # Collision and behavior report
 
+**11 October current Ink & Iron audit:** use the
+[0.8 integration report](ink-and-iron-0.8-integration.md) and
+[exact resource matrix](ink-and-iron-0.8-audit/resources.csv) for fresh deployed
+owners. The historical table below predates accepted font/NPC packages and the
+currently deployed interaction/subtitle trials.
+
 Read-only snapshot, 9 October 2026. Live indexes supersede historical reports.
 No load order was changed. Same resource paths select a whole winner; different
 scripts/movies can still interact through the same Flash contract.

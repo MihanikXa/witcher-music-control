@@ -4,6 +4,15 @@ Reproducible local resource analysis, build and validation helpers belong here. 
 
 ## Read-only audit
 
+For the canonical Ink & Iron 0.8 integration inventory, use
+`audit-ink-and-iron.py` followed by `report-ink-and-iron.py` with the exact
+commands in [the integration report](../research/ink-and-iron-0.8-integration.md).
+The audit reads local archives, Mods/DLC/vanilla indexes, annotation sources and
+mods.settings; it extracts only into ignored build/ink-and-iron-0.8-audit.
+The reporter publishes resource names/hashes, decisions and annotation metadata
+only. Synthetic parser tests cover bounds, unsafe paths and script encodings.
+It never deploys, changes Vortex state or regenerates merged scripts.
+
 Python 3.14 was used. No external Python libraries are required. QuickBMS and its
 Witcher BMS are read from the existing installed Script Merger; the helper writes
 only inside this workspace's ignored build/audit. Input packages remain unchanged.
