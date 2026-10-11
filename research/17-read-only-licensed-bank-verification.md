@@ -1,8 +1,8 @@
 # Read-only licensed bank verification — 2026-10-11
 
-## Ready workflow, pending approval
+## Ready workflow, approved entitlement awaiting local application
 
-The strict verification workflow is implemented; **no licensed build has been attempted**. Entitlement remains requested, approval/application unconfirmed. This follows [report16's gates](16-licence-pending-build-gates.md). The new helper only reads existing source, generated evidence and native banks, then writes fresh JSON verification reports under ignored `build/`. It has no Wwise/REDkit subprocess, licence API, account access, bank writer, cooker or deployment operation.
+The strict verification workflow is implemented; **no licensed build has been attempted**. User reports the entitlement is approved and the key is available; **local application/effective generation remain unverified**. This follows [report16's gates](16-licence-pending-build-gates.md). The new helper only reads existing source, generated evidence and native banks, then writes fresh JSON verification reports under ignored `build/`. It has no Wwise/REDkit subprocess, licence API, account access, bank writer, cooker or deployment operation.
 
 Tracked implementation:
 

@@ -19,9 +19,9 @@ These are **additional gain multipliers relative to the player's normal Music se
 
 **Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 
-## Licence-request status and next gate (2026-10-11)
+## REDkit licence approved — local application pending (2026-10-11)
 
-The user reports **requesting** the dedicated Witcher 3 REDkit Wwise modding licence; **approval, activation, correct version/plug-in coverage and successful generation have not been verified**. Do not claim that a licence is installed or that this clears the observed project-ID difference. Before more engineering investigation, use the controlled post-approval protocol in [research/16-licence-pending-build-gates.md](research/16-licence-pending-build-gates.md). Keep all licence keys out of Git and logs.
+The user reports **approval** of the dedicated Witcher 3 REDkit Wwise modding licence and possession of the key. **Local application, correct version/plug-in coverage, effective generation and bank compatibility have not been verified**. Do not claim that a licence is installed or that this clears the observed project-ID difference. Before another bank-generation experiment, use the controlled post-approval protocol in [research/16-licence-pending-build-gates.md](research/16-licence-pending-build-gates.md). Keep all licence keys out of Git and logs.
 
 ## Current engineering choice (2026-10-11)
 

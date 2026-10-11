@@ -26,7 +26,7 @@ Technical authority: matching installed Remastered/REDkit resources, matching Ww
 
 **Operational stage 2 (deferred):** independent user sliders may require the more elaborate state-volume AuxBus mixer from reports 05, 10–12, with a properly licensed, fully faithful Init. Do not add custom buses/effects/RTPCs or a SoundGameStateChange hook to stage 1. Do not turn the optional sparse-exploration hypothesis into an approved requirement.
 
-**Pending entitlement:** The user has requested the Witcher 3 REDkit modding licence but has not reported approval/application. Once approved, read `research/16-licence-pending-build-gates.md` before trying licensed builds. No credentials/keys in commits or logs; never apply to installed original assets. Verify licence coverage and **unmodified baseline compatibility first**, before building the Stage 1 candidate.
+**Approved entitlement, unapplied/unverified locally:** The user reports receiving the Witcher 3 REDkit modding licence key. Prepare a **fresh isolated complete Wwise project** first. The user applies the key manually via Wwise Project → License Manager; never request, read, copy, log or commit the key, and never apply it to the original installed REDkit project. Read `research/16-licence-pending-build-gates.md` and `research/17-read-only-licensed-bank-verification.md`. Verify effective coverage and **unmodified baseline compatibility first**, before building the Stage 1 candidate.
 
 ## Immediate experiment: complete authoring context, local State edit
 
