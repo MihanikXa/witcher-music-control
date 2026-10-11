@@ -17,6 +17,25 @@ WORK_UNIT = Path("Interactive Music Hierarchy/music.wwu")
 AUDIT = "state-volume-clean-authoring.json"
 
 
+def semantic(node):
+    """Ignore formatting and Wwise's equivalent default-property serialization.
+
+    PropertyList order is not signal order. Only a single unqualified Value
+    is normalized to the shorthand Value attribute; platform values stay exact.
+    """
+    if node.tag == "Property":
+        values = node.findall("./ValueList/Value")
+        if len(node) == 1 and len(values) == 1 and not values[0].attrib:
+            attrs = dict(node.attrib)
+            attrs["Value"] = values[0].text or ""
+            return (node.tag, sorted(attrs.items()), "", ())
+    children = tuple(semantic(child) for child in node)
+    if node.tag == "PropertyList":
+        children = tuple(sorted(children))
+    return (node.tag, sorted(node.attrib.items()), (node.text or "").strip(),
+            children)
+
+
 def author(project, port=18090):
     project = build_path(project)
     if project.name != "w3_audio.wproj" or not project.is_file():
@@ -46,6 +65,15 @@ def author(project, port=18090):
         raise ValueError("Unexpected world_music object or ShortID")
     if world.find("StateInfo") is not None:
         raise ValueError("Existing world StateInfo: preserve evidence and inspect before replacing")
+    original_music = semantic(tree.getroot())
+    group = next((x for p in (workspace / "States").rglob("*.wwu")
+                  for x in ET.parse(p).iter("StateGroup")
+                  if x.get("ID") == spec["game_state_group_id"]), None)
+    if group is None or group.get("Name") != "game_state":
+        raise ValueError("Expected existing game_state group not found")
+    global_states = {x.get("Name"): x.get("ID") for x in group.findall("./ChildrenList/State")}
+    if len(global_states) != spec["expected_states"]:
+        raise ValueError("Unexpected global State count")
 
     categories = spec["active_states"]
     memberships = {}
@@ -91,6 +119,23 @@ def author(project, port=18090):
         state_table[name] = {"category": category, "voice_volume_db": gain}
     api.call("ak.wwise.core.project.save")
 
+    saved = ET.parse(target_path)
+    saved_world = next(x for x in saved.iter("MusicSwitchContainer")
+                       if x.get("ID") == spec["world_id"])
+    for row in saved_world.findall("./StateInfo/CustomStateList/CustomState"):
+        ref, local = row.find("StateRef"), row.find("CustomState")
+        if ref.get("ID") != global_states[ref.get("Name")]:
+            raise ValueError("Local State refers to an unexpected global State")
+        prop = local.find("./PropertyList/Property[@Name='Volume']")
+        value = float(prop.get("Value")) if prop is not None else 0.0
+        if value != state_table[ref.get("Name")]["voice_volume_db"]:
+            raise ValueError("Saved State volume does not match requested value")
+        state_table[ref.get("Name")].update(
+            global_state_id=ref.get("ID"), local_id=local.get("ID"),
+            local_short_id=int(local.get("ShortID")), saved_voice_volume_db=value)
+    saved_world.remove(saved_world.find("StateInfo"))
+    only_state_info = semantic(saved.getroot()) == original_music
+    units_preserved = set(all_units) == set(workspace.rglob("*.wwu"))
     changed = [p for p in all_units if digest(p) != hashes[str(p.relative_to(workspace))]]
     allowed = {WORK_UNIT.as_posix(), "Control Surface Sessions/Default Work Unit.wwu"}
     unexpected = [str(p.relative_to(workspace)) for p in changed
@@ -101,12 +146,14 @@ def author(project, port=18090):
         "state_table": state_table,
         "modified_units": [str(p.relative_to(workspace)) for p in changed],
         "unrelated_work_units_changed": unexpected,
+        "all_work_units_preserved": units_preserved,
+        "music_changes_only_world_state_info": only_state_info,
         "production_audio_fixtures": False, "generated_banks": False,
         "deployable": False
     }
     (workspace / AUDIT).write_text(json.dumps(evidence, indent=2) + "\n")
-    if unexpected:
-        raise RuntimeError("Unrelated work units changed; inspect audit before proceeding")
+    if unexpected or not only_state_info or not units_preserved:
+        raise RuntimeError("Source preservation check failed; inspect audit before proceeding")
     print(json.dumps({"world": spec["world_id"], "states": len(state_table),
                       "changed_units": evidence["modified_units"],
                       "generated_banks": False}))

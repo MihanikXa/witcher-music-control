@@ -21,6 +21,8 @@ These are **additional gain multipliers relative to the player's normal Music se
 
 ## Current engineering choice (2026-10-11)
 
+**Complete-context build result:** [report 15](research/15-full-context-stage1-results.md) verifies the intended regional State serialization (+117 bytes, unchanged media and quest/event records, no new runtime IDs or Init changes). Full copies hit the trial-media limit; supported inclusion controls emit banks but still fail Mastering Suite licensing. Generated BKHD project identity is 0 versus native 39; compatibility with original Init remains unproved. No package was cooked or deployed.
+
 **Stage 1: direct, fixed State Voice Volume on the existing `music_prologue/world_music` object.** This was demonstrated in Wwise authoring (report 13): exploration and generic dialogue -200 dB, combat/other states 0 dB, native State fades, and authored q001 quest music on its unchanged sibling branch. A playable soundbank is **not** yet established. There are no new buses, effects, GameParameters or modified global States in this design.
 
 **Do not confuse the build input with the output.** The preferred next experiment preserves all 1,508 Wwise source work units in a fresh isolated copy, rather than pruning the project to one region. Modify only the existing `world_music` object for White Orchard, then attempt selective regional-bank generation. The experiment may let Wwise incidentally generate an isolated `Init.bnk`; that output must be discarded, not packaged or installed. The native game's Init stays untouched.

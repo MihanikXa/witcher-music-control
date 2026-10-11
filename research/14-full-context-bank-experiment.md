@@ -1,5 +1,7 @@
 # Complete-context State-volume bank experiment — 2026-10-11
 
+**Executed:** [report 15](15-full-context-stage1-results.md) records complete-context paired builds and supported Inclusion controls. The intended inline State data serialized with unchanged media/non-world HIRC and no Init additions. Generation still exits 1; numeric BKHD project identity differs from native. No compatible package or game test is certified.
+
 ## Decision
 
 **Do not equate the smallest patch with the smallest authoring project.** Retain the complete Wwise source hierarchy in an isolated workspace, apply the already-measured direct State Voice Volume change locally to White Orchard `music_prologue/world_music`, and let supported generation determine what banks are needed. Start by selecting `music_prologue` for a controlled comparison, but do not prune or reconstruct the source project merely to limit output. White Orchard remains the first *gameplay* test, not a restriction on work-unit scope.

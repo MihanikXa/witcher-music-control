@@ -12,17 +12,27 @@ def read_bank(path):
     offset = 0
     chunks = {}
     while offset < len(data):
+        if offset + 8 > len(data):
+            raise ValueError("Truncated bank chunk header")
         tag, length = struct.unpack_from("<4sI", data, offset)
         if offset + 8 + length > len(data):
             raise ValueError("Truncated bank chunk")
+        if tag.decode() in chunks:
+            raise ValueError("Duplicate bank chunk")
         chunks[tag.decode()] = data[offset + 8:offset + 8 + length]
         offset += 8 + length
     hirc = chunks["HIRC"]
     offset = 4
     records = {}
     for _ in range(struct.unpack_from("<I", hirc)[0]):
+        if offset + 9 > len(hirc):
+            raise ValueError("Truncated HIRC record header")
         kind, length = struct.unpack_from("<BI", hirc, offset)
+        if length < 4 or offset + 5 + length > len(hirc):
+            raise ValueError("Invalid HIRC record length")
         ident = struct.unpack_from("<I", hirc, offset + 5)[0]
+        if ident in records:
+            raise ValueError("Duplicate HIRC object ID")
         records[ident] = (kind, hirc[offset + 9:offset + 5 + length])
         offset += 5 + length
     if offset != len(hirc):
