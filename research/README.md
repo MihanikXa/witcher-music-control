@@ -17,6 +17,13 @@ This index includes **historical investigations** and the current Stage 1 direct
 13. [Init-free direct State volume](13-world-state-volume-init-free.md): authoring-validated 0/0/100 with no new global objects, but no modified bank.
 14. [Complete-context bank experiment](14-full-context-bank-experiment.md): current plan for clean local source editing without project pruning.
 
-**Next task:** keep the entire Wwise source hierarchy in an isolated copy, apply only the direct `world_music` State Voice Volume edit, attempt selected bank generation while allowing any incidental Init as disposable output, and validate the regional bank against native definitions. Do not mistake a failed generation with surviving output for a successful build. Packaging and live game testing require separate acceptance, and the installed game's Init must remain unchanged.
+15. [Complete-context Stage1 result](15-full-context-stage1-results.md).
+16. [Licence build gates](16-licence-pending-build-gates.md).
+17. [Read-only licensed verification](17-read-only-licensed-bank-verification.md).
+18. [Licensed baseline results](18-licensed-baseline-results.md): effective licence; regional ProjectID17637 versus native39.
+19. [Native Init compatibility investigation](19-native-init-compatibility-investigation.md): source/reference evidence and runtime-proof limits.
+20. [Unmodified regional-bank loading test](20-white-orchard-bank-loading-test-plan.md): staged A/B caches, hashes, profile isolation, rollback and load-attribution criteria.
+
+**Current next task:** obtain separate authorization for an isolated diagnostic game test of the existing unmodified licensed regional bank with native Init. Packages are staged; loader attribution and a safe copied-save/profile setup remain prerequisites for a decisive result. Stop unrelated bank/Init regeneration. Do not generate the modified candidate or infer loading success from normal music alone. See report20.
 
 Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and report 14 for gates.

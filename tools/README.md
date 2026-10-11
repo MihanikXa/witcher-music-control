@@ -60,6 +60,15 @@ bank. Preserve the generated workspace/manifest when comparing exact builds.
 
 ## Active production-source experiment
 
+- `white_orchard_loading_package.py prepare|control|licensed`: offline diagnostic
+  A/B packaging of the two recorded **unmodified** regional banks. Reuses the
+  native cooker/bootstrap and bank comparators; rejects unexpected hashes or
+  content changes, preserves native bootstrap Init, validates one-entry cache
+  bounds and exact bank bytes, and performs native splitcache readback. Stages
+  caches under ignored `build/` only. No Wwise generation, licensing, deployment
+  or compatibility-gate waiver. Fresh-root commands, hashes, isolation and
+  runtime attribution requirements: [report20](../research/20-white-orchard-bank-loading-test-plan.md).
+
 - `white_orchard_build_gate.py baseline|candidate`: strict read-only future licensed-build acceptance, reusing bank/State comparators. Baseline must preserve native headers/global HIRC/registrations/full STMG/media; candidate requires an unchanged passing baseline proof and only the verified world State edit. Errors, unexplained warnings, stale evidence and ProjectID mismatches fail with JSON and exit1. No generation, licensing or deployment. Commands and limits: report17.
 - `test_white_orchard_build_gate.py`: synthetic gate/decoder regression tests under ignored build; run with `python -m unittest discover -s tools -p test_white_orchard_build_gate.py -v`.
 
