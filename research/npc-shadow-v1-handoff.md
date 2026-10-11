@@ -156,5 +156,8 @@ resource selection; no saves, settings or compatibility merges need restoring.
 
 ## Independent typography status
 
-Gentium English source preparation is retained unchanged. There is still no
-cooked Gentium font module or font ZIP. NPC shadow visual acceptance is now user-confirmed. Proceed with the independent English Gentium Book font-library trial before extending to other text surfaces; no broader roadmap work was performed.
+QuietFolio English Gentium v1 is now separately user-accepted in-game; its
+package remains unchanged. NPC Shadow v1 remains the accepted visual baseline.
+The active bounded extension is interaction v2 plus current HUD subtitle
+shadows; see [Wave A source implementation](text-shadow-wave-a.md).
+This does not authorize rebuilding accepted packages or broader roadmap work.

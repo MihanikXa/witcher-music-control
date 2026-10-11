@@ -6,9 +6,11 @@ interaction v1 movie-local Source Sans Regular selector is user-observed
 withheld. The requested v2 tests a subordinate 17px hint and a soft local
 shadow. The user now requests that overly strong ordinary-text effects
 throughout the UI match the accepted NPC shadow's restrained appearance.
-The full surface/parent/filter audit and staged implementation criteria are
-in [text shadow unification](../design/text-shadow-unification.md).
-These new work items are **not implemented** yet.
+The comprehensive installed-resource catalogue is now recorded in the
+[coverage ledger](text-shadow-coverage-ledger.md). Interaction v2 and the current
+HUD subtitle shadow candidate are implemented at source level and independently
+decoded. Saved Editor imports/cook/package/runtime gates remain pending; see
+[Wave A manual handoff](text-shadow-wave-a.md). No broad shadow release is claimed.
 
 Current verified follow-ups supersede the historical build gate below:
 [accepted English Gentium v1](gentium-v1-handoff.md) and
@@ -39,9 +41,9 @@ frame tracing or engine instrumentation was performed.
 |---|---|---|---|
 | NPC/target names; target health/stamina/level | `hud/hud_enemyfocus.redswf` | `game/gui/hud/modules/hudModuleEnemyFocus.ws`: `OnConfigUI`, `OnTick`, `UpdateName`, `ShowDamageType`; binds `setEnemyName`, `setAttitude`, `setEnemyHealth`, `setEnemyLevel`; actual runtime AS `HudModuleEnemyFocus` | Named `mcNPCFocus.tfName`; field 38, centered, `$NormalFont`, height 400 twips = 20 logical px, leading 40 = 2 px, multiline/wordWrap. Color assigned by `setVisibility`. FLA/PlaceObject filter for shadow. Full WS conflicts with FriendlyHUD; SAH wraps damage/dodge methods and controls visibility. No installed movie competitor |
 | Cinematic dialogue choices/previous sentence/skip prompts | `hud/hud_dialog.redswf` | `hudModuleDialog.ws`: `SentenceSet`, `PreviousSentenceSet`, `ChoiceTimeoutSet`, `SkipConfirmShow`, `setAlternativeDialogOptionView`; REDkit `HudModuleDialog.as` | Movie text fields/renderers and script-supplied localized text, selection/timing state; FriendlyHUD replaces this WS, Monster Hunt/Sharedutils wrap choice callbacks. No movie owner collision seen. Direct choice/sentence filters are enumerated below; live renderer state remains to validate |
-| Cinematic subtitles/speaker | `witcher3/hud_subtitles.redswf` | `hudModuleSubtitles.ws`: `OnSubtitleAdded`, `addSubtitle`, `removeSubtitle`, `updateWidth`; REDkit `HudModuleSubtitles.as` | `tfSubtitles`, field 1, centered/wordWrap, authored 18 px but WS injects **26 + SubtitleScale**; alternative Witold text injects `#5ACCF6`. Movie/HTML/WS contributions must be treated independently. Poster subtitle route duplicates behavior; don't assume one movie covers every subtitle |
+| Cinematic subtitles/speaker | **Current:** `hud/hud_subtitles.redswf`; older `witcher3/hud_subtitles.redswf` remains catalogued | `hudModuleSubtitles.ws`: `OnSubtitleAdded`, `addSubtitle`, `removeSubtitle`, `updateWidth`; REDkit `HudModuleSubtitles.as` | `tfSubtitles`, field 1, centered/wordWrap, current authored 26 px and WS injects **26 + SubtitleScale**; alternative Witold text injects `#5ACCF6`. Movie/HTML/WS contributions must be treated independently. Poster subtitle route duplicates behavior; don't assume one movie covers every subtitle |
 | Ambient NPC chatter | `hud/hud_oneliners.redswf` | `hudModuleOneliners.ws`: `OnCreateOneliner`, `CreateOneliner`, pooled `mcOneliner<ID>`; SAH restoration helper | Different movie/pool from subtitle/nameplate. Native positioning/visibility and SAH pooled alpha handling; FriendlyHUD same-path source replacement. Direct authored variants are enumerated below; pool-specific runtime behavior remains to validate |
-| World interaction prompts/hold icons | `hud/hud_interactions.redswf` | `hudModuleInteractions.ws` binds `SetInteractionKey`, `SetInteractionKeyIconAndText`, `SetHoldDuration`, `SetVisibilityEx`, `SetPositions`; REDkit `HudModuleInteractions.as` | Text/art/key-code path and world placement; preserve controller/keyboard selection and hold timing. FriendlyHUD owns script variant; no movie collision. Direct action field size/filter is enumerated below; no guessed global text setter |
+| World interaction prompts/hold icons | `hud/hud_interactions.redswf` | `hudModuleInteractions.ws` binds `SetInteractionKey`, `SetInteractionKeyIconAndText`, `SetHoldDuration`, `SetVisibilityEx`, `SetPositions`; REDkit `HudModuleInteractions.as` | Text/art/key-code path and world placement; preserve controller/keyboard selection and hold timing. FriendlyHUD owns script variant; interaction v1 now owns this movie and v2 must replace it. Direct action field size/filter is enumerated below; no guessed global text setter |
 | Active quest/objectives | `hud/hud_quests.redswf` | `hudModuleQuests.ws`: `ShowTrackedQuest`, `SetSystemQuestInfo`, `SendObjectives`, storage `hud.quest.system.objectives`, `GetColorByQuestType` | Script sets Story `#FFCC00`, Chapter `#BB8237`, side/hunt/treasure `#C0C0C0`; movie styles/highlights separate. FriendlyHUD replacement plus SAH/Monster Hunt wrappers on SendObjectives. Change selected color rules without rewriting tracking/visibility |
 | Quest/item/level notifications | `hud/hud_journalupdate.redswf`; `hud/hud_lootfeed.redswf` | `hudModuleJournalUpdate.ws`, `AddNewJournalUpdate`; `HudLootFeedShower.as` sets `tfName.text = data.name` | Queue behavior and artwork differ from objectives. SAH may suppress notices; preserve it. FriendlyHUD scripts intersect; mixed direct filters are inventoried below; runtime queues require tests |
 | Quest journal | `journal/panel_journal_quests.redswf` | Current menu/script data and REDkit journal AS | Independent panel text/layout. No scanned bundle collision; full renderer state/path audit remains pending |
@@ -76,14 +78,14 @@ A missing direct placement filter does not rule out a parent filter or runtime
 effect. These observations narrow the editing targets; parent-chain and runtime
 state inspection is still required before a patch.
 
-Current NPC `PlaceObject3` named **tfName**, character 38, depth 35, inside
+Original vanilla NPC `PlaceObject3` named **tfName**, character 38, depth 35, inside
 mcNPCFocus's sprite 63, carries **DROPSHADOWFILTER**: black RGBA `(0,0,0,255)`,
 blurX/Y 4, strength 3, distance 1, angle 0.785385 radians (~45°), passes 1,
 compositeSource true, innerShadow/knockout false. The wide, strong shadow explains
 the apparent outline here; a Stroke property is not required to reproduce it.
 
-Current subtitles `PlaceObject3` named **tfSubtitles**, character1, depth1,
-carry **GLOWFILTER**: black RGBA `(0,0,0,255)`, blurX/Y5, strength1, passes3,
+Older `witcher3/hud_subtitles` `PlaceObject3` named **tfSubtitles**, character1, depth1,
+carries **GLOWFILTER**: black RGBA `(0,0,0,255)`, blurX/Y5, strength1, passes3,
 compositeSource true, innerGlow/knockout false. This is an independently editable
 authored filter. Do not globally delete all GlowFilters (many represent focus).
 
@@ -113,7 +115,7 @@ centered). `ShowDamageType` in current WS selects saturated DoT red `#FF0000`
 and heal green `#00FF00`, among other values, and invokes `setDamageText`.
 Name field changes do not automatically change those colors or new text fields.
 
-## Font pipeline and unresolved packaging gate
+## Historical initial font-pipeline findings (superseded by validated handoffs)
 
 Installed REDkit `fonts.xml` maps `$NormalFont`, `$BoldFont`, `$ItalicFont` and
 credits to PF Din, with bold/italic flags. It selects EN/RU/UA/AR/ZH/CN/JP/KR
@@ -142,3 +144,19 @@ round-trip are **not yet verified**. No mod build command is claimed to work.
 See the [prototype gates](../design/implementation-plan.md) for the exact next
 step. A browser's CSS shadow/font spacing is a visual proposal, not an asserted
 Scaleform API or in-game result.
+
+## Current subtitle route and full shadow coverage
+
+Current installed Outfit Wheel root ABC confirms `swf\\hud\\` +
+`hud_subtitles.swf` for SubtitlesModule. The installed **hud** movie uses
+character1 at root depth1, authored 26px, black DropShadow blur1.5,
+strength20, distance1, angle51471/65536, passes3. Current native non-image
+contracts match that installed runtime baseline. The older **witcher3**
+18px/glow movie is not the current root module target; Poster/menu routes
+remain separate. [Source implementation, hashes and manual gate](text-shadow-wave-a.md).
+
+The [coverage ledger](text-shadow-coverage-ledger.md) includes current deployed
+resource owners, all decoded authored text placements and parent filter chains,
+plus native-AS/installed-WS setter findings. Available assets do not prove
+every movie is live; semantic effects and dynamic/exported renderers remain
+per-surface review gates. Accepted NPC, Gentium and color work is preserved.

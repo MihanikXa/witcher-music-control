@@ -92,3 +92,14 @@ assets/font binaries/third-party files. Report exact tag/filter/placement
 identifiers, changed bytes/contracts, unchanged resources, control/candidate
 cooking receipts, v2 private ZIP/hash and risks. **Do not reopen the
 successful Gentium v1, color or shadow work.**
+
+## Implementation gate — 11 October 2026
+
+The 17px Regular candidate and scoped Glow-to-DropShadow conversion are
+implemented and independently decoded. Both font definitions and every
+unrelated tag remain unchanged from the v1 authoring source. Source repeat
+hashes agree; official saved-resource cooking/package gates require one
+unique manual interaction import. The accompanying current-HUD subtitle
+shadow proof needs its own unchanged/candidate imports. See
+[the exact three-file Wave A handoff](../research/text-shadow-wave-a.md).
+No new ZIP is released or installed at this source gate.

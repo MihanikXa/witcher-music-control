@@ -53,7 +53,7 @@ certify the winning modded resource or a dynamic override. Paths are under
 | --- | --- | --- |
 | `hud/hud_enemyfocus.redswf` NPC `tfName` | Former black DropShadow blur4 strength3 | **Accepted v1; no edits/rebuilds** |
 | `hud/hud_interactions.redswf` `tfActionName` | Black Glow blur4 strength3 passes1 | Pair subordinate 17px Source Sans with softer NPC-family effect in independent interaction v2; possible 16px trial |
-| `witcher3/hud_subtitles.redswf` `tfSubtitles` | Opaque black Glow blur5 passes3 | High priority field-local subtitle trial, preserving runtime `26 + SubtitleScale` and width logic; check poster/Witold routes |
+| `hud/hud_subtitles.redswf` `tfSubtitles` | Current opaque black DropShadow blur1.5 strength20 passes3 | Wave A field-local source prepared; preserve runtime `26 + SubtitleScale` and width logic; check poster/Witold routes |
 | `hud/hud_dialog.redswf` `tfLine` | Opaque black Glow blur2.5 strength10 passes3 | High priority separate dialogue/movie proof |
 | `hud/hud_dialog.redswf` `tfSubtitles`/`tfPreviousSubtitles` | Black shadow blur4 strength20 passes3 | Audit exact text roles and visual function; softer trial with dialogue state/timing intact |
 | `hud/hud_quests.redswf` `tfQuestName`, `tfObjective`, `tfOr` | Black shadow blur2 strength20 passes3 | High priority tracked-quest text proof; retain colors/quest-icon/hiding semantics |
@@ -162,3 +162,11 @@ Declare the broad shadow job done only after:
 
 The accepted NPC Shadow v1 is a reference and rollback anchor, not evidence
 the same filter automatically works everywhere.
+
+## Current Wave A gate
+
+Current installed Outfit Wheel root ABC corroborates `swf\\hud\\` plus
+`hud_subtitles.swf`; the earlier `witcher3` subtitle glow entry was stale for
+the current HUD route. Source candidates are prepared and independently
+decoded; manual Editor imports are the next dependency. See
+[Wave A implementation and manual handoff](../research/text-shadow-wave-a.md).

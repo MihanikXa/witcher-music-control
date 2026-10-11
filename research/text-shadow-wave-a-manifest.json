@@ -1,0 +1,428 @@
+{
+  "date": "2026-10-11",
+  "status": "Source verification passed; three manual Editor imports required; no new ZIP",
+  "resource_keys": [
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+    "gameplay/gui_new/swf/hud/hud_subtitles.redswf"
+  ],
+  "interactions": {
+    "input_path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-source-v2\\input\\hud_interactions_ff_regular.swf",
+    "input_sha256": "f24e345a29be63ed19d3c414e34f9147d5b03a8bc741f80daf0de23ff341f2d4",
+    "output_path": "C:\\Dev\\witcher-ui-overhaul\\build\\interactions-v2-source\\input\\hud_interactions_ff_regular.swf",
+    "output_sha256": "f36821c14fa097ca40ff6f98def65bb04c1d840a500914167ea6f12bc8a1fb65",
+    "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+    "field": 215,
+    "name": "tfActionName",
+    "sprite": 216,
+    "depth": 1,
+    "approved_tag_paths": [
+      [
+        225
+      ],
+      [
+        226,
+        0
+      ]
+    ],
+    "font_height_before": "440",
+    "font_height_after": "340",
+    "before": [
+      "item",
+      [
+        [
+          "blurX",
+          "4.0"
+        ],
+        [
+          "blurY",
+          "4.0"
+        ],
+        [
+          "compositeSource",
+          "true"
+        ],
+        [
+          "id",
+          "2"
+        ],
+        [
+          "innerGlow",
+          "false"
+        ],
+        [
+          "knockout",
+          "false"
+        ],
+        [
+          "passes",
+          "1"
+        ],
+        [
+          "strength",
+          "3.0"
+        ],
+        [
+          "type",
+          "GLOWFILTER"
+        ]
+      ],
+      "",
+      [
+        [
+          "glowColor",
+          [
+            [
+              "alpha",
+              "255"
+            ],
+            [
+              "blue",
+              "0"
+            ],
+            [
+              "green",
+              "0"
+            ],
+            [
+              "red",
+              "0"
+            ],
+            [
+              "type",
+              "RGBA"
+            ]
+          ],
+          "",
+          []
+        ]
+      ]
+    ],
+    "after": [
+      "item",
+      [
+        [
+          "angle",
+          "0.7853851318359375"
+        ],
+        [
+          "blurX",
+          "2.0"
+        ],
+        [
+          "blurY",
+          "2.0"
+        ],
+        [
+          "compositeSource",
+          "true"
+        ],
+        [
+          "distance",
+          "1.0"
+        ],
+        [
+          "id",
+          "0"
+        ],
+        [
+          "innerShadow",
+          "false"
+        ],
+        [
+          "knockout",
+          "false"
+        ],
+        [
+          "passes",
+          "1"
+        ],
+        [
+          "strength",
+          "1.0"
+        ],
+        [
+          "type",
+          "DROPSHADOWFILTER"
+        ]
+      ],
+      "",
+      [
+        [
+          "dropShadowColor",
+          [
+            [
+              "alpha",
+              "166"
+            ],
+            [
+              "blue",
+              "24"
+            ],
+            [
+              "green",
+              "23"
+            ],
+            [
+              "red",
+              "20"
+            ],
+            [
+              "type",
+              "RGBA"
+            ]
+          ],
+          "",
+          []
+        ]
+      ]
+    ],
+    "unchanged_selected_tags_exact": true,
+    "independently_decoded_delta_exact": true,
+    "other_tags_retained_from_source": true,
+    "editor_imported": false,
+    "cooked": false,
+    "packaged": false,
+    "runtime_tested": false
+  },
+  "subtitles": {
+    "input_path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\swf\\hud\\hud_subtitles.swf",
+    "input_sha256": "28758214e28e36cf91b9084983edeaa4c0bfa5a683bb395d58285250bb2dd776",
+    "output_path": "C:\\Dev\\witcher-ui-overhaul\\build\\subtitles-hud-shadow-v1-source\\input\\hud_subtitles.swf",
+    "output_sha256": "5b43d16f1a8e3543653f00a034a81835f842beba15e2ab7e2d9e56736657fc60",
+    "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+    "field": 1,
+    "name": "tfSubtitles",
+    "sprite": 0,
+    "depth": 1,
+    "approved_tag_paths": [
+      [
+        5
+      ]
+    ],
+    "font_height_before": "520",
+    "font_height_after": "520",
+    "before": [
+      "item",
+      [
+        [
+          "angle",
+          "0.7853851318359375"
+        ],
+        [
+          "blurX",
+          "1.5"
+        ],
+        [
+          "blurY",
+          "1.5"
+        ],
+        [
+          "compositeSource",
+          "true"
+        ],
+        [
+          "distance",
+          "1.0"
+        ],
+        [
+          "id",
+          "0"
+        ],
+        [
+          "innerShadow",
+          "false"
+        ],
+        [
+          "knockout",
+          "false"
+        ],
+        [
+          "passes",
+          "3"
+        ],
+        [
+          "strength",
+          "20.0"
+        ],
+        [
+          "type",
+          "DROPSHADOWFILTER"
+        ]
+      ],
+      "",
+      [
+        [
+          "dropShadowColor",
+          [
+            [
+              "alpha",
+              "255"
+            ],
+            [
+              "blue",
+              "0"
+            ],
+            [
+              "green",
+              "0"
+            ],
+            [
+              "red",
+              "0"
+            ],
+            [
+              "type",
+              "RGBA"
+            ]
+          ],
+          "",
+          []
+        ]
+      ]
+    ],
+    "after": [
+      "item",
+      [
+        [
+          "angle",
+          "0.7853851318359375"
+        ],
+        [
+          "blurX",
+          "2.0"
+        ],
+        [
+          "blurY",
+          "2.0"
+        ],
+        [
+          "compositeSource",
+          "true"
+        ],
+        [
+          "distance",
+          "1.0"
+        ],
+        [
+          "id",
+          "0"
+        ],
+        [
+          "innerShadow",
+          "false"
+        ],
+        [
+          "knockout",
+          "false"
+        ],
+        [
+          "passes",
+          "3"
+        ],
+        [
+          "strength",
+          "1.0"
+        ],
+        [
+          "type",
+          "DROPSHADOWFILTER"
+        ]
+      ],
+      "",
+      [
+        [
+          "dropShadowColor",
+          [
+            [
+              "alpha",
+              "166"
+            ],
+            [
+              "blue",
+              "24"
+            ],
+            [
+              "green",
+              "23"
+            ],
+            [
+              "red",
+              "20"
+            ],
+            [
+              "type",
+              "RGBA"
+            ]
+          ],
+          "",
+          []
+        ]
+      ]
+    ],
+    "unchanged_selected_tags_exact": true,
+    "independently_decoded_delta_exact": true,
+    "other_tags_retained_from_source": true,
+    "editor_imported": false,
+    "cooked": false,
+    "packaged": false,
+    "runtime_tested": false
+  },
+  "input_files": {
+    "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_interactions_ff_v2_17.swf": "f36821c14fa097ca40ff6f98def65bb04c1d840a500914167ea6f12bc8a1fb65",
+    "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_subtitles_qs_unchanged.swf": "28758214e28e36cf91b9084983edeaa4c0bfa5a683bb395d58285250bb2dd776",
+    "C:\\Dev\\witcher-ui-overhaul\\build\\text-shadow-wave-a\\input\\hud_subtitles_qs_v1.swf": "5b43d16f1a8e3543653f00a034a81835f842beba15e2ab7e2d9e56736657fc60"
+  },
+  "runtime_baselines": {
+    "interactions_v1_deployed": "317b4e960a33f8048ba66fa345986d5dcc945ad482b61622f2cb7c878cf3dcaa",
+    "current_hud_subtitles": "2475d3cee55ff9846be9b2e30490cd16a67ec08283ffe3a88dd3ef2d5c3a504c"
+  },
+  "subtitle_native_runtime_nonimage_contracts_equal": true,
+  "source_repeat_hashes_identical": true,
+  "tests_passed": 79,
+  "cooked": false,
+  "packaged": false,
+  "runtime_tested": false,
+  "private_zip_paths": [],
+  "editor_project_requested": "QuietTextShadowWaveA",
+  "source_provenance": "Current installed REDkit native SWFs; interactions builds on independently licensed original Source Sans 3 conversion, retaining derivative notices",
+  "shadow_filter_provenance": "Original transformation from independently inspected current native filter, using accepted NPC Shadow v1 values; no third-party mod filter asset copied",
+  "accepted_packages": {
+    "deploy/gentium-english-private-v1/QuietFolio-English-Gentium-Book-v1-private-test.zip": {
+      "sha256": "220a4d1427544567210e66d55a797cd909fd0d337a1fc7c7e4ef78ad114f37da",
+      "unchanged": true
+    },
+    "deploy/npc-colors-private-v4/QuietEditorial-NPC-Colors-v4-private-test.zip": {
+      "sha256": "94f39861fa552d7a3353c17831a55751171a321b3df8a73c211f995bb690036e",
+      "unchanged": true
+    },
+    "deploy/npc-shadow-private-v1/QuietEditorial-NPC-Shadow-v1-private-test.zip": {
+      "sha256": "fc70ac02870ca08998c37df03215d84783a5a013e2e8ea681ba920c2a922fc51",
+      "unchanged": true
+    },
+    "deploy/field-folio-interactions-private-v1/Field-and-Folio-Interactions-v1-private-test.zip": {
+      "sha256": "6207bca8a9dc5b25711646ca6292f118e604d59c73fa38f299858ecfbd09e5f0",
+      "unchanged": true
+    }
+  },
+  "live_files_modified": false,
+  "computer_use": false,
+  "coverage": {
+    "ledger": "research/text-shadow-coverage-ledger.json",
+    "owner_movie_records": 118,
+    "distinct_keys": 116,
+    "text_placements_or_states": 1703,
+    "runtime_setter_source_files": 48,
+    "blocked": [
+      "gameplay/gui_new/swf/gwint/gwint_game.redswf"
+    ],
+    "mods_settings_sha256": "ce04ea31b116367af7faf427c91c33a04a003226b8458992c078286a481dc54d"
+  },
+  "root_loader_evidence": {
+    "resource_key": "gameplay/gui_new/swf/hud/hud.redswf",
+    "owner": "modGeraltOutfitWheel",
+    "resource_sha256": "2fcffb248b3e858aa28046d750d01f848bfde768d4f95f330dfeb154587c01e7",
+    "decompiled_hud_sha256": "467ec25d84c2da542ad599da25fc0b21c17b980051f0a22faa1b9ad0f8a4ae4e",
+    "module_path": "swf\\hud\\hud_subtitles.swf",
+    "local_evidence": "build/text-shadow-source-v1/current-root-as/scripts/red/game/witcher3/hud/Hud.as"
+  }
+}
