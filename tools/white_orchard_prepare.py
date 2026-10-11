@@ -59,14 +59,14 @@ def retain(tree, tag, name):
     return node
 
 
-def sanitize_project(tree):
+def sanitize_project(tree, preserve_folders=False):
     project = tree.find("./ProjectInfo/Project")
     if project is None:
         raise ValueError("Unexpected project schema")
     # Remove inventory of installation work units. Wwise discovers isolated
     # work units from the local physical folders.
     for child in list(project):
-        if child.tag in ("PhysicalFolderList", "SourceControl"):
+        if child.tag == "SourceControl" or (child.tag == "PhysicalFolderList" and not preserve_folders):
             project.remove(child)
     for prop in tree.iter("Property"):
         name = prop.get("Name", "")
@@ -115,7 +115,7 @@ def prepare_defaults(source, output, record=None):
         save_xml(tree, output / path.relative_to(source))
 
 
-def prepare(source, output):
+def prepare(source, output, preserve_hierarchies=False):
     source = Path(source).resolve()
     output = build_path(output)
     if output.exists():
@@ -142,8 +142,41 @@ def prepare(source, output):
                                    "sha256": digest(path), "bytes": path.stat().st_size})
 
     record(source / "w3_audio.wproj")
-    sanitize_project(project)
+    sanitize_project(project, preserve_folders=preserve_hierarchies)
     save_xml(project, output / "w3_audio.wproj")
+    if preserve_hierarchies:
+        # Init depends on global usage across the project, not just the selected
+        # regional bank. Keep every work unit and default hierarchy byte-for-byte.
+        # Only the selected bank's audio is needed for this generation experiment.
+        for path in sorted(source.rglob("*.wwu")):
+            record(path)
+            target = output / path.relative_to(source)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(path, target)
+        music = ET.parse(source / "Interactive Music Hierarchy/music.wwu")
+        root = next(x for x in music.iter("MusicSwitchContainer")
+                    if x.get("Name") == config["regional_root"])
+        manifest["changes"].append("Preserved all work units; project paths/commands isolated only")
+    else:
+        root = prepare_pruned(source, output, record, config)
+        manifest["changes"].append("Legacy reduced hierarchy: not suitable for native-preserving Init")
+    for audio in sorted(set(x.text for x in root.iter("AudioFile"))):
+        relative = Path("Originals/SFX") / audio.replace("\\", "/")
+        path = source / relative
+        if not path.is_file():
+            raise FileNotFoundError(path)
+        target = output / relative
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(path, target)
+        manifest["originals"].append({"relative_path": str(relative),
+                                      "sha256": digest(path), "bytes": path.stat().st_size})
+    (output / "input-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    print(json.dumps({"workspace": str(output), "work_units": len(list(output.rglob("*.wwu"))),
+                      "originals": len(manifest["originals"]),
+                      "original_bytes": sum(x["bytes"] for x in manifest["originals"])}))
+
+
+def prepare_pruned(source, output, record, config):
     for category in GLOBAL_CATEGORIES:
         for path in sorted((source / category).glob("*.wwu")):
             record(path)
@@ -175,25 +208,14 @@ def prepare(source, output):
     retain(banks, "SoundBank", "music_prologue")
     save_xml(banks, output / path.relative_to(source))
     prepare_defaults(source, output, record)
-    for audio in sorted(set(x.text for x in root.iter("AudioFile"))):
-        relative = Path("Originals/SFX") / audio.replace("\\", "/")
-        path = source / relative
-        if not path.is_file():
-            raise FileNotFoundError(path)
-        target = output / relative
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(path, target)
-        manifest["originals"].append({"relative_path": str(relative),
-                                      "sha256": digest(path), "bytes": path.stat().st_size})
-    (output / "input-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    print(json.dumps({"workspace": str(output), "work_units": len(list(output.rglob("*.wwu"))),
-                      "originals": len(manifest["originals"]),
-                      "original_bytes": sum(x["bytes"] for x in manifest["originals"])}))
+    return root
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--audio-project", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--preserve-hierarchies", action="store_true",
+                        help="Retain all work units/default contents for Init fidelity investigations")
     args = parser.parse_args()
-    prepare(args.audio_project, args.output)
+    prepare(args.audio_project, args.output, args.preserve_hierarchies)

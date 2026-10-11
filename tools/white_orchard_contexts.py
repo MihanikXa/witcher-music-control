@@ -7,12 +7,12 @@ from white_orchard_prepare import build_path
 from white_orchard_wwise import Waapi
 
 
-def run(project, port):
+def run(project, port, native_fade=False):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
         raise RuntimeError("Requires the separate validation project")
-    out = project.parent / "contexts"
+    out = project.parent / ("contexts-native-fade" if native_fade else "contexts")
     out.mkdir(exist_ok=True)
     api.call("ak.wwise.core.transport.executeAction", {"action": "stop"})
     music = r"\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Immerse\Music"
@@ -61,7 +61,17 @@ def run(project, port):
     evidence = {"synthetic": [], "white_orchard": [], "live_game_test": False}
     # A test source routed directly to Music represents the protected routing,
     # without modifying any actual quest container or cue.
-    api.call("ak.wwise.core.object.set", {"objects": [{"object": sound, "@OutputBus": music}]})
+    api.call("ak.wwise.core.object.set", {"objects": [{"object": sound, "@OutputBus": music,
+        # The parallel experiment adds fixture sends; a protected test source
+        # must inherit native sends when routed directly to Music.
+        "@OverrideUserAuxSends": False}]})
+    if native_fade:
+        # This Sound is a root audio node directly in a WorkUnit: disabling the
+        # override flag alone does not discard its previously explicit sends.
+        for index in range(4):
+            api.call("ak.wwise.core.object.setReference", {"object": sound,
+                "reference": "UserAuxSend" + str(index),
+                "value": "{00000000-0000-0000-0000-000000000000}"})
     transport = api.call("ak.wwise.core.transport.create", {"object": sound})["transport"]
     for name, values, master in [("protected_all_zero", [0, 0, 0], 100),
                                  ("protected_all_unity", [100, 100, 100], 100),
@@ -125,5 +135,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project", required=True, type=Path)
     parser.add_argument("--port", type=int, default=18090)
+    parser.add_argument("--native-fade", action="store_true")
     args = parser.parse_args()
-    run(args.project, args.port)
+    run(args.project, args.port, args.native_fade)

@@ -2,6 +2,8 @@
 
 ## Result and limits of proof
 
+**Transition follow-up:** [report 11](11-white-orchard-blocker-resolution.md) replaces the discontinuous bypass proposal for the next build with a measured parallel mixer: three continuous Gain AuxBus paths plus one protected-state unity AuxBus, selected by numeric State BusVolume; a separate muted dry bus prevents doubled audio. Native timing, events and quest routing remain unchanged. Unequal percent inputs and defaults passed six-channel steady-state and transition checks. This is a validation construction pending native-preserving Init generation, not a certified game build. The original bypass proof below is retained as evidence.
+
 **Observed:** the current project is Wwise `v2023.1.19`, build `8928`, schema `119` (`L:\Games\Steam\steamapps\common\The Witcher 3 REDkit\assets\w3_audio\w3_audio.wproj:2`). The matching installed authoring tool is `L:\Programs\Wwise_2023.1.19.8928\Authoring\x64\Release\bin\WwiseConsole.exe`; its help banner independently confirms that version. The older environment-variable path is not the tool used for this investigation.
 
 **Construction supported by the installed object definitions:** three RTPC-controlled Gain effects, each independently bypassed by vanilla `game_state`. Put them on a new ordinary Audio Bus below the existing Music bus, and route only the eight regional `world_music` children to that bus. This implements a state-selected gain without changing the script classifier or quest selectors.

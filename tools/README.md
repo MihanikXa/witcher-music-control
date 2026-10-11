@@ -11,8 +11,9 @@ WwiseConsole. They never install or deploy anything. See
 `research/10-white-orchard-prototype-results.md` for commands, measured results
 and the current Init/cache blockers.
 
-- `white_orchard_prepare.py`: copy/prune required work units and 47 referenced
-  originals, sanitize project output paths/commands, hash read-only inputs.
+- `white_orchard_prepare.py`: copy 47 referenced originals, sanitize output
+  paths/commands and hash inputs. Use `--preserve-hierarchies` for Init fidelity;
+  the legacy pruned mode is retained only to reproduce the failed baseline.
 - `white_orchard_author.py`: verify the open isolated project and Wwise build;
   author the mixer described by `src/wwise/white-orchard-mixer.json` through WAAPI.
 - `white_orchard_wwise.py`: local HTTP WAAPI client and selective Windows/SFX
@@ -27,6 +28,16 @@ and the current Init/cache blockers.
   authored q001 selectors, protected routing and the native Music parameter.
 - `white_orchard_transitions.py`: sustained-tone bypass-switch recordings;
   preserves/restores the probe matrix's final raw recording after other tests.
+- `white_orchard_native_fade.py` / `white_orchard_fade_measure.py`: validation-only
+  parallel AuxBus/State-volume experiment and six-channel continuous-tone checks.
+  Never generate banks from its instrumented workspace. Clear stale State groups
+  on the aggregate; the root Sound fixture also needs explicit send clearing for
+  protected-path tests (`white_orchard_contexts.py --native-fade`).
+- `white_orchard_cooker.py`: prepare an ignored isolated cooker bootstrap and
+  reproduce native Init/music_prologue cache fixtures without calling Wwise or
+  copying executable tools. It deliberately does not accept the incomplete mixer
+  Init or create a deployment candidate. See report 11 for successful commands,
+  bootstrap-only CSV changes, nonfatal diagnostics and loader-proof limits.
 
 Keep the WAAPI server bound to localhost, verify its project path, and stop it
 when finished. Recorders and synthetic source objects stay in the separate

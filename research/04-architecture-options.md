@@ -2,11 +2,13 @@
 
 ## Current conclusion
 
-Use vanilla game_state and music_type unchanged. The implemented isolated White Orchard mixer is a new world-only child bus under Music with **three RTPC-controlled Gain effects, each State-gated by its own EffectSlot.Bypass**. An eventual settings adapter writes three GameParameters; it does not intercept SoundGameStateChange. Wwise authoring playback now verifies independent gains, LFE and protected quest routing. The controls use a **0–100 amplitude-percent domain**, correcting the initially proposed two-point dB curve. Discrete bypass transitions produced waveform discontinuities; generated Init also loses vanilla definitions, and cache packaging is unresolved. This is not ready for deployment. See [prototype results](10-white-orchard-prototype-results.md).
+**Latest review:** [11-white-orchard-blocker-resolution.md](11-white-orchard-blocker-resolution.md) demonstrates smooth native State-volume routing through four parallel AuxBus paths, with three continuous Gain effects and a muted dry output. Prefer that measured construction for the next build over Boolean bypass. It retains the same 0–100 amplitude-percent controls and needs no state hook. The complete-project Init control is blocked by the 200-media trial limit plus Mastering Suite licensing; offline native-tool cache packing is now demonstrated with vanilla fixtures. The detailed bypass sections below describe the retained original prototype, not a deployment-ready final graph.
+
+Use vanilla game_state and music_type unchanged. The implemented isolated White Orchard mixer is a new world-only child bus under Music with **three RTPC-controlled Gain effects, each State-gated by its own EffectSlot.Bypass**. An eventual settings adapter writes three GameParameters; it does not intercept SoundGameStateChange. Wwise authoring playback now verifies independent gains, LFE and protected quest routing. The controls use a **0вЂ“100 amplitude-percent domain**, correcting the initially proposed two-point dB curve. Discrete bypass transitions produced waveform discontinuities; generated Init also loses vanilla definitions, and cache packaging is unresolved. This is not ready for deployment. See [prototype results](10-white-orchard-prototype-results.md).
 
 Detailed proofs and limitations: [05-wwise-mixer-proof.md](05-wwise-mixer-proof.md), [06-resource-footprint.md](06-resource-footprint.md), [07-world-music-exceptions.md](07-world-music-exceptions.md). This supersedes the earlier recommendation to start by implementing a state-hook logger.
 
-Target additional gains: exploration/traversal 0%, generic dialogue 0%, combat 100%, explicitly authored quest/story and cutscene/movie/music_only 100%. The existing user Music volume and native fades/mutes remain master controls. “100% story” means no additional attenuation; it does not override a vanilla movie mute.
+Target additional gains: exploration/traversal 0%, generic dialogue 0%, combat 100%, explicitly authored quest/story and cutscene/movie/music_only 100%. The existing user Music volume and native fades/mutes remain master controls. вЂњ100% storyвЂќ means no additional attenuation; it does not override a vanilla movie mute.
 
 **Observed:** eight regional roots select world_music and quests_and_cutscenes siblings through music_type. Six nested quest containers also select by game_state, so blanking exploration/dialogue state strings can deselect authored cues. **Inference:** neither a common Music-bus mute nor Only Story Music's state suppression meets the stronger preservation requirement. Placement below the provenance split protects the quest branch even during dialogue, gameplay and crossfades.
 
@@ -43,7 +45,7 @@ Target additional gains: exploration/traversal 0%, generic dialogue 0%, combat 1
 
 ## C. Wwise mixer plus settings-only WitcherScript adapter
 
-**Mechanism:** architecture B plus a small settings adapter writing the three proposed global dB parameters through SoundGlobalParameter. Vanilla supplies all state transitions and music_type selections. No SoundGameStateChange interception, no per-frame polling, no authored-cue-active flag.
+**Mechanism:** architecture B plus a small settings adapter writing the three global 0–100 amplitude-percent parameters through SoundGlobalParameter. Vanilla supplies all state transitions and music_type selections. No SoundGameStateChange interception, no per-frame polling, no authored-cue-active flag.
 
 **Evidence:** native setter sound.ws:82; FMC's `C:\Dev\witcher-music-control\reference\fmc-audio-remaster\mods\modFMCAudioRemaster\content\scripts\local\FMCAudio.ws:15-17,151-164,327-338` demonstrates local menu-wrapper parameter writes. Its resource banks are older-format and do not prove our routing or deployment.
 
@@ -74,16 +76,16 @@ vanilla sound events ----> music_type -> regional MusicSwitchContainer
            ordinary descendants                      existing inherited Music
                     |
             WMC_WorldMusic [new child of Music]
-              Gain exploration <- exploration dB parameter
-              Gain dialogue    <- dialogue dB parameter
-              Gain combat      <- combat dB parameter
+              Gain exploration <- exploration amplitude-percent parameter
+              Gain dialogue    <- dialogue amplitude-percent parameter
+              Gain combat      <- combat amplitude-percent parameter
                     |
                 Music <- existing menu_volume_music/master mix
                     |
               Immerse / Master Audio Bus
 
 protected world noncombat containers -> explicit output override -> Music
-future settings adapter -> 3 global dB parameters; no state hook
+future settings adapter -> 3 global amplitude-percent parameters; no state hook
 ```
 
 Only one effect is processed in exploration/dialogue/combat respectively; all are bypassed for cutscene/movie/music_only and fail-open special states. Native parent volumes/fades remain. During a world/quest crossfade only world voices take the new gain.
@@ -97,7 +99,7 @@ Only one effect is processed in exploration/dialogue/combat respectively; all ar
 Future authoring changes in an isolated copy:
 
 1. Master-Mixer work unit: new child bus with three embedded Gain instances/EffectSlots and complete existing-state Bypass tables.
-2. New Game Parameters work unit: three dB parameters/defaults, initially mute/mute/unity.
+2. New Game Parameters work unit: three amplitude-percent parameters/defaults, initially mute/mute/unity.
 3. Interactive Music music work unit: only prologue/world_music OverrideOutput/OutputBus change.
 
 Future logical generated minimum: **Init.bnk and music_prologue.bnk**. Candidate install footprint: **one matching loose bootstrap Init.bnk plus one mod soundspc.cache containing the changed prologue and matching Init entries**. Cache packaging/loader behavior remains to be proved; no claim that loose regional banks are supported. No Events, Switches, States, source WAV, quest-branch or SoundBank-inclusion edits are needed for this experiment. A full rollout would extend the same routing to the other seven regional banks.

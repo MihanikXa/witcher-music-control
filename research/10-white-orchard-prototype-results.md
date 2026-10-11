@@ -2,6 +2,8 @@
 
 ## Result
 
+**Follow-up:** [11-white-orchard-blocker-resolution.md](11-white-orchard-blocker-resolution.md) retains these original tests and documents the complete-hierarchy licence failure, a measured Wwise-native smooth mixer alternative, and a reproducible two-bank native cache fixture. No deployment candidate exists yet.
+
 **Observed:** the world-only mixer works in matching Wwise authoring playback. Three independent controls select exploration, ordinary dialogue or combat gain through the existing game_state. Both FullBand and LFE respond. The actual White Orchard village and combat selectors enter the new bus; the authored q001 tavern conversation does not, even in dialog_scene with exploration/dialogue controls at 0%.
 
 **Not deployment-ready:** generation returned errors and the regenerated Init loses vanilla definitions. Minimal soundspc.cache packaging is unproved. Boolean bypass transitions produced abrupt waveform steps. These are remaining engineering blockers; no game installation or save was changed, no playthrough was restarted, and no depot was regenerated. No settings UI or WitcherScript hook was implemented.
@@ -115,7 +117,9 @@ Against the isolated baseline, prototype Init adds one Bus (392010734) and three
 | Bus, type 8 (eight records) | 542827472, 1411735597, 1505802601, 2041642433, 2320575434, 3803860308, 4004099879, 4253138028 |
 | Custom effect, type 17 | 890724639 |
 | Effect ShareSet, type 16 | 4131355637 — HomeCinema |
-| AudioDevice, type 18 | 4189995869 |
+| AuxBus, type 18 | 4189995869 |
+
+**Type correction from follow-up evidence:** this row was originally labelled AudioDevice. Cross-matching the complete project's WAAPI objects with native HIRC verifies 41 AuxBus objects as type 18 and all four AudioDevices as type 21. The four AudioDevice records are retained unchanged in the reduced baseline; the missing record is an auxiliary bus. See follow-up/native-hirc-type-crosscheck.json at the absolute build root in report 11. The omitted IDs themselves have not changed.
 
 Native INIT registers **18 plugins**, reduced baseline/prototype INIT **9**; baseline STMG also differs from native. HomeCinema is verified at W/Effects/Factory Mastering Suite.wwu / `{F9951DC8-664E-4B07-81CF-61716236F00A}` and referenced by W/Audio Devices/Default Work Unit.wwu's System and System_Immerse_on effect slots. The other ten omissions were not resolved to named source objects; do not attribute all differences solely to the reported licence error. Reduced project/plugin inclusion and source-versus-shipped global differences remain possibilities.
 
@@ -123,7 +127,7 @@ Native INIT registers **18 plugins**, reduced baseline/prototype INIT **9**; bas
 
 ## Minimal soundspc.cache packaging investigation
 
-`C:\Dev\witcher-music-control\build\white-orchard\cache-audit.json` rechecks the installed game's CS3W v2 cache. Its 2,174-bank index resolves native Init (32,840 bytes) and music_prologue (174,826 bytes), version 150, with the hashes already recorded in report 06. This is read-only parsing, not a cache writer or loader test.
+`C:\Dev\witcher-music-control\build\white-orchard\cache-audit.json` rechecks the installed game's CS3W v2 cache. Its 2,174-resource index resolves native Init (32,840 bytes) and music_prologue (174,826 bytes), version 150, with the hashes already recorded in report 06. Follow-up classification finds 740 .bnk and 1,434 .wem entries; the original description of all 2,174 as banks was incorrect. This is read-only parsing, not a cache writer or loader test.
 
 Installed command evidence remains `L:\Games\Steam\steamapps\common\The Witcher 3 REDkit\bin\tools\cooker\local_tests\soundbank_cooking\wcc_cooksounds.cmd:7` and wcc_splitcache_sounds.cmd:7. The executable contains cooksounds/soundbanksdir/wwiseProj/outdir options and Wwise selected-bank command fragments. Those strings establish available concepts, not a proven minimal packing invocation.
 
