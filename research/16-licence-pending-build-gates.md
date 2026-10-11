@@ -1,14 +1,14 @@
-# Licence approved — paired licensed build gates (2026-10-11)
+# Licence imported — paired licensed build gates (2026-10-11)
 
 ## Status and decision
 
 **Verification prepared:** [report17](17-read-only-licensed-bank-verification.md) documents the strict read-only baseline/candidate workflow and retained-artifact rejection tests. No licensed generation, approval check or licence change was performed.
 
-**User reports approval** of a Witcher 3 REDkit Wwise modding licence and possession of the key on 2026-10-11. This confirms only user-reported approval, **not effective local application**, validity for matching Windows / Wwise 2023.1.19.8928, HomeCinema/Mastering Suite, Motion, or reproduction of native banks. No key, account identifier or approval timestamp is stored here. Next, prepare an isolated full project, have the user apply the key through Wwise's GUI, then run the untouched baseline first.
+**User reports approval and successful local import** of a Witcher 3 REDkit Wwise modding licence on 2026-10-11. This does not yet prove that it is effective for the *isolated* Windows / Wwise 2023.1.19.8928 project or HomeCinema/Mastering Suite/Motion; native bank compatibility also remains unverified. No key, account identifier or licence text is stored here. **Immediate next step:** verify an existing fresh isolated full-hierarchy baseline workspace (or prepare one if absent), generate the **untouched baseline only**, and run the strict read-only baseline validator from report 17. Stop and preserve logs on any failure; no modified candidate until baseline review.
 
 Latest technical baseline: [report 15](15-full-context-stage1-results.md). Stage 1 direct world State Voice Volume is proven in Wwise authoring (report 13) and serializes into an experimental `music_prologue.bnk` with exactly one changed HIRC object (117-byte increase, fixed -200/-200/0 State values). Generated bank BKHD dwProjectID=0 versus shipped 39; generation exits 1 due to six HomeCinema licence errors. A new bank with native Init has **not** been loaded. This experiment is not deployable.
 
-**Do not attempt live installation now.** While approval is pending, prepare a reproducible comparison/check script if useful, without altering Wwise outputs, installed files or native Init. No additional project pruning, depot generation, custom buses, sliders or unverified header rewriting.
+**Do not attempt live installation now.** With local import reported, the remaining gate is a clean full-hierarchy baseline generation and compatibility audit, not further licence-request preparation. No additional project pruning, depot generation, custom buses, sliders or unverified header rewriting.
 
 ## Once approval becomes effective
 
