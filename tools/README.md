@@ -60,6 +60,9 @@ bank. Preserve the generated workspace/manifest when comparing exact builds.
 
 ## Active production-source experiment
 
+- `white_orchard_build_gate.py baseline|candidate`: strict read-only future licensed-build acceptance, reusing bank/State comparators. Baseline must preserve native headers/global HIRC/registrations/full STMG/media; candidate requires an unchanged passing baseline proof and only the verified world State edit. Errors, unexplained warnings, stale evidence and ProjectID mismatches fail with JSON and exit1. No generation, licensing or deployment. Commands and limits: report17.
+- `test_white_orchard_build_gate.py`: synthetic gate/decoder regression tests under ignored build; run with `python -m unittest discover -s tools -p test_white_orchard_build_gate.py -v`.
+
 - `white_orchard_state_volume_author.py`: clean, author-only Stage 1 helper, exercised on complete isolated Wwise 2023.1.19 copies (report 15). Verifies the existing group, all 25 saved values, work-unit preservation and that removing only world StateInfo restores source semantics. Wwise's equivalent default-property XML forms and PropertyList ordering are normalized; platform-qualified values and signal-order lists are preserved exactly. No test fixtures, globals or generation.
 - `white_orchard_state_bank_audit.py`: read-only v150 Stage 1 decoder/comparator. Verifies the measured inline State block, native group/transition evidence, metadata bank hash, unchanged media and all non-world HIRC. This is deliberately limited to the observed world layout; it cannot certify runtime loading or write/repair banks. Current outputs remain nondeployable because generation fails and native/generated project identity compatibility is unresolved.
 - `white_orchard_state_volume.py`: historical fixture-based playback proof (report 13), **not** clean shipping authoring source.

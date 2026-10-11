@@ -50,6 +50,8 @@ def state_chunk(body):
             state = {'state_id': r.read('I')}
             count = r.read('H')
             ids = [r.read('H') for _ in range(count)]
+            if len(set(ids)) != len(ids):
+                raise ValueError('Duplicate inline State property ID')
             state['properties'] = dict(zip(ids, (r.read('f') for _ in range(count))))
             group['states'].append(state)
         groups.append(group)
@@ -72,6 +74,8 @@ def native_groups(payload):
 
 def header(bank, metadata=None):
     b = bank['payload']['BKHD']
+    if len(b) < 40:
+        raise ValueError('Truncated v150 bank header')
     words = struct.unpack_from('<6I', b)
     if words[0] != 150:
         raise ValueError('Only the observed v150 layout is supported')
@@ -149,11 +153,12 @@ def audit(native, baseline, candidate, baseline_project, candidate_project, outp
     checks['metadata_hashes_crosschecked'] = all(report['regional'][name]['header']['hash_matches_metadata_guid'] for name in ('baseline', 'candidate'))
     report.update(checks=checks, changed_work_units=different,
                   serialized_new_hirc_ids=[], local_custom_state_ids_serialized=False,
-                  deployable=False, reason='Generation exits 1; BKHD project_id is 0 versus native 39; native-Init load compatibility not demonstrated.')
+                  deployable=False, reason='Structural audit only; generation, global fidelity and runtime acceptance require separate gates.')
     output.write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({'checks': checks, 'deployable': False, 'reason': report['reason']}))
     if not all(checks.values()):
         raise RuntimeError('One or more structure checks failed; see evidence')
+    return report
 
 
 if __name__ == '__main__':
