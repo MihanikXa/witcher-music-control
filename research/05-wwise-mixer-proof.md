@@ -79,6 +79,8 @@ A hook is needed only if runtime disproves State-driven bypass, if we choose the
 
 ## Remaining proof obligations and smallest experiment
 
+**White Orchard test-location correction (2026-10-11):** The one-region build still uses `music_prologue` because that Wwise root includes White Orchard's exploration music. In-game validation must be in **White Orchard** (village and free traversal), not the initial Kaer Morhen dream/tutorial. Distinguish the technical bank name from narrative chapter names. See [09-white-orchard-pilot.md](09-white-orchard-pilot.md).
+
 Recommend **one-region Wwise/deployment proof, no UI and no WitcherScript hook**. In an isolated future project copy, author the bus, three parameters/defaults and three gates, and reroute only prologue/world_music. Generate only music_prologue plus required Init; package the changed bank entries as described in report 06. Use authoring Soundcaster State/parameter controls to sweep each parameter while changing only the corresponding state. Use native music debugging in-game if available; do not add a logger interception solely to drive gain.
 
 Test unequal values, for example -12/-24/-6 dB, as well as initial mute/mute/unity defaults. An inactive parameter must produce no level change; a quest cue must show no change for **any** parameter. Test the authored q001 tavern conversation which reuses exploration media, world/quest overlapping transitions, day/night dialogue, traversal variants, combat, cutscene, movie and save/load. These falsify gate isolation, output inheritance, parameter restoration and packaging assumptions separately.

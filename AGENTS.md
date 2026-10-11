@@ -44,15 +44,15 @@ The mixer is supported by inspected Wwise authoring definitions, **not yet gener
 
 ## Immediate implementation sequence
 
-**Milestone 1 — one-region, isolated Wwise proof.**
+**Milestone 1 — isolated White Orchard Wwise proof (`music_prologue` bank).**
 
 1. Copy only the required project/work units into a self-contained, isolated authoring workspace; never edit the installed REDkit/Wwise project.
 2. Verify the matching Wwise version and actual object schema; author new bus, three parameters, three Gain effects and explicit state-controlled bypass gates.
-3. Override only the **prologue `world_music`** output. Do not alter `quests_and_cutscenes`, source audio, vanilla state enums, events or user master Music curve.
+3. Override only **`music_prologue/world_music`** output, targeting a **White Orchard gameplay test**, not the Kaer Morhen dream/tutorial. The prologue bank naming is technical: White Orchard village and open countryside do have exploration music in this branch. Do not alter `quests_and_cutscenes`, source audio, vanilla state enums, events or user master Music curve.
 4. Exercise active and inactive parameter values (e.g. -12/-24/-6 dB), dialogue/exploration/combat/cutscene states, transitions and LFE. Test the -96.3 dB floor, bypass clicks, and native fade behavior rather than assuming perfect mute/smoothing.
 5. Selectively generate `Init.bnk` and `music_prologue.bnk` into ignored `build/` outputs. Compare generated bank/HIRC/media payloads with vanilla and document unintended changes.
 6. Prove a loader-compatible **minimal mod soundspc.cache** build or document the exact blocker. Do not assume that SoundBank generation implies successful packaging.
-7. **Stop before installing into the live game** until explicit permission. Later stage in an isolated mod profile, verifying ordinary dialogue versus the q001 authored tavern conversation, overlapping world/quest transitions, combat, cutscenes, save/load and the game Music slider.
+7. **Stop before installing into the live game** until explicit permission. Later stage in an isolated mod profile **in White Orchard**, using a backed-up save and comparing the exact same traversal/village dialogue/encounter before and after. Include the q001 authored tavern conversation only if replayable from an available safe save; do not force quest progress, restart playthrough, or fabricate a test. Also test crossfades, native combat variation, save/load and the game Music slider.
 
 Then expand to the remaining seven regions, investigate *specific* world-location exceptions, and add settings UI/persistence. Sparse exploration or extra category controls are separate later experiments, not prototype #1.
 
@@ -70,5 +70,6 @@ Then expand to the remaining seven regions, investigate *specific* world-locatio
 - Avoid indiscriminate full script replacements, unverified game hooks and periodic per-frame polling.
 - Keep builds reproducible, stage artifacts outside game directories, check output destination flags, and record version/command/logs and file hashes.
 - For each claim, record observed behavior, supported inference, remaining hypothesis, and a falsifying test.
+- Read [research/09-white-orchard-pilot.md](research/09-white-orchard-pilot.md) for the authorized pilot geography. Do not confuse the Wwise `music_prologue` bank with a request to test the Kaer Morhen tutorial.
 - Prefer preserving Wwise-authored transitions and the normal user Music volume; a category multiplier must not rewrite composition, threat weighting or scene-event sequencing.
 - Conflicts with audio mods that replace Init or regional banks must be documented; do not claim automatic cache merging.

@@ -76,6 +76,8 @@ Bank regeneration can alter more than the intended property if project/platform/
 
 ## Minimum prototype #1 footprint
 
+**White Orchard target clarification (2026-10-11):** White Orchard's region-specific exploration and dialogue music is inside the Wwise `music_prologue` hierarchy, as traced in report 03 (the `location_prologue=village` and `village_exploration` path). Therefore user-requested **White Orchard** testing still requires the same logical bank pair: `Init.bnk` and `music_prologue.bnk`. This does **not** mean the first in-game test should take place in the opening Kaer Morhen dream/tutorial. Audio-mapping validation in the game is still required; do not assert all White Orchard subareas have constant music.
+
 Future isolated authoring edits: a copy of `Master-Mixer Hierarchy/Default Work Unit.wwu` (new bus with custom Gain instances/slots), a new Game Parameters work unit (three proposed definitions), and `Interactive Music Hierarchy/music.wwu` (only prologue/world output override). Existing SoundBank inclusion definitions suffice; no Events, Switches, States, source WAV or quest-branch edits are required. Custom effects can be embedded on the bus so a separate Effects work unit is optional.
 
 Future generated logical outputs: **Init.bnk + music_prologue.bnk**. Proposed install outputs: **matching bootstrap Init.bnk + one minimal mod soundspc.cache containing music_prologue and matching Init entries**. No source script, UI or hook is needed to test hard-coded defaults. Cache packaging and loader precedence remain acceptance tests, not claimed accomplished work.

@@ -44,14 +44,16 @@ Generic dialogue often selects normal regional world music; an authored conversa
 
 The proposed mixer uses three RTPC-driven Gain effects, each State-gated by EffectSlot.Bypass, on a bus carrying world branches only. Prologue-first bank generation and cache packaging are **not yet runtime proven** (reports 05–06). Exact 0% may require more than the finite -96.3 dB plugin minimum. Do not state that a volume-only mixer changes the frequency or rhythmic placement of original composition cues.
 
-## Explicit first milestone (no new mode yet)
+## Explicit first milestone — White Orchard (no new mode yet)
+
+**Location correction, 2026-10-11:** Test in the currently played **White Orchard region**, rather than using the opening tutorial as the 'prologue' test. The Wwise root/bank for White Orchard is still named `music_prologue`, which is why reports 04–06 retain that technical terminology. White Orchard's village and open-world selectors carry exploration audio; reference [09-white-orchard-pilot.md](09-white-orchard-pilot.md) for reproducible scenarios.
 
 Keep the current hard-coded defaults: **exploration 0%, ordinary dialogue 0%, combat 100%, authored music unity**.
 
-Prologue-only acceptance cases:
+White Orchard acceptance cases:
 
-- Ordinary prologue exploration and village dialogue: only generic world music attenuated; environment and voices intact.
-- `mus_q001_tavern_conversation` and `mus_cs001_tavern_intro`: authored branch unaffected by exploration/dialogue gain, including transition overlaps.
+- White Orchard countryside traversal and ordinary village dialogue: only generic world music attenuated; environmental sounds and voices intact. Establish that the chosen unmodded spot actually plays music first.
+- `mus_q001_tavern_conversation` and `mus_cs001_tavern_intro`: authored branch unaffected by exploration/dialogue gain, including transition overlaps. If a current save cannot replay those scenes, use authoring tests or a separately backed-up earlier save rather than forcing story progress.
 - Day/night, focus/boat/underwater groupings and combat: correct effect enabled while other two are bypassed, without perceptible gate clicks. Test unequal gains to expose leakage.
 - Cutscene/movie/music-only, pause/Gwent and loading: no unexpected new attenuation, playback or cancellation of native states.
 - Native Music slider still changes both branches; no change to sound effects, speech or diegetic sources.
@@ -85,4 +87,4 @@ Three independent sliders and save/load persistence after successful authoring/d
 - **Design clarification:** preserve dynamic range of musical importance, not silence for its own sake.
 - **Architecture retained:** Wwise-only context selection at world-music bus, no sound-state script hook without evidence.
 - **Not yet decided:** sparse exploration mode, default nonzero background volume, exact world-location exemptions, separate Gwent/diegetic policies.
-- **Next required action:** isolated prologue-only Wwise authoring + bank/cache packaging proof, then controlled in-game test with explicit permission.
+- **Next required action:** isolated **White Orchard** Wwise proof targeting the `music_prologue` bank + bank/cache packaging, then controlled White Orchard in-game test with explicit permission.

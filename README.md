@@ -38,13 +38,13 @@ Read the evidence and outstanding validation conditions:
 - [World-music exceptions](research/07-world-music-exceptions.md)
 - [Experience-led target policy and test order](research/08-experience-led-music-policy.md)
 
-## Next milestone — one-region proof
+## Next milestone — White Orchard proof (Wwise `music_prologue`)
 
 1. In an **isolated copy** of the matching Wwise 2023.1.19 project, construct the proposed bus, three Gain instances/RTPCs and state-controlled bypass tables.
-2. Route **prologue `world_music` only** to the new bus. Do not change quest/cutscene routing, player Music volume, media or native events.
+2. Route **`music_prologue/world_music` only** to the new bus, and perform the in-game test **in White Orchard** (village, open countryside, encounters), not in the Kaer Morhen dream/tutorial. The Wwise bank name `music_prologue` includes White Orchard exploration music; it is not a requirement to test a musicless introduction. Do not change quest/cutscene routing, player Music volume, media or native events.
 3. Validate gains, state gates, crossfades and sound routing in authoring; then selectively generate `Init.bnk` and `music_prologue.bnk` to ignored build output.
 4. Establish a **minimal mod `soundspc.cache` packaging and load test** before any game deployment. Selective bank generation alone does not prove that a mod cache will load.
-5. Only after this succeeds: test in an isolated mod profile, expand other regions, decide exception policy, then add a settings-only WitcherScript UI.
+5. Only after successful packaging and user approval: test on a backed-up White Orchard save in an isolated mod profile, compare unmodded/modded exploration and dialogue, test combat and accessible authored scenes; then expand other regions, decide exception policy and add settings UI. See [White Orchard pilot](research/09-white-orchard-pilot.md).
 
 The REDkit 5.x depot-generation attempt failed during finalization. **Do not re-generate the 66 GB depot as a prerequisite** for this Wwise proof; re-evaluate only if a demonstrable build dependency requires it.
 

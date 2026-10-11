@@ -88,7 +88,9 @@ future settings adapter -> 3 global dB parameters; no state hook
 
 Only one effect is processed in exploration/dialogue/combat respectively; all are bypassed for cutscene/movie/music_only and fail-open special states. Native parent volumes/fades remain. During a world/quest crossfade only world voices take the new gain.
 
-## Prototype #1: one-region mixer and deployment proof
+## Prototype #1: White Orchard-area mixer and deployment proof
+
+**Test-location correction (2026-10-11):** The first gameplay validation area is **White Orchard**, where the user currently plays. The original 'prologue-only' terminology below describes the Wwise `music_prologue` bank, **not** a requirement to test the opening Kaer Morhen dream/tutorial. White Orchard village/countryside exploration and ordinary dialogue are the target scenarios; see [09-white-orchard-pilot.md](09-white-orchard-pilot.md). The previously determined logical outputs `Init.bnk` + `music_prologue.bnk` remain unchanged.
 
 **Recommendation:** a resource-only prologue experiment proving state-gated gain selection and minimal packaging, with no UI, no new source script and no state interception. This advances beyond the earlier state logger because vanilla already carries the necessary state.
 
