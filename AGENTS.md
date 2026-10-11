@@ -26,6 +26,8 @@ Technical authority: matching installed Remastered/REDkit resources, matching Ww
 
 **Operational stage 2 (deferred):** independent user sliders may require the more elaborate state-volume AuxBus mixer from reports 05, 10–12, with a properly licensed, fully faithful Init. Do not add custom buses/effects/RTPCs or a SoundGameStateChange hook to stage 1. Do not turn the optional sparse-exploration hypothesis into an approved requirement.
 
+**Pending entitlement:** The user has requested the Witcher 3 REDkit modding licence but has not reported approval/application. Once approved, read `research/16-licence-pending-build-gates.md` before trying licensed builds. No credentials/keys in commits or logs; never apply to installed original assets. Verify licence coverage and **unmodified baseline compatibility first**, before building the Stage 1 candidate.
+
 ## Immediate experiment: complete authoring context, local State edit
 
 1. Read reports **13 and 14** first; reports 04–12 are historical evidence and may contain superseded prototype recommendations. White Orchard is the in-game target; the matching Wwise bank is named `music_prologue`. Never test the musicless Kaer Morhen opening as evidence of exploration suppression.

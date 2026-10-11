@@ -19,6 +19,10 @@ These are **additional gain multipliers relative to the player's normal Music se
 
 **Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 
+## Licence-request status and next gate (2026-10-11)
+
+The user reports **requesting** the dedicated Witcher 3 REDkit Wwise modding licence; **approval, activation, correct version/plug-in coverage and successful generation have not been verified**. Do not claim that a licence is installed or that this clears the observed project-ID difference. Before more engineering investigation, use the controlled post-approval protocol in [research/16-licence-pending-build-gates.md](research/16-licence-pending-build-gates.md). Keep all licence keys out of Git and logs.
+
 ## Current engineering choice (2026-10-11)
 
 **Complete-context build result:** [report 15](research/15-full-context-stage1-results.md) verifies the intended regional State serialization (+117 bytes, unchanged media and quest/event records, no new runtime IDs or Init changes). Full copies hit the trial-media limit; supported inclusion controls emit banks but still fail Mastering Suite licensing. Generated BKHD project identity is 0 versus native 39; compatibility with original Init remains unproved. No package was cooked or deployed.
