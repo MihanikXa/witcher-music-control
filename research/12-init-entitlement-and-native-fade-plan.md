@@ -2,6 +2,8 @@
 
 ## Decision and scope
 
+**Alternative follow-up:** [13-world-state-volume-init-free.md](13-world-state-volume-init-free.md) proves direct hard-coded world State Voice Volume in authoring and a native regional-only cache control. It adds no global source objects, but serialized-bank/native-Init compatibility remains unproved. Do not treat the licence request below as a prerequisite for exploring that alternative.
+
 No native-compatible deployment Init is certified. The legitimate next step is to request the dedicated **Witcher 3 - REDKit Modding** entitlement, with Windows / Wwise **2023.1.19.8928** and the native plug-ins covered. A paid unrestricted commercial licence has **not** been demonstrated necessary. Request/approval/application is a separate user action: nothing was activated, purchased, installed or submitted here.
 
 This report supplements [10](10-white-orchard-prototype-results.md) and [11](11-white-orchard-blocker-resolution.md). It preserves their recordings, failed controls and comparisons. No game, REDkit, installed Wwise, reference mod, save or depot was modified. No source mixer or settings implementation was changed; the production conversion below is a proposal.

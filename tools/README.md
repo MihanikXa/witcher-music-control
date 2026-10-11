@@ -44,6 +44,12 @@ and the current Init/cache blockers.
   Sound/MusicTrack leaves outside music_prologue. Neither grants a licence or
   certifies Init. Both rejected generation controls are documented in report12;
   preserve native global definitions and never deploy their incomplete output.
+- `white_orchard_state_volume.py`: authoring-only direct world Voice Volume
+  State proof; no bank/Init generation. The first run preserves the pure local
+  StateInfo edit before adding fixtures. `--capture-name <fresh-name> --anchor`
+  repeats continuous recordings with a silent capture fixture outside world.
+  Later captures reuse instrumented source and must never supply shipping banks.
+  See report13 for measurements and the unresolved bank-construction boundary.
 
 Keep the WAAPI server bound to localhost, verify its project path, and stop it
 when finished. Recorders and synthetic source objects stay in the separate
