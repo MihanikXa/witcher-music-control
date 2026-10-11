@@ -1,0 +1,23 @@
+{
+  "schema_version": 119,
+  "wwise_version": "v2023.1.19",
+  "wwise_build": "8928",
+  "regional_root": "music_prologue",
+  "world_short_id": 1033516231,
+  "bus_name": "WMC_WorldMusic",
+  "gain_plugin_class_id": 9109507,
+  "minimum_db": -96.3,
+  "parameter_domain": "percent_amplitude",
+  "parameters": {
+    "exploration": {"name": "WMC_ExplorationVolume", "default_percent": 0},
+    "dialogue": {"name": "WMC_DialogueVolume", "default_percent": 0},
+    "combat": {"name": "WMC_CombatVolume", "default_percent": 100}
+  },
+  "active_states": {
+    "exploration": ["exploration", "exploration_night", "focus_exploration", "focus_exploration_night", "underwater", "underwater_focus", "boat"],
+    "dialogue": ["dialog_scene", "dialog_scene_night"],
+    "combat": ["combat", "combat_monster_hunt", "underwater_combat", "underwater_combat_focus", "focus_combat"]
+  },
+  "other_state_policy": "bypass_all",
+  "deployment": "not_authorized"
+}

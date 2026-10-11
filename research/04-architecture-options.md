@@ -2,7 +2,7 @@
 
 ## Current conclusion
 
-Use vanilla game_state and music_type unchanged. The concrete proposed final mixer is a new world-only child bus under Music with **three RTPC-controlled Gain effects, each State-gated by its own EffectSlot.Bypass**. An eventual settings adapter writes three GameParameters; it does not intercept SoundGameStateChange. The matching Wwise 2023.1.19 schema and plugin definitions support this construction. Runtime processing, the zero endpoint and deployment still require the deferred prototype.
+Use vanilla game_state and music_type unchanged. The implemented isolated White Orchard mixer is a new world-only child bus under Music with **three RTPC-controlled Gain effects, each State-gated by its own EffectSlot.Bypass**. An eventual settings adapter writes three GameParameters; it does not intercept SoundGameStateChange. Wwise authoring playback now verifies independent gains, LFE and protected quest routing. The controls use a **0–100 amplitude-percent domain**, correcting the initially proposed two-point dB curve. Discrete bypass transitions produced waveform discontinuities; generated Init also loses vanilla definitions, and cache packaging is unresolved. This is not ready for deployment. See [prototype results](10-white-orchard-prototype-results.md).
 
 Detailed proofs and limitations: [05-wwise-mixer-proof.md](05-wwise-mixer-proof.md), [06-resource-footprint.md](06-resource-footprint.md), [07-world-music-exceptions.md](07-world-music-exceptions.md). This supersedes the earlier recommendation to start by implementing a state-hook logger.
 
@@ -104,4 +104,8 @@ Future logical generated minimum: **Init.bnk and music_prologue.bnk**. Candidate
 
 Acceptance: independently vary unequal gains in authoring; inactive sliders have no effect; q001 authored tavern conversation survives exploration/dialogue suppression, including crossfade overlap; combat is independently adjustable; cinematic states add no gain; master Music volume still works; startup/save/load are consistent. Observe/debug rather than adding a hook to drive the mix. Verify actual zero and bypass transitions before committing to final smoothing behavior.
 
-Nothing was implemented or generated. Only research reports were changed.
+The originally research-only recommendation has now been exercised in the authorized isolated pilot. Our declarative source and build/validation helpers are implemented; exactly Init.bnk and music_prologue.bnk were generated as bank outputs. Wwise reports generation errors, so their existence is not acceptance. No settings UI, WitcherScript hook, live installation, save manipulation or depot regeneration occurred.
+
+### Reassessment after the pilot
+
+The steady-state bus mechanism works in authoring. The q001 tavern conversation plays with `game_state=dialog_scene` and contextual exploration/dialogue parameters at 0%, while avoiding WMC_WorldMusic. Thus no state interception is needed for classification or parameter selection. A transition-safe mechanism remains necessary: Boolean bypass switching is not a smooth category fade. Investigate a Wwise construction that smooths the selected gain without altering vanilla state/event timing before considering a script-selected world-gain fallback. Do not introduce that hook merely to solve the Init licence/global-definition or cache packaging problems; it cannot solve those. The pilot's discontinuities are evidence for reassessing the mixer transitions, not approval to implement a new architecture or deploy it.
