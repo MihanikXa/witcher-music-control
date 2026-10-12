@@ -2,6 +2,8 @@
 
 Date: 2026-10-12. Started from `main` at `c6c1092`, fetched origin and verified no divergence. No game launch, deployment, Vortex change, save modification, installed-resource edit, licence transfer or unrelated-bank generation.
 
+**Later follow-up:** after the user manually applied the licence, [report 26](26-licensed-transition-fix-candidate.md) records successful licensed generation, structural/playback validation and the D package. The failed generation and evidence below remain preserved as historical results. D still awaits separate deployment authorization and gameplay validation.
+
 **Result:** the isolated authoring tests reproduce exploration score becoming audible during combat entry and through short intermediate scene states. A bounded playlist-level correction suppresses those continuing generic voices while preserving native combat and q001 voices in the tested sequences. Clean D authoring source is prepared, but its fresh project lacks effective licence coverage. Generation exited **1 and produced no banks**. Therefore there is **no D bank, cache, Vortex ZIP, package hash or runtime compatibility claim**. Manual project-local licence application is the next prerequisite.
 
 ## Evidence paths

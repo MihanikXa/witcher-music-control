@@ -20,7 +20,7 @@ GENERIC = {
 }
 
 
-def run(project, name, port, modes, selected):
+def run(project, name, port, modes, selected, location="village"):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -72,8 +72,10 @@ def run(project, name, port, modes, selected):
         "authored": [(0, "exploration", None), (6, "cutscene", "mus_cs001_tavern_intro"), (11, "dialog_scene", "mus_q001_tavern_conversation")],
         "combat-threat": [(0, "exploration", None), (6, "combat", None)],
         "q001-direct": [(0, "dialog_scene", None)],
+        "night-combat": [(0, "exploration_night", None), (6, "combat", None), (13, "exploration_night", None)],
+        "long-silence-combat": [(0, "exploration", None), (35, "combat", None), (42, "exploration", None)],
     }
-    evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "cases": []}
+    evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "location": location, "cases": []}
     api.call("ak.wwise.core.profiler.startCapture")
     try:
         for mode in modes:
@@ -98,12 +100,13 @@ def run(project, name, port, modes, selected):
                     api.call("ak.wwise.core.transport.executeAction", {"transport": authored, "action": "play"})
                 else:
                     api.call("ak.wwise.core.transport.executeAction", {"transport": event_transport, "action": "play"})
-                    api.call("ak.soundengine.postEvent", {"event": "mus_loc_prologue_village", "gameObject": 18446744073709551614})
+                    api.call("ak.soundengine.postEvent", {"event": "mus_loc_prologue_" + location, "gameObject": 18446744073709551614})
                 row = {"mode": mode, "case": label, "events": [], "samples": []}
                 pending = list(sequence)
                 parameters = ([(10, "threat_rating", 35), (14, "threat_rating", 100)] if label == "combat-threat" else
                               [(6, "menu_volume_music", 50), (11, "menu_volume_music", 100)] if label == "q001-direct" else [])
-                while time.monotonic() - started < 19:
+                duration = max(19, sequence[-1][0] + 6)
+                while time.monotonic() - started < duration:
                     elapsed = time.monotonic() - started
                     while pending and elapsed >= pending[0][0]:
                         scheduled, state, event = pending.pop(0)
@@ -139,7 +142,8 @@ if __name__ == "__main__":
     parser.add_argument("--port", default=18090, type=int)
     parser.add_argument("--modes", nargs="+", choices=["baseline", "C", "D-probe"], default=["baseline", "C"])
     parser.add_argument("--cases", nargs="+")
+    parser.add_argument("--location", choices=["village", "nilfgaard_camp", "cemetery", "battlefield"], default="village")
     args = parser.parse_args()
     if "D-probe" in args.modes and args.modes != ["D-probe"]:
         parser.error("D-probe mutates fixture playlists: run it separately, after baseline/C")
-    run(args.project, args.name, args.port, args.modes, args.cases)
+    run(args.project, args.name, args.port, args.modes, args.cases, args.location)
