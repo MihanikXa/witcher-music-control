@@ -7,6 +7,10 @@
 non-NPC shadows work in game. Accepted `modQuietEditorialNPCShadow` v1 is the
 reference appearance and must remain unchanged.
 
+## New priority (12 October 2026): bottom-screen HUD and dialogue
+
+The user reports that bottom-screen subtitles and other lower-screen text still have the **old heavy shadow**, and that Ink & Iron dialogue options have the **right style but oversized text**. These are separate adjustments: apply the restrained accepted NPC Shadow v1 optical treatment to the genuinely over-heavy *subtitles, spoken/previous dialogue and ambient text*; reduce **choice** text size while preserving its existing font/style. Do not indiscriminately shrink spoken subtitles. The actual combined Ink & Iron `hud_dialog.redswf` must be inspected rather than patched from old vanilla field evidence. See [bottom-screen design spec](bottom-screen-text-refinement.md) and [direct runtime feedback](../research/ink-hud-batch-v1-runtime-feedback.md).
+
 ## Design rule
 
 Replace overly strong, wide, hard-edged **ordinary text** shadow/glow

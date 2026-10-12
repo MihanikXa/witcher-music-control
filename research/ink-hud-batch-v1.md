@@ -1,7 +1,7 @@
 # Ink & Iron 0.8 HUD batch — private v1
 
 12 October 2026. This implements the user's combined-HUD milestone.
-**Later user runtime report:** the combined HUD works, but enemyfocus is too busy and too tall, bottom-left quickslots were preferable before the batch, and controller buttons should be flat/minimal/gradient-free. Boss bars and the rest are liked. See [post-test feedback](ink-hud-batch-v1-runtime-feedback.md) for direct wording and the next refinement priorities. The built v1 manifest stays a time-of-build snapshot. The accepted
+**Later user runtime report:** the combined HUD works, but the ordinary enemy overhead assembly is too busy/tall, the enemy health bar too vibrant relative to subdued names, bottom-left quickslots were preferable before the batch, controller buttons should be flat/minimal/gradient-free, lower-screen subtitles/text need subdued shadows, and dialogue-choice text is too large despite its preferred style. Boss bars and the rest are liked. See [post-test feedback](ink-hud-batch-v1-runtime-feedback.md) for direct wording and the next refinement priorities. The built v1 manifest stays a time-of-build snapshot. The accepted
 [player-bars v1](ink-hud-bars-v1-runtime-feedback.md) package remains unchanged.
 The batch adds the remaining 17 HUD-module movies and the Dialogue module's HUD
 movie. Inventory, Shop, full-screen World Map and Outfit Wheel's root movie are
