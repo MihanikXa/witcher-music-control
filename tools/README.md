@@ -60,6 +60,13 @@ bank. Preserve the generated workspace/manifest when comparing exact builds.
 
 ## Active production-source experiment
 
+- `white_orchard_vortex_archive.py archives|verify-installed`: creates two pinned
+  one-file Vortex A/C ZIPs under a fresh ignored build directory; verifies ZIP
+  CRC/payload/path. The read-only deployment check rejects wrong variants,
+  competing/nested audio caches, loose mod banks and changed native Init. It
+  never installs, switches profiles, launches, generates or touches saves.
+  Actual installer proof, archive hashes and approval boundary: [report23](../research/23-vortex-white-orchard-test-preparation.md).
+
 - `white_orchard_candidate_package.py`: guarded offline third-variant packaging
   for the observable Stage1 experiment. Requires the pinned licensed baseline,
   nonfailed generation with identical warning rows, matching BKHD identity and

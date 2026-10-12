@@ -25,7 +25,8 @@ This index includes **historical investigations** and the current Stage 1 direct
 20. [Unmodified regional-bank loading test](20-white-orchard-bank-loading-test-plan.md): staged A/B caches, hashes, profile isolation, rollback and load-attribution criteria.
 21. [Observable Stage1 candidate build](21-stage1-observable-candidate-build.md): fresh complete edited project; generation blocked by project-local licence coverage; manual application and A/C/A audible-test plan.
 22. [Licensed observable candidate results](22-licensed-observable-candidate-results.md): licensed retry, 19 structural checks, third-variant cache and pending gameplay authorization.
+23. [Vortex test preparation](23-vortex-white-orchard-test-preparation.md): verified A/C archives, actual installer routing, closed-app backup, profile draft and save-isolation/approval requirements.
 
-**Current next task:** obtain explicit authorization for the staged observable A/C/A White Orchard gameplay test and agree a safe copied-save/profile setup. The licensed candidate passes offline structural/packaging checks (report22); runtime native-Init compatibility remains unproved. Existing A/B packages remain intact. Stop unrelated bank/Init regeneration; never deploy generated Init or infer acceptance from blanket silence/normal music alone.
+**Current next task:** confirm the Vortex clone/install/deploy plan and agree a separate Windows/Documents copied-save setup (report23). ZIPs and backups are ready; no Vortex profile was created/switched and no archive installed. The licensed candidate passes offline structural/packaging checks (report22); runtime native-Init compatibility remains unproved. Existing A/B packages remain intact. Stop unrelated bank/Init regeneration; never deploy generated Init or infer acceptance from blanket silence/normal music alone.
 
 Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and report 14 for gates.
