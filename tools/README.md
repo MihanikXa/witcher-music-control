@@ -60,6 +60,14 @@ bank. Preserve the generated workspace/manifest when comparing exact builds.
 
 ## Active production-source experiment
 
+- `white_orchard_candidate_package.py`: guarded offline third-variant packaging
+  for the observable Stage1 experiment. Requires the pinned licensed baseline,
+  nonfailed generation with identical warning rows, matching BKHD identity and
+  all existing source/State/HIRC/media/native-dependency audit checks. Reuses
+  native cooker/readback and stages only the regional cache under a fresh build
+  root. No deployment or runtime certification; strict report17 gate remains
+  unchanged. Reproduction/results: [report22](../research/22-licensed-observable-candidate-results.md).
+
 - `white_orchard_loading_package.py prepare|control|licensed`: offline diagnostic
   A/B packaging of the two recorded **unmodified** regional banks. Reuses the
   native cooker/bootstrap and bank comparators; rejects unexpected hashes or

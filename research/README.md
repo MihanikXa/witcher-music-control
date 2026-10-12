@@ -23,7 +23,9 @@ This index includes **historical investigations** and the current Stage 1 direct
 18. [Licensed baseline results](18-licensed-baseline-results.md): effective licence; regional ProjectID17637 versus native39.
 19. [Native Init compatibility investigation](19-native-init-compatibility-investigation.md): source/reference evidence and runtime-proof limits.
 20. [Unmodified regional-bank loading test](20-white-orchard-bank-loading-test-plan.md): staged A/B caches, hashes, profile isolation, rollback and load-attribution criteria.
+21. [Observable Stage1 candidate build](21-stage1-observable-candidate-build.md): fresh complete edited project; generation blocked by project-local licence coverage; manual application and A/C/A audible-test plan.
+22. [Licensed observable candidate results](22-licensed-observable-candidate-results.md): licensed retry, 19 structural checks, third-variant cache and pending gameplay authorization.
 
-**Current next task:** obtain separate authorization for an isolated diagnostic game test of the existing unmodified licensed regional bank with native Init. Packages are staged; loader attribution and a safe copied-save/profile setup remain prerequisites for a decisive result. Stop unrelated bank/Init regeneration. Do not generate the modified candidate or infer loading success from normal music alone. See report20.
+**Current next task:** obtain explicit authorization for the staged observable A/C/A White Orchard gameplay test and agree a safe copied-save/profile setup. The licensed candidate passes offline structural/packaging checks (report22); runtime native-Init compatibility remains unproved. Existing A/B packages remain intact. Stop unrelated bank/Init regeneration; never deploy generated Init or infer acceptance from blanket silence/normal music alone.
 
 Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and report 14 for gates.
