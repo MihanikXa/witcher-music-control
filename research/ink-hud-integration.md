@@ -1,6 +1,7 @@
 # Ink & Iron HUD implementation — private bars proof
 
-11 October 2026. **Built, offline validated, ready for an isolated game test.**
+11 October 2026. **Built and offline validated; user-reported successful in-game test on 12 October 2026.**
+See [runtime feedback](ink-hud-bars-v1-runtime-feedback.md). The original manifest's `runtime_tested: false` is the **immutable build-time snapshot**, not the current later user observation.
 This implements the visual-first direction; the earlier HUD exclusion is no
 longer the target. No live installation, profile, settings, merged scripts or
 saves were changed. No Inventory work was performed.
@@ -161,8 +162,8 @@ controller and keyboard, and at least a bright outdoor and dark scene.
 
 ## Remaining implementation order
 
-1. **Run this isolated bars test.** Its runtime result is the smallest necessary next task; the default working configuration has no unresolved offline bars blocker.
-2. Add I&I buffs, then minimap and quest tracker as separate tested resource increments; preserve FHUD data listeners, SAHUD fading and navigation, and only the necessary I&I annotations. Check renderer paths before retaining SAHUD fine-grained cosmetic controls. Add separate toxicity rendering only if that option is required.
+1. **Completed by user report:** First isolated adaptive bars test works in-game; preserve the accepted package and its reproducible build receipt. Per-scenario runtime coverage remains unspecified. See [runtime feedback](ink-hud-bars-v1-runtime-feedback.md).
+2. **Next: implement I&I buffs as a standalone private prototype**, then minimap and quest tracker as separate tested resource increments; preserve FHUD data listeners, SAHUD fading and navigation, and only the necessary I&I annotations. Check renderer paths before retaining SAHUD fine-grained cosmetic controls. Add separate toxicity rendering only if that option is required.
 3. Combine enemy/nameplate drawing with accepted colors/shadows, including I&I ghost fields and SAHUD child-level alpha/lock/dodge controls. Then combine interaction v2 treatment with I&I key/hold/NPC feedback. These have demonstrated rendering-handle conflicts.
 4. Port Outfit Wheel's `OWOpen/Close/Axis/Release/SetSlot/SetItem/Status` contracts into I&I common/overlay/root movies while retaining the `inkart:` background protocol and I&I glyph/layout vocabulary. Preserve current wheel callbacks. The older two-function bridge can be a diagnostic fallback; it is not the final visual plan.
 5. Compare Smooth Map's actual zoom/filter/input handlers with I&I `MapMenu`; port useful controls into the I&I movie and keep the `inkiron.map.hints` replacement visible when common `mcInpuFeedback` is hidden. Map tile cosmetics can remain independent. No new worldmap asset was built here.
