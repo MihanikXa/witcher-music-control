@@ -1,0 +1,1326 @@
+{
+  "version": "I&I 0.8 HUD batch private v1 final",
+  "mod": "modInkIronHUDBatchTest",
+  "alias_mod": "modInkIronHUDAliasesTest",
+  "selected": [
+    "bossfocus",
+    "buffs",
+    "companion",
+    "controlsfeedback",
+    "crosshair",
+    "damageditems",
+    "dialog",
+    "enemyfocus",
+    "horsepanicbar",
+    "horsestaminabar",
+    "interactions",
+    "iteminfo",
+    "journalupdate",
+    "minimap2",
+    "oxygenbar",
+    "quests",
+    "radialmenu",
+    "timelapse"
+  ],
+  "author_scripts": [
+    "inkIronGear",
+    "inkIronHorse",
+    "inkIronHudScale",
+    "inkIronMinimapClock",
+    "inkIronNpcPlate",
+    "inkIronQuest",
+    "inkIronRadialSigns"
+  ],
+  "build_path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final",
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\ink-hud-batch-private-v1-final\\Ink-Iron-HUD-Batch-v1-private-test.zip",
+  "zip_sha256": "f976a2e5b5d9a3a6a4c0610415214341605df3687aa810e0eddaeb83f1dc9b4d",
+  "zip_bytes": 8915063,
+  "resource_hashes": {
+    "gameplay/gui_new/fonts.xml": "12f076e5ca32d08eaca703fd090f2b008503244c6df1f9abf55701f2b295c84c",
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+    "gameplay/gui_new/swf/hud/hud_companion.redswf": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf": "8fd87d86dea8f1ae8881045374919fceddbae0ce6f9da60a957076361284369b",
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf": "2e4a4d765c6677ae9918432e9bfce0f7162b6676b89056bd5c496a4207ebb705",
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf": "01af1124e45d33bfe73e7a0c0f3e1e8f815d3afe04df814d583d0a610f4cd496",
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf": "ab4dc2190ef491e26be5930c2608edd60c922fae573c83d482669f419ee55cea",
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": "cab31bdc1f6f7ee00a154568990025f8a9d6d413b3a2829a0211e987c8bbd6af",
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf": "585a2acac15dd870328e4b5e0c8aca64cd37b8122de18285ac146832e01a1f55",
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+    "gameplay/gui_new/swf/hud/hud_quests.redswf": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": "8f10c1c30bd0c7efd90657ddcbeddfd8e46b5937ea3f536229dcafcd971d6da3",
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8"
+  },
+  "package_members": {
+    "Mods/modInkIronHUDBatchTest/content/blob0.bundle": "bc8293dbf8dd413822ebb557d52064b870325adb6ec1e8065232ac69deb94aed",
+    "Mods/modInkIronHUDBatchTest/content/metadata.store": "72861016d96cb0b59fb25fd6dd9a7d73d0ef847b359db3ac6459dbdec058e1d9",
+    "Mods/modInkIronHUDAliasesTest/content/blob0.bundle": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06",
+    "Mods/modInkIronHUDAliasesTest/content/metadata.store": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee",
+    "Mods/modInkIronHUDBatchTest/content/texture.cache": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7",
+    "Mods/modInkIronHUDBatchTest/content/en.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronGear.ws": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronHorse.ws": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronHudScale.ws": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronMinimapClock.ws": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronNpcPlate.ws": "ac110ac24706cb9e10861fd6b2515dbccaddd91f4f45b53cb74c7ab769dcc2a1",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronQuest.ws": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronRadialSigns.ws": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582",
+    "Mods/modInkIronHUDBatchTest/content/scripts/local/inkIronHUDStateBridge.ws": "9665430025f6558f4d2d97832d137ae69797d7b0a4419617a1c17d29de01fbf2",
+    "bin/config/r4game/user_config_matrix/pc/modInkIronHUDBatch.xml": "c1e301377e5c82d625b69b3d8d4e240dc3c235b3ce48d67a9058444bedfe157e",
+    "Mods/modInkIronHUDBatchTest/content/font-notices/FONT-NOTICES.txt": "6e33cc8419d6397f8ff30b652a6e8a079b20549b96e3d0ebb5095f7b294621ba",
+    "Mods/modInkIronHUDBatchTest/content/font-notices/OFL-Adobe.txt": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328"
+  },
+  "native_bundle_keys": [
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf",
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+    "gameplay/gui_new/swf/hud/hud_companion.redswf",
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf",
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf",
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf",
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf",
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf",
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf",
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf",
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf",
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf",
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf",
+    "gameplay/gui_new/swf/hud/hud_quests.redswf",
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf",
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf"
+  ],
+  "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+  "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+  "opaque_mods_not_recompiled": [
+    "modBloodAndSteel",
+    "mod_GwentDeckChoice",
+    "modbrothersinarms",
+    "modzzz_sharedutils",
+    "modTopNotchSwordsFix",
+    "modsmoothmap",
+    "modEvilsOfRivia"
+  ],
+  "official_cook_validated": true,
+  "exact_reextraction": true,
+  "metadata_keys_verified": true,
+  "alias_container_unchanged": true,
+  "live_inputs_unchanged": true,
+  "runner_workspace_restored": true,
+  "runtime_tested": false,
+  "deployed": false,
+  "additional_validation": {
+    "all_original_class_declarations_retained": 21613,
+    "all_18_atlas_contracts_valid": true,
+    "utility_font_all_definition_id_unique": true,
+    "utility_font_payload_identical_to_live_trial": true,
+    "utility_font_precedes_bound_field": true,
+    "post_package_live_snapshot_unchanged": true
+  },
+  "current_verified_recipe_sha256": {
+    "tools/build-ink-hud-batch.py": "53058bc8949cefcc7ad245476713f3c2a8d201ad2a25b3312acaac6a236616b5",
+    "tools/patch-ink-hud-movies.py": "43190aa543619ee898ee797575d3b4aecd3557dbbffa60e1f6924ffb17867752",
+    "tests/test_ink_hud_batch.py": "55f62bcb90ed65c887b8149b74de95c3a5b3970679579df001219e57b394b8e4"
+  },
+  "rollback_test": {
+    "excluded": [
+      "enemyfocus",
+      "interactions"
+    ],
+    "native_movies": 16,
+    "npc_annotation_removed": true,
+    "state_bridge_removed": true,
+    "zip_sha256": "3c237c6e6e8bcd41225e6691755816d0a15aee70811739e36a5530831eda9219",
+    "build_path": "build/ink-hud-batch-rollback-npc-check",
+    "native_pack_metadata_and_extraction_passed": true
+  },
+  "accepted_bars_dependency": {
+    "archive": "deploy/ink-hud-bars-private-v1/Ink-Iron-Adaptive-Bars-v1-private-test.zip",
+    "sha256": "4e138f392d24c7475a7c49249214d1aaa6f3439f650a89a5ff17c4b50170db67",
+    "included_in_batch": false,
+    "currently_deployed": false,
+    "runtime_status": "User accepted v1; unchanged"
+  },
+  "reference_pins": {
+    "reference\\ink-and-iron-0.8\\bin\\config\\r4game\\user_config_matrix\\pc\\modInkAndIron.xml": "2ceda6025bf8a6716b1f9a49c85eeb5313833fc08bb809cf9ce47542d2ed8558",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronDialogue\\content\\blob0.bundle": "3b0682e579a413827b04f13ba0be6a44e7b84dab5c30b636fa59d62881d02e8e",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronDialogue\\content\\metadata.store": "23f6171714c4e4c29aa36b0ed2fa0697752884cf0d82ab3c4ada9aec42eb4907",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronFonts\\content\\blob0.bundle": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronFonts\\content\\metadata.store": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\ar.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\blob0.bundle": "275433f331fea237041a5e5d6c7d5bdf90b4b59f1db950928ef7d38a11d0695d",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\br.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\cn.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\cz.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\de.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\en.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\es.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\esmx.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\fr.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\hu.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\it.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\jp.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\kr.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\metadata.store": "1ad79f95fe9cb2a2b86744a3137b870037681fe9f04ed128e27fb6582a878d73",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\pl.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\ru.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronGear.ws": "ae0afa77aa117fcb76eab25d4f0320c96e3179c8e96a21cc902ea188d0f70ee5",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronHorse.ws": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronHudScale.ws": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronMinimapClock.ws": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronNpcPlate.ws": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronQuest.ws": "80910839841d6ed52245024399abdb9597b6fee47f3f8ee675fc8e6f73b6f8e2",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronRadialSigns.ws": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\texture.cache": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\tr.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\ua.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "reference\\ink-and-iron-0.8\\mods\\modInkAndIronHUD\\content\\zh.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+  },
+  "resource_matrix": {
+    "bossfocus": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_bossfocus.redswf",
+      "input_sha256": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+      "candidate_sha256": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+      "added_public_signatures": {},
+      "native_source_sha256": "5228a3a5f13d9b2b82016804369e5646e968c82925b679bd67c8ab06a81dc3f2",
+      "native_bindings": [
+        "setBossHealth",
+        "setBossName",
+        "setEssenceDamage"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "9041a07947c437d14f53ceb6f86ef523c155a08048afbbdd2fc477aef1054b68"
+      ],
+      "candidate_abc_sha256": [
+        "9041a07947c437d14f53ceb6f86ef523c155a08048afbbdd2fc477aef1054b68"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-bossfocus{30b42fb6}_i1.dds",
+            "width": 768,
+            "height": 24,
+            "bytes": 18432,
+            "compressed_pixels_sha256": "b2ad5a7a80002c0bd4dac9f0dbedf64828c483e3b45d3e6149419b54048a5577"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 2
+      },
+      "all_classes": {
+        "original_declarations_retained": 497
+      }
+    },
+    "buffs": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+      "input_sha256": "2cfaaf607107e0250483ddd8c02b4cc34693dd1b6a9fc7571c1dd1fae0f9e0ba",
+      "candidate_sha256": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+      "added_public_signatures": {
+        "sahRefreshCells": {
+          "parameters": "",
+          "returns": "void"
+        }
+      },
+      "native_source_sha256": "9d32b748314a3a20b55d9262ee8c789d59f7a35612b72f8047f2400bfc9b04e6",
+      "native_bindings": [
+        "setPercent",
+        "setViewMode",
+        "showBuffUpdateFx"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "e67f9327f7ffe91e3512adc23bc65fcc14a2fdae868fd7883e99f8f4ce008ad5"
+      ],
+      "candidate_abc_sha256": [
+        "f8042fc2d89813075c3b33ca30b9ad6ba0dfd648f9a16a487e9b06fed8239658"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-buffs{f8110e94}_i4.dds",
+            "width": 364,
+            "height": 132,
+            "bytes": 48048,
+            "compressed_pixels_sha256": "22e969633c71611e8a048239b74881c6f6f58fad7e81c96102c29f0e703e6ee2"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 3
+      },
+      "all_classes": {
+        "original_declarations_retained": 3412
+      }
+    },
+    "companion": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_companion.redswf",
+      "input_sha256": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+      "candidate_sha256": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+      "added_public_signatures": {},
+      "native_source_sha256": "b2f06666fb782ebc940ee3b3b9f3ddd56ab0a0abe11085181faa5b5500eac013",
+      "native_bindings": [
+        "setName",
+        "setName2",
+        "setPortrait",
+        "setPortrait2",
+        "setVitality",
+        "setVitality2"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "3d48d06d5c3ce21b4ffff210c6da0dc3d7c69a8d5e7ce9649961f8662479cab0"
+      ],
+      "candidate_abc_sha256": [
+        "3d48d06d5c3ce21b4ffff210c6da0dc3d7c69a8d5e7ce9649961f8662479cab0"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-companion{323df4a0}_i8.dds",
+            "width": 896,
+            "height": 128,
+            "bytes": 114688,
+            "compressed_pixels_sha256": "8c534267e7d98d898d6cd5672064da2717bb9f8fd7959984f0538f7bc0aad849"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 3
+      },
+      "all_classes": {
+        "original_declarations_retained": 559
+      }
+    },
+    "controlsfeedback": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf",
+      "input_sha256": "8fd87d86dea8f1ae8881045374919fceddbae0ce6f9da60a957076361284369b",
+      "candidate_sha256": "8fd87d86dea8f1ae8881045374919fceddbae0ce6f9da60a957076361284369b",
+      "added_public_signatures": {},
+      "native_source_sha256": "8630097fee2d9a807db3bcf2c1f38a7138d9f4bd5b3b21d8ba09885bb499b040",
+      "native_bindings": [
+        "setSwordText"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "c577d38b997bbc047f26077682c98fff45ebcefc31c76418664db7874cfc43a2"
+      ],
+      "candidate_abc_sha256": [
+        "c577d38b997bbc047f26077682c98fff45ebcefc31c76418664db7874cfc43a2"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-controlsfeedback{e9989e84}_i3.dds",
+            "width": 988,
+            "height": 592,
+            "bytes": 584896,
+            "compressed_pixels_sha256": "7f76dd03236196e4dc8dd395a86f34469abc89d30d0c0747c62f3b679eb95d87"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 132
+      },
+      "all_classes": {
+        "original_declarations_retained": 782
+      }
+    },
+    "crosshair": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_crosshair.redswf",
+      "input_sha256": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+      "candidate_sha256": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+      "added_public_signatures": {},
+      "native_source_sha256": "a0f92459800640b87ec37756f8b691e4118bb7ff788ba3ab13405e36ec212c19",
+      "native_bindings": [],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "637e12256c921dbeb02898d28f82a942aa444212c71e2c14683622a63e2ab907"
+      ],
+      "candidate_abc_sha256": [
+        "637e12256c921dbeb02898d28f82a942aa444212c71e2c14683622a63e2ab907"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-crosshair{cce49df6}_i3.dds",
+            "width": 28,
+            "height": 20,
+            "bytes": 560,
+            "compressed_pixels_sha256": "fa01ee4a065ae571c81cc7249f5f079f8143bf1d38a3009c8cfe81de3a0e05f7"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 2
+      },
+      "all_classes": {
+        "original_declarations_retained": 469
+      }
+    },
+    "damageditems": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_damageditems.redswf",
+      "input_sha256": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+      "candidate_sha256": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+      "added_public_signatures": {},
+      "native_source_sha256": "562216c0028c0d87bea05a3b6aa7895d1d5ad9fa57ab6aeb070a06bc8f3d4551",
+      "native_bindings": [
+        "setItemDamaged"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "01ae47bda02fa7a7a1cd3774eae165b214ec9d8dc81350b595dd2a93767249b8"
+      ],
+      "candidate_abc_sha256": [
+        "01ae47bda02fa7a7a1cd3774eae165b214ec9d8dc81350b595dd2a93767249b8"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-damageditems{f3d96219}_i3.dds",
+            "width": 496,
+            "height": 84,
+            "bytes": 41664,
+            "compressed_pixels_sha256": "67947fd27d7230e9d76f26c89008d0b0e126dc18b15980b04e16dcf4c208c131"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 12
+      },
+      "all_classes": {
+        "original_declarations_retained": 491
+      }
+    },
+    "dialog": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_dialog.redswf",
+      "input_sha256": "2e4a4d765c6677ae9918432e9bfce0f7162b6676b89056bd5c496a4207ebb705",
+      "candidate_sha256": "2e4a4d765c6677ae9918432e9bfce0f7162b6676b89056bd5c496a4207ebb705",
+      "added_public_signatures": {},
+      "native_source_sha256": "c3d7b71e4a5a5c20ecde93a27667892f6d66623551458b589b27b9f403a7f82c",
+      "native_bindings": [
+        "ChoiceTimeoutHide",
+        "ChoiceTimeoutSet",
+        "PreviousSentenceHide",
+        "PreviousSentenceSet",
+        "SentenceHide",
+        "SentenceSet",
+        "SkipConfirmHide",
+        "SkipConfirmShow",
+        "setAlternativeDialogOptionView",
+        "setBarValue",
+        "setCanBeSkipped"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "5773b5a664ae5b5e24726d257a6952fc19801ebde9968a8b1a7f9cf8f1baf4ed"
+      ],
+      "candidate_abc_sha256": [
+        "5773b5a664ae5b5e24726d257a6952fc19801ebde9968a8b1a7f9cf8f1baf4ed"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-dialog{1a83ca32}_i1.dds",
+            "width": 1024,
+            "height": 628,
+            "bytes": 643072,
+            "compressed_pixels_sha256": "dbf3b929e92b91dcc66aa0f483e6e6631526d23a86ff5041919270719d7b9745"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 137
+      },
+      "all_classes": {
+        "original_declarations_retained": 3779
+      }
+    },
+    "enemyfocus": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+      "input_sha256": "2dc4fa590bf7e95ad3abf42979d5e6cdc9a03c67a724a532f611e2c52f4c8bbb",
+      "candidate_sha256": "01af1124e45d33bfe73e7a0c0f3e1e8f815d3afe04df814d583d0a610f4cd496",
+      "added_public_signatures": {
+        "qfSyncVisibility": {
+          "parameters": "",
+          "returns": "void"
+        }
+      },
+      "native_source_sha256": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+      "native_bindings": [
+        "SetBossOrDead",
+        "SetGeneralVisibility",
+        "displayMutationEight",
+        "hideDamageText",
+        "setAttitude",
+        "setDamageText",
+        "setDodgeFeedback",
+        "setEnemyHealth",
+        "setEnemyLevel",
+        "setEnemyName",
+        "setEnemyStamina",
+        "setEssenceBarVisibility",
+        "setNPCQuestIcon",
+        "setShowHardLock",
+        "setStaminaVisibility"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "21942cafc7ee8f2856464b82fbbc73a5dbad11bc0290654b1b62baae57bd75ee"
+      ],
+      "candidate_abc_sha256": [
+        "3a9bd681819f4c5465642aea85efa227bcc2816866942405e2b72d158055a288"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-enemyfocus{576aea93}_i6.dds",
+            "width": 540,
+            "height": 64,
+            "bytes": 34560,
+            "compressed_pixels_sha256": "4672bf1d2bc9c77b62dcb3741641d44cdaf97944094108d467adff5beeb67569"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 7
+      },
+      "all_classes": {
+        "original_declarations_retained": 563
+      }
+    },
+    "horsepanicbar": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf",
+      "input_sha256": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+      "candidate_sha256": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+      "added_public_signatures": {},
+      "native_source_sha256": "9f9045c14423f765a59fe0c5f664ad3c3e9e031620bad43eedefb3f601ec1b42",
+      "native_bindings": [
+        "setPanic"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "4d537c7aec527e85faea67d4b85c4c50f50edd96eeb922f2032a1f016760bd91"
+      ],
+      "candidate_abc_sha256": [
+        "4d537c7aec527e85faea67d4b85c4c50f50edd96eeb922f2032a1f016760bd91"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-horsepanicbar{ffed3858}_i5.dds",
+            "width": 888,
+            "height": 24,
+            "bytes": 21312,
+            "compressed_pixels_sha256": "e0ccfb2a87fb2d8d67089c921b26b9be7676be355e2fd78bb905180f67789ab5"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 5
+      },
+      "all_classes": {
+        "original_declarations_retained": 509
+      }
+    },
+    "horsestaminabar": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf",
+      "input_sha256": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+      "candidate_sha256": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+      "added_public_signatures": {},
+      "native_source_sha256": "f86462356e889fcaf8bbbc4f8868adaf90550514d36dccac5a16ae06b50d5bb9",
+      "native_bindings": [
+        "setStamina"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "aa65efc95a3e1deab182a09e559afac43e6b8944de68a7dedc50b8f333a545d3"
+      ],
+      "candidate_abc_sha256": [
+        "aa65efc95a3e1deab182a09e559afac43e6b8944de68a7dedc50b8f333a545d3"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-horsestaminabar{0e044d1a}_i1.dds",
+            "width": 660,
+            "height": 24,
+            "bytes": 15840,
+            "compressed_pixels_sha256": "63cea93c74f8bb89f2501f66516c4b900fa0938ca65e6f15d7700b121c008306"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 2
+      },
+      "all_classes": {
+        "original_declarations_retained": 496
+      }
+    },
+    "interactions": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+      "input_sha256": "0eedbe0542704adcac4952ff2af291fd3ace83c91853e584167c34724c129567",
+      "candidate_sha256": "ab4dc2190ef491e26be5930c2608edd60c922fae573c83d482669f419ee55cea",
+      "added_public_signatures": {},
+      "native_source_sha256": "030abacdf99db978c32cb0bc12f704df5bc69d151ed0b4de25dacbfc1ae93693",
+      "native_bindings": [
+        "AddFocusInteractionIcon",
+        "DisableHoldIndicator",
+        "EnableHoldIndicator",
+        "RemoveFocusInteractionIcon",
+        "SetHoldDuration",
+        "SetInteractionIcon",
+        "SetInteractionIconAndText",
+        "SetInteractionKey",
+        "SetInteractionKeyIconAndText",
+        "SetInteractionText",
+        "SetPositions",
+        "SetVisibility",
+        "SetVisibilityEx",
+        "UpdateFocusInteractionIconPosition"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "e1faacc0c903ddd1465fbffce7c6b6b4e6c40e2aa7ebf87527923265c0a05a8f"
+      ],
+      "candidate_abc_sha256": [
+        "db54fca3d80afb4dd7e05c0cc29ec0d4b3616d9b99275017f368303c29c83af8"
+      ],
+      "non_abc_changed_tags": [
+        [
+          222,
+          37
+        ],
+        [
+          223,
+          39
+        ]
+      ],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-interactions{edff4c5f}_i1.dds",
+            "width": 1024,
+            "height": 592,
+            "bytes": 606208,
+            "compressed_pixels_sha256": "157785e079ec5ee66ccdefc4f719e51f6645faa61ed0f590510acebead7715e4"
+          },
+          {
+            "linkage": "hud-interactions{edff4c5f}_i3b.dds",
+            "width": 40,
+            "height": 48,
+            "bytes": 1920,
+            "compressed_pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 141
+      },
+      "all_classes": {
+        "original_declarations_retained": 1031
+      }
+    },
+    "iteminfo": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_iteminfo.redswf",
+      "input_sha256": "cab31bdc1f6f7ee00a154568990025f8a9d6d413b3a2829a0211e987c8bbd6af",
+      "candidate_sha256": "cab31bdc1f6f7ee00a154568990025f8a9d6d413b3a2829a0211e987c8bbd6af",
+      "added_public_signatures": {},
+      "native_source_sha256": "0ed3a76b32524c8046a0e53b7dc53c50abc0bac0261fc499a09f3b74f57446f3",
+      "native_bindings": [
+        "EnableElement",
+        "HideSlots",
+        "UpdateElement",
+        "animatePotionSwitch",
+        "setAlwaysDisplayed",
+        "setItemInfo",
+        "setRadialMenuOn",
+        "showButtonHints"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "7d11eff14f140c0546ec34601792c53c232fee76756430088a9f14114ddc1ff7"
+      ],
+      "candidate_abc_sha256": [
+        "7d11eff14f140c0546ec34601792c53c232fee76756430088a9f14114ddc1ff7"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-iteminfo{5e6c6047}_i10.dds",
+            "width": 988,
+            "height": 592,
+            "bytes": 584896,
+            "compressed_pixels_sha256": "406aede2b401f338ac811886bf2f33e8d74c6285604b959a051919883f2ac8a4"
+          },
+          {
+            "linkage": "hud-iteminfo{5e6c6047}_i88.dds",
+            "width": 64,
+            "height": 64,
+            "bytes": 4096,
+            "compressed_pixels_sha256": "92be952a083d74ba8c6d41fda31d937824a5d73b73a4d7be658375fc72d4f06a"
+          },
+          {
+            "linkage": "hud-iteminfo{5e6c6047}_i9c.dds",
+            "width": 40,
+            "height": 48,
+            "bytes": 1920,
+            "compressed_pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 133
+      },
+      "all_classes": {
+        "original_declarations_retained": 993
+      }
+    },
+    "journalupdate": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_journalupdate.redswf",
+      "input_sha256": "585a2acac15dd870328e4b5e0c8aca64cd37b8122de18285ac146832e01a1f55",
+      "candidate_sha256": "585a2acac15dd870328e4b5e0c8aca64cd37b8122de18285ac146832e01a1f55",
+      "added_public_signatures": {},
+      "native_source_sha256": "e1e1d6b9b12e3149aca5ad60f61bb7f5671c4c8e494aa46b684835a77814e226",
+      "native_bindings": [
+        "ClearJournalUpdate",
+        "PauseShowTimer",
+        "SetIcon",
+        "SetJournalUpdateStatus",
+        "ShowJournalUpdate",
+        "hideItemInfo"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "906ea0477f7e915077349e3f45492aded65a7cdbe6e613ff9e8ed4b05d3d0719"
+      ],
+      "candidate_abc_sha256": [
+        "906ea0477f7e915077349e3f45492aded65a7cdbe6e613ff9e8ed4b05d3d0719"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-journalupdate{139c5031}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "bytes": 1044480,
+            "compressed_pixels_sha256": "051195bdd9dd87a564933b9f9a4c5c39dfe5eb509e25c8137e835ccc542fffc1"
+          },
+          {
+            "linkage": "hud-journalupdate{139c5031}_ied.dds",
+            "width": 40,
+            "height": 48,
+            "bytes": 1920,
+            "compressed_pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "hud-journalupdate{139c5031}_i11b.dds",
+            "width": 988,
+            "height": 132,
+            "bytes": 130416,
+            "compressed_pixels_sha256": "ec8883c2ecfb1cb78fa04ad442f3b689a0b0af74ec6a488b7996816eaa17218d"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 148
+      },
+      "all_classes": {
+        "original_declarations_retained": 1281
+      }
+    },
+    "minimap2": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_minimap2.redswf",
+      "input_sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+      "candidate_sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+      "added_public_signatures": {},
+      "native_source_sha256": "dbaab08dd7791b2a91d37b8d869133ded94875420c0af0e8d8ebda677970e976",
+      "native_bindings": [
+        "DoFading",
+        "EnableBorders",
+        "EnableDebug",
+        "EnableMask",
+        "EnableRotation",
+        "NotifyPlayerEnteredInterior",
+        "NotifyPlayerExitedInterior",
+        "SetMapSettings",
+        "SetPlayerPosition",
+        "SetPlayerPositionAndRotation",
+        "SetPlayerRotation",
+        "SetTextureExtensions",
+        "SetZoom"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "51e5f8ddb2cc84e26c7d5f07741d51fff90542979bc89b167d820ee140706eb4"
+      ],
+      "candidate_abc_sha256": [
+        "51e5f8ddb2cc84e26c7d5f07741d51fff90542979bc89b167d820ee140706eb4"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-minimap2{852a792c}_i1.dds",
+            "width": 1024,
+            "height": 432,
+            "bytes": 442368,
+            "compressed_pixels_sha256": "3071b86b507ef58ce8ea00283bd96c53522802de54183511a328d35b7b9f91f0"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 37
+      },
+      "all_classes": {
+        "original_declarations_retained": 1067
+      }
+    },
+    "oxygenbar": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf",
+      "input_sha256": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+      "candidate_sha256": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+      "added_public_signatures": {},
+      "native_source_sha256": "014bad1cd8fe210d4c9531208d755ff6809084c91b3a9928be72dd47f75090a3",
+      "native_bindings": [
+        "setOxygene"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "2c278ef1f96588ded1b67b1dbb12ac40dbd2a3614f01926d7647cd9a6b137ee3"
+      ],
+      "candidate_abc_sha256": [
+        "2c278ef1f96588ded1b67b1dbb12ac40dbd2a3614f01926d7647cd9a6b137ee3"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-oxygenbar{4639cc1c}_i5.dds",
+            "width": 888,
+            "height": 24,
+            "bytes": 21312,
+            "compressed_pixels_sha256": "8502b06c467bf812c530cf6d3018ca0d5111754ab367a5f38e7134b49356e4de"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 5
+      },
+      "all_classes": {
+        "original_declarations_retained": 505
+      }
+    },
+    "quests": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_quests.redswf",
+      "input_sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+      "candidate_sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+      "added_public_signatures": {},
+      "native_source_sha256": "5dea85d7a200632c1f8dfae76a211b83f40b7604658c55ef027e80dcf04f1fa6",
+      "native_bindings": [
+        "SetSystemQuestInfo",
+        "ShowTrackedQuest",
+        "UpdateObjectiveCounter",
+        "UpdateObjectiveHighlight",
+        "UpdateObjectiveUnhighlightAll"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "410cf972cb1950d3e8780b9378f83e31321f07b3b0bdc278707e6d243eed19b4"
+      ],
+      "candidate_abc_sha256": [
+        "410cf972cb1950d3e8780b9378f83e31321f07b3b0bdc278707e6d243eed19b4"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-quests{ee1f454f}_i8.dds",
+            "width": 968,
+            "height": 96,
+            "bytes": 92928,
+            "compressed_pixels_sha256": "878188303c1f42c8e73ecc0c8e06d6d7f277392ac7754e55db1f12971dc2c67b"
+          },
+          {
+            "linkage": "hud-quests{ee1f454f}_i17.dds",
+            "width": 64,
+            "height": 64,
+            "bytes": 4096,
+            "compressed_pixels_sha256": "5ac5b3a4e2dbeb521473c6e7032ab0a3821300e4d7fa7f94eac8fe2166cbbdde"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 5
+      },
+      "all_classes": {
+        "original_declarations_retained": 3399
+      }
+    },
+    "radialmenu": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_radialmenu.redswf",
+      "input_sha256": "8f10c1c30bd0c7efd90657ddcbeddfd8e46b5937ea3f536229dcafcd971d6da3",
+      "candidate_sha256": "8f10c1c30bd0c7efd90657ddcbeddfd8e46b5937ea3f536229dcafcd971d6da3",
+      "added_public_signatures": {},
+      "native_source_sha256": "1f2a44b28a10aad5a5d37c3a9319fe8f006b3d968803f055f85d64310e91074d",
+      "native_bindings": [
+        "BlockRadialMenu",
+        "DisableRadialInput",
+        "ResetPetardData",
+        "SetChoosenDescription",
+        "SetDesaturated",
+        "SetMeditationButtonEnabled",
+        "ShowRadialMenu",
+        "UpdateFieldEquippedState",
+        "UpdateItemIcon",
+        "setAlternativeInputMode",
+        "setArabicAligmentMode",
+        "setCiriItem",
+        "setCiriRadial",
+        "setSelectedItem"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "334618566ac7dbe240dc3d1bcdc4a855784a8cd2b40b41388f00584f3ea1a362"
+      ],
+      "candidate_abc_sha256": [
+        "334618566ac7dbe240dc3d1bcdc4a855784a8cd2b40b41388f00584f3ea1a362"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-radialmenu{b5466c19}_i1.dds",
+            "width": 1024,
+            "height": 1024,
+            "bytes": 1048576,
+            "compressed_pixels_sha256": "ab40389d93e10dfe234f23b36357fc8eaf092592fb77233c3fe8ef7afc3bbcc1"
+          },
+          {
+            "linkage": "hud-radialmenu{b5466c19}_i3.dds",
+            "width": 988,
+            "height": 164,
+            "bytes": 162032,
+            "compressed_pixels_sha256": "472436c25d12c972ae1794b84928844db2eccf92cf7fab899c22a68aa94c3795"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 171
+      },
+      "all_classes": {
+        "original_declarations_retained": 1295
+      }
+    },
+    "timelapse": {
+      "resource_key": "gameplay/gui_new/swf/hud/hud_timelapse.redswf",
+      "input_sha256": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+      "candidate_sha256": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+      "added_public_signatures": {},
+      "native_source_sha256": "db69d7afa8a861e8ab8f53a974497e07ac9f7c169010066d94a624176f3dcfa7",
+      "native_bindings": [
+        "SetShowTime",
+        "handleTimelapseAdditionalTextSet",
+        "handleTimelapseTextSet"
+      ],
+      "missing_native_bindings": [],
+      "listener_controller_sites_unchanged": true,
+      "embedded_atlases_unchanged": true,
+      "properties_unchanged": true,
+      "chunk_crcs_valid": true,
+      "original_abc_sha256": [
+        "dfc54ee332fd10182c54899589eae6e19f5ab3d3bb31a967f6dcab5696853a85"
+      ],
+      "candidate_abc_sha256": [
+        "dfc54ee332fd10182c54899589eae6e19f5ab3d3bb31a967f6dcab5696853a85"
+      ],
+      "non_abc_changed_tags": [],
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "hud-timelapse{4884e804}_i1.dds",
+            "width": 664,
+            "height": 108,
+            "bytes": 71712,
+            "compressed_pixels_sha256": "99905d182fe9ebd32239c725bc953fd7d265a4ebf192ffd7fd639b87eac768d1"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 1
+      },
+      "all_classes": {
+        "original_declarations_retained": 485
+      }
+    }
+  },
+  "resource_owners": {
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf": [
+      {
+        "owner": "modFieldFolioInteractionsV2",
+        "sha256": "35baf8d672112e3fbc693419d432d3a15d9909f6c3b20c58b855689f01f67a31",
+        "enabled": "1",
+        "priority": "40"
+      }
+    ],
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf": [],
+    "gameplay/gui_new/fonts.xml": [],
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf": [
+      {
+        "owner": "modSeamlessAdaptiveHUD",
+        "sha256": "fa2b55bb35c86504b1d23b613b9f4b394c66ed1d2af4a5323b0f06d8ad2ad037",
+        "enabled": "1",
+        "priority": "29"
+      },
+      {
+        "owner": "modSeamlessAdaptiveHUD",
+        "sha256": "fa2b55bb35c86504b1d23b613b9f4b394c66ed1d2af4a5323b0f06d8ad2ad037",
+        "enabled": "1",
+        "priority": "29"
+      }
+    ],
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf": [
+      {
+        "owner": "modQuietEditorialNPCShadow",
+        "sha256": "2f8e36a9d1d4e8598f889e85c3b1f9fdb28e8804e46e30ba520f0559d5c53ddd",
+        "enabled": "1",
+        "priority": "35"
+      }
+    ],
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_companion.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_quests.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf": [],
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf": []
+  },
+  "script_controls": [
+    {
+      "label": "baseline",
+      "exit_code": 0,
+      "script_wcc_errors": [],
+      "warnings": 819,
+      "assertions": 337,
+      "blob_sha256": "791ed57e2e59435e149f5bf4b55b92b55d79c267411d03d91866ddbd1f74cfcf",
+      "assertions_added_vs_baseline": {},
+      "warnings_added_vs_baseline": {}
+    },
+    {
+      "label": "noop",
+      "exit_code": 0,
+      "script_wcc_errors": [],
+      "warnings": 819,
+      "assertions": 337,
+      "blob_sha256": "d9e3516f39c3c33c55254f2b8768e6df7dee1c3742ef13851cee53fdb69e8778",
+      "assertions_added_vs_baseline": {},
+      "warnings_added_vs_baseline": {}
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "script_wcc_errors": [],
+      "warnings": 819,
+      "assertions": 337,
+      "blob_sha256": "670dd68a3ea1eb2bb051b99b764fa47de50054c604d97de99b4dc575c734d542",
+      "assertions_added_vs_baseline": {},
+      "warnings_added_vs_baseline": {}
+    }
+  ],
+  "native_commands": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\cooked"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.12 15:37:11][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.12 15:37:11][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ],
+      "full_log": "build/ink-hud-batch-private-v1-final/cook.full.log"
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\validation"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.12 15:37:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.12 15:37:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ],
+      "full_log": "build/ink-hud-batch-private-v1-final/validate.full.log"
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\native-pack-input",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.12 15:38:02][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.12 15:38:02][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ],
+      "full_log": "build/ink-hud-batch-private-v1-final/pack.full.log"
+    },
+    {
+      "label": "metadata",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\npc-state-expanded\\bin\\x64_RedKit\\wcc_lite.exe",
+        "metadatastore",
+        "-path=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-batch-private-v1-final\\packed"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.12 15:38:32][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.12 15:38:32][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ],
+      "full_log": "build/ink-hud-batch-private-v1-final/metadata.full.log"
+    }
+  ],
+  "scoped_modifications": {
+    "buffs": {
+      "input_sha256": "2cfaaf607107e0250483ddd8c02b4cc34693dd1b6a9fc7571c1dd1fae0f9e0ba",
+      "output_sha256": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+      "atlas_bytes_unchanged": true,
+      "resource_properties_unchanged": true,
+      "input_header_crc_verified": true,
+      "output_header_crc_verified": true,
+      "font_added_from_trial": false,
+      "native_validation_pending": false,
+      "native_cook_validated": true,
+      "class_edits": [
+        {
+          "class_name": "red.game.witcher3.hud.modules.HudModuleBuffs",
+          "source_sha256": "c9cf459e6a8627e41a5eded4163a12aaf4521e25f501d85fb59889177b55dc71",
+          "private_modified_source_sha256": "f7d86a01044792eb5064d4a0a3fa1bb43cfc215f1c2c6058820a81dc73902ee0"
+        },
+        {
+          "class_name": "red.game.witcher3.hud.modules.buffs.HudBuff",
+          "source_sha256": "c3e6c06dd69ff9786ced34c6d4a05dacd60160cdfa01976da17522029f9cb144",
+          "private_modified_source_sha256": "822886d371438140932f7f2822d91e5ab25a9334830f93bb89199c2ec9afce02"
+        },
+        {
+          "class_name": "com.gskinner.motion.GTween",
+          "source_sha256": "a8d7fbc19829af1921f9c6d89ebf73c0f96716f5effc130d4987553c449afe9d",
+          "private_modified_source_sha256": "788834cc370bb5bc442b925d3fb17a75e93bfa7d0b6369f7629339ef51b212d8"
+        }
+      ]
+    },
+    "enemyfocus": {
+      "input_sha256": "2dc4fa590bf7e95ad3abf42979d5e6cdc9a03c67a724a532f611e2c52f4c8bbb",
+      "output_sha256": "01af1124e45d33bfe73e7a0c0f3e1e8f815d3afe04df814d583d0a610f4cd496",
+      "atlas_bytes_unchanged": true,
+      "resource_properties_unchanged": true,
+      "input_header_crc_verified": true,
+      "output_header_crc_verified": true,
+      "font_added_from_trial": false,
+      "native_validation_pending": false,
+      "native_cook_validated": true,
+      "class_edits": [
+        {
+          "class_name": "red.game.witcher3.hud.modules.HudModuleEnemyFocus",
+          "source_sha256": "98e2c577e7b6de7033702dfe37b79ef257f37b66807cea317b54f5465bc8d2d4",
+          "private_modified_source_sha256": "db9bb23b9109f28a1a78eaf642969e179a32057a5216935fb7499e48195912a0"
+        }
+      ]
+    },
+    "interactions": {
+      "input_sha256": "0eedbe0542704adcac4952ff2af291fd3ace83c91853e584167c34724c129567",
+      "output_sha256": "ab4dc2190ef491e26be5930c2608edd60c922fae573c83d482669f419ee55cea",
+      "atlas_bytes_unchanged": true,
+      "resource_properties_unchanged": true,
+      "input_header_crc_verified": true,
+      "output_header_crc_verified": true,
+      "font_added_from_trial": true,
+      "native_validation_pending": false,
+      "native_cook_validated": true,
+      "class_edits": [
+        {
+          "class_name": "red.game.witcher3.hud.modules.HudModuleInteractions",
+          "source_sha256": "9790e6d4b15f264e10831a589134b4b4d52c24fae042db2f48af1dd1eabbd844",
+          "private_modified_source_sha256": "5b4162de9ba363ec845e000ee777273ed4f33d34a592ea916e496dfc8268fc1a"
+        }
+      ]
+    }
+  },
+  "texture_cache_resources": [
+    "gameplay/gui_new/icons/inkiron/gear/medallion_base.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_silver.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_steel.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_armor.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_boots.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_pants.png",
+    "gameplay/gui_new/icons/inkiron/gear/medallion_gloves.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_base.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_silver.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_steel.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_armor.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_boots.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_pants.png",
+    "gameplay/gui_new/icons/inkiron/gear/parchment_gloves.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_base.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_silver.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_steel.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_armor.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_boots.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_pants.png",
+    "gameplay/gui_new/icons/inkiron/gear/woodcut_gloves.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_base.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_silver.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_steel.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_armor.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_boots.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_pants.png",
+    "gameplay/gui_new/icons/inkiron/gear/shield_gloves.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c1_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c1_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c1_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c1_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c2_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c2_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c2_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c2_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c3_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c3_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c3_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c3_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c4_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c4_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c4_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c4_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c5_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c5_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c5_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c5_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c6_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c6_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c6_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c6_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c7_l0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c7_l1.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c7_r0.png",
+    "gameplay/gui_new/icons/inkiron/quest/sheet_c7_r1.png",
+    "gameplay/gui_new/icons/inkiron/quest/seal.png",
+    "gameplay/gui_new/icons/inkiron/quest/coin.png",
+    "gameplay/gui_new/icons/inkiron/quest/tag.png"
+  ],
+  "source_provider_log": "build/ink-hud-batch-private-v1-final/scripts/receipt.json",
+  "full_private_receipt": "deploy/ink-hud-batch-private-v1-final/manifest.json",
+  "unresolved_components": {
+    "gameplay/gui_new/swf/hud/hud.redswf": {
+      "module": "modInkAndIronButtons",
+      "retained_owner": "modGeraltOutfitWheel",
+      "reason": "I&I root lacks required OW exports; retain GOW functionality until wheel class/data/input contract is ported",
+      "required_exports": [
+        "OWOpen",
+        "OWClose",
+        "OWAxis",
+        "OWRelease",
+        "OWSetSlot",
+        "OWSetItem",
+        "OWStatus"
+      ],
+      "current_owners": [
+        {
+          "owner": "modGeraltOutfitWheel",
+          "sha256": "2fcffb248b3e858aa28046d750d01f848bfde768d4f95f330dfeb154587c01e7",
+          "enabled": "1",
+          "priority": "33"
+        }
+      ]
+    }
+  },
+  "known_exceptions": [
+    "Existing bars-v1 optional theme and independent toxicity limitations",
+    "No supplied lootfeed/oneliner/gameplay-subtitles replacement; existing owners retained",
+    "Runtime timing/visibility/font/controller tests pending"
+  ]
+}
