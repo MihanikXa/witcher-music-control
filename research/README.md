@@ -27,6 +27,8 @@ This index includes **historical investigations** and the current Stage 1 direct
 22. [Licensed observable candidate results](22-licensed-observable-candidate-results.md): licensed retry, 19 structural checks, third-variant cache and pending gameplay authorization.
 23. [Vortex test preparation](23-vortex-white-orchard-test-preparation.md): verified A/C archives, actual installer routing, closed-app backup, profile draft and save-isolation/approval requirements.
 
-**Current next task:** confirm the Vortex clone/install/deploy plan and agree a separate Windows/Documents copied-save setup (report23). ZIPs and backups are ready; no Vortex profile was created/switched and no archive installed. The licensed candidate passes offline structural/packaging checks (report22); runtime native-Init compatibility remains unproved. Existing A/B packages remain intact. Stop unrelated bank/Init regeneration; never deploy generated Init or infer acceptance from blanket silence/normal music alone.
+24. [First in-game feedback and transition defect](24-first-runtime-feedback.md): working world-only music attenuation in game; occasional one-second exploration swell during dialogue/combat entry; authored music not yet confirmed.
+
+**Current next task:** diagnose the user-reported transient exploration-score bleed during dialogue and on combat entry. Keep working candidate C, its Vortex ZIP, native Init and backups intact; do not reopen broad licensing/ProjectID work. Authored cues remain unverified in game. Report24 distinguishes observation from possible Wwise State/switch transition mechanisms and specifies the next bounded experiment.
 
 Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and report 14 for gates.
