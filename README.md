@@ -2,6 +2,8 @@
 
 **Current status (2026-10-12):** Stage1 regional-only soundbank has been tested in the retail game by the user and reportedly suppresses exploration and ordinary dialogue music while retaining combat music. **Known audible defect:** brief (~1s) exploration-music swells during some dialogue transitions and before combat music begins. Authored music unconfirmed in game. [Report 24](research/24-first-runtime-feedback.md) is the live status; earlier below sections document superseded build-stage gates.
 
+**Transition investigation:** [Report 25](research/25-transition-bleed-diagnosis-and-local-fix.md) reproduces the defect with native playlists and measures a local correction on five generic exploration playlists. Combat and q001 authoring cues remain audible. Fresh D source is prepared, but bank generation stops at project-local licensing errors; manual licence application is needed. No D bank, cache or ZIP exists yet, and working C is unchanged.
+
 A Witcher 3 Remastered mod project for **context-aware music gain**: reduce routine scoring without removing deliberately authored dramatic music or disturbing the game's native soundtrack transitions.
 
 ## Current target policy

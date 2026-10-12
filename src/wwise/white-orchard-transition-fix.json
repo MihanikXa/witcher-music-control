@@ -1,0 +1,15 @@
+{
+  "wwise_build": 8928,
+  "world_id": "{1A59CC64-141A-45A6-8374-EB823D3E9D4F}",
+  "volume_db": -200,
+  "targets": [
+    {"id": "{4A23933D-BE41-4C79-BED2-337D24C605EA}", "name": "village_exploration", "short_id": 133462974, "original_volume_db": -2},
+    {"id": "{D79C5D2C-22B5-4855-882B-FD18E348605D}", "name": "expl_nml_zone_01_PROLOGUE_NIGHT", "short_id": 168472101, "original_volume_db": 0},
+    {"id": "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}", "name": "expl_nilfgaard_camp", "short_id": 883068472, "original_volume_db": 0},
+    {"id": "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}", "name": "expl_cemetery", "short_id": 1049502408, "original_volume_db": 1},
+    {"id": "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}", "name": "expl_battlefield", "short_id": 833483595, "original_volume_db": 1}
+  ],
+  "scope": "C State table retained; five ordinary noncombat playlists only",
+  "excluded": "winter, q505, Gwent, combat, outros, quests_and_cutscenes",
+  "deployment": "not_authorized"
+}
