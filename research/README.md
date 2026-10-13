@@ -29,6 +29,15 @@ This index includes **historical investigations** and the current Stage 1 direct
 
 24. [First in-game feedback and transition defect](24-first-runtime-feedback.md): working world-only music attenuation in game; occasional one-second exploration swell during dialogue/combat entry; authored music not yet confirmed.
 
-**Current next task:** diagnose the user-reported transient exploration-score bleed during dialogue and on combat entry. Keep working candidate C, its Vortex ZIP, native Init and backups intact; do not reopen broad licensing/ProjectID work. Authored cues remain unverified in game. Report24 distinguishes observation from possible Wwise State/switch transition mechanisms and specifies the next bounded experiment.
+25. [White Orchard successful follow-up](25-white-orchard-followup-success.md): user reports that the latest tested local revision now works great; exact transition-fix artifact not yet published; next steps are preserving source/build provenance and authored-cue checks before regional expansion.
+
+**Current next task:** identify and sync the actual working local transition fix (source, validation, hashes; no game/audio binaries committed), then run bounded authored/curated music checks in White Orchard. If these pass or risks are specifically mapped, reuse the established regional-only architecture for other music banks, validating them one by one. Preserve native Init, existing Vortex archives, current save and unrelated mods. Do not infer that all authored music is safe from generic-world attenuation.
 
 Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and report 14 for gates.
+
+### Local transition evidence merged — 2026-10-13
+
+- [25: Transition diagnosis and bounded playlist fix](25-transition-bleed-diagnosis-and-local-fix.md): native selector reproduction, five-playlist correction and retained initial licence failure.
+- [26: Licensed D build and verified package](26-licensed-transition-fix-candidate.md): structural/playback checks, package hashes and approval boundary.
+
+The source/build provenance is now preserved alongside the remote success feedback. The next evidence gap is matching the user's tested variant to these artifacts and confirming authored cues; the feedback alone does not authorize deployment or regional expansion. This updates the pre-merge next-task wording above.
