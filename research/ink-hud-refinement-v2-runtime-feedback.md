@@ -8,6 +8,11 @@
 
 ## Explicit acceptance and corrections
 
+**Later clarification (13 October):** Asked whether old artwork remained or icons
+were absent, the user replied **“Missing”**. The active device classification and
+exact inspected surface remain unspecified. See the v3 rendering correction for
+current deployed hashes and the atlas-independent repair.
+
 - **Accepted: functionality and enemy overhead *geometry*.** Keep current thin health bars, reduced total overhead bulk, font sizes, spacing, lock-ring and indicator hierarchy unless a separately demonstrated bug requires change. Boss bars were accepted previously and must remain unchanged.
 - **Rejected: red palette is still too pale.** In v2 the ordinary enemy fill is `#AA7565` and hostile name `#DE9C89`. Increase **saturation/depth** for the red bar and hostile name together; target richer, clearer red while avoiding vanilla neon/aggression. Do **not** undo the accepted shape/size changes or blindly raise all semantic colors. Neutral/friendly/Axii/VIP mappings are not rejected by this report. Treat any specific candidate RGB as a proposed visual trial, not an inferred exact user preference. Coordinate native name, ghost name/role and accepted Colors v4 script paths so paint sources cannot fight.
 - **Unresolved: new controller buttons not observed.** The user says "I don't see the new buttons", **not** that button input is broken, and does not specify whether old artwork remains or icons are absent. Ask only if needed after read-only diagnosis.

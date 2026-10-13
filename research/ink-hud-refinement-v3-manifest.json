@@ -1,0 +1,569 @@
+{
+  "version": "Ink & Iron HUD Refinement V3 vector repair",
+  "date": "2026-10-13",
+  "private_personal_use_only": true,
+  "deployed": false,
+  "runtime_tested": false,
+  "root_cause": {
+    "confirmed": "All 23 deployed logical winners and all 17 deployed package members match immutable v2; Xbox timelines address patched bitmap IDs; user reports missing icons.",
+    "hypothesis": "Retail loader does not resolve the added atlas/image path; exact rejection and active runtime device branch remain unconfirmed.",
+    "correction": "No additional atlas or image 65534; original image slots/handles plus solid vector timeline replacements; existing Xbox/Steam/PS/Switch selection unchanged."
+  },
+  "package": {
+    "mod": "modInkIronHUDRefinementV3",
+    "alias_mod": "modInkIronHUDAliasesTest",
+    "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\ink-hud-refinement-v3-release\\Ink-Iron-HUD-Refinement-v3-private-test.zip",
+    "zip_sha256": "6a5d5d41fa8139b339ff4aa779d4181cfbfeadc88077302e57d0ea364fa60671",
+    "zip_bytes": 11027604,
+    "parent_zip_sha256": "fa9e05bf961c64ad3e1b06578fc62761d818845abffa805b20e928cc3ee36ee9",
+    "exact_reextraction": true,
+    "metadata_keys_verified": true
+  },
+  "palette": {
+    "health": {
+      "before": "#AA7565",
+      "after": "#B65348"
+    },
+    "hostile": {
+      "before": "#DE9C89",
+      "after": "#D87566"
+    },
+    "lag": {
+      "before": "#C3A18F",
+      "after": "#C98678"
+    }
+  },
+  "resources": [
+    {
+      "key": "gameplay/gui_new/fonts.xml",
+      "input_sha256": "12f076e5ca32d08eaca703fd090f2b008503244c6df1f9abf55701f2b295c84c",
+      "output_sha256": "12f076e5ca32d08eaca703fd090f2b008503244c6df1f9abf55701f2b295c84c",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDAliasesTest",
+      "deployed_input_priority": 30
+    },
+    {
+      "key": "gameplay/gui_new/swf/common/panel_common.redswf",
+      "input_sha256": "fb5d5f7bc46293fcb9edd74a57559b2114658e5135da4465b96d58f1a9b1bf8f",
+      "output_sha256": "cdac2191a63c961d91d00837400bba6a898fa5dd7aa3e14e146239dd642ecc7a",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "5350e33abccb447603a44b14df2db80fcd6a2460c73cc99a15df5ade0f2ee48c",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 39,
+      "changed_texture_blocks": {
+        "1": 9123
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud.redswf",
+      "input_sha256": "5621a43d9a1b8e229b767848ef8802c2ac0fb729ebca66093dcf9dc1e93b28bd",
+      "output_sha256": "5c633c9f6db8d7ca3efa0bc72af61ac45dbed3de00b9034fc8d4b6db2b1a1c40",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "2fcffb248b3e858aa28046d750d01f848bfde768d4f95f330dfeb154587c01e7",
+      "bitmap_exports": 34,
+      "vector_shapes": 0,
+      "timeline_placements": 0,
+      "changed_texture_blocks": {
+        "1": 9272
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_bossfocus.redswf",
+      "input_sha256": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+      "output_sha256": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+      "input_sha256": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+      "output_sha256": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_companion.redswf",
+      "input_sha256": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+      "output_sha256": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf",
+      "input_sha256": "4b35821c80afd098d4474e7ca26c69c0b07405b01bddf3ed7f6556a57f7cbd99",
+      "output_sha256": "0ba116dd80f4aa39f27bd489a3c83a9d41895d7b8d203fb778daae331f2508ea",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "8fd87d86dea8f1ae8881045374919fceddbae0ce6f9da60a957076361284369b",
+      "bitmap_exports": 34,
+      "vector_shapes": 25,
+      "timeline_placements": 29,
+      "changed_texture_blocks": {
+        "1": 9174
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_crosshair.redswf",
+      "input_sha256": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+      "output_sha256": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_damageditems.redswf",
+      "input_sha256": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+      "output_sha256": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_dialog.redswf",
+      "input_sha256": "b55d262b7530b695940d0fa3bb22bc1b25e669636961c78dc8883b3db3174ffc",
+      "output_sha256": "dab5c39a175426a838e72a56ec5a9c58be2f31a18d6b89cd4ac5e962b3dd8bbb",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "2e4a4d765c6677ae9918432e9bfce0f7162b6676b89056bd5c496a4207ebb705",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 38,
+      "changed_texture_blocks": {
+        "1": 9174
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+      "input_sha256": "10dac6f0ac2339d1249bd228044f0b535ac5e9f9fb08538cfc3cca0df509449b",
+      "output_sha256": "f8506f7c766a61adfc002337e639b569a4fd045640b13908f6f05e21994c79d4",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "changes": "four red RGB literals only",
+      "geometry_unchanged": true,
+      "fonts_and_listener_contracts_retained": true
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf",
+      "input_sha256": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+      "output_sha256": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf",
+      "input_sha256": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+      "output_sha256": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+      "input_sha256": "a404f8bca3e48d33327de4735efcae1b06b509f78d3741441c64e30dbd021d77",
+      "output_sha256": "3a8d45c47b548f9ad8b616e2af85f54d10a219afd312c25770307d16de2b4f8c",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "ab4dc2190ef491e26be5930c2608edd60c922fae573c83d482669f419ee55cea",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 38,
+      "changed_texture_blocks": {
+        "1": 9174
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_iteminfo.redswf",
+      "input_sha256": "b6b9ad315f2b652cbf4bec19221b30470bf5f9dff5f1b1ae6fbffdc8a622e65a",
+      "output_sha256": "e1e90c396e2ee85ae7bf16ac1e2b0f6f3e20dec51ad4249e79009b82e916c693",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "a83eaafda5dc2f6b33b3d69c34962922bceef6b44f01650aa9afd5475cf77f00",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 39,
+      "changed_texture_blocks": {
+        "1": 9242
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_journalupdate.redswf",
+      "input_sha256": "3874a64553ca5ace21cef901226a338d9d20e866f422429e984b39dc009d5cee",
+      "output_sha256": "3dd0d182a6330c31d561a869a5b50a42b3b098c3ac92db7eb5c1b94adad5f51b",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "585a2acac15dd870328e4b5e0c8aca64cd37b8122de18285ac146832e01a1f55",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 38,
+      "changed_texture_blocks": {
+        "1": 7840,
+        "3": 1328
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_minimap2.redswf",
+      "input_sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+      "output_sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_oneliners.redswf",
+      "input_sha256": "dcc9206f05c8961cc7754d079da7d53e02de0101f376a5f0b490be793b9f7127",
+      "output_sha256": "dcc9206f05c8961cc7754d079da7d53e02de0101f376a5f0b490be793b9f7127",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf",
+      "input_sha256": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+      "output_sha256": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_quests.redswf",
+      "input_sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+      "output_sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_radialmenu.redswf",
+      "input_sha256": "bd57047e0df3da9c80151b6f2cf605332370c571783fd9413cebc426f6de3df5",
+      "output_sha256": "a6cbdef44abc58d079a4b099be9808661c14139f214a6eaee96b85d98795d781",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "8f10c1c30bd0c7efd90657ddcbeddfd8e46b5937ea3f536229dcafcd971d6da3",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 38,
+      "changed_texture_blocks": {
+        "1": 7199,
+        "2": 2128
+      }
+    },
+    {
+      "key": "gameplay/gui_new/swf/hud/hud_timelapse.redswf",
+      "input_sha256": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+      "output_sha256": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+      "unchanged_from_v2": true,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31
+    },
+    {
+      "key": "gameplay/gui_new/swf/overlay/panel_overlay.redswf",
+      "input_sha256": "c75a00bd9067dbf719d0d3c0e7e241747b328e3f4ea0df6b43b66f7181727172",
+      "output_sha256": "971b7194a9c3ce4340a9ff8f7a0e4c88872ff506ce672db967d22f85d43d5aa5",
+      "unchanged_from_v2": false,
+      "deployed_input_owner": "modInkIronHUDRefinementV2",
+      "deployed_input_priority": 31,
+      "pre_glyph_native_base_sha256": "a3d18c548f367875110d1d6dfd6ef9edf47f39a676c6ccce8ef5ef0802ff3e9a",
+      "bitmap_exports": 34,
+      "vector_shapes": 34,
+      "timeline_placements": 38,
+      "changed_texture_blocks": {
+        "1": 9190
+      }
+    }
+  ],
+  "validation": {
+    "regression_tests_passed": 58,
+    "native_cook_exit": 0,
+    "native_resource_validation_count": 22,
+    "native_resource_validation_errors": 0,
+    "native_pack_exit": 0,
+    "native_v3_metadatastore_passed": false,
+    "metadata_method": "Byte-exact native-control verified relocation; headless startup of v3 metadatastore blocked",
+    "metadata_relocation": {
+      "method": "verified relocation of existing native table",
+      "native_v3_metadatastore_passed": false,
+      "native_control_byte_identical": true,
+      "source_metadata_sha256": "8d93126dd226220a2559f80595c75b0c827d61f842836684efdbfc8484ebd69c",
+      "native_control_metadata_sha256": "60e769175bead3e89bbfa010db99913b51940b2c010004235aa772e8a4ba14d4",
+      "output_metadata_sha256": "c8442ba321ba0d664f134a35b9264d1c9be435388e8e930e9f3ef7a10bf377c9",
+      "source_bundle_sha256": "0b8c046b9beb059a38162a011f0ad54e62852a55c26dc549e5c7f8e0d5239a71",
+      "control_bundle_sha256": "999c8276f78e6d3e1533bddd83cb0074aed5dca76e860127dd0fd3874aac59a7",
+      "target_bundle_sha256": "1280e523e32a8c126ede76fe81118480b5efda631878d346a7520435ef749356",
+      "identical_ordered_keys": true,
+      "no_native_import_buffer_dependency_tables": true,
+      "relocated_field_count": 92
+    },
+    "independent_checks": {
+      "resources": {
+        "gameplay/gui_new/swf/common/panel_common.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 113295,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud.redswf": {
+          "independent_solid_shape_svg_count": 0,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 24950,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf": {
+          "independent_solid_shape_svg_count": 25,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 25760,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_dialog.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 27436,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_interactions.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 26350,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 25688,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_journalupdate.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 57511,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 59055,
+          "original_bitmap_links_and_native_properties_exact": true
+        },
+        "gameplay/gui_new/swf/overlay/panel_overlay.redswf": {
+          "independent_solid_shape_svg_count": 34,
+          "abc_fonts_exports_exact": true,
+          "no_added_atlas": true,
+          "non_xbox_compression_blocks_verified": 104294,
+          "original_bitmap_links_and_native_properties_exact": true
+        }
+      },
+      "live_snapshot_unchanged": true
+    },
+    "reproducible_movie_bytes_verified": true,
+    "deterministic_zip": true,
+    "three_packaging_runs_identical": true,
+    "script_controls_reused": true,
+    "script_current_provider_count": 55,
+    "script_results": [
+      {
+        "label": "baseline",
+        "success": true,
+        "blob_sha256": "bfee66a5899ceb15ccc53b69f1382790819c38a2fd9dd18844f6e43a8de94a4c",
+        "warnings_count": 819,
+        "assertions_count": 23593
+      },
+      {
+        "label": "noop",
+        "success": true,
+        "blob_sha256": "e221790aa34d2458fa4ded4af70fe792fb11c7b8539ce6b5a1b77a593e89a733",
+        "warnings_count": 819,
+        "assertions_count": 23620
+      },
+      {
+        "label": "candidate",
+        "success": true,
+        "blob_sha256": "ee121b99402a5fa65478d72cecaebe27d50abd35f323e769470d4c9729e94d47",
+        "warnings_count": 819,
+        "assertions_count": 23620
+      }
+    ],
+    "opaque_mods_not_recompiled": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "mod_and_mod_settings_snapshot_unchanged": true,
+    "documents_settings_last_modified_before_build": true
+  },
+  "deployed_member_hashes": [
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/blob0.bundle",
+      "exists": true,
+      "sha256": "0b8c046b9beb059a38162a011f0ad54e62852a55c26dc549e5c7f8e0d5239a71",
+      "expected": "0b8c046b9beb059a38162a011f0ad54e62852a55c26dc549e5c7f8e0d5239a71"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/metadata.store",
+      "exists": true,
+      "sha256": "8d93126dd226220a2559f80595c75b0c827d61f842836684efdbfc8484ebd69c",
+      "expected": "8d93126dd226220a2559f80595c75b0c827d61f842836684efdbfc8484ebd69c"
+    },
+    {
+      "path": "Mods/modInkIronHUDAliasesTest/content/blob0.bundle",
+      "exists": true,
+      "sha256": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06",
+      "expected": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06"
+    },
+    {
+      "path": "Mods/modInkIronHUDAliasesTest/content/metadata.store",
+      "exists": true,
+      "sha256": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee",
+      "expected": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/texture.cache",
+      "exists": true,
+      "sha256": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7",
+      "expected": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/en.w3strings",
+      "exists": true,
+      "sha256": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+      "expected": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronGear.ws",
+      "exists": true,
+      "sha256": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0",
+      "expected": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronHorse.ws",
+      "exists": true,
+      "sha256": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574",
+      "expected": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronHudScale.ws",
+      "exists": true,
+      "sha256": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec",
+      "expected": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronMinimapClock.ws",
+      "exists": true,
+      "sha256": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2",
+      "expected": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronNpcPlate.ws",
+      "exists": true,
+      "sha256": "ba874e9c56f8f95c9941b24fbd7b580cab56e6d11ac1aca471f1199180be0abb",
+      "expected": "ba874e9c56f8f95c9941b24fbd7b580cab56e6d11ac1aca471f1199180be0abb"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronQuest.ws",
+      "exists": true,
+      "sha256": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78",
+      "expected": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronRadialSigns.ws",
+      "exists": true,
+      "sha256": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582",
+      "expected": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/scripts/local/inkIronHUDStateBridge.ws",
+      "exists": true,
+      "sha256": "9665430025f6558f4d2d97832d137ae69797d7b0a4419617a1c17d29de01fbf2",
+      "expected": "9665430025f6558f4d2d97832d137ae69797d7b0a4419617a1c17d29de01fbf2"
+    },
+    {
+      "path": "bin/config/r4game/user_config_matrix/pc/modInkIronHUDBatch.xml",
+      "exists": true,
+      "sha256": "2bdf35446a1198b22db48c023baf386762d2199477bbe8e959e2120cda9a25c1",
+      "expected": "2bdf35446a1198b22db48c023baf386762d2199477bbe8e959e2120cda9a25c1"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/font-notices/FONT-NOTICES.txt",
+      "exists": true,
+      "sha256": "6e33cc8419d6397f8ff30b652a6e8a079b20549b96e3d0ebb5095f7b294621ba",
+      "expected": "6e33cc8419d6397f8ff30b652a6e8a079b20549b96e3d0ebb5095f7b294621ba"
+    },
+    {
+      "path": "Mods/modInkIronHUDRefinementV2/content/font-notices/OFL-Adobe.txt",
+      "exists": true,
+      "sha256": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+      "expected": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328"
+    }
+  ],
+  "logs": {
+    "cook.full.log": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\cook.full.log",
+      "sha256": "227644112ef8b1b3dc3f0e72eb7ea9fc1f53d18d5bfbddcf3dea8fac5635abb9"
+    },
+    "validate.full.log": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\validate.full.log",
+      "sha256": "82c27a3b83f36f6fb5bc67df4058baa0a8ae8f2123770ab0b4cfe3192b4e1d67"
+    },
+    "pack.full.log": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\pack.full.log",
+      "sha256": "3d62df0486c3fa33dc8764540c1a37083942655ad0d931cfd184b24c8d828e96"
+    },
+    "metadata.stdout.log": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\metadata.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "metadata-relocation.stdout.log": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\metadata-relocation.stdout.log",
+      "sha256": "03848c8b0c9c21226932714269afaa14996d420336abecbd92a33148d5f0cab8"
+    },
+    "metadata-relocation.json": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\metadata-relocation.json",
+      "sha256": "0474606eb156471e37d47acf8e40e33d9f18dab744d7fdcb1964b5ee8aceeb9e"
+    },
+    "independent-validation.json": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-final\\independent-validation.json",
+      "sha256": "d770e2b9eae05197d0baa695c4f946c6b533d83239b4fc6fd0765d328b761f99"
+    }
+  },
+  "tool_sha256": {
+    "build-ink-hud-v3.py": "a52c18254ff9ca0791f9af516783c90a2f772261427adc28f1dafeede60ab361",
+    "flat-vector-xbox.py": "8c0716eeaae73d9e9d9fb9963dc85bff46bcacd967bcaf2e6a5ffeebe75ca949",
+    "validate-ink-hud-v3.py": "512a128d65edfac7fc7ac189f4b68f16f1fc815a054f90e2c1f4d61025e2b6d3",
+    "relocate-hud-metadata.py": "ad52ade66eab6996838416258eaddcf9db226b333a2332be36979358803cab21",
+    "build-ink-hud-v3-diagnostic.py": "c473f83b4a6c6c32223c7a26242889d1652611df230669a3ec3f893514aff9af"
+  },
+  "provenance": "Current deployed accepted v2; pinned pre-glyph private native bases; installed 5.01 retail quickslot movie; system Segoe UI lettering rasterized privately. All asset contents/derivatives remain ignored.",
+  "limitations": [
+    "In-game visibility and live device classification pending",
+    "Bitmap fallback can retain original narrow border blocks shared with non-Xbox images; vector timelines bypass these borders",
+    "Vector contour smoothness and additional shared-menu consumers need in-game checks",
+    "Native v3 metadatastore did not pass; validated bounded metadata relocation used instead",
+    "No fresh WitcherScript compile: unchanged cached compiler controls rechecked against current sources and blobs"
+  ]
+}
