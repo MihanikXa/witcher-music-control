@@ -1,5 +1,7 @@
 # World-music exceptions audit
 
+**Stage1 follow-up (2026-10-13):** The historical routing policy below assumes the earlier custom-bus mixer. Working D uses ancestor Voice Volume instead. A child OutputBus override is not a demonstrated exemption from that gain; see [report28](28-white-orchard-authored-music-policy.md) for current White Orchard classification and proposed State-scope relocation, and [report29](29-regional-comparison-and-scalable-rollout.md) for cross-region mixed-target safeguards. The structural evidence below remains useful; its bus-mixer implementation proposal must not be applied blindly to Stage1.
+
 ## Concrete counts and what they mean
 
 **Observed:** the eight world branches contain **106 direct location/state selectors**: Skellige 23, prologue 9, Misty Island 1, Kaer Morhen 3, NML/Novigrad 48, Wyzima 1, Spiral 2, Toussaint 19. Twenty-four carry an explicit quest ID or “quest” in their container name. That count is not the number of authored-score exceptions.

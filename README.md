@@ -1,8 +1,8 @@
 # Witcher Music Control
 
-**Current status (2026-10-13):** User reports the latest White Orchard music-control test **"Everything works great now"** after the earlier transient exploration-music bursts (report24). The local D implementation and build evidence are now merged with this feedback, but the exact artifact used for that successful gameplay report has not been independently verified. Generic exploration/dialogue suppression and preserved combat were established in the earlier test. Authored quest-score protection remains unconfirmed in game. [Report 25](research/25-white-orchard-followup-success.md) records the update and next steps; older sections document build-stage evidence.
+**Current status (2026-10-13):** User reports satisfactory White Orchard gameplay. [Report27](research/27-working-fix-recovery-and-provenance.md) now identifies the deployed Vortex cache as the verified D Transition Fix Test, preserves source/build provenance and reconfirms native Init. All18 structural checks and32 tests pass. No new bank, deployment or save change was made during recovery.
 
-**Transition investigation:** [Report 25](research/25-transition-bleed-diagnosis-and-local-fix.md) reproduces the defect with native playlists and measures a local correction on five generic exploration playlists. [Report 26](research/26-licensed-transition-fix-candidate.md) records the licensed D build, 18 passing structural checks and verified regional-only Vortex ZIP. Playback probes preserve combat intensity, the Music master and q001 authoring cues. The success feedback has not yet been matched to D's package hash; further deployment requires explicit authorization. Working C and A evidence remain preserved.
+**Next work:** [Report28](research/28-white-orchard-authored-music-policy.md) audits authored cues, especially the still-root-muted `village_q505` selection; authored music remains unconfirmed in game. [Report29](research/29-regional-comparison-and-scalable-rollout.md) compares all eight regional roots and proposes one shared manifest-driven author/validator, with Velen/Novigrad first. A/C/D are preserved; historical build sections below are provenance rather than current licence/loading blockers.
 
 A Witcher 3 Remastered mod project for **context-aware music gain**: reduce routine scoring without removing deliberately authored dramatic music or disturbing the game's native soundtrack transitions.
 
@@ -19,7 +19,7 @@ These are **additional gain multipliers relative to the player's normal Music se
 | Cutscene / movie / music-only cues | 100% | No added attenuation; do not defeat native movie mutes |
 | Gwent, bards/taverns and other diegetic music | TBD | Preserve existing behavior until a separate policy is established |
 
-"100%" means **unity gain**, not force playback or override the player's master Music slider. The 0% requirement is an intended perceptual mute: the proposed Wwise Gain plugin has a finite -96.3 dB floor, so exact silence remains a prototype test.
+"100%" means **unity additional gain**, not forced playback or an override of the player's Music slider. Working Stage1 uses Voice Volume−200 dB for perceptual suppression; measured silence is not proof of mathematical zero. The −96.3 dB Gain-plugin experiment belongs to the historical, deferred mixer.
 
 **Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 

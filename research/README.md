@@ -41,3 +41,11 @@ Do not rebuild the 66 GB depot or write to game paths. See `AGENTS.md` and repor
 - [26: Licensed D build and verified package](26-licensed-transition-fix-candidate.md): structural/playback checks, package hashes and approval boundary.
 
 The source/build provenance is now preserved alongside the remote success feedback. The next evidence gap is matching the user's tested variant to these artifacts and confirming authored cues; the feedback alone does not authorize deployment or regional expansion. This updates the pre-merge next-task wording above.
+
+### Recovery and full-game plan — 2026-10-13
+
+27. [Working-fix recovery and provenance](27-working-fix-recovery-and-provenance.md): deployed D cache and Vortex hardlink identified, native Init/hash preservation,18 repeated gates and32 tests.
+28. [White Orchard authored policy](28-white-orchard-authored-music-policy.md): explicit authored branch versus generic/winter/q505 selections, inherited-volume risks and proposed narrow exceptions.
+29. [Regional comparison and scalable rollout](29-regional-comparison-and-scalable-rollout.md):106 selectors across eight banks, shared reusable inventory, mixed-target/closure differences and manifest-driven NML-first implementation plan.
+
+These resolve the older next-task request to recover the current deployed variant. Next implement the shared author/gate against preserved D, then a reviewed NML offline candidate; authored intent still needs bounded listening/placement evidence. No deployment or expanded bank generation was performed in this audit.
