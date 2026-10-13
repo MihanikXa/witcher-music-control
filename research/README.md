@@ -59,4 +59,6 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 
 33. [Licensed NML baseline](33-licensed-nomansgrad-baseline.md): successful selected untouched build,19 reviewed warnings, native-exact HIRC and423 streams; candidate remains ungenerated.
 
-Next establish a measured regional State decoder and complete threat/zone03 playback controls before candidate approval. The baseline licensing step is now complete. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.
+34. [Regional decoder and transition controls](34-regional-decoder-and-transition-controls.md): derived v150 fields,D regression,84 tests and corrected transport RTPC controls; reproduced NML combat-outro attenuation and stricter source-closure rejection.
+
+Decoder/control work is complete. Next narrow gain ancestry to approved generic playlists outside native transition paths, validate any joint State/static changes, then repeat outro/q505/q001 controls before candidate generation. The baseline licensing step remains complete. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.

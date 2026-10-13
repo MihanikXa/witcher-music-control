@@ -133,6 +133,13 @@
           },
           "original_volume": {
             "type": "number"
+          },
+          "transition_attenuation_approved": {
+            "type": "boolean"
+          },
+          "transition_evidence": {
+            "type": "string",
+            "minLength": 1
           }
         }
       }

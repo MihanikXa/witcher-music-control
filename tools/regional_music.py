@@ -26,7 +26,9 @@ MUTED = {'exploration', 'exploration_night', 'focus_exploration',
 
 
 def graph(tree):
-    objects = {n.get('ID'): n for n in tree.iter() if n.get('ID') and n.tag != 'ObjectRef'}
+    # Reference IDs identify their target, not a second object. In particular
+    # TransitionObjectRef must never overwrite the real segment in this map.
+    objects = {n.get('ID'): n for n in tree.iter() if n.get('ID') and not n.tag.endswith('Ref')}
     parents = {c: p for p in tree.iter() for c in p}
     consumers = {}
     for selector in tree.iter('MusicSwitchContainer'):
@@ -89,6 +91,23 @@ def plan(original, spec, states):
         if any(n.get('ID') in scopes for n in chain[1:]):
             raise ValueError('Overlapping State gains')
     decisions = spec['decisions']
+    # Switch entries do not enumerate all consumers. Native transition rules
+    # may directly play a segment inside a playlist after game_state changes.
+    # Require separate approval for attenuation of such physical ancestry.
+    if not replay:
+        for ref in original.iter('TransitionObjectRef'):
+            target = objects.get(ref.get('ID'))
+            if target is None:
+                raise ValueError('Unresolved native transition target')
+            chain = list(ancestors(target, parents))
+            if not {n.get('ID') for n in chain} & (set(scopes) | set(static)):
+                continue
+            playlist = next((n for n in chain if n.tag == 'MusicPlaylistContainer'), None)
+            decision = decisions.get(playlist.get('ID') if playlist is not None else '', {})
+            if (decision.get('transition_attenuation_approved') is not True
+                    or not decision.get('transition_evidence') or decision.get('policy') != 'approved'
+                    or decision.get('classification') != 'generic'):
+                raise ValueError('Unreviewed native transition attenuation: ' + ref.get('ID'))
     # Require a declaration for every noncombat choice, not every node name.
     required = {ident for ident, use in consumers.items() if any(
         set(path) & set(spec['muted_states']) and world in ancestors(objects[ident], parents)

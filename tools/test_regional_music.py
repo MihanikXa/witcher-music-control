@@ -47,6 +47,21 @@ def fixture():
 
 
 class RegionalTests(unittest.TestCase):
+    def test_transition_consumer_missing_review_fails(self):
+        a,b,s,states,t=fixture();playlist=next(n for n in a.iter() if n.get('ID')=='generic')
+        E.SubElement(E.SubElement(playlist,'ChildrenList'),'MusicSegment',ID='transition-segment')
+        E.SubElement(a,'TransitionObjectRef',ID='transition-segment')
+        with self.assertRaisesRegex(ValueError,'Unreviewed native transition attenuation'):plan(a,s,states)
+
+    def test_explicit_transition_review_is_required(self):
+        a,b,s,states,t=fixture();playlist=next(n for n in a.iter() if n.get('ID')=='generic')
+        E.SubElement(E.SubElement(playlist,'ChildrenList'),'MusicSegment',ID='transition-segment')
+        E.SubElement(a,'TransitionObjectRef',ID='transition-segment')
+        s['decisions']['generic'].update(transition_attenuation_approved=True,transition_evidence='Synthetic approved generic transition only')
+        plan(a,s,states)
+        s['decisions']['generic']['transition_evidence']=''
+        with self.assertRaisesRegex(ValueError,'Unreviewed native transition attenuation'):plan(a,s,states)
+
     def test_isolated_exception_and_coverage_pass(self):
         self.assertTrue(validate_source(*fixture())['passed'])
 

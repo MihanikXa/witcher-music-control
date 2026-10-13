@@ -20,7 +20,7 @@ GENERIC = {
 }
 
 
-def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None):
+def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -91,7 +91,9 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
         "authored-world": [(0, "exploration", None), (6, "dialog_scene", None), (10, "cutscene", None), (10.4, "dialog_scene", None), (13, "combat", None)],
         "gwent": [(0, "gwent", None)],
     }
-    evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "location": location, "cases": []}
+    evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "location": location,
+                "location_event": location_event, "explicit_threat_zero": explicit_threat_zero,
+                "preplay_settle_seconds": 1.1 if explicit_threat_zero else 0, "cases": []}
     api.call("ak.wwise.core.profiler.startCapture")
     try:
         for mode in modes:
@@ -124,11 +126,24 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
                     continue
                 api.call("ak.wwise.core.transport.executeAction", {"action": "stop"})
                 api.call("ak.soundengine.setState", {"stateGroup": "game_state", "state": sequence[0][1]})
+                if explicit_threat_zero:
+                    # Fixture control, not a production change. Set global threat
+                    # explicitly before any transport, then settle native fades.
+                    # Omitting gameObject is the documented transport scope.
+                    # Reset global history separately; a transport override can
+                    # otherwise mask global scheduled changes.
+                    for parameter in ('threat_rating', 'menu_volume_music'):
+                        api.call('ak.soundengine.resetRTPCValue', {'rtpc': parameter, 'gameObject': 18446744073709551615})
+                        api.call('ak.soundengine.resetRTPCValue', {'rtpc': parameter})
+                    api.call("ak.soundengine.setRTPCValue", {"rtpc": "threat_rating", "value": 0})
+                    api.call("ak.soundengine.setRTPCValue", {"rtpc": "menu_volume_music", "value": 100})
+                    time.sleep(1.1)
                 api.call("ak.wwise.core.object.setProperty", {"object": recorder, "property": "AuthoringFilename", "value": str(out / f"{mode}-{label}.wav")})
                 api.call("ak.wwise.core.transport.executeAction", {"transport": anchor_transport, "action": "play"})
                 started = time.monotonic()
-                api.call("ak.soundengine.resetRTPCValue", {"rtpc": "threat_rating"})
-                api.call("ak.soundengine.resetRTPCValue", {"rtpc": "menu_volume_music"})
+                if not explicit_threat_zero:
+                    api.call("ak.soundengine.resetRTPCValue", {"rtpc": "threat_rating"})
+                    api.call("ak.soundengine.resetRTPCValue", {"rtpc": "menu_volume_music"})
                 if label == "q001-direct":
                     authored = api.call("ak.wwise.core.transport.create", {"object": "{EFA886D9-2BAD-4354-9DC3-BC08E2E75727}"})["transport"]
                     api.call("ak.wwise.core.transport.executeAction", {"transport": authored, "action": "play"})
@@ -150,11 +165,18 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
                         row["events"].append({"scheduled": scheduled, "accepted": time.monotonic() - started, "state": state, "event": event})
                     while parameters and elapsed >= parameters[0][0]:
                         scheduled, parameter, value = parameters.pop(0)
-                        api.call("ak.soundengine.setRTPCValue", {"rtpc": parameter, "value": value, "gameObject": 18446744073709551615})
+                        args = {"rtpc": parameter, "value": value}
+                        if not explicit_threat_zero:
+                            args['gameObject'] = 18446744073709551615
+                        api.call("ak.soundengine.setRTPCValue", args)
                         row["events"].append({"scheduled": scheduled, "accepted": time.monotonic() - started, "parameter": parameter, "value": value})
                     voices = api.call("ak.wwise.core.profiler.getVoices", {"time": "capture"}, {"return": ["pipelineID", "objectName", "baseVolume", "isVirtual", "isStarted"]})["return"]
                     contributions = {str(v["pipelineID"]): api.call("ak.wwise.core.profiler.getVoiceContributions", {"time": "capture", "voicePipelineID": v["pipelineID"]}) for v in voices if "Anchor" not in v["objectName"]}
-                    row["samples"].append({"time": time.monotonic() - started, "voices": voices, "contributions": contributions})
+                    sample = {"time": time.monotonic() - started, "voices": voices, "contributions": contributions}
+                    if explicit_threat_zero:
+                        sample['rtpcs'] = [x for x in api.call('ak.wwise.core.profiler.getRTPCs', {'time': 'capture'})['return']
+                                           if x['name'] in ('threat_rating', 'menu_volume_music')]
+                    row["samples"].append(sample)
                     time.sleep(.08)
                 api.call("ak.wwise.core.transport.executeAction", {"action": "stop"})
                 time.sleep(.25)
@@ -166,6 +188,9 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
         api.call("ak.wwise.core.profiler.stopCapture")
         api.call("ak.soundengine.resetRTPCValue", {"rtpc": "threat_rating"})
         api.call("ak.soundengine.resetRTPCValue", {"rtpc": "menu_volume_music"})
+        if explicit_threat_zero:
+            for parameter in ('threat_rating', 'menu_volume_music'):
+                api.call('ak.soundengine.resetRTPCValue', {'rtpc': parameter, 'gameObject': 18446744073709551615})
     print(out)
 
 
@@ -179,7 +204,8 @@ if __name__ == "__main__":
     parser.add_argument("--location", choices=["village", "nilfgaard_camp", "cemetery", "battlefield"], default="village")
     parser.add_argument('--manifest', type=Path)
     parser.add_argument('--location-event')
+    parser.add_argument('--explicit-threat-zero', action='store_true', help='Fixture-only preplay threat=0/Music=100 control with 1.1s settling')
     args = parser.parse_args()
     if "D-probe" in args.modes and args.modes != ["D-probe"]:
         parser.error("D-probe mutates fixture playlists: run it separately, after baseline/C")
-    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event)
+    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event, args.explicit_threat_zero)
