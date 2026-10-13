@@ -1,6 +1,7 @@
 # Ink & Iron HUD refinement v2 — private test build
 
 12 October 2026. A targeted successor to the user's functioning HUD batch v1.
+**13 October user runtime feedback:** v2 works and the slimmer enemy overhead geometry is liked; the **red health bar and hostile name remain too pale**, while the new flat controller button art is **not observed**. See [runtime feedback and glyph diagnosis](ink-hud-refinement-v2-runtime-feedback.md). Build-time `runtime_tested: false` refers to the time of packaging, not this later report.
 This preserves accepted player-bars v1, boss presentation and all unrelated HUD
 logic. Author assets, private ActionScript derivatives, native binaries and ZIPs
 remain in ignored build/deploy directories. No live deployment is performed.
