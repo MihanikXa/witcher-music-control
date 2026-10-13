@@ -18,6 +18,28 @@ The **12 October build-time** resource-owner audit recorded `modInkIronHUDRefine
 
 The current `tools/refine-ink-hud-movies.py` patches the `ICO_Xbox_*` SymbolClass/1008 external image rectangles to a new atlas while preserving symbol IDs. The v2 build has **306 identities across nine movies** and passed static packaging/resource checks. This establishes resource content, not that the *runtime buttons* use these icon definitions. It may be a wrong surface, competing owner, different input-device path, or a runtime texture/layout issue. No single cause has yet been demonstrated.
 
+## 13 October 2026 — user-provided Vortex load-order export checked
+
+User supplied `loadordenow.json`: **45 unique mods, all enabled, 0–44 unique contiguous numeric prefixes**. This is a user-provided *load-order export*, not independent live inspection of bundle bytes, actual `mods.settings` on disk, game resource winner or UI textures. It supersedes the old **assumed** build-time priority numbers for evaluating the ordering question.
+
+| Prefix (lower wins) | Enabled mod |
+| ---: | --- |
+| 10 | `modHoods` |
+| 18 | `modFriendlyHUD` |
+| 28 | `modInkIronAdaptiveBarsTest` |
+| 29 | `modInkIronHUDAliasesTest` |
+| **30** | **`modInkIronHUDRefinementV2`** |
+| 31 | `modSeamlessAdaptiveHUD` |
+| 35 | `modGeraltOutfitWheel` |
+| 36 | `modQuietEditorialNPCColorsV4` |
+| 37 | `modQuietEditorialNPCShadow` |
+| 42 | `modFieldFolioInteractionsV2` |
+| 43 | `modQuietEditorialSubtitleShadow` |
+
+The older `modInkIronHUDBatchTest` **is not listed**. The intended v2, accepted bars and alias folders are enabled. In the exported order, v2 outranks the SAHUD and Outfit Wheel UI resources where they conflict. Therefore **do not prescribe a blanket Vortex sort/priorities change**: nothing in this list identifies a priority fault causing unchanged/missing modern controller glyphs. Earlier candidate 31 / wheel 36 numbers were merely a different profile snapshot; relative precedence is unchanged.
+
+**Next diagnostic:** verify deployment and runtime selected resource hashes for representative **shared HUD root `hud.redswf`**, `panel_common.redswf` and `panel_overlay.redswf`, plus actual in-game HUD/dialogue glyph movie. Then trace whether the displayed controller icons consume patched `ICO_Xbox_*` character IDs/1008 image rectangles or a separate provider (e.g., actual selected input-device art). Differentiate old artwork still rendered, missing art, and art not updated only in menus outside v2's declared coverage. Only create a minimal visibly distinctive private probe if needed. Existing v2 geometry is accepted and must not be changed for this investigation.
+
 ## Next read-only local diagnostic before rewriting glyph art
 
 1. Read the **actual current** installed `mods.settings` and Vortex clone deployment; enumerate every enabled same-resource bundle/loose movie owner for `hud.redswf`, `common/panel_common.redswf`, `overlay/panel_overlay.redswf`, `hud_controlsfeedback.redswf`, `hud_iteminfo.redswf`, `hud_dialog.redswf` and any shown button owner. Report exact priorities, selected resource SHA-256 and whether the current v2 22-key ZIP is installed/enabled as intended. Do **not** assume priorities from the old receipt.
