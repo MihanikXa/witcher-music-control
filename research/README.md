@@ -57,4 +57,6 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 31. [Authored-world exception proof](31-authored-world-exception-proof.md):20 native-playlist captures, q505 physical isolation, protected q001/Music/Gwent evidence and remaining intensity/policy limitations.
 32. [NML scoped source results](32-nomansgrad-scoped-source-results.md): two reviewed scopes, conservative58-entry classification, six zone02 captures and fresh-baseline licensing stop.
 
-Next apply the entitlement manually to the isolated NML baseline, then establish a measured regional State decoder before candidate approval. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.
+33. [Licensed NML baseline](33-licensed-nomansgrad-baseline.md): successful selected untouched build,19 reviewed warnings, native-exact HIRC and423 streams; candidate remains ungenerated.
+
+Next establish a measured regional State decoder and complete threat/zone03 playback controls before candidate approval. The baseline licensing step is now complete. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.
