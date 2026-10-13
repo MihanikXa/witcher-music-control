@@ -1,6 +1,6 @@
 # Witcher Music Control
 
-**Current status (2026-10-12):** Stage1 regional-only soundbank has been tested in the retail game by the user and reportedly suppresses exploration and ordinary dialogue music while retaining combat music. **Known audible defect:** brief (~1s) exploration-music swells during some dialogue transitions and before combat music begins. Authored music unconfirmed in game. [Report 24](research/24-first-runtime-feedback.md) is the live status; earlier below sections document superseded build-stage gates.
+**Current status (2026-10-13):** User reports the latest White Orchard music-control test **"Everything works great now"** after the earlier transient exploration-music bursts (report24). The exact locally tested correction has not yet been synced with GitHub; do not infer its implementation. Generic exploration/dialogue suppression and preserved combat were established in the earlier test. Authored quest-score protection remains unconfirmed in game. [Report 25](research/25-white-orchard-followup-success.md) records the update and next steps; older sections document build-stage evidence.
 
 A Witcher 3 Remastered mod project for **context-aware music gain**: reduce routine scoring without removing deliberately authored dramatic music or disturbing the game's native soundtrack transitions.
 
