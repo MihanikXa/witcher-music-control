@@ -1,6 +1,8 @@
 # Ink & Iron HUD Refinement v4 — private visual polish
 
-This release builds on the deployed, working v3 movies. No deployment, settings,
+This release builds on the deployed, working v3 movies.
+**Latest 13 October user in-game feedback:** v4 reds are perfect, Ink & Iron quickslots are restored, new glyph overall size/style is significantly improved; however inner button letters are too large and **LB radial sign/Axii menu no longer opens**. See [runtime feedback and regression triage](ink-hud-refinement-v4-runtime-feedback.md). Treat this as an open functional blocker; the immutable offline build manifest predates this test.
+No deployment, settings,
 menu registration, saves or merged scripts are changed by the builder. Runtime
 acceptance remains pending; cooking does not establish in-game appearance.
 
