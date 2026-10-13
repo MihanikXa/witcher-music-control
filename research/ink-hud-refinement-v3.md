@@ -85,6 +85,14 @@ coordinated hostile result. Neutral/friendly/Axii/VIP and shadows are unchanged.
 Health fill remains 3.8 px, compact spacing/lock/level treatment remains v2.
 Boss, separate player-bars package and all other successful resources are kept.
 
+### Investigation note — saturated pre-attack warning (13 October)
+
+The user observed a brief **very saturated red flash/effect over ordinary enemy health/nameplate while fighting wolves** but was unsure whether it coincided with Geralt taking damage. **High-probability identification, not yet video-confirmed:** Witcher 3's enemy **dodge feedback / pre-attack telegraph**, which flashes the enemy bar/name when an enemy winds up an attack, *before Geralt is hit*. External mod evidence explicitly describes the red enemy healthbar flash before an attack (Disabled Dodge Feedback, Nexus #4867; FriendlyHUD + Enemy HUD 2.0 merge-request discussion), and combat documentation describes a counterattack window glow. The game's Seamless Adaptive HUD mod also refers to the game's red warning bar during attack windup.
+
+**Important implementation distinction:** this is **not necessarily** the `iaiLag` delayed health-loss fill (`#C98678` in v3). Altering only the damage-lag color may leave the bright telegraph entirely unchanged. V2's `tools/refine-ink-hud-movies.py` scales the native `mcDodgeFeedback` movie clip to 80%, but does not demonstrate reducing its red flash saturation/opacity. Before fixing, trace the actual working `HudModuleEnemyFocus` clip/timeline, `mcDodgeFeedback`, any attack warning tween or effect-layer color transform, and interaction with SAHUD's configurable attack-ring/mark handling. Find the active red paint source rather than desaturate the base health fill.
+
+Recommended future revision: retain the **timing and function** of pre-attack feedback; make the warning subtler (lower alpha and/or harmonize its red with the accepted richer bar/name palette). Preserve accepted compact enemy geometry and all boss behavior. Ask for a short combat clip or controlled wolf attack if confirming the exact rendered effect is needed. **No code or visual fix is claimed by this documentation entry.** Source pointers: https://www.nexusmods.com/witcher3/mods/4867 ; https://forums.nexusmods.com/topic/6554121-merge-request-friendly-hud-enemy-hud-20/ ; https://www.nexusmods.com/witcher3/mods/13194
+
 ## Build and validation
 
 Run with the bundled Python environment containing Pillow, from the repository:
