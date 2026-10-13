@@ -1,6 +1,7 @@
 # HUD Refinement v3 — Xbox rendering correction and richer reds
 
-13 October 2026. Private test release; no deployment performed. Runtime
+13 October 2026. Private test release; no deployment performed.
+**Later explicit screenshot feedback:** glyphs now appear but are pixelated, oversized and misaligned; ordinary hostile reds could be richer; the likely dodge-feedback flash should be muted without losing its greater vividness relative to the health bar. See [latest visual polish feedback](ink-hud-visual-polish-feedback.md). Runtime
 acceptance is pending. V2 remains the accepted geometry/functionality rollback.
 
 | Component | Result |
