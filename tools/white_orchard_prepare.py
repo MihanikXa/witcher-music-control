@@ -115,7 +115,7 @@ def prepare_defaults(source, output, record=None):
         save_xml(tree, output / path.relative_to(source))
 
 
-def prepare(source, output, preserve_hierarchies=False):
+def prepare(source, output, preserve_hierarchies=False, regional_root=None):
     source = Path(source).resolve()
     output = build_path(output)
     if output.exists():
@@ -123,6 +123,10 @@ def prepare(source, output, preserve_hierarchies=False):
     if source == output or source.is_relative_to(output):
         raise ValueError("Input and output overlap")
     config = json.loads(CONFIG.read_text())
+    if regional_root is not None:
+        if not preserve_hierarchies:
+            raise ValueError('Regional selection requires complete preserved hierarchies')
+        config['regional_root'] = regional_root
     project = ET.parse(source / "w3_audio.wproj")
     version = project.getroot().attrib
     for field, expected in (("SchemaVersion", str(config["schema_version"])),
@@ -217,5 +221,6 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--preserve-hierarchies", action="store_true",
                         help="Retain all work units/default contents for Init fidelity investigations")
+    parser.add_argument('--regional-root', help='Copy media for this existing region; requires complete hierarchies')
     args = parser.parse_args()
-    prepare(args.audio_project, args.output, args.preserve_hierarchies)
+    prepare(args.audio_project, args.output, args.preserve_hierarchies, args.regional_root)

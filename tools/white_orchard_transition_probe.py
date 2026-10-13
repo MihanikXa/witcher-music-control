@@ -20,7 +20,7 @@ GENERIC = {
 }
 
 
-def run(project, name, port, modes, selected, location="village"):
+def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -29,17 +29,25 @@ def run(project, name, port, modes, selected, location="village"):
         raise ValueError("Simple output name required")
     out = project.parent / name
     out.mkdir(exist_ok=False)
-    api.call("ak.wwise.core.object.setStateProperties", {"object": WORLD, "stateProperties": ["Volume"]})
-    api.call("ak.wwise.core.object.setStateGroups", {"object": WORLD, "stateGroups": [GROUP]})
+    regional = json.loads(manifest.read_text()) if manifest else None
+    regional_modes = {'manifest', 'D-reference', 'native-reference'}
+    if set(modes) & regional_modes and (regional is None or not set(modes) <= regional_modes):
+        raise ValueError('Regional probes require a manifest and regional modes only')
+    world_id = regional['facts']['world']['id'] if regional else WORLD
+    group_id = regional['game_state_group'] if regional else GROUP
+    if regional is None:
+        api.call("ak.wwise.core.object.setStateProperties", {"object": world_id, "stateProperties": ["Volume"]})
+        api.call("ak.wwise.core.object.setStateGroups", {"object": world_id, "stateGroups": [group_id]})
     api.call("ak.wwise.core.project.save")
-    world = next(x for x in ET.parse(project.parent / "Interactive Music Hierarchy/music.wwu").iter("MusicSwitchContainer") if x.get("ID") == WORLD)
+    world = next(x for x in ET.parse(project.parent / "Interactive Music Hierarchy/music.wwu").iter("MusicSwitchContainer") if x.get("ID") == world_id)
     states = {x.find("StateRef").get("Name"): x.find("CustomState").get("ID") for x in world.findall("./StateInfo/CustomStateList/CustomState")}
-    assert len(states) == 25
+    if regional is None:
+        assert len(states) == 25
     spec = json.loads((Path(__file__).resolve().parents[1] / "src/wwise/white-orchard-state-volume.json").read_text())
     fix = json.loads((Path(__file__).resolve().parents[1] / "src/wwise/white-orchard-transition-fix.json").read_text())
     if GENERIC != {target["id"]: target["name"] for target in fix["targets"]}:
         raise ValueError("Fixture and production target specifications disagree")
-    if modes != ["D-probe"]:
+    if regional is None and modes != ["D-probe"]:
         for target in fix["targets"]:
             saved = next(n for n in ET.parse(project.parent / "Interactive Music Hierarchy/music.wwu").iter("MusicPlaylistContainer") if n.get("ID") == target["id"])
             from white_orchard_transition_author import volume
@@ -61,7 +69,13 @@ def run(project, name, port, modes, selected, location="village"):
         "autoCheckOutToSourceControl": False, "imports": [{"objectPath": anchor, "objectType": "Sound", "audioFile": str(silent),
         "@OverrideOutput": True, "@OutputBus": MUSIC, "@OverrideVirtualVoice": True, "@BelowThresholdBehavior": 0}]})
     anchor_transport = api.call("ak.wwise.core.transport.create", {"object": anchor})["transport"]
-    event_transport = api.call("ak.wwise.core.transport.create", {"object": r"\Events\music\prologue\play_music_prologue"})["transport"]
+    region_name = regional['region'] if regional else 'music_prologue'
+    events = {n.get('Name'): n.get('ID') for n in ET.parse(project.parent / 'Events/music.wwu').iter('Event')}
+    play_event = 'play_' + region_name
+    location_event = location_event or 'mus_loc_prologue_' + location
+    if play_event not in events or location_event not in events:
+        raise ValueError('Unverified native event')
+    event_transport = api.call("ak.wwise.core.transport.create", {"object": events[play_event]})["transport"]
     cases = {
         "e-combat": [(0, "exploration", None), (6, "combat", None), (13, "exploration", None)],
         "e-combat-offset": [(0, "exploration", None), (7.3, "combat", None)],
@@ -74,11 +88,31 @@ def run(project, name, port, modes, selected, location="village"):
         "q001-direct": [(0, "dialog_scene", None)],
         "night-combat": [(0, "exploration_night", None), (6, "combat", None), (13, "exploration_night", None)],
         "long-silence-combat": [(0, "exploration", None), (35, "combat", None), (42, "exploration", None)],
+        "authored-world": [(0, "exploration", None), (6, "dialog_scene", None), (10, "cutscene", None), (10.4, "dialog_scene", None), (13, "combat", None)],
+        "gwent": [(0, "gwent", None)],
     }
     evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "location": location, "cases": []}
     api.call("ak.wwise.core.profiler.startCapture")
     try:
         for mode in modes:
+            if regional:
+                # A/B authoring fixture control: D-reference recreates root gain
+                # while zeroing descendant gains, never changes production D.
+                scope_ids = list(regional['state_scopes'])
+                api.call('ak.wwise.core.object.setStateProperties', {'object': world_id, 'stateProperties': ['Volume'] if mode == 'D-reference' else []})
+                api.call('ak.wwise.core.object.setStateGroups', {'object': world_id, 'stateGroups': [group_id] if mode == 'D-reference' else []})
+                api.call('ak.wwise.core.project.save')
+                current = ET.parse(project.parent / 'Interactive Music Hierarchy/music.wwu')
+                for node in current.iter('MusicSwitchContainer'):
+                    if node.get('ID') not in scope_ids + [world_id]:
+                        continue
+                    for row_state in node.findall('./StateInfo/CustomStateList/CustomState'):
+                        muted = row_state.find('StateRef').get('Name') in regional['muted_states']
+                        enabled = (mode == 'D-reference' and node.get('ID') == world_id) or (mode == 'manifest' and node.get('ID') in scope_ids)
+                        api.call('ak.wwise.core.object.setProperty', {'object': row_state.find('CustomState').get('ID'), 'property': 'Volume', 'value': -200 if muted and enabled else 0})
+                for ident in regional['static_targets']:
+                    gain = regional['decisions'][ident]['original_volume'] if mode == 'native-reference' else -200
+                    api.call('ak.wwise.core.object.setProperty', {'object': ident, 'property': 'Volume', 'value': gain})
             if mode == "D-probe":
                 for ident in GENERIC:
                     api.call("ak.wwise.core.object.setProperty", {"object": ident, "property": "Volume", "value": -200})
@@ -100,7 +134,7 @@ def run(project, name, port, modes, selected, location="village"):
                     api.call("ak.wwise.core.transport.executeAction", {"transport": authored, "action": "play"})
                 else:
                     api.call("ak.wwise.core.transport.executeAction", {"transport": event_transport, "action": "play"})
-                    api.call("ak.soundengine.postEvent", {"event": "mus_loc_prologue_" + location, "gameObject": 18446744073709551614})
+                    api.call("ak.soundengine.postEvent", {"event": location_event, "gameObject": 18446744073709551614})
                 row = {"mode": mode, "case": label, "events": [], "samples": []}
                 pending = list(sequence)
                 parameters = ([(10, "threat_rating", 35), (14, "threat_rating", 100)] if label == "combat-threat" else
@@ -140,10 +174,12 @@ if __name__ == "__main__":
     parser.add_argument("--project", required=True, type=Path)
     parser.add_argument("--name", default="native-transitions")
     parser.add_argument("--port", default=18090, type=int)
-    parser.add_argument("--modes", nargs="+", choices=["baseline", "C", "D-probe"], default=["baseline", "C"])
+    parser.add_argument("--modes", nargs="+", choices=["baseline", "C", "D-probe", "D-reference", "native-reference", "manifest"], default=["baseline", "C"])
     parser.add_argument("--cases", nargs="+")
     parser.add_argument("--location", choices=["village", "nilfgaard_camp", "cemetery", "battlefield"], default="village")
+    parser.add_argument('--manifest', type=Path)
+    parser.add_argument('--location-event')
     args = parser.parse_args()
     if "D-probe" in args.modes and args.modes != ["D-probe"]:
         parser.error("D-probe mutates fixture playlists: run it separately, after baseline/C")
-    run(args.project, args.name, args.port, args.modes, args.cases, args.location)
+    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event)

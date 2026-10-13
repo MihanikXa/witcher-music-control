@@ -1,0 +1,154 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "region": "music_prologue",
+  "purpose": "retained-D-regression",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "facts": {
+    "root": {
+      "id": "{A9E3330C-5726-4E53-8974-7EB1BB7C19E3}",
+      "name": "music_prologue",
+      "short_id": "287204113"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{1A59CC64-141A-45A6-8374-EB823D3E9D4F}",
+      "short_id": "1033516231",
+      "line": 122301
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{3853873C-3918-48C8-BAF1-9D80BD5E3C2E}",
+      "short_id": "323955723",
+      "line": 114180
+    },
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259"
+  },
+  "state_scopes": [
+    "{1A59CC64-141A-45A6-8374-EB823D3E9D4F}"
+  ],
+  "static_targets": [
+    "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}",
+    "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+    "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}",
+    "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}",
+    "{D79C5D2C-22B5-4855-882B-FD18E348605D}"
+  ],
+  "decisions": {
+    "{05C678F5-767D-4567-B91E-A2BABB727D2A}": {
+      "name": "expl_silent",
+      "short_id": 646040314,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Selected AudioFile matches sample-verified all-zero silent_wave_10s from report07; separate combat/Gwent nodes.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}": {
+      "name": "expl_nilfgaard_camp",
+      "short_id": 883068472,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{4A23933D-BE41-4C79-BED2-337D24C605EA}": {
+      "name": "village_exploration",
+      "short_id": 133462974,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -2.0
+    },
+    "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}": {
+      "name": "expl_battlefield",
+      "short_id": 833483595,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 1.0
+    },
+    "{6DBB272B-C4D6-4A57-9939-B9690EF4C0D2}": {
+      "name": "expl_silent",
+      "short_id": 102875389,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Selected AudioFile matches sample-verified all-zero silent_wave_10s from report07; separate combat/Gwent nodes.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{7F25E162-CD2C-4E73-8A67-E3DCB41564BA}": {
+      "name": "expl_prologue_inquisitors",
+      "short_id": 589261176,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}": {
+      "name": "expl_cemetery",
+      "short_id": 1049502408,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 1.0
+    },
+    "{C38A35E3-857B-4035-9852-B3F01E78ADA6}": {
+      "name": "village_exploration",
+      "short_id": 251819879,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{D79C5D2C-22B5-4855-882B-FD18E348605D}": {
+      "name": "expl_nml_zone_01_PROLOGUE_NIGHT",
+      "short_id": 168472101,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{DB2D1857-52A0-4562-BA04-3104EB7CA2AA}": {
+      "name": "expl_tavern_winter",
+      "short_id": 531434506,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    }
+  },
+  "regression_static_ids": [
+    "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}",
+    "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+    "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}",
+    "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}",
+    "{D79C5D2C-22B5-4855-882B-FD18E348605D}"
+  ]
+}

@@ -25,16 +25,19 @@ class Waapi:
         return result
 
 
-def generate(console, project, output):
+def generate(console, project, output, bank='music_prologue'):
     project = build_path(project)
     output = build_path(output)
     if project.parent.name == "validation":
         raise ValueError("Never generate banks from the instrumented validation project")
     if not project.is_file():
         raise FileNotFoundError(project)
-    output.mkdir(parents=True, exist_ok=True)
+    if bank not in {'music_prologue', 'music_nomansgrad', 'music_skellige', 'music_kaer_morhen',
+                    'music_toussaint', 'music_wyzima_castle', 'music_misty_island', 'music_spiral'}:
+        raise ValueError('Unreviewed regional bank name')
+    output.mkdir(parents=True, exist_ok=False)
     args = [str(console), "generate-soundbank", str(project),
-            "--bank", "music_prologue", "--platform", "Windows", "--language", "SFX",
+            "--bank", bank, "--platform", "Windows", "--language", "SFX",
             "--soundbank-path", "Windows", str(output),
             "--cache", str(project.parent / ".cache"),
             "--root-output-path", str(output / "metadata"),
@@ -48,7 +51,8 @@ def generate(console, project, output):
         process = subprocess.run(args, cwd=project.parent, stdout=log, stderr=subprocess.STDOUT)
     names = sorted(p.name for p in output.rglob("*.bnk"))
     result = {"exit_code": process.returncode, "banks": names,
-              "output": str(output), "expected_banks_only": names == ["Init.bnk", "music_prologue.bnk"]}
+              "output": str(output), "selected_bank": bank,
+              "expected_banks_only": names == sorted(["Init.bnk", bank + '.bnk'])}
     (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps(result))
     if process.returncode not in (0, 2) or not result["expected_banks_only"]:
@@ -60,5 +64,6 @@ if __name__ == "__main__":
     parser.add_argument("--console", required=True, type=Path)
     parser.add_argument("--project", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument('--bank', default='music_prologue')
     args = parser.parse_args()
-    generate(args.console, args.project, args.output)
+    generate(args.console, args.project, args.output, args.bank)

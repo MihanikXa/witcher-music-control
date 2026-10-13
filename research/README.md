@@ -48,4 +48,13 @@ The source/build provenance is now preserved alongside the remote success feedba
 28. [White Orchard authored policy](28-white-orchard-authored-music-policy.md): explicit authored branch versus generic/winter/q505 selections, inherited-volume risks and proposed narrow exceptions.
 29. [Regional comparison and scalable rollout](29-regional-comparison-and-scalable-rollout.md):106 selectors across eight banks, shared reusable inventory, mixed-target/closure differences and manifest-driven NML-first implementation plan.
 
-These resolve the older next-task request to recover the current deployed variant. Next implement the shared author/gate against preserved D, then a reviewed NML offline candidate; authored intent still needs bounded listening/placement evidence. No deployment or expanded bank generation was performed in this audit.
+Reports27–29 resolved recovery and proposed the shared implementation. The newer results below supersede their next-task instructions.
+
+
+### Shared implementation — 2026-10-13
+
+30. [Shared regional authoring](30-shared-regional-authoring.md): manifests, fail-closed source/cache gates, retained-D regression,59 tests and explicit new-bank decoder blocker.
+31. [Authored-world exception proof](31-authored-world-exception-proof.md):20 native-playlist captures, q505 physical isolation, protected q001/Music/Gwent evidence and remaining intensity/policy limitations.
+32. [NML scoped source results](32-nomansgrad-scoped-source-results.md): two reviewed scopes, conservative58-entry classification, six zone02 captures and fresh-baseline licensing stop.
+
+Next apply the entitlement manually to the isolated NML baseline, then establish a measured regional State decoder before candidate approval. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.

@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Regional fixed music policy, schema 1",
+  "type": "object",
+  "required": [
+    "schema",
+    "wwise_build",
+    "region",
+    "purpose",
+    "facts",
+    "game_state_group",
+    "muted_states",
+    "state_scopes",
+    "static_targets",
+    "decisions"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "wwise_build": {
+      "const": 8928
+    },
+    "region": {
+      "type": "string"
+    },
+    "purpose": {
+      "enum": [
+        "retained-D-regression",
+        "exception-fixture",
+        "scoped-pilot"
+      ]
+    },
+    "game_state_group": {
+      "type": "string"
+    },
+    "facts": {
+      "type": "object",
+      "required": [
+        "root",
+        "world",
+        "quest",
+        "original_music_sha256",
+        "input_hashes",
+        "template_source_sha256"
+      ],
+      "properties": {
+        "root": {
+          "$ref": "#/$defs/identity"
+        },
+        "world": {
+          "$ref": "#/$defs/identity"
+        },
+        "quest": {
+          "$ref": "#/$defs/identity"
+        },
+        "original_music_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "input_hashes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "muted_states": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "state_scopes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "static_targets": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "decisions": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "name",
+          "short_id",
+          "classification",
+          "policy",
+          "evidence",
+          "fact_status",
+          "original_volume"
+        ],
+        "properties": {
+          "classification": {
+            "enum": [
+              "generic",
+              "silent",
+              "protected",
+              "mixed",
+              "unresolved"
+            ]
+          },
+          "policy": {
+            "enum": [
+              "approved",
+              "pending",
+              "technical-fixture-only"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "short_id": {
+            "type": "integer"
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fact_status": {
+            "type": "string"
+          },
+          "original_volume": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "identity": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "short_id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "short_id": {
+          "type": [
+            "integer",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}
