@@ -4,6 +4,8 @@
 
 > Check the repo. The reds are perfect, the quickslots are back, the buttons are the right size and looking much better, but the letters inside are filling the circle a bit too much (are too big), and the circle/axi/lb selection menu was broken and doesn't open, the rest is fine.
 
+> Nope, tab is just as broken
+
 ## Scope and status
 
 | Surface | Latest user status | Change permission |
@@ -13,7 +15,7 @@
 | Ink & Iron bottom-left quickslots | **Accepted/restored** | Keep I&I quickslot styling and function; **do not revert to vanilla/retail** to paper over radial problem |
 | Controller glyph outer design/scale | **Accepted: correct size, much better** | Keep outer circular/capsule art, vector smoothness, existing overall prompt spacing/layout unless a specific defect is demonstrated |
 | Letters inside circular Xbox button symbols | **Too large** | Reduce **inner letterform size** only, e.g. A/B/X/Y to approximately 75–85% of current *letter* scale as an initial visual trial; center optically, maintain clear ring padding; leave outer ring and actual prompt sizing unchanged. Percentage is an assistant design proposal, not an explicit user number. Avoid shrinking LT/RT typography unless visibly needed |
-| LB radial menu for signs/Axii (and possibly other quick selection) | **BROKEN: menu does not open** | **Highest priority functional regression.** Correct and verify before declaring v4 acceptable. This means the controller-operated circular quick-access/sign selection wheel, **not the controller button glyph itself**. The report does not establish whether the same radial menu opens by keyboard or which internal component fails |
+| Quick-access radial menu for signs/Axii | **BROKEN through both LB (controller) and Tab (keyboard)**; wheel does not open | **Highest priority functional regression.** Because two distinct inputs fail, prioritize shared radial initialization/show/open path and v4's combined movie/script state rather than controller icon styling or LB binding alone. The precise failing stage remains unproven. |
 | All other HUD functionality/appearance | Working/acceptable | Preserve, with no broad redesign |
 
 ## Investigate actual v4 regression, do not infer a root cause from passing offline tests
@@ -28,10 +30,14 @@ Concrete v4 differences to trace:
 
 ### Recommended diagnostic sequence
 
-- First read effective mod resource winners, current `mods.settings`, and active binding of **LB to Quick Access/Radial Menu** (without modifying settings). Determine whether LB input is received and whether the same wheel opens through keyboard alternative. Distinguish input mapping/dispatch, GFx create/show/open callback, Flash ActionScript exception/abort, `hud_radialmenu` paint and `hud_iteminfo` state interaction.
+- First read effective mod resource winners, current `mods.settings`, and active binding of **LB to Quick Access/Radial Menu** (without modifying settings). The user confirms **both LB and Tab fail**. Do not request a redundant keyboard check or focus on controller binding remapping without new evidence. Confirm the dispatched common radial open action and isolate whether module initialization, GFx show/open, AS exception, visibility or shared quickslot state fails. Distinguish input mapping/dispatch, GFx create/show/open callback, Flash ActionScript exception/abort, `hud_radialmenu` paint and `hud_iteminfo` state interaction.
 - Inspect exactly how `CR4HudModuleRadialMenu` and `CR4HudModuleItemInfo` interact with the root movie and annotations; diff **v3 working vs v4** byte/source changes. Check new `InputFeedbackButton` code for unsafe null/hitArea/viewrect/scale assumptions during radial initialization.
 - If offline tracing cannot decisively locate the cause, construct **small private coherent package variants** which each replace **one suspect resource group** from v4 with verified v3 or v1 input (e.g. radial movie; iteminfo movie; shared root/prompt adapter), with unambiguous hash checks. Test the single most informative variant first; never enable two full HUD packages simultaneously, and don't conflate a retail quickslot regression test with an acceptable final user design.
-- If necessary add targeted logging/runtime diagnostics rather than doing a broad HUD rewrite. Correct the actual bug with I&I quickslots preserved and the accepted v4 palette, size and typography frozen. Include a real LB-to-wheel in-game verification step in the handoff; offline compilation is insufficient.
+- If necessary add targeted logging/runtime diagnostics rather than doing a broad HUD rewrite. Correct the actual bug with I&I quickslots preserved and the accepted v4 palette, size and typography frozen. Include **both Tab-to-wheel and LB-to-wheel** in-game verification steps in the handoff; offline compilation is insufficient.
+
+### New inference from dual-input failure
+
+This report eliminates the hypothesis that *only* the Xbox LB binding/icon causes the problem. Both default input routes fail, which makes shared state, radial module resource contracts, the newly restored I&I iteminfo movie, root-to-radial GFx wiring or common show/hide logic better first hypotheses. It does **not** prove which one. First compare the **working v3 radial behavior** with v4 and test a coherent v4 package using **v3 radial movie only** while retaining v4 iteminfo, glyphs and palette; follow with a v3 iteminfo swap *solely as a diagnostic* if necessary. Do not ship reverted retail quickslots as the preferred fix. If the wheel responds to neither input but action dispatch is confirmed, instrument the earliest shared initialization or show call. All experiments should preserve known-working Vortex profiles; no automatic deployment.
 
 ## Next deliverable
 
