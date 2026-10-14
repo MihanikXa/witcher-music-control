@@ -65,4 +65,6 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 
 36. [Licensed NML candidate and cooker EULA](36-licensed-nml-candidate-and-cooker-eula.md): licence effective, exit2/19 unchanged warnings; full source/decoded/media/global gates pass. Regional bank retained; cooker EULA modal blocks cache/ZIP,107 tests pass.
 
-Current next action: authorize controlled manual review of the isolated cooker's EULA with settings preservation, then package the existing verified bank and verify native readback. Do not rebuild the bank/baseline, accept terms automatically, deploy fixtures, mute unresolved locations or replace working D.
+37. [NML offline package ready](37-nml-offline-package-ready.md): settings backed up/unchanged, confirmed native cook/split exit0, exact bank/cache/ZIP payloads and110 tests; partial regional Vortex archive ready, retail test unauthorized/unperformed.
+
+Current next action: obtain separate authorization for a controlled Vortex off/pilot/off gameplay test, preserving White Orchard D and using an established zone02/03 route. Do not rebuild accepted banks, deploy without approval, mute unresolved locations or claim full NML coverage/runtime compatibility.

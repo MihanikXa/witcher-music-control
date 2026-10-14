@@ -1,7 +1,7 @@
 """Synthetic fail-closed package prerequisite checks; no native tool invocation."""
 import copy
 import unittest
-from regional_music_package import require_proofs
+from regional_music_package import require_proofs, validate_native_result
 
 
 def fixture():
@@ -24,6 +24,15 @@ def fixture():
 
 
 class PackageTests(unittest.TestCase):
+    def test_completed_native_command_passes(self):
+        validate_native_result({'exit_code':0,'args':['cooksounds','isolated']},['cooksounds','isolated'])
+
+    def test_completed_failed_command_rejected(self):
+        with self.assertRaises(ValueError):validate_native_result({'exit_code':1,'args':['cooksounds']},['cooksounds'])
+
+    def test_completed_wrong_output_command_rejected(self):
+        with self.assertRaises(ValueError):validate_native_result({'exit_code':0,'args':['cooksounds','other']},['cooksounds','isolated'])
+
     def test_matching_complete_proofs_pass(self): require_proofs(*fixture())
 
     def test_stale_bank_fails(self):

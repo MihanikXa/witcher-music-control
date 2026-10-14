@@ -48,7 +48,12 @@ def require_proofs(spec, manifest_hash, proof, bank_hash, source_hash, playback)
             raise ValueError('Missing native/modified complete-outro playback review')
 
 
-def stage(redkit, baseline, candidate, project, manifest, proof_path, playback_path, root, resume_after_timeout=False):
+def validate_native_result(result, expected_args):
+    if result.get('exit_code') != 0 or result.get('timeout') or result.get('args') != expected_args:
+        raise ValueError('Completed native command failed or differs from expected isolated command')
+
+
+def stage(redkit, baseline, candidate, project, manifest, proof_path, playback_path, root, resume_after_timeout=False, completed=None):
     spec = json.loads(manifest.read_text(encoding='utf-8'))
     proof = json.loads(proof_path.read_text(encoding='utf-8'))
     playback = json.loads(playback_path.read_text(encoding='utf-8'))
@@ -64,7 +69,12 @@ def stage(redkit, baseline, candidate, project, manifest, proof_path, playback_p
     if digest(redkit / 'r4data/soundbanks/Pc/Init.bnk') != NATIVE_INIT:
         raise ValueError('Native bootstrap Init provenance changed')
     root = build_path(root)
-    if resume_after_timeout:
+    if completed:
+        if resume_after_timeout:
+            raise ValueError('Choose completed native evidence or timeout retry, not both')
+        if any(not p.resolve().is_relative_to(root) for p in completed.values()):
+            raise ValueError('Completed native evidence must remain inside isolated root')
+    elif resume_after_timeout:
         prior = json.loads((root / 'regional-cook-result.json').read_text(encoding='utf-8'))
         if not prior.get('timeout') or (root / 'regional-package-verified.json').exists():
             raise ValueError('Resume permitted only for retained first cooker timeout')
@@ -73,21 +83,36 @@ def stage(redkit, baseline, candidate, project, manifest, proof_path, playback_p
     else:
         prepare(redkit, root)
     inputs, cooked, split = [root / n for n in ('regional-input', 'regional-cooked', 'regional-split')]
-    if resume_after_timeout:
+    if completed:
+        cooked, split = completed['cook_output'], completed['split_output']
+        if (inputs / bank.name).read_bytes() != bank.read_bytes():
+            raise ValueError('Completed cooker input changed')
+    elif resume_after_timeout:
         cooked = root / 'regional-cooked-retry'
         cooked.mkdir()
     else:
         inputs.mkdir(); cooked.mkdir()
         shutil.copyfile(bank, inputs / bank.name)
     exe = redkit / 'bin/x64_RedKit/wcc_lite.exe'
-    execute(exe, root, 'regional-cook-retry' if resume_after_timeout else 'regional-cook', ['cooksounds', '-soundbanksdir=' + str(inputs) + '\\',
+    cook_args = ['cooksounds', '-soundbanksdir=' + str(inputs) + '\\',
         '-outdir=' + str(cooked) + '\\', '-platform=pc_dx12', '-r4remastersounds',
-        '-outsplitfile=' + str(cooked / 'audio-split.list')], timeout_seconds=180 if resume_after_timeout else 45)
+        '-outsplitfile=' + str(cooked / 'audio-split.list')]
+    if completed:
+        validate_native_result(json.loads(completed['cook_result'].read_text(encoding='utf-8-sig')),
+                               cook_args + ['-root', str(root) + '\\', '-noninteractivecrash'])
+    else:
+        execute(exe, root, 'regional-cook-retry' if resume_after_timeout else 'regional-cook', cook_args,
+                timeout_seconds=180 if resume_after_timeout else 45)
     cache = cooked / 'CookedPC/soundspc.cache'
     expected = {bank.name: bank.read_bytes()}
     first = verify_bytes(cache.read_bytes(), expected)
-    execute(exe, root, 'regional-split', ['splitcache', 'sounds', '-platform=pc_dx12',
-        '-split=' + str(cooked / 'audio-split.list'), '-file=' + str(cache), '-outdir=' + str(split) + '\\'])
+    split_args = ['splitcache', 'sounds', '-platform=pc_dx12',
+        '-split=' + str(cooked / 'audio-split.list'), '-file=' + str(cache), '-outdir=' + str(split) + '\\']
+    if completed:
+        validate_native_result(json.loads(completed['split_result'].read_text(encoding='utf-8-sig')),
+                               split_args + ['-root', str(root) + '\\', '-noninteractivecrash'])
+    else:
+        execute(exe, root, 'regional-split', split_args)
     second = verify_bytes((split / 'content0/soundspc.cache').read_bytes(), expected)
     entry = 'Mods/modWMCNomansgradPilot/content/soundspc.cache'
     package = root / 'package' / entry
@@ -114,6 +139,8 @@ def stage(redkit, baseline, candidate, project, manifest, proof_path, playback_p
         'init_in_package': False, 'wem_in_package': False, 'partial_coverage': True,
         'offline_package_verified': True, 'runtime_validated': False, 'deployed': False}
     result['resumed_after_cooker_timeout'] = resume_after_timeout
+    result['completed_native_evidence'] = {k: {'path': str(p), 'sha256': digest(p)}
+        for k, p in completed.items() if k.endswith('result')} if completed else None
     (root / 'regional-package-verified.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(result, ensure_ascii=False))
 
@@ -123,6 +150,13 @@ if __name__ == '__main__':
     for name in ('redkit', 'baseline', 'candidate', 'project', 'manifest', 'proof', 'playback', 'root'):
         parser.add_argument('--' + name, required=True, type=Path)
     parser.add_argument('--resume-after-timeout', action='store_true')
+    for name in ('cook-output', 'cook-result', 'split-output', 'split-result'):
+        parser.add_argument('--completed-' + name, type=Path)
     args = parser.parse_args()
+    completed = {name: getattr(args, 'completed_' + name) for name in
+                 ('cook_output', 'cook_result', 'split_output', 'split_result')}
+    if any(completed.values()) and not all(completed.values()):
+        parser.error('Completed native evidence requires both outputs and both command results')
+    completed = {k: build_path(v) for k, v in completed.items()} if all(completed.values()) else None
     stage(args.redkit, build_path(args.baseline), build_path(args.candidate), build_path(args.project),
-          args.manifest, build_path(args.proof), build_path(args.playback), args.root, args.resume_after_timeout)
+          args.manifest, build_path(args.proof), build_path(args.playback), args.root, args.resume_after_timeout, completed)
