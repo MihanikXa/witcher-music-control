@@ -63,4 +63,6 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 
 35. [Static playlists preserve combat outros](35-static-playlists-preserve-combat-outros.md): static-only NML correction, exact consumer closure, complete native outros,59 playback captures and retained-D regression. Full corrected source passes. Candidate generation exits1/zero banks because its project-local licence is ineffective. No package or retail test.
 
-Current next action: manually apply the existing approved entitlement to the NML **candidate** project, then generate only the selected candidate and run independent decoded/media/global/diagnostic/cooker gates. Do not regenerate the verified baseline, deploy fixtures, mute unresolved locations or replace working D. Earlier location-State passes and scope recommendations in reports30–34 are superseded by report35.
+36. [Licensed NML candidate and cooker EULA](36-licensed-nml-candidate-and-cooker-eula.md): licence effective, exit2/19 unchanged warnings; full source/decoded/media/global gates pass. Regional bank retained; cooker EULA modal blocks cache/ZIP,107 tests pass.
+
+Current next action: authorize controlled manual review of the isolated cooker's EULA with settings preservation, then package the existing verified bank and verify native readback. Do not rebuild the bank/baseline, accept terms automatically, deploy fixtures, mute unresolved locations or replace working D.

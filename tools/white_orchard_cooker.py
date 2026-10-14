@@ -71,7 +71,7 @@ def prepare(redkit, output):
                       "input_count": len(manifest["inputs"])}))
 
 
-def execute(executable, root, label, arguments):
+def execute(executable, root, label, arguments, timeout_seconds=45):
     args = [str(executable), *arguments, "-root", str(root) + "\\", "-noninteractivecrash"]
     log_path = root / (label + ".log")
     if log_path.exists():
@@ -79,13 +79,14 @@ def execute(executable, root, label, arguments):
     with log_path.open("w") as log:
         process = subprocess.Popen(args, cwd=root / "bin/x64", stdout=log, stderr=subprocess.STDOUT)
         try:
-            code = process.wait(timeout=45)
+            code = process.wait(timeout=timeout_seconds)
             timed_out = False
         except subprocess.TimeoutExpired:
             process.kill()
             code = process.wait()
             timed_out = True
-    result = {"args": args, "cwd": str(root / "bin/x64"), "exit_code": code, "timeout": timed_out}
+    result = {"args": args, "cwd": str(root / "bin/x64"), "exit_code": code, "timeout": timed_out,
+              "timeout_seconds": timeout_seconds}
     (root / (label + "-result.json")).write_text(json.dumps(result, indent=2) + "\n")
     if code or timed_out:
         raise RuntimeError(f"Cooker failed: {result}; see {log_path}")
