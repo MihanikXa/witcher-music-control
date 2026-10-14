@@ -67,7 +67,7 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 
 37. [NML offline package ready](37-nml-offline-package-ready.md): settings backed up/unchanged, confirmed native cook/split exit0, exact bank/cache/ZIP payloads and110 tests; partial regional Vortex archive ready, retail test unauthorized/unperformed.
 
-Current next action: obtain separate authorization for a controlled Vortex off/pilot/off gameplay test, preserving White Orchard D and using an established zone02/03 route. Do not rebuild accepted banks, deploy without approval, mute unresolved locations or claim full NML coverage/runtime compatibility.
+Historical report37 next action is superseded by report38: continue offline without forced visits or custom saves; retail NML remains unconfirmed.
 
 38. [Spoiler-free offline continuation](38-spoiler-free-offline-continuation.md): user defers NML in-game testing and refuses custom saves/spoilers; multi-bank cache proof and expansion next. NML remains runtime-unverified.
 
@@ -75,4 +75,6 @@ Current next action: obtain separate authorization for a controlled Vortex off/p
 40. [Native two-bank cache proof](40-native-two-bank-cache-proof.md): real native cook/split for exact D plus NML pilot, consolidated-v1 ZIP and reviewed diagnostics.
 41. [Expanded NML source/licence gate](41-expanded-nml-source-and-licence-gate.md):21 approved targets,117 selection rows, complete source and representative playback; fresh v2 entitlement application required before binary generation.
 
-Current next action: manual project-local entitlement application to the expanded candidate, then selected generation and all binary/media/global/package gates using the retained baseline. Do not require retail travel/custom saves, alter installed D/Vortex or mistake the pilot bundle for expanded coverage.
+42. [Expanded NML consolidated package](42-expanded-nml-consolidated-package.md): effective entitlement,21 exact decoded playlist edits,423 preserved media payloads, unchanged globals and native two-bank v2 cache/ZIP.115 tests pass; no retail deployment.
+
+Current next action: implement a reviewed Skellige manifest using the shared static-only authoring, consumer/transition closure, independent regional bank/media gates and representative playback; add a verified bank to a new consolidated version. Expanded NML licence gate is resolved. Preserve installed D/Vortex, saves and all rollback archives; no custom saves, spoilers or premature retail-test requirement.
