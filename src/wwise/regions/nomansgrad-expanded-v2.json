@@ -1,0 +1,1549 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "region": "music_nomansgrad",
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "facts": {
+    "root": {
+      "id": "{B6298CA1-0F86-4AC5-87ED-3D3475BA3DA4}",
+      "name": "music_nomansgrad",
+      "short_id": "976763369"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{FA8A1A46-55DA-4193-B1D2-29F757624C1E}",
+      "short_id": "492774600",
+      "line": 244033
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{DEE0EE5D-99A2-40CC-871D-F3B5370E802D}",
+      "short_id": "371963887",
+      "line": 165531
+    },
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259"
+  },
+  "state_scopes": [],
+  "static_targets": [
+    "{48810350-DE09-4F69-B3DA-FCF4667EF177}",
+    "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}",
+    "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}",
+    "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}",
+    "{10C87E56-F87D-406F-A2A6-0276766C1CA9}",
+    "{12931E7E-EC14-4789-9B07-88E189FEF421}",
+    "{3967FBCC-156E-4B06-B08E-7DB5B7ECC418}",
+    "{396C1B26-98AB-426D-B607-827B3BE38D40}",
+    "{3A34635B-991A-4F73-800A-21D2100D56AB}",
+    "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}",
+    "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}",
+    "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}",
+    "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}",
+    "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}",
+    "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}",
+    "{CC7931F4-A65B-4950-845C-9A35A5E7262A}",
+    "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}",
+    "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}",
+    "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}",
+    "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}",
+    "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}"
+  ],
+  "decisions": {
+    "{0900AB30-E2B0-49E6-A5EA-3AA9DE037574}": {
+      "name": "exploration",
+      "short_id": 216223838,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -2.0
+    },
+    "{10C87E56-F87D-406F-A2A6-0276766C1CA9}": {
+      "name": "expl_nml_swamps_night",
+      "short_id": 212262762,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 0.0
+    },
+    "{12931E7E-EC14-4789-9B07-88E189FEF421}": {
+      "name": "exploration_night",
+      "short_id": 658433984,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 3.0
+    },
+    "{15C51BD6-C1B8-4EB1-9939-E9471665A87C}": {
+      "name": "expl_nml_ghost_forest",
+      "short_id": 213940375,
+      "classification": "mixed",
+      "policy": "pending",
+      "evidence": "Exact target consumed in noncombat AND preserved States; forbid permanent mute. See inventory consumers.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -1.0
+    },
+    "{1D0F2B2F-7BD7-4C4A-861C-1F8B60F1818D}": {
+      "name": "exploration_night",
+      "short_id": 271238044,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -3.0
+    },
+    "{1DF38D6D-ECF0-4D7C-88AD-C83044AC62E1}": {
+      "name": "exploration",
+      "short_id": 259272835,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{210217E5-BB46-45F3-B7E7-0FC6C081D0EA}": {
+      "name": "expl_nml_ghost_forest",
+      "short_id": 861605735,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 0.0
+    },
+    "{31EF2FE5-29BD-4E50-9F2E-6FBBDC1F967D}": {
+      "name": "expl_village_burned_q101",
+      "short_id": 881931466,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Conservative native-preservation policy for probable authored-world cue: source/quest branch reuse or emperor/love thematic routing, report07; intent remains inferred and requires listening.",
+      "fact_status": "observed routing; probable authored intent, native preservation approved",
+      "original_volume": -2.0
+    },
+    "{3967FBCC-156E-4B06-B08E-7DB5B7ECC418}": {
+      "name": "expl_caves",
+      "short_id": 619624006,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -4.0
+    },
+    "{396C1B26-98AB-426D-B607-827B3BE38D40}": {
+      "name": "expl_elven_ruins",
+      "short_id": 557630169,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 0.0
+    },
+    "{3A34635B-991A-4F73-800A-21D2100D56AB}": {
+      "name": "expl_novi_09_temple_island_night",
+      "short_id": 932329779,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 0.0
+    },
+    "{47C32363-44FF-4062-98C3-F5F0293EEA0C}": {
+      "name": "expl_nml_zone_01_night",
+      "short_id": 914045588,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{47E081BE-19B8-4455-9D64-5B77B67FFAEA}": {
+      "name": "expl",
+      "short_id": 590392263,
+      "classification": "mixed",
+      "policy": "pending",
+      "evidence": "Exact target consumed in noncombat AND preserved States; forbid permanent mute. See inventory consumers.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -3.0
+    },
+    "{48810350-DE09-4F69-B3DA-FCF4667EF177}": {
+      "name": "expl_nml_zone_02",
+      "short_id": 719937819,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{48C707A9-814E-441D-9841-BE7A4B8F870A}": {
+      "name": "expl_nml_mansion_paint_q604",
+      "short_id": 183692179,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 1.0
+    },
+    "{490E6C89-8024-4839-B8C9-A1301604ECF8}": {
+      "name": "expl",
+      "short_id": 556685542,
+      "classification": "mixed",
+      "policy": "pending",
+      "evidence": "Exact target consumed in noncombat AND preserved States; forbid permanent mute. See inventory consumers.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{4E9C54BA-A914-4CAE-B4AE-31B4CC2FB74B}": {
+      "name": "expl_nml_mansion_garden_q604",
+      "short_id": 47815352,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{5712D8CD-9844-45CA-AA94-BF77E0BAA483}": {
+      "name": "dialog_ambient_03",
+      "short_id": 306259717,
+      "classification": "mixed",
+      "policy": "pending",
+      "evidence": "Exact target consumed in noncombat AND preserved States; forbid permanent mute. See inventory consumers.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}": {
+      "name": "expl_nml_swamps",
+      "short_id": 517264825,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 1.0
+    },
+    "{5EA929A9-9597-4C98-8F1D-FC45C4E8F515}": {
+      "name": "expl_oxenfurt",
+      "short_id": 582078502,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 1.0
+    },
+    "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}": {
+      "name": "expl_brothels_harbor_night",
+      "short_id": 844878119,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -1.0
+    },
+    "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}": {
+      "name": "expl_brothels_harbor",
+      "short_id": 939329143,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -3.0
+    },
+    "{6A960CD2-EB91-4ED2-AD5E-F2094572AB58}": {
+      "name": "expl_nml_mansion_paint_winter_q604",
+      "short_id": 448456070,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 0.0
+    },
+    "{74FE3E66-8353-4B40-8F50-B766987C74E1}": {
+      "name": "exploration",
+      "short_id": 539915167,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": -6.0
+    },
+    "{7535BA2F-8BF6-495F-9963-7E7EC378BBCE}": {
+      "name": "expl_silent",
+      "short_id": 306297097,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 0.0
+    },
+    "{770F2125-7A15-406A-81EC-FB26D5317D77}": {
+      "name": "expl_haunted_house",
+      "short_id": 911777377,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{797D79D3-0396-4122-AEA8-684E64D02AA8}": {
+      "name": "expl_novi_sewers",
+      "short_id": 275256434,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{7C6CEC7F-BF17-4C26-BE11-19F4BFB51A93}": {
+      "name": "expl_inquisitors_house",
+      "short_id": 707895449,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{8098B07A-07E3-4D39-BF77-B8066189280F}": {
+      "name": "exploration",
+      "short_id": 172601923,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -3.0
+    },
+    "{8B00DC09-2040-4E7E-A5C5-2930F6D90B40}": {
+      "name": "expl_dreamers_house",
+      "short_id": 283111637,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{8BEAFDDC-29C5-42A2-B6A6-6BC4DF433242}": {
+      "name": "exploration",
+      "short_id": 205834151,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -3.0
+    },
+    "{8D5B24A4-8294-4133-8721-86200D46B7F3}": {
+      "name": "expl_oxenfurt",
+      "short_id": 796996597,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 1.0
+    },
+    "{902AA7C6-C8D8-4EA0-BC7D-97F72B187045}": {
+      "name": "expl_caves",
+      "short_id": 717872964,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -4.0
+    },
+    "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}": {
+      "name": "expl_nml_zone_03",
+      "short_id": 132074504,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -2.0
+    },
+    "{97FD5B40-2481-4603-8330-290000E4CA78}": {
+      "name": "expl_silent",
+      "short_id": 831856961,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 0.0
+    },
+    "{9A51BF98-5506-467A-8CD0-63B1342EA8F5}": {
+      "name": "expl_nml_swamps_witches_village",
+      "short_id": 281441247,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{9E2209B7-6419-4790-8D43-602DDE1BBED4}": {
+      "name": "expl_nml_zone_01",
+      "short_id": 250392013,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 3.0
+    },
+    "{9F1D50CD-39FF-4C81-9908-7A740D8D3959}": {
+      "name": "expl_novi_01",
+      "short_id": 421181650,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -9.0
+    },
+    "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}": {
+      "name": "exploration",
+      "short_id": 591906274,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -6.0
+    },
+    "{A2D18029-FC7B-44F7-9959-363889498C31}": {
+      "name": "expl_inquisitors_theme",
+      "short_id": 818634482,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -3.0
+    },
+    "{A5D58063-EB42-4B7E-8018-5F3B259B746A}": {
+      "name": "exploration",
+      "short_id": 310100700,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{A6A86339-914A-4420-AB57-DA5B23B0575C}": {
+      "name": "expl_oxenfurt",
+      "short_id": 494551040,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 1.0
+    },
+    "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}": {
+      "name": "expl_novi_09_temple_island",
+      "short_id": 815747428,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 0.0
+    },
+    "{B4ECFD7F-5579-43B6-B692-35CB36ED4995}": {
+      "name": "expl_nml_barons_castle",
+      "short_id": 333276148,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -6.0
+    },
+    "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}": {
+      "name": "expl_oxenfurt",
+      "short_id": 284863188,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 1.0
+    },
+    "{C6E88062-676D-42F8-A2DF-3B474C137FE5}": {
+      "name": "expl_oxenfurt",
+      "short_id": 1014391800,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 1.0
+    },
+    "{CC7931F4-A65B-4950-845C-9A35A5E7262A}": {
+      "name": "expl_nml_zone_01_night",
+      "short_id": 1041422844,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 0.0
+    },
+    "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}": {
+      "name": "expl_novi_04_night",
+      "short_id": 1042184487,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -3.0
+    },
+    "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}": {
+      "name": "expl_nml_zone_02_night",
+      "short_id": 946096996,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{E60B92F3-0F37-4AFC-AA46-7736C4920E41}": {
+      "name": "expl",
+      "short_id": 847084177,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Conservative native-preservation policy for probable authored-world cue: source/quest branch reuse or emperor/love thematic routing, report07; intent remains inferred and requires listening.",
+      "fact_status": "observed routing; probable authored intent, native preservation approved",
+      "original_volume": 0.0
+    },
+    "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}": {
+      "name": "expl_nml_zone_01",
+      "short_id": 715939731,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": 1.0
+    },
+    "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}": {
+      "name": "expl_novi_04",
+      "short_id": 265482033,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -7.0
+    },
+    "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}": {
+      "name": "expl_novi_08",
+      "short_id": 652104057,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -3.0
+    },
+    "{EEF3F72B-A699-4705-B22B-432D67546C10}": {
+      "name": "expl",
+      "short_id": 483893226,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Unresolved musical intent; leave original ancestry/gain. See reports07/28/29.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": 0.0
+    },
+    "{F4882486-5348-4B8E-8CCA-675362BAF356}": {
+      "name": "exploration_love_theme",
+      "short_id": 133866160,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Conservative native-preservation policy for probable authored-world cue: source/quest branch reuse or emperor/love thematic routing, report07; intent remains inferred and requires listening.",
+      "fact_status": "observed routing; probable authored intent, native preservation approved",
+      "original_volume": 0.0
+    },
+    "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}": {
+      "name": "expl_nml_zone_03_night",
+      "short_id": 568231384,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Approved ordinary interactive world policy: exact location/state routing, separate combat and Gwent consumers, no authored-branch node consumers. WO native-selector bleed measured report25/26; NML inference of ordinary area score limited to reviewed region02/03 selectors; listening not yet confirmed.",
+      "fact_status": "observed routing; intent as stated",
+      "original_volume": -2.0
+    },
+    "{FC7FED1A-41B6-45AE-BA43-1844FADA93A5}": {
+      "name": "expl_silent",
+      "short_id": 346559772,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Exact selected AudioFile is the zero-PCM original verified in report07; source hash preservation remains mandatory.",
+      "fact_status": "observed zero samples and routing",
+      "original_volume": 0.0
+    },
+    "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}": {
+      "name": "expl_novi_02",
+      "short_id": 878261688,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Report41 source review: repeatable world-location selector; independent noncombat State mappings; no combat/Gwent/minigame use, direct audio-event descendant or transition-segment consumer; authored paths outside gain ancestry. Location scoring policy based on routing and source reuse, not names alone.",
+      "fact_status": "Observed complete routing; inferred generic intent approved for static policy",
+      "original_volume": -7.0
+    }
+  },
+  "static_consumer_paths": {
+    "{48810350-DE09-4F69-B3DA-FCF4667EF177}": [
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}": [
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}": [
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{903D1266-24FD-472E-99C3-A77696913503}",
+        "selector_short_id": 193134718,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}": [
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{007757A3-D947-4E62-8222-57743AD69704}",
+        "selector_short_id": 432285193,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{10C87E56-F87D-406F-A2A6-0276766C1CA9}": [
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{12931E7E-EC14-4789-9B07-88E189FEF421}": [
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{3967FBCC-156E-4B06-B08E-7DB5B7ECC418}": [
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{32E2DBED-7C1A-4BFB-A069-ACBFCD32EE95}",
+        "selector_short_id": 101254717,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{396C1B26-98AB-426D-B607-827B3BE38D40}": [
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{9707EA78-A77C-46BB-BD82-8D6959040739}",
+        "selector_short_id": 430000258,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{3A34635B-991A-4F73-800A-21D2100D56AB}": [
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}": [
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{9517A274-4DFC-4DB6-AF22-8B4D02DC8973}",
+        "selector_short_id": 387415965,
+        "states": [
+          "focus_exploration"
+        ]
+      }
+    ],
+    "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}": [
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}": [
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{EA47B154-F597-4A92-A7A1-83BEB016C862}",
+        "selector_short_id": 1039349895,
+        "states": [
+          "boat"
+        ]
+      }
+    ],
+    "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}": [
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{E1B6E7BC-C992-4A77-A4B5-1B8F3B5BA6B3}",
+        "selector_short_id": 24105830,
+        "states": [
+          "boat"
+        ]
+      }
+    ],
+    "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}": [
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{C9BF640F-F74C-45EC-8056-D0B13081E99C}",
+        "selector_short_id": 903258976,
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}": [
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{6710DC61-68A6-419C-BB24-55FBB7070F51}",
+        "selector_short_id": 71417542,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{CC7931F4-A65B-4950-845C-9A35A5E7262A}": [
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}": [
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}": [
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{5C395509-2A30-472E-AF2F-FE8E11B0E7D2}",
+        "selector_short_id": 600355437,
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}": [
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{10544063-728C-479B-87E2-5B60C62B6FF4}",
+        "selector_short_id": 781069643,
+        "states": [
+          "boat"
+        ]
+      }
+    ],
+    "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}": [
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{EF391E04-DECC-47EE-B762-2E2E8868694E}",
+        "selector_short_id": 923976362,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}": [
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{9CC48688-3D71-4657-95EE-A45A2F928F12}",
+        "selector_short_id": 817752635,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ]
+  },
+  "attenuation_evidence": "Expanded static-only approved generic playlists; retained pilot unchanged; all other decisions remain native. See report41.",
+  "manifest_version": 2
+}

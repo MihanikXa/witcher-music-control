@@ -70,3 +70,9 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 Current next action: obtain separate authorization for a controlled Vortex off/pilot/off gameplay test, preserving White Orchard D and using an established zone02/03 route. Do not rebuild accepted banks, deploy without approval, mute unresolved locations or claim full NML coverage/runtime compatibility.
 
 38. [Spoiler-free offline continuation](38-spoiler-free-offline-continuation.md): user defers NML in-game testing and refuses custom saves/spoilers; multi-bank cache proof and expansion next. NML remains runtime-unverified.
+
+39. [Build storage cleanup](39-build-storage-cleanup.md): verified original-audio hard links,12.9GiB recovered and protected artifacts preserved.
+40. [Native two-bank cache proof](40-native-two-bank-cache-proof.md): real native cook/split for exact D plus NML pilot, consolidated-v1 ZIP and reviewed diagnostics.
+41. [Expanded NML source/licence gate](41-expanded-nml-source-and-licence-gate.md):21 approved targets,117 selection rows, complete source and representative playback; fresh v2 entitlement application required before binary generation.
+
+Current next action: manual project-local entitlement application to the expanded candidate, then selected generation and all binary/media/global/package gates using the retained baseline. Do not require retail travel/custom saves, alter installed D/Vortex or mistake the pilot bundle for expanded coverage.
