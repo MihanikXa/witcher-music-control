@@ -68,3 +68,5 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 37. [NML offline package ready](37-nml-offline-package-ready.md): settings backed up/unchanged, confirmed native cook/split exit0, exact bank/cache/ZIP payloads and110 tests; partial regional Vortex archive ready, retail test unauthorized/unperformed.
 
 Current next action: obtain separate authorization for a controlled Vortex off/pilot/off gameplay test, preserving White Orchard D and using an established zone02/03 route. Do not rebuild accepted banks, deploy without approval, mute unresolved locations or claim full NML coverage/runtime compatibility.
+
+38. [Spoiler-free offline continuation](38-spoiler-free-offline-continuation.md): user defers NML in-game testing and refuses custom saves/spoilers; multi-bank cache proof and expansion next. NML remains runtime-unverified.
