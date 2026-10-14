@@ -1,0 +1,450 @@
+{
+  "version": "QFR Radial Opening Trace D1",
+  "diagnostic": true,
+  "root_cause_confirmed": false,
+  "runtime_tested": false,
+  "official_cook_validated": false,
+  "native_metadata_passed": false,
+  "native_control_scope": "Initial instrumented revision only; guarded final candidate cook/validate/pack did not complete",
+  "native_control_commands": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\cooked"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.14 20:32:51][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.14 20:32:52][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\validation"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.14 20:33:42][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.14 20:33:43][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\native-pack-input",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "assertions": [
+        "[2026.10.14 20:34:04][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.14 20:34:04][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "parent_zip_sha256": "16520f81637acb86e423a4384e6187ed9b45c56683a8056e791b627b47cbefbb",
+  "mod": "modInkIronHUDRefinementV4",
+  "selected": [
+    "bossfocus",
+    "buffs",
+    "companion",
+    "controlsfeedback",
+    "crosshair",
+    "damageditems",
+    "dialog",
+    "enemyfocus",
+    "horsepanicbar",
+    "horsestaminabar",
+    "interactions",
+    "iteminfo",
+    "journalupdate",
+    "minimap2",
+    "oxygenbar",
+    "quests",
+    "radialmenu",
+    "timelapse"
+  ],
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\ink-radial-trace-d1\\Ink-Iron-HUD-Radial-Trace-D1-private-test.zip",
+  "zip_sha256": "cb207b36e68debb00152e8c023013e30c58a730e516349257d2606d8de7dea52",
+  "zip_bytes": 10998790,
+  "resource_hashes": {
+    "gameplay/gui_new/fonts.xml": "12f076e5ca32d08eaca703fd090f2b008503244c6df1f9abf55701f2b295c84c",
+    "gameplay/gui_new/swf/common/panel_common.redswf": "d5e83c6ffa1fb1361119bf1ad60c5dc967648af3189ca5410439b12bbcfae065",
+    "gameplay/gui_new/swf/hud/hud.redswf": "01b86101bdac12fa6cc15f032159059d133282798f65d43b6d36ea64da1ebe9d",
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+    "gameplay/gui_new/swf/hud/hud_companion.redswf": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf": "f55cc0413c8f7e8f820e27690e1b5e9e2b700ab3ea68ba6ac6ffa2aa45349ae0",
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf": "5ebc748f111c01a74811b37ce5a363a9c4f16c51b9588c3e096a2c08d14cae59",
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf": "155537319729614591a84e7f46ac861e3b779bf3fbbe216c9f7c8174fb1ddd8d",
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf": "af88041294f7322e630bfc70d9fc5620a133dea45191c52d9be3b47f849cbf37",
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": "b9411c70445f1a6e610301029208feec86930119e3a988d6a00f7a0264d7b455",
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf": "06a2ac3d8e210faba4d9a422792c6487ffa50490de360bdd59f5d3dbec0bf7f8",
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+    "gameplay/gui_new/swf/hud/hud_oneliners.redswf": "dcc9206f05c8961cc7754d079da7d53e02de0101f376a5f0b490be793b9f7127",
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+    "gameplay/gui_new/swf/hud/hud_quests.redswf": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": "4a4bcf2833217e72704ef15828d43460b3ae25b942fd3eb84a26f46ecaa16027",
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+    "gameplay/gui_new/swf/overlay/panel_overlay.redswf": "ae8c59a41bdc10d7690df287eaa694f9a9d37ad5d2ac67e9bf7b1d64f8e20fee"
+  },
+  "package_members": {
+    "Mods/modInkIronHUDAliasesTest/content/blob0.bundle": "15fef56d141f20161aed3ad0b84f11d00429c91816421a4e26531143b286bb06",
+    "Mods/modInkIronHUDAliasesTest/content/metadata.store": "b7f8305c8af03e789d411ecfa114d91a015ee06e4aa49e4b6b292660c5b5f1ee",
+    "Mods/modInkIronHUDRefinementV4/content/blob0.bundle": "cbc63b979c5d39df9d980def63edcaa95ff9ceedaca174547a4a3f829cb161d4",
+    "Mods/modInkIronHUDRefinementV4/content/en.w3strings": "599407c7a99073f5aa13ff97af52245d628217ef46a6f1104e011ec851c78b80",
+    "Mods/modInkIronHUDRefinementV4/content/font-notices/FONT-NOTICES.txt": "6e33cc8419d6397f8ff30b652a6e8a079b20549b96e3d0ebb5095f7b294621ba",
+    "Mods/modInkIronHUDRefinementV4/content/font-notices/OFL-Adobe.txt": "56af9b9c6715597e458284a474dc118a50a4150e9d547c70f7b4a33c3e6a9328",
+    "Mods/modInkIronHUDRefinementV4/content/metadata.store": "ef7b629d345e609391a9768208eeabe4ac35b7c2685331cf20407cdaf9412c2d",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronGear.ws": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronHUDStateBridge.ws": "9665430025f6558f4d2d97832d137ae69797d7b0a4419617a1c17d29de01fbf2",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronHorse.ws": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronHudScale.ws": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronMinimapClock.ws": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronNpcPlate.ws": "ba874e9c56f8f95c9941b24fbd7b580cab56e6d11ac1aca471f1199180be0abb",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronQuest.ws": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkIronRadialSigns.ws": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582",
+    "Mods/modInkIronHUDRefinementV4/content/texture.cache": "b02f5ac4a58cb3e61b85cc7b77c61d68d3efa79775f80cb9f103a70b7d67d0a7",
+    "bin/config/r4game/user_config_matrix/pc/modInkIronHUDBatch.xml": "c1e301377e5c82d625b69b3d8d4e240dc3c235b3ce48d67a9058444bedfe157e",
+    "Mods/modInkIronHUDRefinementV4/content/scripts/local/inkRadialDiagnostic.ws": "49c0baf0b3ce46aabbb3f757ade68bbd66be6318028d359f91c24e485304791e"
+  },
+  "unchanged_keys": [
+    "gameplay/gui_new/fonts.xml",
+    "gameplay/gui_new/swf/common/panel_common.redswf",
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf",
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf",
+    "gameplay/gui_new/swf/hud/hud_companion.redswf",
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf",
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf",
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf",
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf",
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf",
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf",
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf",
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf",
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf",
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf",
+    "gameplay/gui_new/swf/hud/hud_oneliners.redswf",
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf",
+    "gameplay/gui_new/swf/hud/hud_quests.redswf",
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf",
+    "gameplay/gui_new/swf/overlay/panel_overlay.redswf"
+  ],
+  "exact_reextraction": true,
+  "metadata_keys_verified": true,
+  "script_regression": {
+    "control": {
+      "blob_sha256": "bee3a8aa05d93909e74c09985194cf0b15ce07d201d33281d4f5ea13e941cfda",
+      "warnings": {
+        "total_count": 819,
+        "distinct_count": 562,
+        "normalized_counter_sha256": "e745690168ef5b1125691de2e0e4d4ed5b1e1b817f9e4615d544f8cfbeb42956"
+      },
+      "assertions": {
+        "total_count": 23630,
+        "distinct_count": 328,
+        "normalized_counter_sha256": "034f15754f7d64e463d5e64d3dbf8c141da2ba7fc874c0470943c308a33225c6"
+      }
+    },
+    "candidate": {
+      "blob_sha256": "0f0787b48943c13db53100b80b79bee1bd439228c480d29702c7196efea99dfd",
+      "warnings": {
+        "total_count": 819,
+        "distinct_count": 562,
+        "normalized_counter_sha256": "e745690168ef5b1125691de2e0e4d4ed5b1e1b817f9e4615d544f8cfbeb42956"
+      },
+      "assertions": {
+        "total_count": 23630,
+        "distinct_count": 328,
+        "normalized_counter_sha256": "034f15754f7d64e463d5e64d3dbf8c141da2ba7fc874c0470943c308a33225c6"
+      }
+    }
+  },
+  "bundle_reconstruction": {
+    "diagnostic_only": true,
+    "native_candidate_cook_validated": false,
+    "method": "bounded native-table reconstruction; ZLIB level 9; CRC32; 16-byte payload alignment",
+    "controls": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-refinement-v2-release-final\\packed\\blob0.bundle",
+        "sha256": "0b8c046b9beb059a38162a011f0ad54e62852a55c26dc549e5c7f8e0d5239a71",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-diagnostic-final\\packed\\blob0.bundle",
+        "sha256": "999c8276f78e6d3e1533bddd83cb0074aed5dca76e860127dd0fd3874aac59a7",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-radial-trace-d1-final\\packed\\blob0.bundle",
+        "sha256": "33f38ed2e9245cc5f893170708c5bbec96f26beec585ffa561a77c2c918cc590",
+        "byte_identical": true
+      }
+    ],
+    "bundle_sha256": "cbc63b979c5d39df9d980def63edcaa95ff9ceedaca174547a4a3f829cb161d4",
+    "all_resources_reextracted_exact": true
+  },
+  "metadata_relocation": {
+    "method": "verified relocation of existing native table",
+    "native_v3_metadatastore_passed": false,
+    "native_control_byte_identical": true,
+    "source_metadata_sha256": "8d93126dd226220a2559f80595c75b0c827d61f842836684efdbfc8484ebd69c",
+    "native_control_metadata_sha256": "60e769175bead3e89bbfa010db99913b51940b2c010004235aa772e8a4ba14d4",
+    "output_metadata_sha256": "ef7b629d345e609391a9768208eeabe4ac35b7c2685331cf20407cdaf9412c2d",
+    "source_bundle_sha256": "0b8c046b9beb059a38162a011f0ad54e62852a55c26dc549e5c7f8e0d5239a71",
+    "control_bundle_sha256": "999c8276f78e6d3e1533bddd83cb0074aed5dca76e860127dd0fd3874aac59a7",
+    "target_bundle_sha256": "cbc63b979c5d39df9d980def63edcaa95ff9ceedaca174547a4a3f829cb161d4",
+    "identical_ordered_keys": true,
+    "no_native_import_buffer_dependency_tables": true,
+    "patch_count": 92,
+    "patches_sha256": "ae68ed6bdd6fe6e1a245a6ebf7bbf0aa87ada85502d98eaadfd6a4f1907f8cd7"
+  },
+  "original_source_hashes": {
+    "src\\hud\\inkRadialDiagnostic.ws": "49c0baf0b3ce46aabbb3f757ade68bbd66be6318028d359f91c24e485304791e",
+    "tools\\build-ink-radial-trace.py": "52fea3a28c990e77cb8574a24de22d8140ebd14e460809f4fd90697a8134d13d",
+    "tools\\instrument-radial-movies.py": "633dcd3585e6b7102011b8eed58da05129ed22a85cc8a6c70169399d3b466621",
+    "tools\\compile-radial-trace.py": "d9232a299ecf7b9c9bad7c682515f65ef399b7b2b4b7c9a969885bac44a37946",
+    "tools\\reconstruct-radial-trace-bundle.py": "4a09fcf84e0fd0c619d5305b0828c72ee05a5b75e57f1c5f844892d14550d841",
+    "tools/build-ink-radial-trace.py": "7e796816b1f7d8d7e515e2e702391d473160058a7db6b0cb3585ba0be417038a"
+  },
+  "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+  "ffdec_sha256": "1587e60b2ec2c0e4f5721fd5f2aaaf2379f6d416569de99054b5c5d1e9ba841c",
+  "deployed": false,
+  "modified_movies": {
+    "gameplay/gui_new/swf/hud/hud.redswf": {
+      "original_declarations_retained": 3580,
+      "input_sha256": "23517ff3c8f8d1b750ab46953d4cd3e78f54a2300bec1a73a53ff1c1cebeb1ff",
+      "output_sha256": "01b86101bdac12fa6cc15f032159059d133282798f65d43b6d36ea64da1ebe9d",
+      "non_abc_definitions_exact": true,
+      "non_abc_and_texture_tails_exact_tested": true
+    },
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": {
+      "original_declarations_retained": 993,
+      "input_sha256": "1d26cdc697954093f3b164c846594efacece421d43fa3e70e82ebd5eb38da719",
+      "output_sha256": "b9411c70445f1a6e610301029208feec86930119e3a988d6a00f7a0264d7b455",
+      "non_abc_definitions_exact": true,
+      "non_abc_and_texture_tails_exact_tested": true
+    },
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": {
+      "original_declarations_retained": 1295,
+      "input_sha256": "7597da7da12dc6ea871918cc9378dba6606f1945fc4dec59815b915cef368b53",
+      "output_sha256": "4a4bcf2833217e72704ef15828d43460b3ae25b942fd3eb84a26f46ecaa16027",
+      "non_abc_definitions_exact": true,
+      "non_abc_and_texture_tails_exact_tested": true
+    }
+  },
+  "effective_installed_winners": {
+    "gameplay/gui_new/swf/hud/hud.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "23517ff3c8f8d1b750ab46953d4cd3e78f54a2300bec1a73a53ff1c1cebeb1ff",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_buffs.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "2b41feb437bbc81515d95786711029179cb8fb90a7567dd636ad836160004e5a",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_dialog.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "5ebc748f111c01a74811b37ce5a363a9c4f16c51b9588c3e096a2c08d14cae59",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_damageditems.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "3cd2ec9702b3322455cc8017eb04db40d793120989f171ada8147a103e2e7240",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_horsepanicbar.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "eb4e227aa13ea2ad75dc0b11d17458fe71be99955b9bc4b5cbbe2762e625e497",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_enemyfocus.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "155537319729614591a84e7f46ac861e3b779bf3fbbe216c9f7c8174fb1ddd8d",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_timelapse.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "b1b4ea3cdcd5a57290f4b92b05c413bb369bf6f4ce06a7f080c07b40a5f98eb8",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_quests.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "5c4123163f2eb11df51dc8e34ad9fa052159f97cf5b42c4a6af4db2b16341dc7",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_oneliners.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "dcc9206f05c8961cc7754d079da7d53e02de0101f376a5f0b490be793b9f7127",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/common/panel_common.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "d5e83c6ffa1fb1361119bf1ad60c5dc967648af3189ca5410439b12bbcfae065",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_interactions.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "af88041294f7322e630bfc70d9fc5620a133dea45191c52d9be3b47f849cbf37",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_bossfocus.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "d1433afaaa3256d6c9078c6a0dc64efa45a90c81683fce2f9d3070508d997c27",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_minimap2.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "3e3da588f6895ab70550a7fd8f1101ce9d1c88544ae6397405ae152d11892e5e",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_controlsfeedback.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "f55cc0413c8f7e8f820e27690e1b5e9e2b700ab3ea68ba6ac6ffa2aa45349ae0",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_crosshair.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "a6c065a67556001e917d41cb4af2ab5f15e6aedcf707a4886e5be2d97dbb7dfe",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_oxygenbar.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "298d85f210b074bf72e01dcd5a66736f42f7d3b48c4e16e28650992c0f9a342b",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/overlay/panel_overlay.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "ae8c59a41bdc10d7690df287eaa694f9a9d37ad5d2ac67e9bf7b1d64f8e20fee",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_radialmenu.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "7597da7da12dc6ea871918cc9378dba6606f1945fc4dec59815b915cef368b53",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_iteminfo.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "1d26cdc697954093f3b164c846594efacece421d43fa3e70e82ebd5eb38da719",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_horsestaminabar.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "8450ef16de6d51db0e785f77daa0e651307257cddfa0cc3bc818e76ec79372f1",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/swf/hud/hud_journalupdate.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "06a2ac3d8e210faba4d9a422792c6487ffa50490de360bdd59f5d3dbec0bf7f8",
+      "enabled": "1",
+      "priority": "31"
+    },
+    "gameplay/gui_new/fonts.xml": {
+      "owner": "modInkIronHUDAliasesTest",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDAliasesTest\\content\\blob0.bundle",
+      "sha256": "12f076e5ca32d08eaca703fd090f2b008503244c6df1f9abf55701f2b295c84c",
+      "enabled": "1",
+      "priority": "30"
+    },
+    "gameplay/gui_new/swf/hud/hud_companion.redswf": {
+      "owner": "modInkIronHUDRefinementV4",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+      "sha256": "316a35a797dd617a14ccceb3b8ba13f24596166f6636083891ccc35810b86855",
+      "enabled": "1",
+      "priority": "31"
+    }
+  },
+  "regression_tests": {
+    "command": "python -m unittest discover -s tests -p test_ink*.py",
+    "passed": 82
+  },
+  "native_startup_failures": {
+    "original_runner": {
+      "attempts": 2,
+      "timeout_seconds": 240,
+      "logs_empty": true
+    },
+    "incomplete_clone": {
+      "attempts": 1,
+      "timeout_seconds": 240,
+      "logs_empty": true,
+      "excluded_as_resource_evidence": true
+    },
+    "complete_clone_isolated_temp": {
+      "attempts": 1,
+      "timeout_seconds": 240,
+      "logs_empty": true
+    },
+    "previously_working_runtime": {
+      "attempts": 1,
+      "timeout_seconds": 90,
+      "stdout_empty": true
+    }
+  },
+  "input_bindings": {
+    "path": "C:\\Users\\micha\\OneDrive - hull.ac.uk\\Documents\\The Witcher 3\\input.settings",
+    "sha256": "f31863c3e83231647f853a9b0af60aa5d881a0b3da89edc04bfe1db4bb49d6e6",
+    "section": "BASE_SHOW_RADIAL_MENU",
+    "verified_lines": [
+      "IK_Tab=(Action=RadialMenu)",
+      "IK_Pad_LeftShoulder=(Action=RadialMenu)"
+    ],
+    "changed": false
+  }
+}
