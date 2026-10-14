@@ -173,3 +173,20 @@ footer setup occurs before GFx dispatches OnConfigUI, which registers those
 listeners. The existing RC1 radial-bytecode isolation therefore remains the
 first test. An invisible successfully opened wheel is less supported by this
 observation. No second variant or package change is justified before RC1 results.
+
+## RC1 in-game result — 14 October 2026
+
+**User statement, verbatim:** "Still doesn't open or do anything when I press the buttons".
+
+This follows the requested private RC1 test of keyboard Tab and controller LB. **RC1 FAILED TO RESTORE THE RADIAL WHEEL.** No wheel or observable response was reported. The statement does not independently prove absence of every subtle sound/time/input effect, although earlier the user said nothing happened with original v4. **This supersedes pre-test RC1 status** elsewhere in this report.
+
+**Updated diagnosis:** Exact working v3 DoABC inside the v4 radial movie was **not sufficient** to restore radial operation. The removed v4 radial-local ABC changes alone cannot be considered a complete fix. This does not isolate whether surrounding v4 radial sprites/placements, root or shared GFx initialization, iteminfo/I&I quickslot state, v3 WitcherScript, other enabled mods, or native input gates prevent the opening action. The nullable Xbox icon expression is a possible hazard in other movies, not a confirmed runtime exception.
+
+**Next efficient action:** Instrument or decisively isolate the common opening chain before producing another normal HUD hotfix:
+1. Verify installed candidate SHA, effective resource ownership and input bindings read-only. Installation was user-reported but not independently inspected here.
+2. Compare complete v3/v4/RC1 GFx trees and script/export setup, including HUD root, shared panel_common / panel_overlay initialization, and I&I hud_iteminfo. Test whether footer initialization can abort OnConfigUI before input-listener registration.
+3. Prefer a small private trace build logging checkpoints: native/shared HUD readiness; radial GFx configUI/OnConfigUI completion; native OnRadialMenu entry and gate outcome; ShowRadialMenu and ShowElementFromState. Guard logging and give a reproducible path to retrieve evidence after pressing Tab/LB. Do not equate absence of a sound with proof of a specific failing function.
+4. If tracing is infeasible, try ONE pinned, coherent, complete v3 radial movie isolation while retaining v4 iteminfo/colors and other accepted resources. This differs from RC1's bytecode-only isolation and can discriminate non-ABC radial resource effects. Avoid multiple blind variants.
+5. Fix the established cause with I&I quickslots and accepted v4 palette, geometry, warning and smaller letters preserved; run offline checks and require real Tab/LB runtime verification before calling it fixed.
+
+**Release status: RC1 rejected as a functional fix, but remains a reproducible diagnostic.** Its smaller-letter change may be reused. Do not rewrite the original static RC1 manifest or immutable ZIP hash.
