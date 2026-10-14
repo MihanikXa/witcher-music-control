@@ -1,5 +1,7 @@
 # Codex instructions — Witcher Music Control
 
+**Newest gameplay feedback (2026-10-14; report43):** After the user was advised to replace the installed White Orchard D Vortex entry with the two-bank expanded NML v2 + exact D consolidated archive, the user replied **"All, works"**. This is direct user-reported success of the consolidated configuration in their current normal play context (supports apparent mod load/coexistence), **not an independently hashed deployment or a specific NML-zone playthrough test**. Do not infer that all 21 NML targets, combat outros or later authored cues were experienced in retail. Preserve user preference for spoiler-free natural play, and proceed with Skellige/offline full-game coverage without demanding custom saves. See research/43-consolidated-v2-user-feedback.md.
+
 **User decision (2026-10-14; report38):** Continue spoiler-free offline development, without imported/custom saves or visits to later areas. NML is provisionally acceptable for development but NOT retail-runtime verified. The user will report issues when naturally encountered. Do not demand save manipulation or premature gameplay testing. Prioritize verified native D+NML two-bank cache composition and broader evidence-backed generic coverage; do not edit installed D, Vortex, profiles or saves without a separate request. See research/38-spoiler-free-offline-continuation.md.
 
 

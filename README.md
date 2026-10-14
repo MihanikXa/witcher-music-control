@@ -1,5 +1,7 @@
 # Witcher Music Control
 
+**Latest retail feedback (2026-10-14):** Following installation advice for the consolidated White Orchard D + expanded Velen/Novigrad v2 archive, the user reports **"All, works"**. This supports successful consolidated operation in their current play, without establishing which NML selectors have been exercised. Exact installed-cache hashes were not independently checked in this report; individual NML locations remain untested. Next: continue spoiler-free offline work on Skellige and additional regions. See [report43](research/43-consolidated-v2-user-feedback.md).
+
 **Testing decision (2026-10-14):** Develop further regions offline without custom saves, spoilers or rushed game progression. NML pilot remains untested in retail and provisionally accepted only for continuing engineering. User will report any issue encountered naturally. Verify a native two-bank D+NML cache and expand generic music coverage conservatively, preserving working D installation. See [report38](research/38-spoiler-free-offline-continuation.md).
 
 **Current status (2026-10-13):** User reports satisfactory White Orchard gameplay. [Report27](research/27-working-fix-recovery-and-provenance.md) now identifies the deployed Vortex cache as the verified D Transition Fix Test, preserves source/build provenance and reconfirms native Init. All18 structural checks and32 tests pass. No new bank, deployment or save change was made during recovery.

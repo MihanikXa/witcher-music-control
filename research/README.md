@@ -78,3 +78,5 @@ Historical report37 next action is superseded by report38: continue offline with
 42. [Expanded NML consolidated package](42-expanded-nml-consolidated-package.md): effective entitlement,21 exact decoded playlist edits,423 preserved media payloads, unchanged globals and native two-bank v2 cache/ZIP.115 tests pass; no retail deployment.
 
 Current next action: implement a reviewed Skellige manifest using the shared static-only authoring, consumer/transition closure, independent regional bank/media gates and representative playback; add a verified bank to a new consolidated version. Expanded NML licence gate is resolved. Preserve installed D/Vortex, saves and all rollback archives; no custom saves, spoilers or premature retail-test requirement.
+
+43. [Consolidated v2 user feedback](43-consolidated-v2-user-feedback.md): user reports "All, works" after consolidated installation advice; current-context retail success, without specific NML-zone or hash verification. Continue Skellige and remaining regions offline, no custom saves/spoilers.
