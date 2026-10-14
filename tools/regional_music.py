@@ -77,6 +77,8 @@ def plan(original, spec, states):
         raise ValueError('Unexpected regional ancestry')
     values = state_values(spec, states)
     scopes, static = spec['state_scopes'], spec['static_targets']
+    if set(spec.get('static_consumer_paths', {})) - set(static):
+        raise ValueError('Consumer pins declared for nonstatic target')
     if len(set(scopes)) != len(scopes) or len(set(static)) != len(static):
         raise ValueError('Duplicate edit target')
     replay = spec['purpose'] == 'retained-D-regression'
@@ -138,8 +140,16 @@ def plan(original, spec, states):
             if any(world not in ancestors(objects[selector], parents)
                    for selector, _ in consumers.get(ident, [])):
                 raise ValueError('Static target consumed outside world')
-            if not replay and any(not any(n.get('ID') in scopes for n in ancestors(objects[selector], parents))
-                                  for selector, _ in consumers.get(ident, [])):
+            pinned = spec.get('static_consumer_paths', {}).get(ident)
+            if pinned is not None:
+                actual = sorted((selector, objects[selector].get('ShortID'), path)
+                                for selector, path in consumers.get(ident, []))
+                expected = sorted((row['selector_id'], str(row['selector_short_id']), tuple(row['states']))
+                                  for row in pinned)
+                if not expected or actual != expected:
+                    raise ValueError('Static consumer closure differs from reviewed paths')
+            elif not replay and any(not any(n.get('ID') in scopes for n in ancestors(objects[selector], parents))
+                                    for selector, _ in consumers.get(ident, [])):
                 raise ValueError('Static target consumed outside reviewed scopes')
     if set(static) - set(decisions):
         raise ValueError('Undeclared static target')
@@ -219,6 +229,7 @@ def validate_source(original, candidate, spec, states, template):
         raise ValueError('Unexpected routing/transition/source/global/State change')
     return {'passed': True, 'state_scopes': len(spec['state_scopes']),
             'static_targets': len(spec['static_targets']), 'states': len(values),
+            'attenuation_mechanism': 'static-only' if not spec['state_scopes'] else 'State-and-static',
             'all_other_music_semantics_exact': True,
             'pending_decisions': sum(d['classification'] in ('mixed', 'unresolved') for d in spec['decisions'].values()),
             'shipping_policy_complete': all(d['classification'] not in ('mixed', 'unresolved') for d in spec['decisions'].values())}
@@ -237,14 +248,21 @@ def context(source, spec):
     return ET.parse(path).getroot(), states
 
 
+def validate_events(original, events, spec):
+    objects, parents, _ = graph(original)
+    static = set(spec['static_targets'])
+    for ref in events.iter('ObjectRef'):
+        node = objects.get(ref.get('ID'))
+        if node is not None and {n.get('ID') for n in ancestors(node, parents)} & static:
+            raise ValueError('Direct event targets a permanent attenuation candidate or descendant')
+
+
 def author(source, project, manifest, template_path, port):
     project = build_path(project)
     spec = json.loads(manifest.read_text(encoding='utf-8'))
     original, states = context(source, spec)
     values = plan(original, spec, states)
-    static_ids = set(spec['static_targets'])
-    if any(n.get('ID') in static_ids for n in ET.parse(source / 'Events/music.wwu').iter('ObjectRef')):
-        raise ValueError('Direct event targets a permanent attenuation candidate')
+    validate_events(original, ET.parse(source / 'Events/music.wwu'), spec)
     workspace = project.parent
     report = workspace / 'regional-source-audit.json'
     if report.exists():

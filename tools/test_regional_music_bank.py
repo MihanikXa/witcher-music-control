@@ -95,6 +95,15 @@ class RecordGateTests(unittest.TestCase):
 
     def test_complete_field_allowlist(self):self.assertEqual(len(self.gate()),2)
 
+    def test_static_only_preserves_native_state_and_transition_record(self):
+        self.spec['state_scopes']=[]
+        self.after['records'][124]=self.before['records'][124]
+        self.assertEqual(set(self.gate()),{'125'})
+
+    def test_static_only_rejects_location_state_gain(self):
+        self.spec['state_scopes']=[]
+        with self.assertRaises(ValueError):self.gate()
+
     def test_repeated_metadata_requires_consistency(self):
         self.meta.append(copy.deepcopy(self.meta[0]));self.assertEqual(len(self.gate()),2)
         self.meta[1].find('./States/State').set('Name','wrong')

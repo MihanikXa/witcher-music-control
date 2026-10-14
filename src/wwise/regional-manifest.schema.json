@@ -88,6 +88,22 @@
         "type": "string"
       }
     },
+    "static_consumer_paths": {
+      "description": "Exact original selector identities and complete State paths for reviewed permanent playlist gains; mandatory outside reviewed State scopes.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array", "minItems": 1, "uniqueItems": true,
+        "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["selector_id", "selector_short_id", "states"],
+          "properties": {
+            "selector_id": {"type": "string"},
+            "selector_short_id": {"type": "integer"},
+            "states": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
     "decisions": {
       "type": "object",
       "additionalProperties": {

@@ -61,4 +61,6 @@ Reports27–29 resolved recovery and proposed the shared implementation. The new
 
 34. [Regional decoder and transition controls](34-regional-decoder-and-transition-controls.md): derived v150 fields,D regression,84 tests and corrected transport RTPC controls; reproduced NML combat-outro attenuation and stricter source-closure rejection.
 
-Decoder/control work is complete. Next narrow gain ancestry to approved generic playlists outside native transition paths, validate any joint State/static changes, then repeat outro/q505/q001 controls before candidate generation. The baseline licensing step remains complete. Do not deploy fixtures, bulk-mute unresolved locations or replace working D.
+35. [Static playlists preserve combat outros](35-static-playlists-preserve-combat-outros.md): static-only NML correction, exact consumer closure, complete native outros,59 playback captures and retained-D regression. Full corrected source passes. Candidate generation exits1/zero banks because its project-local licence is ineffective. No package or retail test.
+
+Current next action: manually apply the existing approved entitlement to the NML **candidate** project, then generate only the selected candidate and run independent decoded/media/global/diagnostic/cooker gates. Do not regenerate the verified baseline, deploy fixtures, mute unresolved locations or replace working D. Earlier location-State passes and scope recommendations in reports30–34 are superseded by report35.

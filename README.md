@@ -2,7 +2,7 @@
 
 **Current status (2026-10-13):** User reports satisfactory White Orchard gameplay. [Report27](research/27-working-fix-recovery-and-provenance.md) now identifies the deployed Vortex cache as the verified D Transition Fix Test, preserves source/build provenance and reconfirms native Init. All18 structural checks and32 tests pass. No new bank, deployment or save change was made during recovery.
 
-**Shared implementation:** [Report30](research/30-shared-regional-authoring.md) documents manifest-driven authoring/source/cache gates and 59 passing tests against retained D. [Report31](research/31-authored-world-exception-proof.md) measures physical attenuation relocation and q505 isolation, with intent and intensity-onset limitations. [Report32](research/32-nomansgrad-scoped-source-results.md) records the partial NML pilot: clean source passes, zone02 playback passes bounded tests, and the initial baseline licensing stop. [Report33](research/33-licensed-nomansgrad-baseline.md) records the successful licensed untouched baseline: exit2/19 reviewed warnings, native-exact HIRC and all423 streams. No new bank/package is approved. [Report34](research/34-regional-decoder-and-transition-controls.md) implements the decoder and passes84 tests/D regression. Corrected transport-scoped controls expose combat-outro attenuation in the proposed location scopes; a stricter transition-consumer guard now blocks both exception/NML pilot manifests. Narrow generic gain ancestry and repeat transition/protected-cue controls before generation. Unresolved locations remain native. Working D and A/C evidence remain preserved.
+**Shared implementation (2026-10-14):** [Report35](research/35-static-playlists-preserve-combat-outros.md) resolves the NML combat-outro defect using static attenuation on four approved generic playlists, with no shared location State gains. Full source checks and59 real Wwise captures preserve native combat/outros and White Orchard technical authored/Music/Gwent regressions. Retained D remains unchanged and decoded-bank verified. Exact consumer pins and strict source/bank gates remain. **Candidate generation is blocked by project-local licensing** (exit1/zero banks); apply the approved entitlement manually to `build/regional-system/nomansgrad/candidate/w3_audio.wproj`, then resume selected generation against the already verified [licensed baseline](research/33-licensed-nomansgrad-baseline.md). No NML cache/ZIP or retail-game result exists. Zone02/03 is partial coverage; unresolved/mixed paths stay native. Reports30–34 preserve earlier implementations and failed scope evidence.
 
 A Witcher 3 Remastered mod project for **context-aware music gain**: reduce routine scoring without removing deliberately authored dramatic music or disturbing the game's native soundtrack transitions.
 
@@ -23,11 +23,11 @@ These are **additional gain multipliers relative to the player's normal Music se
 
 **Design principle:** preserve contrast and authored musical meaning. Do not interpret the goal as "minimize all music." A future optional sparse-exploration mode may use intermittent musical punctuation, inspired by Breath of the Wild and Ghost of Tsushima, but this is a **design hypothesis**, not an approved replacement for the 0% default and not something a static volume slider alone can deliver. Details: [experience-led music policy](research/08-experience-led-music-policy.md).
 
-## REDkit licence imported — baseline verification pending (2026-10-11)
+## Historical licence/build notes (2026-10-11; superseded by reports22–35)
 
 The user reports **approval and local import** of the Witcher 3 REDkit Wwise modding licence. **Effective coverage for this isolated Wwise project, successful generation, plug-in support and bank compatibility are still unverified**. Run the untouched complete-project licensed baseline first. A user-reported import is not a bank-generation result. Do not claim that a licence is installed or that this clears the observed project-ID difference. Before another bank-generation experiment, use the controlled post-approval protocol in [research/16-licence-pending-build-gates.md](research/16-licence-pending-build-gates.md). Keep all licence keys out of Git and logs.
 
-## Current engineering choice (2026-10-11)
+## Historical engineering choice (2026-10-11)
 
 **Complete-context build result:** [report 15](research/15-full-context-stage1-results.md) verifies the intended regional State serialization (+117 bytes, unchanged media and quest/event records, no new runtime IDs or Init changes). Full copies hit the trial-media limit; supported inclusion controls emit banks but still fail Mastering Suite licensing. Generated BKHD project identity is 0 versus native 39; compatibility with original Init remains unproved. No package was cooked or deployed.
 
@@ -41,7 +41,7 @@ Preserving complete authoring context might reduce missing dependencies but **do
 
 Historical research 04–12 documents the earlier mixer, audio exceptions, licence investigations and successful *vanilla-fixture* cache cooking. Current operational decisions are in [13: direct State volume](research/13-world-state-volume-init-free.md) and [14: full-context build experiment](research/14-full-context-bank-experiment.md).
 
-## Next milestone — complete-context White Orchard regional bank
+## Historical White Orchard build protocol (completed; current next action is report35)
 
 1. Prepare a **complete**, separate copy of the existing Wwise 2023.1.19 project using `white_orchard_prepare.py --preserve-hierarchies`. Never write to installed game, REDkit or Wwise files.
 2. Apply only the existing world's 25 State Voice Volume values using the clean author-only helper `tools/white_orchard_state_volume_author.py`. Do not use the test-tone/Recorder workspace as production source.

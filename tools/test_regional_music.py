@@ -3,7 +3,7 @@ import copy
 import unittest
 import xml.etree.ElementTree as E
 
-from regional_music import plan, validate_source, expected_state, MUTED
+from regional_music import plan, validate_source, validate_events, expected_state, MUTED
 from test_music_region_inventory import entry
 
 
@@ -47,6 +47,54 @@ def fixture():
 
 
 class RegionalTests(unittest.TestCase):
+    def test_direct_event_to_generic_descendant_rejected(self):
+        a,b,s,states,t=fixture()
+        generic=next(n for n in a.iter() if n.get('ID')=='generic')
+        E.SubElement(generic,'MusicSegment',ID='child')
+        events=E.fromstring('<Event><ObjectRef ID="child"/></Event>')
+        with self.assertRaisesRegex(ValueError,'Direct event'):validate_events(a,events,s)
+
+    def test_direct_authored_event_outside_static_ancestry_passes(self):
+        a,b,s,states,t=fixture()
+        validate_events(a,E.fromstring('<Event><ObjectRef ID="protected"/></Event>'),s)
+
+    def static_fixture(self):
+        a,b,s,states,t=fixture()
+        s['state_scopes']=[]
+        next(n for n in b.iter() if n.get('ID')=='scope').remove(b.find('.//StateInfo'))
+        s['static_consumer_paths']={'generic':[{'selector_id':'scope','selector_short_id':8,'states':['exploration']}]}
+        for tree in (a,b):
+            next(n for n in tree.iter() if n.get('ID')=='scope').set('ShortID','8')
+        return a,b,s,states,t
+
+    def test_static_only_source_and_consumer_closure_pass(self):
+        self.assertTrue(validate_source(*self.static_fixture())['passed'])
+
+    def test_static_only_added_consumer_fails(self):
+        a,b,s,states,t=self.static_fixture()
+        entry(next(n for n in a.iter() if n.get('ID')=='scope'),'generic','dialog_scene')
+        with self.assertRaisesRegex(ValueError,'consumer closure'):plan(a,s,states)
+
+    def test_static_only_changed_selector_identity_fails(self):
+        a,b,s,states,t=self.static_fixture()
+        s['static_consumer_paths']['generic'][0]['selector_short_id']=9
+        with self.assertRaisesRegex(ValueError,'consumer closure'):plan(a,s,states)
+
+    def test_static_only_combat_consumer_cannot_be_approved(self):
+        a,b,s,states,t=self.static_fixture()
+        entry(next(n for n in a.iter() if n.get('ID')=='scope'),'generic','combat')
+        s['static_consumer_paths']['generic'].append({'selector_id':'scope','selector_short_id':8,'states':['combat']})
+        with self.assertRaisesRegex(ValueError,'mixed-use'):plan(a,s,states)
+
+    def test_static_only_native_outro_sibling_remains_unattenuated(self):
+        a,b,s,states,t=self.static_fixture()
+        for tree in (a,b):
+            children=next(n for n in tree.iter() if n.get('ID')=='scope').find('ChildrenList')
+            outro=E.SubElement(children,'MusicPlaylistContainer',ID='outro',Name='outro',ShortID='9')
+            E.SubElement(E.SubElement(outro,'ChildrenList'),'MusicSegment',ID='outro-segment')
+            E.SubElement(tree,'TransitionObjectRef',ID='outro-segment')
+        self.assertTrue(validate_source(a,b,s,states,t)['passed'])
+
     def test_transition_consumer_missing_review_fails(self):
         a,b,s,states,t=fixture();playlist=next(n for n in a.iter() if n.get('ID')=='generic')
         E.SubElement(E.SubElement(playlist,'ChildrenList'),'MusicSegment',ID='transition-segment')

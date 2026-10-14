@@ -42,14 +42,7 @@
     },
     "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259"
   },
-  "state_scopes": [
-    "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
-    "{F7D92AC0-A9DC-4F28-A184-A271F1E2A2BD}",
-    "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
-    "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
-    "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
-    "{F94578B7-E270-4D39-B056-C7B083FE02C7}"
-  ],
+  "state_scopes": [],
   "static_targets": [
     "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}",
     "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
@@ -155,5 +148,298 @@
     "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}",
     "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}",
     "{D79C5D2C-22B5-4855-882B-FD18E348605D}"
-  ]
+  ],
+  "static_consumer_paths": {
+    "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}": [
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+        "selector_short_id": 840282456,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{4A23933D-BE41-4C79-BED2-337D24C605EA}": [
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}": [
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+        "selector_short_id": 850899831,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}": [
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+        "selector_short_id": 657429646,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{D79C5D2C-22B5-4855-882B-FD18E348605D}": [
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+        "selector_short_id": 866607386,
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ]
+  },
+  "attenuation_evidence": "Report35: static-only approved generic playlists; no shared ancestor State gains. Native combat transition consumers retain original ancestry and volume. Pending and mixed classifications remain native."
 }

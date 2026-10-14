@@ -20,7 +20,7 @@ GENERIC = {
 }
 
 
-def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False):
+def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False, minimum_duration=19):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -62,7 +62,7 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
     silent = out / "anchor.wav"
     with wave.open(str(silent), "wb") as wav:
         wav.setparams((6, 2, 48000, 0, "NONE", "not compressed"))
-        for _ in range(40):
+        for _ in range(max(60, int(minimum_duration) + 2)):
             wav.writeframesraw(bytes(48000 * 12))
     anchor = r"\Actor-Mixer Hierarchy\Default Work Unit\WMC_TransitionAnchor"
     api.call("ak.wwise.core.audio.import", {"importOperation": "useExisting", "autoAddToSourceControl": False,
@@ -78,7 +78,7 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
     event_transport = api.call("ak.wwise.core.transport.create", {"object": events[play_event]})["transport"]
     cases = {
         "e-combat": [(0, "exploration", None), (6, "combat", None), (13, "exploration", None)],
-        "e-combat-offset": [(0, "exploration", None), (7.3, "combat", None)],
+        "e-combat-offset": [(0, "exploration", None), (7.3, "combat", None), (14.3, "exploration", None)],
         "e-dialogue": [(0, "exploration", None), (6, "dialog_scene", None), (10, "exploration", None)],
         "e-cutscene-dialogue": [(0, "exploration", None), (6, "cutscene", None), (6.4, "dialog_scene", None)],
         "e-movie-dialogue": [(0, "exploration", None), (6, "movie", None), (6.4, "dialog_scene", None)],
@@ -118,7 +118,7 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
             if mode == "D-probe":
                 for ident in GENERIC:
                     api.call("ak.wwise.core.object.setProperty", {"object": ident, "property": "Volume", "value": -200})
-            for state, ident in states.items():
+            for state, ident in (states.items() if regional is None else []):
                 muted = state in spec["active_states"]["exploration"] + spec["active_states"]["dialogue"]
                 api.call("ak.wwise.core.object.setProperty", {"object": ident, "property": "Volume", "value": -200 if mode != "baseline" and muted else 0})
             for label, sequence in cases.items():
@@ -154,7 +154,8 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
                 pending = list(sequence)
                 parameters = ([(10, "threat_rating", 35), (14, "threat_rating", 100)] if label == "combat-threat" else
                               [(6, "menu_volume_music", 50), (11, "menu_volume_music", 100)] if label == "q001-direct" else [])
-                duration = max(19, sequence[-1][0] + 6)
+                duration = max(minimum_duration, sequence[-1][0] + 6)
+                row['duration_seconds'] = duration
                 while time.monotonic() - started < duration:
                     elapsed = time.monotonic() - started
                     while pending and elapsed >= pending[0][0]:
@@ -205,7 +206,8 @@ if __name__ == "__main__":
     parser.add_argument('--manifest', type=Path)
     parser.add_argument('--location-event')
     parser.add_argument('--explicit-threat-zero', action='store_true', help='Fixture-only preplay threat=0/Music=100 control with 1.1s settling')
+    parser.add_argument('--minimum-duration', type=float, default=19, help='Observe native outro completion; does not alter musical transitions')
     args = parser.parse_args()
     if "D-probe" in args.modes and args.modes != ["D-probe"]:
         parser.error("D-probe mutates fixture playlists: run it separately, after baseline/C")
-    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event, args.explicit_threat_zero)
+    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event, args.explicit_threat_zero, args.minimum_duration)
