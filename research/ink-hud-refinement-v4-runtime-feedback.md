@@ -42,3 +42,18 @@ This report eliminates the hypothesis that *only* the Xbox LB binding/icon cause
 ## Next deliverable
 
 A bounded **v4 hotfix**, no broad redesign: working LB radial quick-access/sign/Axii menu with I&I quickslots, and smaller central Xbox glyph letters while keeping the approved ring size and overall UI proportions. Preserve remaining v4 contents and support rollback to v4. Run native/GFx/script gates and report genuine runtime uncertainty. Private binaries and author assets remain ignored; public Git contains only first-party tools and evidence. Never alter user Vortex profiles, saves or merges automatically.
+
+## Additional user observation — 14 October 2026
+
+Asked whether the failed v4 Tab/LB attempt produces the opening sound, slowed
+time or blocked movement, the user answered: **"Nothing happens."** This is
+feedback about the original v4 failure, not a test result for hotfix RC1.
+
+The lack of perceived opening effects supports a failure before the native
+ShowRadialMenu sequence reaches sound/time/context changes. Early native action
+gates or missing input-listener registration remain possible; it does not
+prove an ActionScript null exception. In the observed source chain, radial
+footer setup occurs before GFx dispatches OnConfigUI, which registers those
+listeners. The existing RC1 radial-bytecode isolation therefore remains the
+first test. An invisible successfully opened wheel is less supported by this
+observation. No second variant or package change is justified before RC1 results.

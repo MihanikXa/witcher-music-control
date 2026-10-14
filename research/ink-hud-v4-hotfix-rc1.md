@@ -158,3 +158,18 @@ Private ZIP: `deploy/ink-hud-v4-hotfix-rc1/Ink-Iron-HUD-v4-Hotfix-RC1-radial-iso
 Native cook, 22-resource validation (zero resource errors) and pack passed. Native metadata startup timed out at 240 seconds without passing the commandlet. The independently verified native-control table relocation passed, reproducing its control byte-for-byte and rejecting changed key order/import/buffer/dependency tables. This release uses **fallback metadata**, not a successful native metadata command. Exact bundle extraction, metadata keys, deterministic ZIP, all unchanged component hashes, script/menu equality and live snapshot checks passed. Known depot-path and absent-sound-bank startup assertions match accepted controls; no new assertions were allowed.
 
 65 HUD regression tests passed. Actual final GFx A/B/X/Y exports were inspected at 0.6875, 1.375 and 4 times canvas scale. These prove definitions and smooth shape construction; they do not prove the radial opens in-game. The six hotfix tests cover letter-only scaling, other art equality, exact working radial ABC, frozen components, unchanged iteminfo/root code and the nullable equality hazard as a model, explicitly not a captured runtime exception.
+
+## Additional user observation — 14 October 2026
+
+Asked whether the failed v4 Tab/LB attempt produces the opening sound, slowed
+time or blocked movement, the user answered: **"Nothing happens."** This is
+feedback about the original v4 failure, not a test result for hotfix RC1.
+
+The lack of perceived opening effects supports a failure before the native
+ShowRadialMenu sequence reaches sound/time/context changes. Early native action
+gates or missing input-listener registration remain possible; it does not
+prove an ActionScript null exception. In the observed source chain, radial
+footer setup occurs before GFx dispatches OnConfigUI, which registers those
+listeners. The existing RC1 radial-bytecode isolation therefore remains the
+first test. An invisible successfully opened wheel is less supported by this
+observation. No second variant or package change is justified before RC1 results.
