@@ -1,6 +1,7 @@
 # HUD v4 Hotfix RC2 — shared footer correction
 
-15 October 2026. **Implemented source correction; in-game acceptance pending.**
+15 October 2026. **Implemented source correction; user reports successful in-game operation.**
+See [15 October RC2 user acceptance and freeze](ink-hud-v4-rc2-runtime-acceptance.md). The initial offline build receipt remains historical evidence, not retroactively rewritten.
 One clean replacement package, no new diagnostic variant or gameplay/script edits.
 
 ## Exact defect and minimal correction
