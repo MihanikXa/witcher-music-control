@@ -2,6 +2,14 @@
 
 **Latest explicit user decision; supersedes older inventory layout proposals.** This is an intention and design hypothesis, not a claim that code exists.
 
+## 15 October 2026 — official Ink & Iron / Hoods compatibility update
+
+The user corrected the earlier assumption that Hoods inventory ownership remains an outstanding integration blocker: **Ink & Iron now supplies its own Hoods Compatibility patch**. The author added this optional file in **Ink & Iron 0.8.3 (13 October 2026)**; the Nexus file description says it **restores Hoods dye handling on top of Ink & Iron inventory**, requires both Hoods and Ink & Iron UI, and is to be installed alongside them. Official sources: https://www.nexusmods.com/witcher3/mods/13111?tab=files and the 0.8.3 changelog. This supersedes the **default assumption of an unsolved Hoods versus I&I inventory merge**, not the need to check the actual installed file owner and functionality.
+
+**New implementation baseline:** Start from the effective **current-version I&I Inventory plus its official Hoods patch**, not the old Hoods-owned/retail inventory movie as the expected interface. Read the local patch manifest, `panel_inventory.redswf` ownership and priority, compare Hoods dye/hood behavior and menu/action contracts, and preserve the patch's compatibility hooks in the custom Gear-grid vertical slice. If there is any mismatch, identify the exact gap rather than automatically rebuilding Hoods support. The user's intended one-screen grid/Geralt preview/equipped markers and organization reform remain unchanged.
+
+**Current I&I design has also evolved:** in 0.8.4, the author changed Inventory item previews to contextual pop-up cards beside hovered slots, with content-sized descriptions and Shift comparison, while adjusting its Equipment First view. Inspect the current installed implementation rather than reproducing assumptions based on 0.7.4 or 0.8.0 screenshots. This upstream enhancement may inform detail-card treatment, but does not supersede the user's preference against the circular equipment constellation.
+
 ## Core decision
 
 **Keep Witcher 3's Inventory as one screen.** The user **rejects the entire Ink & Iron equipment-around-Geralt composition**, not merely the sparse grid. The circular equipment orbit (swords/armor, ranged equipment, consumables, Roach, pockets/bombs) appears spatially arbitrary, makes the paper doll decorative rather than organizing the view, and scatters unrelated subsystems across black negative space.
