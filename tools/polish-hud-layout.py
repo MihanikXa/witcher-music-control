@@ -36,12 +36,12 @@ def button(t):
 
 def footer(t):
     t=p.one(t,'BUTTONS_PADDING:Number = 15','BUTTONS_PADDING:Number = 20')
-    # Preserve original anchor calculations, fitting the canvas width when necessary.
-    marker='         switch(this._buttonAlign)'
-    if marker not in t:marker='         switch(this._align)'
-    t=p.one(t,marker,'''         this._canvas.scaleX = this._canvas.scaleY = this._cachedWidth > 0 && buttonsSize > this._cachedWidth ? this._cachedWidth / buttonsSize : 1;
-         buttonsSize *= this._canvas.scaleX;
-'''+marker)
+    # D1 runtime: ModuleInputFeedback.repositionButtons faults with AVM2
+    # ReferenceError #1065 before Radial OnConfigUI. Do not inject the v4
+    # canvas-fit calculation using the unverified identifier "buttonsSize".
+    # Keep the original footer alignment implementation and bounded spacing.
+    # Source-generation change only: existing v4/RC1 SWFs must be separately
+    # recompiled using repair-ink-hud-footer.py against their decompiled class.
     return t
 
 
