@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Skellige progress (2026-10-15):** [Report44](research/44-skellige-pristine-baseline-licence-gate.md) prepares the complete untouched baseline (1,508 work units,253 verified audio inputs). Selected generation is blocked by project-local entitlement: exit1/no banks, six Mastering Suite errors and trial-media limit. Manually apply the existing approved entitlement to `build/skellige-v3/baseline/w3_audio.wproj`, then resume independent baseline verification. No Skellige edits or v3 package yet;115 tests pass and working consolidated-v2 remains unchanged.
+
+
 **Latest retail feedback (2026-10-14):** Following installation advice for the consolidated White Orchard D + expanded Velen/Novigrad v2 archive, the user reports **"All, works"**. This supports successful consolidated operation in their current play, without establishing which NML selectors have been exercised. Exact installed-cache hashes were not independently checked in this report; individual NML locations remain untested. Next: continue spoiler-free offline work on Skellige and additional regions. See [report43](research/43-consolidated-v2-user-feedback.md).
 
 **Testing decision (2026-10-14):** Develop further regions offline without custom saves, spoilers or rushed game progression. NML pilot remains untested in retail and provisionally accepted only for continuing engineering. User will report any issue encountered naturally. Verify a native two-bank D+NML cache and expand generic music coverage conservatively, preserving working D installation. See [report38](research/38-spoiler-free-offline-continuation.md).

@@ -80,3 +80,7 @@ Historical report37 next action is superseded by report38: continue offline with
 Current next action: implement a reviewed Skellige manifest using the shared static-only authoring, consumer/transition closure, independent regional bank/media gates and representative playback; add a verified bank to a new consolidated version. Expanded NML licence gate is resolved. Preserve installed D/Vortex, saves and all rollback archives; no custom saves, spoilers or premature retail-test requirement.
 
 43. [Consolidated v2 user feedback](43-consolidated-v2-user-feedback.md): user reports "All, works" after consolidated installation advice; current-context retail success, without specific NML-zone or hash verification. Continue Skellige and remaining regions offline, no custom saves/spoilers.
+
+44. [Skellige pristine baseline licence gate](44-skellige-pristine-baseline-licence-gate.md): complete1,508-unit source copy and253 originals verified; selected generation exits1/no banks due to project-local licence. Preliminary absent-playlist descendant/transition references recorded, no edits or compatibility claim.115 tests pass.
+
+Current prerequisite (report44): user manually applies the existing entitlement to `build/skellige-v3/baseline/w3_audio.wproj`; then generate into fresh output and establish untouched native-bank/media fidelity before Skellige authoring. Working v2 remains unchanged; no retail travel, custom saves or deployment required.
