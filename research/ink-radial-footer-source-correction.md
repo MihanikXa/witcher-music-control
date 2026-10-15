@@ -1,5 +1,11 @@
 # D1 confirmed footer exception — source-level correction candidate
 
+**Implementation update, 15 October 2026:** The installed shared HUD's P-code
+confirms unbound `buttonsSize` lexical lookups. The prepared correction has now
+been compiled into private RC2; native cook/validate/pack/metadata and 90 tests
+pass. Runtime acceptance remains pending. See [RC2 implementation and package](ink-hud-v4-hotfix-rc2.md).
+The candidate-stage account below is preserved as historical evidence.
+
 **15 October 2026. Source correction prepared, NOT compiled/released/runtime-confirmed.**
 
 Two in-game D1 screenshots show `FAULT AS hud footer layout ReferenceError: Error #1065`, propagated to `hud radialmenu configUI`; `configEnter=false configDone=false shown=false` despite independently observed RadialMenu action presses. The exact missing AVM2 symbol is not logged. See [D1 runtime evidence](ink-radial-trace-d1-runtime-feedback.md).
