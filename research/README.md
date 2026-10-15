@@ -83,9 +83,11 @@ Current next action: implement a reviewed Skellige manifest using the shared sta
 
 44. [Skellige pristine baseline licence gate](44-skellige-pristine-baseline-licence-gate.md): complete1,508-unit source copy and253 originals verified; selected generation exits1/no banks due to project-local licence. Preliminary absent-playlist descendant/transition references recorded, no edits or compatibility claim.115 tests pass.
 
-Report44 baseline prerequisite is resolved by report45. The separate candidate prerequisite and current next action are recorded below.
+Report44 baseline prerequisite is resolved by report45; report46's separate candidate prerequisite is resolved by report47.
 
 45. [Licensed Skellige pristine reference](45-licensed-skellige-pristine-reference.md): successful untouched selected build,1,900 native-exact HIRC,253 exact native streams, reviewed16 warnings and bounded source-only playlist closure.
 46. [Skellige static coverage and playback](46-skellige-static-coverage-and-playback.md):12 static generic targets/85 of185 rows, full542-event closure,38 Wwise captures and sustained/primed complete outros.139 tests and retained D/NML regressions pass; fresh candidate project licence blocks bank generation/v3 packaging.
 
-Current next action (report46): manually apply the existing approved entitlement to `build/skellige-v3/candidate/w3_audio.wproj`. Reuse the licensed baseline and accepted source/playback; resume selected generation into fresh output, strict decoded/media/global proof, then actual three-bank native cooker diagnostic review/readback. Do not extrapolate the two-bank diagnostic approval, deploy, manipulate saves or require later-region visits.
+47. [Licensed Skellige and consolidated v3](47-licensed-skellige-and-consolidated-v3.md): effective candidate licence, exactly12 decoded Volume edits,253 preserved media payloads, unchanged globals and exact retained D/NML banks. Actual native three-bank cook/split exit0, independently reviewed32/23 diagnostics, exact payload/ZIP readback and141 passing tests. V3 is ready offline, not deployed or retail-Skellige verified.
+
+Current next action (report47): implement Kaer Morhen using the shared manifest, complete consumer/transition closure, independent pristine baseline and source/binary/media gates, then representative playback and a new consolidated version. Toussaint follows. Skellige licensing/cooker prerequisites are resolved; preserve accepted captures/banks, working v2, native Init and rollback archives. No custom saves, spoilers, forced travel or deployment without separate authorization.

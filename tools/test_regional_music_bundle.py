@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from regional_music_bundle import verified_inputs, audit_bank_identities, reviewed_diagnostics
+from regional_music_bundle import verified_inputs, audit_bank_identities, reviewed_diagnostics, completed_native
 from unittest.mock import patch
 from white_orchard_prepare import REPO
 
@@ -59,3 +59,33 @@ class BundleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'independent actual native diagnostic review'):
             reviewed_diagnostics(self.root,self.root,'unused',
                 ['music_prologue.bnk','music_nomansgrad.bnk','music_skellige.bnk'])
+
+    def test_observed_profile_is_exact_and_bank_scoped(self):
+        names=['music_prologue.bnk','music_nomansgrad.bnk','music_skellige.bnk']
+        (self.root/'cook.log').write_text('[time][Warning][WCC] reviewed fixture\n')
+        (self.root/'bundle-split.log').write_text('[time][Warning][WCC] reviewed split\n')
+        profile=self.root/'profile.json'
+        data={'schema':1,'bank_names':names,'review_evidence':'Synthetic profile test, not native evidence',
+              'cook_rows':['[warning][wcc] reviewed fixture'],'split_rows':['[warning][wcc] reviewed split']}
+        profile.write_text(json.dumps(data))
+        self.assertTrue(reviewed_diagnostics(self.root,self.root,'cook',names,profile)['passed'])
+        (self.root/'cook.log').write_text('[time][Error][WCC] unexpected\n')
+        with self.assertRaisesRegex(ValueError,'Unreviewed native'):
+            reviewed_diagnostics(self.root,self.root,'cook',names,profile)
+        with self.assertRaisesRegex(ValueError,'mismatched'):
+            reviewed_diagnostics(self.root,self.root,'cook',names[:2],profile)
+
+    def test_existing_output_requires_exact_native_status_arguments_and_stderr(self):
+        arguments=['cooksounds','-platform=pc_dx12']
+        result={'exit_code':0,'timeout':False,'args':arguments+['-root',str(self.root)+'\\','-noninteractivecrash']}
+        path=self.root/'cook-result.json';path.write_text(json.dumps(result))
+        (self.root/'cook.log').write_text('native fixture')
+        stderr=self.root/'cook.stderr.log';stderr.write_text('')
+        completed_native(self.root,'cook',arguments)
+        for key,value in [('exit_code',1),('args',['wrong-root']),('timeout',True)]:
+            changed=dict(result);changed[key]=value;path.write_text(json.dumps(changed))
+            with self.assertRaisesRegex(ValueError,'Completed native command'):
+                completed_native(self.root,'cook',arguments)
+        path.write_text(json.dumps(result));stderr.write_text('unreviewed stderr')
+        with self.assertRaisesRegex(ValueError,'Completed native command'):
+            completed_native(self.root,'cook',arguments)
