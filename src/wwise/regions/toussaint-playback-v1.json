@@ -1,0 +1,65 @@
+[
+  {
+    "name": "general-sustained",
+    "location_event": "mus_loc_toussaint_general",
+    "cases": [
+      "combat-sustain",
+      "combat-sustain-offset"
+    ],
+    "duration": 65,
+    "prime_location": true
+  },
+  {
+    "name": "general-contexts",
+    "location_event": "mus_loc_toussaint_general",
+    "cases": [
+      "night-combat",
+      "e-dialogue",
+      "e-cutscene-dialogue",
+      "e-movie-dialogue",
+      "e-music-only-dialogue",
+      "combat-threat",
+      "boat-combat"
+    ],
+    "duration": 38,
+    "prime_location": true
+  },
+  {
+    "name": "city-day-night",
+    "location_event": "mus_loc_toussaint_rich",
+    "cases": [
+      "e-dialogue",
+      "night-combat"
+    ],
+    "duration": 30,
+    "prime_location": true
+  },
+  {
+    "name": "ordinary-special-area",
+    "location_event": "mus_loc_toussaint_tournament_general",
+    "cases": [
+      "e-dialogue"
+    ],
+    "duration": 24,
+    "prime_location": true
+  },
+  {
+    "name": "mixed-preservation",
+    "location_event": "mus_loc_toussaint_tavern",
+    "cases": [
+      "gwent",
+      "minigames"
+    ],
+    "duration": 24,
+    "prime_location": true
+  },
+  {
+    "name": "protected-world",
+    "location_event": "mus_loc_toussaint_tournament_quest",
+    "cases": [
+      "music-master"
+    ],
+    "duration": 24,
+    "prime_location": true
+  }
+]

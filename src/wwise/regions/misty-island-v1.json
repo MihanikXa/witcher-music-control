@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "region": "music_misty_island",
+  "manifest_version": 1,
+  "facts": {
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259",
+    "root": {
+      "id": "{FA0386DD-920D-4712-9914-835F813F3720}",
+      "name": "music_misty_island",
+      "short_id": "20329317"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{6734B47E-58B4-449C-864C-B8E01DA8A376}",
+      "short_id": "1037750256",
+      "line": null
+    },
+    "quest": {
+      "name": "quests_cutscenes",
+      "id": "{AC3699A8-6056-4769-82D3-0BE7D4688EB8}",
+      "short_id": "997293540",
+      "line": null
+    }
+  },
+  "state_scopes": [],
+  "static_targets": [],
+  "decisions": {
+    "{DEF413ED-A579-47B1-9B68-12F3162E307C}": {
+      "name": "mi_expl",
+      "short_id": 833316345,
+      "classification": "unresolved",
+      "policy": "preserve-native",
+      "evidence": "Location-specific score with insufficient evidence to classify as disposable traversal. Native volume retained pending intent confirmation; no generic inference from an exploration State or source name.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 0.0,
+      "parent_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+      "parent_short_id": 132277195,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 9,
+        "parent_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+        "parent_short_id": 132277195,
+        "selector_consumers": [
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{C74D4E3A-FB54-4AB5-8BFA-FC6ACE789AE6}",
+            "selector_short_id": "132277195",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\ise_of_mists\\tw3_isle_of_mists_expl_full_bip.wav"
+        ],
+        "quest_branch_shared_files": [],
+        "reused_media": {}
+      }
+    }
+  },
+  "static_consumer_paths": {},
+  "source_only_policy": []
+}

@@ -1,0 +1,891 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "region": "music_kaer_morhen",
+  "manifest_version": 1,
+  "facts": {
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259",
+    "root": {
+      "id": "{0FA9E80A-F067-4C5D-BC13-B77C5DC876CB}",
+      "name": "music_kaer_morhen",
+      "short_id": "240585186"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{FB554821-7A66-498A-ACB2-62A4E87DCD33}",
+      "short_id": "105784741",
+      "line": null
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{5C06F41C-1BB3-46E1-AD74-1CBF2F164E99}",
+      "short_id": "255861766",
+      "line": null
+    }
+  },
+  "state_scopes": [],
+  "static_targets": [
+    "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+    "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}"
+  ],
+  "decisions": {
+    "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}": {
+      "name": "expl_km",
+      "short_id": 598161056,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Policy judgment: reusable environment/day-night scoring through ordinary location selection, with separate combat, Gwent and authored routing. Complete selector closure and all-event descendant/transition checks show no protected consumer of this object. Shared audio is not itself an edit to a shared media asset.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": -2.0,
+      "parent_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+      "parent_short_id": 556828113,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 6,
+        "parent_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "parent_short_id": 556828113,
+        "selector_consumers": [
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "underwater_focus"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\kaermorhen\\tw3_km_01_exploration_drums.wav",
+          "music\\kaermorhen\\tw3_km_01_exploration_layer1.wav",
+          "music\\kaermorhen\\tw3_km_01_exploration_layer2.wav",
+          "music\\kaermorhen\\tw3_km_01_exploration_layer3.wav",
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "quest_branch_shared_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "reused_media": {
+          "music\\kaermorhen\\tw3_km_01_exploration_drums.wav": [
+            "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+            "{61413D83-D5C0-4689-BD85-760CF01AF2D5}",
+            "{CB2EE847-CB34-44BD-8363-477282E6CDA4}"
+          ],
+          "music\\skellige\\silent_wave_10s.wav": [
+            "{D698AF86-B5F9-4A67-A2D3-FFDFBA5EAFDE}",
+            "{A57FF43D-DABF-4990-81BC-7E3BD78F1537}",
+            "{5A8F54E8-56DF-4451-96F3-5DC43DBE0A11}",
+            "{98ACE3D0-AA37-43BD-B652-56529B0E6164}",
+            "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}",
+            "{5549C34E-25EF-4215-9D57-F80FEE75BACB}",
+            "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}",
+            "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}",
+            "{7232C701-B364-49AB-9E56-DA2B48E95DBB}",
+            "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}",
+            "{AF010997-8B77-493C-932C-0BC62380DEDE}",
+            "{5F5BF044-7F63-479C-9BDA-743C4C952E15}",
+            "{EED05D36-68D0-42BD-B659-E6F962912F43}",
+            "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}",
+            "{46EFB01D-4579-4378-A9A8-A8DD022FE3B8}",
+            "{E72BB1BC-5F87-44B0-98FE-019215D2615C}",
+            "{70BD7FC3-8936-4A45-B0CF-9CF4C84D98CE}",
+            "{C7DC4084-D442-42D9-84C9-DEEFDBA95469}",
+            "{C23A072D-791A-4461-B40C-61EB9C4EB387}",
+            "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{6DBB272B-C4D6-4A57-9939-B9690EF4C0D2}",
+            "{05C678F5-767D-4567-B91E-A2BABB727D2A}",
+            "{C3CCF8F3-683A-41AB-9330-27D70C09A35F}",
+            "{F32C0621-4481-4D65-A2C6-6DC79C64D067}",
+            "{3ECB0C38-EEEB-42AB-B52C-355C47D6899A}",
+            "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{B1A52478-3324-4CA7-B943-36B685B7C38F}",
+            "{64FDE19A-B527-44E2-B992-527707FC7F93}",
+            "{89DE4AB2-BF84-439B-BEC5-2332B8BD1765}",
+            "{58C89728-22FF-45A9-9291-DA51D0EA4233}",
+            "{23EBD3AD-F93E-47EF-8823-D57F0FF4DC8E}",
+            "{1D0D3A99-C26A-426A-B538-62FAF3B0AB7A}",
+            "{9E2B621E-1AD4-4B3A-8B70-9BAE9EDC9B2D}",
+            "{CE7859C1-E2BB-476C-9748-BA15DBD9167E}",
+            "{68B47E82-32CD-4F5B-95F0-3223878653C0}",
+            "{69D9866F-0F12-46A8-BB36-423E010D77E4}",
+            "{7F4C555E-AB05-4219-AD45-3BD599E26D47}",
+            "{B725033F-40F8-49F6-BBC9-EC47FF0CE597}",
+            "{5B74E24D-255B-40AE-AD2E-444C68AF9950}",
+            "{48810350-DE09-4F69-B3DA-FCF4667EF177}",
+            "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}",
+            "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}",
+            "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}",
+            "{B4ECFD7F-5579-43B6-B692-35CB36ED4995}",
+            "{0900AB30-E2B0-49E6-A5EA-3AA9DE037574}",
+            "{1D0F2B2F-7BD7-4C4A-861C-1F8B60F1818D}",
+            "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}",
+            "{12931E7E-EC14-4789-9B07-88E189FEF421}",
+            "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}",
+            "{10C87E56-F87D-406F-A2A6-0276766C1CA9}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}",
+            "{CC7931F4-A65B-4950-845C-9A35A5E7262A}",
+            "{9A51BF98-5506-467A-8CD0-63B1342EA8F5}",
+            "{210217E5-BB46-45F3-B7E7-0FC6C081D0EA}",
+            "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}",
+            "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}",
+            "{9F1D50CD-39FF-4C81-9908-7A740D8D3959}",
+            "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}",
+            "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}",
+            "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}",
+            "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}",
+            "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}",
+            "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}",
+            "{3A34635B-991A-4F73-800A-21D2100D56AB}",
+            "{7535BA2F-8BF6-495F-9963-7E7EC378BBCE}",
+            "{8098B07A-07E3-4D39-BF77-B8066189280F}",
+            "{97FD5B40-2481-4603-8330-290000E4CA78}",
+            "{797D79D3-0396-4122-AEA8-684E64D02AA8}",
+            "{9E2209B7-6419-4790-8D43-602DDE1BBED4}",
+            "{47C32363-44FF-4062-98C3-F5F0293EEA0C}",
+            "{48C707A9-814E-441D-9841-BE7A4B8F870A}",
+            "{977D932C-70CF-4FDD-B555-2316655BB183}",
+            "{FC7FED1A-41B6-45AE-BA43-1844FADA93A5}",
+            "{6A960CD2-EB91-4ED2-AD5E-F2094572AB58}",
+            "{85600568-6E69-4F31-89EC-CF302CF6D7BE}",
+            "{5EA929A9-9597-4C98-8F1D-FC45C4E8F515}",
+            "{74FE3E66-8353-4B40-8F50-B766987C74E1}",
+            "{C7014773-17F6-4AD6-898F-FA20F623D708}",
+            "{8D5B24A4-8294-4133-8721-86200D46B7F3}",
+            "{A6A86339-914A-4420-AB57-DA5B23B0575C}",
+            "{C6E88062-676D-42F8-A2DF-3B474C137FE5}",
+            "{C64FA805-B31A-4926-A918-7F872887A949}",
+            "{2F6854B3-01BF-442D-B3EF-495A908B4948}",
+            "{92C03C4C-3090-423B-9A21-B9FDFB98A0E5}",
+            "{707220A2-3B30-4C0B-BE57-A52AD702B308}",
+            "{5C92F459-CBD2-4BD8-A455-9261FF345DE0}",
+            "{61FF2434-B66D-4A28-919B-B4482859408A}",
+            "{3DA18BA3-68AA-4E05-8D3D-4FFA9138DCB2}",
+            "{2E7D3362-0A96-4727-BB38-737357855CC2}",
+            "{A4DF52C4-3B41-499B-84C8-20739A45E921}",
+            "{F94E7028-AADA-4FEE-8CB8-BBB3885B117C}",
+            "{ACE23A4B-0001-4D57-A233-80628175E1FD}",
+            "{69429DE2-483B-4E48-AD18-A20B93880D9D}",
+            "{AA2C2787-BEEF-400E-AE1E-F64B0DA7B0CB}",
+            "{190DACA8-665E-42C6-BA90-98458C5A2856}",
+            "{B6FFB367-1B9A-4DD1-A401-4785C834EE57}",
+            "{3BC15422-6ED3-4F9A-8EF0-114E487E7385}",
+            "{554046FE-C1A3-4F6F-8324-35DDEC18DD09}",
+            "{DF41B334-4CAD-4847-912B-889C7938D78F}"
+          ]
+        }
+      }
+    },
+    "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}": {
+      "name": "expl_nml_zone_01_KM_NIGHT",
+      "short_id": 312446899,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Policy judgment: reusable environment/day-night scoring through ordinary location selection, with separate combat, Gwent and authored routing. Complete selector closure and all-event descendant/transition checks show no protected consumer of this object. Shared audio is not itself an edit to a shared media asset.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 0.0,
+      "parent_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+      "parent_short_id": 556828113,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 3,
+        "parent_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "parent_short_id": 556828113,
+        "selector_consumers": [
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+            "selector_short_id": "556828113",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\nomansgrad\\section_02\\tw3_nml_04_exploration_int1.wav",
+          "music\\nomansgrad\\section_02\\tw3_nml_04_exploration_int2b.wav",
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "quest_branch_shared_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "reused_media": {
+          "music\\nomansgrad\\section_02\\tw3_nml_04_exploration_int1.wav": [
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{C38A35E3-857B-4035-9852-B3F01E78ADA6}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}"
+          ],
+          "music\\nomansgrad\\section_02\\tw3_nml_04_exploration_int2b.wav": [
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{C38A35E3-857B-4035-9852-B3F01E78ADA6}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}"
+          ],
+          "music\\skellige\\silent_wave_10s.wav": [
+            "{D698AF86-B5F9-4A67-A2D3-FFDFBA5EAFDE}",
+            "{A57FF43D-DABF-4990-81BC-7E3BD78F1537}",
+            "{5A8F54E8-56DF-4451-96F3-5DC43DBE0A11}",
+            "{98ACE3D0-AA37-43BD-B652-56529B0E6164}",
+            "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}",
+            "{5549C34E-25EF-4215-9D57-F80FEE75BACB}",
+            "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}",
+            "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}",
+            "{7232C701-B364-49AB-9E56-DA2B48E95DBB}",
+            "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}",
+            "{AF010997-8B77-493C-932C-0BC62380DEDE}",
+            "{5F5BF044-7F63-479C-9BDA-743C4C952E15}",
+            "{EED05D36-68D0-42BD-B659-E6F962912F43}",
+            "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}",
+            "{46EFB01D-4579-4378-A9A8-A8DD022FE3B8}",
+            "{E72BB1BC-5F87-44B0-98FE-019215D2615C}",
+            "{70BD7FC3-8936-4A45-B0CF-9CF4C84D98CE}",
+            "{C7DC4084-D442-42D9-84C9-DEEFDBA95469}",
+            "{C23A072D-791A-4461-B40C-61EB9C4EB387}",
+            "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{6DBB272B-C4D6-4A57-9939-B9690EF4C0D2}",
+            "{05C678F5-767D-4567-B91E-A2BABB727D2A}",
+            "{C3CCF8F3-683A-41AB-9330-27D70C09A35F}",
+            "{F32C0621-4481-4D65-A2C6-6DC79C64D067}",
+            "{3ECB0C38-EEEB-42AB-B52C-355C47D6899A}",
+            "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{B1A52478-3324-4CA7-B943-36B685B7C38F}",
+            "{64FDE19A-B527-44E2-B992-527707FC7F93}",
+            "{89DE4AB2-BF84-439B-BEC5-2332B8BD1765}",
+            "{58C89728-22FF-45A9-9291-DA51D0EA4233}",
+            "{23EBD3AD-F93E-47EF-8823-D57F0FF4DC8E}",
+            "{1D0D3A99-C26A-426A-B538-62FAF3B0AB7A}",
+            "{9E2B621E-1AD4-4B3A-8B70-9BAE9EDC9B2D}",
+            "{CE7859C1-E2BB-476C-9748-BA15DBD9167E}",
+            "{68B47E82-32CD-4F5B-95F0-3223878653C0}",
+            "{69D9866F-0F12-46A8-BB36-423E010D77E4}",
+            "{7F4C555E-AB05-4219-AD45-3BD599E26D47}",
+            "{B725033F-40F8-49F6-BBC9-EC47FF0CE597}",
+            "{5B74E24D-255B-40AE-AD2E-444C68AF9950}",
+            "{48810350-DE09-4F69-B3DA-FCF4667EF177}",
+            "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}",
+            "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}",
+            "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}",
+            "{B4ECFD7F-5579-43B6-B692-35CB36ED4995}",
+            "{0900AB30-E2B0-49E6-A5EA-3AA9DE037574}",
+            "{1D0F2B2F-7BD7-4C4A-861C-1F8B60F1818D}",
+            "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}",
+            "{12931E7E-EC14-4789-9B07-88E189FEF421}",
+            "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}",
+            "{10C87E56-F87D-406F-A2A6-0276766C1CA9}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}",
+            "{CC7931F4-A65B-4950-845C-9A35A5E7262A}",
+            "{9A51BF98-5506-467A-8CD0-63B1342EA8F5}",
+            "{210217E5-BB46-45F3-B7E7-0FC6C081D0EA}",
+            "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}",
+            "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}",
+            "{9F1D50CD-39FF-4C81-9908-7A740D8D3959}",
+            "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}",
+            "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}",
+            "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}",
+            "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}",
+            "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}",
+            "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}",
+            "{3A34635B-991A-4F73-800A-21D2100D56AB}",
+            "{7535BA2F-8BF6-495F-9963-7E7EC378BBCE}",
+            "{8098B07A-07E3-4D39-BF77-B8066189280F}",
+            "{97FD5B40-2481-4603-8330-290000E4CA78}",
+            "{797D79D3-0396-4122-AEA8-684E64D02AA8}",
+            "{9E2209B7-6419-4790-8D43-602DDE1BBED4}",
+            "{47C32363-44FF-4062-98C3-F5F0293EEA0C}",
+            "{48C707A9-814E-441D-9841-BE7A4B8F870A}",
+            "{977D932C-70CF-4FDD-B555-2316655BB183}",
+            "{FC7FED1A-41B6-45AE-BA43-1844FADA93A5}",
+            "{6A960CD2-EB91-4ED2-AD5E-F2094572AB58}",
+            "{85600568-6E69-4F31-89EC-CF302CF6D7BE}",
+            "{5EA929A9-9597-4C98-8F1D-FC45C4E8F515}",
+            "{74FE3E66-8353-4B40-8F50-B766987C74E1}",
+            "{C7014773-17F6-4AD6-898F-FA20F623D708}",
+            "{8D5B24A4-8294-4133-8721-86200D46B7F3}",
+            "{A6A86339-914A-4420-AB57-DA5B23B0575C}",
+            "{C6E88062-676D-42F8-A2DF-3B474C137FE5}",
+            "{C64FA805-B31A-4926-A918-7F872887A949}",
+            "{2F6854B3-01BF-442D-B3EF-495A908B4948}",
+            "{92C03C4C-3090-423B-9A21-B9FDFB98A0E5}",
+            "{707220A2-3B30-4C0B-BE57-A52AD702B308}",
+            "{5C92F459-CBD2-4BD8-A455-9261FF345DE0}",
+            "{61FF2434-B66D-4A28-919B-B4482859408A}",
+            "{3DA18BA3-68AA-4E05-8D3D-4FFA9138DCB2}",
+            "{2E7D3362-0A96-4727-BB38-737357855CC2}",
+            "{A4DF52C4-3B41-499B-84C8-20739A45E921}",
+            "{F94E7028-AADA-4FEE-8CB8-BBB3885B117C}",
+            "{ACE23A4B-0001-4D57-A233-80628175E1FD}",
+            "{69429DE2-483B-4E48-AD18-A20B93880D9D}",
+            "{AA2C2787-BEEF-400E-AE1E-F64B0DA7B0CB}",
+            "{190DACA8-665E-42C6-BA90-98458C5A2856}",
+            "{B6FFB367-1B9A-4DD1-A401-4785C834EE57}",
+            "{3BC15422-6ED3-4F9A-8EF0-114E487E7385}",
+            "{554046FE-C1A3-4F6F-8324-35DDEC18DD09}",
+            "{DF41B334-4CAD-4847-912B-889C7938D78F}"
+          ]
+        }
+      }
+    },
+    "{B1A52478-3324-4CA7-B943-36B685B7C38F}": {
+      "name": "expl_silent",
+      "short_id": 848995627,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Observed: every source is the verified all-zero stereo PCM asset SHA256 086b066a69a1859705f707947bda612cdcf0a003db9ec2c9041b5ee8d1dbc108. Native silence retained without editing.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 0.0,
+      "parent_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+      "parent_short_id": 1006510067,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 9,
+        "parent_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+        "parent_short_id": 1006510067,
+        "selector_consumers": [
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{EFDFDB8A-C68E-48AB-8285-56F98368662E}",
+            "selector_short_id": "1006510067",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "quest_branch_shared_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "reused_media": {
+          "music\\skellige\\silent_wave_10s.wav": [
+            "{D698AF86-B5F9-4A67-A2D3-FFDFBA5EAFDE}",
+            "{A57FF43D-DABF-4990-81BC-7E3BD78F1537}",
+            "{5A8F54E8-56DF-4451-96F3-5DC43DBE0A11}",
+            "{98ACE3D0-AA37-43BD-B652-56529B0E6164}",
+            "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}",
+            "{5549C34E-25EF-4215-9D57-F80FEE75BACB}",
+            "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}",
+            "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}",
+            "{7232C701-B364-49AB-9E56-DA2B48E95DBB}",
+            "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}",
+            "{AF010997-8B77-493C-932C-0BC62380DEDE}",
+            "{5F5BF044-7F63-479C-9BDA-743C4C952E15}",
+            "{EED05D36-68D0-42BD-B659-E6F962912F43}",
+            "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}",
+            "{46EFB01D-4579-4378-A9A8-A8DD022FE3B8}",
+            "{E72BB1BC-5F87-44B0-98FE-019215D2615C}",
+            "{70BD7FC3-8936-4A45-B0CF-9CF4C84D98CE}",
+            "{C7DC4084-D442-42D9-84C9-DEEFDBA95469}",
+            "{C23A072D-791A-4461-B40C-61EB9C4EB387}",
+            "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{6DBB272B-C4D6-4A57-9939-B9690EF4C0D2}",
+            "{05C678F5-767D-4567-B91E-A2BABB727D2A}",
+            "{C3CCF8F3-683A-41AB-9330-27D70C09A35F}",
+            "{F32C0621-4481-4D65-A2C6-6DC79C64D067}",
+            "{3ECB0C38-EEEB-42AB-B52C-355C47D6899A}",
+            "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{B1A52478-3324-4CA7-B943-36B685B7C38F}",
+            "{64FDE19A-B527-44E2-B992-527707FC7F93}",
+            "{89DE4AB2-BF84-439B-BEC5-2332B8BD1765}",
+            "{58C89728-22FF-45A9-9291-DA51D0EA4233}",
+            "{23EBD3AD-F93E-47EF-8823-D57F0FF4DC8E}",
+            "{1D0D3A99-C26A-426A-B538-62FAF3B0AB7A}",
+            "{9E2B621E-1AD4-4B3A-8B70-9BAE9EDC9B2D}",
+            "{CE7859C1-E2BB-476C-9748-BA15DBD9167E}",
+            "{68B47E82-32CD-4F5B-95F0-3223878653C0}",
+            "{69D9866F-0F12-46A8-BB36-423E010D77E4}",
+            "{7F4C555E-AB05-4219-AD45-3BD599E26D47}",
+            "{B725033F-40F8-49F6-BBC9-EC47FF0CE597}",
+            "{5B74E24D-255B-40AE-AD2E-444C68AF9950}",
+            "{48810350-DE09-4F69-B3DA-FCF4667EF177}",
+            "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}",
+            "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}",
+            "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}",
+            "{B4ECFD7F-5579-43B6-B692-35CB36ED4995}",
+            "{0900AB30-E2B0-49E6-A5EA-3AA9DE037574}",
+            "{1D0F2B2F-7BD7-4C4A-861C-1F8B60F1818D}",
+            "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}",
+            "{12931E7E-EC14-4789-9B07-88E189FEF421}",
+            "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}",
+            "{10C87E56-F87D-406F-A2A6-0276766C1CA9}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}",
+            "{CC7931F4-A65B-4950-845C-9A35A5E7262A}",
+            "{9A51BF98-5506-467A-8CD0-63B1342EA8F5}",
+            "{210217E5-BB46-45F3-B7E7-0FC6C081D0EA}",
+            "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}",
+            "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}",
+            "{9F1D50CD-39FF-4C81-9908-7A740D8D3959}",
+            "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}",
+            "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}",
+            "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}",
+            "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}",
+            "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}",
+            "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}",
+            "{3A34635B-991A-4F73-800A-21D2100D56AB}",
+            "{7535BA2F-8BF6-495F-9963-7E7EC378BBCE}",
+            "{8098B07A-07E3-4D39-BF77-B8066189280F}",
+            "{97FD5B40-2481-4603-8330-290000E4CA78}",
+            "{797D79D3-0396-4122-AEA8-684E64D02AA8}",
+            "{9E2209B7-6419-4790-8D43-602DDE1BBED4}",
+            "{47C32363-44FF-4062-98C3-F5F0293EEA0C}",
+            "{48C707A9-814E-441D-9841-BE7A4B8F870A}",
+            "{977D932C-70CF-4FDD-B555-2316655BB183}",
+            "{FC7FED1A-41B6-45AE-BA43-1844FADA93A5}",
+            "{6A960CD2-EB91-4ED2-AD5E-F2094572AB58}",
+            "{85600568-6E69-4F31-89EC-CF302CF6D7BE}",
+            "{5EA929A9-9597-4C98-8F1D-FC45C4E8F515}",
+            "{74FE3E66-8353-4B40-8F50-B766987C74E1}",
+            "{C7014773-17F6-4AD6-898F-FA20F623D708}",
+            "{8D5B24A4-8294-4133-8721-86200D46B7F3}",
+            "{A6A86339-914A-4420-AB57-DA5B23B0575C}",
+            "{C6E88062-676D-42F8-A2DF-3B474C137FE5}",
+            "{C64FA805-B31A-4926-A918-7F872887A949}",
+            "{2F6854B3-01BF-442D-B3EF-495A908B4948}",
+            "{92C03C4C-3090-423B-9A21-B9FDFB98A0E5}",
+            "{707220A2-3B30-4C0B-BE57-A52AD702B308}",
+            "{5C92F459-CBD2-4BD8-A455-9261FF345DE0}",
+            "{61FF2434-B66D-4A28-919B-B4482859408A}",
+            "{3DA18BA3-68AA-4E05-8D3D-4FFA9138DCB2}",
+            "{2E7D3362-0A96-4727-BB38-737357855CC2}",
+            "{A4DF52C4-3B41-499B-84C8-20739A45E921}",
+            "{F94E7028-AADA-4FEE-8CB8-BBB3885B117C}",
+            "{ACE23A4B-0001-4D57-A233-80628175E1FD}",
+            "{69429DE2-483B-4E48-AD18-A20B93880D9D}",
+            "{AA2C2787-BEEF-400E-AE1E-F64B0DA7B0CB}",
+            "{190DACA8-665E-42C6-BA90-98458C5A2856}",
+            "{B6FFB367-1B9A-4DD1-A401-4785C834EE57}",
+            "{3BC15422-6ED3-4F9A-8EF0-114E487E7385}",
+            "{554046FE-C1A3-4F6F-8324-35DDEC18DD09}",
+            "{DF41B334-4CAD-4847-912B-889C7938D78F}"
+          ]
+        }
+      }
+    },
+    "{64FDE19A-B527-44E2-B992-527707FC7F93}": {
+      "name": "expl_silent",
+      "short_id": 43294648,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Observed: every source is the verified all-zero stereo PCM asset SHA256 086b066a69a1859705f707947bda612cdcf0a003db9ec2c9041b5ee8d1dbc108. Native silence retained without editing.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 0.0,
+      "parent_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+      "parent_short_id": 20114658,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 9,
+        "parent_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+        "parent_short_id": 20114658,
+        "selector_consumers": [
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{4EA9C8AC-80A6-4CB0-857B-93473CF4D0B6}",
+            "selector_short_id": "20114658",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "quest_branch_shared_files": [
+          "music\\skellige\\silent_wave_10s.wav"
+        ],
+        "reused_media": {
+          "music\\skellige\\silent_wave_10s.wav": [
+            "{D698AF86-B5F9-4A67-A2D3-FFDFBA5EAFDE}",
+            "{A57FF43D-DABF-4990-81BC-7E3BD78F1537}",
+            "{5A8F54E8-56DF-4451-96F3-5DC43DBE0A11}",
+            "{98ACE3D0-AA37-43BD-B652-56529B0E6164}",
+            "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}",
+            "{5549C34E-25EF-4215-9D57-F80FEE75BACB}",
+            "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}",
+            "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}",
+            "{7232C701-B364-49AB-9E56-DA2B48E95DBB}",
+            "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}",
+            "{AF010997-8B77-493C-932C-0BC62380DEDE}",
+            "{5F5BF044-7F63-479C-9BDA-743C4C952E15}",
+            "{EED05D36-68D0-42BD-B659-E6F962912F43}",
+            "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}",
+            "{46EFB01D-4579-4378-A9A8-A8DD022FE3B8}",
+            "{E72BB1BC-5F87-44B0-98FE-019215D2615C}",
+            "{70BD7FC3-8936-4A45-B0CF-9CF4C84D98CE}",
+            "{C7DC4084-D442-42D9-84C9-DEEFDBA95469}",
+            "{C23A072D-791A-4461-B40C-61EB9C4EB387}",
+            "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+            "{D79C5D2C-22B5-4855-882B-FD18E348605D}",
+            "{6DBB272B-C4D6-4A57-9939-B9690EF4C0D2}",
+            "{05C678F5-767D-4567-B91E-A2BABB727D2A}",
+            "{C3CCF8F3-683A-41AB-9330-27D70C09A35F}",
+            "{F32C0621-4481-4D65-A2C6-6DC79C64D067}",
+            "{3ECB0C38-EEEB-42AB-B52C-355C47D6899A}",
+            "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}",
+            "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}",
+            "{B1A52478-3324-4CA7-B943-36B685B7C38F}",
+            "{64FDE19A-B527-44E2-B992-527707FC7F93}",
+            "{89DE4AB2-BF84-439B-BEC5-2332B8BD1765}",
+            "{58C89728-22FF-45A9-9291-DA51D0EA4233}",
+            "{23EBD3AD-F93E-47EF-8823-D57F0FF4DC8E}",
+            "{1D0D3A99-C26A-426A-B538-62FAF3B0AB7A}",
+            "{9E2B621E-1AD4-4B3A-8B70-9BAE9EDC9B2D}",
+            "{CE7859C1-E2BB-476C-9748-BA15DBD9167E}",
+            "{68B47E82-32CD-4F5B-95F0-3223878653C0}",
+            "{69D9866F-0F12-46A8-BB36-423E010D77E4}",
+            "{7F4C555E-AB05-4219-AD45-3BD599E26D47}",
+            "{B725033F-40F8-49F6-BBC9-EC47FF0CE597}",
+            "{5B74E24D-255B-40AE-AD2E-444C68AF9950}",
+            "{48810350-DE09-4F69-B3DA-FCF4667EF177}",
+            "{E5564ADB-9A93-4E6A-8D72-DE209E1A1A2D}",
+            "{958962C3-1AC8-4C75-939C-B5EBEC3C75DD}",
+            "{FA35E341-DB95-427A-BC50-EC2DD414DA4C}",
+            "{B4ECFD7F-5579-43B6-B692-35CB36ED4995}",
+            "{0900AB30-E2B0-49E6-A5EA-3AA9DE037574}",
+            "{1D0F2B2F-7BD7-4C4A-861C-1F8B60F1818D}",
+            "{A0B3655F-55D5-4192-80A2-E2BBD66E3980}",
+            "{12931E7E-EC14-4789-9B07-88E189FEF421}",
+            "{5D02D8C5-5EAE-45F1-B44A-A87062263EC9}",
+            "{10C87E56-F87D-406F-A2A6-0276766C1CA9}",
+            "{E7ADD3EE-2932-44F7-9ECE-124A9F1918E9}",
+            "{CC7931F4-A65B-4950-845C-9A35A5E7262A}",
+            "{9A51BF98-5506-467A-8CD0-63B1342EA8F5}",
+            "{210217E5-BB46-45F3-B7E7-0FC6C081D0EA}",
+            "{6414E6E5-1E74-4EE3-ADCC-B9776084B1B2}",
+            "{61E6BA3A-4302-4038-A00D-AD430AE66AA3}",
+            "{9F1D50CD-39FF-4C81-9908-7A740D8D3959}",
+            "{C3A924EB-7667-4C5F-9E84-F1BEE3A150EA}",
+            "{FEC4602D-2954-494E-81A6-BDB1E3E58E18}",
+            "{E8D57B99-5BAC-4602-9F8E-4A3339C2B479}",
+            "{E0E045CC-AD8F-4355-80FD-7BFD6FFDCFB1}",
+            "{EA87F6E0-8F2D-413F-8004-3CAF8CFFC109}",
+            "{B0B04C48-37CA-4452-9FFE-D7A855AA9780}",
+            "{3A34635B-991A-4F73-800A-21D2100D56AB}",
+            "{7535BA2F-8BF6-495F-9963-7E7EC378BBCE}",
+            "{8098B07A-07E3-4D39-BF77-B8066189280F}",
+            "{97FD5B40-2481-4603-8330-290000E4CA78}",
+            "{797D79D3-0396-4122-AEA8-684E64D02AA8}",
+            "{9E2209B7-6419-4790-8D43-602DDE1BBED4}",
+            "{47C32363-44FF-4062-98C3-F5F0293EEA0C}",
+            "{48C707A9-814E-441D-9841-BE7A4B8F870A}",
+            "{977D932C-70CF-4FDD-B555-2316655BB183}",
+            "{FC7FED1A-41B6-45AE-BA43-1844FADA93A5}",
+            "{6A960CD2-EB91-4ED2-AD5E-F2094572AB58}",
+            "{85600568-6E69-4F31-89EC-CF302CF6D7BE}",
+            "{5EA929A9-9597-4C98-8F1D-FC45C4E8F515}",
+            "{74FE3E66-8353-4B40-8F50-B766987C74E1}",
+            "{C7014773-17F6-4AD6-898F-FA20F623D708}",
+            "{8D5B24A4-8294-4133-8721-86200D46B7F3}",
+            "{A6A86339-914A-4420-AB57-DA5B23B0575C}",
+            "{C6E88062-676D-42F8-A2DF-3B474C137FE5}",
+            "{C64FA805-B31A-4926-A918-7F872887A949}",
+            "{2F6854B3-01BF-442D-B3EF-495A908B4948}",
+            "{92C03C4C-3090-423B-9A21-B9FDFB98A0E5}",
+            "{707220A2-3B30-4C0B-BE57-A52AD702B308}",
+            "{5C92F459-CBD2-4BD8-A455-9261FF345DE0}",
+            "{61FF2434-B66D-4A28-919B-B4482859408A}",
+            "{3DA18BA3-68AA-4E05-8D3D-4FFA9138DCB2}",
+            "{2E7D3362-0A96-4727-BB38-737357855CC2}",
+            "{A4DF52C4-3B41-499B-84C8-20739A45E921}",
+            "{F94E7028-AADA-4FEE-8CB8-BBB3885B117C}",
+            "{ACE23A4B-0001-4D57-A233-80628175E1FD}",
+            "{69429DE2-483B-4E48-AD18-A20B93880D9D}",
+            "{AA2C2787-BEEF-400E-AE1E-F64B0DA7B0CB}",
+            "{190DACA8-665E-42C6-BA90-98458C5A2856}",
+            "{B6FFB367-1B9A-4DD1-A401-4785C834EE57}",
+            "{3BC15422-6ED3-4F9A-8EF0-114E487E7385}",
+            "{554046FE-C1A3-4F6F-8324-35DDEC18DD09}",
+            "{DF41B334-4CAD-4847-912B-889C7938D78F}"
+          ]
+        }
+      }
+    }
+  },
+  "static_consumer_paths": {
+    "{0ABB9F53-828F-43D1-8ACF-C09648725A5C}": [
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{FFC77DD7-1C19-4B10-9013-F5F0FA98978A}": [
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{3324E18C-45CE-4EAD-9284-EE6CB30DB34E}",
+        "selector_short_id": "556828113",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ]
+  },
+  "source_only_policy": []
+}

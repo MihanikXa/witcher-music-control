@@ -206,7 +206,7 @@ def validate_source(original, candidate, spec, states, template):
     before, _, _ = graph(original)
     restored = copy.deepcopy(candidate)
     restore_objects, _, _ = graph(restored)
-    expected = canonical_state(expected_state(template, values, states, spec['game_state_group']))
+    expected = canonical_state(expected_state(template, values, states, spec['game_state_group'])) if spec['state_scopes'] else None
     local_ids, local_short_ids = set(), set()
     original_short_ids = {n.get('ShortID') for n in original.iter() if n.get('ShortID')}
     for ident in spec['state_scopes']:

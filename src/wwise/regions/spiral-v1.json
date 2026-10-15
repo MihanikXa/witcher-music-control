@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "region": "music_spiral",
+  "manifest_version": 1,
+  "facts": {
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259",
+    "root": {
+      "id": "{2422576D-97D8-460E-BBC7-3DEBBE003DEC}",
+      "name": "music_spiral",
+      "short_id": "554357235"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{BE77742E-2C3A-453D-837B-80E7760936B1}",
+      "short_id": "577841188",
+      "line": null
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{3B00CE6F-C1B5-4521-9342-0B69953D5D63}",
+      "short_id": "230700150",
+      "line": null
+    }
+  },
+  "state_scopes": [],
+  "static_targets": [],
+  "decisions": {
+    "{6A3B3F8C-7B18-4E24-B5A3-D1077417586C}": {
+      "name": "expl_spiral_general",
+      "short_id": 926055871,
+      "classification": "mixed",
+      "policy": "preserve-native",
+      "evidence": "Observed preserved-State consumer shares this exact playlist with noncombat. Static attenuation is forbidden. No safe existing per-voice isolation established; native routing retained.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 2.0,
+      "parent_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+      "parent_short_id": 960024494,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 9,
+        "parent_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+        "parent_short_id": 960024494,
+        "selector_consumers": [
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "underwater_combat"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{6FBB29D8-CD25-412D-984A-0D860C68A92E}",
+            "selector_short_id": "960024494",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\spiral\\tw3_spiral_01_exploration_int1.wav",
+          "music\\spiral\\tw3_spiral_01_exploration_int2.wav"
+        ],
+        "quest_branch_shared_files": [],
+        "reused_media": {
+          "music\\spiral\\tw3_spiral_01_exploration_int1.wav": [
+            "{6A3B3F8C-7B18-4E24-B5A3-D1077417586C}",
+            "{393FAAF8-B89B-49DD-9451-0D0504AAA01B}"
+          ],
+          "music\\spiral\\tw3_spiral_01_exploration_int2.wav": [
+            "{6A3B3F8C-7B18-4E24-B5A3-D1077417586C}",
+            "{393FAAF8-B89B-49DD-9451-0D0504AAA01B}"
+          ]
+        }
+      }
+    },
+    "{2232DB02-C527-4F17-B430-E0FCC2CD6B1C}": {
+      "name": "expl_castle",
+      "short_id": 748832630,
+      "classification": "mixed",
+      "policy": "preserve-native",
+      "evidence": "Observed preserved-State consumer shares this exact playlist with noncombat. Static attenuation is forbidden. No safe existing per-voice isolation established; native routing retained.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": 0.0,
+      "parent_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+      "parent_short_id": 600648675,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 9,
+        "parent_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+        "parent_short_id": 600648675,
+        "selector_consumers": [
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "combat"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "combat_monster_hunt"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "underwater_combat"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{B81BA043-DFFE-4271-9332-9BF8F4E4934D}",
+            "selector_short_id": "600648675",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\nomansgrad\\q101\\q101_04b_talk_with_survivor_Full_VerA.wav"
+        ],
+        "quest_branch_shared_files": [],
+        "reused_media": {
+          "music\\nomansgrad\\q101\\q101_04b_talk_with_survivor_Full_VerA.wav": [
+            "{7F9FC081-27DA-48AC-AE6C-972E1E65BBFA}",
+            "{2232DB02-C527-4F17-B430-E0FCC2CD6B1C}"
+          ]
+        }
+      }
+    }
+  },
+  "static_consumer_paths": {},
+  "source_only_policy": []
+}

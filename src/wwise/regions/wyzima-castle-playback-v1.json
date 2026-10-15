@@ -1,0 +1,11 @@
+[
+  {
+    "name": "native-thematic",
+    "location_event": "mus_loc_wyzima_castle",
+    "cases": [
+      "music-master"
+    ],
+    "duration": 24,
+    "prime_location": true
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "name": "authored-direct",
+    "location_event": "mus_loc_kaermorhen_global",
+    "cases": [
+      "protected-direct",
+      "gwent"
+    ],
+    "audition_object": "{4F1FA3A4-6EEC-4C48-BDC1-617AEA1E0CCA}",
+    "duration": 24,
+    "prime_location": true
+  }
+]

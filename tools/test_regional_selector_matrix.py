@@ -4,6 +4,13 @@ from regional_selector_matrix import validate_groups
 
 
 class MatrixControls(unittest.TestCase):
+    def test_crossfade_control_requires_named_event(self):
+        good={'name':'crossfade','location_event':'source','crossfade_event':'destination','cases':['location-crossfade'],'duration':65}
+        validate_groups([good])
+        for value in ('',None,True):
+            bad=dict(good,crossfade_event=value)
+            with self.assertRaisesRegex(ValueError,'crossfade'):validate_groups([bad])
+
     def test_valid_long_transition_group(self):
         validate_groups([{'name':'outro','location_event':'verified_event','cases':['e-combat'],'duration':55}])
 

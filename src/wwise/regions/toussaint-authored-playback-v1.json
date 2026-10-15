@@ -1,0 +1,12 @@
+[
+  {
+    "name": "authored-direct",
+    "location_event": "mus_loc_toussaint_general",
+    "cases": [
+      "protected-direct"
+    ],
+    "audition_object": "{99CD3763-B29C-42BB-96ED-BAA3C3ACE971}",
+    "duration": 24,
+    "prime_location": true
+  }
+]

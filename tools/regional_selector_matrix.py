@@ -13,7 +13,7 @@ def validate_groups(groups):
     if not groups:
         raise ValueError('Empty playback matrix')
     for g in groups:
-        if (set(g) - {'name', 'location_event', 'cases', 'duration', 'audition_object', 'prime_location'}
+        if (set(g) - {'name', 'location_event', 'cases', 'duration', 'audition_object', 'prime_location', 'crossfade_event'}
                 or not {'name', 'location_event', 'cases', 'duration'} <= set(g)
                 or not isinstance(g['name'], str) or not g['name']
                 or Path(g['name']).name != g['name'] or g['name'] in names
@@ -24,6 +24,8 @@ def validate_groups(groups):
             raise ValueError('Invalid/duplicate playback group')
         if 'prime_location' in g and not isinstance(g['prime_location'],bool):
             raise ValueError('Explicit boolean location priming required')
+        if 'crossfade_event' in g and (not isinstance(g['crossfade_event'],str) or not g['crossfade_event']):
+            raise ValueError('Explicit crossfade location event required')
         names.add(g['name'])
 
 
@@ -43,7 +45,7 @@ def matrix(project, manifest, plan, port, label):
         run(project, name, port, ['native-reference', 'manifest'], g['cases'],
             manifest=manifest, location_event=g['location_event'],
             explicit_threat_zero=True, minimum_duration=g['duration'], audition_object=g.get('audition_object'),
-            prime_location=g.get('prime_location',False))
+            prime_location=g.get('prime_location',False),crossfade_event=g.get('crossfade_event'))
         folder = project.parent / name
         measure(folder)
         proof['groups'].append({'name': name, 'summary': summarize(folder)})

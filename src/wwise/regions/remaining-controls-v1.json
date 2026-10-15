@@ -1,0 +1,32 @@
+[
+  {
+    "label": "km-authored",
+    "manifest": "kaer-morhen-v1.json",
+    "plan": "kaer-morhen-authored-playback-v1.json"
+  },
+  {
+    "label": "ts-authored",
+    "manifest": "toussaint-v1.json",
+    "plan": "toussaint-authored-playback-v1.json"
+  },
+  {
+    "label": "ts-crossfade",
+    "manifest": "toussaint-v1.json",
+    "plan": "toussaint-crossfade-playback-v1.json"
+  },
+  {
+    "label": "castle-native",
+    "manifest": "wyzima-castle-v1.json",
+    "plan": "wyzima-castle-playback-v1.json"
+  },
+  {
+    "label": "island-native",
+    "manifest": "misty-island-v1.json",
+    "plan": "misty-island-playback-v1.json"
+  },
+  {
+    "label": "shared-native",
+    "manifest": "spiral-v1.json",
+    "plan": "spiral-playback-v1.json"
+  }
+]

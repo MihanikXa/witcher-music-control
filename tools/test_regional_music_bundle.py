@@ -21,6 +21,18 @@ class BundleTests(unittest.TestCase):
             self.spec['banks'].append({'path':str(path),'proof':str(proof),'sha256':sha})
     def tearDown(self):self.tmp.cleanup()
     def test_two_proven_banks_pass(self):self.assertEqual(len(verified_inputs(self.spec)),2)
+    def test_batch_bank_requires_matching_playback_and_transition_proof(self):
+        item=self.spec['banks'][0];path=Path(item['proof'])
+        data=json.loads(path.read_text());data.update(batch_manifest_sha256s={'music_prologue':'pinned'},manifest_sha256='pinned')
+        path.write_text(json.dumps(data))
+        with self.assertRaisesRegex(ValueError,'playback proof'):verified_inputs(self.spec)
+        playback=self.root/'playback.json';item['playback_proof']=str(playback)
+        proof={'passed':True,'region':'music_prologue','manifest_sha256':'pinned',
+               'static_voice_checks':{'passed':True},'transition_review':{'passed':True}}
+        playback.write_text(json.dumps(proof));self.assertEqual(len(verified_inputs(self.spec)),2)
+        for key,value in [('region','music_toussaint'),('manifest_sha256','stale'),('transition_review',{'passed':False})]:
+            playback.write_text(json.dumps(dict(proof,**{key:value})))
+            with self.assertRaisesRegex(ValueError,'playback proof'):verified_inputs(self.spec)
     def test_duplicate_bank_fails(self):
         self.spec['banks'].append(self.spec['banks'][0])
         with self.assertRaises(ValueError):verified_inputs(self.spec)

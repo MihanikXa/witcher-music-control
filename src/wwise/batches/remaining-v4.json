@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "complete_work_units": 1508,
+  "mechanism": "static-only WAAPI; independently restored batch union",
+  "regions": [
+    {
+      "manifest": "../regions/kaer-morhen-v1.json",
+      "region": "music_kaer_morhen",
+      "disposition": "modify-static",
+      "static_targets": 2,
+      "source_noncombat_rows": {
+        "generic": 9,
+        "silent": 18
+      }
+    },
+    {
+      "manifest": "../regions/toussaint-v1.json",
+      "region": "music_toussaint",
+      "disposition": "modify-static",
+      "static_targets": 9,
+      "source_noncombat_rows": {
+        "generic": 45,
+        "unresolved": 45,
+        "protected": 36,
+        "mixed": 12,
+        "silent": 27
+      }
+    },
+    {
+      "manifest": "../regions/wyzima-castle-v1.json",
+      "region": "music_wyzima_castle",
+      "disposition": "retain-native",
+      "static_targets": 0,
+      "source_noncombat_rows": {
+        "protected": 6
+      }
+    },
+    {
+      "manifest": "../regions/misty-island-v1.json",
+      "region": "music_misty_island",
+      "disposition": "retain-native",
+      "static_targets": 0,
+      "source_noncombat_rows": {
+        "unresolved": 9
+      }
+    },
+    {
+      "manifest": "../regions/spiral-v1.json",
+      "region": "music_spiral",
+      "disposition": "retain-native",
+      "static_targets": 0,
+      "source_noncombat_rows": {
+        "mixed": 18
+      }
+    }
+  ],
+  "retail_test_required_before_offline_development": false,
+  "generated_init_ships": false
+}

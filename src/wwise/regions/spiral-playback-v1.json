@@ -1,0 +1,11 @@
+[
+  {
+    "name": "native-shared",
+    "location_event": "mus_loc_spiral_castle",
+    "cases": [
+      "combat-sustain"
+    ],
+    "duration": 50,
+    "prime_location": true
+  }
+]

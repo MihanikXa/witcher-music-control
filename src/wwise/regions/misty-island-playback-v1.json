@@ -1,0 +1,11 @@
+[
+  {
+    "name": "native-context",
+    "location_event": "mus_loc_isle_of_mists",
+    "cases": [
+      "e-dialogue"
+    ],
+    "duration": 24,
+    "prime_location": true
+  }
+]

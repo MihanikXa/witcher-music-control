@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "region": "music_wyzima_castle",
+  "manifest_version": 1,
+  "facts": {
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259",
+    "root": {
+      "id": "{D67B9DFE-21CB-4EFB-BFA9-EE6CFEC40BDC}",
+      "name": "music_wyzima_castle",
+      "short_id": "857873235"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{5906743D-28DE-4535-80FD-C1DE13A03AA6}",
+      "short_id": "361704319",
+      "line": null
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{58F8E22A-BAC4-4448-A379-540485AA2BC9}",
+      "short_id": "149502969",
+      "line": null
+    }
+  },
+  "state_scopes": [],
+  "static_targets": [],
+  "decisions": {
+    "{9D8FA410-2C9E-4AFC-984B-62708FE1B144}": {
+      "name": "expl_castle",
+      "short_id": 1031426249,
+      "classification": "protected",
+      "policy": "preserve-native",
+      "evidence": "Conservative policy: dedicated thematic/authored selection, including distinct alternate scoring where ordinary variants exist. Preserve the entire original playback path. Musical intent is a policy inference supported by routing/source separation, not a quest/name rule.",
+      "fact_status": "Observed identities/routing; classification policy explicitly distinguished",
+      "original_volume": -3.0,
+      "parent_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+      "parent_short_id": 896800585,
+      "observed": {
+        "native_present": true,
+        "noncombat_rows": 6,
+        "parent_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+        "parent_short_id": 896800585,
+        "selector_consumers": [
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{3E771F7A-5B6D-4ACA-84F0-1F0D71B173B6}",
+            "selector_short_id": "896800585",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "all_event_descendant_consumers": [],
+        "transition_consumers": [],
+        "audio_files": [
+          "music\\wyzima\\q002\\q002_geralt_talks_to_emperor_Full.wav"
+        ],
+        "quest_branch_shared_files": [],
+        "reused_media": {
+          "music\\wyzima\\q002\\q002_geralt_talks_to_emperor_Full.wav": [
+            "{E60B92F3-0F37-4AFC-AA46-7736C4920E41}",
+            "{9D8FA410-2C9E-4AFC-984B-62708FE1B144}"
+          ]
+        }
+      }
+    }
+  },
+  "static_consumer_paths": {},
+  "source_only_policy": []
+}

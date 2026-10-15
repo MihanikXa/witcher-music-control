@@ -1,0 +1,12 @@
+[
+  {
+    "name": "native-long-crossfade",
+    "location_event": "mus_loc_toussaint_castle",
+    "crossfade_event": "mus_loc_toussaint_rich",
+    "cases": [
+      "location-crossfade"
+    ],
+    "duration": 65,
+    "prime_location": true
+  }
+]

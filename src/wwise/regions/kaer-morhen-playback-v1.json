@@ -1,0 +1,24 @@
+[
+  {
+    "name": "global-sustained",
+    "location_event": "mus_loc_kaermorhen_global",
+    "cases": [
+      "combat-sustain",
+      "combat-sustain-offset"
+    ],
+    "duration": 55,
+    "prime_location": true
+  },
+  {
+    "name": "global-contexts",
+    "location_event": "mus_loc_kaermorhen_global",
+    "cases": [
+      "night-combat",
+      "e-dialogue",
+      "combat-threat",
+      "music-master"
+    ],
+    "duration": 30,
+    "prime_location": true
+  }
+]

@@ -43,6 +43,14 @@ def verified_inputs(spec):
                 or digest(bank) != item['sha256'] or not decoded.get('global_generated_data_exact')
                 or not decoded.get('paired_generated_media_exact') or not proof.get('original_audio_unchanged')):
             raise ValueError('Missing/stale independent regional bank proof')
+        if proof.get('batch_manifest_sha256s'):
+            if not item.get('playback_proof'):raise ValueError('Batch bank requires independent playback proof')
+            playback=json.loads(build_path(item['playback_proof']).read_text(encoding='utf-8'))
+            if (not playback.get('passed') or playback.get('region')!=bank.stem
+                    or playback.get('manifest_sha256')!=proof.get('manifest_sha256')
+                    or not playback.get('static_voice_checks',{}).get('passed')
+                    or not playback.get('transition_review',{}).get('passed')):
+                raise ValueError('Missing/stale regional batch playback proof')
         if bank.name in banks:
             raise ValueError('Duplicate bank')
         banks[bank.name] = bank

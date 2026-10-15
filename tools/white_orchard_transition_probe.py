@@ -51,7 +51,7 @@ def primeable_location(events, name):
         raise ValueError('Priming requires a verified switch-only location event')
 
 
-def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False, minimum_duration=19, audition_object=None, prime_location=False):
+def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False, minimum_duration=19, audition_object=None, prime_location=False,crossfade_event=None):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -114,6 +114,9 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
         raise ValueError('Unverified native event')
     if prime_location:
         primeable_location(ET.parse(project.parent/'Events/music.wwu'), location_event)
+    if crossfade_event is not None:
+        if crossfade_event not in events:raise ValueError('Unverified crossfade location event')
+        primeable_location(ET.parse(project.parent/'Events/music.wwu'),crossfade_event)
     event_transport = api.call("ak.wwise.core.transport.create", {"object": events[play_event]})["transport"]
     cases = {
         "e-combat": [(0, "exploration", None), (6, "combat", None), (13, "exploration", None)],
@@ -131,6 +134,9 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
         "gwent": [(0, "gwent", None)],
     }
     cases.update(regional_cases())
+    if crossfade_event is not None:
+        cases['location-crossfade']=[(0,'exploration',None),(6,'exploration',crossfade_event),(30,'exploration',location_event)]
+        cases['location-crossfade-settled']=[(0,'exploration',None),(70,'exploration',crossfade_event)]
     if audition_object is not None:
         cases['protected-direct'] = [(0, 'dialog_scene', None)]
     if selected and set(selected) - set(cases):
