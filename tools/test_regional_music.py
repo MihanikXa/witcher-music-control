@@ -113,6 +113,17 @@ class RegionalTests(unittest.TestCase):
     def test_isolated_exception_and_coverage_pass(self):
         self.assertTrue(validate_source(*fixture())['passed'])
 
+    def test_explicit_physical_parent_pin(self):
+        a,b,s,states,t = fixture()
+        from regional_music import graph, ancestors
+        objects,parents,_ = graph(a)
+        parent = next(n for n in list(ancestors(objects['generic'],parents))[1:] if n.get('ShortID'))
+        s['decisions']['generic'].update(parent_id=parent.get('ID'), parent_short_id=parent.get('ShortID'))
+        plan(a,s,states)
+        s['decisions']['generic']['parent_short_id']='wrong'
+        with self.assertRaisesRegex(ValueError,'physical parent mismatch'):
+            plan(a,s,states)
+
     def test_local_guid_changes_do_not_change_policy(self):
         a,b,s,states,t = fixture()
         for row in b.findall('.//StateInfo/CustomStateList/CustomState'):

@@ -6,6 +6,43 @@ from pathlib import Path
 from white_orchard_prepare import build_path, digest
 
 
+def static_voice_checks(captures, spec, source_tree):
+    """Measured subset only: verify actual gain ancestry and reject generic bleed."""
+    from regional_music import graph, ancestors
+    objects,parents,_=graph(source_tree)
+    prefixes={}
+    for ident in spec['static_targets']:
+        names=[]
+        for node in ancestors(objects[ident],parents):
+            if node.tag in ('MusicSwitchContainer','MusicPlaylistContainer','MusicSegment'):
+                names.append(node.get('Name'))
+            if node.get('ID')==spec['facts']['root']['id']:
+                break
+        else:
+            raise ValueError('Static target outside regional ancestry')
+        prefixes[ident]=tuple(reversed(names))
+    observed={}
+    for case in captures:
+        if case['mode']!='manifest':continue
+        for sample in case['samples']:
+            for contribution in sample['contributions'].values():
+                data=contribution['return'];nodes=data['objects'];names=[n['name'] for n in nodes]
+                if spec['facts']['root']['name'] not in names:continue
+                start=names.index(spec['facts']['root']['name'])
+                for ident,prefix in prefixes.items():
+                    if tuple(names[start:start+len(prefix)])!=prefix:continue
+                    node=nodes[start+len(prefix)-1]
+                    values=[p['value'] for p in node.get('parameters',[]) if p.get('reason')=='SoundBankValue' and p.get('propertyType')=='Volume']
+                    if values!=[-200.0] or data['volume']>-180:
+                        raise ValueError('Measured generic gain missing or exploration bleed')
+                    row=observed.setdefault(ident,{'samples':0,'maximum_total_db':float('-inf')})
+                    row['samples']+=1;row['maximum_total_db']=max(row['maximum_total_db'],data['volume'])
+    if not observed:
+        raise ValueError('No measured static playlist voices; silence is not proof')
+    return {'passed':True,'measured_static_subset':observed,
+            'all_targets_auditioned':len(observed)==len(prefixes)}
+
+
 def summarize(folder):
     raw = json.loads((folder / 'results.json').read_text(encoding='utf-8'))
     measured = json.loads((folder / 'transition-measurements.json').read_text(encoding='utf-8'))
@@ -44,11 +81,13 @@ def summarize(folder):
             'limitation': 'Wall/PCM origins differ; virtual-bus Recorder absence is not measured zero PCM. Native playlist history/random choice is not reset by transport stop.'}
 
 
-def outro_checks(summary, playlist, expected_peak):
-    """Bounded NML/WO proof: audible return cue completes after E, before stop."""
+def outro_checks(summary, playlist, expected_peak, case_names=('e-combat', 'e-combat-offset')):
+    """Explicit paired cases: audible return cue completes after E, before stop."""
+    if not case_names or len(set(case_names))!=len(case_names):
+        raise ValueError('Explicit unique outro cases required')
     checks = []
     for case in summary['cases']:
-        if case['case'] not in ('e-combat', 'e-combat-offset'):
+        if case['case'] not in case_names:
             continue
         returned = [e['accepted'] for e in case['events'] if e.get('state') == 'exploration'][-1]
         voices = [v for path, v in case['voices'].items() if '/' + playlist + '/' in path]
@@ -57,8 +96,8 @@ def outro_checks(summary, playlist, expected_peak):
         checks.append({'mode': case['mode'], 'case': case['case'], 'passed': passed,
                        'return_time': returned, 'audible_native_outro_voices': audible})
     expected = {(mode, case) for mode in ('native-reference', 'manifest')
-                for case in ('e-combat', 'e-combat-offset')}
-    if len(checks) != 4 or {(c['mode'], c['case']) for c in checks} != expected or not all(c['passed'] for c in checks):
+                for case in case_names}
+    if len(checks) != len(expected) or {(c['mode'], c['case']) for c in checks} != expected or not all(c['passed'] for c in checks):
         raise ValueError('Missing/attenuated/truncated combat outro evidence')
     return checks
 

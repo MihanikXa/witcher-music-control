@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
-from regional_music import context, validate_source, validate_events, MUSIC
+from regional_music import context, validate_source, validate_events, validate_event_directory, MUSIC
 from white_orchard_compare import read_bank, difference
 from white_orchard_prepare import build_path, digest
 from white_orchard_state_bank_audit import header
@@ -23,6 +23,7 @@ def source_gate(source, candidate, manifest, template_path):
     spec = json.loads(manifest.read_text(encoding='utf-8'))
     original, states = context(source, spec)
     validate_events(original, ET.parse(source / 'Events/music.wwu'), spec)
+    event_count = validate_event_directory(original, source, spec)
     if digest(template_path) != spec['facts']['template_source_sha256']:
         raise ValueError('Template fingerprint changed')
     template = next(n for n in ET.parse(template_path).iter('MusicSwitchContainer')
@@ -41,6 +42,7 @@ def source_gate(source, candidate, manifest, template_path):
         if digest(candidate / rel) != original['sha256'] or digest(source / rel) != original['sha256']:
             raise ValueError('Source audio changed')
     result.update(complete_work_units=1508, original_audio_unchanged=True,
+                  event_work_units_reviewed=event_count,
                   original_nonmusic_units_unchanged=True, candidate_music_sha256=digest(candidate / MUSIC),
                   manifest_sha256=digest(manifest), global_definitions_unchanged=True)
     return result

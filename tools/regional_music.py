@@ -123,6 +123,11 @@ def plan(original, spec, states):
         if node.get('Name') != decision['name'] or node.get('ShortID') != str(decision['short_id']):
             raise ValueError('Decision identity mismatch')
         chain_ids = {n.get('ID') for n in ancestors(node, parents)}
+        if 'parent_id' in decision or 'parent_short_id' in decision:
+            physical = next(n for n in list(ancestors(node, parents))[1:] if n.get('ShortID'))
+            if (decision.get('parent_id') != physical.get('ID')
+                    or str(decision.get('parent_short_id')) != physical.get('ShortID')):
+                raise ValueError('Reviewed physical parent mismatch')
         attenuated = bool(chain_ids & set(scopes)) or bool(chain_ids & set(static))
         classification = decision['classification']
         if classification in ('generic', 'silent') and attenuated and decision['policy'] != 'approved':
@@ -257,12 +262,29 @@ def validate_events(original, events, spec):
             raise ValueError('Direct event targets a permanent attenuation candidate or descendant')
 
 
+def validate_event_directory(original, source, spec):
+    """All event work units, including references outside the regional bank folder."""
+    objects, parents, _ = graph(original)
+    static = set(spec['static_targets'])
+    forbidden = {ident for ident,node in objects.items()
+                 if {n.get('ID') for n in ancestors(node, parents)} & static}
+    files = sorted((source / 'Events').rglob('*.wwu'))
+    if not files:
+        raise ValueError('Missing complete event source')
+    for path in files:
+        if any(ref.get('ID') in forbidden for ref in ET.parse(path).iter('ObjectRef')):
+            raise ValueError('Direct event targets a permanent attenuation candidate or descendant: '
+                             + path.relative_to(source).as_posix())
+    return len(files)
+
+
 def author(source, project, manifest, template_path, port):
     project = build_path(project)
     spec = json.loads(manifest.read_text(encoding='utf-8'))
     original, states = context(source, spec)
     values = plan(original, spec, states)
     validate_events(original, ET.parse(source / 'Events/music.wwu'), spec)
+    event_count = validate_event_directory(original, source, spec)
     workspace = project.parent
     report = workspace / 'regional-source-audit.json'
     if report.exists():
@@ -296,7 +318,8 @@ def author(source, project, manifest, template_path, port):
     if set(after) != set(units) or any(after[p] != units[p] for p in units if p != MUSIC.as_posix()):
         raise ValueError('Unrelated work unit changed')
     result.update(manifest_sha256=digest(manifest), music_sha256=digest(workspace / MUSIC),
-                  complete_work_units=1508, banks_generated=False, deployed=False)
+                  complete_work_units=1508, event_work_units_reviewed=event_count,
+                  banks_generated=False, deployed=False)
     # Keep pristine authored source before any separate profiler/Recorder fixture
     # changes. This snapshot contains no project/licence material.
     shutil.copyfile(workspace / MUSIC, workspace / 'regional-authored-music.xml')

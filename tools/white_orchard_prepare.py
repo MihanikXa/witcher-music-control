@@ -6,6 +6,7 @@ All output must be inside this repository's ignored build directory.
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import xml.etree.ElementTree as ET
@@ -115,13 +116,42 @@ def prepare_defaults(source, output, record=None):
         save_xml(tree, output / path.relative_to(source))
 
 
-def prepare(source, output, preserve_hierarchies=False, regional_root=None):
+def stage_original(source, target, relative, immutable_pool=None):
+    """Link only verified immutable build audio; never link installed inputs."""
+    relative = Path(relative)
+    if relative.is_absolute() or '..' in relative.parts or relative.parts[:2] != ('Originals', 'SFX'):
+        raise ValueError('Only contained regional Originals/SFX may be staged')
+    original = (source / relative).resolve()
+    if not original.is_relative_to(source.resolve()):
+        raise ValueError('Escaping original audio')
+    sha = digest(original)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if target.exists():
+        raise FileExistsError(target)
+    if immutable_pool is None:
+        shutil.copyfile(original, target)
+    else:
+        pool = build_path(immutable_pool)
+        existing = (pool / relative).resolve()
+        if not existing.is_relative_to(pool) or digest(existing) != sha:
+            raise ValueError('Immutable original does not match installed source')
+        os.link(existing, target)  # Failure is fatal, never silently copy/overwrite.
+        if not os.path.samefile(existing, target):
+            raise ValueError('Audio hardlink identity failed')
+    return sha
+
+
+def prepare(source, output, preserve_hierarchies=False, regional_root=None, immutable_originals=None):
     source = Path(source).resolve()
     output = build_path(output)
     if output.exists():
         raise FileExistsError(f"Refusing to overwrite existing workspace: {output}")
     if source == output or source.is_relative_to(output):
         raise ValueError("Input and output overlap")
+    if immutable_originals is not None:
+        immutable_originals = build_path(immutable_originals)
+        if not preserve_hierarchies or not immutable_originals.is_dir():
+            raise ValueError('Immutable audio pool requires complete context and an existing build project')
     config = json.loads(CONFIG.read_text())
     if regional_root is not None:
         if not preserve_hierarchies:
@@ -170,10 +200,11 @@ def prepare(source, output, preserve_hierarchies=False, regional_root=None):
         if not path.is_file():
             raise FileNotFoundError(path)
         target = output / relative
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(path, target)
+        sha = stage_original(source, target, relative, immutable_originals)
         manifest["originals"].append({"relative_path": str(relative),
-                                      "sha256": digest(path), "bytes": path.stat().st_size})
+                                      "sha256": sha, "bytes": path.stat().st_size})
+    if immutable_originals is not None:
+        manifest['immutable_originals_linked'] = True
     (output / "input-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(json.dumps({"workspace": str(output), "work_units": len(list(output.rglob("*.wwu"))),
                       "originals": len(manifest["originals"]),
@@ -222,5 +253,7 @@ if __name__ == "__main__":
     parser.add_argument("--preserve-hierarchies", action="store_true",
                         help="Retain all work units/default contents for Init fidelity investigations")
     parser.add_argument('--regional-root', help='Copy media for this existing region; requires complete hierarchies')
+    parser.add_argument('--immutable-originals', type=Path,
+                        help='Verified build project supplying immutable audio hardlinks; never edit these files in place')
     args = parser.parse_args()
-    prepare(args.audio_project, args.output, args.preserve_hierarchies, args.regional_root)
+    prepare(args.audio_project, args.output, args.preserve_hierarchies, args.regional_root, args.immutable_originals)

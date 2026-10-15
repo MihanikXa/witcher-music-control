@@ -4,7 +4,8 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
-from regional_music_bundle import verified_inputs
+from regional_music_bundle import verified_inputs, audit_bank_identities, reviewed_diagnostics
+from unittest.mock import patch
 from white_orchard_prepare import REPO
 
 
@@ -32,3 +33,29 @@ class BundleTests(unittest.TestCase):
     def test_init_never_allowed(self):
         self.spec['banks'][0]['path']=str(self.root/'Init.bnk')
         with self.assertRaises(ValueError):verified_inputs(self.spec)
+
+    def test_explicit_three_regions_require_third_independent_proof(self):
+        self.spec['regions']=['music_prologue','music_nomansgrad','music_skellige']
+        with self.assertRaises(ValueError):verified_inputs(self.spec)
+        old=self.spec['banks'][0];path=self.root/'music_skellige.bnk';path.write_bytes(b'skellige')
+        sha=hashlib.sha256(path.read_bytes()).hexdigest()
+        data=json.loads(Path(old['proof']).read_text())
+        data['decoded_fields']['candidate_sha256']=sha;data['bank_preflight']['candidate_sha256']=sha
+        proof=self.root/'skellige-proof.json';proof.write_text(json.dumps(data))
+        self.spec['banks'].append({'path':str(path),'proof':str(proof),'sha256':sha})
+        self.assertEqual(len(verified_inputs(self.spec)),3)
+
+    def test_duplicate_definitions_and_bank_ids_rejected(self):
+        banks={'a':Path('a'),'b':Path('b')}
+        def record(path):return {'records':{1 if str(path)=='a' else 2:None},'sha256':str(path)}
+        with patch('regional_music_bundle.read_bank',side_effect=record), patch('regional_music_bundle.header',side_effect=[{'bank_id':1},{'bank_id':2}]):
+            self.assertTrue(audit_bank_identities(banks)['passed'])
+        with patch('regional_music_bundle.read_bank',side_effect=record), patch('regional_music_bundle.header',return_value={'bank_id':1}):
+            with self.assertRaisesRegex(ValueError,'Duplicate bank ID'):audit_bank_identities(banks)
+        with patch('regional_music_bundle.read_bank',return_value={'records':{1:None},'sha256':'s'}), patch('regional_music_bundle.header',side_effect=[{'bank_id':1},{'bank_id':2}]):
+            with self.assertRaisesRegex(ValueError,'overlapping serialized'):audit_bank_identities(banks)
+
+    def test_unreviewed_three_bank_diagnostics_cannot_inherit_two_bank_approval(self):
+        with self.assertRaisesRegex(ValueError,'independent actual native diagnostic review'):
+            reviewed_diagnostics(self.root,self.root,'unused',
+                ['music_prologue.bnk','music_nomansgrad.bnk','music_skellige.bnk'])

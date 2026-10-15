@@ -14,6 +14,15 @@ class PlaybackTests(unittest.TestCase):
     def test_complete_native_volume_outro_passes(self):
         self.assertEqual(len(outro_checks(fixture(), 'transition_to_expl', -18)), 4)
 
+    def test_explicit_sustained_cases_keep_missing_pair_rejection(self):
+        data=fixture()
+        for row in data['cases']:
+            row['case']=row['case'].replace('e-combat','combat-sustain')
+        cases=('combat-sustain','combat-sustain-offset')
+        self.assertEqual(len(outro_checks(data,'transition_to_expl',-18,cases)),4)
+        data['cases'].pop()
+        with self.assertRaises(ValueError):outro_checks(data,'transition_to_expl',-18,cases)
+
     def test_old_ancestor_mute_fails(self):
         data = fixture(); data['cases'][2]['voices']['world/transition_to_expl/outro']['peak_db'] = -218
         with self.assertRaises(ValueError): outro_checks(data, 'transition_to_expl', -18)

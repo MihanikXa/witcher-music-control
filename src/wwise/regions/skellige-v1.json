@@ -1,0 +1,2908 @@
+{
+  "schema": 1,
+  "wwise_build": 8928,
+  "purpose": "scoped-pilot",
+  "game_state_group": "{27711515-3584-4123-9F09-B90831398B80}",
+  "muted_states": [
+    "exploration",
+    "exploration_night",
+    "focus_exploration",
+    "focus_exploration_night",
+    "underwater",
+    "underwater_focus",
+    "boat",
+    "dialog_scene",
+    "dialog_scene_night"
+  ],
+  "region": "music_skellige",
+  "manifest_version": 1,
+  "facts": {
+    "root": {
+      "id": "{4EF8DE1A-9820-42E1-9B0B-2DA17B828CC2}",
+      "name": "music_skellige",
+      "short_id": "953773349"
+    },
+    "world": {
+      "name": "world_music",
+      "id": "{4CE7C799-41C6-4BCF-8A76-172614BF6988}",
+      "short_id": "655655590",
+      "line": 33614
+    },
+    "quest": {
+      "name": "quests_and_cutscenes",
+      "id": "{AAE793C7-498E-499D-AC3A-723906B08B14}",
+      "short_id": "374346945",
+      "line": 1236
+    },
+    "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+    "input_hashes": {
+      "Interactive Music Hierarchy/music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "Events/music.wwu": "c1f6d2e7525057e688c95af91567140e0316ac5ee53e7dda2e380c6e292f2144",
+      "SoundBanks/music.wwu": "58e011077950f306a862cb5e51f9953793194039195a4c64de827561ebd8cef2",
+      "States/global_states.wwu": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    "template_source_sha256": "cba9ed036e94fe658ca8e506d5539e1f7139f7caea51a21cac3fadbdcebcc259"
+  },
+  "state_scopes": [],
+  "static_targets": [
+    "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}",
+    "{E20BD1DA-2C44-4722-80C0-3F3F4694A467}",
+    "{0CE54C62-AF60-462D-806F-65738FA21BE4}",
+    "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}",
+    "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}",
+    "{7232C701-B364-49AB-9E56-DA2B48E95DBB}",
+    "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}",
+    "{5F5BF044-7F63-479C-9BDA-743C4C952E15}",
+    "{EED05D36-68D0-42BD-B659-E6F962912F43}",
+    "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}",
+    "{4A5B104A-45E0-465E-9DAA-DCE3969EE372}",
+    "{BE0C11AF-805F-4174-B518-9AFF990F6CC1}"
+  ],
+  "decisions": {
+    "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}": {
+      "name": "expl_skellige_settlements",
+      "short_id": 89559491,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+      "parent_short_id": 405881864,
+      "observed": {
+        "noncombat_rows": 8,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+            "selector_short_id": "405881864",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{F9859A9E-EFE3-4062-80CD-6EAB9F95E260}",
+          "{0C9AB608-57F6-4505-9D86-0D7877F43D42}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 34753
+      }
+    },
+    "{D6F74C71-F999-4370-AF4B-DC648E62158B}": {
+      "name": "expl_skellige_tavern",
+      "short_id": 196982704,
+      "classification": "mixed",
+      "policy": "pending",
+      "evidence": "Shared noncombat/minigame selection and tavern/Gwent family media; permanent attenuation forbidden.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -6.0,
+      "parent_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+      "parent_short_id": 671468388,
+      "observed": {
+        "noncombat_rows": 5,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "minigames"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{CFDFE3A0-1B14-4DF9-AE25-BF62F34848C6}",
+            "selector_short_id": "671468388",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{39EDCDAB-5F8C-4F1B-B8C2-9C527CE25A63}",
+          "{1656074D-E213-4050-B3E0-D60307961FEE}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 37965
+      }
+    },
+    "{5549C34E-25EF-4215-9D57-F80FEE75BACB}": {
+      "name": "skellige_silent",
+      "short_id": 777841635,
+      "classification": "silent",
+      "policy": "approved",
+      "evidence": "Only original 10-second silent source; PCM verified separately; no edit required.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+      "parent_short_id": 888018202,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{4A6E14AA-4D0D-4D7B-896A-AC0131252C57}",
+            "selector_short_id": "888018202",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{14DE64B6-D77C-4609-9C7E-10E6A00147F9}",
+          "{B18B6539-EA14-44A3-A040-F8A7450D0547}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 39216
+      }
+    },
+    "{E20BD1DA-2C44-4722-80C0-3F3F4694A467}": {
+      "name": "expl_skellige_caves",
+      "short_id": 618480587,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -1.0,
+      "parent_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+      "parent_short_id": 1035669955,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+            "selector_short_id": "1035669955",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{CACA5C23-F47C-412D-A5C4-B2ED8887F435}",
+          "{809962B5-775D-40ED-B8CB-3900BF7AB069}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 42568
+      }
+    },
+    "{0CE54C62-AF60-462D-806F-65738FA21BE4}": {
+      "name": "expl_skellige_settlements",
+      "short_id": 1061684902,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -4.0,
+      "parent_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+      "parent_short_id": 84399196,
+      "observed": {
+        "noncombat_rows": 5,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+            "selector_short_id": "84399196",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{1585EE3A-10CF-4874-8877-15ADDCC880DD}",
+          "{205C1DC1-9B4E-4147-AD03-CC974A51DB7F}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 46079
+      }
+    },
+    "{16BDA887-72DE-46E3-8416-84DDD52D04F8}": {
+      "name": "expl_monster_hunting_tracking",
+      "short_id": 1014924209,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -1.0,
+      "parent_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+      "parent_short_id": 1025131743,
+      "observed": {
+        "noncombat_rows": 8,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{EB3F969B-3561-4A42-9033-D79D2B36CC8C}",
+            "selector_short_id": "1025131743",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{4FFA97ED-2EF8-4C6C-BB5C-C83A6A94CBA3}",
+          "{CF005150-B40B-4055-9AF5-879452491B99}",
+          "{622F0829-4284-40CC-92C0-1564C2EC12D3}",
+          "{BA73666D-DA0E-4D57-A6C7-FF7A25CA8F65}",
+          "{49569BE0-CD88-4A0B-BED2-86CB35870799}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 29,
+        "source_line": 49892
+      }
+    },
+    "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}": {
+      "name": "expl_sikellige_ard_skellig",
+      "short_id": 125522234,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -5.0,
+      "parent_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+      "parent_short_id": 551582440,
+      "observed": {
+        "noncombat_rows": 6,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "underwater_focus"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{5C1BFCF2-038F-43CE-83DD-094F9B5B2005}",
+          "{ABB5B522-5FC3-4954-BCDB-B5C132E1B232}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 56984
+      }
+    },
+    "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}": {
+      "name": "expl_skellige_ard_skellig_night",
+      "short_id": 726745057,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -3.0,
+      "parent_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+      "parent_short_id": 551582440,
+      "observed": {
+        "noncombat_rows": 3,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+            "selector_short_id": "551582440",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{5C1BFCF2-038F-43CE-83DD-094F9B5B2005}",
+          "{ABB5B522-5FC3-4954-BCDB-B5C132E1B232}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 59382
+      }
+    },
+    "{7232C701-B364-49AB-9E56-DA2B48E95DBB}": {
+      "name": "expl_ice_giant_island",
+      "short_id": 445898596,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 1.0,
+      "parent_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+      "parent_short_id": 36775016,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+            "selector_short_id": "36775016",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{FFA50B28-244C-4BFA-AD3A-E439804976FD}",
+          "{CD529E57-0038-472A-9186-7A1C807088A1}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 61947
+      }
+    },
+    "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}": {
+      "name": "expl_an_skellig",
+      "short_id": 439994516,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+      "parent_short_id": 985847750,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+            "selector_short_id": "985847750",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{78414D7B-288C-41CA-9C2F-CF2A3027676C}",
+          "{1662B493-54F6-4694-97E8-982DE41D7018}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 64726
+      }
+    },
+    "{AF010997-8B77-493C-932C-0BC62380DEDE}": {
+      "name": "expl_hindarsfjall",
+      "short_id": 39654841,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Location scoring with thematic/authored source reuse or scene-associated placement not sufficient to approve destruction. Retain native playback pending evidence.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+      "parent_short_id": 331255148,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{5B459DB9-EF7C-4793-81CF-F0127F97103A}",
+            "selector_short_id": "331255148",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{0B79C403-6452-4FA0-B72A-CDB5A8FD5144}",
+          "{098E46B8-8BB7-4424-ACF9-9D027834DEA0}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 7,
+        "source_line": 68555
+      }
+    },
+    "{5F5BF044-7F63-479C-9BDA-743C4C952E15}": {
+      "name": "expl_spikeroog",
+      "short_id": 769524140,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+      "parent_short_id": 128344438,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+            "selector_short_id": "128344438",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{E7933E48-2EF7-4452-B9F2-9B5852AFC313}",
+          "{5BD3E0E6-64B8-4792-813D-2732BC5D9D43}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 72373
+      }
+    },
+    "{EED05D36-68D0-42BD-B659-E6F962912F43}": {
+      "name": "expl_faroe",
+      "short_id": 173571250,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+      "parent_short_id": 969116713,
+      "observed": {
+        "noncombat_rows": 6,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "underwater_focus"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{6A0CDA98-7316-49FC-934B-868840ECE443}",
+          "{6D6EF1CE-EF73-448F-A14E-B78A8BE53A53}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 76368
+      }
+    },
+    "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}": {
+      "name": "expl_faroe_night",
+      "short_id": 677581091,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+      "parent_short_id": 969116713,
+      "observed": {
+        "noncombat_rows": 3,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+            "selector_short_id": "969116713",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{6A0CDA98-7316-49FC-934B-868840ECE443}",
+          "{6D6EF1CE-EF73-448F-A14E-B78A8BE53A53}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 78543
+      }
+    },
+    "{4A5B104A-45E0-465E-9DAA-DCE3969EE372}": {
+      "name": "expl_elven_ruins",
+      "short_id": 297423389,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+      "parent_short_id": 10450794,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+            "selector_short_id": "10450794",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{C15D9401-EA95-4831-AB87-1BB5DB65D867}",
+          "{0BBC0053-2D59-4CBD-996D-983D632A96A6}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 80238
+      }
+    },
+    "{D2BF7ED3-B519-42B4-8CE5-CD34DA8EA0EA}": {
+      "name": "kaer_trolde_expl",
+      "short_id": 125534896,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Location scoring with thematic/authored source reuse or scene-associated placement not sufficient to approve destruction. Retain native playback pending evidence.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -12.0,
+      "parent_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+      "parent_short_id": 451301359,
+      "observed": {
+        "noncombat_rows": 4,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "focus_exploration"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{1B4732A7-69DD-471E-B14F-387D74D7AA61}",
+          "{E4AF1AD5-2ECE-4D9E-A49B-4ED8500D8BB2}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 83812
+      }
+    },
+    "{11523302-EE7E-4338-9A0B-D7DE705C88F0}": {
+      "name": "kaer_trolde_expl_night",
+      "short_id": 736136915,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Location scoring with thematic/authored source reuse or scene-associated placement not sufficient to approve destruction. Retain native playback pending evidence.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -10.0,
+      "parent_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+      "parent_short_id": 451301359,
+      "observed": {
+        "noncombat_rows": 3,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{0E5115FD-96A6-4D24-BE7D-E6A8B7DEE3E1}",
+            "selector_short_id": "451301359",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{1B4732A7-69DD-471E-B14F-387D74D7AA61}",
+          "{E4AF1AD5-2ECE-4D9E-A49B-4ED8500D8BB2}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 84012
+      }
+    },
+    "{41DA7015-ABDC-43CB-8EA1-313A13040440}": {
+      "name": "expl_freyas_garden",
+      "short_id": 448669660,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -4.0,
+      "parent_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+      "parent_short_id": 796928516,
+      "observed": {
+        "noncombat_rows": 7,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{78475B17-C690-45C8-BBCF-A14A7B3E9228}",
+            "selector_short_id": "796928516",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{AF32BEF7-26F1-4156-A3EA-FF0AFC92C2D5}",
+          "{664E1A64-8EE8-42A1-90CB-A8E9B34B8FEE}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 86729
+      }
+    },
+    "{302469EB-0D58-4B8C-BBFF-0F4E7ED762B3}": {
+      "name": "expl_cataclysm_forest",
+      "short_id": 159808125,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+      "parent_short_id": 566833464,
+      "observed": {
+        "noncombat_rows": 7,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{A6C7CA08-D60E-4771-B0A6-9F477E157B48}",
+            "selector_short_id": "566833464",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{C69393E6-31A9-4AEA-B95F-C5D61B2681B6}",
+          "{D627A897-CD20-4443-94B4-66D6F9ACC4FC}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 89090
+      }
+    },
+    "{EC69535B-E37D-42EB-9923-804A6993C9C6}": {
+      "name": "expl_nilfgaard_camp",
+      "short_id": 368616507,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Location scoring with thematic/authored source reuse or scene-associated placement not sufficient to approve destruction. Retain native playback pending evidence.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": -3.0,
+      "parent_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+      "parent_short_id": 431435845,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{96BBE1EA-CE3B-411D-941B-3CCE615B2DFC}",
+            "selector_short_id": "431435845",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{CE7DB425-E102-4A38-BE62-C48466FA290B}",
+          "{49F437B4-9067-45CD-91F4-873514A0A081}",
+          "{F7F00A59-B9CC-4559-B7FB-A1E6C37F6DAC}",
+          "{8DB4CE8E-890F-41B8-9456-6EE15AC5BA0F}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 91235
+      }
+    },
+    "{B514C070-D521-4B63-A1A1-BE8BF0A69AB9}": {
+      "name": "expl",
+      "short_id": 878884424,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+      "parent_short_id": 746276273,
+      "observed": {
+        "noncombat_rows": 7,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{E23AD648-AE1C-4DAA-9BC3-DE4088AFBE59}",
+            "selector_short_id": "746276273",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{1635153B-9ADF-486C-AE69-AC9DD11FF49B}",
+          "{F24213E9-AE21-4D7C-9DA6-E8B73D865334}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 96586
+      }
+    },
+    "{F8905B39-68FB-4052-8DFC-BCBB5CD6D1FE}": {
+      "name": "expl_village_burned_q205",
+      "short_id": 883058634,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+      "parent_short_id": 247786415,
+      "observed": {
+        "noncombat_rows": 7,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{1A6A54CF-C497-4086-B8E1-1FC38446C236}",
+            "selector_short_id": "247786415",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{82BD9CF5-F0DA-4DF9-AED9-A5AF22A39CAD}",
+          "{E7116032-4005-4FC4-A2CA-2301D4CF4B05}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 99292
+      }
+    },
+    "{72C60CDE-E857-4910-927C-F4AD8DFBCDBC}": {
+      "name": "expl_berserkers_village",
+      "short_id": 112225352,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+      "parent_short_id": 347567135,
+      "observed": {
+        "noncombat_rows": 7,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{7D9D5A7D-7B10-49D9-A77B-AB0B088EBA49}",
+            "selector_short_id": "347567135",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{13727FE1-B193-410A-90B1-D62287664268}",
+          "{645C9430-9BBD-464F-8C16-A64C84B71F1D}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 103646
+      }
+    },
+    "{6D4AE149-CC4B-47EA-8F78-2C7B80527B95}": {
+      "name": "expl_nilfgaard_fleet",
+      "short_id": 1001663520,
+      "classification": "unresolved",
+      "policy": "pending",
+      "evidence": "Location scoring with thematic/authored source reuse or scene-associated placement not sufficient to approve destruction. Retain native playback pending evidence.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 1.0,
+      "parent_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+      "parent_short_id": 508431221,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{74AAB5B0-0B71-4199-B7FE-2B917F0DE10D}",
+            "selector_short_id": "508431221",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{31D442BA-7504-407E-88BB-7AD84E5D2318}",
+          "{A25E7413-AB52-497F-A630-69F9E4F27F4A}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 107006
+      }
+    },
+    "{BE0C11AF-805F-4174-B518-9AFF990F6CC1}": {
+      "name": "expl_ruins",
+      "short_id": 492969077,
+      "classification": "generic",
+      "policy": "approved",
+      "evidence": "Reviewed ordinary regional/settlement/cave/ruin traversal scoring: independently selected generic-only playlist; source and all selector/event/transition consumers reviewed, authored sibling and combat outside ancestry. Location-role policy is inferred from complete routing/media reuse, not a naming rule.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 1.0,
+      "parent_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+      "parent_short_id": 61839852,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+            "selector_short_id": "61839852",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{81E4E2A3-49C1-45AD-9269-7311EF74C564}",
+          "{7EA26701-36C1-41F1-8D82-84EDD6F66A9C}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 1,
+        "source_line": 109857
+      }
+    },
+    "{3FC71E21-C164-4398-ABFC-63E95120B5F9}": {
+      "name": "expl_spikeroog",
+      "short_id": 899457248,
+      "classification": "protected",
+      "policy": "approved",
+      "evidence": "Preserve deliberately thematic/narrative or hunting-tracking score; source/event selection and thematic media relationships warrant conservative protection. This is a policy decision, not retail listening confirmation.",
+      "fact_status": "Observed source routing; policy judgment stated explicitly",
+      "original_volume": 0.0,
+      "parent_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+      "parent_short_id": 502003896,
+      "observed": {
+        "noncombat_rows": 9,
+        "all_selector_consumers": [
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "cutscene"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "dialog_scene"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "exploration"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "exploration_night"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "focus_exploration"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "underwater"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "dialog_scene_night"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "underwater_focus"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "boat"
+            ]
+          },
+          {
+            "selector_id": "{AF0FF5EC-5198-41B4-8BC3-FE1FCB31A328}",
+            "selector_short_id": "502003896",
+            "states": [
+              "focus_exploration_night"
+            ]
+          }
+        ],
+        "location_event_ids": [
+          "{EBBEAF31-3FF0-42A1-905B-B24A70F672F8}",
+          "{3B8224DD-23D0-4592-A6E3-FF65B7C55D52}"
+        ],
+        "direct_descendant_event_ids": [],
+        "native_transition_segment_ids": [],
+        "same_region_authored_media_reuse_count": 0,
+        "source_line": 110407
+      }
+    }
+  },
+  "static_consumer_paths": {
+    "{8A4127D2-7EED-4F48-958B-1E192FF7D9BD}": [
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{0AA1F9FE-0878-4484-B319-237DBC512545}",
+        "selector_short_id": "405881864",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{E20BD1DA-2C44-4722-80C0-3F3F4694A467}": [
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{6C2BFFE2-F4D1-48C2-910D-DDB97AA7BD5D}",
+        "selector_short_id": "1035669955",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{0CE54C62-AF60-462D-806F-65738FA21BE4}": [
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{CD77ADF4-941F-490D-9BE2-251A05978F2B}",
+        "selector_short_id": "84399196",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{791DF2EE-4CC2-4E43-BFA0-2E33A2379BF9}": [
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{078C3E0E-B986-47BD-ACB1-C16E1F33766A}": [
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{8B650F2B-F334-497F-B512-13C6EE7DAFE5}",
+        "selector_short_id": "551582440",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{7232C701-B364-49AB-9E56-DA2B48E95DBB}": [
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{5339755B-3E94-423A-A845-6775C4E9F71A}",
+        "selector_short_id": "36775016",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{DAF1DA02-D192-4E0C-981A-1AB8EE8CD56C}": [
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{7D955395-343B-48B9-8214-BD24DE5FF497}",
+        "selector_short_id": "985847750",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{5F5BF044-7F63-479C-9BDA-743C4C952E15}": [
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{1AF0126B-7FD6-44FC-9EA4-DF4892C48AA1}",
+        "selector_short_id": "128344438",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{EED05D36-68D0-42BD-B659-E6F962912F43}": [
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "underwater_focus"
+        ]
+      }
+    ],
+    "{FBE4E124-F556-4FC8-9477-69F8BF763D5B}": [
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{67F83318-D39B-4D7E-9E6C-8943D3874A06}",
+        "selector_short_id": "969116713",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{4A5B104A-45E0-465E-9DAA-DCE3969EE372}": [
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{9DA9A8E0-C7B0-464F-8226-113962FB01EE}",
+        "selector_short_id": "10450794",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ],
+    "{BE0C11AF-805F-4174-B518-9AFF990F6CC1}": [
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "cutscene"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "dialog_scene"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "exploration"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "exploration_night"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "focus_exploration"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "underwater"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "dialog_scene_night"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "boat"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "underwater_focus"
+        ]
+      },
+      {
+        "selector_id": "{15663891-FF79-463D-939A-C7D40E0FF8F7}",
+        "selector_short_id": "61839852",
+        "states": [
+          "focus_exploration_night"
+        ]
+      }
+    ]
+  },
+  "source_only_exclusions": [
+    {
+      "guid": "{B8C2DB1A-16CD-41FF-96AE-A8D01898E62A}",
+      "short_id": 250487810,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{83E6F57E-57B2-41C6-9EF6-4C4D3F66B8C4}",
+      "short_id": 822810934,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{018F4166-1559-460C-8E16-1E6EE3236AA1}",
+      "short_id": 802768195,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{4F53E83E-1ADD-4467-8047-586AD6D219AE}",
+      "short_id": 1003349432,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{EAD6A4E4-AB54-441E-B24D-3B74A455C68D}",
+      "short_id": 407311040,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{ADFB7A3D-6E3A-4020-85D7-1E4E9DDB2289}",
+      "short_id": 543725422,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{BDC06603-4EFA-4293-8C46-C057476B7CBC}",
+      "short_id": 149108804,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{C49F410A-95CB-4B49-8CC7-2521CC7C95B4}",
+      "short_id": 954667010,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{889C23FA-F0D9-4DA7-8A0E-DA6D878B9BD0}",
+      "short_id": 365608565,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    },
+    {
+      "guid": "{46EFB01D-4579-4378-A9A8-A8DD022FE3B8}",
+      "short_id": 636008624,
+      "policy": "retain native source; no edit",
+      "evidence": "Absent from native and licensed untouched HIRC, including descendants. Not assumed deletable; transition endpoint/segment references retained."
+    }
+  ]
+}

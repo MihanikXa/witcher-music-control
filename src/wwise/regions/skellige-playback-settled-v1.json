@@ -1,0 +1,12 @@
+[
+  {
+    "name": "settlement-sustained",
+    "location_event": "mus_loc_ard_skellig_settlements",
+    "cases": [
+      "combat-sustain",
+      "combat-sustain-offset"
+    ],
+    "duration": 60,
+    "prime_location": true
+  }
+]

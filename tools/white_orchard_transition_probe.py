@@ -20,7 +20,38 @@ GENERIC = {
 }
 
 
-def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False, minimum_duration=19):
+def regional_cases():
+    """Additional native-selector fixture schedules; no production edits."""
+    return {
+        'boat-combat': [(0, 'exploration', None), (6, 'boat', None),
+                        (12, 'combat', None), (20, 'boat', None), (30, 'exploration', None)],
+        'boat-dialogue': [(0, 'boat', None), (8, 'dialog_scene', None), (16, 'boat', None)],
+        'minigames': [(0, 'minigames', None)],
+        'music-master': [(0, 'dialog_scene', None)],
+        'combat-sustain': [(0, 'exploration', None), (6, 'combat', None), (26, 'exploration', None)],
+        'combat-sustain-offset': [(0, 'exploration', None), (7.3, 'combat', None), (27.3, 'exploration', None)],
+    }
+
+
+def protected_audition(tree, spec, ident):
+    from regional_music import graph, ancestors
+    objects, parents, _ = graph(tree)
+    node = objects.get(ident)
+    if (node is None or node.tag != 'MusicPlaylistContainer'
+            or spec['facts']['quest']['id'] not in {n.get('ID') for n in ancestors(node, parents)}
+            or ident in spec['static_targets']):
+        raise ValueError('Only an unchanged regional authored playlist may be directly auditioned')
+    return ident
+
+
+def primeable_location(events, name):
+    node=next((n for n in events.iter('Event') if n.get('Name')==name),None)
+    actions=node.findall('./ChildrenList/Action') if node is not None else []
+    if len(actions)!=1 or actions[0].find("./PropertyList/Property[@Name='ActionType']") is None or actions[0].find("./PropertyList/Property[@Name='ActionType']").get('Value')!='23':
+        raise ValueError('Priming requires a verified switch-only location event')
+
+
+def run(project, name, port, modes, selected, location="village", manifest=None, location_event=None, explicit_threat_zero=False, minimum_duration=19, audition_object=None, prime_location=False):
     project = build_path(project)
     api = Waapi(port)
     if project.parent.name != "validation" or Path(api.call("ak.wwise.core.getProjectInfo")["path"]).resolve() != project:
@@ -30,6 +61,12 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
     out = project.parent / name
     out.mkdir(exist_ok=False)
     regional = json.loads(manifest.read_text()) if manifest else None
+    if audition_object is not None:
+        if regional is None:
+            raise ValueError('Authored audition requires regional manifest')
+        protected_audition(ET.parse(project.parent/'Interactive Music Hierarchy/music.wwu'), regional, audition_object)
+    if selected and 'protected-direct' in selected and audition_object is None:
+        raise ValueError('Explicit authored playlist identity required')
     regional_modes = {'manifest', 'D-reference', 'native-reference'}
     if set(modes) & regional_modes and (regional is None or not set(modes) <= regional_modes):
         raise ValueError('Regional probes require a manifest and regional modes only')
@@ -75,6 +112,8 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
     location_event = location_event or 'mus_loc_prologue_' + location
     if play_event not in events or location_event not in events:
         raise ValueError('Unverified native event')
+    if prime_location:
+        primeable_location(ET.parse(project.parent/'Events/music.wwu'), location_event)
     event_transport = api.call("ak.wwise.core.transport.create", {"object": events[play_event]})["transport"]
     cases = {
         "e-combat": [(0, "exploration", None), (6, "combat", None), (13, "exploration", None)],
@@ -91,9 +130,16 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
         "authored-world": [(0, "exploration", None), (6, "dialog_scene", None), (10, "cutscene", None), (10.4, "dialog_scene", None), (13, "combat", None)],
         "gwent": [(0, "gwent", None)],
     }
+    cases.update(regional_cases())
+    if audition_object is not None:
+        cases['protected-direct'] = [(0, 'dialog_scene', None)]
+    if selected and set(selected) - set(cases):
+        raise ValueError('Unknown playback case; no empty successful capture')
     evidence = {"version": api.call("ak.wwise.core.getInfo"), "fixtures_only": True, "location": location,
                 "location_event": location_event, "explicit_threat_zero": explicit_threat_zero,
-                "preplay_settle_seconds": 1.1 if explicit_threat_zero else 0, "cases": []}
+                "preplay_settle_seconds": 1.1 if explicit_threat_zero else 0,
+                "audition_object": audition_object, "cases": []}
+    evidence['location_primed_before_music']=prime_location
     api.call("ak.wwise.core.profiler.startCapture")
     try:
         for mode in modes:
@@ -140,20 +186,26 @@ def run(project, name, port, modes, selected, location="village", manifest=None,
                     time.sleep(1.1)
                 api.call("ak.wwise.core.object.setProperty", {"object": recorder, "property": "AuthoringFilename", "value": str(out / f"{mode}-{label}.wav")})
                 api.call("ak.wwise.core.transport.executeAction", {"transport": anchor_transport, "action": "play"})
+                if prime_location:
+                    # Register the transport with the silent anchor, then settle
+                    # its switch before music starts. No previous region cue plays.
+                    api.call("ak.soundengine.postEvent", {"event": location_event, "gameObject": 18446744073709551614})
+                    time.sleep(.1)
                 started = time.monotonic()
                 if not explicit_threat_zero:
                     api.call("ak.soundengine.resetRTPCValue", {"rtpc": "threat_rating"})
                     api.call("ak.soundengine.resetRTPCValue", {"rtpc": "menu_volume_music"})
-                if label == "q001-direct":
-                    authored = api.call("ak.wwise.core.transport.create", {"object": "{EFA886D9-2BAD-4354-9DC3-BC08E2E75727}"})["transport"]
+                if label in ("q001-direct", "protected-direct"):
+                    authored = api.call("ak.wwise.core.transport.create", {"object": audition_object if label == 'protected-direct' else "{EFA886D9-2BAD-4354-9DC3-BC08E2E75727}"})["transport"]
                     api.call("ak.wwise.core.transport.executeAction", {"transport": authored, "action": "play"})
                 else:
                     api.call("ak.wwise.core.transport.executeAction", {"transport": event_transport, "action": "play"})
-                    api.call("ak.soundengine.postEvent", {"event": location_event, "gameObject": 18446744073709551614})
+                    if not prime_location:
+                        api.call("ak.soundengine.postEvent", {"event": location_event, "gameObject": 18446744073709551614})
                 row = {"mode": mode, "case": label, "events": [], "samples": []}
                 pending = list(sequence)
                 parameters = ([(10, "threat_rating", 35), (14, "threat_rating", 100)] if label == "combat-threat" else
-                              [(6, "menu_volume_music", 50), (11, "menu_volume_music", 100)] if label == "q001-direct" else [])
+                              [(6, "menu_volume_music", 50), (11, "menu_volume_music", 100)] if label in ("q001-direct", "music-master", "protected-direct") else [])
                 duration = max(minimum_duration, sequence[-1][0] + 6)
                 row['duration_seconds'] = duration
                 while time.monotonic() - started < duration:
@@ -207,7 +259,9 @@ if __name__ == "__main__":
     parser.add_argument('--location-event')
     parser.add_argument('--explicit-threat-zero', action='store_true', help='Fixture-only preplay threat=0/Music=100 control with 1.1s settling')
     parser.add_argument('--minimum-duration', type=float, default=19, help='Observe native outro completion; does not alter musical transitions')
+    parser.add_argument('--audition-object', help='Explicit unchanged regional authored playlist for protected-direct fixture only')
+    parser.add_argument('--prime-location', action='store_true', help='Set verified switch-only location on the anchor transport before music starts')
     args = parser.parse_args()
     if "D-probe" in args.modes and args.modes != ["D-probe"]:
         parser.error("D-probe mutates fixture playlists: run it separately, after baseline/C")
-    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event, args.explicit_threat_zero, args.minimum_duration)
+    run(args.project, args.name, args.port, args.modes, args.cases, args.location, args.manifest, args.location_event, args.explicit_threat_zero, args.minimum_duration, args.audition_object, args.prime_location)

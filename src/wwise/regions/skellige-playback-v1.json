@@ -1,0 +1,80 @@
+[
+  {
+    "name": "contexts",
+    "location_event": "mus_loc_ard_skellig",
+    "cases": [
+      "e-dialogue",
+      "e-cutscene-dialogue",
+      "e-movie-dialogue",
+      "e-music-only-dialogue"
+    ],
+    "duration": 19
+  },
+  {
+    "name": "threat",
+    "location_event": "mus_loc_ard_skellig",
+    "cases": [
+      "combat-threat"
+    ],
+    "duration": 35
+  },
+  {
+    "name": "boat",
+    "location_event": "mus_loc_ard_skellig",
+    "cases": [
+      "boat-combat",
+      "boat-dialogue"
+    ],
+    "duration": 45
+  },
+  {
+    "name": "long-return",
+    "location_event": "mus_loc_ard_skellig",
+    "cases": [
+      "long-silence-combat"
+    ],
+    "duration": 65
+  },
+  {
+    "name": "settlement",
+    "location_event": "mus_loc_ard_skellig_settlements",
+    "cases": [
+      "e-combat"
+    ],
+    "duration": 45
+  },
+  {
+    "name": "cave",
+    "location_event": "mus_loc_skellige_caves",
+    "cases": [
+      "e-dialogue"
+    ],
+    "duration": 19
+  },
+  {
+    "name": "shared",
+    "location_event": "mus_loc_skellige_tavern",
+    "cases": [
+      "gwent",
+      "minigames"
+    ],
+    "duration": 19
+  },
+  {
+    "name": "thematic-world",
+    "location_event": "mus_expl_monster_hunting_tracking",
+    "cases": [
+      "music-master"
+    ],
+    "duration": 19
+  },
+  {
+    "name": "authored-branch",
+    "location_event": "mus_loc_ard_skellig",
+    "cases": [
+      "protected-direct"
+    ],
+    "duration": 19,
+    "audition_object": "{19AA4ACB-59A7-43C8-BD34-3B855B56879F}"
+  }
+]

@@ -13,6 +13,20 @@ from white_orchard_cooker import prepare
 from white_orchard_loading_package import NATIVE_INIT
 from white_orchard_prepare import build_path, digest
 from music_region_inventory import REGIONS
+from white_orchard_compare import read_bank
+from white_orchard_state_bank_audit import header
+
+
+def audit_bank_identities(banks):
+    """Definitions must be disjoint; shared references to native globals are valid."""
+    seen_objects=set();seen_banks=set();result={}
+    for name,path in banks.items():
+        bank=read_bank(path);ident=header(bank)['bank_id'];objects=set(bank['records'])
+        if ident in seen_banks or objects & seen_objects:
+            raise ValueError('Duplicate bank ID or overlapping serialized HIRC definitions')
+        seen_banks.add(ident);seen_objects.update(objects)
+        result[name]={'bank_id':ident,'hirc_count':len(objects),'sha256':bank['sha256']}
+    return {'passed':True,'definitions_disjoint':True,'banks':result}
 
 
 def verified_inputs(spec):
@@ -38,6 +52,8 @@ def verified_inputs(spec):
 
 
 def reviewed_diagnostics(root,reference,cook_label,names):
+    if set(names) != {'music_prologue.bnk','music_nomansgrad.bnk'}:
+        raise ValueError('New bank set needs independent actual native diagnostic review; the accepted two-bank profile cannot approve it')
     def rows(folder,label):
         result=[]
         for line in (folder/(label+'.log')).read_text(encoding='utf-8',errors='replace').splitlines():
@@ -83,6 +99,7 @@ def native(exe, root, label, arguments):
 def stage(redkit, spec_path, root, retry_recording=False):
     spec = json.loads(spec_path.read_text(encoding='utf-8'))
     banks = verified_inputs(spec)
+    identities = audit_bank_identities(banks)
     root = build_path(root)
     if retry_recording:
         prior=json.loads((root/'bundle-cook-result.json').read_text(encoding='utf-8-sig'))
@@ -114,6 +131,7 @@ def stage(redkit, spec_path, root, retry_recording=False):
     if any(digest(p)!=next(x['sha256'] for x in spec['banks'] if build_path(x['path'])==p) for p in banks.values()):raise ValueError('Input changed')
     if any(digest(root/p)!=NATIVE_INIT for p in ('bin/initialdata/sound/Init.bnk','r4data/soundbanks/Pc/Init.bnk')):raise ValueError('Bootstrap Init changed')
     result={'passed':True,'cooked':first,'split':second,'diagnostics':diagnostics,'archive':str(archive),
+        'bank_identities':identities,
         'archive_sha256':digest(archive),'zip_entry':entry,'retail_validated':False,'deployed':False}
     (root/'bundle-verification.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result))
