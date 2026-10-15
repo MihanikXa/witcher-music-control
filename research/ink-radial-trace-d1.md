@@ -2,7 +2,7 @@
 
 **14 October 2026. Not a fix.** RC1 failed through both Tab and LB. D1 instruments
 that failed installation instead of guessing another radial-button replacement.
-The actual runtime stopping point remains unknown until its checkpoints are read.
+**15 October in-game D1 result:** radial config fails with a repeated shared HUD footer layout `ReferenceError #1065`; native radial OnConfigUI is never entered, although input presses are independently observed. See [runtime findings](ink-radial-trace-d1-runtime-feedback.md). The exact missing ActionScript identifier is not yet known.
 
 ## Verified starting point and narrowed findings
 
