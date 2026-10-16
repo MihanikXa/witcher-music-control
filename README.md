@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Listening update (2026-10-16):** The user completed report57's21 private listening candidates, retaining12, rejecting8 and marking1 Maybe, with numerous exact passage/fade proposals. Original verbatim feedback is archived at [report58 raw JSON](research/58-user-musical-material-audition-feedback.json), with separately labeled interpretive guidance in [report58](research/58-musical-material-feedback-review.md). No edit previews, Wwise integrations, soundtrack changes or licences have yet been established.
+
+
 **Private auditions ready (2026-10-16):** [Report57](research/57-sparse-musical-material-auditions.md) provides21 provisional material candidates (11 native,10 Music Plus additions),7 priority auditions and a local player with full recordings, beginning/middle/ending jumps and exportable decisions. Open build/music-material-selection/audition-v3/index.html in a browser; the first7 take about10minutes. All179 tests pass. Codex measured structure/audio but did not subjectively listen. No new scheduler, soundbank, game/Vortex change or integration. Next: listen, mark Keep/Maybe/Reject and identify3-5 worthwhile choices; Sparse implementation remains paused.
 
 

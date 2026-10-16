@@ -113,3 +113,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 56. [Sparse musical-material selection plan](56-musical-material-selection-plan.md): Music Plus and native originals material audit, provenance-aware 15–25 cue audition shortlist and 5–8 priority picks, offline private previews, no integration or scheduler work.
 
 57. [Sparse musical-material auditions](57-sparse-musical-material-auditions.md):21 local playable candidates,7 priority auditions, exact native/MP joins, independent Opus packet-preserving private conversion, stereo measurements and authored-reuse cautions.179 tests pass; no subjective listening or gameplay implementation. [Shortlist](57-music-material-shortlist.json), [sanitized evidence](57-music-material-evidence.json).
+
+58. [User musical-material feedback](58-musical-material-feedback-review.md) and [unaltered user audition JSON](58-user-musical-material-audition-feedback.json): 12 Keep / 8 Reject / 1 Maybe, source-clock cut/fade proposals, distinctions between user instructions and technical inferences; no audio work or integration yet.

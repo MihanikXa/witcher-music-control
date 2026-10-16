@@ -1,0 +1,149 @@
+[
+  {
+    "id": "S01",
+    "title": "S01 · Wetland introduction - base layer",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Sounds serious a bit ominous, a bit dramatic, can be used somewhere"
+  },
+  {
+    "id": "S02",
+    "title": "S02 · City A - base arrangement",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  },
+  {
+    "id": "S03",
+    "title": "S03 · In Temeria",
+    "decision": "Reject",
+    "role": "Regional identity",
+    "notes": ""
+  },
+  {
+    "id": "S04",
+    "title": "S04 · Island A - base arrangement",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation."
+  },
+  {
+    "id": "S05",
+    "title": "S05 · Dialogue - Neutral",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "Fade from 0:42 to 0:47, end at approximately 0:47.5. Can also break at 23.7s for a first shorter segment for variation."
+  },
+  {
+    "id": "S06",
+    "title": "S06 · Southern night - sectioned arrangement",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Night time sounding tune."
+  },
+  {
+    "id": "S07",
+    "title": "S07 · Nightfall",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so."
+  },
+  {
+    "id": "S08",
+    "title": "S08 · City B - base arrangement",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  },
+  {
+    "id": "S09",
+    "title": "S09 · Dol Blathanna - Forest",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  },
+  {
+    "id": "S10",
+    "title": "S10 · City neighbourhood B - base arrangement",
+    "decision": "Reject",
+    "role": "Brief punctuation",
+    "notes": ""
+  },
+  {
+    "id": "S11",
+    "title": "S11 · A Quiet Corner",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "From start to fade out start at 0:18 and stop at 0:20, preferrably with added reverb freeze tail. From start to fade out starting at 1:30 and end at 1:33 could work as atmospheric development. And the whole thing can work as a long-specific composition."
+  },
+  {
+    "id": "S12",
+    "title": "S12 · Island B - base arrangement",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth."
+  },
+  {
+    "id": "S13",
+    "title": "S13 · Map Theme 3",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  },
+  {
+    "id": "S14",
+    "title": "S14 · Reusable ambient arrangement 01",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly."
+  },
+  {
+    "id": "S15",
+    "title": "S15 · What Lies Ahead",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation."
+  },
+  {
+    "id": "S16",
+    "title": "S16 · Southern ambient arrangement 01",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly."
+  },
+  {
+    "id": "S17",
+    "title": "S17 · Untitled #026",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  },
+  {
+    "id": "S18",
+    "title": "S18 · Island alternate pads arrangement",
+    "decision": "Keep",
+    "role": "Brief punctuation",
+    "notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation."
+  },
+  {
+    "id": "S19",
+    "title": "S19 · Distant Memories",
+    "decision": "Maybe",
+    "role": "Long situation-specific piece",
+    "notes": "Darker, dramatic piece."
+  },
+  {
+    "id": "S20",
+    "title": "S20 · City night - complete arrangement",
+    "decision": "Keep",
+    "role": "Atmospheric development",
+    "notes": "Fade out from 38s to approx 40.8s atmospheric development/punctuation."
+  },
+  {
+    "id": "S21",
+    "title": "S21 · Peaceful Moments",
+    "decision": "Reject",
+    "role": "Undecided",
+    "notes": ""
+  }
+]
