@@ -26,3 +26,7 @@ Counts: **12 Keep, 8 Reject, 1 Maybe**. All are explicit *material/cue-selection
 Build **private offline audition renders** of a small number of high-information candidates from the exact source-clock ranges in the user feedback, preserving originals. Offer a few intentionally alternative fade/tail treatments when requested, ideally with a modest quiet environmental gap between previews so the function of the excerpt can be judged. Compare source-mix/stem completeness and avoid normalizing away relative intensity. Do not mutate soundbanks, add a scheduler, deploy to the game, or infer cues are final from structural measurements. Exact edit choices should be confirmed by subsequent user listening.
 
 WMC Minimal/Sparse fixture/regional-release assets and reports remain untouched.
+
+## Subsequent clarification
+
+The user's later tentative preference to consider **reverb-freeze plus fade-out for most or all cue endings**, rather than S11 alone, is separately recorded in [report59](59-provisional-freeze-tail-preference.md). The exact 21-item JSON feedback above remains unchanged and authoritative for the original timestamps.

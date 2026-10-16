@@ -115,3 +115,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 57. [Sparse musical-material auditions](57-sparse-musical-material-auditions.md):21 local playable candidates,7 priority auditions, exact native/MP joins, independent Opus packet-preserving private conversion, stereo measurements and authored-reuse cautions.179 tests pass; no subjective listening or gameplay implementation. [Shortlist](57-music-material-shortlist.json), [sanitized evidence](57-music-material-evidence.json).
 
 58. [User musical-material feedback](58-musical-material-feedback-review.md) and [unaltered user audition JSON](58-user-musical-material-audition-feedback.json): 12 Keep / 8 Reject / 1 Maybe, source-clock cut/fade proposals, distinctions between user instructions and technical inferences; no audio work or integration yet.
+
+59. [Provisional reverb-freeze ending preference](59-provisional-freeze-tail-preference.md): a subsequent user consideration to apply wet freeze-tail and fade to most/possibly all extracted punctuations, pending listening; preserves exact report58 notes and distinguishes true freeze from ordinary reverb decay.

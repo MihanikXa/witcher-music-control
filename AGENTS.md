@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Latest musical-tail refinement (2026-10-16; report59):** User tentatively favors a **reverb-freeze tail with fade-out for most/potentially all extracted Sparse punctuations**, not only S11. Preserve original report58 timestamps/roles and don't silently turn this into an exact universal DSP preset: actual freeze, wet/fade/hold behavior and exceptions need audition. Future *private offline* edited previews should try freeze-tail variants with small standard/reverb-fade A/B controls; do not claim simple echo is freeze, implement live Wwise processing, copy proprietary code or ship third-party music without separate authorizations.
+
+
 **User audition decisions received (2026-10-16; report58):** The user actually listened to all21 report57 samples:12 Keep,8 Reject,1 Maybe. Their exact unaltered titles/roles/notes, including multiple source-clock passage and fade proposals, are authoritative at `research/58-user-musical-material-audition-feedback.json`. Interpretive observations and the non-integration/rights boundaries are separately documented in report58. **Do not erase the user's wording, invent rejection reasons, treat passage cuts as musically verified or assume their Keep means distribution permission.** Next logical task is user-auditionable private *edited excerpts*, not a new scheduler or regional bank rebuild. S14 has protected authored-source reuse and must not be casually demoted.
 
 
