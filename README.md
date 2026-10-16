@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Current next step (report60):** Build private offline versions of the user-selected Sparse excerpts, using the exact report58 passage edits and auditioning genuine reverb-freeze tails with a few ordinary decay/dry comparisons. First verify S04/S05/S11, then S07/S12. No SoundBank, gameplay scheduler, Music Plus music distribution, installation or release is approved. [Handoff specification](research/60-private-cue-edit-and-freeze-tail-handoff.md).
+
+
 **Listening update (2026-10-16):** The user completed report57's21 private listening candidates, retaining12, rejecting8 and marking1 Maybe, with numerous exact passage/fade proposals. Original verbatim feedback is archived at [report58 raw JSON](research/58-user-musical-material-audition-feedback.json), with separately labeled interpretive guidance in [report58](research/58-musical-material-feedback-review.md). No edit previews, Wwise integrations, soundtrack changes or licences have yet been established.
 
 

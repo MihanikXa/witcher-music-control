@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Current handoff (report60, 2026-10-17):** The user requested preparation of the next Codex task: **private offline edits of the user-selected Sparse cue passages with genuine freeze-reverb+fade audition variants**. Execute report60; preserve verbatim user selection/timestamps in report58 and later tentative general freeze preference in report59. Build one working local audible A/B index, starting with S04/S05/S11, then S07/S12, and expand to other explicit Keep cuts only if reliable; do not overfit a uniform DSP tail. The goal is a private reviewed excerpt pack, not scheduler/game integration, SoundBanks, a mod release or proof of music rights.
+
+
 **Latest musical-tail refinement (2026-10-16; report59):** User tentatively favors a **reverb-freeze tail with fade-out for most/potentially all extracted Sparse punctuations**, not only S11. Preserve original report58 timestamps/roles and don't silently turn this into an exact universal DSP preset: actual freeze, wet/fade/hold behavior and exceptions need audition. Future *private offline* edited previews should try freeze-tail variants with small standard/reverb-fade A/B controls; do not claim simple echo is freeze, implement live Wwise processing, copy proprietary code or ship third-party music without separate authorizations.
 
 

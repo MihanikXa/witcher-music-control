@@ -117,3 +117,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 58. [User musical-material feedback](58-musical-material-feedback-review.md) and [unaltered user audition JSON](58-user-musical-material-audition-feedback.json): 12 Keep / 8 Reject / 1 Maybe, source-clock cut/fade proposals, distinctions between user instructions and technical inferences; no audio work or integration yet.
 
 59. [Provisional reverb-freeze ending preference](59-provisional-freeze-tail-preference.md): a subsequent user consideration to apply wet freeze-tail and fade to most/possibly all extracted punctuations, pending listening; preserves exact report58 notes and distinguishes true freeze from ordinary reverb decay.
+
+60. [Private cue edits and freeze-tail handoff](60-private-cue-edit-and-freeze-tail-handoff.md): next authorized Codex work, source-clock cuts, true freeze vs conventional reverb/dry A/B listening, local ignored HTML player and feedback export; no Wwise/game integration or audio redistribution.
