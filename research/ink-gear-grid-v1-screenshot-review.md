@@ -2,6 +2,8 @@
 
 **16 October 2026.** Based on two user-supplied in-game screenshots, both approximately 1646x927: Gear/Equipment with a selected Hunting Trousers item, and Alchemy/Crafting with a selected yellow flower. This is an **assistant interpretation**, **not user-authored feedback** or confirmation of functional tests. Screenshots remain chat attachments, not published repo assets. Implementation reviewed at `f623e90719060d5f9fbed847e6f0bf438eeb811a`.
 
+**User response and updated sequencing (16 October):** Our earlier design critique is subordinate to [new explicit user feedback](ink-gear-grid-v1-user-feedback.md). User identifies further visual noise (dotted grid, command hints, busy backdrop), an under-prioritized browse area, desired larger Geralt, and proposes implementing the complete 0.8.6 Ink & Iron menu baseline *before* redesigning Inventory. Do not treat the v2-only adjustments below as the immediate approved next task.
+
 ## Bottom line
 
 **Real functional prototype, but incomplete spatial and information design.** Three visual islands—left native category grids, center Geralt plus moved auxiliary paperdoll slots, and right tooltip panel—still behave independently. Retain Ink & Iron's dark literary language, item icons, header, gold semantic accents and full game systems. Do not accept the current geometry as the requested complete one-screen Gear redesign.

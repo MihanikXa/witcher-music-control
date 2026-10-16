@@ -15,6 +15,19 @@ The old `reference/ink-and-iron-0.8/` and audit are **0.8.0 historical**;
 they cannot stand in for missing 0.8.6 archives. No automatic live deployment,
 no update of custom HUD, and no broad UI redesign in this slice.
 
+## Immediate sequence correction — 16 October user Inventory feedback
+
+The user supplied explicit v1 screenshot criticism and proposes integrating the
+**complete Ink & Iron 0.8.6 menu UI baseline before Gear-grid v2**. This now
+takes precedence over immediately implementing a second Inventory layout pass.
+Read [explicit feedback](research/ink-gear-grid-v1-user-feedback.md) and the
+revised [Inventory direction](design/inventory-ux-direction.md). Use modular
+0.8.6 menu UI/compatibility assets, **not a blind All-in-One replacement**.
+Freeze the accepted HUD RC2; preserve Outfit Wheel, Smooth Map, Hoods/official
+patch, QuietFolio and existing merges. Old 0.8.0 audit is historical. Source
+archives for 0.8.6 are pinned locally in the v1 prototype docs. Do not
+deploy live or overwrite the working prototype without specific approval.
+
 ## User's visual direction
 - Quiet, modern, beautiful and airy, but with character and Witcher identity; *Ghost of Tsushima* is a restraint/hierarchy reference, not a template.
 - Prefer Gentium Book as a **starting taste reference** instead of a generic sans-serif. Test literary serif body styles versus a restrained serif/sans hierarchy before choosing.

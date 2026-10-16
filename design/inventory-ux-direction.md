@@ -2,6 +2,14 @@
 
 **Latest explicit user decision; supersedes older inventory layout proposals.** This is an intention and design hypothesis, not a claim that code exists.
 
+## 16 October 2026 — newest explicit visual feedback and revised order
+
+See [verbatim user feedback](../research/ink-gear-grid-v1-user-feedback.md). The user finds the v1 item grid **too dotted/busy yet too small/secondary**, wants **Geralt somewhat bigger**, **less persistent text and item details**, **far fewer/less intrusive footer hints**, and an **extremely clean potentially translucent backdrop**. They also find the current top navigation busy and expect **Ink & Iron's complete menu implementation** to improve it. The previously identified auxiliary slots under Geralt and disconnected detail region remain unacceptable.
+
+**Sequencing correction:** **Before Gear-grid v2, integrate and test the 0.8.6 Ink & Iron menu UI baseline** (not All-in-One HUD overwrite) in a cloned profile. Its source archives are already locally hashed in [the v1 implementation](../research/ink-gear-grid-v1.md), but installed shared menus and current compatibility contracts must be independently verified. Preserve custom HUD RC2, QuietFolio, Outfit Wheel/Smooth Map/Hoods and the reversible v1 prototype. Once a coherent common menu visual language exists, redesign Inventory for **dominant clean browse grid, larger unobstructed Geralt, contextual compact details/actions, minimal visible prompts, no dotted empty-cell wallpaper**, with background translucency only after a genuine world-behind-menu and readability check.
+
+These requirements explicitly outrank older assistant-only ideas to just reposition the existing grid/slots/details.
+
 ## 16 October 2026 — version-specific Inventory implementation
 
 **Latest requested source is Ink & Iron 0.8.6**, not the archived `reference/ink-and-iron-0.8/` (0.8.0) resource inventory. Upstream 0.8.6 fixes Equipment First D-pad skipping, 0.8.5 adds a hide-connector option, and 0.8.4 changes Inventory item cards; the official Hoods optional patch originates in 0.8.3. Exact current source artifacts and dependencies must be verified locally before a build. See [0.8.6 Inventory handoff](../research/ink-and-iron-0.8.6-inventory-handoff.md). **Freeze the working custom HUD v4/RC2**; only Inventory is in scope.
