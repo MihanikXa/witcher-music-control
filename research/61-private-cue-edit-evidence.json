@@ -1,0 +1,2261 @@
+{
+  "summary": {
+    "passed": true,
+    "cues": 24,
+    "renders": 34,
+    "original_preview_hashes_verified": 10,
+    "lead_trail_exact_zero": true,
+    "crops_and_unprocessed_prefixes_exact": true,
+    "all_declared_fields_exact": true,
+    "clipping_samples": 0,
+    "all_files_read_back": true,
+    "local_audio_links": 50,
+    "external_resources": 0,
+    "index_sha256": "fda7265841dd5b4821d01bb8ef6d6379c2df321165c92c8245dc38b98b6da7fe",
+    "render_metadata_sha256": "8782a8ba42d901b013fe2aa13c522930740494489216f2c944ba207fc3acd344",
+    "browser_playback_verified": false,
+    "subjectively_listened": false,
+    "rendered_audio_bytes": 287989208,
+    "original_previews_preserved": 21,
+    "retained_release_native_artifacts_preserved": 10,
+    "python_tests": 184,
+    "client_logic_offline_test_passed": true,
+    "individual_regeneration_all_three_hashes_exact": true,
+    "browser_check_limitation": "Browser URL policy rejected file://. No alternate browser/HTTP workaround attempted; browser playback/download unverified.",
+    "plan_sha256": "9f9606b6646f45ff4c7ff1d74c6a3b588c583c8212e03057f8d5b849eed6db05",
+    "feedback_sha256": "28517bbe32f0e442825e5cb6cc845ddd1adfcb49fadced86057c7fd8752f9d0a",
+    "source_metadata_sha256": "7fde43a4ede8daded1920f1647f40b27a7dca50845ceefdf72c8eff71bb4ea74",
+    "runtime_versions": {
+      "numpy": "2.4.3",
+      "scipy": "1.17.1",
+      "ffmpeg_version": "ffmpeg version N-121198-g56c14f2311 Copyright (c) 2000-2025 the FFmpeg developers"
+    },
+    "processing_tool_sha256": {
+      "tools\\cue_freeze_dsp.py": "1bd37575fd8126b043ec9d86cc05a46b45b16f3b7fe1220f607cd0f6a67970b1",
+      "tools\\cue_edit_render.py": "0a2db71a23643b9dc033f3da283256d6c56b10d3716264bde294929ab27b7b83",
+      "tools\\cue_edit_qa.py": "de57a90b12c34113e002d8633ce9f74ff5b57d3f2fb8b6e1fe5fffd3b260b844",
+      "tools\\test_cue_edit_export.cjs": "94239f2eb1aa115ca4a3edfc64e325ff1d598bdc8af65e9ef37089ca178c068e"
+    }
+  },
+  "cues": [
+    {
+      "settings": {
+        "cue": "S04-a",
+        "source": "S04",
+        "source_title": "S04 \u00b7 Island A - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+        "source_in": 0,
+        "source_out": 34,
+        "dry_fade": [
+          33,
+          34
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.2,
+        "wet_db_relative": -14,
+        "prime_seconds": 4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3800,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Split exactly34s; unspecified dry ending provisionally fades33-34s. Freeze at33s may capture earlier reverberant notes across the source silence.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 311392293,
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "b6bfff553124bde68de4e928c28c5a501bedd70bc70f4b63009e9f8bf1bb3199",
+      "output_seconds": 42.2,
+      "source_frames": [
+        0,
+        1632000
+      ],
+      "freeze_source_seconds": 33,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.535346006161576e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.25905459372309453,
+        "C": 0.22151820632574196
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "A": {
+          "passed": true,
+          "frames": 2025600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.2,
+          "peak": 0.27337646484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -34.75696064330878,
+          "post_dry_first_second_rms_dbfs": -240.0,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.0,
+          "tail_stereo_correlation": null,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "e1c7115f31d5f2c31012e6d9abee39b84bac00452f9d109cc77bf82ca2341b40",
+          "tail_20_150hz_energy_fraction": 0.0
+        },
+        "B": {
+          "passed": true,
+          "frames": 2025600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.2,
+          "peak": 0.27337646484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -34.757984008710025,
+          "post_dry_first_second_rms_dbfs": -73.28324664552748,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.00030517578125,
+          "tail_stereo_correlation": 0.4395052246448574,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "66ff0021d3c762f2cc2e792552b8226ac6afa98c6fcdef98db6c27d2ce80b098",
+          "tail_20_150hz_energy_fraction": 0.0001599268240267993
+        },
+        "C": {
+          "passed": true,
+          "frames": 2025600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.2,
+          "peak": 0.27337646484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -34.74915608610241,
+          "post_dry_first_second_rms_dbfs": -49.409017610819454,
+          "last_active_second_rms_dbfs": -69.47255024319597,
+          "dry_stop_seam_max_sample_delta": 0.000823974609375,
+          "tail_stereo_correlation": 0.6795722049578746,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "f55a0c4b5ba9589ec06a4c938b0bfd445430298944f5c1f5d99710c18ca00489",
+          "tail_20_150hz_energy_fraction": 0.0001454201586625277
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S04-b",
+        "source": "S04",
+        "source_title": "S04 \u00b7 Island A - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+        "source_in": 34,
+        "source_out": 60.757333333333335,
+        "dry_fade": [
+          59.757333333333335,
+          60.757333333333335
+        ],
+        "fade_in": 0.5,
+        "tail_extra": 3,
+        "wet_db_relative": -15,
+        "prime_seconds": 3,
+        "highpass_hz": 200,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Second piece starts exactly34s, through full source end; provisional final1s dry fade and0.5s entrance. Initial endpoint capture failed the audible-tail floor; capture moved to57s without changing source interval or dry fade.",
+        "comparison_only": false,
+        "stage": 1,
+        "freeze_at": 57
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 311392293,
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "b6bfff553124bde68de4e928c28c5a501bedd70bc70f4b63009e9f8bf1bb3199",
+      "output_seconds": 34.757333333333335,
+      "source_frames": [
+        1632000,
+        2916352
+      ],
+      "freeze_source_seconds": 57,
+      "headroom_db": 0.0,
+      "field_energy_drift": 5.085625273890556e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.4583409274319988,
+        "C": 0.4568720779949411
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1668352,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 34.757333333333335,
+          "peak": 0.59716796875,
+          "clipped_samples": 0,
+          "rms_dbfs": -23.27714800914569,
+          "post_dry_first_second_rms_dbfs": -46.76203669724938,
+          "last_active_second_rms_dbfs": -64.04405503326369,
+          "dry_stop_seam_max_sample_delta": 0.001556396484375,
+          "tail_stereo_correlation": 0.45706885823596344,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "1332f6da4ee3b6a96a9d9ec2fabb3dc65eb497df258260162cc9212db1ede707",
+          "tail_20_150hz_energy_fraction": 0.0017057416314719654
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S05-main",
+        "source": "S05",
+        "source_title": "S05 \u00b7 Dialogue - Neutral",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade from 0:42 to 0:47, end at approximately 0:47.5. Can also break at 23.7s for a first shorter segment for variation.",
+        "source_in": 0,
+        "source_out": 47.5,
+        "dry_fade": [
+          42,
+          47
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.2,
+        "highpass_hz": 180,
+        "lowpass_hz": 4200,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Dry gain reaches zero at47s, followed by the requested source endpoint47.5s. Freeze tail may extend beyond it, explicitly labeled.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 988417140,
+        "bank": "music_nomansgrad",
+        "segment": 1778517274,
+        "tracks": [
+          906711869
+        ],
+        "origin_label": "The Witcher"
+      },
+      "source_preview_sha256": "a4be06e0fd8e6f5bd7ab0a87a78b1f9449228da48b4b6929a54b45ddaba1f6b1",
+      "output_seconds": 56.5,
+      "source_frames": [
+        0,
+        2280000
+      ],
+      "freeze_source_seconds": 42,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.497816338591032e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.31532185398813856,
+        "C": 0.31338880016318327
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "A": {
+          "passed": true,
+          "frames": 2712000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 56.5,
+          "peak": 0.863494873046875,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.55694190413801,
+          "post_dry_first_second_rms_dbfs": -240.0,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.0,
+          "tail_stereo_correlation": null,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "c94c0d09b398e50c9ae2876ba137a6985a2ec3291c6f9b8b52e06877f9985a00",
+          "tail_20_150hz_energy_fraction": 0.0
+        },
+        "B": {
+          "passed": true,
+          "frames": 2712000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 56.5,
+          "peak": 0.863494873046875,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.531356505121735,
+          "post_dry_first_second_rms_dbfs": -77.3127409885752,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 6.103515625e-05,
+          "tail_stereo_correlation": 0.6473360819713534,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "1f267727b6d531200099bf70656218e364de7982e1a2e508031cf9f8f8c90c35",
+          "tail_20_150hz_energy_fraction": 0.00391630997548454
+        },
+        "C": {
+          "passed": true,
+          "frames": 2712000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 56.5,
+          "peak": 0.863494873046875,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.54168928692406,
+          "post_dry_first_second_rms_dbfs": -33.35432988816254,
+          "last_active_second_rms_dbfs": -55.551766492612145,
+          "dry_stop_seam_max_sample_delta": 0.00897216796875,
+          "tail_stereo_correlation": 0.579876521990839,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "834e1f41ef06061c964f440547fa80538d034cbfe21ebe3e03a35bb1b0dc477e",
+          "tail_20_150hz_energy_fraction": 0.07197570588243671
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S05-short",
+        "source": "S05",
+        "source_title": "S05 \u00b7 Dialogue - Neutral",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade from 0:42 to 0:47, end at approximately 0:47.5. Can also break at 23.7s for a first shorter segment for variation.",
+        "source_in": 0,
+        "source_out": 23.7,
+        "dry_fade": [
+          23,
+          23.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 2.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 2.6,
+        "highpass_hz": 180,
+        "lowpass_hz": 4400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Only the requested first shorter variation is rendered; no invented23.7-47.5s remainder. Last0.7s fade is provisional.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 988417140,
+        "bank": "music_nomansgrad",
+        "segment": 1778517274,
+        "tracks": [
+          906711869
+        ],
+        "origin_label": "The Witcher"
+      },
+      "source_preview_sha256": "a4be06e0fd8e6f5bd7ab0a87a78b1f9449228da48b4b6929a54b45ddaba1f6b1",
+      "output_seconds": 31.5,
+      "source_frames": [
+        0,
+        1137600
+      ],
+      "freeze_source_seconds": 23,
+      "headroom_db": 0.0,
+      "field_energy_drift": 3.54682819098936e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.3270632101392257,
+        "C": 0.4150799911944342
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1512000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 31.5,
+          "peak": 0.863494873046875,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.436959715708294,
+          "post_dry_first_second_rms_dbfs": -39.57004275677732,
+          "last_active_second_rms_dbfs": -54.55948394542637,
+          "dry_stop_seam_max_sample_delta": 0.0025634765625,
+          "tail_stereo_correlation": 0.2591751766010017,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "867157b4be90bb06a7a4b29bb6600a1224e7b728be7a71f8fd7dfa25f0838329",
+          "tail_20_150hz_energy_fraction": 0.011424234351603833
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S11-short",
+        "source": "S11",
+        "source_title": "S11 \u00b7 A Quiet Corner",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From start to fade out start at 0:18 and stop at 0:20, preferrably with added reverb freeze tail. From start to fade out starting at 1:30 and end at 1:33 could work as atmospheric development. And the whole thing can work as a long-specific composition.",
+        "source_in": 0,
+        "source_out": 20,
+        "dry_fade": [
+          18,
+          20
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.5,
+        "wet_db_relative": -13,
+        "prime_seconds": 3.8,
+        "highpass_hz": 230,
+        "lowpass_hz": 3200,
+        "hold_after_dry": 0.3,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Exact18-20s dry fade; field captured at18s. Added frozen tail remains an audition proposal, not part of the original source range.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 940375184,
+        "bank": "music_nomansgrad",
+        "segment": 2059321025,
+        "tracks": [
+          1618748664
+        ],
+        "origin_label": "The Witcher 2"
+      },
+      "source_preview_sha256": "63917401dee192ac812d6173cf530f67ee40343de4bccba81cf1d2b9d52ce7c5",
+      "output_seconds": 29.5,
+      "source_frames": [
+        0,
+        960000
+      ],
+      "freeze_source_seconds": 18,
+      "headroom_db": 0.0,
+      "field_energy_drift": 4.451715347420917e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.41720476950616836,
+        "C": 0.4123266003779436
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "A": {
+          "passed": true,
+          "frames": 1416000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 29.5,
+          "peak": 0.29339599609375,
+          "clipped_samples": 0,
+          "rms_dbfs": -27.86581840985783,
+          "post_dry_first_second_rms_dbfs": -240.0,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.0,
+          "tail_stereo_correlation": null,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "7e63aebb80c413c4e886faaf2b4e73144ef1b70a2f7cea8144bf0c4aa8c43fe1",
+          "tail_20_150hz_energy_fraction": 0.0
+        },
+        "B": {
+          "passed": true,
+          "frames": 1416000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 29.5,
+          "peak": 0.29339599609375,
+          "clipped_samples": 0,
+          "rms_dbfs": -27.85672300280305,
+          "post_dry_first_second_rms_dbfs": -57.44360913481386,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.00115966796875,
+          "tail_stereo_correlation": 0.5551945910151437,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "365898d7ffdc5bf1922655cc9e54c22b9244c2776bee82d33e71e8a15546d746",
+          "tail_20_150hz_energy_fraction": 0.04182746593362681
+        },
+        "C": {
+          "passed": true,
+          "frames": 1416000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 29.5,
+          "peak": 0.29339599609375,
+          "clipped_samples": 0,
+          "rms_dbfs": -27.774239726330983,
+          "post_dry_first_second_rms_dbfs": -36.50087153299202,
+          "last_active_second_rms_dbfs": -60.821646957597785,
+          "dry_stop_seam_max_sample_delta": 0.007537841796875,
+          "tail_stereo_correlation": 0.4880680565054675,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "9cd9afd46c9161d919a81f59f0d2b0c82bce4766b97a12970279a07ea06587fc",
+          "tail_20_150hz_energy_fraction": 0.08439272846558771
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S11-long",
+        "source": "S11",
+        "source_title": "S11 \u00b7 A Quiet Corner",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From start to fade out start at 0:18 and stop at 0:20, preferrably with added reverb freeze tail. From start to fade out starting at 1:30 and end at 1:33 could work as atmospheric development. And the whole thing can work as a long-specific composition.",
+        "source_in": 0,
+        "source_out": 93,
+        "dry_fade": [
+          90,
+          93
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 5,
+        "wet_db_relative": -16,
+        "prime_seconds": 4,
+        "highpass_hz": 200,
+        "lowpass_hz": 3700,
+        "hold_after_dry": 0.4,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact90-93s dry fade; whole original remains separately accessible, not re-cut.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "excerpt_role": "Atmospheric development (per excerpt note)",
+      "source_identity": {
+        "media": 940375184,
+        "bank": "music_nomansgrad",
+        "segment": 2059321025,
+        "tracks": [
+          1618748664
+        ],
+        "origin_label": "The Witcher 2"
+      },
+      "source_preview_sha256": "63917401dee192ac812d6173cf530f67ee40343de4bccba81cf1d2b9d52ce7c5",
+      "output_seconds": 103.0,
+      "source_frames": [
+        0,
+        4464000
+      ],
+      "freeze_source_seconds": 90,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.943620444254561e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.19504873070766052,
+        "C": 0.23648919554497516
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 4944000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 103.0,
+          "peak": 0.62969970703125,
+          "clipped_samples": 0,
+          "rms_dbfs": -20.750445362135487,
+          "post_dry_first_second_rms_dbfs": -33.58631541238873,
+          "last_active_second_rms_dbfs": -59.726050346728705,
+          "dry_stop_seam_max_sample_delta": 0.008697509765625,
+          "tail_stereo_correlation": 0.5353480764986045,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "b09cbabb95f98e1ffd3192a47546eab51bd071e85194677c85092f995b28a155",
+          "tail_20_150hz_energy_fraction": 0.008449840886058504
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S07-a",
+        "source": "S07",
+        "source_title": "S07 \u00b7 Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 0,
+        "source_out": 72.7,
+        "dry_fade": [
+          67,
+          72.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 200,
+        "lowpass_hz": 3800,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact supplied fade/stop. Frozen field may extend4.5s beyond dry stop; no retimed musical boundaries.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Atmospheric development",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "source_preview_sha256": "f0dd48994f396e2d5f97d161363e6ed5caa21d55911dffff2dc46e0cf428b52d",
+      "output_seconds": 82.2,
+      "source_frames": [
+        0,
+        3489600
+      ],
+      "freeze_source_seconds": 67,
+      "headroom_db": 0.0,
+      "field_energy_drift": 4.889080066812423e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.23673911091162228,
+        "C": 0.2255009310736742
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 3945600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 82.2,
+          "peak": 0.8956298828125,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.37901576766679,
+          "post_dry_first_second_rms_dbfs": -36.93952730935996,
+          "last_active_second_rms_dbfs": -62.83289889179592,
+          "dry_stop_seam_max_sample_delta": 0.003570556640625,
+          "tail_stereo_correlation": 0.35674606510696055,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "26e9d3e8f31c663afc9ec5ab80d5a94620c13d57f6bb3de80f4a742e3ce0d0f6",
+          "tail_20_150hz_energy_fraction": 0.011681868695386989
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S07-b",
+        "source": "S07",
+        "source_title": "S07 \u00b7 Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 81,
+        "source_out": 115,
+        "dry_fade": [
+          111,
+          115
+        ],
+        "fade_in": 1.1,
+        "tail_extra": 3.5,
+        "wet_db_relative": -15,
+        "prime_seconds": 3,
+        "highpass_hz": 230,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Entrance begins exactly81s; unspecified fade-in duration provisionally1.1s.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Brief punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "source_preview_sha256": "f0dd48994f396e2d5f97d161363e6ed5caa21d55911dffff2dc46e0cf428b52d",
+      "output_seconds": 42.5,
+      "source_frames": [
+        3888000,
+        5520000
+      ],
+      "freeze_source_seconds": 111,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.274360867995184e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.428110322807569,
+        "C": 0.4913500859987749
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "A": {
+          "passed": true,
+          "frames": 2040000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.5,
+          "peak": 0.73822021484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -16.77220626664044,
+          "post_dry_first_second_rms_dbfs": -240.0,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.0,
+          "tail_stereo_correlation": null,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "a1cd6ec52061d786523e809210bbc4a2890accf19ca3a687fea03b5d17ee0bf3",
+          "tail_20_150hz_energy_fraction": 0.0
+        },
+        "B": {
+          "passed": true,
+          "frames": 2040000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.5,
+          "peak": 0.73822021484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -16.770661423911346,
+          "post_dry_first_second_rms_dbfs": -82.55723447820685,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 3.0517578125e-05,
+          "tail_stereo_correlation": 0.5589394859906137,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "d3d950e07048b0b7c0ffe40def3882f3499d87d6e362477203f26bec588ae169",
+          "tail_20_150hz_energy_fraction": 0.05051300992927332
+        },
+        "C": {
+          "passed": true,
+          "frames": 2040000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 42.5,
+          "peak": 0.73822021484375,
+          "clipped_samples": 0,
+          "rms_dbfs": -16.75475078703888,
+          "post_dry_first_second_rms_dbfs": -32.217742323151505,
+          "last_active_second_rms_dbfs": -51.943533203331796,
+          "dry_stop_seam_max_sample_delta": 0.00823974609375,
+          "tail_stereo_correlation": 0.5530559516109645,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "2ea701a338ba1b11662e7ba346accdf8314ae63c8ca72dbe9296048ecf8143f5",
+          "tail_20_150hz_energy_fraction": 0.004464670339390528
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S07-c",
+        "source": "S07",
+        "source_title": "S07 \u00b7 Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 156,
+        "source_out": 176.9,
+        "dry_fade": [
+          172,
+          176.9
+        ],
+        "fade_in": 1.2,
+        "tail_extra": 4.2,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.6,
+        "highpass_hz": 240,
+        "lowpass_hz": 3300,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Keep156s source start, including any existing quiet portion;1.2s provisional entrance, no automated onset relocation.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Brief punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "source_preview_sha256": "f0dd48994f396e2d5f97d161363e6ed5caa21d55911dffff2dc46e0cf428b52d",
+      "output_seconds": 30.1,
+      "source_frames": [
+        7488000,
+        8491200
+      ],
+      "freeze_source_seconds": 172,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.490174677274962e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.5370710425973396,
+        "C": 0.5350103705714576
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1444800,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 30.1,
+          "peak": 0.198883056640625,
+          "clipped_samples": 0,
+          "rms_dbfs": -32.60609416715829,
+          "post_dry_first_second_rms_dbfs": -45.74414871171732,
+          "last_active_second_rms_dbfs": -69.07535280493644,
+          "dry_stop_seam_max_sample_delta": 0.000885009765625,
+          "tail_stereo_correlation": 0.4718062135029493,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "8903bbd1b2c36d4c66a5471e3a67ae93f5e52ea0585c80b4a8f3ca3df5ceb71a",
+          "tail_20_150hz_energy_fraction": 0.25290226231054885
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S12-1",
+        "source": "S12",
+        "source_title": "S12 \u00b7 Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 5,
+        "source_out": 21,
+        "dry_fade": [
+          20.4,
+          21
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 2.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 4000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "7627206a5879e518a475c024b13390134d09329e5b7c329aca78b37af2994040",
+      "output_seconds": 23.5,
+      "source_frames": [
+        240000,
+        1008000
+      ],
+      "freeze_source_seconds": 20.4,
+      "headroom_db": 0.0,
+      "field_energy_drift": 4.342958973434398e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.6640389860488709,
+        "C": 0.5611889684135586
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1128000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 23.5,
+          "peak": 0.278717041015625,
+          "clipped_samples": 0,
+          "rms_dbfs": -27.930590201586533,
+          "post_dry_first_second_rms_dbfs": -50.781341484683026,
+          "last_active_second_rms_dbfs": -64.67118111026326,
+          "dry_stop_seam_max_sample_delta": 0.001312255859375,
+          "tail_stereo_correlation": 0.5254684969521136,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "f969bb54cdd11dd1bcfff342dbdf2f91ec4fa521da3e6a8406907b8f96ab7559",
+          "tail_20_150hz_energy_fraction": 0.0002907051295357006
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S12-2",
+        "source": "S12",
+        "source_title": "S12 \u00b7 Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 21.5,
+        "source_out": 35.5,
+        "dry_fade": [
+          34.8,
+          35.5
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 2.8,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3700,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "7627206a5879e518a475c024b13390134d09329e5b7c329aca78b37af2994040",
+      "output_seconds": 21.8,
+      "source_frames": [
+        1032000,
+        1704000
+      ],
+      "freeze_source_seconds": 34.8,
+      "headroom_db": 0.0,
+      "field_energy_drift": 7.117580962263726e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.34937758313664347,
+        "C": 0.3124988409693048
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "A": {
+          "passed": true,
+          "frames": 1046400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 21.8,
+          "peak": 0.22003173828125,
+          "clipped_samples": 0,
+          "rms_dbfs": -29.246756827803367,
+          "post_dry_first_second_rms_dbfs": -240.0,
+          "last_active_second_rms_dbfs": -240.0,
+          "dry_stop_seam_max_sample_delta": 0.0,
+          "tail_stereo_correlation": null,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "0ec3087ca4e5884dc95503bee031519069a9f0b60590da6430b8167cd81afa47",
+          "tail_20_150hz_energy_fraction": 0.0
+        },
+        "B": {
+          "passed": true,
+          "frames": 1046400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 21.8,
+          "peak": 0.22003173828125,
+          "clipped_samples": 0,
+          "rms_dbfs": -29.245439013520212,
+          "post_dry_first_second_rms_dbfs": -58.67035395846709,
+          "last_active_second_rms_dbfs": -114.04645069381812,
+          "dry_stop_seam_max_sample_delta": 0.001068115234375,
+          "tail_stereo_correlation": 0.5911490738290452,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "73d00b821f43abc16bfcd51d02bcc532c257e6c6472f35a149bc8573cb4be761",
+          "tail_20_150hz_energy_fraction": 3.49596793526179e-05
+        },
+        "C": {
+          "passed": true,
+          "frames": 1046400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 21.8,
+          "peak": 0.22003173828125,
+          "clipped_samples": 0,
+          "rms_dbfs": -29.234790238635618,
+          "post_dry_first_second_rms_dbfs": -44.43861884159225,
+          "last_active_second_rms_dbfs": -61.441360046717776,
+          "dry_stop_seam_max_sample_delta": 0.002288818359375,
+          "tail_stereo_correlation": 0.5456760192405884,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "28713e972f3ffb876fabaf457dfd420ba1b81a1d266afda0cd4f3ea83e1c8aeb",
+          "tail_20_150hz_energy_fraction": 0.00033629767502807553
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S12-3",
+        "source": "S12",
+        "source_title": "S12 \u00b7 Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 35.5,
+        "source_out": 48.5,
+        "dry_fade": [
+          47.7,
+          48.5
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 3,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3500,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "7627206a5879e518a475c024b13390134d09329e5b7c329aca78b37af2994040",
+      "output_seconds": 21.0,
+      "source_frames": [
+        1704000,
+        2328000
+      ],
+      "freeze_source_seconds": 47.7,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.6798045568227e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.3446839078584564,
+        "C": 0.2515140952265166
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1008000,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 21.0,
+          "peak": 0.334075927734375,
+          "clipped_samples": 0,
+          "rms_dbfs": -26.66173438696516,
+          "post_dry_first_second_rms_dbfs": -42.534236607451376,
+          "last_active_second_rms_dbfs": -60.919435784869506,
+          "dry_stop_seam_max_sample_delta": 0.0028076171875,
+          "tail_stereo_correlation": 0.49400430332737555,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "4a6deb352c4eb09322ab3a26eda1c2e112e272fa0da1d1332b3bb9ab9dd5aa33",
+          "tail_20_150hz_energy_fraction": 2.8685343730145577e-05
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S12-4",
+        "source": "S12",
+        "source_title": "S12 \u00b7 Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 48.5,
+        "source_out": 73.04533333333333,
+        "dry_fade": [
+          71.84533333333333,
+          73.04533333333333
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 3.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade. Capture at69s anticipates the existing quiet source tail; dry endpoint unchanged.",
+        "comparison_only": false,
+        "stage": 2,
+        "freeze_at": 69
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "7627206a5879e518a475c024b13390134d09329e5b7c329aca78b37af2994040",
+      "output_seconds": 33.04533333333333,
+      "source_frames": [
+        2328000,
+        3506176
+      ],
+      "freeze_source_seconds": 69,
+      "headroom_db": 0.0,
+      "field_energy_drift": 7.645171686465778e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.6041919585049081,
+        "C": 0.5421785392712771
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1586176,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 33.04533333333333,
+          "peak": 0.303192138671875,
+          "clipped_samples": 0,
+          "rms_dbfs": -28.28198040429153,
+          "post_dry_first_second_rms_dbfs": -43.97909402580143,
+          "last_active_second_rms_dbfs": -62.99090337419174,
+          "dry_stop_seam_max_sample_delta": 0.00274658203125,
+          "tail_stereo_correlation": 0.4456819849993067,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "bfc66531110ce60acedaa8f38eb5f3e5b28c612ed524d5b50ae23a67b282c5ad",
+          "tail_20_150hz_energy_fraction": 0.06580835390469512
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S15-a",
+        "source": "S15",
+        "source_title": "S15 \u00b7 What Lies Ahead",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation.",
+        "source_in": 0,
+        "source_out": 25.5,
+        "dry_fade": [
+          21,
+          25.5
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user fades and source ranges; second entrance duration0.8s provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "origin_label": "GWENT: Rogue Mage"
+      },
+      "source_preview_sha256": "d0ae6e77edbee7e3f6dcfccac4fd8b5b4222a9c007213f00fc70ba3253c1d09e",
+      "output_seconds": 34.3,
+      "source_frames": [
+        0,
+        1224000
+      ],
+      "freeze_source_seconds": 21,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.012670437279599e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.37605618472801994,
+        "C": 0.3827391466499862
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1646400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 34.3,
+          "peak": 0.566864013671875,
+          "clipped_samples": 0,
+          "rms_dbfs": -25.057694721634327,
+          "post_dry_first_second_rms_dbfs": -37.99934068016437,
+          "last_active_second_rms_dbfs": -59.95233694075493,
+          "dry_stop_seam_max_sample_delta": 0.00384521484375,
+          "tail_stereo_correlation": 0.5915995284079457,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "a9e1189bc7ec756edee2709b114e60d86645bd8902e4567c0e3241e663415c41",
+          "tail_20_150hz_energy_fraction": 0.009957692518599605
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S15-b",
+        "source": "S15",
+        "source_title": "S15 \u00b7 What Lies Ahead",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation.",
+        "source_in": 25.5,
+        "source_out": 57.5,
+        "dry_fade": [
+          52,
+          57.5
+        ],
+        "fade_in": 0.8,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user fades and source ranges; second entrance duration0.8s provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "origin_label": "GWENT: Rogue Mage"
+      },
+      "source_preview_sha256": "d0ae6e77edbee7e3f6dcfccac4fd8b5b4222a9c007213f00fc70ba3253c1d09e",
+      "output_seconds": 40.8,
+      "source_frames": [
+        1224000,
+        2760000
+      ],
+      "freeze_source_seconds": 52,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.096845352204113e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.3748476087591278,
+        "C": 0.383801599747157
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1958400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 40.8,
+          "peak": 0.58660888671875,
+          "clipped_samples": 0,
+          "rms_dbfs": -21.50457269714358,
+          "post_dry_first_second_rms_dbfs": -37.392059348181924,
+          "last_active_second_rms_dbfs": -59.06080200606395,
+          "dry_stop_seam_max_sample_delta": 0.00604248046875,
+          "tail_stereo_correlation": 0.6417509801574026,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "7e08cecfae35b61d3ef192e2410bd2860f3e3e2be9c265f7a22b23210da10dae",
+          "tail_20_150hz_energy_fraction": 0.005228216826030964
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S16-1",
+        "source": "S16",
+        "source_title": "S16 \u00b7 Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 42.3,
+        "dry_fade": [
+          40.5,
+          42.3
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "624241bec884d04fbcc6661d5ed5c343e7cca316cd9f1e89e530cdfdaece390d",
+      "output_seconds": 51.3,
+      "source_frames": [
+        0,
+        2030400
+      ],
+      "freeze_source_seconds": 40.5,
+      "headroom_db": 0.0,
+      "field_energy_drift": 5.313413181209409e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.21836886223327068,
+        "C": 0.26188310177072494
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 2462400,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 51.3,
+          "peak": 0.30377197265625,
+          "clipped_samples": 0,
+          "rms_dbfs": -27.425931737438205,
+          "post_dry_first_second_rms_dbfs": -40.34569146068677,
+          "last_active_second_rms_dbfs": -63.195185443254076,
+          "dry_stop_seam_max_sample_delta": 0.00152587890625,
+          "tail_stereo_correlation": 0.5112728491683737,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "c4e650264b028497f6b3956ed1b6347705b1e0341986cc99f4751bcf1975ecab",
+          "tail_20_150hz_energy_fraction": 0.0013220377640674233
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S16-2",
+        "source": "S16",
+        "source_title": "S16 \u00b7 Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 42.3,
+        "source_out": 101.1,
+        "dry_fade": [
+          98.6,
+          101.1
+        ],
+        "fade_in": 1,
+        "tail_extra": 4.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "624241bec884d04fbcc6661d5ed5c343e7cca316cd9f1e89e530cdfdaece390d",
+      "output_seconds": 68.6,
+      "source_frames": [
+        2030400,
+        4852800
+      ],
+      "freeze_source_seconds": 98.6,
+      "headroom_db": 0.0,
+      "field_energy_drift": 4.695544797955526e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.42401156965232223,
+        "C": 0.4420474232129419
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 3292800,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 68.6,
+          "peak": 0.408203125,
+          "clipped_samples": 0,
+          "rms_dbfs": -25.052640035948457,
+          "post_dry_first_second_rms_dbfs": -41.35584394788366,
+          "last_active_second_rms_dbfs": -67.11805332063938,
+          "dry_stop_seam_max_sample_delta": 0.0020751953125,
+          "tail_stereo_correlation": 0.6485565676215889,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "f67cd70bbcb7cbb486f7e616fe10d31b873691b2c3567e9f5d1ea98030928c6d",
+          "tail_20_150hz_energy_fraction": 0.08832277170712469
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S16-3",
+        "source": "S16",
+        "source_title": "S16 \u00b7 Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 101.1,
+        "source_out": 133.33333333333334,
+        "dry_fade": [
+          130.83333333333334,
+          133.33333333333334
+        ],
+        "fade_in": 1,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "624241bec884d04fbcc6661d5ed5c343e7cca316cd9f1e89e530cdfdaece390d",
+      "output_seconds": 41.03333333333333,
+      "source_frames": [
+        4852800,
+        6400000
+      ],
+      "freeze_source_seconds": 130.83333333333334,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.125556677598494e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.5397162578735449,
+        "C": 0.47593743297789876
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1969600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 41.03333333333333,
+          "peak": 0.365020751953125,
+          "clipped_samples": 0,
+          "rms_dbfs": -24.298173639220995,
+          "post_dry_first_second_rms_dbfs": -64.68214632114156,
+          "last_active_second_rms_dbfs": -85.4242700674257,
+          "dry_stop_seam_max_sample_delta": 9.1552734375e-05,
+          "tail_stereo_correlation": 0.5337508970380107,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "a10854c5e729c75ea2c2d3a31cc671592b1dae4984cc8163da0e1f6ea92ed307",
+          "tail_20_150hz_energy_fraction": 0.0037511073959307704
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S18-1",
+        "source": "S18",
+        "source_title": "S18 \u00b7 Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 0,
+        "source_out": 31.7,
+        "dry_fade": [
+          30.1,
+          31.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+      "output_seconds": 40.2,
+      "source_frames": [
+        0,
+        1521600
+      ],
+      "freeze_source_seconds": 30.1,
+      "headroom_db": 0.0,
+      "field_energy_drift": 5.127853919242354e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.3384704055868729,
+        "C": 0.3997642940495004
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1929600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 40.2,
+          "peak": 0.5936279296875,
+          "clipped_samples": 0,
+          "rms_dbfs": -25.142416492367108,
+          "post_dry_first_second_rms_dbfs": -44.55697911612971,
+          "last_active_second_rms_dbfs": -64.56533432092543,
+          "dry_stop_seam_max_sample_delta": 0.002593994140625,
+          "tail_stereo_correlation": 0.4886481380329384,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "48b7c55a8e9f9b0b90aabdb4eb7726c44f83ebb410cbc4c3d2152b4c473e5705",
+          "tail_20_150hz_energy_fraction": 0.0002016550432860017
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S18-2",
+        "source": "S18",
+        "source_title": "S18 \u00b7 Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 61,
+        "source_out": 112.7,
+        "dry_fade": [
+          109.9,
+          112.7
+        ],
+        "fade_in": 1.3,
+        "tail_extra": 4.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development (per excerpt note)",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+      "output_seconds": 61.2,
+      "source_frames": [
+        2928000,
+        5409600
+      ],
+      "freeze_source_seconds": 109.9,
+      "headroom_db": 0.0,
+      "field_energy_drift": 3.677514846498067e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.3127547050751654,
+        "C": 0.32966356044348366
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 2937600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 61.2,
+          "peak": 0.823944091796875,
+          "clipped_samples": 0,
+          "rms_dbfs": -18.439299560191095,
+          "post_dry_first_second_rms_dbfs": -38.66782928702774,
+          "last_active_second_rms_dbfs": -63.54971711803402,
+          "dry_stop_seam_max_sample_delta": 0.0032958984375,
+          "tail_stereo_correlation": 0.5374627171509277,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "ad20472e7aa54eda87fdf02c58626f7ef8b63a1ea35cead7d763bc9a295e5d73",
+          "tail_20_150hz_energy_fraction": 0.009784230007220502
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S18-3",
+        "source": "S18",
+        "source_title": "S18 \u00b7 Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 112.8,
+        "source_out": 130,
+        "dry_fade": [
+          128.4,
+          130
+        ],
+        "fade_in": 0.8,
+        "tail_extra": 3.2,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Brief punctuation",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+      "output_seconds": 25.4,
+      "source_frames": [
+        5414400,
+        6240000
+      ],
+      "freeze_source_seconds": 128.4,
+      "headroom_db": 0.0,
+      "field_energy_drift": 5.383159810364446e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.19554761674936091,
+        "C": 0.21751538293640313
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 1219200,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 25.4,
+          "peak": 0.1331787109375,
+          "clipped_samples": 0,
+          "rms_dbfs": -33.70487416051689,
+          "post_dry_first_second_rms_dbfs": -48.78566334118182,
+          "last_active_second_rms_dbfs": -67.22981086522869,
+          "dry_stop_seam_max_sample_delta": 0.001495361328125,
+          "tail_stereo_correlation": 0.6406409169733882,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "1a75617a6c43403fa5b26991422070385f86a96d93c0d477b8714a4b7f2bbda7",
+          "tail_20_150hz_energy_fraction": 0.00019582703564452702
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S20-a",
+        "source": "S20",
+        "source_title": "S20 \u00b7 City night - complete arrangement",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Fade out from 38s to approx 40.8s atmospheric development/punctuation.",
+        "source_in": 0,
+        "source_out": 40.8,
+        "dry_fade": [
+          38,
+          40.8
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.3,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.6,
+        "highpass_hz": 200,
+        "lowpass_hz": 3500,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact38-40.8s dry fade. Frozen extension separately labeled.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_identity": {
+        "media": 841561382,
+        "bank": "music_nomansgrad",
+        "segment": 894778287,
+        "track": 1020785585,
+        "original": "music\\nomansgrad\\novigrad_rich_district\\tw3_novigrad_04_exploration_night_14.02.06.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "822ad35c9658d9515a85cfc3582a95ad8a91f9b42865cd1235e73c6204497719",
+      "output_seconds": 50.1,
+      "source_frames": [
+        0,
+        1958400
+      ],
+      "freeze_source_seconds": 38,
+      "headroom_db": 0.0,
+      "field_energy_drift": 6.456583589806966e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.22174970466740312,
+        "C": 0.22007050174904205
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 2404800,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 50.1,
+          "peak": 0.929595947265625,
+          "clipped_samples": 0,
+          "rms_dbfs": -16.83645101900659,
+          "post_dry_first_second_rms_dbfs": -37.15317758592518,
+          "last_active_second_rms_dbfs": -61.018015995550186,
+          "dry_stop_seam_max_sample_delta": 0.00616455078125,
+          "tail_stereo_correlation": 0.45184409849420176,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "e7c84a51e010cbfb216232de7ea67fd8aa86b9a618db1fafeb4e5d1f4165a9a6",
+          "tail_20_150hz_energy_fraction": 0.0018177176084781322
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S14-1",
+        "source": "S14",
+        "source_title": "S14 \u00b7 Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 64.5,
+        "dry_fade": [
+          63,
+          64.5
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 250,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "COMPARISON ONLY: authored-source reuse unchanged. Split64.5s exact; ending1.5s/2.5s and second entrance0.9s are provisional.",
+        "comparison_only": true,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development",
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "d74dfa183e847fe7f9df604961a0160ddf96582b29db1451e9eb485cf63216f9",
+      "output_seconds": 73.7,
+      "source_frames": [
+        0,
+        3096000
+      ],
+      "freeze_source_seconds": 63,
+      "headroom_db": 0.0,
+      "field_energy_drift": 5.963792955808319e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.43242665509678496,
+        "C": 0.443382121306138
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 3537600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 73.7,
+          "peak": 0.95587158203125,
+          "clipped_samples": 0,
+          "rms_dbfs": -17.05303385767689,
+          "post_dry_first_second_rms_dbfs": -42.365030571216806,
+          "last_active_second_rms_dbfs": -66.08314919874937,
+          "dry_stop_seam_max_sample_delta": 0.00067138671875,
+          "tail_stereo_correlation": 0.9103125606026777,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "ffa559ac37df926ff67ead439eb8c7bcfca7470f655e2e6918813293f1ad6d11",
+          "tail_20_150hz_energy_fraction": 0.026521400221999957
+        }
+      }
+    },
+    {
+      "settings": {
+        "cue": "S14-2",
+        "source": "S14",
+        "source_title": "S14 \u00b7 Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 64.5,
+        "source_out": 132.0,
+        "dry_fade": [
+          129.5,
+          132.0
+        ],
+        "fade_in": 0.9,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 250,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "COMPARISON ONLY: authored-source reuse unchanged. Split64.5s exact; ending1.5s/2.5s and second entrance0.9s are provisional.",
+        "comparison_only": true,
+        "stage": 3
+      },
+      "excerpt_role": "Atmospheric development",
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "d74dfa183e847fe7f9df604961a0160ddf96582b29db1451e9eb485cf63216f9",
+      "output_seconds": 76.7,
+      "source_frames": [
+        3096000,
+        6336000
+      ],
+      "freeze_source_seconds": 129.5,
+      "headroom_db": -0.31017321999257674,
+      "field_energy_drift": 6.115441671355399e-16,
+      "freeze_new_excitation_samples": 0,
+      "wet_calibration_gains": {
+        "B": 0.37024264059695844,
+        "C": 0.36632411740918525
+      },
+      "B_input_policy": "post-fader dry continuation plus causal input-filter tail",
+      "C_input_policy": "closed at capture",
+      "renders": {
+        "C": {
+          "passed": true,
+          "frames": 3681600,
+          "channels": 2,
+          "rate": 48000,
+          "seconds": 76.7,
+          "peak": 0.9599609375,
+          "clipped_samples": 0,
+          "rms_dbfs": -18.197545354601388,
+          "post_dry_first_second_rms_dbfs": -47.10764523128035,
+          "last_active_second_rms_dbfs": -69.86006792908661,
+          "dry_stop_seam_max_sample_delta": 0.000701904296875,
+          "tail_stereo_correlation": 0.6542372037559725,
+          "exact_lead_trail_zero_frames": [
+            96000,
+            144000
+          ],
+          "source_crop_frame_exact": true,
+          "pre_tail_source_samples_exact": true,
+          "decoder_matches_quantized_pcm": true,
+          "sha256": "30f67ea333728cdbee7f4d6e2e2ceaf6d2a5ef04a71dc24e1d038b0377a4ba92",
+          "tail_20_150hz_energy_fraction": 0.041228724321387515
+        }
+      }
+    }
+  ]
+}

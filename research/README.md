@@ -119,3 +119,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 59. [Provisional reverb-freeze ending preference](59-provisional-freeze-tail-preference.md): a subsequent user consideration to apply wet freeze-tail and fade to most/possibly all extracted punctuations, pending listening; preserves exact report58 notes and distinguishes true freeze from ordinary reverb decay.
 
 60. [Private cue edits and freeze-tail handoff](60-private-cue-edit-and-freeze-tail-handoff.md): next authorized Codex work, source-clock cuts, true freeze vs conventional reverb/dry A/B listening, local ignored HTML player and feedback export; no Wwise/game integration or audio redistribution.
+
+61. [Private cue edits and freeze auditions](61-private-cue-edits-and-freeze-auditions.md):24 user-directed source-clock excerpts,34 actual PCM previews, five dry/decay/freeze comparisons, independently implemented lossless FDN, exact crop/silence/headroom checks, offline export test and single-cue regeneration.184 tests pass; actual browser/subjective listening unverified. [Plan](61-private-cue-edit-plan.json), [sanitized evidence](61-private-cue-edit-evidence.json).
