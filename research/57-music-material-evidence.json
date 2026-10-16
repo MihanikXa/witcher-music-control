@@ -1,0 +1,2427 @@
+{
+  "verification": {
+    "previews": 21,
+    "priority": 7,
+    "linked_audio_files": 21,
+    "missing": 0,
+    "external_resources": 0,
+    "packet_readbacks": 10,
+    "source_inputs_preserved": 11,
+    "native_source_exact": true,
+    "index_sha256": "2bd7774275c135084759b96759309fd90f5fd6865f613a467f684bfc8c8792ee",
+    "audition_metadata_sha256": "7fde43a4ede8daded1920f1647f40b27a7dca50845ceefdf72c8eff71bb4ea74",
+    "selection_sha256": "b04cd4a46823157a9e0cffbcdb2f558e7305810d32015c888af9874fcf982c81",
+    "browser_interaction_tested": false,
+    "subjectively_listened": false,
+    "retained_release_native_hashes_exact": 10,
+    "native_sources_verified_stereo": 11
+  },
+  "inventory": {
+    "native_segments": 1943,
+    "native_tracks": 2558,
+    "native_media": 857,
+    "native_source_paths": 856,
+    "reviewed_generic_segments": 97,
+    "reviewed_generic_silent_segments": 37,
+    "mp_streams": 275,
+    "mp_music_joined": 271,
+    "mp_diegetic_metadata_only": 4,
+    "mp_assignments": 1996,
+    "mp_packet_framing_supported": 275,
+    "mp_duplicate_payload_hashes": 0
+  },
+  "catalog_sha256": "808fab6c137338cb3d026141b9f9ce36c6f6b599bef1d79bb97564ea3ed4f61a",
+  "ffmpeg_sha256": "320876ad2d2529e2b7e7fb50384e339c30aa676d4e620ec538b57a558081843c",
+  "candidates": [
+    {
+      "id": "S01",
+      "title": "Wetland introduction - base layer",
+      "pool": "native",
+      "identity": {
+        "original": "music\\nomansgrad\\swamps\\tw3_nml_05_exploration_intro_int1.wav",
+        "bank": "music_nomansgrad",
+        "segment": 654694005,
+        "track": 810457805,
+        "media": 116649543,
+        "native_segment_ms": 36000.0,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 32000.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 116649543,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 36000.0
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 519457007,
+            "name": "tw3_nml_05_exploration_intro_int2a",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 321233470,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 599466291,
+            "name": "tw3_nml_05_exploration_intro_int2b",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 35056890,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.250200033187866,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "184fd9cab6fd6e11373b3268b470b2b781f490f003215fc143354187648ea0b7"
+      },
+      "metrics": {
+        "seconds": 36.0,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -21.0,
+        "peak_downsampled_dbfs": -0.527,
+        "envelope_p10_dbfs": -32.194,
+        "envelope_p90_dbfs": -18.744,
+        "first_second_rms_dbfs": -34.3257,
+        "last_second_rms_dbfs": -84.9518,
+        "quiet_below_minus60": [
+          [
+            34.4,
+            36.0
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          6.2,
+          28.5
+        ]
+      },
+      "preview_sha256": "09c5776196f54192b498b8862be8b2308dca323b32ed54616df8f4aca56a1882"
+    },
+    {
+      "id": "S02",
+      "title": "City A - base arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\nomansgrad\\oxenfurt\\Novi_03_Exploration_A_L1_bip.wav",
+        "bank": "music_nomansgrad",
+        "segment": 546171631,
+        "track": 414481579,
+        "media": 187661077,
+        "native_segment_ms": 49834.6666666667,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 2000.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 48000.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 187661077,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 49834.666666666664
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 152061688,
+            "name": "tw3_expl_oxenfurt_03_A_L2",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 302339127,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 361391259,
+            "name": "tw3_expl_oxenfurt_03_A_L3",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 778057588,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "c81e4998f35bca127d2d7fbb83547d9cecd7cfdec3e887bc67414ad94908f3fb"
+      },
+      "metrics": {
+        "seconds": 49.83475,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -20.577,
+        "peak_downsampled_dbfs": -2.957,
+        "envelope_p10_dbfs": -33.099,
+        "envelope_p90_dbfs": -17.263,
+        "first_second_rms_dbfs": -98.61070000000001,
+        "last_second_rms_dbfs": -82.69800000000001,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            2.0
+          ],
+          [
+            49.2,
+            49.83475
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          9.1,
+          27.1,
+          42.2
+        ]
+      },
+      "preview_sha256": "e07bd4d847959558009aa8c753b6f1f380a873814c0498f378671d8b2f494ba1"
+    },
+    {
+      "id": "S03",
+      "title": "In Temeria",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher 2",
+        "name": "In Temeria",
+        "wem": "903823503.wem",
+        "media": 903823503,
+        "bank": "music_nomansgrad",
+        "segment": 660650498,
+        "tracks": [
+          126870982
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 72515.9375,
+            "name": ""
+          }
+        ],
+        "segment_ms": 72515.9375,
+        "editor_ms": 72516,
+        "assignments": [
+          {
+            "playlist_index": 0,
+            "track_index": 9,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 1,
+            "track_index": 18,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 9,
+            "track_index": 15,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 10,
+            "track_index": 16,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 11,
+            "track_index": 7,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 64,
+            "track_index": 16,
+            "region": "White Orchard",
+            "bank": "music_prologue"
+          },
+          {
+            "playlist_index": 107,
+            "track_index": 10,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 126,
+            "track_index": 12,
+            "region": "Vizima",
+            "bank": "music_wyzima_castle"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 3627,
+          "samples": 3480765
+        },
+        "wem_sha256": "70619a00d5c84006ae5886813c7bef4b19058b605f976e12450d3f248906b7c1",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 3480765,
+          "skip": 312,
+          "packets": 3627,
+          "seconds": 72.5159375
+        }
+      },
+      "metrics": {
+        "seconds": 72.516,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.132,
+        "peak_downsampled_dbfs": -4.842,
+        "envelope_p10_dbfs": -26.461,
+        "envelope_p90_dbfs": -15.412,
+        "first_second_rms_dbfs": -91.061,
+        "last_second_rms_dbfs": -38.9655,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            0.5
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          5.2,
+          22.9,
+          46.4
+        ]
+      },
+      "preview_sha256": "e36628ad6d6467b59ac110d679e7674ca17d55869cf1675080378f235279a549"
+    },
+    {
+      "id": "S04",
+      "title": "Island A - base arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "media": 311392293,
+        "native_segment_ms": 57600.0,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 3200.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 54400.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 311392293,
+            "event": 0,
+            "play_at": -3200.0,
+            "begin": 3200.0,
+            "end": -0.0,
+            "duration": 60757.333333333336
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 80639926,
+            "name": "tw3_skl_11_Exploration_A_L2_bip",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 977453975,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 818069106,
+            "name": "tw3_skl_11_Exploration_A_L3_bip",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 114133675,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "b043a4c13e3d88aa11e0d5b44bee9447f05aba227e9b0b40d21306e8dfa56f86"
+      },
+      "metrics": {
+        "seconds": 60.757375,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -26.019,
+        "peak_downsampled_dbfs": -4.321,
+        "envelope_p10_dbfs": -57.101,
+        "envelope_p90_dbfs": -19.858,
+        "first_second_rms_dbfs": -99.3588,
+        "last_second_rms_dbfs": -76.0153,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            3.4
+          ],
+          [
+            58.8,
+            60.757375
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          6.8,
+          34.9,
+          55.7
+        ]
+      },
+      "preview_sha256": "b6bfff553124bde68de4e928c28c5a501bedd70bc70f4b63009e9f8bf1bb3199"
+    },
+    {
+      "id": "S05",
+      "title": "Dialogue - Neutral",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher",
+        "name": "Dialogue - Neutral",
+        "wem": "988417140.wem",
+        "media": 988417140,
+        "bank": "music_nomansgrad",
+        "segment": 1778517274,
+        "tracks": [
+          906711869
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 64156.229166666664,
+            "name": ""
+          }
+        ],
+        "segment_ms": 64156.229166666664,
+        "editor_ms": 64156,
+        "assignments": [
+          {
+            "playlist_index": 1,
+            "track_index": 12,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 7,
+            "track_index": 1,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 14,
+            "track_index": 15,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 16,
+            "track_index": 14,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 19,
+            "track_index": 13,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 27,
+            "track_index": 8,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 69,
+            "track_index": 6,
+            "region": "White Orchard",
+            "bank": "music_prologue"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 3209,
+          "samples": 3079499
+        },
+        "wem_sha256": "eb187ca2bf2a7a84d16a3f24d837eb38b9a7e55019390a89ffa9b8d951e2f5ee",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 3079499,
+          "skip": 312,
+          "packets": 3209,
+          "seconds": 64.15622916666666
+        }
+      },
+      "metrics": {
+        "seconds": 64.15625,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.1,
+        "peak_downsampled_dbfs": -1.431,
+        "envelope_p10_dbfs": -27.432,
+        "envelope_p90_dbfs": -14.651,
+        "first_second_rms_dbfs": -30.0765,
+        "last_second_rms_dbfs": -51.018,
+        "quiet_below_minus60": [],
+        "low_energy_inspection_seconds": [
+          5.0,
+          23.7,
+          52.2
+        ]
+      },
+      "preview_sha256": "a4be06e0fd8e6f5bd7ab0a87a78b1f9449228da48b4b6929a54b45ddaba1f6b1"
+    },
+    {
+      "id": "S06",
+      "title": "Southern night - sectioned arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\toussaint\\general_hub\\tw3_bob_02_expl_general_night.wav",
+        "bank": "music_toussaint",
+        "segment": 744648631,
+        "track": 832016950,
+        "media": 811969310,
+        "native_segment_ms": 124000.0,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 0,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 0,
+            "position": 32000.0,
+            "name": ""
+          },
+          {
+            "id": 0,
+            "position": 64000.0,
+            "name": ""
+          },
+          {
+            "id": 0,
+            "position": 104000.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 122000.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 811969310,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 124000.0
+          }
+        ],
+        "other_stems": [],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "01316489ed9a81f674d7bd78536446fd12b468f2c8caf540539c22303df020cb"
+      },
+      "metrics": {
+        "seconds": 124.0,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -25.911,
+        "peak_downsampled_dbfs": -7.286,
+        "envelope_p10_dbfs": -35.583,
+        "envelope_p90_dbfs": -22.208,
+        "first_second_rms_dbfs": -64.61280000000001,
+        "last_second_rms_dbfs": -70.6154,
+        "quiet_below_minus60": [
+          [
+            122.9,
+            124.0
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          5.0,
+          34.2,
+          118.5
+        ]
+      },
+      "preview_sha256": "a2e1818c0a609f3e1645a42f155f2736cf34b054cc389416b2647b055139b6af"
+    },
+    {
+      "id": "S07",
+      "title": "Nightfall",
+      "pool": "mp",
+      "identity": {
+        "source": "Nyghtfall",
+        "name": "Nightfall",
+        "wem": "948095561.wem",
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 191823.0,
+            "name": ""
+          }
+        ],
+        "segment_ms": 191823.0,
+        "editor_ms": 191823,
+        "assignments": [
+          {
+            "playlist_index": 75,
+            "track_index": 0,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          },
+          {
+            "playlist_index": 79,
+            "track_index": 5,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          },
+          {
+            "playlist_index": 88,
+            "track_index": 1,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 9592,
+          "samples": 9207504
+        },
+        "wem_sha256": "a6b6ee46c416f68144f7728c90020c11c8f83e13ec9d20684214aec57ba10580",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 9207504,
+          "skip": 312,
+          "packets": 9592,
+          "seconds": 191.823
+        }
+      },
+      "metrics": {
+        "seconds": 191.823,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.739,
+        "peak_downsampled_dbfs": -1.194,
+        "envelope_p10_dbfs": -43.088,
+        "envelope_p90_dbfs": -14.336,
+        "first_second_rms_dbfs": -60.021300000000004,
+        "last_second_rms_dbfs": -61.8377,
+        "quiet_below_minus60": [
+          [
+            148.8,
+            157.9
+          ],
+          [
+            191.2,
+            191.823
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          137.9,
+          153.2,
+          186.8
+        ]
+      },
+      "preview_sha256": "f0dd48994f396e2d5f97d161363e6ed5caa21d55911dffff2dc46e0cf428b52d"
+    },
+    {
+      "id": "S08",
+      "title": "City B - base arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\nomansgrad\\novigrad_temple_island\\Novi_09_Exploration_B_L1_bip.wav",
+        "bank": "music_nomansgrad",
+        "segment": 779346151,
+        "track": 305533596,
+        "media": 731825264,
+        "native_segment_ms": 72362.6666666667,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 2790.6976744186,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 69767.4418604651,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 731825264,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 71680.0
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 125188122,
+            "name": "tw3_novi_09_exploration_B_L2",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 879223280,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 405486105,
+            "name": "tw3_novi_09_exploration_B_L3",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 1014119255,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "a48b5d225985d52f999411eb89dc3f97aaffa8a606fe0cec6910069bd8a4ce1a"
+      },
+      "metrics": {
+        "seconds": 71.68,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.925,
+        "peak_downsampled_dbfs": -0.89,
+        "envelope_p10_dbfs": -26.7,
+        "envelope_p90_dbfs": -15.542,
+        "first_second_rms_dbfs": -97.2886,
+        "last_second_rms_dbfs": -63.3537,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            2.0
+          ],
+          [
+            71.1,
+            71.68
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          7.9,
+          23.2,
+          47.8
+        ]
+      },
+      "preview_sha256": "c7c55bb039d48af2bcd858fc8dd26d2274c35f9b77d385ed2e8088020c69956f"
+    },
+    {
+      "id": "S09",
+      "title": "Dol Blathanna - Forest",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher 2",
+        "name": "Dol Blathanna - Forest",
+        "wem": "945387783.wem",
+        "media": 945387783,
+        "bank": "music_nomansgrad",
+        "segment": 1464463002,
+        "tracks": [
+          1754289067
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 92577.97916666667,
+            "name": ""
+          }
+        ],
+        "segment_ms": 92577.97916666667,
+        "editor_ms": 92578,
+        "assignments": [
+          {
+            "playlist_index": 12,
+            "track_index": 5,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 32,
+            "track_index": 4,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 42,
+            "track_index": 6,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 111,
+            "track_index": 3,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 128,
+            "track_index": 6,
+            "region": "Isle of Mists",
+            "bank": "music_misty_island"
+          },
+          {
+            "playlist_index": 130,
+            "track_index": 3,
+            "region": "The Spiral",
+            "bank": "music_spiral"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 4630,
+          "samples": 4443743
+        },
+        "wem_sha256": "8d35ab0e013afe9ab6ed1753b48db83c1d869583227d7c0a9b1a4fb46800435a",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 4443743,
+          "skip": 312,
+          "packets": 4630,
+          "seconds": 92.57797916666667
+        }
+      },
+      "metrics": {
+        "seconds": 92.578,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -20.508,
+        "peak_downsampled_dbfs": -0.781,
+        "envelope_p10_dbfs": -32.231,
+        "envelope_p90_dbfs": -17.444,
+        "first_second_rms_dbfs": -25.2793,
+        "last_second_rms_dbfs": -35.4371,
+        "quiet_below_minus60": [],
+        "low_energy_inspection_seconds": [
+          12.2,
+          38.1,
+          85.2
+        ]
+      },
+      "preview_sha256": "021c24ed862df4361d169f253442664bcae982c9f48c9f749a0e20ed21e2e8ff"
+    },
+    {
+      "id": "S10",
+      "title": "City neighbourhood B - base arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\nomansgrad\\novigrad_poor_district\\Novi_08_Exploration_Beggers_B_L1_bip.wav",
+        "bank": "music_nomansgrad",
+        "segment": 715369076,
+        "track": 816243834,
+        "media": 798158466,
+        "native_segment_ms": 58026.6666666667,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 2000.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 58000.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 798158466,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 58026.666666666664
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 170677885,
+            "name": "tw3_expl_novi_08_temple_island_B_L2",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 814289552,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 463149354,
+            "name": "tw3_expl_novi_08_temple_island_B_L3",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 317866450,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "1199853f187f414ea7f19459b40b180cd700d7864080ba95d20ce67e48823af9"
+      },
+      "metrics": {
+        "seconds": 58.02675,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -19.009,
+        "peak_downsampled_dbfs": -0.763,
+        "envelope_p10_dbfs": -29.562,
+        "envelope_p90_dbfs": -14.946,
+        "first_second_rms_dbfs": -80.1621,
+        "last_second_rms_dbfs": -65.5616,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            1.9
+          ],
+          [
+            57.4,
+            58.02675
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          9.6,
+          25.0,
+          41.5
+        ]
+      },
+      "preview_sha256": "0d624951ab948b37c01cf9c6ad7262efee5b204e053271e3bbe8a36197a5bfbc"
+    },
+    {
+      "id": "S11",
+      "title": "A Quiet Corner",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher 2",
+        "name": "A Quiet Corner",
+        "wem": "940375184.wem",
+        "media": 940375184,
+        "bank": "music_nomansgrad",
+        "segment": 2059321025,
+        "tracks": [
+          1618748664
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 194890.83333333334,
+            "name": ""
+          }
+        ],
+        "segment_ms": 194890.83333333334,
+        "editor_ms": 194891,
+        "assignments": [
+          {
+            "playlist_index": 7,
+            "track_index": 4,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 14,
+            "track_index": 11,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 16,
+            "track_index": 11,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 23,
+            "track_index": 6,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 26,
+            "track_index": 10,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 31,
+            "track_index": 0,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 41,
+            "track_index": 11,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 109,
+            "track_index": 2,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 124,
+            "track_index": 10,
+            "region": "Kaer Morhen",
+            "bank": "music_kaer_morhen"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 9745,
+          "samples": 9354760
+        },
+        "wem_sha256": "d7116caaf5a847b0f86887e292692ec085b62ec88fe893498db7f52cd040c8c0",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 9354760,
+          "skip": 312,
+          "packets": 9745,
+          "seconds": 194.89083333333335
+        }
+      },
+      "metrics": {
+        "seconds": 194.890875,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.378,
+        "peak_downsampled_dbfs": -1.756,
+        "envelope_p10_dbfs": -26.274,
+        "envelope_p90_dbfs": -15.03,
+        "first_second_rms_dbfs": -31.9167,
+        "last_second_rms_dbfs": -67.42699999999999,
+        "quiet_below_minus60": [
+          [
+            193.9,
+            194.890875
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          5.0,
+          33.4,
+          189.8
+        ]
+      },
+      "preview_sha256": "63917401dee192ac812d6173cf530f67ee40343de4bccba81cf1d2b9d52ce7c5"
+    },
+    {
+      "id": "S12",
+      "title": "Island B - base arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "media": 886014434,
+        "native_segment_ms": 69408.96969696965,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 4.54747350886464e-13,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 65454.5454545455,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 886014434,
+            "event": 0,
+            "play_at": -3636.36363636364,
+            "begin": 3636.36363636364,
+            "end": -0.0,
+            "duration": 73045.33333333333
+          }
+        ],
+        "other_stems": [
+          {
+            "track": 720289977,
+            "name": "tw3_skl_12_exploration_B_L2",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 625708247,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    1.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    2.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          },
+          {
+            "track": 853685623,
+            "name": "tw3_skl_12_exploration_B_L3",
+            "rtpc": [
+              {
+                "id": 2470328564,
+                "type": 0,
+                "accumulation": 2,
+                "parameter": 0,
+                "curve": 681166490,
+                "scale": 2,
+                "points": [
+                  [
+                    1.0,
+                    -1.0,
+                    9
+                  ],
+                  [
+                    2.25,
+                    -1.0,
+                    4
+                  ],
+                  [
+                    3.0,
+                    0.0,
+                    9
+                  ],
+                  [
+                    4.0,
+                    0.0,
+                    4
+                  ]
+                ]
+              }
+            ]
+          }
+        ],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "a852496b7e45fec0fb9e8051e152dab3d06e9ac6cbaa24e2c483d83b569dd6c8"
+      },
+      "metrics": {
+        "seconds": 73.045375,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -27.655,
+        "peak_downsampled_dbfs": -9.471,
+        "envelope_p10_dbfs": -59.1,
+        "envelope_p90_dbfs": -24.075,
+        "first_second_rms_dbfs": -97.9396,
+        "last_second_rms_dbfs": -82.4114,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            5.4
+          ],
+          [
+            71.7,
+            73.045375
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          5.0,
+          21.5,
+          36.6
+        ]
+      },
+      "preview_sha256": "7627206a5879e518a475c024b13390134d09329e5b7c329aca78b37af2994040"
+    },
+    {
+      "id": "S13",
+      "title": "Map Theme 3",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher: Monster Slayer",
+        "name": "Map Theme 3",
+        "wem": "986128669.wem",
+        "media": 986128669,
+        "bank": "music_nomansgrad",
+        "segment": 1431526458,
+        "tracks": [
+          1384114648
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 183562.4583333333,
+            "name": ""
+          }
+        ],
+        "segment_ms": 183562.4583333333,
+        "editor_ms": 183562,
+        "assignments": [
+          {
+            "playlist_index": 1,
+            "track_index": 6,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 9,
+            "track_index": 13,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 10,
+            "track_index": 12,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 19,
+            "track_index": 5,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 23,
+            "track_index": 17,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 31,
+            "track_index": 6,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 64,
+            "track_index": 14,
+            "region": "White Orchard",
+            "bank": "music_prologue"
+          },
+          {
+            "playlist_index": 107,
+            "track_index": 9,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 124,
+            "track_index": 3,
+            "region": "Kaer Morhen",
+            "bank": "music_kaer_morhen"
+          },
+          {
+            "playlist_index": 126,
+            "track_index": 10,
+            "region": "Vizima",
+            "bank": "music_wyzima_castle"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 9179,
+          "samples": 8810998
+        },
+        "wem_sha256": "6c13043146b59ab974cf4a3a15028a47fdf6807bf5ddd19c6d623ccedd677cad",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 8810998,
+          "skip": 312,
+          "packets": 9179,
+          "seconds": 183.56245833333332
+        }
+      },
+      "metrics": {
+        "seconds": 183.5625,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -17.508,
+        "peak_downsampled_dbfs": -0.853,
+        "envelope_p10_dbfs": -25.467,
+        "envelope_p90_dbfs": -14.163,
+        "first_second_rms_dbfs": -41.0691,
+        "last_second_rms_dbfs": -89.9491,
+        "quiet_below_minus60": [
+          [
+            182.8,
+            183.5625
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          26.5,
+          124.8,
+          178.5
+        ]
+      },
+      "preview_sha256": "9ce7df89dd3917f4dfaaedb705322e0a65b3ce015be00500224c92b435cdcdfc"
+    },
+    {
+      "id": "S14",
+      "title": "Reusable ambient arrangement 01",
+      "pool": "native",
+      "identity": {
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "media": 219787535,
+        "native_segment_ms": 132000.0,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 128000.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 219787535,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 132000.0
+          }
+        ],
+        "other_stems": [],
+        "selected_rtpc": [],
+        "authored_reuse": [
+          {
+            "bank": "music_prologue",
+            "segment": 986167915,
+            "track": 368548582
+          },
+          {
+            "bank": "music_nomansgrad",
+            "segment": 235129791,
+            "track": 531517783
+          },
+          {
+            "bank": "music_nomansgrad",
+            "segment": 1016719127,
+            "track": 107156648
+          },
+          {
+            "bank": "music_nomansgrad",
+            "segment": 672000847,
+            "track": 162567553
+          },
+          {
+            "bank": "music_skellige",
+            "segment": 777116426,
+            "track": 594623122
+          },
+          {
+            "bank": "music_kaer_morhen",
+            "segment": 714817870,
+            "track": 799336472
+          },
+          {
+            "bank": "music_kaer_morhen",
+            "segment": 597315338,
+            "track": 528246798
+          },
+          {
+            "bank": "music_wyzima_castle",
+            "segment": 6320456,
+            "track": 1042731241
+          }
+        ],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "15578762a3af754a2986039a1db83e46e74da00a07cb619b3cb73e2c528f14f0"
+      },
+      "metrics": {
+        "seconds": 132.0,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -17.167,
+        "peak_downsampled_dbfs": -0.545,
+        "envelope_p10_dbfs": -25.005,
+        "envelope_p90_dbfs": -14.357,
+        "first_second_rms_dbfs": -41.7843,
+        "last_second_rms_dbfs": -60.1848,
+        "quiet_below_minus60": [
+          [
+            131.5,
+            132.0
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          6.9,
+          64.6,
+          122.9
+        ]
+      },
+      "preview_sha256": "d74dfa183e847fe7f9df604961a0160ddf96582b29db1451e9eb485cf63216f9"
+    },
+    {
+      "id": "S15",
+      "title": "What Lies Ahead",
+      "pool": "mp",
+      "identity": {
+        "source": "GWENT: Rogue Mage",
+        "name": "What Lies Ahead",
+        "wem": "924004613.wem",
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 189836.0208333333,
+            "name": ""
+          }
+        ],
+        "segment_ms": 189836.0208333333,
+        "editor_ms": 189836,
+        "assignments": [
+          {
+            "playlist_index": 1,
+            "track_index": 0,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 3,
+            "track_index": 15,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 4,
+            "track_index": 14,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 10,
+            "track_index": 10,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 16,
+            "track_index": 4,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 23,
+            "track_index": 15,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 42,
+            "track_index": 3,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 105,
+            "track_index": 7,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 124,
+            "track_index": 1,
+            "region": "Kaer Morhen",
+            "bank": "music_kaer_morhen"
+          },
+          {
+            "playlist_index": 126,
+            "track_index": 9,
+            "region": "Vizima",
+            "bank": "music_wyzima_castle"
+          },
+          {
+            "playlist_index": 128,
+            "track_index": 13,
+            "region": "Isle of Mists",
+            "bank": "music_misty_island"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 9493,
+          "samples": 9112129
+        },
+        "wem_sha256": "356fe4970a7e8deacc1862896ee583591b23113e223fcc581df1bfb5ce20e0f5",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 9112129,
+          "skip": 312,
+          "packets": 9493,
+          "seconds": 189.83602083333332
+        }
+      },
+      "metrics": {
+        "seconds": 189.836,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -18.804,
+        "peak_downsampled_dbfs": -2.483,
+        "envelope_p10_dbfs": -27.261,
+        "envelope_p90_dbfs": -15.149,
+        "first_second_rms_dbfs": -77.5553,
+        "last_second_rms_dbfs": -66.0077,
+        "quiet_below_minus60": [
+          [
+            189.2,
+            189.836
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          17.4,
+          43.2,
+          184.1
+        ]
+      },
+      "preview_sha256": "d0ae6e77edbee7e3f6dcfccac4fd8b5b4222a9c007213f00fc70ba3253c1d09e"
+    },
+    {
+      "id": "S16",
+      "title": "Southern ambient arrangement 01",
+      "pool": "native",
+      "identity": {
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "media": 265936293,
+        "native_segment_ms": 133333.333333333,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 4948.45360824742,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 123711.340206186,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 265936293,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": -0.0,
+            "duration": 133333.33333333334
+          }
+        ],
+        "other_stems": [],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "b3a22cc4d7d45390a9a9c8547d3ed822209b5bd09cb82cda9b85171b5d6e89de"
+      },
+      "metrics": {
+        "seconds": 133.333375,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -24.994,
+        "peak_downsampled_dbfs": -7.847,
+        "envelope_p10_dbfs": -33.216,
+        "envelope_p90_dbfs": -21.789,
+        "first_second_rms_dbfs": -51.9865,
+        "last_second_rms_dbfs": -80.7055,
+        "quiet_below_minus60": [
+          [
+            131.1,
+            133.333375
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          9.9,
+          101.1,
+          128.3
+        ]
+      },
+      "preview_sha256": "624241bec884d04fbcc6661d5ed5c343e7cca316cd9f1e89e530cdfdaece390d"
+    },
+    {
+      "id": "S17",
+      "title": "Untitled #026",
+      "pool": "mp",
+      "identity": {
+        "source": "GWENT",
+        "name": "Untitled #026",
+        "wem": "991195799.wem",
+        "media": 991195799,
+        "bank": "music_nomansgrad",
+        "segment": 420188195,
+        "tracks": [
+          803471185
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 104817.33333333334,
+            "name": ""
+          }
+        ],
+        "segment_ms": 104817.33333333334,
+        "editor_ms": 104817,
+        "assignments": [
+          {
+            "playlist_index": 4,
+            "track_index": 8,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 7,
+            "track_index": 5,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 16,
+            "track_index": 5,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 19,
+            "track_index": 0,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 36,
+            "track_index": 7,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 40,
+            "track_index": 0,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 105,
+            "track_index": 11,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 109,
+            "track_index": 9,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 115,
+            "track_index": 9,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 5242,
+          "samples": 5031232
+        },
+        "wem_sha256": "dc686459b7fc54a130d2b25b2f910e3407b09e1f0bafe0bcea18450267ecd710",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 5031232,
+          "skip": 312,
+          "packets": 5242,
+          "seconds": 104.81733333333334
+        }
+      },
+      "metrics": {
+        "seconds": 104.817375,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -19.922,
+        "peak_downsampled_dbfs": -1.756,
+        "envelope_p10_dbfs": -32.895,
+        "envelope_p90_dbfs": -16.622,
+        "first_second_rms_dbfs": -45.9641,
+        "last_second_rms_dbfs": -57.5308,
+        "quiet_below_minus60": [],
+        "low_energy_inspection_seconds": [
+          6.7,
+          37.1,
+          84.2
+        ]
+      },
+      "preview_sha256": "4a53564788634efad50db47037969ed56af27ac13710fc8c5b84ff5fac3d88a3"
+    },
+    {
+      "id": "S18",
+      "title": "Island alternate pads arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "media": 755958339,
+        "native_segment_ms": 155013.333333333,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 666.666666666667,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 152666.666666667,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 755958339,
+            "event": 0,
+            "play_at": -2000.0,
+            "begin": 2000.0,
+            "end": -0.0,
+            "duration": 157013.3333333333
+          }
+        ],
+        "other_stems": [],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "eda8cc370104655f6d18c4d489652d81934c0e65b8fa74f86a3fa03decc2b997"
+      },
+      "metrics": {
+        "seconds": 157.013375,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -20.039,
+        "peak_downsampled_dbfs": -0.617,
+        "envelope_p10_dbfs": -34.673,
+        "envelope_p90_dbfs": -15.518,
+        "first_second_rms_dbfs": -97.6443,
+        "last_second_rms_dbfs": -75.9556,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            2.5
+          ],
+          [
+            155.3,
+            157.013375
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          31.7,
+          61.0,
+          112.8
+        ]
+      },
+      "preview_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc"
+    },
+    {
+      "id": "S19",
+      "title": "Distant Memories",
+      "pool": "mp",
+      "identity": {
+        "source": "Nyghtfall",
+        "name": "Distant Memories",
+        "wem": "997260822.wem",
+        "media": 997260822,
+        "bank": "music_skellige",
+        "segment": 294070440,
+        "tracks": [
+          1352182480
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 183815.02083333334,
+            "name": ""
+          }
+        ],
+        "segment_ms": 183815.02083333334,
+        "editor_ms": 183815,
+        "assignments": [
+          {
+            "playlist_index": 77,
+            "track_index": 5,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          },
+          {
+            "playlist_index": 88,
+            "track_index": 4,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          },
+          {
+            "playlist_index": 91,
+            "track_index": 0,
+            "region": "Skellige",
+            "bank": "music_skellige"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 9192,
+          "samples": 8823121
+        },
+        "wem_sha256": "20041802eadc372105b3e3da8b6354c6d7bc98c46ef6b3cfa55d9197f758b89b",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 8823121,
+          "skip": 312,
+          "packets": 9192,
+          "seconds": 183.81502083333334
+        }
+      },
+      "metrics": {
+        "seconds": 183.815,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -16.59,
+        "peak_downsampled_dbfs": -1.371,
+        "envelope_p10_dbfs": -20.519,
+        "envelope_p90_dbfs": -14.308,
+        "first_second_rms_dbfs": -65.6725,
+        "last_second_rms_dbfs": -65.3185,
+        "quiet_below_minus60": [
+          [
+            0.0,
+            0.5
+          ],
+          [
+            182.8,
+            183.815
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          16.2,
+          36.7,
+          138.5
+        ]
+      },
+      "preview_sha256": "0b90c4967ac069a226da46897977d89ea872ce01ac61098b86d0d345f97f2753"
+    },
+    {
+      "id": "S20",
+      "title": "City night - complete arrangement",
+      "pool": "native",
+      "identity": {
+        "original": "music\\nomansgrad\\novigrad_rich_district\\tw3_novigrad_04_exploration_night_14.02.06.wav",
+        "bank": "music_nomansgrad",
+        "segment": 894778287,
+        "track": 1020785585,
+        "media": 841561382,
+        "native_segment_ms": 144000.0,
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 140800.0,
+            "name": ""
+          }
+        ],
+        "clips": [
+          {
+            "track": 0,
+            "source": 841561382,
+            "event": 0,
+            "play_at": 0.0,
+            "begin": 0.0,
+            "end": 0.0,
+            "duration": 144000.0
+          }
+        ],
+        "other_stems": [],
+        "selected_rtpc": [],
+        "authored_reuse": [],
+        "preview_note": "Full original source; base stem only where noted. Not a simulated Wwise mix; segment and file clocks can differ.",
+        "original_sha256": "efd06227683008328ff5781367c23bc02e4d1ebf71f7564762f69177cd3444ad"
+      },
+      "metrics": {
+        "seconds": 144.0,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -15.93,
+        "peak_downsampled_dbfs": -0.582,
+        "envelope_p10_dbfs": -24.962,
+        "envelope_p90_dbfs": -12.205,
+        "first_second_rms_dbfs": -20.9363,
+        "last_second_rms_dbfs": -74.3386,
+        "quiet_below_minus60": [
+          [
+            142.4,
+            144.0
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          6.3,
+          63.5,
+          132.6
+        ]
+      },
+      "preview_sha256": "822ad35c9658d9515a85cfc3582a95ad8a91f9b42865cd1235e73c6204497719"
+    },
+    {
+      "id": "S21",
+      "title": "Peaceful Moments",
+      "pool": "mp",
+      "identity": {
+        "source": "The Witcher",
+        "name": "Peaceful Moments",
+        "wem": "932143796.wem",
+        "media": 932143796,
+        "bank": "music_nomansgrad",
+        "segment": 419658225,
+        "tracks": [
+          1188534161
+        ],
+        "markers": [
+          {
+            "id": 43573010,
+            "position": 0.0,
+            "name": ""
+          },
+          {
+            "id": 1539036744,
+            "position": 306543.0208333334,
+            "name": ""
+          }
+        ],
+        "segment_ms": 306543.0208333334,
+        "editor_ms": 306543,
+        "assignments": [
+          {
+            "playlist_index": 19,
+            "track_index": 11,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 27,
+            "track_index": 11,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 28,
+            "track_index": 9,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 31,
+            "track_index": 8,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 40,
+            "track_index": 10,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 41,
+            "track_index": 10,
+            "region": "Velen, Novigrad & Oxenfurt",
+            "bank": "music_nomansgrad"
+          },
+          {
+            "playlist_index": 104,
+            "track_index": 5,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 109,
+            "track_index": 1,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          },
+          {
+            "playlist_index": 114,
+            "track_index": 6,
+            "region": "Toussaint",
+            "bank": "music_toussaint"
+          }
+        ],
+        "preview_note": "Unchanged compressed packets, standard Ogg wrapper. Display title/source are MP metadata, not independently authenticated credits.",
+        "packet_readback": {
+          "passed": true,
+          "packets_exact": 15328,
+          "samples": 14714065
+        },
+        "wem_sha256": "65ff338edb7adc021deb93cccc42fbace23b269df3a0cc18ee1f2ad6c9510441",
+        "opus_header": {
+          "channels": 2,
+          "rate": 48000,
+          "samples": 14714065,
+          "skip": 312,
+          "packets": 15328,
+          "seconds": 306.54302083333334
+        }
+      },
+      "metrics": {
+        "seconds": 306.543,
+        "analysis_rate": 8000,
+        "analysis_channels": 2,
+        "downsampled_analysis_only": true,
+        "rms_dbfs": -27.255,
+        "peak_downsampled_dbfs": -11.618,
+        "envelope_p10_dbfs": -33.646,
+        "envelope_p90_dbfs": -23.921,
+        "first_second_rms_dbfs": -84.6166,
+        "last_second_rms_dbfs": -108.8956,
+        "quiet_below_minus60": [
+          [
+            305.7,
+            306.543
+          ]
+        ],
+        "low_energy_inspection_seconds": [
+          215.5,
+          239.8,
+          299.8
+        ]
+      },
+      "preview_sha256": "6aeb041215401bf9603c8798822b548c17869928ee9b2251e49c4b033d6500a3"
+    }
+  ]
+}
