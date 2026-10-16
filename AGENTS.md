@@ -14,8 +14,8 @@ compatibility patch and our private 0.8.6 work. **Read
 Locally pin the new source, compare **upstream 0.8.0 → customized installed UI
 → interim 0.8.6/official Hoods compatibility → upstream 0.8.7**, rebase only
 missing changes without removing accepted custom modifications, and build a
-private compatible shared-menu baseline. The accepted custom HUD v4/RC2 is frozen;
-do not import the rejected Gear-grid v1 presentation into the baseline. Other
+private compatible shared-menu baseline. The installed accepted custom HUD v4/RC2 is frozen. **Audit 0.8.7 HUD/Buttons for useful missing upstream changes; optionally prepare separately testable selective ports without replacing or regressing RC2.**
+Do not import the rejected Gear-grid v1 presentation into the baseline. Other
 older integration/audit documents are historical, not authority to overwrite
 current code. No live Vortex/settings/merge modifications without approval.
 
