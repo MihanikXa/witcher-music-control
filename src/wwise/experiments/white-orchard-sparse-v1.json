@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "purpose": "isolated-authoring-experiment-not-release",
+  "original_music_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+  "selected": "{4A23933D-BE41-4C79-BED2-337D24C605EA}",
+  "selected_short_id": 133462974,
+  "parent": "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+  "phrase": "{BC6F0095-6B89-4085-B02F-810032D1FD65}",
+  "rest": "{75160B79-1F13-4293-B9C8-84562ACFCD54}",
+  "playlist_root": "{253E9486-0F36-409E-8BE8-9496DE42FD8D}",
+  "music_item": "{E628DC21-010A-49FB-BA2F-DDB4B588857B}",
+  "rest_item": "{42F12789-7847-4193-AF93-64D2FEB84C2C}",
+  "removed_group": "{C9EB0436-E463-4A48-8992-0C484FC3CB04}",
+  "rest_loops": 3,
+  "rest_seconds": 30,
+  "other_local_state_scopes": [
+    "{C38A35E3-857B-4035-9852-B3F01E78ADA6}",
+    "{DB2D1857-52A0-4562-BA04-3104EB7CA2AA}",
+    "{7F25E162-CD2C-4E73-8A67-E3DCB41564BA}"
+  ],
+  "policy": {
+    "fact": "Selected day playlist is generic-only; native phrase exits at 140s with an 8s post-exit tail; original rest segment is 10s.",
+    "approved_experiment": "Finite deterministic 30s rest, native composition and outer transitions unchanged; selected exploration gain restored only in isolated candidate.",
+    "unresolved": "No final Sparse pacing, thematic-intent classification, retail behavior or deployment is approved."
+  }
+}

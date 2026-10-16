@@ -1,0 +1,425 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "audible-selected-native-gain",
+      "passed": true
+    },
+    {
+      "name": "Minimal-control-suppressed",
+      "passed": true
+    },
+    {
+      "name": "native-rest-voice-selected",
+      "passed": true
+    },
+    {
+      "name": "two-measured-environmental-rests",
+      "passed": true
+    },
+    {
+      "name": "audible-second-and-third-phrase",
+      "passed": true
+    },
+    {
+      "name": "master-100-initial",
+      "passed": true
+    },
+    {
+      "name": "master-50",
+      "passed": true
+    },
+    {
+      "name": "master-100-restored",
+      "passed": true
+    },
+    {
+      "name": "intensity-layer1:native-response",
+      "passed": true
+    },
+    {
+      "name": "intensity-layer2:native-response",
+      "passed": true
+    },
+    {
+      "name": "place-daynight-music:other-generic-selections-suppressed",
+      "passed": true
+    },
+    {
+      "name": "place-daynight-music:ordinary-dialogue-suppressed",
+      "passed": true
+    },
+    {
+      "name": "place-daynight-rest:other-generic-selections-suppressed",
+      "passed": true
+    },
+    {
+      "name": "place-daynight-rest:ordinary-dialogue-suppressed",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:native:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:native:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:native:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:native:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:minimal:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:sparse:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:sparse:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:sparse:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:sparse:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-music-authored:native-outro-gain",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:native:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:native:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:native:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:native:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:minimal:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:sparse:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:sparse:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:sparse:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:sparse:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:native-outro-gain",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:interrupts-active-rest",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-early:no-generic-music-prelude",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:native:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:native:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:native:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:native:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:minimal:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:sparse:natural-complete-outro",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:sparse:outro-after-E",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:sparse:combat-responds",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:sparse:actual-threat-values",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:native-outro-gain",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:interrupts-active-rest",
+      "passed": true
+    },
+    {
+      "name": "combat-rest-late:no-generic-music-prelude",
+      "passed": true
+    },
+    {
+      "name": "authored-master:audible",
+      "passed": true
+    },
+    {
+      "name": "authored-master:native-gain",
+      "passed": true
+    },
+    {
+      "name": "protected-world:audible",
+      "passed": true
+    },
+    {
+      "name": "protected-world:native-gain",
+      "passed": true
+    },
+    {
+      "name": "gwent:audible",
+      "passed": true
+    },
+    {
+      "name": "gwent:native-gain",
+      "passed": true
+    }
+  ],
+  "fixtures_only": true,
+  "bank_generated": false,
+  "retail_validated": false,
+  "combat": {
+    "combat-music-authored": {
+      "native": {
+        "combat_accepted": 6.065154699999766,
+        "combat_voice_latency": 1.3517006000001857,
+        "E_accepted": 34.08862939999926,
+        "outro_first": 34.80893589999869,
+        "outro_last": 39.646699299999455,
+        "outro_span": 4.837763400000767,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      },
+      "minimal": {
+        "combat_accepted": 6.015750700000353,
+        "combat_voice_latency": 1.4908844000001409,
+        "E_accepted": 34.21039949999977,
+        "outro_first": 34.93045170000005,
+        "outro_last": 39.75185679999959,
+        "outro_span": 4.821405099999538,
+        "outro_middle_db": -219.0,
+        "outro_peak": -29.42652130126953
+      },
+      "sparse": {
+        "combat_accepted": 6.015927000000374,
+        "combat_voice_latency": 1.5219223000003694,
+        "E_accepted": 34.054751900001065,
+        "outro_first": 35.026306300000215,
+        "outro_last": 39.848253600001044,
+        "outro_span": 4.821947300000829,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      }
+    },
+    "combat-rest-early": {
+      "native": {
+        "combat_accepted": 151.00946769999973,
+        "combat_voice_latency": 1.4795702000010351,
+        "E_accepted": 173.11715600000025,
+        "outro_first": 173.86557470000116,
+        "outro_last": 178.70981410000059,
+        "outro_span": 4.844239399999424,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      },
+      "minimal": {
+        "combat_accepted": 151.11117449999983,
+        "combat_voice_latency": 1.292301999999836,
+        "E_accepted": 173.04016489999958,
+        "outro_first": 173.80989319999935,
+        "outro_last": 178.82635709999886,
+        "outro_span": 5.016463899999508,
+        "outro_middle_db": -219.0,
+        "outro_peak": -30.76543426513672
+      },
+      "sparse": {
+        "combat_accepted": 151.08462549999967,
+        "combat_voice_latency": 1.0819100999997318,
+        "E_accepted": 173.18924229999902,
+        "outro_first": 174.36884110000028,
+        "outro_last": 179.1147067999991,
+        "outro_span": 4.745865699998831,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      }
+    },
+    "combat-rest-late": {
+      "native": {
+        "combat_accepted": 166.0833531999997,
+        "combat_voice_latency": 1.2990324000002147,
+        "E_accepted": 188.2077688999998,
+        "outro_first": 188.97844110000005,
+        "outro_last": 193.7310221000007,
+        "outro_span": 4.752581000000646,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      },
+      "minimal": {
+        "combat_accepted": 166.215245899999,
+        "combat_voice_latency": 1.3447923000003357,
+        "E_accepted": 188.1038615999987,
+        "outro_first": 188.90752819999943,
+        "outro_last": 193.76954739999928,
+        "outro_span": 4.86201919999985,
+        "outro_middle_db": -219.0,
+        "outro_peak": -32.35382843017578
+      },
+      "sparse": {
+        "combat_accepted": 166.14913569999953,
+        "combat_voice_latency": 0.8738520000006247,
+        "E_accepted": 188.01724979999926,
+        "outro_first": 189.2279638,
+        "outro_last": 194.1620540999993,
+        "outro_span": 4.934090299999298,
+        "outro_middle_db": -19.0,
+        "outro_peak": -19.0
+      }
+    }
+  },
+  "intensity": {
+    "layer1": {
+      "native": [
+        -17.0,
+        -17.0,
+        -17.0
+      ],
+      "sparse": [
+        -17.0,
+        -17.0,
+        -17.0
+      ]
+    },
+    "layer2": {
+      "native": [
+        -783.6162109375,
+        -19.0,
+        -19.0
+      ],
+      "sparse": [
+        -783.6162109375,
+        -19.0,
+        -19.0
+      ]
+    }
+  },
+  "rests_audio_seconds": [
+    [
+      148.05,
+      169.95000000000002
+    ],
+    [
+      318.05,
+      339.95000000000005
+    ]
+  ],
+  "sources": {
+    "sparse": {
+      "snapshot_sha256": "848ff8dc4cee8a6f868dd276a22ac70757a6df58e4eab22622bd985af664264a",
+      "all_work_units": 1508,
+      "changed_units": [
+        "Interactive Music Hierarchy/music.wwu"
+      ],
+      "media_exact": 47
+    },
+    "native": {
+      "snapshot_sha256": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251",
+      "all_work_units": 1508,
+      "changed_units": [],
+      "media_exact": 47
+    },
+    "minimal": {
+      "snapshot_sha256": "e1c658d22d6901d169afc243f2c615a6f0d83df7867ee54fef0ce52d30cbf3da",
+      "all_work_units": 1508,
+      "changed_units": [
+        "Interactive Music Hierarchy/music.wwu"
+      ],
+      "media_exact": 47
+    }
+  },
+  "event_work_units_reviewed": 542,
+  "controls": {
+    "native": {
+      "raw_sha256": "4fd592a45cc7157814e72e92de40170df47a9c9256540da9d0fae981060caa71",
+      "measurements_sha256": "19a75bb33603d19db7b0c95e4e0b9041c3aa5584151bc55c2bbfb44019dfcf78"
+    },
+    "minimal": {
+      "raw_sha256": "30ef5c9e1c1d9b307fd7d55fa8702f41ec638e3d2afad14b52c77d848c17d03d",
+      "measurements_sha256": "972da0b9808f8424dd8d38acf40d0fcc39f0ca39f1d47b9617355bfb1ec22489"
+    },
+    "sparse": {
+      "raw_sha256": "82cbc7d59b85b84635b6ce01f9c5c40bae9249f95ca8770dbe33eb57941df184",
+      "measurements_sha256": "080d4266284a0326b13d2374fe3d4c18208f69eceb2cbb20545cfc3ad22e6c48"
+    }
+  },
+  "supplemental_authored_rest": {
+    "passed": true,
+    "controls": {
+      "native": {
+        "event_accepted": 151.18060609999884,
+        "first_authored_voice": 156.12322929999937,
+        "steady_authored_db": -22.0,
+        "raw_sha256": "86cd86dbced93e664c764686e8c4cf1f9536c3716c05f37dd6bfa49950766ed2",
+        "measurements_sha256": "cf5aedeb4c5d1ab8255be4d17992ad1153a093bb7ea05b4b45f316142c03e264"
+      },
+      "minimal": {
+        "event_accepted": 151.2598694999997,
+        "first_authored_voice": 156.14113960000032,
+        "steady_authored_db": -22.0,
+        "raw_sha256": "557da56d8230235e116f8f346293c8e87521b2d15cf47cca8abf20b1e13feb82",
+        "measurements_sha256": "53d6475de534ba3eb129f0c62cdb705f59ec2052d1fdcd6c1ea7d3be66dd6f4f"
+      },
+      "sparse": {
+        "event_accepted": 151.19738750000033,
+        "first_authored_voice": 156.11747599999944,
+        "steady_authored_db": -22.0,
+        "raw_sha256": "f95d35f997492716274a046a451e984277927573b60e5a8c343595fc194a991d",
+        "measurements_sha256": "81be4a5bd3e19799eb43491fb3adfbe1f6e4a644d7b4af257cdc40fe6d2a94bc",
+        "active_rest_before_event": true
+      }
+    },
+    "fixtures_only": true
+  }
+}
