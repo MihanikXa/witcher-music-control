@@ -1,0 +1,3220 @@
+{
+  "upstream_archive": {
+    "archive": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\reference\\ink-and-iron-0.8.7\\archives\\Ink and Iron - All in One 13111 0.8.7 2026-10-16T15-39Z lPL5EVl9W.zip",
+      "sha256": "1dbc4884fb61418af69066f972eafab61be373ed28ed1ef05c06bb091b73a56b",
+      "verified_extracted_members": 84
+    }
+  },
+  "resource_matrix": "research/menus087-migration-matrix.csv",
+  "upstream_changed_class_names": {
+    "panel_common": [
+      "red\\game\\witcher3\\menus\\common_menu\\MenuCommon.as"
+    ],
+    "panel_inventory": [
+      "PaperdollRef.as",
+      "red\\game\\witcher3\\managers\\ContextInfoManager.as",
+      "red\\game\\witcher3\\slots\\SlotBase.as",
+      "red\\game\\witcher3\\tooltips\\TooltipInventory.as",
+      "red\\game\\witcher3\\tooltips\\TooltipStatRenderer.as",
+      "red\\game\\witcher3\\menus\\inventory_menu\\MenuInventory.as",
+      "red\\game\\witcher3\\menus\\inventory_menu\\ModulePaperdoll.as"
+    ],
+    "panel_ingamemenu": [
+      "red\\game\\witcher3\\menus\\mainmenu\\OptionListModule.as"
+    ],
+    "panel_alchemy": [
+      "red\\game\\witcher3\\menus\\crafting\\ItemCraftingModule.as"
+    ],
+    "panel_crafting": [
+      "red\\game\\witcher3\\menus\\crafting\\ItemCraftingModule.as"
+    ],
+    "panel_blacksmith": [
+      "red\\game\\witcher3\\slots\\SlotBase.as",
+      "red\\game\\witcher3\\menus\\blacksmith\\ModuleBlacksmithGrid.as"
+    ],
+    "panel_worldmap": [
+      "red\\game\\witcher3\\data\\StaticMapPinData.as",
+      "red\\game\\witcher3\\menus\\worldmap\\StaticMapPinDescribed.as"
+    ],
+    "popup_item_selection": [
+      "red\\game\\witcher3\\slots\\SlotBase.as"
+    ],
+    "panel_transmog": [
+      "red\\game\\witcher3\\slots\\SlotBase.as",
+      "red\\game\\witcher3\\menus\\blacksmith\\TransmogMenu.as"
+    ],
+    "hud_wolfstatbars": [
+      "red\\game\\witcher3\\hud\\modules\\HudModuleWolfHead.as"
+    ],
+    "hud_journalupdate": [
+      "red\\game\\witcher3\\hud\\modules\\HudModuleJournalUpdate.as",
+      "red\\game\\witcher3\\hud\\modules\\journalupdate\\QuestFinishedWindow.as"
+    ],
+    "hud_radialmenu": [
+      "red\\game\\witcher3\\hud\\modules\\HudModuleRadialMenu.as"
+    ]
+  },
+  "hud_methods": {
+    "HudModuleWolfHead": {
+      "0.8": [
+        "iaiSetup",
+        "iaiSignRing",
+        "iaiUpdate",
+        "iaiDiamond",
+        "iaiRedraw",
+        "iaiDrawBar",
+        "iaiRatio"
+      ],
+      "0.8.6": [
+        "iaiSetAdrStyle",
+        "iaiSetup",
+        "iaiSignRing",
+        "iaiUpdate",
+        "iaiArc",
+        "iaiDrawAdr",
+        "iaiDiamond",
+        "iaiRedraw",
+        "iaiDrawBar",
+        "iaiRatio"
+      ],
+      "0.8.7": [
+        "iaiSetXpStyle",
+        "iaiSetMedStyle",
+        "iaiApplyMed",
+        "iaiHeadDone",
+        "iaiSetAdrStyle",
+        "iaiSetup",
+        "iaiSignRing",
+        "iaiUpdate",
+        "iaiArc",
+        "iaiDrawAdr",
+        "iaiDiamond",
+        "iaiRedraw",
+        "iaiDrawBar",
+        "iaiRatio"
+      ],
+      "installed": [
+        "iaiSetup",
+        "iaiSignRing",
+        "iaiUpdate",
+        "iaiDiamond",
+        "iaiRedraw",
+        "iaiDrawBar",
+        "iaiRatio"
+      ]
+    },
+    "HudModuleJournalUpdate": {
+      "0.8": [
+        "iaiSetQuestStyle"
+      ],
+      "0.8.6": [
+        "iaiSetQuestStyle",
+        "iaiSetQuestVanilla",
+        "iaiHudLayout"
+      ],
+      "0.8.7": [
+        "iaiSetQuestStyle",
+        "iaiSetQuestType",
+        "iaiSetQuestVanilla",
+        "iaiHudLayout"
+      ],
+      "installed": [
+        "iaiSetQuestStyle"
+      ]
+    },
+    "QuestFinishedWindow": {
+      "0.8": [
+        "iaiTf",
+        "iaiText",
+        "iaiLoz",
+        "iaiTex",
+        "iaiTexDone",
+        "iaiTexErr",
+        "iaiHideArt",
+        "iaiCrest",
+        "iaiBuild",
+        "iaiXpString",
+        "iaiDrawXp",
+        "iaiPlace",
+        "iaiFrame"
+      ],
+      "0.8.6": [
+        "iaiTf",
+        "iaiText",
+        "iaiLoz",
+        "iaiTex",
+        "iaiTexDone",
+        "iaiTexErr",
+        "iaiHideArt",
+        "iaiCrest",
+        "iaiBuild",
+        "iaiXpString",
+        "iaiDrawXp",
+        "iaiLayPt",
+        "iaiPlace",
+        "iaiFrame"
+      ],
+      "0.8.7": [
+        "iaiTf",
+        "iaiText",
+        "iaiLoz",
+        "iaiTex",
+        "iaiTexDone",
+        "iaiTexErr",
+        "iaiHideArt",
+        "iaiCrest",
+        "iaiBuild",
+        "iaiXpString",
+        "iaiDrawXp",
+        "iaiLayPt",
+        "iaiPlace",
+        "iaiFrame"
+      ],
+      "installed": [
+        "iaiTf",
+        "iaiText",
+        "iaiLoz",
+        "iaiTex",
+        "iaiTexDone",
+        "iaiTexErr",
+        "iaiHideArt",
+        "iaiCrest",
+        "iaiBuild",
+        "iaiXpString",
+        "iaiDrawXp",
+        "iaiPlace",
+        "iaiFrame"
+      ]
+    },
+    "HudModuleRadialMenu": {
+      "0.8": [
+        "iaiDeg",
+        "iaiPol",
+        "iaiField",
+        "iaiTf",
+        "iaiSetText",
+        "iaiTrans",
+        "iaiSetup",
+        "iaiCircle",
+        "iaiLine",
+        "iaiDrawBg",
+        "iaiDrawRule",
+        "iaiColoredSigns",
+        "iaiSignCol",
+        "iaiGlyph",
+        "iaiIsSign",
+        "iaiHideField",
+        "iaiFieldName",
+        "iaiCount",
+        "iaiEquipped",
+        "iaiTick",
+        "iaiRedraw",
+        "iaiBand",
+        "iaiDrawPtr",
+        "iaiDrawCentre",
+        "iaiCtrLoaded",
+        "iaiInfoUpdate",
+        "iaiDesc"
+      ],
+      "0.8.7": [
+        "iaiDeg",
+        "iaiPol",
+        "iaiField",
+        "iaiTf",
+        "iaiSetText",
+        "iaiTrans",
+        "iaiSetup",
+        "iaiCircle",
+        "iaiLine",
+        "iaiDrawBg",
+        "iaiDrawRule",
+        "iaiColoredSigns",
+        "iaiSignCol",
+        "iaiGlyph",
+        "iaiIsSign",
+        "iaiFitIcon",
+        "iaiHideField",
+        "iaiFieldName",
+        "iaiCount",
+        "iaiEquipped",
+        "iaiTick",
+        "iaiRedraw",
+        "iaiBand",
+        "iaiDrawPtr",
+        "iaiDrawCentre",
+        "iaiCtrLoaded",
+        "iaiInfoUpdate",
+        "iaiDesc"
+      ],
+      "installed": [
+        "iaiDeg",
+        "iaiPol",
+        "iaiField",
+        "iaiTf",
+        "iaiSetText",
+        "iaiTrans",
+        "iaiSetup",
+        "iaiCircle",
+        "iaiLine",
+        "iaiDrawBg",
+        "iaiDrawRule",
+        "iaiColoredSigns",
+        "iaiSignCol",
+        "iaiGlyph",
+        "iaiIsSign",
+        "iaiHideField",
+        "iaiFieldName",
+        "iaiCount",
+        "iaiEquipped",
+        "iaiTick",
+        "iaiRedraw",
+        "iaiBand",
+        "iaiDrawPtr",
+        "iaiDrawCentre",
+        "iaiCtrLoaded",
+        "iaiInfoUpdate",
+        "iaiDesc"
+      ]
+    }
+  },
+  "resources": [
+    {
+      "resource": "gameplay/gui_new/swf/common/panel_common.redswf",
+      "input_sha256": "bf33bface6bf6145fd10a1d828790e0b32004c8f0559d21b339e644385089fa7",
+      "output_sha256": "6e877c55b8a14bbd88a9caf85b5a492f7fae9d3dea5e738029ff1ee05dba1c1a",
+      "classes": [
+        {
+          "class_name": "MenuCommon",
+          "input_sha256": "6ff86b09eab137afa27699470b6e9d4a43f97522ff7978ebc70b178a80141e6d",
+          "output_sha256": "23400821156de827f8aee71fb2454e2b54e6792243cb38b6ba9e75db1ceab136"
+        },
+        {
+          "class_name": "TopBarNew",
+          "input_sha256": "61870b895bd852423cf208596bcbc43fc139c338a6275f08afb1b1e5daeb314b",
+          "output_sha256": "66be5a2237919ce99925e8637798d4863c5947a327dc5a1cb96377a23f56ae96"
+        },
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "39f61333cc249e3ba3daebd002da5ad62374b3fefd91c4dbabc0557d978d8037",
+          "output_sha256": "cf9e3879dfdd541d88a696a563902626140224cf9d4055726cfc469fbb42b8a9"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "7aa67b6f38e8dd0658803298b563b9fc0b6113bf2a0979cc13fbf3162839904d",
+          "output_sha256": "b197f5ce2be2e23c3c99e6f80649f3cd55458e827644b185a3783eb36341f2f7"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9123
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "79e068f44adc8e74169a1b6f2800408eb3fb8eeb789db8fc8035440c9ee1ab95",
+        "native_base_sha256": "79e068f44adc8e74169a1b6f2800408eb3fb8eeb789db8fc8035440c9ee1ab95",
+        "output_sha256": "6e877c55b8a14bbd88a9caf85b5a492f7fae9d3dea5e738029ff1ee05dba1c1a",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-common{b1c72433}_i1.dds",
+            "width": 1020,
+            "height": 976,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "7acadb9f91f35b2d6d9837b4aebb5c8996121edeaa9ef4499f9cf84a1e3357f6"
+          },
+          {
+            "linkage": "panel-common{b1c72433}_i18.dds",
+            "width": 1024,
+            "height": 1016,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "b241e841caa6d809fe9559338d16e6cf10009891ce9b5d3a396123c2e4a7eb5e"
+          },
+          {
+            "linkage": "panel-common{b1c72433}_i18d.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 181
+      },
+      "retained_public_protected_declarations": 215
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf",
+      "input_sha256": "1f2be1e5f3b2cf57c7060145a6205ad0ee2c61bf69a128db167b2dfb732e7ab1",
+      "output_sha256": "e0d34e7e313a8f2201e4b8f20401c6ac961e46226647a13280d9f9df032e53a4",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1b2800b23706f9d35161a26a56b8220a0ddc7478268cefe4436a26e1e43e3f41",
+          "output_sha256": "419acf0b826fe496e5f3608873f57ce42618873ad41b989c86ed1bf580c29a2f"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "3": 1106,
+          "1": 8167
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "57f5383524e0dc543fc2a05771170d16f9c0d9fedc6bac218412305daef53d40",
+        "native_base_sha256": "57f5383524e0dc543fc2a05771170d16f9c0d9fedc6bac218412305daef53d40",
+        "output_sha256": "e0d34e7e313a8f2201e4b8f20401c6ac961e46226647a13280d9f9df032e53a4",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i1.dds",
+            "width": 1016,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "ff888c728ef889fe3a52cdc6be14144af2235c5936c7cd0432e07d9962026a3e"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i2.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "d5645f702a8656dac978a482ab1cbb5783a9f23fce0c4017da62f9903dfc2726"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i3.dds",
+            "width": 1024,
+            "height": 1016,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "50f44577528cfaa0cd3c38cd1eb1c53cf0c13ebc72c485e1909d5e119d567bff"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i7.dds",
+            "width": 976,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "c5d7e7c80e622e8721de8fc50014695bc50d3777fae08a865f2460ba40b79daf"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i4c.dds",
+            "width": 1548,
+            "height": 752,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "17bef8c3c5e9ed248cfd30fb3230a7868615626460ec5ef2dcdb0696268ef772"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i67.dds",
+            "width": 1492,
+            "height": 16,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "82561dc4630c160ef3f8004af1503532b3941c477cc112362b3fa06482000a70"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i9c.dds",
+            "width": 976,
+            "height": 864,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "766b68b54763759277a43c7c2ef6cd70e12f78f6c5089ae08fa565ae8bb226c6"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_ife.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i12a.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "781aa8bb42d87d8f994d65106a875d0dc6234e8ab11589111f7760b2d505e2cb"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i12e.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "4b4fafe618a040105005e82f2fe2dff842970c2e7a68f69ccb008f08051c5fab"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i130.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "923e2135869411d753b0b798948d9a60176ff696351c30830899fe6a14ec9026"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i132.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "6460ed29cc03535d875f25bd5c51ef354efead4732365df4de7d74e5eaa0d919"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i134.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "de527e5a64f183b2268ac65338778117adaac84d6679c54daaf2e3a8f68fd7a1"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i195.dds",
+            "width": 3840,
+            "height": 2160,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "e712205d9569f8c50222a216e7b1b978629d2f3496d3888bfdea96c2d64b9a5c"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i1a4.dds",
+            "width": 1268,
+            "height": 560,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "ef17816df27672260be8aca454c8c98cf0fa8626e081972712ab1f23dfa92fff"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i1ee.dds",
+            "width": 1568,
+            "height": 520,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "208a25d05ee9f77213658bea6898de7e31977c5865324f777dc66cda3db2048d"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i258.dds",
+            "width": 1920,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a1f40d7062164c2423d3ca0f47dd116c17db1e4cb578bd0257d89de9f389b136"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i265.dds",
+            "width": 1920,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "cf08107d2974ba92b55046e2220fcaa7a04928cf06f19fd17a08cb0d7e56664b"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i2aa.dds",
+            "width": 400,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bcfd0d37cbc86bf85e10b4591a24082aa53addef9620762443fe88877b061bc2"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i2af.dds",
+            "width": 1024,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "8768ddd00268ee583a1fa3b41176d78554201e7c5c89a8f22d899bad5b3e8146"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i2b3.dds",
+            "width": 1024,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bda574e66965ca1544d91f954dd97fe2a6e74cfda9f8ee75a7b9e945126f337a"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i31b.dds",
+            "width": 1404,
+            "height": 688,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "644583a0dfdcf36f11ec556eba0f8d990c8ad3b52d22e6a45b733847629c0a64"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i319.dds",
+            "width": 1420,
+            "height": 620,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "cc257da37b512cb9e9cc8d4d99d4fb0f5aaeb4016cf28219d47f02b662a99805"
+          },
+          {
+            "linkage": "panel-ingamemenu{6a4fe923}_i318.dds",
+            "width": 1376,
+            "height": 316,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "ddd97329d0b0639d5f71b83a5d0370af3e92c86cfc02e5523b080db709a36021"
+          }
+        ],
+        "image_links": 24,
+        "rectangles": 233
+      },
+      "retained_public_protected_declarations": 98
+    },
+    {
+      "resource": "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf",
+      "input_sha256": "31f6d5ba8359097587ab71d6b3a3cef0f656db52e029c5f21816f5721b50dc17",
+      "output_sha256": "0dfd8cfdc57b852d37b49f56f81d8d8329fc30d9d45cf86ce7c52512f140ddf5",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 2656,
+          "1": 6584
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "5e89fce56785456a0d5b021f94e72d529f0fcb8b45c948c7558529b7672837e2",
+        "native_base_sha256": "5e89fce56785456a0d5b021f94e72d529f0fcb8b45c948c7558529b7672837e2",
+        "output_sha256": "0dfd8cfdc57b852d37b49f56f81d8d8329fc30d9d45cf86ce7c52512f140ddf5",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-meditation-clock{742eda53}_i1.dds",
+            "width": 1012,
+            "height": 400,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "501b1eb9f99738a611fe23ecdb3bda39f5f207e385fc092a5dcb3a99bfc0190f"
+          },
+          {
+            "linkage": "panel-meditation-clock{742eda53}_i11.dds",
+            "width": 1016,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "f3719481dcfc637ca01f799d3982d57c6174837ee87bf1908f6ac192339d7a56"
+          },
+          {
+            "linkage": "panel-meditation-clock{742eda53}_i4a.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-meditation-clock{742eda53}_ifd.dds",
+            "width": 1196,
+            "height": 964,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "adab7fd8f849ac3e69382801c8094eef721e0976ee4fdfe80f9f9d30b37252bd"
+          },
+          {
+            "linkage": "panel-meditation-clock{742eda53}_i100.dds",
+            "width": 1516,
+            "height": 912,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a27eb87c56bbc3a84a18b91f8a578d34a9dcb8ca6e039ce9383263c394d6b0ac"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 147
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+      "input_sha256": "10c63da7879ed48779c7e68c4cae8efaf17b71b83c2521f4fe1bc6825f3de9bd",
+      "output_sha256": "443fb8746df1108a697b894f980727880ffca9c5ed5b0f135c7a76446eaa0b16",
+      "classes": [
+        {
+          "class_name": "SlotPaperdoll",
+          "input_sha256": "54a7faf2d20380f0ac4f7bc522b31e8c3d8dcdb9163abe209965cb4684dd9f91",
+          "output_sha256": "7964540159a00706db0dee98816e73ce117e6ae5a774edef3c23bc2ea8545927"
+        },
+        {
+          "class_name": "ItemDataStub",
+          "input_sha256": "95d960e63b5ec5d050a0df0aee7b597196274ebb0dbd4e98339a7c60bf58ab02",
+          "output_sha256": "a1d2dab567f55490976eaedabe110eae20afec6ecee13f1b6ee766edf5ce4bfc"
+        },
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "39f61333cc249e3ba3daebd002da5ad62374b3fefd91c4dbabc0557d978d8037",
+          "output_sha256": "cf9e3879dfdd541d88a696a563902626140224cf9d4055726cfc469fbb42b8a9"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "8722b9dc3dc4d24f0fd5b6fd95d36011059b5a59ea3f10c9beb4d4c4a00d5c46",
+          "output_sha256": "d1f7ef4f4caa8c1538bcdbfe1fbd482a7ffb4464c569c73684c4b74c06382a34"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 2450,
+          "3": 6758
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "f38596ad7231102336a2f4a21645c916dea3f5a5868b96d6a03c0495aa17fc71",
+        "native_base_sha256": "f38596ad7231102336a2f4a21645c916dea3f5a5868b96d6a03c0495aa17fc71",
+        "output_sha256": "443fb8746df1108a697b894f980727880ffca9c5ed5b0f135c7a76446eaa0b16",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-inventory{e7737929}_i1.dds",
+            "width": 1000,
+            "height": 960,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "c152f1df348e8972322be8123c3eba673c4e646a8e51b22d33d5e7af6c626ea8"
+          },
+          {
+            "linkage": "panel-inventory{e7737929}_i9.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "4a900265a1ce1e6040d18bb214ddbebdf2cd21fc992585ae96be13b558bda560"
+          },
+          {
+            "linkage": "panel-inventory{e7737929}_i1c.dds",
+            "width": 1020,
+            "height": 1016,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "e5ade68e85f822a30513c9c0d30c9adf71e44060db17723b0bee99a83890e266"
+          },
+          {
+            "linkage": "panel-inventory{e7737929}_i1d3.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-inventory{e7737929}_i1ec.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTNoAlpha",
+            "pixels_sha256": "53f2ccd6f1e876c303df9351cf26a7c56e9e2a11cf044daff1431b45bbab3119"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 222
+      },
+      "retained_public_protected_declarations": 151
+    },
+    {
+      "resource": "gameplay/gui_new/swf/common/componentslib.redswf",
+      "input_sha256": "0cd5bae1d776311f22ec38ecca229949cf3c83f936c84147f95fcb427da7cd71",
+      "output_sha256": "70a5042d44c57ec5cdcb1761fd872e680c7e7904407009b101cdff696043452e",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9272
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "0b10fbc86485268756cefb2a936801aa313c7775c7c407323fd8a048bc885e30",
+        "native_base_sha256": "0b10fbc86485268756cefb2a936801aa313c7775c7c407323fd8a048bc885e30",
+        "output_sha256": "70a5042d44c57ec5cdcb1761fd872e680c7e7904407009b101cdff696043452e",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "componentslib{944c860e}_i1.dds",
+            "width": 992,
+            "height": 912,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "0b6ab0f7a09b7dc47b605a9c1cca9df79afeaac311a7f94339579c484011888d"
+          },
+          {
+            "linkage": "componentslib{944c860e}_ia2.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 136
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/character/panel_character_dupe.redswf",
+      "input_sha256": "7c3ab1488fb84c8098c4a5ebde4da3267203bb2c0f17d00003e6efe7efa6f201",
+      "output_sha256": "f18e48edb05ecb6522b5c662f4403a74bd0eb7319eb27617bb0a6339ce187f30",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "49ed3de32f4c77562c3241ce40539158cd55db031a95d0295e47cbe8466c22b2",
+          "output_sha256": "a6c0f2600c47560ed06109c9b780948b9c557e7ad2a2f96e5b73c7ef8ff60419"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 272,
+          "2": 8935
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "33c0d49829ba333d9e997c5949229e62addfbc7c6dbc6e52952f606a9f2f9a24",
+        "native_base_sha256": "33c0d49829ba333d9e997c5949229e62addfbc7c6dbc6e52952f606a9f2f9a24",
+        "output_sha256": "f18e48edb05ecb6522b5c662f4403a74bd0eb7319eb27617bb0a6339ce187f30",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "50ea739746578c9c4f6a82914ebf8fe31ffa0ee0313529f771191571c56b5969"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2.dds",
+            "width": 988,
+            "height": 700,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "fb90d5af450ffb1509d86946c73f6c1b1503b4b658fca85689bcde1ea7065c44"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i13.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "849ac0fd0ed65855dbf487d3e1da7e10d98c99f124ed33ba0387aa85e6df16d3"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i28.dds",
+            "width": 1016,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "98a7da154c4e6b4a66ec02b5406311a98312eb1891488044c566a0c8ab5e2562"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_icf.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i120.dds",
+            "width": 1920,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "f60ee4d1dcc30407dfed572d3f97a6cfd22d569673ce2855f5ca535bf240b347"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i130.dds",
+            "width": 1920,
+            "height": 1000,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bfb621e9010b75c30018a4f41466f5cd05f0edf950e4aa41adf43e0b443f6ef0"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i134.dds",
+            "width": 1920,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "006b96967392dee85322dfc2336cbc918ec86f27ca331391887f84d7cb4c5e65"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2d6.dds",
+            "width": 1212,
+            "height": 1408,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "6ee60a06caa3c7e8c23daecc4870bb1a0857c58782f49cb53bed94dd1abd8817"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2d4.dds",
+            "width": 1212,
+            "height": 1408,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "fa44a681d2d42559b390357fc5f915ff8aaf191178d05faeedb97aaec4e67dd6"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2da.dds",
+            "width": 1212,
+            "height": 1408,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "90a4f5206e0431d3474c003d0e93977a45001a167f1050a3d8cae8de5781d4fe"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2d8.dds",
+            "width": 1212,
+            "height": 1408,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bf1de17745e93f0db2e10a09cc40770ad0170f763081346dcc2ec5c953265116"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2df.dds",
+            "width": 1212,
+            "height": 768,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "8117c76f2c5ba6cad8f0b8b495fa1cc20209be6062f7bea6703faf7a6aec3530"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2dc.dds",
+            "width": 1212,
+            "height": 1408,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "1a12c5786c137f09388e15673464a21c31e92e31e2eb581bd10645caa9600b87"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2e3.dds",
+            "width": 1308,
+            "height": 952,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "5e72a4f6dae0a6765940798e3957e1e6232620e6970a650812cf9cd0685f513f"
+          },
+          {
+            "linkage": "panel-character-dupe{e3d23474}_i2e9.dds",
+            "width": 1144,
+            "height": 8,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a9661d6c2d0251477c4e4c51926a344eeea2078c501c88bfa44f46536c0f2be6"
+          }
+        ],
+        "image_links": 16,
+        "rectangles": 265
+      },
+      "retained_public_protected_declarations": 98
+    },
+    {
+      "resource": "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+      "input_sha256": "d1bb4aedf738115b5dcf4b6f85a841739819cfc4b35cd507153166cddd7e084e",
+      "output_sha256": "5cb9dcef0e7483f4bf99c0abbf2b87a84b05045a98557a7e4feaf087263bba27",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "3": 9253
+        },
+        "new_external_images": 0,
+        "placement_count": 40,
+        "input_sha256": "97c0822c7d8162746dc2b096899c7c4b5c7fb6b6132e894a5b7aef75884e98ca",
+        "native_base_sha256": "97c0822c7d8162746dc2b096899c7c4b5c7fb6b6132e894a5b7aef75884e98ca",
+        "output_sha256": "5cb9dcef0e7483f4bf99c0abbf2b87a84b05045a98557a7e4feaf087263bba27",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-alchemy{c70ff00f}_i1.dds",
+            "width": 988,
+            "height": 512,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "4e9f1e37fc86e1ed0fa6f7bcf0809fa739ebc6e2121db7346897df8d39e65fc5"
+          },
+          {
+            "linkage": "panel-alchemy{c70ff00f}_ic.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "45c35455dba9c57625b3921488c8a426e62192c23c5cf40792ba9514619acd93"
+          },
+          {
+            "linkage": "panel-alchemy{c70ff00f}_ie.dds",
+            "width": 1024,
+            "height": 980,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "212bd67574d83a09cd00403d9a696e94db87ce543c652e4fc3ecc768453d694c"
+          },
+          {
+            "linkage": "panel-alchemy{c70ff00f}_i10f.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 4,
+        "rectangles": 173
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+      "input_sha256": "d7bf2e7f45029a874f91ae45d1ecffd32c62ffa5b5e90b495f43ccc660433176",
+      "output_sha256": "383ee947019cdeca6e37e43a6ab5b7b81d5f2237476d12b93346a7acb25ebb3a",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 1905,
+          "2": 7333
+        },
+        "new_external_images": 0,
+        "placement_count": 40,
+        "input_sha256": "fba1945c490a839ad4cbb5076356b853aa9544f8fe6e41050b7a3542a6078872",
+        "native_base_sha256": "fba1945c490a839ad4cbb5076356b853aa9544f8fe6e41050b7a3542a6078872",
+        "output_sha256": "383ee947019cdeca6e37e43a6ab5b7b81d5f2237476d12b93346a7acb25ebb3a",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-crafting{64e25f28}_i1.dds",
+            "width": 1024,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "f24c48541052b53dbe3259349ca679a2ee064d8ceb9a7b89effb4e5501b0a508"
+          },
+          {
+            "linkage": "panel-crafting{64e25f28}_i53.dds",
+            "width": 1020,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "505724dc3cf5fa5ea9248ab03702e93b952abda795388e81201021808a7e0613"
+          },
+          {
+            "linkage": "panel-crafting{64e25f28}_ie8.dds",
+            "width": 592,
+            "height": 444,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "d29cf267e727bf87ed094099ffced8bfadd280c139d8c83b2379fb50e060ff1e"
+          },
+          {
+            "linkage": "panel-crafting{64e25f28}_i14b.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 4,
+        "rectangles": 196
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_blacksmith.redswf",
+      "input_sha256": "7f87d86c774b721a3df20839540801e2ae148c9fcf8a60a009ff7387a8ab5331",
+      "output_sha256": "71d0fc45899b53f748d03c7d5e11e524de3c3aae483c96c3fe1c9113497478ff",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 6179,
+          "2": 2896
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "f78cd761f664ce8081365541058cc8f43641d0fa76215d3f37bcd885733557a2",
+        "native_base_sha256": "f78cd761f664ce8081365541058cc8f43641d0fa76215d3f37bcd885733557a2",
+        "output_sha256": "71d0fc45899b53f748d03c7d5e11e524de3c3aae483c96c3fe1c9113497478ff",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-blacksmith{b4e80f7f}_i1.dds",
+            "width": 1024,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "cd20ece8b504121d1b070f31bb1aa125591d40db798859a6301d354cba51e9f0"
+          },
+          {
+            "linkage": "panel-blacksmith{b4e80f7f}_i5d.dds",
+            "width": 1012,
+            "height": 532,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "ca1bfcf33e6f5a1853426dc6c1cf33813cca1d6ccf443aacc1cd21650d239096"
+          },
+          {
+            "linkage": "panel-blacksmith{b4e80f7f}_ie1.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 165
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_enchanting.redswf",
+      "input_sha256": "a9df108492a3bc9876fc4c5d65cd705a6edabec023c5b7c3698574644095353b",
+      "output_sha256": "595d3ad7cdea5f8cb16807dae971b2d30745230500797e630ffdaa7c5ae2c90c",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9143
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "602ca0a510fb80c8dc7788a16cf754a85ede3a467f61044e8b0c79f45e95208b",
+        "native_base_sha256": "602ca0a510fb80c8dc7788a16cf754a85ede3a467f61044e8b0c79f45e95208b",
+        "output_sha256": "595d3ad7cdea5f8cb16807dae971b2d30745230500797e630ffdaa7c5ae2c90c",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-enchanting{0fd3a250}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "9fbc2fcc77e27a3330d3b2c134e04b99fd795dfe6d0fddec2ee3248a6fefa21e"
+          },
+          {
+            "linkage": "panel-enchanting{0fd3a250}_i140.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 160
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf",
+      "input_sha256": "d72563d9d350d04ceecce7860abe74ae08f655aad010d13ef02f96078685f0f1",
+      "output_sha256": "157d9d28af4cd33f55efe5322468c20b0a9e463d8e5952627751f2ae06c0547a",
+      "classes": [
+        {
+          "class_name": "HubMap",
+          "input_sha256": "4fba6ebccc39b4607817fee028fc104a402944027bfbe7561c740f39e1bb6e91",
+          "output_sha256": "790eabb15f2de9c19a58799d732b53ea2d3f67e7d5bfad70d448ce7ab5e0209c"
+        },
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "2ab2383594bd94000cb3828413133240ec5eb71399186de8eca15bb3d70ac485",
+          "output_sha256": "812df3d4c9789df64830bae98151e73e3c05514ec1722e9d88327c3eb038b06e"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1b2800b23706f9d35161a26a56b8220a0ddc7478268cefe4436a26e1e43e3f41",
+          "output_sha256": "419acf0b826fe496e5f3608873f57ce42618873ad41b989c86ed1bf580c29a2f"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 3185,
+          "2": 5957
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "83992c383572334725b04079450310e262b5e326cf2149248bd74d91f7a5e840",
+        "native_base_sha256": "83992c383572334725b04079450310e262b5e326cf2149248bd74d91f7a5e840",
+        "output_sha256": "157d9d28af4cd33f55efe5322468c20b0a9e463d8e5952627751f2ae06c0547a",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-worldmap{3559ca43}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "4e90021a92fe1ea3b850bfa1982b5518e749e152f76b0de58cb08186a1ece262"
+          },
+          {
+            "linkage": "panel-worldmap{3559ca43}_i49.dds",
+            "width": 988,
+            "height": 544,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "615e6c0db6668c70dc093e12daa5b49991aa7a055aa24ce79da22bcb085e4ddc"
+          },
+          {
+            "linkage": "panel-worldmap{3559ca43}_id0.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-worldmap{3559ca43}_i2bc.dds",
+            "width": 300,
+            "height": 1448,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "03a92e59b9205f59afbf84f0b63f132cba99d603c7af8a4799b0149a312636c5"
+          },
+          {
+            "linkage": "panel-worldmap{3559ca43}_i313.dds",
+            "width": 2100,
+            "height": 1380,
+            "compression": "TCM_DXTNoAlpha",
+            "pixels_sha256": "6d48620a5d4601c45e764cddef986daa6a90be0533da17b7a1838b3de5c43a36"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 182
+      },
+      "retained_public_protected_declarations": 182
+    },
+    {
+      "resource": "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+      "input_sha256": "10c5a6b5c54068a70c6dca8ace0bb2772b74192a73a7a485221d7555a764f704",
+      "output_sha256": "26cdf240af8965c5ab1e52a13d4d57a1fa6d45bbf61fe03810a67d58a522195a",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 272
+        },
+        "new_external_images": 0,
+        "placement_count": 1,
+        "input_sha256": "741f830db31346ac61cc7ad1994a06e2bc4ff5d545ae59c5e765ce2dee84d70b",
+        "native_base_sha256": "741f830db31346ac61cc7ad1994a06e2bc4ff5d545ae59c5e765ce2dee84d70b",
+        "output_sha256": "26cdf240af8965c5ab1e52a13d4d57a1fa6d45bbf61fe03810a67d58a522195a",
+        "definition_count": 1
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-journal-quests{e117b635}_i6.dds",
+            "width": 1024,
+            "height": 956,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "3797c53e00299728fd11476f9149f620ec19cb3b5c463279374aa2a9b7ee190e"
+          },
+          {
+            "linkage": "panel-journal-quests{e117b635}_icd.dds",
+            "width": 560,
+            "height": 112,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "380f8995d9875d4f5ac57b19da2555d4815f39056d95fe948acc86a3a36d80c6"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 55
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_main.redswf",
+      "input_sha256": "8ee5f1085cda16ce865c777058db89259bd4514bbaea111f7a0034e3a7196bba",
+      "output_sha256": "3aa0142a4eb0b4d6c4e4f13bb3df8c5b21e538426d5a03362aecf97689be37bb",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "3": 6485,
+          "2": 2705
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "79102b9783cc7542135b81631026c0ec321292612b59c5d1eab169da52d95dfe",
+        "native_base_sha256": "79102b9783cc7542135b81631026c0ec321292612b59c5d1eab169da52d95dfe",
+        "output_sha256": "3aa0142a4eb0b4d6c4e4f13bb3df8c5b21e538426d5a03362aecf97689be37bb",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-main{1bdc0b25}_i1.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2320534c258fac50d2ed7626785cd0dbb3b3521feeb33f7f3cbceabb23742253"
+          },
+          {
+            "linkage": "panel-glossary-main{1bdc0b25}_i3.dds",
+            "width": 1024,
+            "height": 544,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "cdc1efa7fd3cd1e6b0c3174cdcb24b19e1935efff09a8ce2223aad2b01ad1963"
+          },
+          {
+            "linkage": "panel-glossary-main{1bdc0b25}_i5.dds",
+            "width": 1016,
+            "height": 1012,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "07ab91726d946cb3ecaf3847b2ef16567f8c79745424663b9fe63da3c00b0aa5"
+          },
+          {
+            "linkage": "panel-glossary-main{1bdc0b25}_i13d.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 4,
+        "rectangles": 195
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+      "input_sha256": "7188ca5489f20f815307dd95854b270014d867f24b9579f5975d6282cd0cd3f9",
+      "output_sha256": "90b4076b4a10fcea5eeacb0dc7ce810431eb709fb0e5e4f4a1091ab2c4b617e2",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "8722b9dc3dc4d24f0fd5b6fd95d36011059b5a59ea3f10c9beb4d4c4a00d5c46",
+          "output_sha256": "d1f7ef4f4caa8c1538bcdbfe1fbd482a7ffb4464c569c73684c4b74c06382a34"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 272
+        },
+        "new_external_images": 0,
+        "placement_count": 1,
+        "input_sha256": "01e85de871e52c252baa179dd2b42e9fc5dd54543e907ad6af14d705dae93089",
+        "native_base_sha256": "01e85de871e52c252baa179dd2b42e9fc5dd54543e907ad6af14d705dae93089",
+        "output_sha256": "90b4076b4a10fcea5eeacb0dc7ce810431eb709fb0e5e4f4a1091ab2c4b617e2",
+        "definition_count": 1
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-bestiary{6cba4c81}_i25.dds",
+            "width": 1024,
+            "height": 992,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "f7fef2e903b6c59f0c920188b2bb53856a3e9e65fdb5339d7de6a4e06461a307"
+          },
+          {
+            "linkage": "panel-glossary-bestiary{6cba4c81}_iaa.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTNoAlpha",
+            "pixels_sha256": "53f2ccd6f1e876c303df9351cf26a7c56e9e2a11cf044daff1431b45bbab3119"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 32
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+      "input_sha256": "1e7a89594d26f96f5d8e1780ad8d9cf23304d5af91f26978a18631302165a6a5",
+      "output_sha256": "2f06e8254224bf0a96825a2ea836428f762ac9b7c3600b4ad8dc91fbb19f562e",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 272
+        },
+        "new_external_images": 0,
+        "placement_count": 1,
+        "input_sha256": "6d6896059f11bdb7e447b27bdf0bdfb1e279466fb6adf4138838bb03fd902cd1",
+        "native_base_sha256": "6d6896059f11bdb7e447b27bdf0bdfb1e279466fb6adf4138838bb03fd902cd1",
+        "output_sha256": "2f06e8254224bf0a96825a2ea836428f762ac9b7c3600b4ad8dc91fbb19f562e",
+        "definition_count": 1
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-books{c8156877}_ic.dds",
+            "width": 1020,
+            "height": 804,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "04cea2cdbbeea88ec8bd85a0c6543d4408b40ee43214b44edf225a77e3bb9fab"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 19
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf",
+      "input_sha256": "8a44ed3b99763cd6ab0c29c741347a151e128bfce94ad72afd26278181ea3929",
+      "output_sha256": "bbd451a8aa06371fdd829f5dfadfcb902a7626dbca2c033013fbc60fd4881764",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 272
+        },
+        "new_external_images": 0,
+        "placement_count": 1,
+        "input_sha256": "74849feabb88dc03c9aa1f69dd096fe2e76cf1f0b54cd03b4b9181162d9a2e6b",
+        "native_base_sha256": "74849feabb88dc03c9aa1f69dd096fe2e76cf1f0b54cd03b4b9181162d9a2e6b",
+        "output_sha256": "bbd451a8aa06371fdd829f5dfadfcb902a7626dbca2c033013fbc60fd4881764",
+        "definition_count": 1
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-encyclopedia{8d2dc3f7}_ib.dds",
+            "width": 1024,
+            "height": 704,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2dacfeafd4f95c1a3dbe6c640388bfd71c878a59ceca33c13ff8b2bb529a9103"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 19
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+      "input_sha256": "d8d55d572452b14c7a5abe59567461e632b2ccb06774a51d01f4e00b767087cb",
+      "output_sha256": "284664c8444d649f6dc17860f641c5e97665845e6b072d2a738470b74a08294c",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 4301,
+          "2": 5107
+        },
+        "new_external_images": 0,
+        "placement_count": 40,
+        "input_sha256": "88e1c7bab3dd8bef0294f3176ca5ca009196578312177f59208377025b2e475b",
+        "native_base_sha256": "88e1c7bab3dd8bef0294f3176ca5ca009196578312177f59208377025b2e475b",
+        "output_sha256": "284664c8444d649f6dc17860f641c5e97665845e6b072d2a738470b74a08294c",
+        "definition_count": 35
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-tutorials{1f45de5c}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "6e5fae309d9ee98d0f5f7627b494b9a8ce2be2abaec5db0838a11ba40e96ef07"
+          },
+          {
+            "linkage": "panel-glossary-tutorials{1f45de5c}_i2.dds",
+            "width": 988,
+            "height": 460,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "7ee50155290fe209c0b47d65ceb980d2eed7513fa89ba6df5eb72143d3fa5ac5"
+          },
+          {
+            "linkage": "panel-glossary-tutorials{1f45de5c}_i7c.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 224
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_tutorial.redswf",
+      "input_sha256": "ecf62b6d785f6dd7f834b4b038e3713faac7465857a7199c74ca0c97271c159c",
+      "output_sha256": "28cfe62e6c9ead49a45b35de13da9ffd72e961cd9e86cd10d6f6197c3dff320e",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9418
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "1bfd2a1ae31c2c9fe516a3bb9130b166c70d37be14c793a468cd698afaa17cea",
+        "native_base_sha256": "1bfd2a1ae31c2c9fe516a3bb9130b166c70d37be14c793a468cd698afaa17cea",
+        "output_sha256": "28cfe62e6c9ead49a45b35de13da9ffd72e961cd9e86cd10d6f6197c3dff320e",
+        "definition_count": 35
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "popup-tutorial{49aaec16}_i1.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "6595fdee1018375185641e4616bea06eb9cb94dcf96643783785710842db545d"
+          },
+          {
+            "linkage": "popup-tutorial{49aaec16}_i8.dds",
+            "width": 1024,
+            "height": 84,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "3552764f619fa281d807defa24ec0af7a74dabb294c2275734f6e6beb800b28d"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 203
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_message.redswf",
+      "input_sha256": "db08636f4190210d7c61cbde366f170ee72883a92952fd779011a747b769f395",
+      "output_sha256": "2064dd23003c3d2038d8deef4e5bb99d79876b8b2fa4f57bfb1dd51a66069f99",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "a622498f47728c44cc16bd0e64790f7b41ef5024985c6ff134c54ea3550e2521",
+          "output_sha256": "fa8c4e5ec25fae5493a35c2bbf2ce34becf361d24374a5a8f48af6739252facf"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "7b70051d7f1a457341d73efd8601d072f4f30b2c71c4f4a984187207419a52a6",
+          "output_sha256": "831846b0a8c9679677d7579fbc8eb2685f42c21d2af78c1fcf685aa86cd6d612"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9323
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "26a672b2e79dbcb3cac851d4086162f70872087b52444ad5cf30918fa68f9bce",
+        "native_base_sha256": "26a672b2e79dbcb3cac851d4086162f70872087b52444ad5cf30918fa68f9bce",
+        "output_sha256": "2064dd23003c3d2038d8deef4e5bb99d79876b8b2fa4f57bfb1dd51a66069f99",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "popup-message{20688391}_i3.dds",
+            "width": 988,
+            "height": 592,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "16dfd482b2e48ad2b746bcb2944b31ada730a70269c729175586c34a9ff3cc3f"
+          },
+          {
+            "linkage": "popup-message{20688391}_i2.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 130
+      },
+      "retained_public_protected_declarations": 99
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_item_selection.redswf",
+      "input_sha256": "845e33194ddf0ea99551b00749d2d7084fa7ef36b29365ffd223e3efa14ef6fb",
+      "output_sha256": "05597e95d3eb53c2adbad5c75fceb082a074583c805e281720a7b24d82f31ca3",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9210
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "1885470948ea446ea881de600afe208bb2244f1e6405ae8fed0405ac165c2234",
+        "native_base_sha256": "1885470948ea446ea881de600afe208bb2244f1e6405ae8fed0405ac165c2234",
+        "output_sha256": "05597e95d3eb53c2adbad5c75fceb082a074583c805e281720a7b24d82f31ca3",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "popup-item-selection{51d43dc1}_i1.dds",
+            "width": 1024,
+            "height": 656,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "47b3a2b0cb95555cfdaf611e0c4be8f44921605fc4fa30015b0b6ee80acc70b4"
+          },
+          {
+            "linkage": "popup-item-selection{51d43dc1}_i6b.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 140
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf",
+      "input_sha256": "be17ec5eed1b10ca4ad4ae1c6164c737d4c83948b02ec1dbb06d5b871e7885dd",
+      "output_sha256": "b236eee0b271cebced08c25f70bde2fcb67d36db6f7b5f092a52918b351e359d",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 3011,
+          "3": 6246
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "82c9ee8fc33cbc32acd3c2a4b721a63ffe490d7ffcc2c99973a5d117779169e9",
+        "native_base_sha256": "82c9ee8fc33cbc32acd3c2a4b721a63ffe490d7ffcc2c99973a5d117779169e9",
+        "output_sha256": "b236eee0b271cebced08c25f70bde2fcb67d36db6f7b5f092a52918b351e359d",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-noticeboard{904aebf8}_i1.dds",
+            "width": 1004,
+            "height": 1004,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "3aea34f02e9f8c0805b848c2f89a675117b18db056bb15202ae3e8b97f1055c4"
+          },
+          {
+            "linkage": "panel-noticeboard{904aebf8}_i2b.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-noticeboard{904aebf8}_i50.dds",
+            "width": 1008,
+            "height": 828,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2f81f7a15800ba5592fb637c2a7dcf12e794628302301510fc5cf284c9f01dcf"
+          },
+          {
+            "linkage": "panel-noticeboard{904aebf8}_ic4.dds",
+            "width": 1020,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "0cc6ae0f39df124db8721db35bde8743e858ec0bc5222628440676afeccc8a9f"
+          },
+          {
+            "linkage": "panel-noticeboard{904aebf8}_ic6.dds",
+            "width": 544,
+            "height": 680,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "ef86068f616c092401afae71035edfc14233d21e510d9910e51b5d7d6e779663"
+          },
+          {
+            "linkage": "panel-noticeboard{904aebf8}_id3.dds",
+            "width": 4096,
+            "height": 2316,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a0d32df571d833d40182ca162370775e097933bc54bd15417d11f96d53f99cf8"
+          }
+        ],
+        "image_links": 6,
+        "rectangles": 145
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf",
+      "input_sha256": "2af8e5a9199440afc37915432866974a01cde4176054884796be601b85b04dff",
+      "output_sha256": "745402885523b5517dbfae03f392f725f9eda18d5a2a7ef7b453cff33d48ca49",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9075
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "1a19d78d90dac8387756c4cb80a70f8a605c1e000e4ed4be0c9992dbe04a645e",
+        "native_base_sha256": "1a19d78d90dac8387756c4cb80a70f8a605c1e000e4ed4be0c9992dbe04a645e",
+        "output_sha256": "745402885523b5517dbfae03f392f725f9eda18d5a2a7ef7b453cff33d48ca49",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "deathscreenmenu{cebf7a0e}_i3.dds",
+            "width": 1000,
+            "height": 852,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "119583f45e3d453b018f93bc2a8fc5193b0dd47d1ca1710a96634c14d824f110"
+          },
+          {
+            "linkage": "deathscreenmenu{cebf7a0e}_ia3.dds",
+            "width": 1212,
+            "height": 144,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "47c36c4dae95203778e0afeb688e45a5eb8a2ef3462efbeb13808fd44f452736"
+          },
+          {
+            "linkage": "deathscreenmenu{cebf7a0e}_ia8.dds",
+            "width": 320,
+            "height": 1076,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "8585047637b93f869f32760e48250823a0c64d5350ce5388e2e1460cf994a011"
+          }
+        ],
+        "image_links": 3,
+        "rectangles": 130
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_loot.redswf",
+      "input_sha256": "8bf5a5aec1800482339b318dcd5c9c54157127e9dea1e7f2f250954e6639f407",
+      "output_sha256": "b920ab7c09b16b3d129410aed071a802d45918cd578eb78496bebeb754fce41b",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "a622498f47728c44cc16bd0e64790f7b41ef5024985c6ff134c54ea3550e2521",
+          "output_sha256": "fa8c4e5ec25fae5493a35c2bbf2ce34becf361d24374a5a8f48af6739252facf"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "89013005808edd561a35849181c7d5a41243c3c99ee789fde7dfc66d96fb9e43",
+          "output_sha256": "b51cf8dd61042528261d5c6be0b5dafe2247591dfe727b9d2a9bd8b2255fbb4e"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9240
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "125c8d5b76ae8e2336388d9bfbd75a856623ccc5c25c7817af5e9b4d9008b883",
+        "native_base_sha256": "125c8d5b76ae8e2336388d9bfbd75a856623ccc5c25c7817af5e9b4d9008b883",
+        "output_sha256": "b920ab7c09b16b3d129410aed071a802d45918cd578eb78496bebeb754fce41b",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "popup-loot{6b61ef25}_i3.dds",
+            "width": 1024,
+            "height": 692,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "9ea946a36cb7dac22c59227e3e8fcaa81e21fa7d2f1b354f67e2452689fa6651"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 130
+      },
+      "retained_public_protected_declarations": 98
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_transmog.redswf",
+      "input_sha256": "50c4846e5ba694d70a90f09fd7f8fab94831d29a06d293e2a6fa6db1e6b61254",
+      "output_sha256": "94fa08a9b1c86ad2df6ac4fe686bf5ab8ad876b544ec809fd2bd803e38145ac8",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 4505,
+          "3": 4966
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "3aea3cce8b687b3ec13ad094e318937f145f148667f5d56524687b7abe5fed45",
+        "native_base_sha256": "3aea3cce8b687b3ec13ad094e318937f145f148667f5d56524687b7abe5fed45",
+        "output_sha256": "94fa08a9b1c86ad2df6ac4fe686bf5ab8ad876b544ec809fd2bd803e38145ac8",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-transmog{a35e54ec}_i1.dds",
+            "width": 1020,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "b8de66fb8bd9dba2bd97b52585315d970f1622a40ddbb3f3c920fa9557ab4079"
+          },
+          {
+            "linkage": "panel-transmog{a35e54ec}_i18.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "d92ad10729dbe5485378dbde24c93f782a4f831c8690c43fcf2093e124a912a4"
+          },
+          {
+            "linkage": "panel-transmog{a35e54ec}_i35.dds",
+            "width": 1004,
+            "height": 380,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a783994ec4f399e3faf3d2616e42d9853b003eef9b12ab843889368e185e4f94"
+          },
+          {
+            "linkage": "panel-transmog{a35e54ec}_i185.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-transmog{a35e54ec}_i283.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTNoAlpha",
+            "pixels_sha256": "53f2ccd6f1e876c303df9351cf26a7c56e9e2a11cf044daff1431b45bbab3119"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 234
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/character/panel_character.redswf",
+      "input_sha256": "a7782afa944c41613420e2603065b7067ffdd3e8a481d265175af04320f56a01",
+      "output_sha256": "ad789027dfdd7d44a6557baae21c54e57482540f6db2914d4cd44220beb2bb29",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9026
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "b3bb250931a5efd6245df6034b7877c6ef8bda995cc1b03ee32e90b09773e117",
+        "native_base_sha256": "b3bb250931a5efd6245df6034b7877c6ef8bda995cc1b03ee32e90b09773e117",
+        "output_sha256": "ad789027dfdd7d44a6557baae21c54e57482540f6db2914d4cd44220beb2bb29",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-character{19d3b763}_i1.dds",
+            "width": 1004,
+            "height": 972,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "71f0f574b200e20d8e43730a734a45ac2bdd85a144097cb8e0289a9a2e7af925"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i1b.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a5cd52c4fb51396014625fa5d92c3ddfd2aad914e76943cd45e50490575091ee"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i2b.dds",
+            "width": 1024,
+            "height": 1016,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a4ad37152b2c609c7f39bcf70e13118edb04134b749ef11f79953c47fb8a25eb"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_ic2.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i113.dds",
+            "width": 1920,
+            "height": 1024,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "f60ee4d1dcc30407dfed572d3f97a6cfd22d569673ce2855f5ca535bf240b347"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i123.dds",
+            "width": 1920,
+            "height": 1000,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bfb621e9010b75c30018a4f41466f5cd05f0edf950e4aa41adf43e0b443f6ef0"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i127.dds",
+            "width": 1920,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "277fc2a100417f2afb1beba68a2ab74e68f1f8112d6d7e986340ccc34f740f05"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i28f.dds",
+            "width": 660,
+            "height": 244,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "bd293124ad6fff0035d56dc0266dfc5af5ac313188247600de76d08c66aec71d"
+          },
+          {
+            "linkage": "panel-character{19d3b763}_i29e.dds",
+            "width": 1308,
+            "height": 952,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "5e72a4f6dae0a6765940798e3957e1e6232620e6970a650812cf9cd0685f513f"
+          }
+        ],
+        "image_links": 9,
+        "rectangles": 239
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_storybook.redswf",
+      "input_sha256": "d59641748590acab2055a152efa482caca0f521d7a50a2f7743d22e5c0b05eb9",
+      "output_sha256": "bfce22af0575b10bf6ecc2505b80b71d0d885b293158e6cc3fe5a6e71e8e38ff",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9142
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "fc0bb693de2ae8eb01b9db0c46382158ada13a7953b66868f3a198ca278a3494",
+        "native_base_sha256": "fc0bb693de2ae8eb01b9db0c46382158ada13a7953b66868f3a198ca278a3494",
+        "output_sha256": "bfce22af0575b10bf6ecc2505b80b71d0d885b293158e6cc3fe5a6e71e8e38ff",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-glossary-storybook{6acb02e9}_i1.dds",
+            "width": 1024,
+            "height": 912,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dd7f74f0485639712e2d215dc1fc49bece923f88b41dfd36e3b9c8afa4168c6e"
+          },
+          {
+            "linkage": "panel-glossary-storybook{6acb02e9}_i44.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 158
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/inventory/panel_inventorysockets.redswf",
+      "input_sha256": "747826d2e6cf1da1e884e97f2afa4e65bd6b59e5821060cee907699bbaa959e3",
+      "output_sha256": "0e84e288f277ecfacb46c2b2855b4e9d434e0cda1faed3eeab97ff855c763b06",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "f95e84844f63c13fd89a4a72c978251ae53bbc134f3c57e5860b0ac921265168",
+          "output_sha256": "339eaad20265d7401b96d1b9eb3f5128d6afc7b30323b241d53d7489baf6f66d"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9281
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "57ba26b46867c792ae1d18bc85fa2ba0950b079dac014953972e34b8fbe7f071",
+        "native_base_sha256": "57ba26b46867c792ae1d18bc85fa2ba0950b079dac014953972e34b8fbe7f071",
+        "output_sha256": "0e84e288f277ecfacb46c2b2855b4e9d434e0cda1faed3eeab97ff855c763b06",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-inventorysockets{e24de128}_i1.dds",
+            "width": 1024,
+            "height": 712,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2324bead27fd2815965b885990e109b6e217fde21d114b8027a6f84cc4a3c8e2"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 92
+      },
+      "retained_public_protected_declarations": 23
+    },
+    {
+      "resource": "gameplay/gui_new/swf/loading/loadingscreen.redswf",
+      "input_sha256": "4adfa748c0225c95ee6f4a4328855f554138c2fdd7737951851d7506fc5b1ee7",
+      "output_sha256": "dd82df053adaa4f83e603bd92ed03bca0b7606cbfd73592753406192e7aa25ec",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9272
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "49bc4fdbdaf427e0fff2645f1bb25e7c0daccd99ea333d91804de368a7811df8",
+        "native_base_sha256": "49bc4fdbdaf427e0fff2645f1bb25e7c0daccd99ea333d91804de368a7811df8",
+        "output_sha256": "dd82df053adaa4f83e603bd92ed03bca0b7606cbfd73592753406192e7aa25ec",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "loadingscreen{cab52313}_i4.dds",
+            "width": 988,
+            "height": 628,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "5797527d02c6d9bd7e7349f94b2b3ca1e61299227bba93f29c7ca0f1265d8845"
+          },
+          {
+            "linkage": "loadingscreen{cab52313}_i14.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 132
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_credits.redswf",
+      "input_sha256": "ac1e726da69fb7ed98687f74b1a86dba3dc2af6a7d2768790353cde749770d52",
+      "output_sha256": "189dc69b26edb6f7a9fe1cf058dc67a4600b3817aff0366ed9bbf57ae6f92eab",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 1394,
+          "1": 7878
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "bac11c76d224cdbc6b594ff4106bd72b6f3dd8a74b07d07b37447c0cde7cf8b9",
+        "native_base_sha256": "bac11c76d224cdbc6b594ff4106bd72b6f3dd8a74b07d07b37447c0cde7cf8b9",
+        "output_sha256": "189dc69b26edb6f7a9fe1cf058dc67a4600b3817aff0366ed9bbf57ae6f92eab",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-credits{88a9d700}_i3.dds",
+            "width": 1008,
+            "height": 616,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "58c53753fd2634a1cc57f8059284e7b1189b75713f3b9fc7c51926188d24ae2c"
+          },
+          {
+            "linkage": "panel-credits{88a9d700}_i6.dds",
+            "width": 1024,
+            "height": 992,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "df14fa17e8c83a496097046bfd39c3d1963b574f36277a8f26292f4b8d486e2b"
+          },
+          {
+            "linkage": "panel-credits{88a9d700}_iad.dds",
+            "width": 1420,
+            "height": 700,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dcd94ca5ba4e543311ea35649b02ccdef1e2867ee3bf760e878789646d4daae5"
+          },
+          {
+            "linkage": "panel-credits{88a9d700}_iae.dds",
+            "width": 1920,
+            "height": 1080,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "adb53d3e030d978b5da59a10c8fb5daaf605f2e5c837400d72f5448584c48cbe"
+          }
+        ],
+        "image_links": 4,
+        "rectangles": 135
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_mainmenu_autosavewarning.redswf",
+      "input_sha256": "3a1854105249d22dd2a4c7d6a047d1bd97339d1957fdef0b4b1aba448da94afe",
+      "output_sha256": "3f6c5fc892317bd25f75599efe3cdf983dbe1e814c2ca810821e6dbe70072f7c",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 8976
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "985445fe0496f95b9e3ca3d6a672efea239319b52c182f4a45d0cee1d467730b",
+        "native_base_sha256": "985445fe0496f95b9e3ca3d6a672efea239319b52c182f4a45d0cee1d467730b",
+        "output_sha256": "3f6c5fc892317bd25f75599efe3cdf983dbe1e814c2ca810821e6dbe70072f7c",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-mainmenu-autosavewarning{ac2e60af}_i3.dds",
+            "width": 1016,
+            "height": 640,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2e615bfbb6d03c98326c1eddeb591d23f53b2ffc7756f740f13b23e817ed8a74"
+          }
+        ],
+        "image_links": 1,
+        "rectangles": 126
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_recapmovies.redswf",
+      "input_sha256": "d223c0ae1d1736fc40b369c47c08b6ee51d04180ff438a59745ef57614c0c92f",
+      "output_sha256": "c44ad8ab31f96a6d0fa826602e2bf3d10a130e329a0d930fc9c93a165fa9e188",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 9256
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "4ed02e1556ecbdac27cd4d0efa5ea267d3bf28e7284307a7d83d0d5fe594b731",
+        "native_base_sha256": "4ed02e1556ecbdac27cd4d0efa5ea267d3bf28e7284307a7d83d0d5fe594b731",
+        "output_sha256": "c44ad8ab31f96a6d0fa826602e2bf3d10a130e329a0d930fc9c93a165fa9e188",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-recapmovies{6b659d30}_i7.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-recapmovies{6b659d30}_i8.dds",
+            "width": 988,
+            "height": 592,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "72af81fbe74dc3bf2ae22af40b7ae1ce62ddca35f88c08c1847d46ff4a8b0a39"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 128
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_startupmovies.redswf",
+      "input_sha256": "4b49881e364ee0d3d0242a8471412283ceb02593606504a95f163459e7153a0f",
+      "output_sha256": "02f4461a74ac4298d82b3c9fd54e2a5e299d07b6f80940fa05e50ef20dca4f60",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 9256
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "853490ed34010387797c9c5bb834c6348ae44c2b19d28edcbfe1961ff586d8a1",
+        "native_base_sha256": "853490ed34010387797c9c5bb834c6348ae44c2b19d28edcbfe1961ff586d8a1",
+        "output_sha256": "02f4461a74ac4298d82b3c9fd54e2a5e299d07b6f80940fa05e50ef20dca4f60",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-startupmovies{bd313452}_i7.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-startupmovies{bd313452}_i8.dds",
+            "width": 988,
+            "height": 592,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "72af81fbe74dc3bf2ae22af40b7ae1ce62ddca35f88c08c1847d46ff4a8b0a39"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 128
+      },
+      "retained_public_protected_declarations": 43
+    },
+    {
+      "resource": "gameplay/gui_new/swf/modmenu/panel_modmenu.redswf",
+      "input_sha256": "257012b04c4589302af0fbc59b1c1d839c93b70b2b53b2ba7f5d28e65a10be4c",
+      "output_sha256": "8d7a84ff4c53f40a2b24bc9821617e3437c00294d41a5b3bcaa47cf817bd9db1",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "7ffa66963aaed08217bea8d17a552b2af53f07346e43045fbe9cb212a56da2c3",
+          "output_sha256": "a56c351a9d6dc74e48e1687c8d47b3701265add716e4618888d567c87e4c3dee"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "3": 5799,
+          "2": 3522
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "8d96edd2ed79976d5df0425b90516a7b7066574fd96026009a29e4b29d62dec8",
+        "native_base_sha256": "8d96edd2ed79976d5df0425b90516a7b7066574fd96026009a29e4b29d62dec8",
+        "output_sha256": "8d7a84ff4c53f40a2b24bc9821617e3437c00294d41a5b3bcaa47cf817bd9db1",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-modmenu{37634649}_i1.dds",
+            "width": 1024,
+            "height": 996,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "803e571ac05a26d6ecfe587e0cdf1fc24f063f975a05f3716dc4002840108fa3"
+          },
+          {
+            "linkage": "panel-modmenu{37634649}_i6.dds",
+            "width": 1016,
+            "height": 808,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "035211eaa3cbbe8d70fdb987594b7bc13966f228847145fbde2cabf872758fe7"
+          },
+          {
+            "linkage": "panel-modmenu{37634649}_i11.dds",
+            "width": 1008,
+            "height": 1008,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "567e32893214a38aac638723a3e05987e53fdb4e8169594631dad3634954af9f"
+          },
+          {
+            "linkage": "panel-modmenu{37634649}_i218.dds",
+            "width": 8,
+            "height": 312,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "a87c1082036ec635f017752a98d7e5880fba291883d76fbf4b16c00b9bdc50a1"
+          },
+          {
+            "linkage": "panel-modmenu{37634649}_i219.dds",
+            "width": 8,
+            "height": 4,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "2f546ef29682ac861d5d6e165d71bcd76d21502daf46d57445d1cb7ba2bbcf87"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 173
+      },
+      "retained_public_protected_declarations": 98
+    },
+    {
+      "resource": "gameplay/gui_new/swf/photomode/photomode.redswf",
+      "input_sha256": "3b1394264646ab6adc0a7f5d4458a5456da82f228b9d9dda36498227f7fc2029",
+      "output_sha256": "7996ba70d1c631a07e21f5db961206283ffec95e21554a01dbae6185b48ed9a7",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "8722b9dc3dc4d24f0fd5b6fd95d36011059b5a59ea3f10c9beb4d4c4a00d5c46",
+          "output_sha256": "d1f7ef4f4caa8c1538bcdbfe1fbd482a7ffb4464c569c73684c4b74c06382a34"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9355
+        },
+        "new_external_images": 0,
+        "placement_count": 40,
+        "input_sha256": "b9ba70f24fa471a17962635de40d548ded80f6deeabbd345be59ada3e120377f",
+        "native_base_sha256": "b9ba70f24fa471a17962635de40d548ded80f6deeabbd345be59ada3e120377f",
+        "output_sha256": "7996ba70d1c631a07e21f5db961206283ffec95e21554a01dbae6185b48ed9a7",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "photomode{20ecfb5a}_i3.dds",
+            "width": 1024,
+            "height": 812,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "66648d5eca37f41b07fdaa7558c2d84a907312a757be39f37b5e6fe83ac8d5bf"
+          },
+          {
+            "linkage": "photomode{20ecfb5a}_i1b.dds",
+            "width": 1116,
+            "height": 80,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "79f4db2e02d46a46d3afd053d993e0e9e3cb10f114d18c0c97c631ffd6097c40"
+          },
+          {
+            "linkage": "photomode{20ecfb5a}_i1f.dds",
+            "width": 1112,
+            "height": 76,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "82a02c6e8bf7153dcb1ab227fcec837c4a914e622afaa872e09a03b3d8c23a3d"
+          },
+          {
+            "linkage": "photomode{20ecfb5a}_i21.dds",
+            "width": 1112,
+            "height": 76,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "5ba241e87511ec4470e953061c681a1906653510f9c3e948ee27e25f6d9b6f1e"
+          },
+          {
+            "linkage": "photomode{20ecfb5a}_i124.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 157
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_overlay.redswf",
+      "input_sha256": "22dea1d1dfc42b645f3c3acd6e6bbb3e7f6082aad5d7d40ab8ce70082cd6052a",
+      "output_sha256": "0278e5af06e51b0118d0b5b8175bd76e889e46322a169d23889b1c4caf424296",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9151
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "e9f026473ce01aed5c7ac2d34a82c1af74e76e2996babc606625fb613b514ea2",
+        "native_base_sha256": "e9f026473ce01aed5c7ac2d34a82c1af74e76e2996babc606625fb613b514ea2",
+        "output_sha256": "0278e5af06e51b0118d0b5b8175bd76e889e46322a169d23889b1c4caf424296",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "popup-overlay{6e67b329}_i3.dds",
+            "width": 1008,
+            "height": 640,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "e302f719d6ae92da93096c90e650512492fce3c50deaf3eec886e2167175a62a"
+          },
+          {
+            "linkage": "popup-overlay{6e67b329}_i1.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 130
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/preparation/panel_preparation.redswf",
+      "input_sha256": "7ad9c732c5ceff7815db556d64a75cd2bc34a935ed540454389799c7c0dcd697",
+      "output_sha256": "9e390e995df6043587259e52d32b9f3776b35a85a12886c1a5da54ae839e1fee",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "cf1b3d43c4c3243a9f6dc3ef6c6f43ea77969c7b9d06dea67119883018cf9885",
+          "output_sha256": "ed751ca7f4c54c64e03afcc98316471e663d046f74565912f7094d7d8f24dba8"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 9174
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "3019b5e5f807de3705cbf55120c29372ddc2b8b80082377186aad43281097e99",
+        "native_base_sha256": "3019b5e5f807de3705cbf55120c29372ddc2b8b80082377186aad43281097e99",
+        "output_sha256": "9e390e995df6043587259e52d32b9f3776b35a85a12886c1a5da54ae839e1fee",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-preparation{dc3fba02}_i8.dds",
+            "width": 1016,
+            "height": 460,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "724c6c4c401ec2b5187749f3908dd1217779906c4de24c0e28710c7382b99c22"
+          },
+          {
+            "linkage": "panel-preparation{dc3fba02}_iff.dds",
+            "width": 1024,
+            "height": 1024,
+            "compression": "TCM_DXTNoAlpha",
+            "pixels_sha256": "53f2ccd6f1e876c303df9351cf26a7c56e9e2a11cf044daff1431b45bbab3119"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 93
+      },
+      "retained_public_protected_declarations": 23
+    },
+    {
+      "resource": "gameplay/gui_new/swf/startup/panel_startup.redswf",
+      "input_sha256": "1aa83c2d971aecd591a144fe039c9bf3f15fe10de6028cbfaf486b4bc58d61da",
+      "output_sha256": "3f3f79a15c2f4be3ccc08a50346e70e7c9ddd5af53fcb900362086b309c4c981",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "d77aae90313fa4008c849c053bcb04d75dc8aa071782aaa93a10e8d8286e2329",
+          "output_sha256": "1744b50ebf79ec35ed024481f0d95362d068dde464654542b0c3955b58a035e1"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "8722b9dc3dc4d24f0fd5b6fd95d36011059b5a59ea3f10c9beb4d4c4a00d5c46",
+          "output_sha256": "d1f7ef4f4caa8c1538bcdbfe1fbd482a7ffb4464c569c73684c4b74c06382a34"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "1": 2237,
+          "2": 7099
+        },
+        "new_external_images": 0,
+        "placement_count": 38,
+        "input_sha256": "839b389d1a202d9146ac99a664d98685776cbced6480caff39f4cb8b63258c83",
+        "native_base_sha256": "839b389d1a202d9146ac99a664d98685776cbced6480caff39f4cb8b63258c83",
+        "output_sha256": "3f3f79a15c2f4be3ccc08a50346e70e7c9ddd5af53fcb900362086b309c4c981",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-startup{8b42ae1a}_i1.dds",
+            "width": 1024,
+            "height": 1020,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "e3263c121c969302e51dccf851664f32857585fa96535f26888dd178de1a3b74"
+          },
+          {
+            "linkage": "panel-startup{8b42ae1a}_i5.dds",
+            "width": 1024,
+            "height": 772,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "d2f73b74d3b9a3c45a601c24a1c44388bec9ba34eb283b21837698c94a86d1ee"
+          },
+          {
+            "linkage": "panel-startup{8b42ae1a}_i1a.dds",
+            "width": 3840,
+            "height": 2160,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "499f79f31eef907f5113b159836e2726350109cfb36564bfd658f220bd5bd0cf"
+          },
+          {
+            "linkage": "panel-startup{8b42ae1a}_i1b.dds",
+            "width": 3840,
+            "height": 2160,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "8302a792a0e725f8287a760f908bfc38791d6b533bd17fe33942d1fb03274c2b"
+          },
+          {
+            "linkage": "panel-startup{8b42ae1a}_i19a.dds",
+            "width": 2136,
+            "height": 2160,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "d43a3cb59a497ceb0ffcd75952e1acae39ec0dd0eb12b670700c8856d2a655d0"
+          }
+        ],
+        "image_links": 5,
+        "rectangles": 170
+      },
+      "retained_public_protected_declarations": 97
+    },
+    {
+      "resource": "gameplay/gui_new/swf/uirescale/panel_uirescale.redswf",
+      "input_sha256": "ce22dc38873382501c83c5e020b578c08b8bf0cabcc0152f132ef8cc74414ee9",
+      "output_sha256": "1b98ff291f9524c53b559f850497242685a9b4c7555e61354d945942a3f85e77",
+      "classes": [
+        {
+          "class_name": "InputFeedbackButton",
+          "input_sha256": "1234c587af374daaa237fe57484ab5e94df3b38a7669851c3229fed7e7acc272",
+          "output_sha256": "63a46ecf10d482bb6227fac8394576c617c390dcb08b27b8ad1a42f0fe84ddc0"
+        },
+        {
+          "class_name": "ModuleInputFeedback",
+          "input_sha256": "1184adc548d1600227656d2578ca87a57e1c5ca23b93a71f207116f628cdf47e",
+          "output_sha256": "275314cc497e58aea425936bc8f422c868104d2fed6c2241131ba3e0a9ea0d32"
+        }
+      ],
+      "glyphs": {
+        "abc_fonts_exports_unchanged": true,
+        "original_atlas_slots": true,
+        "patched_blocks": {
+          "2": 9191
+        },
+        "new_external_images": 0,
+        "placement_count": 39,
+        "input_sha256": "3e2c4727756d9a9564ad6cf193d061d08c4bfd533bab03995b772cb4d4122b33",
+        "native_base_sha256": "3e2c4727756d9a9564ad6cf193d061d08c4bfd533bab03995b772cb4d4122b33",
+        "output_sha256": "1b98ff291f9524c53b559f850497242685a9b4c7555e61354d945942a3f85e77",
+        "definition_count": 34
+      },
+      "atlas": {
+        "textures": [
+          {
+            "linkage": "panel-uirescale{41755895}_i1.dds",
+            "width": 40,
+            "height": 48,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+          },
+          {
+            "linkage": "panel-uirescale{41755895}_i2.dds",
+            "width": 1024,
+            "height": 612,
+            "compression": "TCM_DXTAlpha",
+            "pixels_sha256": "62947170750b46943d49c86510c88334a67550617beb9dcd39dd35477f11ed71"
+          }
+        ],
+        "image_links": 2,
+        "rectangles": 132
+      },
+      "retained_public_protected_declarations": 97
+    }
+  ],
+  "keys": [
+    "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+    "gameplay/gui_new/swf/character/panel_character.redswf",
+    "gameplay/gui_new/swf/character/panel_character_dupe.redswf",
+    "gameplay/gui_new/swf/common/componentslib.redswf",
+    "gameplay/gui_new/swf/common/panel_common.redswf",
+    "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+    "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_main.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_storybook.redswf",
+    "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+    "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+    "gameplay/gui_new/swf/inventory/panel_inventorysockets.redswf",
+    "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+    "gameplay/gui_new/swf/loading/loadingscreen.redswf",
+    "gameplay/gui_new/swf/mainmenu/panel_credits.redswf",
+    "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf",
+    "gameplay/gui_new/swf/mainmenu/panel_mainmenu_autosavewarning.redswf",
+    "gameplay/gui_new/swf/mainmenu/panel_recapmovies.redswf",
+    "gameplay/gui_new/swf/mainmenu/panel_startupmovies.redswf",
+    "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf",
+    "gameplay/gui_new/swf/modmenu/panel_modmenu.redswf",
+    "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf",
+    "gameplay/gui_new/swf/photomode/photomode.redswf",
+    "gameplay/gui_new/swf/popups/popup_item_selection.redswf",
+    "gameplay/gui_new/swf/popups/popup_loot.redswf",
+    "gameplay/gui_new/swf/popups/popup_message.redswf",
+    "gameplay/gui_new/swf/popups/popup_overlay.redswf",
+    "gameplay/gui_new/swf/popups/popup_tutorial.redswf",
+    "gameplay/gui_new/swf/preparation/panel_preparation.redswf",
+    "gameplay/gui_new/swf/repair/panel_blacksmith.redswf",
+    "gameplay/gui_new/swf/repair/panel_enchanting.redswf",
+    "gameplay/gui_new/swf/repair/panel_transmog.redswf",
+    "gameplay/gui_new/swf/startup/panel_startup.redswf",
+    "gameplay/gui_new/swf/uirescale/panel_uirescale.redswf",
+    "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf"
+  ],
+  "native": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\native-final\\cooked"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 20:49:18][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 20:49:19][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\native-final\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\native-final\\validation"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 20:49:39][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 20:49:39][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\native-final\\pack-input",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 20:49:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 20:49:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "metadata",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "metadatastore",
+        "-path=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\packed"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 20:50:42][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 20:50:43][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "environment_control": {
+    "input_sha256": "48300780329ea96ce61eedaad3279a59ffb40f21a7697ffb1958b3ec98a0c7f3",
+    "cooked_sha256": "5b53d3690560152c841f7a60d6e33c3af367eb8cf16fe11c961f7fe9a15f441a",
+    "validation_summary": "[2026.10.16 20:49:16][Info][WCC] Errors found in 1 resources:",
+    "native_commands": [
+      {
+        "label": "cook",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+          "cook",
+          "-platform=pc",
+          "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\workspace",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\environment-control\\cooked"
+        ],
+        "exit_code": 0,
+        "passed": true,
+        "assertions": [
+          "[2026.10.16 20:48:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.16 20:48:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      },
+      {
+        "label": "validate",
+        "command": [
+          "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+          "validate",
+          "-db=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\environment-control\\cooked\\cook.db",
+          "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2\\environment-control\\validation"
+        ],
+        "exit_code": 0,
+        "passed": false,
+        "assertions": [
+          "[2026.10.16 20:48:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+          "[2026.10.16 20:48:59][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+        ]
+      }
+    ],
+    "shipped": false
+  },
+  "scripts": {
+    "results": [
+      {
+        "label": "control",
+        "exit_code": 0,
+        "existing_successful_compile_verified": true,
+        "blob_sha256": "bfa2f9e301ab33b6671d85b6fafa55cce388ade693fa9b6119760b50f8f769ad",
+        "warnings": {
+          "count": 819,
+          "distinct": 818,
+          "counter_sha256": "97363a6ebfce6735af8c600ba65db04e856e4d07ff93a8be5f4194a7b334edc3"
+        },
+        "assertions": {
+          "count": 337,
+          "distinct": 327,
+          "counter_sha256": "4cc6436c77050d3604dcc7cc63d71b7428228dfef5ddb87ba6259b1bc2d2f98b"
+        }
+      },
+      {
+        "label": "candidate",
+        "exit_code": 0,
+        "existing_successful_compile_verified": true,
+        "blob_sha256": "80e454a1073ce8a386f64f820030d4369a9b6215f1b62367b488cffcf576c786",
+        "warnings": {
+          "count": 819,
+          "distinct": 818,
+          "counter_sha256": "97363a6ebfce6735af8c600ba65db04e856e4d07ff93a8be5f4194a7b334edc3"
+        },
+        "assertions": {
+          "count": 337,
+          "distinct": 327,
+          "counter_sha256": "4cc6436c77050d3604dcc7cc63d71b7428228dfef5ddb87ba6259b1bc2d2f98b"
+        }
+      }
+    ],
+    "source_hashes": {
+      "inkironui_bgart.ws": "fd9ffcd8b0a07397109078de6c29de6f64273c98dad620ba4ec4a78c6210d261",
+      "inkironui_character.ws": "4ee373a947610617b10bb2d6b46bc75574e595cc1686cc72dca264962c0d7248",
+      "inkironui_charlayout.ws": "ac9cb28c4d75c39c0712c447e12f850444fef474147b2a7c8aa5f3d9ef2f1dea",
+      "inkironui_equipfirst.ws": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+      "inkironui_inventory.ws": "061739ae9d7e6334a314ecaed59aa394fe5066c6ccb38b08b4e78965c83dae46",
+      "inkironui_invheader.ws": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+      "inkironui_loot.ws": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+      "inkironui_map.ws": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+      "inkironui_menuinfo.ws": "02ab85724cc0999c87a6231d6b0d330ffd2700545a29fc6c222d605265bb2ed3",
+      "inkironui_questlevel.ws": "24087ad393929392b9a471ea6e6cec7166941f576d71ed09f0b41d84f0402bae",
+      "inkironui_rarity.ws": "d4ae049fdd53207a824e43c36a164e7afd14f2239170cfe009633a3e3d657961",
+      "inkironui_saveload.ws": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+      "inkironui_shop.ws": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6"
+    },
+    "merged_inventory_sha256": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32",
+    "opaque_dependencies": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "options_base_path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\bin\\config\\r4game\\user_config_matrix\\pc\\modInkIronHUDBatch.xml",
+    "options_base_sha256": "c1e301377e5c82d625b69b3d8d4e240dc3c235b3ce48d67a9058444bedfe157e",
+    "added_options": [
+      "iiShowMainMenuInfo",
+      "iiHideItemLine",
+      "iiRarityStyle",
+      "iiCharacterLayout",
+      "iiEquipFirstInventory",
+      "iiLootShowCard",
+      "iiInventoryPanelHeader",
+      "iiInventoryFocusSquare",
+      "iiMapQuestLevels"
+    ],
+    "existing_hud_options_unchanged": true
+  },
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\menus087-v1\\Ink-Iron-0.8.7-Compatible-Menus-v1-private-test.zip",
+  "zip_sha256": "c7b5829f4cdae538a1b657424702e2e6c05d835aa9ae1ed2d255b32d22ec9ed0",
+  "zip_bytes": 62022110,
+  "package_members": {
+    "Mods/modInkIronMenus087/content/blob0.bundle": "7ed3b848072788c180a344d67526d5632bd4343ae4d4db6930ad44048037d424",
+    "Mods/modInkIronMenus087/content/metadata.store": "d96ec17f2c4ebc946a494177e33f0045de956cc3b9ddfd3b2670da3331748373",
+    "Mods/modInkIronMenus087/content/texture.cache": "549077e44a62b5f83565b2f86562754fdff518580a0667bcd6e2275cfdea3dda",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_bgart.ws": "fd9ffcd8b0a07397109078de6c29de6f64273c98dad620ba4ec4a78c6210d261",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_character.ws": "4ee373a947610617b10bb2d6b46bc75574e595cc1686cc72dca264962c0d7248",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_charlayout.ws": "ac9cb28c4d75c39c0712c447e12f850444fef474147b2a7c8aa5f3d9ef2f1dea",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_equipfirst.ws": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_inventory.ws": "061739ae9d7e6334a314ecaed59aa394fe5066c6ccb38b08b4e78965c83dae46",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_invheader.ws": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_loot.ws": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_map.ws": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_menuinfo.ws": "02ab85724cc0999c87a6231d6b0d330ffd2700545a29fc6c222d605265bb2ed3",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_questlevel.ws": "24087ad393929392b9a471ea6e6cec7166941f576d71ed09f0b41d84f0402bae",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_rarity.ws": "d4ae049fdd53207a824e43c36a164e7afd14f2239170cfe009633a3e3d657961",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_saveload.ws": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_shop.ws": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+    "bin/config/r4game/user_config_matrix/pc/modInkIronHUDBatch.xml": "b67d0aa80e3fd32be51f72f1bee6889aa90aaecd5d495e5830b11c2febee63a4"
+  },
+  "frozen_inputs_count": 321,
+  "frozen_snapshot_sha256": "5dbd55e37efb24646822e59573ead769074dc1973c75541c2b58035066620c96",
+  "runtime_tested": false,
+  "deployed": false,
+  "private_evidence": "C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v1-r2",
+  "texture_cache": {
+    "source_sha256": "549077e44a62b5f83565b2f86562754fdff518580a0667bcd6e2275cfdea3dda",
+    "entries": 24,
+    "collisions": [],
+    "empty_cache_placeholders": [
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modunreasonableplotredesigned\\content\\texture.cache"
+    ]
+  },
+  "source_hashes": {
+    "tools\\report-menu-migration.py": "91fee16213d19a945b58b77d2f1af0050524909a7d98fde1ff153e2c4bca8180",
+    "tools\\audit-menu-migration.py": "636c0496b729f7789565ccf8593d131b8c9b88aa485d087ea34867e377acac55",
+    "tools\\patch-menu-migration.py": "dcdf857dc2c107da3aa8dcc4f23bf710d42e05a73bb66e3bfa47e532f7e66ebb",
+    "tools\\build-menus-087.py": "832c42e2b5f23339db3533e5d205410246ed3ee12355e25174f053eba2a0a38d",
+    "tools\\compile-menus-087.py": "6bbc4278fa86432386540c46b46f98179bef2b2652a22fd3cd31a131e511050b",
+    "tools\\check-menu-environment.py": "149199ed038b417726cd58b03185ee3b7cdb413da8f24157997ed4b850558b27",
+    "tests\\test_menus_087.py": "42a9092b6ab9de72329f4f8ec0f96e008c9c61aaddc9191ad591a7b4f3ed6129"
+  },
+  "script_migration": [
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_bgart.ws",
+      "upstream_080": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5",
+      "upstream_086": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5",
+      "upstream_087": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_character.ws",
+      "upstream_080": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1",
+      "upstream_086": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1",
+      "upstream_087": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_charlayout.ws",
+      "upstream_080": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db",
+      "upstream_086": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db",
+      "upstream_087": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_equipfirst.ws",
+      "upstream_080": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+      "upstream_086": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+      "upstream_087": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_inventory.ws",
+      "upstream_080": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840",
+      "upstream_086": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840",
+      "upstream_087": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_invheader.ws",
+      "upstream_080": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+      "upstream_086": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+      "upstream_087": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_loot.ws",
+      "upstream_080": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+      "upstream_086": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+      "upstream_087": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_map.ws",
+      "upstream_080": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+      "upstream_086": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+      "upstream_087": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_menuinfo.ws",
+      "upstream_080": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f",
+      "upstream_086": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f",
+      "upstream_087": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_questlevel.ws",
+      "upstream_080": null,
+      "upstream_086": "63c27f135746021eafb8c5bda04ec067b9e0af1e5915f41064fb7cf6b367e965",
+      "upstream_087": "63c27f135746021eafb8c5bda04ec067b9e0af1e5915f41064fb7cf6b367e965",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_rarity.ws",
+      "upstream_080": "3e904d4a482856ba968bae689ad9d6b5e95c0af85a90058ec832ef53b1815373",
+      "upstream_086": "6823fa58b1ab3024e125862de08db1a515e7f198693ebab6fd5ba2f121bf303e",
+      "upstream_087": "6823fa58b1ab3024e125862de08db1a515e7f198693ebab6fd5ba2f121bf303e",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_saveload.ws",
+      "upstream_080": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+      "upstream_086": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+      "upstream_087": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronUI\\content\\scripts\\local\\inkironui_shop.ws",
+      "upstream_080": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+      "upstream_086": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+      "upstream_087": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+      "installed": [],
+      "decision": "adopt exactly once"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronAdrenaline.ws",
+      "upstream_080": null,
+      "upstream_086": "ebd4b08ac57338e8e46747535680a48c9a6fdf64d9000621625838aaef9fbd29",
+      "upstream_087": "2a40d82b43cb7d01dd814ac63e837ff79731a1656e4047356598707327763885",
+      "installed": [],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronGear.ws",
+      "upstream_080": "ae0afa77aa117fcb76eab25d4f0320c96e3179c8e96a21cc902ea188d0f70ee5",
+      "upstream_086": "5a6b8f9beebbb387f7cc7aabcb4860dbeb229127ceefb099d99a6f1bb8efd5c1",
+      "upstream_087": "5a6b8f9beebbb387f7cc7aabcb4860dbeb229127ceefb099d99a6f1bb8efd5c1",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronGear.ws",
+          "sha256": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronHorse.ws",
+      "upstream_080": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24",
+      "upstream_086": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24",
+      "upstream_087": "643b66087dadf447d3e2c47532319ff58737c1d301c9e8f64d472b0c2f1ddf24",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronHorse.ws",
+          "sha256": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronHudScale.ws",
+      "upstream_080": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262",
+      "upstream_086": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262",
+      "upstream_087": "5e6cc3e11077dd737bda2164dbe9b9b8cbd1ac51f29cb87277bb294d66d86262",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronHudScale.ws",
+          "sha256": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronMinimapClock.ws",
+      "upstream_080": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5",
+      "upstream_086": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5",
+      "upstream_087": "acee83c54cc88edb57f61bad8db46f9f0e573df12dd98b0e3696428c0d6baba5",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronMinimapClock.ws",
+          "sha256": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronNpcPlate.ws",
+      "upstream_080": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687",
+      "upstream_086": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687",
+      "upstream_087": "22dfac719738d288e3b091b21b9b3ff955adfa40cfeb1523017fd47b2a5a9687",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronNpcPlate.ws",
+          "sha256": "ba874e9c56f8f95c9941b24fbd7b580cab56e6d11ac1aca471f1199180be0abb"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronQuest.ws",
+      "upstream_080": "80910839841d6ed52245024399abdb9597b6fee47f3f8ee675fc8e6f73b6f8e2",
+      "upstream_086": "e6c6d0476b6d47d0f6ac5ce141523793924092d31b36b221d33ee3798bfdbaed",
+      "upstream_087": "a2d06704c4b10c49ce2eb637b573663c8aaf5f51c68d292e29f6268d812dcc69",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronQuest.ws",
+          "sha256": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronHUD\\content\\scripts\\local\\inkIronRadialSigns.ws",
+      "upstream_080": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d",
+      "upstream_086": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d",
+      "upstream_087": "1cef24062c22041412afb53123b0f347ad5f46e8954a1b97ef36bbd2535d416d",
+      "installed": [
+        {
+          "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\scripts\\local\\inkIronRadialSigns.ws",
+          "sha256": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582"
+        }
+      ],
+      "decision": "retain current/defer upstream optional module"
+    },
+    {
+      "path": "mods\\modInkAndIronMainMenu\\content\\scripts\\local\\inkmainmenu_modmenu.ws",
+      "upstream_080": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff",
+      "upstream_086": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff",
+      "upstream_087": "028316f4b6148fd8892b0e28068332ae2bdcc2445c95a0678bd186ca53ea84ff",
+      "installed": [],
+      "decision": "retain current/defer upstream optional module"
+    }
+  ],
+  "native_log_sha256": {
+    "cook": "b43504ebaf0936180f1fd14d8337a71ad4af17351c59864a7a6f10e7e43746ad",
+    "validate": "1fff895eb907c649f19aca1ea7dad808e9f70c1059e37a84817da1a7d8905175",
+    "pack": "b74e09d0d61714b84753f880ba9e9b1d93cc7ba64fc7fee657be591d0ae01c88",
+    "metadata": "c698d52517b9818af8c54a475dcd7958eadec84bbf86512cb6d239d8c71614cd"
+  },
+  "targeted_tests": {
+    "passed": 15,
+    "command": "python -m unittest discover -s tests -p test_menus_087.py -v",
+    "in_game_tested": false
+  }
+}
