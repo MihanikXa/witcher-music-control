@@ -5,7 +5,21 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Current active task: Ink & Iron 0.8.6 Inventory (16 October 2026)
+## Latest active work — 0.8.7 menu migration with 0.8.0 preservation (16 October)
+
+The user added a **0.8.7** update under the private local `reference/` and says their
+existing UI was based on **0.8.0**. 0.8.7 lacks the separately obtained Hoods
+compatibility patch and our private 0.8.6 work. **Read
+[0.8.7 migration handoff](research/ink-and-iron-0.8.7-menus-migration.md) first.**
+Locally pin the new source, compare **upstream 0.8.0 → customized installed UI
+→ interim 0.8.6/official Hoods compatibility → upstream 0.8.7**, rebase only
+missing changes without removing accepted custom modifications, and build a
+private compatible shared-menu baseline. The accepted custom HUD v4/RC2 is frozen;
+do not import the rejected Gear-grid v1 presentation into the baseline. Other
+older integration/audit documents are historical, not authority to overwrite
+current code. No live Vortex/settings/merge modifications without approval.
+
+## Prior work: Ink & Iron 0.8.6 Inventory (superseded by latest 0.8.7 menu phase)
 
 The user confirms custom HUD v4/RC2 works and has moved on. **Freeze it.**
 Next task is one functional **one-screen Gear-grid Inventory** prototype using
@@ -15,7 +29,7 @@ The old `reference/ink-and-iron-0.8/` and audit are **0.8.0 historical**;
 they cannot stand in for missing 0.8.6 archives. No automatic live deployment,
 no update of custom HUD, and no broad UI redesign in this slice.
 
-## Immediate sequence correction — 16 October user Inventory feedback
+## Historical sequence correction — 16 October user Inventory feedback (now targets 0.8.7)
 
 The user supplied explicit v1 screenshot criticism and proposes integrating the
 **complete Ink & Iron 0.8.6 menu UI baseline before Gear-grid v2**. This now

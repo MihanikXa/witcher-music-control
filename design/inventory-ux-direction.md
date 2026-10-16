@@ -2,7 +2,17 @@
 
 **Latest explicit user decision; supersedes older inventory layout proposals.** This is an intention and design hypothesis, not a claim that code exists.
 
-## 16 October 2026 — newest explicit visual feedback and revised order
+## 16 October 2026 — source migration correction before Inventory v2
+
+The user has supplied upstream **Ink & Iron 0.8.7** under local `reference/`.
+Their installed/customized UI was **0.8.0-based**, and the 0.8.7 update has
+**not** inherited the official separate Hoods compatibility or our custom
+0.8.6 Gear-grid work. See [0.8.7 source-preserving migration plan](../research/ink-and-iron-0.8.7-menus-migration.md).
+Complete a no-data-loss three-way/semantic menu upgrade before resuming
+Inventory redesign. Retain the v1 experimental code/private ZIP for later;
+do not promote its rejected layout. Freeze the working HUD v4/RC2.
+
+## 16 October 2026 — prior visual feedback and revised order
 
 See [verbatim user feedback](../research/ink-gear-grid-v1-user-feedback.md). The user finds the v1 item grid **too dotted/busy yet too small/secondary**, wants **Geralt somewhat bigger**, **less persistent text and item details**, **far fewer/less intrusive footer hints**, and an **extremely clean potentially translucent backdrop**. They also find the current top navigation busy and expect **Ink & Iron's complete menu implementation** to improve it. The previously identified auxiliary slots under Geralt and disconnected detail region remain unacceptable.
 

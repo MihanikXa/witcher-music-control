@@ -18,7 +18,17 @@ reference/
 
 All extracted binaries, author scripts and files are intentionally ignored by Git. Do not redistribute third-party modified assets or fonts without an appropriate license. These references are **not approved live deployment packages**. Install the standalone alignment fix in Vortex only after checking its actual contents for collisions with Seamless Adaptive HUD/FriendlyHUD.
 
-## Ink & Iron 0.8.6 — next Inventory source (16 October)
+## Current update: Ink & Iron 0.8.7 (16 October)
+
+The user has **already put a 0.8.7 update somewhere under the local `reference/`**.
+Locate and identify the actual files/hashes there rather than requiring a
+new download or assuming a folder name. It does **not** contain our prior
+0.8.6 custom work or the separate Hoods patch. Preserve and compare the
+already-pinned 0.8.0/0.8.6 source snapshots and the live customized
+0.8.0-based UI. Follow the [migration handoff](../research/ink-and-iron-0.8.7-menus-migration.md).
+Never overwrite past ignored sources or the finished HUD.
+
+## Prior Inventory source: Ink & Iron 0.8.6 (historical, keep pinned)
 
 **Use 0.8.6 UI as the next Inventory design source**, together with the separate
 official **Hoods Compatibility** optional file (first released with 0.8.3).
