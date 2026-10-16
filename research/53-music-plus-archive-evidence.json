@@ -1,0 +1,1666 @@
+{
+  "date": "2026-10-16",
+  "method": "Static archive/cache/HIRC inspection only; no third-party execution or playback",
+  "archives": [
+    {
+      "filename": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "bytes": 21479021,
+      "sha256": "2327d3895d63dc24141e78ae7ab1e953b22234f624dd6a1cbff870c10e3a94a7",
+      "entries": [
+        {
+          "path": "Install-MusicPlus-Keys.bat",
+          "bytes": 17814,
+          "compressed": 5495,
+          "crc32": "dfe7f27a",
+          "attributes": 2180972544
+        },
+        {
+          "path": "MusicPlus-Playlist-Editor.bat",
+          "bytes": 24481,
+          "compressed": 6525,
+          "crc32": "553e4406",
+          "attributes": 2180972544
+        },
+        {
+          "path": "Uninstall-MusicPlus.bat",
+          "bytes": 17693,
+          "compressed": 5475,
+          "crc32": "51e11195",
+          "attributes": 2180972544
+        },
+        {
+          "path": "bin/config/base/modMusicPlus.ini",
+          "bytes": 262,
+          "compressed": 150,
+          "crc32": "318a0f55",
+          "attributes": 2176188416
+        },
+        {
+          "path": "bin/config/r4game/user_config_matrix/pc/modMusicPlus.xml",
+          "bytes": 4200,
+          "compressed": 619,
+          "crc32": "6c452662",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/mod0000_MusicPlusPlaylists/content/soundspc.cache",
+          "bytes": 84703633,
+          "compressed": 13569253,
+          "crc32": "c1560656",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/ar.w3strings",
+          "bytes": 2952,
+          "compressed": 1131,
+          "crc32": "f535ae9c",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/br.w3strings",
+          "bytes": 2345,
+          "compressed": 1092,
+          "crc32": "0a521a7f",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/cn.w3strings",
+          "bytes": 2086,
+          "compressed": 1040,
+          "crc32": "d5b4a8dd",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/cz.w3strings",
+          "bytes": 2152,
+          "compressed": 1548,
+          "crc32": "3a354f24",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/de.w3strings",
+          "bytes": 2212,
+          "compressed": 1643,
+          "crc32": "e656af3a",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/en.w3strings",
+          "bytes": 2058,
+          "compressed": 1490,
+          "crc32": "e72ae6b0",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/es.w3strings",
+          "bytes": 2315,
+          "compressed": 1723,
+          "crc32": "54817536",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/esmx.w3strings",
+          "bytes": 2319,
+          "compressed": 1082,
+          "crc32": "0b197206",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/fr.w3strings",
+          "bytes": 2322,
+          "compressed": 1763,
+          "crc32": "bc3b0965",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/hu.w3strings",
+          "bytes": 2271,
+          "compressed": 1634,
+          "crc32": "ca8308e5",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/it.w3strings",
+          "bytes": 2296,
+          "compressed": 1696,
+          "crc32": "bed509c9",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/jp.w3strings",
+          "bytes": 2336,
+          "compressed": 1666,
+          "crc32": "a9591b60",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/kr.w3strings",
+          "bytes": 2232,
+          "compressed": 1055,
+          "crc32": "38b4de4a",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/pl.w3strings",
+          "bytes": 2225,
+          "compressed": 1596,
+          "crc32": "830ffc3f",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/ru.w3strings",
+          "bytes": 2980,
+          "compressed": 2211,
+          "crc32": "45649e17",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/scripts/local/musicPlus.ws",
+          "bytes": 28245,
+          "compressed": 7318,
+          "crc32": "1c071005",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/tr.w3strings",
+          "bytes": 2124,
+          "compressed": 1051,
+          "crc32": "51b7444f",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/ua.w3strings",
+          "bytes": 2918,
+          "compressed": 1179,
+          "crc32": "54228736",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/content/zh.w3strings",
+          "bytes": 2086,
+          "compressed": 1389,
+          "crc32": "448fffd1",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/editor.html",
+          "bytes": 34331,
+          "compressed": 11219,
+          "crc32": "eee1cca6",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/index.json",
+          "bytes": 11042657,
+          "compressed": 3527936,
+          "crc32": "1d74832e",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/musicpack.txt",
+          "bytes": 4132,
+          "compressed": 1360,
+          "crc32": "1edc6ce4",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/COPYING",
+          "bytes": 1314,
+          "compressed": 741,
+          "crc32": "7c573a90",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/avcodec-vgmstream-59.dll",
+          "bytes": 2450432,
+          "compressed": 979301,
+          "crc32": "bcfdc1c2",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/avformat-vgmstream-59.dll",
+          "bytes": 1305600,
+          "compressed": 491203,
+          "crc32": "53cc0af9",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/avutil-vgmstream-57.dll",
+          "bytes": 1792000,
+          "compressed": 612177,
+          "crc32": "29ac83ba",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libatrac9.dll",
+          "bytes": 308736,
+          "compressed": 108574,
+          "crc32": "1c2ce4bd",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libcelt-0061.dll",
+          "bytes": 110628,
+          "compressed": 59218,
+          "crc32": "01f59e25",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libcelt-0110.dll",
+          "bytes": 105132,
+          "compressed": 59002,
+          "crc32": "3139fa2f",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libg719_decode.dll",
+          "bytes": 156160,
+          "compressed": 84133,
+          "crc32": "8f40715d",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libmpg123-0.dll",
+          "bytes": 420235,
+          "compressed": 207554,
+          "crc32": "7d1800a3",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libspeex-1.dll",
+          "bytes": 129630,
+          "compressed": 69841,
+          "crc32": "d0cac565",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/libvorbis.dll",
+          "bytes": 287232,
+          "compressed": 161520,
+          "crc32": "06ffe268",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/swresample-vgmstream-4.dll",
+          "bytes": 729600,
+          "compressed": 240967,
+          "crc32": "c8c7f64a",
+          "attributes": 2176188416
+        },
+        {
+          "path": "mods/modMusicPlus/editor/vgmstream/vgmstream-cli.exe",
+          "bytes": 2876928,
+          "compressed": 1236815,
+          "crc32": "37863479",
+          "attributes": 2180972544
+        }
+      ]
+    },
+    {
+      "filename": "Music Plus Music Pack 3.2.0 13818 1 2026-10-15T20-10Z 5sT4Vv5b8.zip",
+      "bytes": 930980232,
+      "sha256": "e36bf00ab035e01d3208e1b08bc2d4bcbdb57249b72585164185aa4e9b004636",
+      "entries": [
+        {
+          "path": "mods/modMusicPlus/content/soundspc.cache",
+          "bytes": 930980054,
+          "compressed": 930980054,
+          "crc32": "b8a3605d",
+          "attributes": 2176188416
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\Install-MusicPlus-Keys.bat",
+      "bytes": 17814,
+      "sha256": "6957db827733d7b56eb0bff3904fd2a471896cf1b7547d3d88fc0c29731735b3"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\MusicPlus-Playlist-Editor.bat",
+      "bytes": 24481,
+      "sha256": "ed1134bc7f64c587bb925736ed4f44ee4d1ec39d33c6ed27d70ab459e97e4392"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\Uninstall-MusicPlus.bat",
+      "bytes": 17693,
+      "sha256": "63c8e2c5e590db37cd0866ebd06e69ec67cd3b6bdec0b05a4d3db81859f4dab3"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\bin\\config\\base\\modMusicPlus.ini",
+      "bytes": 262,
+      "sha256": "ff72fbe255cfa785148fd023c24fe493dd504378df00a98febda64acf6f100bb"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\bin\\config\\r4game\\user_config_matrix\\pc\\modMusicPlus.xml",
+      "bytes": 4200,
+      "sha256": "3cfb7552cdde4934291c97f46c62274549bac74646cbc6a66f00e72780438c37"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\mod0000_MusicPlusPlaylists\\content\\soundspc.cache",
+      "bytes": 84703633,
+      "sha256": "b6f445d63777c28848ccffcdac546e41a24377d625fab262810701e063e6cfd1"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\ar.w3strings",
+      "bytes": 2952,
+      "sha256": "9b5399e3e9a6126bfddac1ddc622461ea82a852ac7a4ac42b94c966397d0908f"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\br.w3strings",
+      "bytes": 2345,
+      "sha256": "8a5579b585432409e6cc02525ffeb2651b48c35b1a8a990222042a5f3fc74387"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\cn.w3strings",
+      "bytes": 2086,
+      "sha256": "078bb21de588cbcd94ecba61f3541cc4a9ae838f443299fbf7d17cbe1bce57d8"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\cz.w3strings",
+      "bytes": 2152,
+      "sha256": "e37082060cafd9861d75bb81021a1706c8f5612fe34d63b1b5fb91e190196b76"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\de.w3strings",
+      "bytes": 2212,
+      "sha256": "954cbbd35e0011b8a518ba69989939f9aee268a1757fc62d93c10be32e7f5851"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\en.w3strings",
+      "bytes": 2058,
+      "sha256": "d414e59512e8fcf1f255fac7f3b3abd945e6eb0bae812dd5bd019a9e997c6a61"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\es.w3strings",
+      "bytes": 2315,
+      "sha256": "6170105299e5c36bfa3ee28c9f153a05d9e062a6b4e5a7bd5f09a79bd792d6ce"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\esmx.w3strings",
+      "bytes": 2319,
+      "sha256": "a1660cc63c13779fd5a22b48bc8fd8a10a2dfb42b81954cd4c6acbd08e49d37b"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\fr.w3strings",
+      "bytes": 2322,
+      "sha256": "156b6fa19b0c3ef411e9b473a04619031517abae55685772033ad12fdf42c904"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\hu.w3strings",
+      "bytes": 2271,
+      "sha256": "5ae2258d4c3517180d8da1b5321a39e4d58d66e95fe93ccce9cf2d295bbda5f8"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\it.w3strings",
+      "bytes": 2296,
+      "sha256": "cf4b5f1984a1514ab1f5d8b2f15cb7559be67089c6da187c07a4a367dee176bd"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\jp.w3strings",
+      "bytes": 2336,
+      "sha256": "c1cd88f00c05ecd6db581d0869e92eec38be9246383358110c36ebbad2aaeded"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\kr.w3strings",
+      "bytes": 2232,
+      "sha256": "9d47dd13498dff937db124bf7c91de8f6af1b04f0c5fc38cdf19c24b609397d2"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\pl.w3strings",
+      "bytes": 2225,
+      "sha256": "ac5f4e68f0d876f604bb498ad13bea4aba176cddf01e32283c50c26497139a4b"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\ru.w3strings",
+      "bytes": 2980,
+      "sha256": "2e2c7bc5ac2ada698c8d065d43c2375f0a3561f189049182f0e04a7a8c13b89e"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\scripts\\local\\musicPlus.ws",
+      "bytes": 28245,
+      "sha256": "6a9050ad7a061a35683061e3853af5b4c31cb1d577030124d06926b056772bda"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\tr.w3strings",
+      "bytes": 2124,
+      "sha256": "a851d4fcb2878c7c597d7b5f52ee51d5b82e706e67c561562e1d40b9aa9cb437"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\ua.w3strings",
+      "bytes": 2918,
+      "sha256": "8a16619f959b9316245b15e3097a5a97121e7b325c2242f0aa8ce6a2317841c9"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\content\\zh.w3strings",
+      "bytes": 2086,
+      "sha256": "bd84288b140a70710e3b072aa13c05ad35830fa7d659946d50d53d8d579a6c92"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\editor.html",
+      "bytes": 34331,
+      "sha256": "45405e826951c09a040879dd265f72869c43b499ba2db5c86be986701d93195e"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\index.json",
+      "bytes": 11042657,
+      "sha256": "d8c39c52f83c85cd17f93e6a4252377d97d540fe844ba2d59741ed122538e981"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\musicpack.txt",
+      "bytes": 4132,
+      "sha256": "18383e6cda931e109982a259060479b1d8b00ee2706b405952316a3e74fbb419"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\COPYING",
+      "bytes": 1314,
+      "sha256": "fcc26d35c4c4365e31f21734f846e4ee362ff0b57ba696085605a7b4768d8763"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\avcodec-vgmstream-59.dll",
+      "bytes": 2450432,
+      "sha256": "4d6cf54e7b3c26ef06e95bdb515a10d1e1bed3ec1ffd87ec3e5c4fbcd2a883f6"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\avformat-vgmstream-59.dll",
+      "bytes": 1305600,
+      "sha256": "0dde66ea268cccb67b1aa219c1ce879602b839e561a79a00c8215e2688f1a4b2"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\avutil-vgmstream-57.dll",
+      "bytes": 1792000,
+      "sha256": "a999856c17cfdce3c22b92b6640a7ada6c4ab4c3c6841a863770b72fa0bc19b4"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libatrac9.dll",
+      "bytes": 308736,
+      "sha256": "fe82f1ae13a798337e03942c35351997c23caadb5eb0c6b7a2dc2a521ed8b02e"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libcelt-0061.dll",
+      "bytes": 110628,
+      "sha256": "542254723d9100f91cbf18e41c4aff80287c22a9859e9e545c413d984df440ad"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libcelt-0110.dll",
+      "bytes": 105132,
+      "sha256": "bfcc51d865bb3b6a2793381bf535f23ec423feb722b46333fa8556ccdcafa61a"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libg719_decode.dll",
+      "bytes": 156160,
+      "sha256": "aad61f205ce1f1b61285f6b37b90a331ec8c6ae2f94f361714dc21a12c236960"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libmpg123-0.dll",
+      "bytes": 420235,
+      "sha256": "db9eb1d91b8eb9f47b0968201dbf6c51a9627e539a78afd9ad5f59c5d18fe4df"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libspeex-1.dll",
+      "bytes": 129630,
+      "sha256": "04dbc85fcec6c54671535bf39937a70f2dd040a81ad670a0b84de6ca17b39bff"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\libvorbis.dll",
+      "bytes": 287232,
+      "sha256": "5f330a20b19b3c70dc43eedcc95891e65940fca04a77155c573efcdd4c2ca665"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\swresample-vgmstream-4.dll",
+      "bytes": 729600,
+      "sha256": "688a81d31ef98a9a6143e1075b2f4c5b79bdfa51e7a14d50d662a0e916dac739"
+    },
+    {
+      "archive": "Music Plus MAIN FILES 3.3.0 Remastered 13818 3.3.0 2026-10-15T20-23Z Q81OXmQZ0.zip",
+      "path": "main\\mods\\modMusicPlus\\editor\\vgmstream\\vgmstream-cli.exe",
+      "bytes": 2876928,
+      "sha256": "29df08c557ada8269c92a6abfe3886ad2f65849b0b26ba78a0819b363bbc5b85"
+    },
+    {
+      "archive": "Music Plus Music Pack 3.2.0 13818 1 2026-10-15T20-10Z 5sT4Vv5b8.zip",
+      "path": "pack\\mods\\modMusicPlus\\content\\soundspc.cache",
+      "bytes": 930980054,
+      "sha256": "1d9288947540bbc3cb91405ef9458652ca7df4b9d3edf54d73cab75e10666075"
+    }
+  ],
+  "banks": {
+    "amb_dyn_bob_music_em_bard_group.bnk": {
+      "sha256": "ec1e2909e7bc15d4db5feaa77f2747923cae72020636f351583d9bac57b75200",
+      "bytes": 4225,
+      "bkhd_words": [
+        150,
+        3376744078,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 37,
+      "hirc": 53,
+      "decoded_types": {},
+      "tracks_decoded": 0,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 8,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 16,
+        "removed": 0,
+        "changed": 4
+      },
+      "native_events_count": 8,
+      "native_events_all_exact": true
+    },
+    "amb_dyn_bob_music_em_mandragora_bards.bnk": {
+      "sha256": "1f6979248043d8ba148f3ef24ccb25245e5024866167d708542221356e1f2f54",
+      "bytes": 1514,
+      "bkhd_words": [
+        150,
+        2539364516,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 13,
+      "hirc": 17,
+      "decoded_types": {},
+      "tracks_decoded": 0,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 4,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 4,
+        "removed": 0,
+        "changed": 1
+      },
+      "native_events_count": 4,
+      "native_events_all_exact": true
+    },
+    "music_em_bard_groups.bnk": {
+      "sha256": "580203afe4ef7de1c3b4a93ea41871103e179959064f18656c01a69cddaae736",
+      "bytes": 2817,
+      "bkhd_words": [
+        150,
+        3218028746,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 27,
+      "hirc": 35,
+      "decoded_types": {},
+      "tracks_decoded": 0,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 4,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 8,
+        "removed": 0,
+        "changed": 2
+      },
+      "native_events_count": 4,
+      "native_events_all_exact": true
+    },
+    "music_em_ep1_wedding_bards.bnk": {
+      "sha256": "7a46301a8c89f3aa25809fe2ce71dc4dd02108fa4338867b3e2069917977e616",
+      "bytes": 91584,
+      "bkhd_words": [
+        150,
+        1718949590,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 23,
+      "hirc": 27,
+      "decoded_types": {},
+      "tracks_decoded": 0,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 7,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 4,
+        "removed": 0,
+        "changed": 1
+      },
+      "native_events_count": 7,
+      "native_events_all_exact": true
+    },
+    "music_kaer_morhen.bnk": {
+      "sha256": "053e1d442b7483a81f38247fcd06ff2d8d6b538389f4c34a70e6c4b7b7f5e74d",
+      "bytes": 2414098,
+      "bkhd_words": [
+        150,
+        3504965836,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 440,
+      "hirc": 13197,
+      "decoded_types": {
+        "10": 5913,
+        "13": 418,
+        "12": 18
+      },
+      "tracks_decoded": 6579,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 146,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 12760,
+        "removed": 3,
+        "changed": 22
+      },
+      "native_events_count": 51,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 270,
+        "native_ids": 164,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_misty_island.bnk": {
+      "sha256": "bcd740a4249c529003284f2397e40f240da2f3c25ec63a8d949bb4ccccdf650d",
+      "bytes": 899719,
+      "bkhd_words": [
+        150,
+        3184271429,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 70,
+      "hirc": 5332,
+      "decoded_types": {
+        "10": 2629,
+        "13": 162,
+        "12": 7
+      },
+      "tracks_decoded": 2437,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 18,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 5263,
+        "removed": 1,
+        "changed": 9
+      },
+      "native_events_count": 7,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 22,
+        "native_ids": 14,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_nomansgrad.bnk": {
+      "sha256": "a2b533a703c2ae4d632af6e0204b59b24e8d17ede9e45f6d9bac79830e4b41f7",
+      "bytes": 45713013,
+      "bkhd_words": [
+        150,
+        4179090583,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 3831,
+      "hirc": 278000,
+      "decoded_types": {
+        "10": 130732,
+        "13": 8055,
+        "12": 183
+      },
+      "tracks_decoded": 137716,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 896,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 274217,
+        "removed": 48,
+        "changed": 407
+      },
+      "native_events_count": 346,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 1715,
+        "native_ids": 1075,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_prologue.bnk": {
+      "sha256": "4049df546f9018ed2a7639ec3858e3c9daa57167595c73ec437f4a6190ea5581",
+      "bytes": 6124261,
+      "bkhd_words": [
+        150,
+        3228744150,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 490,
+      "hirc": 37029,
+      "decoded_types": {
+        "10": 17523,
+        "13": 1222,
+        "12": 37
+      },
+      "tracks_decoded": 18014,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 114,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 36548,
+        "removed": 9,
+        "changed": 59
+      },
+      "native_events_count": 47,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 181,
+        "native_ids": 118,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_skellige.bnk": {
+      "sha256": "e3a4575fe770a5802ec0d558224dafa11b0597180dd15423b789c4ce575fd7c5",
+      "bytes": 13103216,
+      "bkhd_words": [
+        150,
+        1324662489,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 1900,
+      "hirc": 74827,
+      "decoded_types": {
+        "10": 33060,
+        "13": 3636,
+        "12": 88
+      },
+      "tracks_decoded": 37449,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 373,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 72950,
+        "removed": 23,
+        "changed": 276
+      },
+      "native_events_count": 149,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 710,
+        "native_ids": 436,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_spiral.bnk": {
+      "sha256": "b42a1c4dd5f78047ae8d614ab823b7b1bef153bca12f044b0f5951237d34ddf6",
+      "bytes": 749452,
+      "bkhd_words": [
+        150,
+        4132001110,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 33,
+      "hirc": 4490,
+      "decoded_types": {
+        "12": 7,
+        "10": 2156,
+        "13": 175
+      },
+      "tracks_decoded": 2066,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 9,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 4459,
+        "removed": 2,
+        "changed": 9
+      },
+      "native_events_count": 5,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 1,
+        "native_ids": 1,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_toussaint.bnk": {
+      "sha256": "5562ce04649450428e70e61de98d5be0b43a029d6a1dda1095eb7fab9d4f74a3",
+      "bytes": 14721482,
+      "bkhd_words": [
+        150,
+        864324445,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 1804,
+      "hirc": 83990,
+      "decoded_types": {
+        "10": 40204,
+        "13": 2759,
+        "12": 81
+      },
+      "tracks_decoded": 40225,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 471,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 82204,
+        "removed": 18,
+        "changed": 189
+      },
+      "native_events_count": 178,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 947,
+        "native_ids": 611,
+        "missing_modified": [],
+        "changed": []
+      }
+    },
+    "music_wyzima_castle.bnk": {
+      "sha256": "ef09fe7cbf364399f5414ca91f942a20be82a73bc218be185c3fab1365cd88f3",
+      "bytes": 877601,
+      "bkhd_words": [
+        150,
+        1867923235,
+        393239870,
+        16,
+        39,
+        0
+      ],
+      "native_hirc": 97,
+      "hirc": 4992,
+      "decoded_types": {
+        "10": 2473,
+        "13": 174,
+        "12": 9
+      },
+      "tracks_decoded": 2219,
+      "decode_errors": [],
+      "embedded_chunks_exact": {
+        "DIDX": true,
+        "DATA": true
+      },
+      "native_actions": {
+        "count": 33,
+        "changed_or_missing": []
+      },
+      "changed_chunks": [
+        "HIRC"
+      ],
+      "hirc_delta": {
+        "added": 4896,
+        "removed": 1,
+        "changed": 6
+      },
+      "native_events_count": 12,
+      "native_events_all_exact": true,
+      "authored_subtree": {
+        "source_ids": 54,
+        "native_ids": 34,
+        "missing_modified": [],
+        "changed": []
+      }
+    }
+  },
+  "editor": {
+    "playlists": 138,
+    "playlist_regions": {
+      "Velen, Novigrad & Oxenfurt": 64,
+      "White Orchard": 8,
+      "Skellige": 32,
+      "Toussaint": 19,
+      "Kaer Morhen": 3,
+      "Vizima": 2,
+      "Isle of Mists": 2,
+      "The Spiral": 2,
+      "Gwent": 2,
+      "Bards": 4
+    },
+    "selections": 2187,
+    "unique_tracks": 309,
+    "unique_sources": [
+      "GWENT",
+      "GWENT: Rogue Mage",
+      "Nyghtfall",
+      "Songs to Play Skyrim to",
+      "The Witcher",
+      "The Witcher 2",
+      "The Witcher IV",
+      "The Witcher: Monster Slayer",
+      "Thronebreaker",
+      "Vanilla"
+    ]
+  },
+  "media_closure": {
+    "original_source_count": 875,
+    "MP_source_count": 1150,
+    "added_source_count": 275,
+    "added_missing_pack": [],
+    "pack_not_referenced": [],
+    "errors": [],
+    "native_cache_count": 1,
+    "pack_native_name_collisions": []
+  },
+  "playback_closure": {
+    "music_nomansgrad.bnk": {
+      "reachable": 276191,
+      "targets": {
+        "900789511": false,
+        "1019244598": false,
+        "955053242": false,
+        "458178455": false,
+        "757873925": false,
+        "303498338": false
+      }
+    },
+    "music_prologue.bnk": {
+      "reachable": 36757,
+      "targets": {
+        "933909186": true,
+        "589261176": true
+      }
+    }
+  },
+  "scheduler_example": {
+    "0/0": {
+      "id": 1273727864,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "0/1": {
+      "id": 1273727864,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "0/2": {
+      "id": 1273727864,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "0/3": {
+      "id": 1273727864,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "1/0": {
+      "id": 1413886368,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          10.0,
+          5000
+        ],
+        [
+          20.0,
+          5000
+        ],
+        [
+          30.0,
+          5000
+        ],
+        [
+          45.0,
+          5000
+        ],
+        [
+          60.0,
+          5000
+        ],
+        [
+          1.0,
+          75000
+        ]
+      ]
+    },
+    "1/1": {
+      "id": 1857886236,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          30.0,
+          6250
+        ],
+        [
+          60.0,
+          6250
+        ],
+        [
+          120.0,
+          6250
+        ],
+        [
+          180.0,
+          6250
+        ],
+        [
+          1.0,
+          75000
+        ]
+      ]
+    },
+    "1/2": {
+      "id": 2052598810,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          60.0,
+          5000
+        ],
+        [
+          120.0,
+          5000
+        ],
+        [
+          180.0,
+          5000
+        ],
+        [
+          240.0,
+          5000
+        ],
+        [
+          300.0,
+          5000
+        ],
+        [
+          1.0,
+          75000
+        ]
+      ]
+    },
+    "1/3": {
+      "id": 1713869179,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          120.0,
+          5000
+        ],
+        [
+          240.0,
+          5000
+        ],
+        [
+          360.0,
+          5000
+        ],
+        [
+          480.0,
+          5000
+        ],
+        [
+          600.0,
+          5000
+        ],
+        [
+          1.0,
+          75000
+        ]
+      ]
+    },
+    "2/0": {
+      "id": 1828488906,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          10.0,
+          10000
+        ],
+        [
+          20.0,
+          10000
+        ],
+        [
+          30.0,
+          10000
+        ],
+        [
+          45.0,
+          10000
+        ],
+        [
+          60.0,
+          10000
+        ],
+        [
+          1.0,
+          50000
+        ]
+      ]
+    },
+    "2/1": {
+      "id": 2086401078,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          30.0,
+          12500
+        ],
+        [
+          60.0,
+          12500
+        ],
+        [
+          120.0,
+          12500
+        ],
+        [
+          180.0,
+          12500
+        ],
+        [
+          1.0,
+          50000
+        ]
+      ]
+    },
+    "2/2": {
+      "id": 2115862301,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          60.0,
+          10000
+        ],
+        [
+          120.0,
+          10000
+        ],
+        [
+          180.0,
+          10000
+        ],
+        [
+          240.0,
+          10000
+        ],
+        [
+          300.0,
+          10000
+        ],
+        [
+          1.0,
+          50000
+        ]
+      ]
+    },
+    "2/3": {
+      "id": 1082730357,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          120.0,
+          10000
+        ],
+        [
+          240.0,
+          10000
+        ],
+        [
+          360.0,
+          10000
+        ],
+        [
+          480.0,
+          10000
+        ],
+        [
+          600.0,
+          10000
+        ],
+        [
+          1.0,
+          50000
+        ]
+      ]
+    },
+    "3/0": {
+      "id": 1650604963,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          10.0,
+          15000
+        ],
+        [
+          20.0,
+          15000
+        ],
+        [
+          30.0,
+          15000
+        ],
+        [
+          45.0,
+          15000
+        ],
+        [
+          60.0,
+          15000
+        ],
+        [
+          1.0,
+          25000
+        ]
+      ]
+    },
+    "3/1": {
+      "id": 1838387188,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          30.0,
+          18750
+        ],
+        [
+          60.0,
+          18750
+        ],
+        [
+          120.0,
+          18750
+        ],
+        [
+          180.0,
+          18750
+        ],
+        [
+          1.0,
+          25000
+        ]
+      ]
+    },
+    "3/2": {
+      "id": 1180235011,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          60.0,
+          15000
+        ],
+        [
+          120.0,
+          15000
+        ],
+        [
+          180.0,
+          15000
+        ],
+        [
+          240.0,
+          15000
+        ],
+        [
+          300.0,
+          15000
+        ],
+        [
+          1.0,
+          25000
+        ]
+      ]
+    },
+    "3/3": {
+      "id": 511207699,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          120.0,
+          15000
+        ],
+        [
+          240.0,
+          15000
+        ],
+        [
+          360.0,
+          15000
+        ],
+        [
+          480.0,
+          15000
+        ],
+        [
+          600.0,
+          15000
+        ],
+        [
+          1.0,
+          25000
+        ]
+      ]
+    },
+    "4/0": {
+      "id": 1400873297,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          10.0,
+          20000
+        ],
+        [
+          20.0,
+          20000
+        ],
+        [
+          30.0,
+          20000
+        ],
+        [
+          45.0,
+          20000
+        ],
+        [
+          60.0,
+          20000
+        ]
+      ]
+    },
+    "4/1": {
+      "id": 291032381,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          30.0,
+          25000
+        ],
+        [
+          60.0,
+          25000
+        ],
+        [
+          120.0,
+          25000
+        ],
+        [
+          180.0,
+          25000
+        ]
+      ]
+    },
+    "4/2": {
+      "id": 1075577992,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          60.0,
+          20000
+        ],
+        [
+          120.0,
+          20000
+        ],
+        [
+          180.0,
+          20000
+        ],
+        [
+          240.0,
+          20000
+        ],
+        [
+          300.0,
+          20000
+        ]
+      ]
+    },
+    "4/3": {
+      "id": 1609794650,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": [
+        [
+          120.0,
+          20000
+        ],
+        [
+          240.0,
+          20000
+        ],
+        [
+          360.0,
+          20000
+        ],
+        [
+          480.0,
+          20000
+        ],
+        [
+          600.0,
+          20000
+        ]
+      ]
+    },
+    "5/0": {
+      "id": 1763123210,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "5/1": {
+      "id": 1763123210,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "5/2": {
+      "id": 1763123210,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    },
+    "5/3": {
+      "id": 1763123210,
+      "kind": 13,
+      "gap_choices_seconds_and_weights": []
+    }
+  },
+  "decoder_crosscheck": {
+    "native_supported": 1301,
+    "listener_roots": 8,
+    "exact": true
+  },
+  "authored_state_consumers": [
+    {
+      "bank": "music_nomansgrad.bnk",
+      "id": 199043280
+    },
+    {
+      "bank": "music_nomansgrad.bnk",
+      "id": 979178121
+    },
+    {
+      "bank": "music_nomansgrad.bnk",
+      "id": 992398107
+    },
+    {
+      "bank": "music_nomansgrad.bnk",
+      "id": 177877874
+    },
+    {
+      "bank": "music_toussaint.bnk",
+      "id": 11423262
+    },
+    {
+      "bank": "music_toussaint.bnk",
+      "id": 847555167
+    }
+  ],
+  "preservation_checked_files": 54,
+  "native_silent_location_replacement": {
+    "world": 492774600,
+    "location": 2877259110,
+    "state": 2582085496,
+    "target": 861605735,
+    "no_pause_variant0_playlist": 914259787,
+    "positive_leaf_sources": [
+      945387783,
+      947782028,
+      967856139,
+      977989565,
+      995112553,
+      996286604
+    ]
+  }
+}

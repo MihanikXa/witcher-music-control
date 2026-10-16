@@ -1,5 +1,7 @@
 # Music research and design decisions
 
+**Current reading order:** reports50–53 supersede historical prototype plans below. V4 is the completed initial regional filtering pass, not the full experience-led vision; report53 now completes the actual Music Plus archive comparison and recommends an independently designed, native-preserving sparse prototype. No new playback/deployment or runtime feature was authorized by that read-only audit.
+
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
 1. [Reference mod audit](01-reference-audit.md): Only Story Music, Less Is More and FMC.
@@ -101,3 +103,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 51. [Broader music vision reminder](51-broader-music-vision-reminder.md): user correction distinguishes completed all-region static gain filtering from the unimplemented sparse, context-responsive exploration scoring ambition; original 0/0/100 baseline remains, exact Sparse-mode behavior unapproved.
 
 52. [Music Plus architectural comparison intake](52-music-plus-archive-comparison-intake.md): 3.3.0 publicly documented sparse track/silence and playlist control; direct Nexus archive not yet acquired, definitive bank/script parity pending read-only main+pack inspection. Compare design not reputation, preserve vanilla combat/cue grammar and protected-world exceptions.
+
+53. [Music Plus implementation comparison](53-music-plus-implementation-comparison.md): actual3.3.0 main/3.2.0 pack, twelve decoded banks, weighted gap profiles, native event/authored-subtree equality with parent/world/global-volume qualifications, redesigned combat paths, controls/editor persistence and native-preserving hybrid recommendation. [Sanitized archive/bank metadata](53-music-plus-archive-evidence.json).170 tests pass; no bundled execution, playback, new mod implementation or deployment.

@@ -1,5 +1,7 @@
 # Witcher Music Control
 
+**Music Plus comparison (2026-10-16):** [Report53](research/53-music-plus-implementation-comparison.md) inspects the actual3.3.0 main/3.2.0 pack scripts, settings, editor and twelve soundbanks. Its track/silence scheduler and controls are real, but integral combat changes and world-thematic/global-dialogue gain caveats conflict with native-preservation goals. Recommended direction: independently develop an optional sparse mechanism on WMC's native foundation; no co-installation or third-party code/assets reuse. No new engine, playback or deployment was performed.170 tests pass, including all existing regional regressions. The proposed next step is one isolated native-only rest/interruption fixture, not another regional rebuild.
+
 **Scope clarification (2026-10-15):** Consolidated v4 completes the *initial reviewed regional attenuation pass*, **not the full experience-led music vision**. The user reiterates an intended progression toward Breath of the Wild / Ghost of Tsushima-like sparse, deliberately paced, context-responsive musical presence rather than merely turning routine background score off. The previously explicit 0/0/100 policy remains the implemented initial baseline; details/defaults of a future Sparse mode, timing/event triggers and controls have not been approved or implemented. See [report51](research/51-broader-music-vision-reminder.md) and [original experience-led policy](research/08-experience-led-music-policy.md).
 
 

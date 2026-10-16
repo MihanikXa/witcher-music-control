@@ -1,5 +1,7 @@
 # 52 — Music Plus architecture comparison: intake, not a binary audit — 2026-10-15
 
+**Historical intake:** [report53](53-music-plus-implementation-comparison.md) now inspects both locally supplied archives and their actual banks/scripts. Its findings supersede this report's acquisition boundary and description-only judgments; preserve the historical distinction rather than treating the archives as still missing.
+
 ## User objective
 
 User requests acquisition and a substantive comparison of Music Plus (Nexus mod 13818) against: (1) their original 0/0/100 generic exploration/dialogue/combat policy; (2) WMC v4's complete eight-region policy / five patched soundbanks; (3) the broader Breath of the Wild / Ghost of Tsushima-inspired vision for spacious, purposeful, sparse/adaptive musical entrances and exits. Evaluate Music Plus strengths, regressions, reusable *ideas* and feasibility of combining behaviors. Do not assume its popularity, track volume, or claimed quest exclusion establishes actual mechanism.
