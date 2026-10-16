@@ -1,6 +1,6 @@
 # Ink & Iron 0.8.7 compatible menus — private baseline v1
 
-16 October 2026. Implemented menu baseline, pending isolated in-game acceptance.
+16 October 2026. Implemented menu baseline; **17 October user screenshot review finds substantial visual incompleteness**. See [runtime visual discrepancy report](menus087-runtime-visual-feedback.md). The original native/offline release receipt remains valid but **does not establish visual acceptance**.
 This replaces neither the accepted RC2 HUD package nor its gameplay resources.
 Gear-grid v1 is preserved as an independent experiment; Inventory v2 is deferred.
 

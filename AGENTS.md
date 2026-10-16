@@ -5,7 +5,11 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest active work — 0.8.7 menu migration with 0.8.0 preservation (16 October)
+## Latest user runtime feedback — visual baseline NOT accepted (17 October)
+
+Read [Ink & Iron 0.8.7 visual runtime mismatch](research/menus087-runtime-visual-feedback.md) first. The first five in-game screens lack the slim shared top bar and many mod-page engravings. The user calls the result "half-cooked." Before Inventory v2, identify current **effective `panel_common` owner**, new TopBarNew initialization and `inkart:` texture runtime, compare optional Bestiary Art / IM Fell / Character layout presets, and correct the actual integration gap. Package/native/15 tests did not test screenshot parity. Preserve custom HUD RC2, existing visual work and the source/ZIP rollback. Do not update live Vortex automatically.
+
+## Prior active work — 0.8.7 menu migration with 0.8.0 preservation (16 October)
 
 The user added a **0.8.7** update under the private local `reference/` and says their
 existing UI was based on **0.8.0**. 0.8.7 lacks the separately obtained Hoods
