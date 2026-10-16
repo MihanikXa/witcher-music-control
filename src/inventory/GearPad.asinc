@@ -1,0 +1,23 @@
+
+      public static var qfGearGrid:Boolean = false;
+      private static var qfGearHeld:Object = {};
+      private static var qfGearDown:Object = {};
+      private static var qfGearFire:Object = {};
+      public static function qfGearPadAllow(d:Object, now:int) : Boolean
+      {
+         if(!qfGearGrid || !d || d.code < 142 || d.code > 145) return true;
+         var key:String = String(d.code);
+         if(d.value == "keyUp") { delete qfGearHeld[key]; return true; }
+         if(d.value == "keyDown")
+         {
+            if(qfGearHeld[key]) return false;
+            qfGearHeld[key] = true; qfGearDown[key] = now; qfGearFire[key] = now; return true;
+         }
+         if(d.value == "keyHold")
+         {
+            if(!qfGearHeld[key] || now - Number(qfGearDown[key]) < 400 || now - Number(qfGearFire[key]) < 110) return false;
+            qfGearFire[key] = now;
+         }
+         return true;
+      }
+      public static function qfGearResetPad() : void { qfGearHeld = {}; qfGearDown = {}; qfGearFire = {}; }

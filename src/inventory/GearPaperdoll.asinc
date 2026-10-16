@@ -1,0 +1,66 @@
+
+      protected var qfGearOriginal:Array;
+      protected var qfGearLastMode:int = -1;
+      public function qfGearReflow(targetMode:Boolean) : void
+      {
+         var i:int = 0;
+         var s:SlotPaperdoll;
+         var r:Rectangle;
+         var p:Point;
+         var factor:Number;
+         var gear:Array = [1,2,9,10,11,12];
+         var utility:Array = [3,4,5,6,19,20,7,13,8,14,15,16,17,18];
+         var order:Array = targetMode ? gear.concat(utility) : utility;
+         var mode:int = targetMode ? 1 : 0;
+         if(!this.qfGearOriginal)
+         {
+            this.qfGearOriginal = [];
+            for(i = 1; i <= 20; i++)
+            {
+               s = this["mcPaperDollSlot" + i] as SlotPaperdoll;
+               if(s) this.qfGearOriginal.push({slot:s,x:s.x,y:s.y,sx:s.scaleX,sy:s.scaleY,visible:s.visible});
+            }
+            var savedObjects:Array = [this.tfCurrentState,this.tfPotions,this.tfPockets,this.tfPetards,this.tfMasks,this.mcSegmentBorderWeapons,this.mcSegmentBorderArmor,this.mcSegmentBorderPotion,this.mcSegmentBorderBombs,this.mcSegmentBorderHorse,this.iaiDeco,this.iaiHorse];
+            for each(var decoration:DisplayObject in savedObjects)
+               if(decoration) this.qfGearOriginal.push({slot:decoration,x:decoration.x,y:decoration.y,sx:decoration.scaleX,sy:decoration.scaleY,visible:decoration.visible});
+         }
+         for each(i in gear)
+         {
+            s = this["mcPaperDollSlot" + i] as SlotPaperdoll;
+            if(s) s.visible = targetMode;
+         }
+         for(i = 0; i < order.length; i++)
+         {
+            s = this["mcPaperDollSlot" + order[i]] as SlotPaperdoll;
+            if(!s || !s.parent) continue;
+            s.visible = true;
+            r = s.getSlotRect();
+            factor = 52 / Math.max(r.width,r.height);
+            p = s.parent.globalToLocal(this.parent.localToGlobal(new Point(786 + (i % (targetMode ? 5 : 7)) * 66,(targetMode ? 620 : 798) + Math.floor(i / (targetMode ? 5 : 7)) * 78)));
+            s.scaleX = s.scaleY = factor;
+            s.x = p.x - (r.x + r.width / 2) * factor;
+            s.y = p.y - (r.y + r.height / 2) * factor;
+            s.iaiRedraw();
+         }
+         for each(var objectName:String in ["tfCurrentState","tfPotions","tfPockets","tfPetards","tfMasks","mcSegmentBorderWeapons","mcSegmentBorderArmor","mcSegmentBorderPotion","mcSegmentBorderBombs","mcSegmentBorderHorse"])
+            if(this[objectName]) this[objectName].visible = false;
+         if(this.iaiDeco) this.iaiDeco.visible = false;
+         if(this.iaiHorse) this.iaiHorse.visible = false;
+         if(this.qfGearLastMode != mode)
+         {
+            this.qfGearLastMode = mode;
+            this.iaiNav();
+         }
+      }
+      public function qfGearRestore() : void
+      {
+         if(!this.qfGearOriginal) return;
+         for each(var saved:Object in this.qfGearOriginal)
+         {
+            saved.slot.x = saved.x; saved.slot.y = saved.y;
+            saved.slot.scaleX = saved.sx; saved.slot.scaleY = saved.sy;
+            saved.slot.visible = saved.visible;
+         }
+         this.qfGearOriginal = null; this.qfGearLastMode = -1;
+         this.iaiNavDone = false;
+      }

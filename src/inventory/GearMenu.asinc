@@ -1,0 +1,92 @@
+
+      protected var qfGearOn:Boolean = false;
+      protected var qfGearStarted:Boolean = false;
+      protected var qfGearTitle:TextField;
+      protected var qfGearAuxTitle:TextField;
+      protected var qfGearBase:Object;
+      protected var qfGearTabHeld:Boolean = false;
+      public function qfGearEnabled(on:Boolean) : void
+      {
+         if(!on) this.qfGearRestore();
+         this.qfGearOn = on;
+      }
+      protected function qfGearLabel(value:String, size:Number, x0:Number, y0:Number, w:Number) : TextField
+      {
+         var field:TextField = new TextField();
+         field.embedFonts = true; field.selectable = false; field.mouseEnabled = false;
+         field.defaultTextFormat = new TextFormat("$TitleFont",size,14537403);
+         field.text = value; field.x = x0; field.y = y0; field.width = w; field.height = size + 14;
+         addChild(field); return field;
+      }
+      protected function qfGearRefresh() : void
+      {
+         if(!this.qfGearOn || this._inventoryMode != IMS_Player || !this.mcPaperDollModule) return;
+         SlotBase.qfGearGrid = true;
+         SlotBase.iaiNoSel = false;
+         this.iaiEqWant = false;
+         if(this.iaiEqOn) this.iaiEqApply(false);
+         if(!this.qfGearStarted)
+         {
+            this.qfGearStarted = true;
+            this.qfGearBase = {x:this.mcPlayerInventory.x,y:this.mcPlayerInventory.y,sx:this.mcPlayerInventory.scaleX,sy:this.mcPlayerInventory.scaleY};
+            this.qfGearTitle = this.qfGearLabel("GEAR",23,48,105,620);
+            this.qfGearAuxTitle = this.qfGearLabel("Quickslots / Hoods / Roach     [Tab / LS] Focus",13,756,744,510);
+            InputDelegate.getInstance().addEventListener(InputEvent.INPUT,this.qfGearFocusInput,false,120,true);
+            addEventListener(Event.REMOVED_FROM_STAGE,this.qfGearRemoved,false,0,true);
+         }
+         this.iaiHeadOn = false;
+         if(this.iaiHeadSp) this.iaiHeadSp.visible = false;
+         if(this.iaiHint) this.iaiHint.visible = false;
+         if(this.iaiArtHost) this.iaiArtHost.visible = false;
+         this.mcPlayerInventory.x = 48;
+         this.mcPlayerInventory.y = 186;
+         this.mcPlayerInventory.scaleX = this.mcPlayerInventory.scaleY = 1.05;
+         this.mcCharacterRenderer.x = 610;
+         this.mcCharacterRenderer.y = this.mcCharacterModelAnchor.y;
+         this._rendererController.setDefaultAnchor(610,this.mcCharacterModelAnchor.y);
+         this.mcPaperDollModule.qfGearReflow((this.mcSelectionMode && this.mcSelectionMode.isActive()) || SlotsTransferManager.getInstance().isDragging());
+         if(this.mcPaperDollModule.focused > 0)
+         {
+            var qfFocusedSlot:SlotPaperdoll = this.mcPaperDollModule.mcPaperdoll.getSelectedRenderer() as SlotPaperdoll;
+            if(!qfFocusedSlot || !qfFocusedSlot.visible) selectTargetModule(this.mcPlayerInventory);
+         }
+         this.btnSort.x = 48;
+         this.btnSortChange.x = this.btnSort.x + this.btnSort.actualWidth + 26;
+      }
+      protected function qfGearRestore() : void
+      {
+         SlotBase.qfGearGrid = false;
+         SlotBase.qfGearResetPad();
+         if(!this.qfGearStarted) return;
+         if(this.mcPaperDollModule) this.mcPaperDollModule.qfGearRestore();
+         if(this.iaiArtHost) this.iaiArtHost.visible = true;
+         this.mcPlayerInventory.x = this.qfGearBase.x;
+         this.mcPlayerInventory.y = this.qfGearBase.y;
+         this.mcPlayerInventory.scaleX = this.qfGearBase.sx;
+         this.mcPlayerInventory.scaleY = this.qfGearBase.sy;
+         this._rendererController.setDefaultAnchor(this.mcCharacterModelAnchor.x,this.mcCharacterModelAnchor.y);
+         if(this.qfGearTitle && this.qfGearTitle.parent) this.qfGearTitle.parent.removeChild(this.qfGearTitle);
+         if(this.qfGearAuxTitle && this.qfGearAuxTitle.parent) this.qfGearAuxTitle.parent.removeChild(this.qfGearAuxTitle);
+         InputDelegate.getInstance().removeEventListener(InputEvent.INPUT,this.qfGearFocusInput);
+         this.qfGearStarted = false; this.qfGearTabHeld = false;
+      }
+      protected function qfGearRemoved(e:Event) : void { this.qfGearRestore(); }
+      protected function qfGearFocusInput(e:InputEvent) : void
+      {
+         if(!SlotBase.qfGearGrid || e.handled || !e.details || (this.mcSelectionMode && this.mcSelectionMode.isActive())) return;
+         var d:InputDetails = e.details;
+         if(d.code != KeyCode.TAB && d.navEquivalent != NavigationCode.GAMEPAD_L3 && d.code != KeyCode.PAD_LEFT_THUMB) return;
+         if(d.value == InputValue.KEY_UP) this.qfGearTabHeld = false;
+         else if(d.value == InputValue.KEY_DOWN && !this.qfGearTabHeld)
+         {
+            this.qfGearTabHeld = true;
+            if(this.mcPlayerInventory.focused > 0)
+            {
+               var target:SlotPaperdoll = this.mcPaperDollModule.mcPaperDollSlot3;
+               selectTargetModule(this.mcPaperDollModule);
+               this.mcPaperDollModule.mcPaperdoll.selectedIndex = target.index;
+            }
+            else selectTargetModule(this.mcPlayerInventory);
+         }
+         e.handled = true; e.stopImmediatePropagation();
+      }

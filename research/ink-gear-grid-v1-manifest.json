@@ -1,0 +1,385 @@
+{
+  "version": "Ink & Iron 0.8.6 Gear Grid Prototype v1",
+  "key": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+  "resource_sha256": "6aea0dfc0864d79e6b5b829c80569914ffc0ad3991ee7fd565f9caed523f3857",
+  "source_edits": [
+    {
+      "class_name": "SlotBase",
+      "input_sha256": "dc450eb37d7bd2337b3f932af9a73314b662140213b2f415d328f4e7c47b4f11",
+      "output_sha256": "14d968e662b34b9ecf10d8930ff449c587a258dae171202beaee9b23630c857c",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "ItemDataStub",
+      "input_sha256": "95d960e63b5ec5d050a0df0aee7b597196274ebb0dbd4e98339a7c60bf58ab02",
+      "output_sha256": "a1d2dab567f55490976eaedabe110eae20afec6ecee13f1b6ee766edf5ce4bfc",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "SlotPaperdoll",
+      "input_sha256": "54a7faf2d20380f0ac4f7bc522b31e8c3d8dcdb9163abe209965cb4684dd9f91",
+      "output_sha256": "64e8fd59cd112df53a3aa0700f0c4577238f4a32050c12234f7560218b4c275b",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "SlotsListBase",
+      "input_sha256": "d0d7783f85bae2aa6ee635070d350145a66581051aa135f6b1c01b5b4e27c162",
+      "output_sha256": "1a48cadd533651914132f4207eb973148e279ed015a750c6d577da7b0d2a5e98",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "ModulePaperdoll",
+      "input_sha256": "f19ee98cd7a3d7d79720b0a12e7d2984c8e84695829d7698e09cd174a1eca11d",
+      "output_sha256": "8401b321e8e5337cb50ab32692b6d7e330252621375023731d2499286a520a3d",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "TooltipInventory",
+      "input_sha256": "459fb4dded05e497bcd00f5c2420d7e50ec6a4c6b89bd73f551fb3eac195137c",
+      "output_sha256": "00178f32f3373125f8ff74abbd35752001b3b375d80b38a5b3d2d1eb812a5d5c",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "ContextInfoManager",
+      "input_sha256": "7c3166d4171d5f568e82a0a96179cd948dc418c960bd1bc9e2ebf8f906a4d2eb",
+      "output_sha256": "1b1c892d9abed9ecaa49b13b30860345eead2248be4c714b05ca993188a7e1d3",
+      "compiled_checkpoint_verified": true
+    },
+    {
+      "class_name": "MenuInventory",
+      "input_sha256": "212f7435f80fb2624518817cc4bf44e203b1609dc514f832decf933faa03fc4c",
+      "output_sha256": "660fdb72536a9ee7168770ad8e099ef7d4d6b1e28384eddd745a293a6db67265",
+      "compiled_checkpoint_verified": true
+    }
+  ],
+  "changed_classes": [
+    "ContextInfoManager",
+    "SlotBase",
+    "SlotPaperdoll",
+    "SlotsListBase",
+    "TooltipInventory",
+    "ItemDataStub",
+    "MenuInventory",
+    "ModulePaperdoll"
+  ],
+  "contracts": {
+    "original_declarations_retained": 4266
+  },
+  "atlas": {
+    "textures": [
+      {
+        "linkage": "panel-inventory{e7737929}_i1.dds",
+        "width": 1000,
+        "height": 960,
+        "compression": "TCM_DXTAlpha",
+        "pixels_sha256": "c152f1df348e8972322be8123c3eba673c4e646a8e51b22d33d5e7af6c626ea8"
+      },
+      {
+        "linkage": "panel-inventory{e7737929}_i9.dds",
+        "width": 1024,
+        "height": 1024,
+        "compression": "TCM_DXTAlpha",
+        "pixels_sha256": "e7b9ad071f121742c4859096215a39198110b82512abffc9b62ee660551248b7"
+      },
+      {
+        "linkage": "panel-inventory{e7737929}_i1c.dds",
+        "width": 1020,
+        "height": 1016,
+        "compression": "TCM_DXTAlpha",
+        "pixels_sha256": "ced4b37769c4dd0ab86a0bc2c292bcf8e7342fad2aae1ea157b825e92a584a1c"
+      },
+      {
+        "linkage": "panel-inventory{e7737929}_i1d3.dds",
+        "width": 40,
+        "height": 48,
+        "compression": "TCM_DXTAlpha",
+        "pixels_sha256": "dea625e81027822b5504e6536c52ecfdb849bbd95a4d284e21df382f97deb2af"
+      },
+      {
+        "linkage": "panel-inventory{e7737929}_i1ec.dds",
+        "width": 1024,
+        "height": 1024,
+        "compression": "TCM_DXTNoAlpha",
+        "pixels_sha256": "53f2ccd6f1e876c303df9351cf26a7c56e9e2a11cf044daff1431b45bbab3119"
+      }
+    ],
+    "image_links": 5,
+    "rectangles": 222
+  },
+  "non_abc_and_textures_exact": true,
+  "official_hoods_canDrop_exact": true,
+  "upstream_dpad_and_hide_line_retained": true,
+  "runtime_tested": false,
+  "deployed": false,
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\ink-gear-grid-v1-release\\Ink-Iron-0.8.6-Gear-Grid-v1-private-test.zip",
+  "zip_sha256": "69fe187a267670a9477652693c0662a53cf8827c9b6594bf831efd89a60c9239",
+  "zip_bytes": 1112198,
+  "package_members": {
+    "Mods/modInkIronGearGridPrototype/content/blob0.bundle": "30e02c646e260c39cf37439226b29b4c5517bacc454b524fe6c7947266c93af2",
+    "Mods/modInkIronGearGridPrototype/content/metadata.store": "48c176e500201ef241ea86de29a7f42305bcc2b6629d87f931386fccdf33d0de",
+    "Mods/modInkIronGearGridPrototype/content/scripts/local/inkGearGrid.ws": "48b66bcbb088c873750220f48fef0cb6f6905f9483f4b3efd58fe15cdc510e43"
+  },
+  "native_commands": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\cooked"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 14:58:05][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 14:58:06][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\validation"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 14:58:49][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 14:58:50][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\prepared-inputs",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 14:59:09][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 14:59:10][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "metadata",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "metadatastore",
+        "-path=C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\packed"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.16 14:59:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.16 14:59:40][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "native_cook_validated": true,
+  "native_pack_passed": true,
+  "native_metadata_passed": true,
+  "metadata_reconstruction": null,
+  "exact_bundle_extraction": true,
+  "frozen_inputs": {
+    "C:\\Users\\micha\\OneDrive - hull.ac.uk\\Documents\\The Witcher 3\\mods.settings": "694a807275eeac3628522804d99ba933b2321c72acb0bacf61dea0a6b50dd70f",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle": "e5cf55c2ce032a03a705382b73d7e08796459387659bb73d9f06d9e6b594995e",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\metadata.store": "8b02b2453ff8a90f0a3a689881bd40fed9129dd354320eac97c252d11979a0ac",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\gui\\menus\\inventorymenu.ws": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modHoods\\content\\blob0.bundle": "ee4d15fae0874e3f51a7fab12811a9b8ca3c77c4a925b6ce0491f9a27ec3c655"
+  },
+  "source_pins": {
+    "ui": {
+      "archive_path": "C:\\Dev\\witcher-ui-overhaul\\reference\\ink-and-iron-0.8.6\\archives\\Ink and Iron - All in One 13111 0.8.6 2026-10-15T18-45Z z2QRfnz9T.zip",
+      "archive_sha256": "2beb77716b6b5b5e8acf7d2c5ea65ba950ed9726d0c0e0cb5e40e1ce407d6e00",
+      "archive_members": {
+        "mods/modInkAndIronUI/content/blob0.bundle": "dbd8d57b38bfbc8d4bddc8449a98f4cd4303b6e3a4408d72c6214424c2c138d9",
+        "mods/modInkAndIronUI/content/metadata.store": "14ccd330d080c36e79217337e6e216e3254ee6f77c0a0d63b503bca13925a78a",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_bgart.ws": "375f17376a0df2e3b2ccfbb4c200fa467093513a0bd22c3afc6dff3b490f9ae5",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_character.ws": "7e13a7c4db3b4a73b3bdeb814a8ed1fa30b110e263d36bebd464f84c6beffcb1",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_charlayout.ws": "3aa5a3ba4c5862be1200af64a490795bda96cc9c4229d6f4b5d0930586d4a0db",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_equipfirst.ws": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_inventory.ws": "601aabcaee04b2dc0a29529b3ea7dab978fc13287910aa7359a8e4325cd80840",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_invheader.ws": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_loot.ws": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_map.ws": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_menuinfo.ws": "c0b62a830c408b5a2172072141a3cd1d1e424192732f36fb928af91bac3a1d3f",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_questlevel.ws": "63c27f135746021eafb8c5bda04ec067b9e0af1e5915f41064fb7cf6b367e965",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_rarity.ws": "6823fa58b1ab3024e125862de08db1a515e7f198693ebab6fd5ba2f121bf303e",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_saveload.ws": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+        "mods/modInkAndIronUI/content/scripts/local/inkironui_shop.ws": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+        "mods/modInkAndIronUI/content/texture.cache": "549077e44a62b5f83565b2f86562754fdff518580a0667bcd6e2275cfdea3dda"
+      },
+      "bundle_resources": [
+        "gameplay/gui_new/swf/common/panel_common.redswf",
+        "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf",
+        "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf",
+        "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+        "gameplay/gui_new/swf/common/componentslib.redswf",
+        "gameplay/gui_new/swf/overlay/panel_overlay.redswf",
+        "gameplay/gui_new/swf/character/panel_character_dupe.redswf",
+        "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+        "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+        "gameplay/gui_new/swf/repair/panel_blacksmith.redswf",
+        "gameplay/gui_new/swf/repair/panel_enchanting.redswf",
+        "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf",
+        "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+        "gameplay/gui_new/swf/glossary/panel_glossary_main.redswf",
+        "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+        "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+        "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf",
+        "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+        "gameplay/gui_new/swf/popups/popup_tutorial.redswf",
+        "gameplay/gui_new/swf/popups/popup_message.redswf",
+        "gameplay/gui_new/swf/popups/popup_item_selection.redswf",
+        "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf",
+        "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf",
+        "gameplay/gui_new/swf/popups/popup_loot.redswf",
+        "gameplay/gui_new/swf/repair/panel_transmog.redswf",
+        "environment/definitions/gui_character_display/gui_character_environment.env"
+      ],
+      "inventory_sha256": "10c63da7879ed48779c7e68c4cae8efaf17b71b83c2521f4fe1bc6825f3de9bd",
+      "inventory_bytes": 4071727,
+      "published_version": "0.8.6",
+      "source_url": "https://www.nexusmods.com/witcher3/mods/13111?tab=files"
+    },
+    "hoods": {
+      "archive_path": "C:\\Dev\\witcher-ui-overhaul\\reference\\ink-and-iron-0.8.6\\archives\\Ink and Iron - Hoods Compatibility 13111 0.8.4 2026-10-13T15-59Z mlFpu6vCy.zip",
+      "archive_sha256": "617f6d37d94158d751b3a3e6c3c0c5308e567f65ec74e007a967108d1a56802c",
+      "archive_members": {
+        "mods/mod0InkAndIron_HoodsCompat/content/blob0.bundle": "58b9630f731e5c22fcb3013754d425f4bd83e2bde85d0d58275873e152bd9409",
+        "mods/mod0InkAndIron_HoodsCompat/content/metadata.store": "cbf47ffa1f24ee2fe542fe1b5df9cd497c0a725ac238e8bd73163201fccddfc7",
+        "mods/mod0InkAndIron_HoodsCompat/readme.txt": "6626e89b9bbabc7f9acdf41c36e75242ad3c52efa9aed3b347fbfb9f4b06c98b"
+      },
+      "bundle_resources": [
+        "gameplay/gui_new/swf/inventory/panel_inventory.redswf"
+      ],
+      "inventory_sha256": "90905cebbaac7b0a0f18671d32549e663b7aff67314334d9663e350c32e01a10",
+      "inventory_bytes": 4074998,
+      "published_version": "0.8.4",
+      "source_url": "https://www.nexusmods.com/witcher3/mods/13111?tab=files"
+    },
+    "installed_hoods_baseline": {
+      "bundle": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modHoods\\content\\blob0.bundle",
+      "inventory_sha256": "2a2dacc886c86d4b08fced4cdc68c7882f2017d2f9d850b41b9ef98df060c68e"
+    }
+  },
+  "installed_native_contracts": {
+    "existing_owner": {
+      "owner": "modHoods",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modHoods\\content\\blob0.bundle",
+      "sha256": "2a2dacc886c86d4b08fced4cdc68c7882f2017d2f9d850b41b9ef98df060c68e",
+      "enabled": "1",
+      "priority": "11"
+    },
+    "existing_public_exports": 72,
+    "missing": {},
+    "changed": {}
+  },
+  "installed_owners": {
+    "gameplay/gui_new/swf/inventory/panel_inventory.redswf": [
+      {
+        "owner": "modHoods",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modHoods\\content\\blob0.bundle",
+        "sha256": "2a2dacc886c86d4b08fced4cdc68c7882f2017d2f9d850b41b9ef98df060c68e",
+        "enabled": "1",
+        "priority": "11"
+      }
+    ],
+    "gameplay/gui_new/swf/hud/hud.redswf": [
+      {
+        "owner": "modGeraltOutfitWheel",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modGeraltOutfitWheel\\content\\outfit.bundle",
+        "sha256": "2fcffb248b3e858aa28046d750d01f848bfde768d4f95f330dfeb154587c01e7",
+        "enabled": "1",
+        "priority": "36"
+      },
+      {
+        "owner": "modInkIronHUDRefinementV4",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronHUDRefinementV4\\content\\blob0.bundle",
+        "sha256": "4459b43c934b937de4e0af5960ff40d5b22caf4024b700848810272c574cc11b",
+        "enabled": "1",
+        "priority": "31"
+      }
+    ]
+  },
+  "script_compilation": {
+    "source_sha256": "48b66bcbb088c873750220f48fef0cb6f6905f9483f4b3efd58fe15cdc510e43",
+    "merged_inventory_sha256": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32",
+    "hoods_dye_sha256": "99a1325774ad97ad468f647443ac859c3b06898a98b9d1f6b78381580adebba9",
+    "control": "same annotation/API declarations, disabled data-inclusion flag; not a runtime test",
+    "opaque_dependencies": [
+      "modBloodAndSteel",
+      "mod_GwentDeckChoice",
+      "modbrothersinarms",
+      "modzzz_sharedutils",
+      "modTopNotchSwordsFix",
+      "modsmoothmap",
+      "modEvilsOfRivia"
+    ],
+    "results": [
+      {
+        "label": "api-control",
+        "exit_code": 0,
+        "blob_sha256": "f45485546d9c9987c0edddd324d714de87eab8b102b402b19f8637730d89a02c",
+        "warnings": {
+          "count": 819,
+          "distinct": 562,
+          "normalized_counter_sha256": "e745690168ef5b1125691de2e0e4d4ed5b1e1b817f9e4615d544f8cfbeb42956"
+        },
+        "assertions": {
+          "count": 23629,
+          "distinct": 328,
+          "normalized_counter_sha256": "8d7340bfa7da5dfcd72012170386ab098d299dc3ab3e24117ee9b341d1d85bd9"
+        }
+      },
+      {
+        "label": "candidate",
+        "exit_code": 0,
+        "blob_sha256": "92010f549562253ce8f828c5fd19e05e586c9446b215638daf3733953e8ad57b",
+        "warnings": {
+          "count": 819,
+          "distinct": 562,
+          "normalized_counter_sha256": "e745690168ef5b1125691de2e0e4d4ed5b1e1b817f9e4615d544f8cfbeb42956"
+        },
+        "assertions": {
+          "count": 23629,
+          "distinct": 328,
+          "normalized_counter_sha256": "8d7340bfa7da5dfcd72012170386ab098d299dc3ab3e24117ee9b341d1d85bd9"
+        }
+      }
+    ]
+  },
+  "accepted_rc2_zip_sha256": "9cbc759c9002f11af32d43d69566ef6563fc66dfd1a2939cab23878777aa46c3",
+  "targeted_tests": {
+    "passed": 11,
+    "command": "python -m unittest discover -s tests -p test_ink_gear_grid.py -v",
+    "runtime_gameplay_tested": false
+  },
+  "current_original_source_hashes": {
+    "src\\inventory\\GearMenu.asinc": "5104f48fb33c29868c598c2ec9a65804df10150c32cb16556933f30044229817",
+    "src\\inventory\\GearPad.asinc": "61415bd989267ac09f331865bd8c17cdd5abef27fe0df4e276f35acaebc22176",
+    "src\\inventory\\GearPaperdoll.asinc": "280bbafa68c2086dbad48ae70dd8f5ec357d5a4cb8940b3796dc1925c2996915",
+    "src\\inventory\\inkGearGrid.ws": "48b66bcbb088c873750220f48fef0cb6f6905f9483f4b3efd58fe15cdc510e43",
+    "tools\\build-ink-gear-grid.py": "17a1ed9f9c7eaca077b2c2ed1197b3add9014bbed5a226cb3505f7623ce8043c",
+    "tools\\patch-ink-gear-grid.py": "de2c4a3032949bafee406c01e0dadc4f2cbecf175a75b53630677ba85946135f",
+    "tools\\prepare-ink-gear-source.py": "b306bcf7f4a7ea8d5831f0283e60badd6d27821ea1488c1aecfb686ca8d81da5",
+    "tools\\compile-ink-gear-grid.py": "fb3bfcb0de487bc717307fc488bfc82e7368bb63fe99366dee195ba744a31540",
+    "tools\\validate-inventory-atlas.py": "44457ec6b761b2ec5fa6e75cfa6c00786ef3b018e7ae7f16e94db3d91377c73b",
+    "tools\\relocate-inventory-metadata.py": "4f3f20142452c665b1e18c172263f39c65c893d0f885f0b1ba6b51ba97c6d27b"
+  },
+  "native_log_sha256": {
+    "cook": "bcb267a11561e2dce23be9e5e0312e039a9d9a1e840c6d032774510de90d6763",
+    "validate": "84c8ff13dc882f23a8575ca6f3e33a8719bfdef665e9f866917f7bdd408dfc2c",
+    "pack": "86b279eccf96d79c163f792faa211ed36768181b911f9d042a20ef83f9230a17",
+    "metadata": "30ab33a74c80ee4172e609e9142d5c790b11e710fbb93db5776f11a4580df649"
+  },
+  "private_build_evidence": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus",
+  "saved_hidden_paperdoll_focus_guard": true
+}
