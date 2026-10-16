@@ -5,6 +5,16 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
+## Current active task: Ink & Iron 0.8.6 Inventory (16 October 2026)
+
+The user confirms custom HUD v4/RC2 works and has moved on. **Freeze it.**
+Next task is one functional **one-screen Gear-grid Inventory** prototype using
+actual **0.8.6 UI plus official optional Hoods Compatibility** as version-pinned
+local source. **Read [0.8.6 Inventory handoff](research/ink-and-iron-0.8.6-inventory-handoff.md) first.**
+The old `reference/ink-and-iron-0.8/` and audit are **0.8.0 historical**;
+they cannot stand in for missing 0.8.6 archives. No automatic live deployment,
+no update of custom HUD, and no broad UI redesign in this slice.
+
 ## User's visual direction
 - Quiet, modern, beautiful and airy, but with character and Witcher identity; *Ghost of Tsushima* is a restraint/hierarchy reference, not a template.
 - Prefer Gentium Book as a **starting taste reference** instead of a generic sans-serif. Test literary serif body styles versus a restrained serif/sans hierarchy before choosing.

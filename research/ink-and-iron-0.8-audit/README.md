@@ -1,4 +1,6 @@
-# Exact input and resource inventory — 0.8
+# Exact input and resource inventory — 0.8.0 (historical snapshot)
+
+**Version gate (16 October 2026):** These hashes, 83-file input inventory and installation priorities describe the **11 October 0.8.0 snapshot**, not upstream **0.8.6**. Preserve unchanged for reproducibility. New Inventory source must be separately obtained, hashed and audited using the [0.8.6 handoff](../ink-and-iron-0.8.6-inventory-handoff.md). Do not overwrite this snapshot.
 
 Canonical extraction: `reference/ink-and-iron-0.8/`. 83 files, 11 mod folders,
 one shared configuration XML, no DLC folders. 5,786 canonical resource rows;

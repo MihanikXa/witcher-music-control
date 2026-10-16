@@ -1,0 +1,43 @@
+# Ink & Iron 0.8.6 — Inventory Gear-grid vertical slice
+
+**Prepared 16 October 2026 for Codex on `ui-overhaul`.** This is a version-specific implementation brief and source gate, **not proof that 0.8.6 is installed, downloaded locally, hashed, or runtime-tested**. The user's already working HUD v4/RC2 is an accepted frozen baseline.
+
+## Upstream version evidence (public, not a local asset manifest)
+
+Author: WinterElfeas; official files/changelog: https://www.nexusmods.com/witcher3/mods/13111?tab=files and https://www.nexusmods.com/witcher3/mods/13111?tab=logs .
+
+- Current published mod version **0.8.6**, main and UI file updated **15 October 2026, 18:45** (Nexus site time). **0.8.6** specifically fixes *Equipment First* D-pad movement skipping multiple items: **one item per press**.
+- **0.8.5:** adds optional **Hide the gold line from item to its tooltip**. Other changes include an Adrenaline-display option and Gwent deck-board styling; neither is permission to update our accepted custom HUD or Gwent components.
+- **0.8.4:** Inventory item detail becomes a **content-sized popup beside the hovered slot** with **Shift comparison**; *Equipment First* has a reworked slot list, scrolling via right stick/mouse wheel and wider padding. This is an upstream **behavioral reference**, not the requested final layout.
+- **0.8.3:** official optional **Ink and Iron - Hoods Compatibility** patch, uploaded 13 October; its description says **restores Hoods dye handling on top of Ink & Iron Inventory**, requires both Hoods and I&I UI. It is a **separate optional file**, not evidence that our installed profile already contains it.
+- Current page instructs updating UI with relevant HUD/Buttons versions. **Do not apply a wholesale I&I HUD/Buttons update to the working customized RC2 HUD.** First inspect exact cross-movie dependencies/resources; keep necessary upstream 0.8.6 modules as isolated private build inputs. No All-in-One replacement of an established Vortex profile.
+
+## Mandatory local source/version gate
+
+1. Read `AGENTS.md`, `design/inventory-ux-direction.md`, `design/ink-and-iron-visual-first.md`, `research/ink-hud-v4-rc2-runtime-acceptance.md`, this document, and `reference/README.md`.
+2. Find locally downloaded **0.8.6 UI** original ZIP and original **Hoods Compatibility** optional ZIP, with any necessary matching-font/core metadata. Authoritative version evidence is their **archive names, Nexus file listing, exact member/hash inventory, bundle contents, and locally observed exported GFx**. If 0.8.6 is absent, **do not silently substitute** `reference/ink-and-iron-0.8/` (the 11 October **0.8.0** historical audit). Ask for only missing archive(s), or give precise manual acquisition steps, then stop the affected asset-dependent portion.
+3. Extract unmodified 0.8.6 sources **only under gitignored `reference/ink-and-iron-0.8.6/`** (e.g. `ui/` and `hoods-compat/` subdirectories) or otherwise pin a clear equivalent private folder. Keep original ZIP hashes, member paths and exact `panel_inventory.redswf` resource bytes. Do not mix old/new contents under the same unversioned folder. Official patch may be older than 0.8.6 UI—verify it actually works with the current UI, rather than mislabeling it 0.8.6.
+4. Read-only determine effective **Inventory ownership** from current live `mods.settings` and enabled bundle/loose resources, especially Hoods vs I&I UI vs Hoods Compatibility. Trace resources and ActionScript classes necessary for dye/hood handling, selection, equip actions, item hints, comparison and keyboard/controller navigation. Distinguish the **desired build input owner** from the **currently deployed owner**. No speculative mod reordering.
+5. Existing `research/ink-and-iron-0.8-audit/` hashes/provenance/owner table are **frozen 0.8.0 history**, not release evidence for 0.8.6. `tools/audit-ink-and-iron.py` accepts explicit `--reference`, `--mods-settings`, `--game`, and `--out`; a fresh audit must use `--reference reference/ink-and-iron-0.8.6` and a fresh ignored `--out build/ink-and-iron-0.8.6-audit`, **only if complete and suitable reference inputs exist**. Do not run `tools/report-ink-and-iron.py` blindly against its hard-coded old 0.8.0 audit. Prefer a **targeted inventory-only manifest/diff** over rescanning tens of thousands of unrelated textures.
+
+## Target (user-approved, not upstream Equipment First)
+
+A **single-screen Inventory**, not separate equipment/satchel screens or the I&I orbit of equipment around Geralt. Geralt is a **clean preview**. A primary browsable **Gear grid** holds equipped and unequipped weapons/armor with obvious but subdued equipped markers and preserved slot identities/actions. Selected item has **one coherent detail + equipped comparison view**. Keep type/filter navigation concise and low-importance materials/junk away from the ordinary gear browsing path, but **accessible**. Preserve a Witcher/Ink-and-Iron literary aesthetic, accepted QuietFolio typography and good 1080p/4K readability.
+
+**Functional Gear vertical slice, not static illustration:** select a sword in the grid, see equipped state and comparison, equip/unequip/re-equip, navigate via keyboard/mouse and controller (including exactly one selection step per D-pad press), back/escape and repeated transitions; navigate to the preserved Hoods dye/hood controls. Retain quickslots, potions/bombs/oils, Roach gear, weight, crafting/quest resources, rune sockets, DLC set/stat fields, sorting, search/filters where native, tooltips and mod-added behaviors—even if some categories keep the current presentation pending subsequent work. Preserve original hit areas, focus dispatch and comparison data contracts. Do not assume a `MovieClip.visible=false` on the paperdoll removes nothing functional.
+
+The desired Grid/Geralt/Details arrangement may use I&I 0.8.6 popup/card code and Hoods' own patch **where mechanism fits**, but user does **not** ask for Equipment First or the original item-slot constellation as the final interface. Never interpret upstream D-pad fix as approval of that upstream composition.
+
+## Bounded implementation plan
+
+- **Inspect minimum surface first:** current 0.8.6/patched `panel_inventory.redswf`, relevant menu scripts, slot and list controllers, existing interface bounds, selection propagation, state, and original preview/dye actions. Document a compact original vs desired functional map and exact resource dependencies.
+- **Implement one Gear vertical slice** in a new isolated private movie/package, only after contract mapping. Reuse proven REDkit/GFx path, preserve native/AS3 class declarations, input/renderer interfaces, selected-item semantics, and the patched Hoods dye pathway. Avoid sweeping inventory or menu globals, scripts, HUD/common/overlay/worldmap, and don't touch the working radial wheel.
+- **Actual acceptance gates:** controller/keyboard/mouse focus, equip + equip-state markers, compare and long text, Hoods dye/hood, item management/quickslots/Roach/weight, transitions and close, 1080p and 4K. Include short reproducible in-game checks on a user's ordinary save (no spoilery custom save required).
+- **Release:** one reproducible gitignored personal test ZIP with exact release/hash/log/changed-resource manifest, native cook/validate/pack/metadata + exact extraction when feasible, tests aimed at the modified contracts, enable/disable instructions and rollback to the accepted RC2 HUD + pre-prototype Inventory. All user Vortex changes manual and only with approval.
+- **Time/usage discipline:** no giant speculative font/UI-wide audit, no routine benchmarks/full regression performance suite, no gallery of inert mockups. If source access or a critical runtime dependency blocks the prototype, produce a **single precise blocker/request** and finished actionable architecture rather than pretending to have implemented it.
+
+## Boundaries
+
+Never alter the live game, Vortex, user settings/saves or merged scripts automatically. Branch `ui-overhaul` only; no `main`/`general-merge` edits. Original vendor ZIPs, extracted movies and third-party fonts stay private/gitignored. Do not redistribute modified Ink & Iron assets. The accepted RC2 HUD, bars, palette, Xbox button styling, quickslots and radial functionality are **frozen**. Shops, stash, map, journal and new audio are **later workstreams**.
+
+**Deliverable sought from next Codex run:** a source-grounded functional Inventory Gear-grid **prototype and private installable candidate** if the 0.8.6/Hoods inputs and current tooling suffice, or a narrowly specified missing-input blocker. Do not stop after generic planning once prerequisites are present.

@@ -2,6 +2,10 @@
 
 **Latest explicit user decision; supersedes older inventory layout proposals.** This is an intention and design hypothesis, not a claim that code exists.
 
+## 16 October 2026 — version-specific Inventory implementation
+
+**Latest requested source is Ink & Iron 0.8.6**, not the archived `reference/ink-and-iron-0.8/` (0.8.0) resource inventory. Upstream 0.8.6 fixes Equipment First D-pad skipping, 0.8.5 adds a hide-connector option, and 0.8.4 changes Inventory item cards; the official Hoods optional patch originates in 0.8.3. Exact current source artifacts and dependencies must be verified locally before a build. See [0.8.6 Inventory handoff](../research/ink-and-iron-0.8.6-inventory-handoff.md). **Freeze the working custom HUD v4/RC2**; only Inventory is in scope.
+
 ## 15 October 2026 — official Ink & Iron / Hoods compatibility update
 
 The user corrected the earlier assumption that Hoods inventory ownership remains an outstanding integration blocker: **Ink & Iron now supplies its own Hoods Compatibility patch**. The author added this optional file in **Ink & Iron 0.8.3 (13 October 2026)**; the Nexus file description says it **restores Hoods dye handling on top of Ink & Iron inventory**, requires both Hoods and Ink & Iron UI, and is to be installed alongside them. Official sources: https://www.nexusmods.com/witcher3/mods/13111?tab=files and the 0.8.3 changelog. This supersedes the **default assumption of an unsolved Hoods versus I&I inventory merge**, not the need to check the actual installed file owner and functionality.
