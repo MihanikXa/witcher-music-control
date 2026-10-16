@@ -2,6 +2,16 @@
 
 **17 October 2026. User screenshots**, five images of the current in-game menu (Glossary, Alchemy, Inventory, Quests, Character) compared with five examples from the Ink & Iron mod page (Inventory, Character, Quests, Alchemy, Glossary). The images remain chat attachments; no third-party image is committed to Git. This records an **actual user-observed visual rejection**, superseding the offline build's pre-test acceptance state, **not** evidence of other untested gameplay features.
 
+## 17 October — user correction: retain font families, NOT their current styling
+
+**Verbatim user statement:** "Agree with all. And additionally we retained the fonts, but how they are structured we shouldn't retain, especially the color, sizes and alignments. What should I download in addition to what we already have, beastiary art, anything else?"
+
+**Explicit preference:** Preserve the already accepted QuietFolio/Gentium **font face/glyph availability and font-library compatibility**, but do **not** freeze its current visual system: menu **color, size, alignment**, including hierarchy and spacing, are eligible and expected to change to match the preferred Ink & Iron presentation. Earlier notes saying to "retain Gentium" are **font-family constraints only**, not a veto on reworking the entire typographic grammar.
+
+**Assistant-proposed implementation method (not user's exact specification):** Use the original Ink & Iron menu styling as the reference for relative type hierarchy, case/weight, label vs value emphasis, line widths, baseline alignment, focus selection, spacing and restrained cream/gold palette. Remap to Gentium with measured font metrics to avoid clipping/overflow; do not force IM Fell-dependent pixel placements without compensating for different glyph widths. The accepted HUD RC2 is outside this menu restyling scope unless user separately requests a HUD change.
+
+**Reference asset acquisition:** The current original **0.8.7 All-in-One already contains UI/HUD/Fonts/Icons/Animated MainMenu/Gwent/Loading/Dialogue/Buttons** modules. Official **Bestiary Art** (separate since 0.8.1) is required to get the reference's etched Bestiary/character-entry illustrations. Optional **Map Inked** is the separate default world-map/minimap artwork and was removed from All-in-One; it may be useful for full visual coverage if integrated with Smooth Map without loss of its features. Alternative Map Shadow/Charcoal/Parchment are mutually exclusive appearance choices, not additionally necessary downloads. The previously pinned **Hoods Compatibility** optional archive already exists under 0.8.6 references; preserve and port its dye logic, don't install the obsolete whole-movie over 0.8.7. **Fonts (Vanilla)** alias archive was already handled in the existing QuietFolio bridge; don't blindly replace our fonts with IM Fell or vanilla. More downloads alone will **not** fix missing shared menu-top navigation, background engravings, or Character layout differences: first trace ownership/callback/options. Official source: https://www.nexusmods.com/witcher3/mods/13111?tab=files
+
 ## Direct user statement
 
 > Check repo, why is it so half-cooked. First set is current in game, second is ink and iron mod page screenshots.
