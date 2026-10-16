@@ -109,3 +109,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 54. [White Orchard sparse-rest prototype authorization](54-white-orchard-sparse-prototype-authorization.md): user-approved narrow offline feasibility fixture, with explicit retained-D inherited/static-gain issue, native music/rest/combat-outro/author protection gates and no deployment or user-facing mode defaults.
 
 55. [White Orchard native phrase/rest proof](55-white-orchard-sparse-rest-proof.md): complete-context native/D/Sparse controls, explicit dual-mute resolution, two measured finite rests, native combat/outros and authored/Music/Gwent controls. Native reselection cancels rest; D replay outro attenuation recorded without changing releases.174 tests pass; no bank generation, package or deployment. [Sanitized evidence](55-white-orchard-sparse-evidence.json).
+
+56. [Sparse musical-material selection plan](56-musical-material-selection-plan.md): Music Plus and native originals material audit, provenance-aware 15–25 cue audition shortlist and 5–8 priority picks, offline private previews, no integration or scheduler work.

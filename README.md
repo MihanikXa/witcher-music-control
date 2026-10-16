@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Next authorized research task (2026-10-16):** Select useful sparse-exploration musical material first, considering the locally available Music Plus library and native Witcher 3 originals. Build a private audition shortlist/index from verified track and Wwise/media mappings; do not assume 275 streamed media entries are 275 complete compositions or claim listening from metadata. No new scheduler, gameplay triggers, soundbanks or deployment. See [report56](research/56-musical-material-selection-plan.md).
+
+
 **Sparse proof completed (2026-10-16):** [Report55](research/55-white-orchard-sparse-rest-proof.md) demonstrates native audible phrases separated by two measured environmental-only rests, with native combat/intensity/complete outros, authored/Gwent controls and Music master response. The isolated candidate explicitly removes both inherited and static mutes from the permitted phrase while retaining narrow suppression elsewhere. Native location/day-night reselection can cancel a rest; combat return keeps native overlap, without persistent rest scheduling. All174 tests pass. No experimental bank, release package or deployment was made; accepted v2/v3/v4 remain intact. Next: resolve and test bounded re-entry/post-combat pacing before a reusable Sparse mode.
 
 
