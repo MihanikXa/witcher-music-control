@@ -29,3 +29,7 @@ The stronger structural problem: report73 showed the **unfaded musical source re
 4. No new audio, game/Wwise integration, full-cue batch or numerical-accuracy claims follow from the rejection. Any later sound change must receive its own audition, with accepted files and unmodified preregistered report69 predictions retained.
 
 This is a feedback/status/intake document, not a finished correction.
+
+## Superseded diagnosis — report76
+
+The **newest explicit user statement** confirms that source130s is a musically good ending; report75's alternate-endpoint hypothesis and suggestion to investigate longer source continuations are **not active directions**. See [report76](76-s18-local-dry-wet-fade-alignment.md) for the corrected, authoritative focus on a narrowly timed fade and dry/reverb crossover. The rejection of report74 B remains valid.

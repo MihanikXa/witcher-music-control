@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Newest explicit S18 correction (2026-10-17; report76):** User states unequivocally **source130s is musically the right S18-3 endpoint**, directly overriding report75's speculative 'premature ending' hypothesis. DO NOT search for longer compositions / other musical endpoints. User wants fine alignment of fade knee/dry-to-wet handoff with the source's existing *local* dip/decay, potentially within ~0.5s near reported player18.8s = source129.6s. Inspect 20–100ms source/dry/wet combined behavior, source-driven fade geometry, and timing variants; don't presume0.5s is a whole-fade duration. Preserve original 112.8–130s cut, accepted audio and frozen prediction69; render only a few private local S18 comparison options, not another global reverb redesign. See report76.
+
+
 **Latest S18 listening correction (2026-10-17; report75):** User rejects report74's B (72dB/2.2s constant-decibel **dry-only** release) as 'ten time worse', with a much more sudden dip. The report74 measured signal is already nearly28dB quieter at player18s than A, effectively inaudible by18.8. Do not re-propose this release or infer math/204 tests equal musical success. Report73 shows the raw source remains active near the manually selected source130s cutoff, and report57 lists full S18 audio157.01s; consider whether musical cut/phrase completion, not another send-curve tweak, is the underlying blocker. Preserve user-chosen130s unless explicitly revisited; no new treatment or game change is authorized. See report75.
 
 

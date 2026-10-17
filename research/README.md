@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Latest priority (report76):** explicit user correction: retain S18-3 musical stop at source130s; focus only on fine local fade/crossover positioning against natural source dynamics and continuous reverb, rather than revisiting the musical composition ending suggested in report75. No new render yet.
+
+
 **Newest S18 outcome (report75):** report74 B dry-only constant-dB release is explicitly rejected by user (substantially more sudden dip). Focus future diagnosis on whether selected source130s is a musically usable stop, since original continues to157s; no new correction approved. All prior selections/ledger preserved.
 
 

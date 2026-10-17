@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Current S18 direction (report76):** User affirms that S18-3 source130s is the correct *musical* stop. Refocus from alternative composition endpoints to locating and shaping the existing dry/reverb fade within a narrow ~0.5s region around the troublesome near-end handoff (player18.8s ≈ source129.6s). No new audio correction has been validated. [Report76](research/76-s18-local-dry-wet-fade-alignment.md).
+
+
 **Latest S18 result (report75, 2026-10-17):** User strongly rejects the report74 constant-dB dry-only B release as a worse/sudden dip. Its 72dB attenuation over2.2s sinks source much earlier. S18 source remains active at the selected130s cut and continues to157.01s, so inspect musical endpoint appropriateness before further DSP variants. Old selected files preserved; no new accepted S18 correction. [Report75](research/75-s18-dry-db-release-rejection-and-boundary-diagnosis.md).
 
 
