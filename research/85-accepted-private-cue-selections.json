@@ -1,0 +1,429 @@
+{
+  "schema": 1,
+  "verbatim_user_message": "All accepted",
+  "scope": "All24 selected private cue excerpts accepted, including previously separate S05-main and both corrected S14 cues. Acceptance of audio does not authorize game integration or redistribution. Preserve earlier qualifications, including S18-3 T3 good enough.",
+  "previous_snapshot": "research/82-accepted-private-cue-selections.json",
+  "new_render_provenance": "research/84-pending-corrected-cue-renders.json",
+  "verified_selected_audio_count": 24,
+  "selections": [
+    {
+      "cue": "S05-short",
+      "version": "v3",
+      "treatment": "B",
+      "acceptance_evidence": "report67 direct message",
+      "file": "build/music-material-selection/cue-edits-v3/audio/S05-short-B.wav",
+      "sha256": "3617b4143a9c21980a3de1f7984d8a92aae2527d16c1b7ec90fcbffca370d718",
+      "label": "B вЂ” v3 primary: gentler 2s dry fade, established room",
+      "source_cut": [
+        0,
+        23.7
+      ],
+      "dry_fade": [
+        21.7,
+        23.7
+      ]
+    },
+    {
+      "cue": "S11-short",
+      "version": "v3",
+      "treatment": "C",
+      "acceptance_evidence": "report67 direct message",
+      "file": "build/music-material-selection/cue-edits-v3/audio/S11-short-C.wav",
+      "sha256": "907b75d86e0c3c352cf44831a68ff46f280da2ebff6de3199b610c50227223ae",
+      "label": "C вЂ” v3 control: original dry fade, fading source send",
+      "source_cut": [
+        0,
+        20
+      ],
+      "dry_fade": [
+        18,
+        20
+      ]
+    },
+    {
+      "cue": "S12-1",
+      "version": "v2",
+      "treatment": "C",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S12-1-C.wav",
+      "sha256": "a14cf5c6ad57981bf0d403ec73940b334844f79cb9f2e8b4ae1d778c3319a6c9",
+      "label": "C вЂ” v2 freeze / immediate release 4.5s",
+      "source_cut": [
+        5,
+        21
+      ],
+      "dry_fade": [
+        20.4,
+        21
+      ]
+    },
+    {
+      "cue": "S07-b",
+      "version": "v2",
+      "treatment": "B",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S07-b-B.wav",
+      "sha256": "96dfbb194de104e5a57a9819589ac95482857a76d7a5fe5e0e2c77decad60c04",
+      "label": "B вЂ” v2 natural decay (primary), RT60 7s",
+      "source_cut": [
+        81,
+        115
+      ],
+      "dry_fade": [
+        111,
+        115
+      ]
+    },
+    {
+      "cue": "S04-b",
+      "version": "v2",
+      "treatment": "C",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S04-b-C.wav",
+      "sha256": "db7df8e97cc4d1d1b5956461be134bbd0a6a730f6a9dcd4dd55e1da8a65b797f",
+      "label": "C вЂ” v2 freeze / immediate release 5s",
+      "source_cut": [
+        34,
+        60.757333333333335
+      ],
+      "dry_fade": [
+        59.757333333333335,
+        60.757333333333335
+      ]
+    },
+    {
+      "cue": "S07-c",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S07-c-B.wav",
+      "sha256": "8210bb16d375f454aef53af2d14c989035e9c5b5029bd59f6e138e55d9a1979a",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S12-2",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S12-2-B.wav",
+      "sha256": "1df4cf103ee2854b38b9460ebbb9a344cbae347650932751ce85b8c9a9d32451",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S15-a",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S15-a-B.wav",
+      "sha256": "f08cdbcf31df9b8a9ff77703335a4ef26acfd398abb21a5d82dbe0fdddabcec7",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S16-2",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S16-2-B.wav",
+      "sha256": "4e9104c02fded256d63af1a48b132a83215a3cd9bbc359cd28ea2b7ff91e037a",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "Unreviewed"
+      },
+      "notes": "",
+      "qualification": "No artifact evaluation supplied."
+    },
+    {
+      "cue": "S18-3",
+      "version": "report78-local-alignment",
+      "treatment": "T3",
+      "file": "build/music-material-selection/s18-local-alignment-final/audio/S18-3-alignment-3.wav",
+      "sha256": "5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd",
+      "verbatim_acceptance": "T3 is good enough",
+      "acceptance_evidence": "report79 direct user message",
+      "status": "Accepted as good enough",
+      "qualification": "Practical acceptance of this exact render; no claim of perfect seamlessness or universal processing rule.",
+      "source_cut": [
+        112.8,
+        130.0
+      ],
+      "dry_fade_window": [
+        127.8,
+        130.0
+      ],
+      "local_center_source_seconds": 129.65,
+      "local_center_player_seconds": 18.85,
+      "dry_phase_delay_seconds": 0.1,
+      "local_width_seconds": 0.5,
+      "rt60": 5.5,
+      "wet_gain": 0.1981443461969509,
+      "supersedes": {
+        "cue": "S18-3",
+        "version": "treatment-trial-v1",
+        "treatment": "B",
+        "file": "build/music-material-selection/treatment-trial-v1/audio/S18-3-B.wav",
+        "sha256": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140",
+        "verdict": "Keep",
+        "evaluation": {
+          "seamless": "No",
+          "resolution": "Yes",
+          "tail": "Too intrusive",
+          "artifact": "None heard"
+        },
+        "notes": "There seems to be a slight volume bump at 19s",
+        "qualification": "Keep selected, but explicitly not seamless and tail too intrusive; follow-up unresolved."
+      }
+    },
+    {
+      "cue": "S20-a",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S20-a-B.wav",
+      "sha256": "201f61e89d973a814b87ac1ebdfd8187449fd1794b69d7253dacd37245cf78c4",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S11-long",
+      "version": "remainder-batch-v1",
+      "treatment": "C",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S11-long-C.wav",
+      "sha256": "42b85b640cecb0ad61048e115ce481cc35cc88e3233e543ed7903303a7975227",
+      "source_cut": [
+        0,
+        93
+      ],
+      "dry_fade": [
+        90,
+        93
+      ]
+    },
+    {
+      "cue": "S07-a",
+      "version": "remainder-batch-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S07-a-B.wav",
+      "sha256": "04c57a6cce9430468cb779d1e964a06846a366b737d68c71113b485b9b846ecb",
+      "source_cut": [
+        0,
+        72.7
+      ],
+      "dry_fade": [
+        67,
+        72.7
+      ]
+    },
+    {
+      "cue": "S12-3",
+      "version": "remainder-batch-v1",
+      "treatment": "C",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S12-3-C.wav",
+      "sha256": "82b1c6e7869535e4a80dd359f7e2fd876e8f6c43936ca7ce8387fb89b4428c3e",
+      "source_cut": [
+        35.5,
+        48.5
+      ],
+      "dry_fade": [
+        46.3,
+        48.5
+      ]
+    },
+    {
+      "cue": "S12-4",
+      "version": "remainder-batch-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S12-4-B.wav",
+      "sha256": "63b212c3665546b3a6a0a23909331a9f6c0a233ec6fab4c42f2306b011664a91",
+      "source_cut": [
+        48.5,
+        73.04533333333333
+      ],
+      "dry_fade": [
+        73.02533333333334,
+        73.04533333333333
+      ]
+    },
+    {
+      "cue": "S15-b",
+      "version": "remainder-batch-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S15-b-B.wav",
+      "sha256": "297cef4995b41ed3201feb63fe3d40adc7bd284aaf8e57c7c4d6d7b01c4642e0",
+      "source_cut": [
+        25.5,
+        57.5
+      ],
+      "dry_fade": [
+        52,
+        57.5
+      ]
+    },
+    {
+      "cue": "S16-3",
+      "version": "remainder-batch-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S16-3-B.wav",
+      "sha256": "62dbe3247c6d60b96b4dab75e880a7b386df83cef75b309e8a57a934a8ac6fb3",
+      "source_cut": [
+        101.1,
+        133.33333333333334
+      ],
+      "dry_fade": [
+        133.31333333333333,
+        133.33333333333334
+      ]
+    },
+    {
+      "cue": "S18-1",
+      "version": "remainder-batch-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report82 user listening export",
+      "file": "build/music-material-selection/remainder-batch-v1/audio/S18-1-B.wav",
+      "sha256": "a7203e27770c33ad24c97f6ebc0424c9e3efaa2edfc2f06e139bec6da4ff7583",
+      "source_cut": [
+        0,
+        31.7
+      ],
+      "dry_fade": [
+        29.5,
+        31.7
+      ]
+    },
+    {
+      "cue": "S04-a",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S04-a-B.wav",
+      "sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82",
+      "source_cut": [
+        3.15,
+        34
+      ],
+      "dry_fade": [
+        31.0,
+        34.0
+      ],
+      "future_sparse_eligible": true,
+      "version": "five-cue-corrections-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report85 direct user message: All accepted"
+    },
+    {
+      "cue": "S16-1",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S16-1-B.wav",
+      "sha256": "f6a8eb78ee42bd8f4ed65d4216b0c1c348e8c6359b27f3fcc16613c7da3f569e",
+      "source_cut": [
+        0,
+        42.3
+      ],
+      "dry_fade": [
+        35.0,
+        42.3
+      ],
+      "future_sparse_eligible": true,
+      "version": "five-cue-corrections-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report85 direct user message: All accepted"
+    },
+    {
+      "cue": "S18-2",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S18-2-B.wav",
+      "sha256": "89ac5a6f95b66a938c1bd3f2b0500acd8a452d7c40e1818da8e5e2cc5da1d3a7",
+      "source_cut": [
+        61,
+        100.8
+      ],
+      "dry_fade": [
+        97.5,
+        100.8
+      ],
+      "future_sparse_eligible": true,
+      "version": "five-cue-corrections-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report85 direct user message: All accepted"
+    },
+    {
+      "cue": "S14-1",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S14-1-B.wav",
+      "sha256": "b6b5fba304627c3c3c8ebaece76ddd6fb53578bbd64bedda21860a6733e5f4d3",
+      "source_cut": [
+        0,
+        64.5
+      ],
+      "dry_fade": [
+        62.3,
+        64.5
+      ],
+      "future_sparse_eligible": true,
+      "version": "five-cue-corrections-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report85 direct user message: All accepted"
+    },
+    {
+      "cue": "S14-2",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S14-2-B.wav",
+      "sha256": "afb781d285813d1fadc5974d8971ed3d8f0221361c238ee71b642856c3da96bd",
+      "source_cut": [
+        64.5,
+        132.0
+      ],
+      "dry_fade": [
+        131.98,
+        132.0
+      ],
+      "future_sparse_eligible": true,
+      "version": "five-cue-corrections-v1",
+      "treatment": "B",
+      "acceptance_evidence": "report85 direct user message: All accepted"
+    },
+    {
+      "cue": "S05-main",
+      "version": "v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/cue-edits-v1/audio/S05-main-B.wav",
+      "sha256": "1f267727b6d531200099bf70656218e364de7982e1a2e508031cf9f8f8c90c35",
+      "acceptance_evidence": "Previously separately accepted S05-main B v1; retained unchanged",
+      "source_cut": [
+        0,
+        47.5
+      ],
+      "dry_fade": [
+        42,
+        47
+      ]
+    }
+  ]
+}
