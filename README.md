@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Persistent S18 failure (2026-10-17; report73):** User still hears dip near18.8s → constant level → separate fade. No report72 variant is accepted; latest feedback does not identify B/C individually. Stop blind send-taper iterations. One dry-only diagnostic at `build/music-material-selection/s18-handoff-diagnostic/index.html` compares exact existing dry fade against unfaded original and prior partial C; no new wet correction. Dry falls~33dB while original source remains active. Need human distinction whether dry-only already has the objectionable dip before choosing another mechanism.201 tests pass; accepted files and ledger69 unchanged. No rollout/game integration.
+
+
 **S18 dip follow-up (2026-10-17; report72):** User reports a strong dip around18.8s in report71; full-post correction is not accepted. Two private partial-send tapers now at `build/music-material-selection/s18-correction-v2/index.html`: B exponent0.25 fuller (small measured late rise remains), C exponent0.5 restrained. A is unchanged rejected report71. Dry/cuts/gain/RT60 remain exact; no subjective fix claimed.201 tests and PCM/client/preservation checks pass. Listen only to this one-cue comparison; all other selected files and ledger69 remain unchanged. No broader rollout or game integration.
 
 

@@ -1,0 +1,74 @@
+{
+  "kind": "diagnostic_only_not_a_fix",
+  "dry_qa": {
+    "sha256": "2c4d27fb2f87a651e566e9701d0eb7acd9c843c5dbc9b05271bdd52fd5e98add",
+    "seconds": 22.2,
+    "channels": 2,
+    "rate": 48000,
+    "peak": 0.1331787109375,
+    "clipped_samples": 0,
+    "decoder_exact": true
+  },
+  "source_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+  "rejected_reference_sha256": "4377827538f80f69043033855a159b7ceeb0405473c44c8d70f065d0b2c97458",
+  "source_cut": [
+    112.8,
+    130
+  ],
+  "dry_fade": [
+    127.8,
+    130
+  ],
+  "measurements": [
+    {
+      "player_seconds": 18.3,
+      "unfaded_source_dbfs": -29.310754968122374,
+      "dry_faded_dbfs": -39.05928524216134
+    },
+    {
+      "player_seconds": 18.4,
+      "unfaded_source_dbfs": -29.176748183263058,
+      "dry_faded_dbfs": -40.76552478520948
+    },
+    {
+      "player_seconds": 18.5,
+      "unfaded_source_dbfs": -30.024477635819203,
+      "dry_faded_dbfs": -44.022828552039435
+    },
+    {
+      "player_seconds": 18.6,
+      "unfaded_source_dbfs": -30.19953754734315,
+      "dry_faded_dbfs": -46.75845941421977
+    },
+    {
+      "player_seconds": 18.7,
+      "unfaded_source_dbfs": -30.82478532576372,
+      "dry_faded_dbfs": -50.525578647417476
+    },
+    {
+      "player_seconds": 18.8,
+      "unfaded_source_dbfs": -29.56336135373256,
+      "dry_faded_dbfs": -53.78607392630493
+    },
+    {
+      "player_seconds": 18.9,
+      "unfaded_source_dbfs": -28.758004439638576,
+      "dry_faded_dbfs": -58.484697520675525
+    },
+    {
+      "player_seconds": 19.0,
+      "unfaded_source_dbfs": -27.51646052107688,
+      "dry_faded_dbfs": -65.66286750952605
+    },
+    {
+      "player_seconds": 19.1,
+      "unfaded_source_dbfs": -26.88031552903034,
+      "dry_faded_dbfs": -79.98256230347393
+    }
+  ],
+  "selected_hashes_preserved": 11,
+  "ledger_unchanged": true,
+  "real_browser_tested": false,
+  "subjectively_listened": false,
+  "verbatim_feedback": "There still that dip that 18.8s, then constant volume then fade effect that we tried to correct for a long time"
+}
