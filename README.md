@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Latest measurement (report77, 2026-10-17):** Original uploaded S18 Opus and dry diagnostic verified against repo SHA; robust narrow original-source RMS valley near129.575s followed by ~4.75dB recovery before accepted musical endpoint130s. Existing dry fade strongly magnifies that valley. Target three tightly spaced local dry/reverb handoff hypotheses, not a new source cut or another entire-fade replacement. See [direct audio measurement report](research/77-s18-uploaded-source-microdynamics-measurement.md). No new audio was edited/approved.
+
+
 **Current S18 direction (report76):** User affirms that S18-3 source130s is the correct *musical* stop. Refocus from alternative composition endpoints to locating and shaping the existing dry/reverb fade within a narrow ~0.5s region around the troublesome near-end handoff (player18.8s ≈ source129.6s). No new audio correction has been validated. [Report76](research/76-s18-local-dry-wet-fade-alignment.md).
 
 

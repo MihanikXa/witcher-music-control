@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Direct source measurement (report77):** Uploaded SHA-matching original S18 Opus + dry-only control analyzed at20–100ms windows; strongest robust near-end source RMS valley129.57–129.58s, source recovery before130s; current artificial dry release deepens hole while independent wet can surge. Test only local crossover timing, preserving selected endpoint and all old audio.
+
+
 **Latest priority (report76):** explicit user correction: retain S18-3 musical stop at source130s; focus only on fine local fade/crossover positioning against natural source dynamics and continuous reverb, rather than revisiting the musical composition ending suggested in report75. No new render yet.
 
 
