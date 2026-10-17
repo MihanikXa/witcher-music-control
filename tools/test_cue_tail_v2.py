@@ -95,5 +95,17 @@ class ContinuousTailTests(unittest.TestCase):
                          {**self.settings(),'send_policy':'pre_ending_fade','send_stop_guard_seconds':3}]:
             with self.assertRaises(ValueError):render_continuous(self.source(),settings,4)
 
+    def test_fractional_taper_keeps_dry_and_pre_fade_exact(self):
+        s=self.settings();source=self.source()
+        a,p,ac=render_continuous(source,s,4)
+        b,q,bc=render_continuous(source,{**s,'send_policy':'tapered_ending','send_ending_fade_power':.5},4,wet_gain=p['wet_gain'])
+        self.assertTrue(np.array_equal(ac['dry'],bc['dry']))
+        self.assertTrue(np.array_equal(a[:5*RATE],b[:5*RATE]))
+        self.assertGreater(q['post_stop_first_second_dbfs'],p['post_stop_first_second_dbfs'])
+        self.assertEqual(q['send_ending_fade_power'],.5)
+        self.assertLess(q['cleanup_peak_dbfs'],-100)
+        for power in [None,0,1,2]:
+            with self.assertRaises(ValueError):render_continuous(source,{**s,'send_policy':'tapered_ending','send_ending_fade_power':power},4)
+
 
 if __name__=='__main__':unittest.main()

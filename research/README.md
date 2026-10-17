@@ -3,7 +3,7 @@
 **Latest direction (report68, 2026-10-17):** Transparent and preregistered treatment triage for remaining Sparse cue endings; only six varied private test renders, then user review. Report67 pins the five accepted source-specific endings; no universal preset or full24 rollout.
 
 
-**Current reading order:** report71 provides the authorized S18-3-only correction after report70 feedback. New B changes send routing only; measured rebound is removed, but quieter tail needs user audition. All other selections and report69 predictions remain unchanged. No library rollout or game integration.
+**Current reading order:** report72 records user rejection of report71’s audible dip and supplies two partial-send S18-only alternatives. No new ending is accepted yet. Preserve report70 qualified original, prior failures and ledger69. No library rollout or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -144,3 +144,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 70. [User treatment-trial results](70-user-treatment-trial-results.md): six Keep/B choices, five seamless outcomes and one qualified S18-3 result. [Raw export](70-user-treatment-trial-outcomes.json), [cumulative selections](70-selected-private-cue-renders.json). No audio or rule changes.
 
 71. [S18-3 late room buildup correction](71-s18-late-room-buildup-correction.md): one new post-fader candidate, original retained,200 tests and exact input/PCM checks. User listening pending. [Plan](71-s18-send-correction-plan.json), [evidence](71-s18-send-correction-evidence.json).
+
+72. [S18 dip and partial-send follow-up](72-s18-dip-feedback-and-partial-send.md): exact user correction, two controlled tapers,201 tests and unchanged dry/accepted-input checks; listening pending. [Plan](72-s18-partial-send-plan.json), [evidence](72-s18-partial-send-evidence.json).

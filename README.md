@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**S18 dip follow-up (2026-10-17; report72):** User reports a strong dip around18.8s in report71; full-post correction is not accepted. Two private partial-send tapers now at `build/music-material-selection/s18-correction-v2/index.html`: B exponent0.25 fuller (small measured late rise remains), C exponent0.5 restrained. A is unchanged rejected report71. Dry/cuts/gain/RT60 remain exact; no subjective fix claimed.201 tests and PCM/client/preservation checks pass. Listen only to this one-cue comparison; all other selected files and ledger69 remain unchanged. No broader rollout or game integration.
+
+
 **S18-only correction ready (2026-10-17; report71):** Measured player18.6–19.1s wet growth causes the reported combined rebound while dry fades. One new candidate at `build/music-material-selection/s18-correction-v1/index.html` changes only S18-3 send from independent to post-fader; source112.8–130s, fade127.8–130s, RT60/gain/filters remain exact. Original A preserved; corrected B removes measured rebound but has ~20dB quieter post-source tail, so listening approval is pending.200 tests and PCM/client/input checks pass; all other selections and ledger69 unchanged. No broader rendering or game integration.
 
 

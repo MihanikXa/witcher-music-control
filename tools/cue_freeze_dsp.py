@@ -228,10 +228,10 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
     sos=np.concatenate([signal.butter(2,hp,'highpass',fs=RATE,output='sos'),
                         signal.butter(2,lp,'lowpass',fs=RATE,output='sos')])
     send_policy=settings.get('send_policy','post_fader')
-    if send_policy not in ('post_fader','pre_ending_fade'):raise ValueError('Unsupported send policy')
+    if send_policy not in ('post_fader','pre_ending_fade','tapered_ending'):raise ValueError('Unsupported send policy')
     excitation=padded
     send_guard=0
-    if send_policy=='pre_ending_fade':
+    if send_policy in ('pre_ending_fade','tapered_ending'):
         # Experimental v3: preserve dry edit exactly, but avoid draining the room
         # while dry fades. The source stops at the same cut; no music beyond it.
         if onset:raise ValueError('Pre-ending send onset repair needs separate review')
@@ -240,6 +240,11 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
         if not 2<=n<round((fe-fs)*RATE):raise ValueError('Invalid excitation-stop guard')
         entrance=np.ones(len(segment));ni=round(settings['fade_in']*RATE)
         if ni>=2:entrance[:ni]*=ramp(ni)
+        if send_policy=='tapered_ending':
+            power=settings.get('send_ending_fade_power')
+            if power is None or not 0<power<1:raise ValueError('Explicit fractional send-fade power required')
+            ending=dry_envelope(len(segment),RATE,0,fs,fe)
+            entrance*=ending**power
         entrance[stop_frame-n:stop_frame]*=1-ramp(n);entrance[stop_frame:]=0
         excitation=np.zeros_like(padded);excitation[:len(segment)]=segment*entrance[:,None]
     filtered=signal.sosfilt(sos,excitation,axis=0)
@@ -286,6 +291,7 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
         settled_energy_relative_range=drift,windows_50ms=win,
         wet_control_checks=controls,
         send_policy=send_policy,send_stop_guard_seconds=send_guard,
+        send_ending_fade_power=settings.get('send_ending_fade_power') if send_policy=='tapered_ending' else None,
         entire_transition_geometry=release_diagnostics(raw,max(0,fs-1)),
         release_diagnostics=release_diagnostics(raw,fe),
         post_stop_first_second_dbfs=float(20*np.log10(max(np.sqrt(np.mean(raw[stop:stop+RATE]**2)),1e-12))))
