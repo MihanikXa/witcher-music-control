@@ -1,6 +1,6 @@
 # Music research and design decisions
 
-**Current reading order:** reports50–53 supersede historical prototype plans below. V4 is the completed initial regional filtering pass, not the full experience-led vision; report53 now completes the actual Music Plus archive comparison and recommends an independently designed, native-preserving sparse prototype. No new playback/deployment or runtime feature was authorized by that read-only audit.
+**Current reading order:** report64 is the completed five-cue corrective audio audition; reports58–63 are immutable user cuts/feedback and defect diagnosis. Conventional continuous-send decay is primary; user listening approval is required before scaling. All scheduler, bank and gameplay work remains deferred. Historical regional and architecture findings below remain evidence, not the current task.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -125,3 +125,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 62. [Cue-tail audible handoff defect and small v2 plan](62-cue-tail-handoff-defect-review.md); [verbatim export](62-user-cue-edit-decisions.json). Broad dry/wet dip, plateau and separate end fade; preserve v1, stop unnecessary listening, first try continuous reverb and coherent release on a few controls.
 
 63. [Longer natural reverb decay preference](63-longer-natural-reverb-decay-preference.md): latest user instruction prioritizes smoother, longer conventional reverb tails on most cues, with continuous early wet send and no late hold/second fade; small v2 audio comparison first.
+
+64. [Continuous reverb-tail correction](64-continuous-reverb-tail-correction.md): five cues,12 new private PCM renders, continuous post-fader B with longer RT60, optional freeze with immediate release, unchanged v1 comparisons and explicit S04 onset edit.191 tests and independent PCM/preservation/client gates pass; user listening remains required. [Plan](64-continuous-tail-plan.json), [evidence](64-continuous-tail-evidence.json).

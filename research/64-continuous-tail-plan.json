@@ -1,0 +1,56 @@
+{
+  "schema": 2,
+  "v1_metadata_sha256": "8782a8ba42d901b013fe2aa13c522930740494489216f2c944ba207fc3acd344",
+  "immutable_inputs": {
+    "research/58-musical-material-feedback-review.md": "14daf0230fc5ee9ff653eb18862f49692179ac26795e3e98111c4b0283ecceff",
+    "research/58-user-musical-material-audition-feedback.json": "28517bbe32f0e442825e5cb6cc845ddd1adfcb49fadced86057c7fd8752f9d0a",
+    "research/59-provisional-freeze-tail-preference.md": "c17ea8aeb1c7bd4b626e0ffc741a42436efdc0e23dffc510708d97a2b64e612c",
+    "research/60-private-cue-edit-and-freeze-tail-handoff.md": "337c38b250018d59e99476af171f1a097a0b85ba5185446d44e35fe21dc6aef3",
+    "research/61-private-cue-edit-evidence.json": "fb622d01c934e41b96724a34086193f724a1dc7ad06b1590ac5f75e48abe12ef",
+    "research/61-private-cue-edit-plan.json": "9f9606b6646f45ff4c7ff1d74c6a3b588c583c8212e03057f8d5b849eed6db05",
+    "research/61-private-cue-edits-and-freeze-auditions.md": "64d421400dcfa7509c4c42fe2d8ca11192dd19355c072dbbf4cc4bec085854f4",
+    "research/62-cue-tail-handoff-defect-review.md": "9288e7f86f98b9e5155d2bbda5af1aa053fdc41d60e9d475e73ec34e299773f9",
+    "research/62-user-cue-edit-decisions.json": "9fdc8742dac4c2a6b3062f6950468df69f9154315ff9f5828d7cafc8bb2d4a17",
+    "research/63-longer-natural-reverb-decay-preference.md": "2172d81a3a860e2e8448a2c00d58b3fc38827f0f87ee8c8699b11c3a72401642"
+  },
+  "policy": "Five corrective cues only. Preserve source/dry clocks. Continuous post-fader send, natural RT60 primary; optional freeze at actual dry stop with immediate release. No late wet normalization/hold. No subjective approval.",
+  "cues": [
+    {
+      "cue": "S05-short",
+      "natural_rt60": 5.5,
+      "longer_rt60": null,
+      "continuous_wet_db": -21,
+      "onset_note": "Original source crop and dry fade unchanged."
+    },
+    {
+      "cue": "S11-short",
+      "natural_rt60": 6.5,
+      "longer_rt60": 9,
+      "continuous_wet_db": -20,
+      "onset_note": "Original source crop and dry fade unchanged."
+    },
+    {
+      "cue": "S12-1",
+      "natural_rt60": 4.5,
+      "longer_rt60": null,
+      "continuous_wet_db": -22,
+      "onset_note": "Original source crop and dry fade unchanged."
+    },
+    {
+      "cue": "S07-b",
+      "natural_rt60": 7,
+      "longer_rt60": 10,
+      "continuous_wet_db": -21,
+      "onset_note": "Original source crop and dry fade unchanged."
+    },
+    {
+      "cue": "S04-b",
+      "natural_rt60": 5,
+      "longer_rt60": null,
+      "continuous_wet_db": -22,
+      "onset_note": "Explicit onset repair: retain source34s crop; zero source34\u201337s, raised-cosine entrance37\u201337.35s. Provisional interpretation of user\u2019s ~3s correction; no endpoint shift.",
+      "onset_mute_seconds": 3,
+      "onset_ramp_seconds": 0.35
+    }
+  ]
+}

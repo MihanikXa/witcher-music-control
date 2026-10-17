@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Current private audition (2026-10-17; report64):** Five-cue continuous-tail v2 is rendered at ignored `build/music-material-selection/cue-edits-v2/index.html`:12 new WAVs, B natural decay primary (RT60 4.5–7s), two longer B controls (9/10s), optional already-established-field freeze with immediate release, unchanged v1 comparisons. S04-b explicitly zeros crop-relative first3s then ramps350ms; cuts/endpoints unchanged.191 Python tests plus offline client/export checks pass; all34 v1 renders preserved. No subjective/real-browser playback claim. S04 endpoint already near silence, S12 tail quiet; listen rather than boost a late layer. User must approve these five before all24; no bank/game/trigger work. See [report64](research/64-continuous-reverb-tail-correction.md).
+
+
 **Latest user preference (2026-10-17; report63):** User says "A longer conventional reverb decay I recon would be helpful for most too." Prioritize **longer smooth natural conventional decays (B) for most private Sparse cue endings** in the next small v2 sample, not only S07-b. Keep a subtle reverb send present before the original dry fade; let it decay after source stop without the v1 wet jump/hold/second fade. Tune RT60 and sufficient render length per cue; do not treat 'most' as all or silently abandon optional freeze C. Preserve original user cut clocks and avoid re-rendering all24 before representative listening approval. See reports62–63.
 
 

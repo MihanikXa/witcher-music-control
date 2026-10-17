@@ -18,8 +18,9 @@ class Element {
 }
 const cards=manifest.cues.map(c=>{
  const selectors={};for(const s of ['audio','.variant','.play','.ending','.position','.verdict','.preferred','textarea'])selectors[s]=new Element();
- selectors.audio.src=c.renders.C.file;selectors.audio.duration=c.proof.output_seconds;
- selectors['.variant'].value='C';selectors['.preferred'].value='';selectors['.verdict'].value='Unreviewed';
+ const primary=manifest.primary_variant||'C';
+ selectors.audio.src=c.renders[primary].file;selectors.audio.duration=c.proof.output_seconds;
+ selectors['.variant'].value=primary;selectors['.preferred'].value='';selectors['.verdict'].value='Unreviewed';
  allAudio.push(selectors.audio,new Element());return {dataset:{cue:c.settings.cue},querySelector:s=>selectors[s]}
 });
 const ids={};for(const key of ['#json','#fallback','#status','#stop','#show','#export'])ids[key]=new Element();
@@ -28,6 +29,10 @@ const document={querySelectorAll:s=>s==='article'?cards:s==='audio'?allAudio:[],
 const context={document,localStorage:{getItem(){throw Error('storage deliberately disabled')},setItem(){throw Error('storage deliberately disabled')}},
  Blob,URL:{createObjectURL(b){const id='blob:offline-test-'+counter++;blobs.set(id,b);return id},revokeObjectURL(){}},setTimeout(){},Date,console};
 vm.createContext(context);vm.runInContext(script,context);
+if(manifest.primary_variant==='B'){
+ assert.equal((html.match(/<option value="B" selected>/g)||[]).length,manifest.cues.length);
+ for(const c of manifest.cues)assert.ok(html.includes('src="'+c.renders.B.file+'"'));
+}
 const card=cards[0],audio=card.querySelector('audio');card.querySelector('.play').onclick();assert.equal(audio.paused,false);
 if(cards.length>1){cards[1].querySelector('.play').onclick();assert.equal(audio.paused,true)}
 card.querySelector('.ending').onclick();assert.ok(audio.currentTime>=manifest.lead_silence);

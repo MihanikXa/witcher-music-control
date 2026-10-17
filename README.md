@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Current private audition (2026-10-17; report64):** Five-cue continuous-tail v2 is rendered at ignored `build/music-material-selection/cue-edits-v2/index.html`:12 new WAVs, B natural decay primary (RT60 4.5–7s), two longer B controls (9/10s), optional already-established-field freeze with immediate release, unchanged v1 comparisons. S04-b explicitly zeros crop-relative first3s then ramps350ms; cuts/endpoints unchanged.191 Python tests plus offline client/export checks pass; all34 v1 renders preserved. No subjective/real-browser playback claim. S04 endpoint already near silence, S12 tail quiet; listen rather than boost a late layer. User must approve these five before all24; no bank/game/trigger work. See [report64](research/64-continuous-reverb-tail-correction.md).
+
+
 **Latest audition refinement (2026-10-17; report63):** User requests longer, smoother conventional reverb decay for most sparse-cue endings, not only S07-b. Next experiment should compare a few revised continuously present reverb B tails; freeze C remains optional. Preserve original cuts and v1 samples; no game integration. See [report63](research/63-longer-natural-reverb-decay-preference.md).
 
 

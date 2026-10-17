@@ -145,3 +145,131 @@ def render_variants(source,settings,lead=2,trail=3):
         wet_fade_start_source_seconds=settings['source_in']+length+settings['hold_after_dry'],
         field_proof=field_proof,delay_samples=DELAYS.tolist(),matrix_orthogonality_error=float(np.max(np.abs(MATRIX@MATRIX.T-np.eye(16)))))
     return final,proof,dry,envelope
+
+
+def envelope_windows(audio, seconds=.05):
+    """Ungated stereo RMS; no peak normalization or assumption about musical dynamics."""
+    n=round(seconds*RATE)
+    return np.array([np.sqrt(np.mean(audio[a:a+n]**2)) for a in range(0,len(audio),n)])
+
+
+def release_diagnostics(audio, stop_seconds):
+    """Flag *post-source* envelope geometry. Musical evolution before stop is not a failure.
+
+    Modal fluctuations are expected: inspect 250ms RMS, only above -80dBFS,
+    sustained rebounds over 3dB and long, nearly flat windows. These are review
+    flags, not a musical-quality classifier. Internal energy is checked separately.
+    """
+    x=audio[round(stop_seconds*RATE):]
+    db=20*np.log10(np.maximum(envelope_windows(x,.25),1e-12))
+    rebound=0.;plateaus=[]
+    for i in range(len(db)-4):
+        if db[i]>-80:
+            rebound=max(rebound,float(np.mean(db[i+2:i+4])-db[i]))
+        if i+8<=len(db) and min(db[i:i+8])>-80:
+            slope=float(np.polyfit(np.arange(8)*.25,db[i:i+8],1)[0])
+            if np.ptp(db[i:i+8])<1.5 and abs(slope)<.5:plateaus.append(i*.25)
+    return dict(max_sustained_rebound_db=rebound,rebound_review=rebound>3,
+                plateau_window_starts=plateaus,post_stop_250ms_dbfs=db.tolist())
+
+
+def validate_wet_control(gain,stop,freeze):
+    """Test the processor's gain law, separately from legitimate musical dynamics."""
+    if not np.isfinite(gain).all() or len(gain)<=stop+RATE:raise ValueError('Invalid wet control')
+    if not np.array_equal(gain[:stop],np.ones(stop)):raise ValueError('Late wet attack/level change before source stop')
+    if not freeze:
+        if not np.array_equal(gain,np.ones(len(gain))):raise ValueError('Artificial conventional hold/fade')
+    else:
+        r=gain[stop:]
+        if r[0]!=1 or np.any(np.diff(r)>1e-12):raise ValueError('Wet release rebounds')
+        # Beyond smooth 150ms entry it must already fall, not wait for a later fade.
+        if np.any(np.diff(r[round(.2*RATE)::round(.05*RATE)])>=0):raise ValueError('Freeze release plateau')
+    return dict(no_late_wet_attack=True,no_wet_gain_rebound=True,no_post_stop_hold=True,
+                independent_secondary_fade=False)
+
+
+def finish_quiet_tail(raw):
+    """Only below -100dBFS peak may finite-file termination be safety-ramped."""
+    cleanup=round(.1*RATE)
+    if len(raw)<cleanup or not np.isfinite(raw).all():raise ValueError('Invalid cleanup signal')
+    peak=float(np.max(np.abs(raw[-cleanup:])))
+    if peak>1e-5:raise ValueError('Tail not silent enough for safety cleanup; extend actual render')
+    raw[-cleanup:]*=(1-ramp(cleanup))[:,None]
+    return peak
+
+
+def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=2, trail=3):
+    """V2: continuous post-fader send; natural decay or immediate single freeze release.
+
+    Kept separate from render_variants so accepted v1 files remain reproducible.
+    No late wet normalization, attack, hold, sidechain or perceptual auto-correction.
+    Freeze occurs at actual dry stop, not at the beginning of a changing phrase's fade.
+    """
+    if source.ndim!=2 or source.shape[1]!=2 or not np.isfinite(source).all():raise ValueError('Finite stereo required')
+    a,b=round(settings['source_in']*RATE),round(settings['source_out']*RATE)
+    if not 0<=a<b<=len(source):raise ValueError('Invalid source cut')
+    segment=source[a:b].copy();length=len(segment)/RATE
+    fs,fe=[v-settings['source_in'] for v in settings['dry_fade']]
+    env=dry_envelope(len(segment),RATE,settings['fade_in'],fs,fe)
+    onset=settings.get('onset_mute_seconds',0)
+    if onset:
+        n=round(onset*RATE);r=round(settings.get('onset_ramp_seconds',.35)*RATE)
+        if n+r>=round(fs*RATE):raise ValueError('Onset repair overlaps ending')
+        env[:n]=0;env[n:n+r]*=ramp(r)
+    dry=segment*env[:,None]
+    # Render at least 90dB of decay. Cleanup only below -100dBFS peak.
+    extra=max(10,rt60*1.65)
+    frames=len(dry)+round(extra*RATE)
+    padded=np.zeros((frames,2));padded[:len(dry)]=dry
+    hp,lp=settings['highpass_hz'],settings['lowpass_hz']
+    if not 80<=hp<lp<=8000:raise ValueError('Unsafe field bandwidth')
+    sos=np.concatenate([signal.butter(2,hp,'highpass',fs=RATE,output='sos'),
+                        signal.butter(2,lp,'lowpass',fs=RATE,output='sos')])
+    filtered=signal.sosfilt(sos,padded,axis=0)
+    field=Field(rt60)
+    # Both modes have exactly the same audible field before dry stop.
+    stop=round(fe*RATE)
+    before,_=field.process(filtered[:stop]);initial=field.energy()
+    drive=np.zeros_like(filtered[stop:]) if freeze else filtered[stop:]
+    after,trace=field.process(drive,freeze=freeze,transition=.15,ledger=True)
+    wet=np.concatenate([before,after])
+    calibration=slice(max(round((fs-4)*RATE),round((onset+1)*RATE)),round(fs*RATE))
+    if len(dry[calibration])<RATE//4:raise ValueError('Insufficient pre-fade calibration')
+    if wet_gain is None:
+        ref=np.sqrt(np.mean(dry[calibration]**2));wrms=np.sqrt(np.mean(wet[calibration]**2))
+        if min(ref,wrms)<1e-9:raise ValueError('Cannot calibrate empty field')
+        wet_gain=ref*10**(settings['continuous_wet_db']/20)/wrms
+    if not 0<wet_gain<4:raise ValueError('Unsafe send gain')
+    release=np.ones(frames)
+    if freeze:
+        # No plateau. Smooth log-gain release reaches exponential -60dB at RT60.
+        t=np.arange(frames-stop)/RATE;tau=.15
+        clock=t-tau*(1-np.exp(-t/tau))
+        release[stop:]=10**(-3*clock/rt60)
+    controls=validate_wet_control(release,stop,freeze)
+    wet*=wet_gain*release[:,None]
+    raw=padded+wet
+    quiet_peak=finish_quiet_tail(raw)
+    peak=float(np.max(np.abs(raw)))
+    if peak>.96:raise ValueError('Requires explicitly shared headroom reduction; do not normalize variants separately')
+    energy=[r['state_energy'] for r in trace if r['seconds']>.2]
+    if not energy or initial<1e-20:raise ValueError('Missing established reverb field')
+    drift=(max(energy)-min(energy))/max(energy)
+    if freeze and drift>1e-10:raise ValueError('Freeze state not stable')
+    if not freeze and energy[-1]>=initial*1e-8:raise ValueError('Natural decay insufficient')
+    win={k:envelope_windows(v).tolist() for k,v in [('dry',padded),('wet',wet),('combined',raw)]}
+    seam=float(np.max(np.abs(np.diff(raw[max(0,stop-128):stop+128],axis=0))))
+    proof=dict(source_start_frame=a,source_end_frame=b,dry_seconds=length,dry_stop_relative=fe,
+        rt60=rt60,freeze=freeze,freeze_relative=fe if freeze else None,wet_gain=float(wet_gain),
+        output_seconds=(frames/RATE+lead+trail),tail_extra=extra,onset_mute_seconds=onset,
+        wet_output_policy='constant gain throughout; no late entrance or hold',
+        release_policy='single immediate smooth exponential release' if freeze else 'unmodified natural RT60 decay',
+        cleanup_peak_dbfs=float(20*np.log10(max(quiet_peak,1e-12))),cleanup_seconds=.1,
+        dry_stop_max_sample_delta=seam,energy_trace=trace,initial_energy=initial,
+        settled_energy_relative_range=drift,windows_50ms=win,
+        wet_control_checks=controls,
+        entire_transition_geometry=release_diagnostics(raw,max(0,fs-1)),
+        release_diagnostics=release_diagnostics(raw,fe),
+        post_stop_first_second_dbfs=float(20*np.log10(max(np.sqrt(np.mean(raw[stop:stop+RATE]**2)),1e-12))))
+    components=dict(dry=padded,wet=wet,source_envelope=env)
+    return np.pad(raw,((round(lead*RATE),round(trail*RATE)),(0,0))),proof,components
