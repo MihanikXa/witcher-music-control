@@ -1,0 +1,1352 @@
+{
+  "archives": [
+    {
+      "archive": "reference\\inventory-qol\\junk-not-treasure\\archives\\JunkNotTreasure 14451 1.0.0 2026-10-16T12-53Z CvjFPsCYo.zip",
+      "sha256": "edcade7892f4bac92195bee72606fd13b5f487dd28c21f5ef004e7e063bbefb9",
+      "members": {
+        "bin/config/r4game/user_config_matrix/pc/JunkNotTreasure.xml": "d765a751f43f6a2781395ac7eefb76441d20d43fa5a2152805ddb0b8c20207a7",
+        "Mods/modJunkNotTreasure/content/ar.w3strings": "8faf230d8969d74a5565b83d63049b86fe5edc0b1a12b4b95a778913518d0b02",
+        "Mods/modJunkNotTreasure/content/br.w3strings": "b32f20d394991d7771519598ce069e00bdcffe75b4f04d4064de40afdae8dedb",
+        "Mods/modJunkNotTreasure/content/cn.w3strings": "6119bb329e9976969eb4f152edc3e0a0c96dabf1b4db4778a824098b303dd03f",
+        "Mods/modJunkNotTreasure/content/cz.w3strings": "f810f08e587e55c6024d40b32dedecc506078febe6b4fc90d878dcf5b624aab9",
+        "Mods/modJunkNotTreasure/content/de.w3strings": "03da8b739fda54ae765234ff0c852d7d6fce65e4440099624bb375e745035b5e",
+        "Mods/modJunkNotTreasure/content/en.w3strings": "8c6a9cfd49d0335ca49d479e1f133df2dad57161bca5b7cd93ae4fb18e8e9a9a",
+        "Mods/modJunkNotTreasure/content/es.w3strings": "70c392b02fd84c7e19cb9ca7df643d741776a52803e7d6470d5963631d6548da",
+        "Mods/modJunkNotTreasure/content/esmx.w3strings": "081572688fd9d9bdd4a5ee0042b911ff01cc5fd0b4319e82adf9125f4a83d8bf",
+        "Mods/modJunkNotTreasure/content/fr.w3strings": "8cc4b945bede434a46887688ab44c63c5c0a30190d0d6255317a03ea64d4e2e0",
+        "Mods/modJunkNotTreasure/content/hu.w3strings": "687503569e555a24666d959333b96af922c7c7ccd8b6928776a1c5b28c374d9b",
+        "Mods/modJunkNotTreasure/content/it.w3strings": "20f599181fa76598cc3f2fe9ef4428e45d1f6f70554d749ec607fbc093a11d6f",
+        "Mods/modJunkNotTreasure/content/jp.w3strings": "3c6996de78a1e9f2b92bc9b1f07794f4e49ec343c000f1ea05945f288ae55712",
+        "Mods/modJunkNotTreasure/content/kr.w3strings": "b0f21f496ef40cbe60406e2069c306c6d64f847501b977b5cdd2765f1ef4c9a0",
+        "Mods/modJunkNotTreasure/content/pl.w3strings": "45fa6ae52aecf129b3141e14472e45807617852a169f58de865ca74ac0a94085",
+        "Mods/modJunkNotTreasure/content/ru.w3strings": "ec37fc0613627c7cf90c981fc03f2cd137a9876440b59893c52a1ca9bbf08400",
+        "Mods/modJunkNotTreasure/content/tr.w3strings": "da8315027701e915f082998044b7b6209f798d322b9cbcf9a37e887ce4b1829e",
+        "Mods/modJunkNotTreasure/content/ua.w3strings": "f1f8673795b002df39780b1555d951765a11b5c7d3bb41efb38c7545080dff7b",
+        "Mods/modJunkNotTreasure/content/zh.w3strings": "c68ad22fbc7b7355a9498650ef8ea15c18868b764ecf6cbb3904499083327934",
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Blacksmith.ws": "447213c8103ce1e0421979ee6614dc8db50848a13758722a6d4ccd8ea370e97b",
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Inventory.ws": "343f2129f25d6c197959f6e95e435dd2e095052c060a6561d84fc619f688cd0e",
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Mark.ws": "7ded441e4016abcc68307d586d99ba51a4fe7b0425113a7b06b9aa50771a22df",
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Menu.ws": "0558db1d6b1a7a730327bf6f0ff50aee2aa7b3fbfe9f1b9d00ddae1994061b4b",
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Rules.ws": "37e81b7179d7fa69979d9565c33602f9a9716c182034bc41ff3c02b2443926cc",
+        "Mods/modJunkNotTreasure/content/scripts/local/JunkNotTreasure.ws": "88ccf0782beff471843b79bcdd4eb51d598496caeb124d7ab3009e97a5ab9981"
+      },
+      "scripts": {
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Blacksmith.ws": {
+          "sha256": "447213c8103ce1e0421979ee6614dc8db50848a13758722a6d4ccd8ea370e97b",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntBypassItem"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntAskPopup"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntAllPopup"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_SetBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_HasBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_ClearBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_AskQuantity"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_AskTotal"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_RefuseNoMoney"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_OpenAsk"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_VetoClick"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_AskConfirmed"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "OnRequestConfirmation"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "OnDisassembleItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "OnRemoveImprovements"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntActionPending"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "HandleActionConfirmation"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllItems"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllSkip"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllList"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllPrice"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_UpdateDismantleAllLabel"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "UpdateRepairAllInputFeedback"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntAllItems"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntAllCounts"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllAsk"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntPartNames"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4BlacksmithMenu",
+              "method": "jntPartCounts"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_CountPart"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleOne"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_PartsText"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllRun"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "JNT_DismantleAllDeclined"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "OnRepairAllItems"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4BlacksmithMenu",
+              "method": "OnClosingMenu"
+            }
+          ]
+        },
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Inventory.ws": {
+          "sha256": "343f2129f25d6c197959f6e95e435dd2e095052c060a6561d84fc619f688cd0e",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntBypassItem"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntBypassEntry"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntAskPopup"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntSellPopup"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntPlanItems"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntPlanCounts"
+            },
+            {
+              "kind": "addField",
+              "owner": "CR4InventoryMenu",
+              "method": "jntPlanShort"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SetBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_HasBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_ClearBypass"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_GameRefusesSale"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_GameRefusesDrop"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_IsDestroyedOnDrop"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SaleCount"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_OpenAsk"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_VetoEntry"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnSellItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SellItem"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_UnmarkSold"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SellAllHide"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SellAllUnhide"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SaleList"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SalePlan"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SalePlanRun"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnSellAllJunk"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_SellMarkedAsk"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnDropItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "DropItem"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_GivingToChest"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnTransferItem"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_AskSell"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "JNT_AskDrop"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnSelectInventoryItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnClosingMenu"
+            }
+          ]
+        },
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Mark.ws": {
+          "sha256": "7ded441e4016abcc68307d586d99ba51a4fe7b0425113a7b06b9aa50771a22df",
+          "annotations": [
+            {
+              "kind": "addMethod",
+              "owner": "W3InventoryItemContext",
+              "method": "JNT_MarkInventory"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3InventoryItemContext",
+              "method": "JNT_AddMarkButton"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3InventoryItemContext",
+              "method": "JNT_ToggleMark"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3InventoryItemContext",
+              "method": "HandleUserFeedback"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3InventoryGridContext",
+              "method": "updateInputFeedback"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3InventoryPaperdollContext",
+              "method": "updateInputFeedback"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3ExternalGridContext",
+              "method": "updateInputFeedback"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "JNT_MarkSlot"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "SetInventoryFlashObjectForItem"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3GuiPlayerInventoryComponent",
+              "method": "JNT_DimInShop"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3GuiPlayerInventoryComponent",
+              "method": "SetInventoryFlashObjectForItem"
+            }
+          ]
+        },
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Menu.ws": {
+          "sha256": "0558db1d6b1a7a730327bf6f0ff50aee2aa7b3fbfe9f1b9d00ddae1994061b4b",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4IngameMenu",
+              "method": "ShowDeveloperMode"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4IngameMenu",
+              "method": "OnPresetApplied"
+            }
+          ]
+        },
+        "Mods/modJunkNotTreasure/content/scripts/local/JNT_Rules.ws": {
+          "sha256": "37e81b7179d7fa69979d9565c33602f9a9716c182034bc41ff3c02b2443926cc",
+          "annotations": []
+        },
+        "Mods/modJunkNotTreasure/content/scripts/local/JunkNotTreasure.ws": {
+          "sha256": "88ccf0782beff471843b79bcdd4eb51d598496caeb124d7ab3009e97a5ab9981",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4IngameMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4Game",
+              "method": "OnGameStarting"
+            }
+          ]
+        }
+      },
+      "bundle_keys": {},
+      "metadata": {}
+    },
+    {
+      "archive": "reference\\inventory-qol\\recent-loot-tab\\archives\\RecentLootTab (5.01) 13981 1.0.0 2026-10-09T21-35Z ZqIodYbcK.zip",
+      "sha256": "ca7ef9f13e958544a94de0530c3dde9c5bdc7a201a2f3b488e8e5c0849cd3d5b",
+      "members": {
+        "bin/config/r4game/user_config_matrix/pc/recentloottab.xml": "55cbe27746da3e4d3f0fa050062c203a541e19345b56b5310189d93377296c52",
+        "mods/modRecentLootTab/LEIAME.md": "ef5a66184a25b33420ba9fc1bf5cb6745c67882e61f692548cbde9395eb35907",
+        "mods/modRecentLootTab/README.md": "10b12fe4a35b64dc573efc2c457f05ced27d912517a99e6c36cb84c030ad87b5",
+        "mods/modRecentLootTab/content/blob0.bundle": "4c2cb9160ac0cf6f3883b79e64f6058084bbb0f2c17b9c1480e90408c2d727d5",
+        "mods/modRecentLootTab/content/br.w3strings": "6a6bb656e225717b374edd617add55e3c58572e51a5aaac0dba77950d683e27f",
+        "mods/modRecentLootTab/content/cn.w3strings": "2a87faabf183c921e6d350b86901fc27c8c1e88b507b0fc2a0b757a29101df42",
+        "mods/modRecentLootTab/content/cz.w3strings": "a3e2680bfcc56cebbdc1e934e49525c753d5f49e0eb9fdb45329e0a306eeb707",
+        "mods/modRecentLootTab/content/de.w3strings": "f111954656388aa824ff1918a2778655e7e5942d3acc9962fea248d176de6ca7",
+        "mods/modRecentLootTab/content/en.w3strings": "59310cb189a8f8a9299be76c5daf28cdd9f1f7e89fc4e0fcb09ebb67e9610cdd",
+        "mods/modRecentLootTab/content/es.w3strings": "942afa332cd4313873cf53fe9adf258572e219368c221b3d67074a0cae542688",
+        "mods/modRecentLootTab/content/esmx.w3strings": "2a87faabf183c921e6d350b86901fc27c8c1e88b507b0fc2a0b757a29101df42",
+        "mods/modRecentLootTab/content/fr.w3strings": "57fec4003daabe8dde3dfb03a9a302d729b935b0e48d5d5cfff4ddade03deb3e",
+        "mods/modRecentLootTab/content/hu.w3strings": "44f0102d1157bacc00e7bd8e9e27805d88efaa7a653dc00fdd6b99ab20897400",
+        "mods/modRecentLootTab/content/it.w3strings": "0b9e234a0b7cc1b10d40227e1a7e11ad97b0953d8afe88466b78a0b909e2a4c9",
+        "mods/modRecentLootTab/content/jp.w3strings": "e0e42495538fe8bbfea16c7f5d7003ce4d666e48c2bd837600e6fd20fa7b994b",
+        "mods/modRecentLootTab/content/kr.w3strings": "2a87faabf183c921e6d350b86901fc27c8c1e88b507b0fc2a0b757a29101df42",
+        "mods/modRecentLootTab/content/metadata.store": "9e72658c1d41994c0c8068f3a53e72c06fe7261c991b3dfa5199b80471e4d048",
+        "mods/modRecentLootTab/content/pl.w3strings": "aa751cb47b243e1151787eb69622730ed6ddf34f43f359512d5a2081dab543ed",
+        "mods/modRecentLootTab/content/ru.w3strings": "f9407e88dec448490974dacb0e9500410c3e20bb6865f3c65ef1a3f25daf881d",
+        "mods/modRecentLootTab/content/tr.w3strings": "2a87faabf183c921e6d350b86901fc27c8c1e88b507b0fc2a0b757a29101df42",
+        "mods/modRecentLootTab/content/zh.w3strings": "d0b344b3b651e12a979a30699d8dca9b4074256ac51974fd3f138bf95ae11d58",
+        "mods/modRecentLootTab/content/scripts/local/modRecentLoot.ws": "050ff8fd6d46978f5224d82fe5138fae9d9d7e3eda1f0166e7bf0daf3e20e81b"
+      },
+      "scripts": {
+        "mods/modRecentLootTab/content/scripts/local/modRecentLoot.ws": {
+          "sha256": "050ff8fd6d46978f5224d82fe5138fae9d9d7e3eda1f0166e7bf0daf3e20e81b",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootIds"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootGains"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootSources"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootSourceNow"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootViewed"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootLastCtx"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootLastTime"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootPopupCtx"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootMenuCtx"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootCtxCounter"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootEntryVisible"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootPushSource"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootPopSource"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootCurrentCtx"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootNextCtx"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootClear"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootOnItemGiven"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootTrim"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootSyncArrays"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootPrune"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "RecentLootHasNew"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "OnItemGiven"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3Container",
+              "method": "TakeAllItems"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4HudModuleLootPopup",
+              "method": "OnPopupTakeItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4HudModuleLootPopup",
+              "method": "OnPopupTakeAllItems"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "TakeItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "BuyItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3HorseManager",
+              "method": "MoveItemFromHorse"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3HorseManager",
+              "method": "UnequipItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4LootPopup",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4LootPopup",
+              "method": "OnClosingPopup"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CommonMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CommonMenu",
+              "method": "OnClosingMenu"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootShowInTab"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootPopulate"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootJumpTarget"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootSendNewFlag"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "PopulateTabData"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "getTabFromFilter"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "InventoryUpdateItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "InventoryUpdateItems"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnMoveItem"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnMoveItems"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SetInitialTabNewFlags"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SetTabNewFlags"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnClosingMenu"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootJumpTag"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootJumpTries"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CPlayer",
+              "method": "RecentLootSetGlossaryPage"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CommonMenu",
+              "method": "RecentLootOpenSubMenu"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnRecentLootJumpSpecial"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4MenuBase",
+              "method": "RecentLootApplyJump"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4MenuBase",
+              "method": "RecentLootOnEntrySelected"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "OnEntrySelected"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "OnEntrySelected"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootSendTestGroups"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootRecipeNotCrafted"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootTestPick"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnRecentLootTestAdd"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnRecentLootRandomAdd"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootRandomUi"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootSendRandomEnabled"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootGwentCard"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootOpenGwentCard"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4DeckBuilderMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootSendLabels"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnRecentLootClear"
+            },
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "recentLootTestUi"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "RecentLootSendEnabled"
+            }
+          ]
+        }
+      },
+      "bundle_keys": {
+        "mods\\modRecentLootTab\\content\\blob0.bundle": [
+          "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+          "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+          "gameplay/gui_new/swf/gwint/deck_builder.redswf",
+          "gameplay/gui_new/swf/inventory/panel_inventory.redswf"
+        ]
+      },
+      "metadata": {}
+    },
+    {
+      "archive": "reference\\inventory-qol\\sort-everything\\archives\\Sort Everything 1710 1.55 2026-10-17T06-57Z iNpQhXiL0.zip",
+      "sha256": "3dde41c51805622f268d281fa7d515f23739843b020fbb67f458190280c6e1f3",
+      "members": {
+        "bin/config/r4game/user_config_matrix/pc/modSortEverything.xml": "73d6afbf85e22190b893b17f9a774f906f1d5e1b7a83c89f17c36f6be53500aa",
+        "dx12user.settings.part.txt": "20447e2ee22edb3cf798a4252a59eeea2c59ce3f8cea38f777489d5c61d8e734",
+        "mods/modSortEverything/content/ar.w3strings": "a16de6f1d5b94bc57155549fe60a432d86dced1829c6261f5a0a73562e4864a0",
+        "mods/modSortEverything/content/blob0.bundle": "d22ae8b36a219782f603953de40f51bb12f3eb76b0440f4ff35e3471af3f5dab",
+        "mods/modSortEverything/content/br.w3strings": "7792759caa852878633d7df13ad6c73d6c1f3ea4510c004140357901030ab628",
+        "mods/modSortEverything/content/cn.w3strings": "8d46ac1ce871f3f88988788d237ddcc85284a5fe9a3f5101a692f3dea330983e",
+        "mods/modSortEverything/content/cz.w3strings": "620d08848224857435d71ac89335367db261d0d20e8ccbd856796b82df13e72a",
+        "mods/modSortEverything/content/de.w3strings": "9a8ebb13918de2488ef8c7a1faf6358bd231643a9452a2c07a1f62004cd21957",
+        "mods/modSortEverything/content/en.w3strings": "7d1332745a4d3be3f665a5783a52aae9300e9dfd5dd7e27838acfb788c1cbbfb",
+        "mods/modSortEverything/content/es.w3strings": "18ec52d12e5c83b2eebfabb95a4a1256a52c869c6cd058395992b8372a5dd9df",
+        "mods/modSortEverything/content/esMX.w3strings": "56ba7b896a12c6fe7c905a4c16103d641e9118b8cd935c7cfc48997fa4af45e1",
+        "mods/modSortEverything/content/fr.w3strings": "1ec5cc2a674fbff07ce1370766034f76005bd31b4dcbb45ac64efd38e1265176",
+        "mods/modSortEverything/content/hu.w3strings": "8c41730090c958f41dc439a7e18123bed7224dc20210171dae5fcd8f7085ec9d",
+        "mods/modSortEverything/content/info.json": "8eda6526881623f2da85637966a67cda056a745c679fdaaae441964a628b9340",
+        "mods/modSortEverything/content/it.w3strings": "57688c8d90e785f6f8a9a6b36cef041ed4a97d2f51a4dafd9d61eba73bf4481b",
+        "mods/modSortEverything/content/jp.w3strings": "c9b01007cf0250e70826934cc07eafd7c7616f9077e01ce6c629393efcb612d6",
+        "mods/modSortEverything/content/kr.w3strings": "4ddf0fe8c5aca69a4df882971240cea558a88c6a189cb9b8495e1d3e95b0018d",
+        "mods/modSortEverything/content/metadata.store": "23d6529baf756de77be5ea7a0aa8646059508f05c0092371b9e0ad3024d13efe",
+        "mods/modSortEverything/content/pl.w3strings": "149424e63c02dd1fa1fe9386aa34e1a2455bb3359bf446fc5da9150d97f0dfd0",
+        "mods/modSortEverything/content/precompiled.rsblob": "978666f71cd97b837cfa3e52557c3477997368175014b4edfd884e64bff01913",
+        "mods/modSortEverything/content/ru.w3strings": "b0711d85eabd7a32d5776d69ef3f4c994879316d3fec7e0ce34222065c9a734d",
+        "mods/modSortEverything/content/scripts/local/sort_everything/alchemy_annotations.ws": "0d0b3c01f98ffabe94ac904e60a0062dc1635d7c04b4083c01f8c611ac778e13",
+        "mods/modSortEverything/content/scripts/local/sort_everything/config.ws": "38c73bee6c0739a45f42d10011af5b53361c8f50b3a25f7b18f00fd789fb9183",
+        "mods/modSortEverything/content/scripts/local/sort_everything/craftable_tracking.ws": "f0162a39f948bf3d0cf00a16c63a4c9b3cd651af238cec524f0d2ed150783a13",
+        "mods/modSortEverything/content/scripts/local/sort_everything/crafting_annotations.ws": "94e1444656228db0d2d6a14a12282cd01461ba649ce38826d25718d8cefb3e78",
+        "mods/modSortEverything/content/scripts/local/sort_everything/crafting_filters.ws": "d4b0880e2768afaf72703d935e089e101d010bef316798d3c82d74162d2845c7",
+        "mods/modSortEverything/content/scripts/local/sort_everything/glossary_annotations.ws": "62e5cb23d58ea8d73ecb80b2bfe8c2989fc669901ac91ca930de45c682b30c81",
+        "mods/modSortEverything/content/scripts/local/sort_everything/inventory_annotations.ws": "60b89f78e00c4e987d998810d5e9f5725cb4386af6f46bce73afe72a85c7336c",
+        "mods/modSortEverything/content/scripts/local/sort_everything/inventory_sorting.ws": "a2218a43d4c9cc957bda01f0441b5430ffaf41f9d86b8527b0128d039f0517c1",
+        "mods/modSortEverything/content/scripts/local/sort_everything/item_selection_annotations.ws": "ab0d88360fc7d8af8ddee15ffcf3c625309f4a2b798632d940fd6c43a732cff3",
+        "mods/modSortEverything/content/scripts/local/sort_everything/journal_annotations.ws": "25b9da56533c1e0ba2851e9b8213471f20f096191e17e12ec572d7147f26b230",
+        "mods/modSortEverything/content/scripts/local/sort_everything/recipe_metadata.ws": "781a2f4c897cff640c3d7472c3237c325e91cbd84790b7d5ddd06e6c7976dc60",
+        "mods/modSortEverything/content/scripts/local/sort_everything/stash_annotations.ws": "c891cb80719b8d70ac04c770abb22682275a50f8b4f7f96e0d23e282242751c4",
+        "mods/modSortEverything/content/tr.w3strings": "e928c75997bc4b399976e065e3e86f986a89c196722dc8bd7b33f38f6ea761c7",
+        "mods/modSortEverything/content/ua.w3strings": "dd105153acf92478ca359c1814f7bcc85412d010332cde7dcc79a8b9e6749080",
+        "mods/modSortEverything/content/zh.w3strings": "2b6c5e5b5822468a34430b05ee84cdf58d93d2b712ec3ace36a488fa5ee733b4"
+      },
+      "scripts": {
+        "mods/modSortEverything/content/scripts/local/sort_everything/alchemy_annotations.ws": {
+          "sha256": "0d0b3c01f98ffabe94ac904e60a0062dc1635d7c04b4083c01f8c611ac778e13",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "PopulateData"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "SE_MetadataHeader"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "SE_PublishMetadata"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "OnChangePinnedRecipe"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4AlchemyMenu",
+              "method": "ShowSelectedItemInfo"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/config.ws": {
+          "sha256": "38c73bee6c0739a45f42d10011af5b53361c8f50b3a25f7b18f00fd789fb9183",
+          "annotations": []
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/craftable_tracking.ws": {
+          "sha256": "f0162a39f948bf3d0cf00a16c63a4c9b3cd651af238cec524f0d2ed150783a13",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_newCraftables"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_IsCraftableNew"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_MarkCraftableSeen"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "AddAlchemyRecipe"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "AddCraftingSchematic"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/crafting_annotations.ws": {
+          "sha256": "94e1444656228db0d2d6a14a12282cd01461ba649ce38826d25718d8cefb3e78",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "PopulateData"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "SE_MetadataHeader"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "SE_PublishMetadata"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "OnChangePinnedRecipe"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "ShowSelectedItemInfo"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/crafting_filters.ws": {
+          "sha256": "d4b0880e2768afaf72703d935e089e101d010bef316798d3c82d74162d2845c7",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_craftingExcludedTypes"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_GetCraftingExcludedTypes"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3PlayerWitcher",
+              "method": "SE_SetCraftingExcludedTypes"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "OnSE_CraftingTypeFiltersChanged"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "OnSE_EmptyCraftingFilterGroup"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4CraftingMenu",
+              "method": "SE_PublishCraftingFilters"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/glossary_annotations.ws": {
+          "sha256": "62e5cb23d58ea8d73ecb80b2bfe8c2989fc669901ac91ca930de45c682b30c81",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4GlossaryBooksMenu",
+              "method": "PopulateListData"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4GlossaryEncyclopediaMenu",
+              "method": "AddCharacterJournalEntryToArray"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4ListBaseMenu",
+              "method": "OnEntryRead"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/inventory_annotations.ws": {
+          "sha256": "60b89f78e00c4e987d998810d5e9f5725cb4386af6f46bce73afe72a85c7336c",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "OnConfigUI"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SetInitialTabNewFlags"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "PopulateTabData"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SetTabNewFlags"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "PopulateDataForTab"
+            },
+            {
+              "kind": "wrapMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "SetInventoryFlashObjectForItem"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "SE_SendDamageArmorContext"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "SE_SetPrimaryStatSortData"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/inventory_sorting.ws": {
+          "sha256": "a2218a43d4c9cc957bda01f0441b5430ffaf41f9d86b8527b0128d039f0517c1",
+          "annotations": []
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/item_selection_annotations.ws": {
+          "sha256": "ab0d88360fc7d8af8ddee15ffcf3c625309f4a2b798632d940fd6c43a732cff3",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "GetInventoryFlashArray"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/journal_annotations.ws": {
+          "sha256": "25b9da56533c1e0ba2851e9b8213471f20f096191e17e12ec572d7147f26b230",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4JournalQuestMenu",
+              "method": "generateFlashObjectForQuest"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/recipe_metadata.ws": {
+          "sha256": "781a2f4c897cff640c3d7472c3237c325e91cbd84790b7d5ddd06e6c7976dc60",
+          "annotations": [
+            {
+              "kind": "addField",
+              "owner": "CR4GuiManager",
+              "method": "SE_recipeMetadataRevision"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "CR4GuiManager",
+              "method": "SE_NextRecipeMetadataRevision"
+            }
+          ]
+        },
+        "mods/modSortEverything/content/scripts/local/sort_everything/stash_annotations.ws": {
+          "sha256": "c891cb80719b8d70ac04c770abb22682275a50f8b4f7f96e0d23e282242751c4",
+          "annotations": [
+            {
+              "kind": "wrapMethod",
+              "owner": "CR4InventoryMenu",
+              "method": "UpdateHorseInventory"
+            },
+            {
+              "kind": "addMethod",
+              "owner": "W3GuiBaseInventoryComponent",
+              "method": "SE_SetStashSortData"
+            }
+          ]
+        }
+      },
+      "bundle_keys": {
+        "mods\\modSortEverything\\content\\blob0.bundle": [
+          "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+          "gameplay/gui_new/swf/alchemy/panel_alchemy.swf",
+          "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+          "gameplay/gui_new/swf/crafting/panel_crafting.swf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.swf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_books.swf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+          "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.swf",
+          "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+          "gameplay/gui_new/swf/inventory/panel_inventory.swf",
+          "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+          "gameplay/gui_new/swf/journal/panel_journal_quests.swf"
+        ]
+      },
+      "metadata": {
+        "mods/modSortEverything/content/info.json": {
+          "name": "modsorteverything",
+          "modName": "Sort Everything",
+          "version": "1.55",
+          "gameVersion": "29",
+          "description": "Adds various sorting options to alchemy, crafting, journal, inventory, stash and a few glossary menus.",
+          "author": "",
+          "idSpace": 10000000,
+          "workshopId": 0,
+          "succesfullyCooked": true,
+          "dependencies": [],
+          "useLooseScripts": false
+        }
+      }
+    }
+  ],
+  "installed": {
+    "modFriendlyHUD": {
+      "settings": {
+        "enabled": "1",
+        "priority": "23",
+        "vk": "FriendlyHUDModFiles 13130 0.9.2R 2026-10-04T18-44Z VZrvTcgkm"
+      },
+      "scripts": {
+        "content\\scripts\\debug\\fhuddebug.ws": "48b4f58bcf398dd2ef8a1ad550c45dbf9df1d298aa95c350d8bb68516d9f906d",
+        "content\\scripts\\fhudconfig\\modFriendlyHUDConfig.ws": "65e5dd24bcd574e654f71d1b66fe98bf5282ae88311d42fde835c72ff3d1fe2d",
+        "content\\scripts\\fhudscripts\\modHUDToggles.ws": "7e2275e9074fea4f71cb3b85fc1c2e8efe0f69aa1a1caadb1589f0ce91ba52ad",
+        "content\\scripts\\fhudscripts\\modMainMenu.ws": "2b00502131e50e058f77b992c836a18cd5592196990e6b2c762c02d976174ccf",
+        "content\\scripts\\fhudscripts\\modMarkers.ws": "86b36aba769247c7d0013e2d179adcc2d4cabc82638d18dcb5b4e14c7127105b",
+        "content\\scripts\\fhudscripts\\modRadialMenuPotions.ws": "de3bcffb7bfe708223bf5916bfa56325ee529e81174d6493247e58a97387466e",
+        "content\\scripts\\game\\r4Game.ws": "deca2aadfe222cdb654384862f02bb7bbfbbc341c4b2f1dea565b5fd25df3e03",
+        "content\\scripts\\helpers\\addInputFunc.ws": "fc4436c6522ab4d7afaa7dd86c41ed4402dd7c6b9b0b83fad4ebc2a0e84f8c19",
+        "content\\scripts\\helpers\\addStrFunc.ws": "73b34107b9b1d8f6474980df16b637b6c2c8eb158fb7de88aa47c880aff67efe",
+        "content\\scripts\\game\\components\\inventoryComponent.ws": "0694750315cb8d000f9adb4ffa0d84ee0f55462fb99e58ba7ede38a332e84867",
+        "content\\scripts\\game\\player\\playerInput.ws": "bbebe550ad552e76aebc2ffd7478bed1e527500046f8b7f8f413503013d0a480",
+        "content\\scripts\\game\\player\\playerWeaponHolster.ws": "454f53e853b5ea87f937e62046b123a088d742f4737610dd5067ec785bcd8418",
+        "content\\scripts\\game\\player\\playerWitcher.ws": "f762a25c9110726e81c2cc3b33a10f9839f1e516465fa5d09c4d8455f637992d",
+        "content\\scripts\\game\\player\\r4Player.ws": "37ef326c5b2d582386875a48ad86fbc6d56e4df27a4452a014243a8067a93075",
+        "content\\scripts\\game\\gui\\hud\\hud.ws": "1c808f94320f1c8768b57d7b842c29e03516cffd3ec4869a88bfc6b111fa18c3",
+        "content\\scripts\\game\\gui\\main_menu\\ingameMenu.ws": "ee6cf9fb92532f5dc5f97f7a270b4a687cf1471ce59b632ef728d136f2ae1f44",
+        "content\\scripts\\game\\gui\\menus\\alchemyMenu.ws": "43322fa5b628cf1147d5c54be837a66a8d61ade1a5f38d6cd1f4e10e78cf83c9",
+        "content\\scripts\\game\\gui\\menus\\craftingMenu.ws": "03664f349d4c9aeb87f04c9a83c9a735c30ee516c74cfb665550a3410b40ed81",
+        "content\\scripts\\game\\gui\\menus\\inventoryMenu.ws": "bf39b8b8492af880e2d6ea54c4978d41933264ec00dc43dc62ed1b7af9cceda2",
+        "content\\scripts\\game\\gui\\menus\\mapMenu.ws": "01d94d76503db486c5b462aae262949261ec7e8156963c93e740cb70dd212335",
+        "content\\scripts\\game\\gui\\_old\\components\\guiTooltipComponent.ws": "d10293bd6b806047447e6bc82e345f0d32503e59ed2666b49080eaa1283ef803",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleBase.ws": "5b4735213dbdb7d31244bf35dbb252b247562afbd70c22f3c7671bd768869ac5",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleBuffs.ws": "9d32b748314a3a20b55d9262ee8c789d59f7a35612b72f8047f2400bfc9b04e6",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleCompanion.ws": "b2f06666fb782ebc940ee3b3b9f3ddd56ab0a0abe11085181faa5b5500eac013",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleControlsFeedback.ws": "8630097fee2d9a807db3bcf2c1f38a7138d9f4bd5b3b21d8ba09885bb499b040",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleDamagedItems.ws": "562216c0028c0d87bea05a3b6aa7895d1d5ad9fa57ab6aeb070a06bc8f3d4551",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleEnemyFocus.ws": "afcaea5ca80ee53b119a67190ae5af1c7c8f4b48521be3321088d89eeac23200",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleInteractions.ws": "030abacdf99db978c32cb0bc12f704df5bc69d151ed0b4de25dacbfc1ae93693",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleItemInfo.ws": "0ed3a76b32524c8046a0e53b7dc53c50abc0bac0261fc499a09f3b74f57446f3",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleJournalUpdate.ws": "e1e1d6b9b12e3149aca5ad60f61bb7f5671c4c8e494aa46b684835a77814e226",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleMinimap2.ws": "dbaab08dd7791b2a91d37b8d869133ded94875420c0af0e8d8ebda677970e976",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleOneliners.ws": "e6667b4a46cd2134ca9c350d7433d383c2ceef10c86c8529a95eb09b881bbe38",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleQuests.ws": "5dea85d7a200632c1f8dfae76a211b83f40b7604658c55ef027e80dcf04f1fa6",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleRadialMenu.ws": "cccf0354d3b43e85fd3cc22ff72b183d1be89642a796691a97013ecf26aa9544",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleWolfHead.ws": "fe782a50905dd1a64050e09315f4261b66c7114d1124afb90520a99da613cb3a",
+        "content\\scripts\\game\\gameplay\\focus\\focus.ws": "10f4491b999c5a7efbb1c2c0fc1727ce4a2767585229f23f74781ac5bfd5e7c5",
+        "content\\scripts\\game\\gameplay\\effects\\effects\\potion\\Cat.ws": "17a134b02424ce433ebd95feb08104cfd051d8f8a2294b1ba80eb2fe184c9509"
+      }
+    },
+    "modAutoLoot": {
+      "settings": {
+        "enabled": "1",
+        "priority": "44",
+        "vk": "01-brawler-only-core"
+      },
+      "scripts": {
+        "content\\scripts\\local\\modAutoLootConfig.ws": "7a6fc99214eb6f7ea460dfd5f8ca560ee39e7eda32c7a885428e48dcdde8b656",
+        "content\\scripts\\local\\modAutoLootLoc.ws": "b02fb61244c7f9843dd5c3ac3c8818612f8da4312c024136dd5ad6ec0acc7a42",
+        "content\\scripts\\local\\modAutoLootManager.ws": "56b46b3cec74cbd63ea50957dcef28c536ad4a6cee1b8449b3562a2556dd24c9",
+        "content\\scripts\\local\\modAutoLootMenuWrapper.ws": "4677dbfd1d1aec6ba0b61a7cadfb4298a1f60c643eab76cd7874e0189c802066",
+        "content\\scripts\\game\\player\\playerWitcher.ws": "819e711f51554118405b846140439ce1d205d9f0f09962912657a2111538d460",
+        "content\\scripts\\game\\gui\\popups\\LootPopup.ws": "3d298f6bc91c30b62184e0ab0b81634087770d457950de418c4cc10479ee8710",
+        "content\\scripts\\game\\gui\\hud\\modules\\hudModuleLootFeed.ws": "72005f74ff18c7f3f508597c889d1776b651c90b800f9bdc9e5e55fcbfa81777",
+        "content\\scripts\\game\\gameplay\\containers\\container.ws": "f7d8423d7c0af917ca98d0ad9b3c7c7be4ea916eef3488adc4589f01719646f2"
+      }
+    },
+    "modHoods": {
+      "settings": {
+        "enabled": "1",
+        "priority": "15",
+        "vk": "Hoods 4242 3.6 2026-09-29T09-29Z GpMW8t9gL"
+      },
+      "scripts": {
+        "content\\scripts\\local\\customDyeing.ws": "99a1325774ad97ad468f647443ac859c3b06898a98b9d1f6b78381580adebba9",
+        "content\\scripts\\local\\mod__hoods_Annotations.ws": "0012b6e4e4e61fc60281cefd44e78441f4a7f2ef8fdd41a3844aa52fbdfa5c55",
+        "content\\scripts\\local\\mod__hoods_Keybind.ws": "04a72d839e52900a56d32d8c9ad98ba6e0c87523a5578ac7492a3e39e929d0b8",
+        "content\\scripts\\local\\mod__hoods_Main.ws": "e7f2bb1709441ae7e52822cfcf77b3efff36ee433205726a096e8281e703996d"
+      }
+    },
+    "modInkIronMenus087": {
+      "settings": {
+        "enabled": "1",
+        "priority": "13",
+        "vk": "Ink-Iron-0.8.7-Menus-v4-Typography-Finishing-private-test"
+      },
+      "scripts": {
+        "content\\scripts\\local\\inkironui_bgart.ws": "fd9ffcd8b0a07397109078de6c29de6f64273c98dad620ba4ec4a78c6210d261",
+        "content\\scripts\\local\\inkironui_character.ws": "4ee373a947610617b10bb2d6b46bc75574e595cc1686cc72dca264962c0d7248",
+        "content\\scripts\\local\\inkironui_charlayout.ws": "ac9cb28c4d75c39c0712c447e12f850444fef474147b2a7c8aa5f3d9ef2f1dea",
+        "content\\scripts\\local\\inkironui_equipfirst.ws": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+        "content\\scripts\\local\\inkironui_inventory.ws": "061739ae9d7e6334a314ecaed59aa394fe5066c6ccb38b08b4e78965c83dae46",
+        "content\\scripts\\local\\inkironui_invheader.ws": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+        "content\\scripts\\local\\inkironui_loot.ws": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+        "content\\scripts\\local\\inkironui_map.ws": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+        "content\\scripts\\local\\inkironui_menuinfo.ws": "02ab85724cc0999c87a6231d6b0d330ffd2700545a29fc6c222d605265bb2ed3",
+        "content\\scripts\\local\\inkironui_questlevel.ws": "24087ad393929392b9a471ea6e6cec7166941f576d71ed09f0b41d84f0402bae",
+        "content\\scripts\\local\\inkironui_rarity.ws": "d4ae049fdd53207a824e43c36a164e7afd14f2239170cfe009633a3e3d657961",
+        "content\\scripts\\local\\inkironui_saveload.ws": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+        "content\\scripts\\local\\inkironui_shop.ws": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6"
+      }
+    },
+    "modInkIronHUDRefinementV4": {
+      "settings": {
+        "enabled": "1",
+        "priority": "35",
+        "vk": "Ink-Iron-HUD-v4-Hotfix-RC2-footer-private-test"
+      },
+      "scripts": {
+        "content\\scripts\\local\\inkIronGear.ws": "04aa78114fe43d8200ef6557ce86a40f57263680b6fca49e615184ee1e7cd1a0",
+        "content\\scripts\\local\\inkIronHorse.ws": "b32737dbdc0fc8adead8bea663178d3d4a6cf6be08da590b543bb3e1417b7574",
+        "content\\scripts\\local\\inkIronHudScale.ws": "0b13c38573b9b83e7d5b57cf066b2847bb6936249b6dbba0dd4c59bf609c7bec",
+        "content\\scripts\\local\\inkIronHUDStateBridge.ws": "9665430025f6558f4d2d97832d137ae69797d7b0a4419617a1c17d29de01fbf2",
+        "content\\scripts\\local\\inkIronMinimapClock.ws": "7059b50d1826602a92b467fa15abe1a69f80bcebf75d7ddde95f1baefc8fd3f2",
+        "content\\scripts\\local\\inkIronNpcPlate.ws": "ba874e9c56f8f95c9941b24fbd7b580cab56e6d11ac1aca471f1199180be0abb",
+        "content\\scripts\\local\\inkIronQuest.ws": "46e324ac6fbcbf11737a7ece5593c5f4e24021af3fd8c95dd619313887fd9f78",
+        "content\\scripts\\local\\inkIronRadialSigns.ws": "c0e89c94f45f95e8961aaa18efeca7266b0ca11ac2565b5110faaaf3e6fa8582"
+      }
+    },
+    "modsmoothmap": {
+      "settings": {
+        "enabled": "1",
+        "priority": "24",
+        "vk": "Smooth Map 13530 0.9 2026-10-04T22-40Z sedaZoQFL"
+      },
+      "scripts": {}
+    }
+  },
+  "autoloot_saved_options": {
+    "radiusherbs": "3",
+    "passiveherbs": "true",
+    "theftmode": "1",
+    "autolootradius": "3",
+    "autolootmode": "2",
+    "radiuscorpses": "3"
+  },
+  "merged_inventory_sha256": "c80f8529475d224087d239ed146c1c65ae9fc528c39607e752ec60338ad66c32",
+  "no_installation_or_runtime_test": true
+}

@@ -1,0 +1,47 @@
+      protected var qfAdaptiveDetailOn:Boolean = false;
+      public function qfAdaptiveDetails(on:Boolean) : void
+      {
+         if(this.qfAdaptiveDetailOn == on) return;
+         this.qfAdaptiveDetailOn = on;
+         iaiEqCard = iaiScrOn = on;
+         iaiPopOn = !on;
+         if(!on) this.iaiScrOff();
+         // Existing Equipment First scrolling engine; no replacement stat layout.
+         this.populateData();
+         this.invalidatePosition();
+         this.validateNow();
+      }
+      // Read-only projection of the real native tooltip payload. No item score.
+      public function qfAdaptiveSummary() : Array
+      {
+         if(!_data) return [];
+         var rows:Array = [String(_data.ItemName || "")];
+         var eq:Object = _data.equippedItemData;
+         var primary:String = this.iaiCmpPlain(_data.PrimaryStatLabel) + "  " + this.iaiCmpPrim(_data);
+         if(eq && this.iaiCmpPrim(eq) != "")
+            primary += "    /    " + this.iaiCmpPrim(eq) + " equipped";
+         if(_data.PrimaryStatDiffStr) primary += "   " + String(_data.PrimaryStatDiffStr);
+         rows.push(primary);
+         var restriction:String = _data.RequiredLevel ? this.iaiCmpPlain(_data.RequiredLevel) : "";
+         if(_data.WarningMessage) restriction += "  " + this.iaiCmpPlain(_data.WarningMessage);
+         if(_data.SocketsList is Array)
+         {
+            restriction += "    Sockets " + _data.SocketsList.length;
+            if(eq && eq.SocketsList is Array) restriction += " / " + eq.SocketsList.length + " equipped";
+         }
+         rows.push(restriction);
+         var list:Array = _data.StatsList as Array;
+         var other:Array = eq ? eq.StatsList as Array : null;
+         var shown:int = 0;
+         for each(var stat:Object in list)
+         {
+            if(!stat || !stat.name || shown >= 3) continue;
+            var line:String = this.iaiCmpPlain(stat.name) + "  " + String(stat.value || "");
+            for each(var equipped:Object in other)
+               if(equipped && equipped.id == stat.id)
+               { line += "    /    " + this.iaiCmpPlain(equipped.value) + " equipped"; break; }
+            rows.push(line);
+            shown++;
+         }
+         return rows;
+      }

@@ -2,6 +2,14 @@
 
 Status: proposal for user review, not code deployed or runtime certified. Work only on ui-overhaul, preserve the accepted 0.8.7 Menus v4, Gentium/Item Art/Bestiary/Map and HUD RC2.
 
+**17 October implementation update:** [Gear Prototype 1](../research/adaptive-inventory-v2-gear-p1.md)
+is implemented and privately packaged on the accepted v4 Inventory. Final native
+cook/validate/pack/metadata and 16 targeted offline tests pass; in-game acceptance
+and manual installation remain pending. [QoL source findings/adoption matrix](../research/adaptive-inventory-v2-qol.md)
+cover all three supplied archives and current FriendlyHUD/AutoLoot. No optional
+runtime mod was integrated. After Gear acceptance, prioritize adaptive
+Usables/Satchel before acquisition-aware Review or safe bulk cleanup.
+
 ## Guiding principle
 Items that require no decision should generate no management task. Separate native item/action state, custom display/focus, and optional third-party filtering/cleanup. One Inventory screen, no persistent three-column details dashboard.
 

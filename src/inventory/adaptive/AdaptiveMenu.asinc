@@ -1,0 +1,210 @@
+      protected var qfGearOn:Boolean = false;
+      protected var qfAdaptiveActive:Boolean = false;
+      protected var qfAdaptiveAux:Boolean = false;
+      protected var qfAdaptiveInspect:Boolean = false;
+      protected var qfAdaptiveBase:Object;
+      protected var qfAdaptiveSummary:Sprite;
+      protected var qfAdaptiveFields:Array = [];
+      protected var qfAdaptiveActions:Sprite;
+      protected var qfAdaptiveHeld:Object = {};
+      protected var qfAdaptiveTip:TooltipInventory;
+
+      public function qfGearEnabled(on:Boolean) : void
+      {
+         this.qfGearOn = on;
+         if(this.mcPlayerInventory) this.mcPlayerInventory.qfAdaptivePlayer = on;
+         if(!on) this.qfAdaptiveRestore();
+      }
+      protected function qfAdaptiveText(parent:Sprite, value:String, x0:Number, y0:Number, w:Number, size:Number) : TextField
+      {
+         var f:TextField = new TextField();
+         f.embedFonts = true; f.selectable = false; f.mouseEnabled = false;
+         f.defaultTextFormat = new TextFormat("$NormalFont",size,0xCFC5AE);
+         f.x = x0; f.y = y0; f.width = w; f.height = size + 12;
+         f.text = value; parent.addChild(f); return f;
+      }
+      protected function qfAdaptiveButton(label:String, x0:Number, inspect:Boolean) : void
+      {
+         var button:Sprite = new Sprite();
+         button.x = x0; button.y = 992;
+         button.graphics.beginFill(0x141510,0.7); button.graphics.drawRoundRect(0,0,270,38,4); button.graphics.endFill();
+         button.buttonMode = true;
+         this.qfAdaptiveText(button,label,12,5,252,17);
+         if(inspect) button.addEventListener(MouseEvent.CLICK,this.qfAdaptiveInspectClick,false,0,true);
+         else button.addEventListener(MouseEvent.CLICK,this.qfAdaptiveAuxClick,false,0,true);
+         this.qfAdaptiveActions.addChild(button);
+      }
+      protected function qfAdaptiveInspectClick(e:MouseEvent) : void { this.qfAdaptiveToggleInspect(); }
+      protected function qfAdaptiveAuxClick(e:MouseEvent) : void { this.qfAdaptiveToggleAux(); }
+      protected function qfAdaptiveToggleInspect() : void
+      {
+         if(!this.qfAdaptiveActive || this.qfAdaptiveAux || !this.qfAdaptiveTip || SlotsTransferManager.getInstance().isDragging() || this.mcSelectionMode.isActive()) return;
+         this.qfAdaptiveInspect = !this.qfAdaptiveInspect;
+         // Keep the same native module, selected ID and scroll position.
+         this.mcPlayerInventory.enabled = !this.qfAdaptiveInspect;
+         this.mcPlayerInventory._inputEnabled = !this.qfAdaptiveInspect;
+         if(this.qfAdaptiveTip)
+         {
+            this.qfAdaptiveTip.qfAdaptiveDetails(this.qfAdaptiveInspect);
+            this.qfAdaptiveTip.visible = this.qfAdaptiveInspect;
+         }
+      }
+      protected function qfAdaptiveToggleAux() : void
+      {
+         if(!this.qfAdaptiveActive || this.qfAdaptiveInspect || this.mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging()) return;
+         this.qfAdaptiveAux = !this.qfAdaptiveAux;
+         this.mcPaperDollModule.qfGearReflow(this.qfAdaptiveAux);
+         if(this.qfAdaptiveAux)
+         {
+            selectTargetModule(this.mcPaperDollModule);
+            this.mcPaperDollModule.mcPaperdoll.selectedIndex = this.mcPaperDollModule.mcPaperDollSlot3.index;
+         }
+         else selectTargetModule(this.mcPlayerInventory);
+      }
+      protected function qfAdaptiveInput(e:InputEvent) : void
+      {
+         if(!this.qfAdaptiveActive || !e.details || e.handled) return;
+         var d:InputDetails = e.details;
+         var key:String = String(d.code);
+         var wasHeld:Boolean = Boolean(this.qfAdaptiveHeld[key]);
+         if(d.value == InputValue.KEY_UP) delete this.qfAdaptiveHeld[key];
+         var inspect:Boolean = d.code == KeyCode.I || d.code == KeyCode.PAD_BACK_SELECT;
+         var aux:Boolean = d.code == KeyCode.TAB || d.code == KeyCode.PAD_LEFT_THUMB;
+         var back:Boolean = d.code == KeyCode.ESCAPE || d.code == KeyCode.PAD_B_CIRCLE;
+         if(this.qfAdaptiveInspect && !inspect && !back)
+         {
+            var nav:String = d.navEquivalent;
+            if(d.code == KeyCode.SHIFT || nav == NavigationCode.GAMEPAD_L2) return;
+            var scroll:int = nav == NavigationCode.UP || nav == NavigationCode.RIGHT_STICK_UP || nav == NavigationCode.PAGE_UP ? -1 : (nav == NavigationCode.DOWN || nav == NavigationCode.RIGHT_STICK_DOWN || nav == NavigationCode.PAGE_DOWN ? 1 : 0);
+            if(scroll && this.qfAdaptiveTip && SlotBase.qfGearPadAllow(d,getTimer()) && (d.value == InputValue.KEY_DOWN || d.value == InputValue.KEY_HOLD)) this.qfAdaptiveTip.iaiScrBy(scroll * 48);
+            e.handled = true; e.stopImmediatePropagation(); return;
+         }
+         if(!(inspect || aux || back && (this.qfAdaptiveInspect || this.qfAdaptiveAux || wasHeld))) return;
+         if(this.mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging() || this.mcSortingMode.visible) return;
+         if(d.value == InputValue.KEY_DOWN && !wasHeld)
+         {
+            this.qfAdaptiveHeld[key] = true;
+            if(back) { if(this.qfAdaptiveInspect) this.qfAdaptiveToggleInspect(); else this.qfAdaptiveToggleAux(); }
+            else if(inspect) this.qfAdaptiveToggleInspect();
+            else this.qfAdaptiveToggleAux();
+         }
+         e.handled = true; e.stopImmediatePropagation();
+      }
+      protected function qfAdaptiveWheel(e:MouseEvent) : void
+      {
+         if(this.qfAdaptiveInspect && this.qfAdaptiveTip)
+         {
+            this.qfAdaptiveTip.iaiScrBy(e.delta > 0 ? -60 : 60);
+            e.stopImmediatePropagation();
+         }
+      }
+      protected function qfAdaptiveRefresh() : void
+      {
+         this.mcPlayerInventory.qfAdaptivePlayer = this.qfGearOn && this._inventoryMode == IMS_Player;
+         var gear:Boolean = this.qfGearOn && this._inventoryMode == IMS_Player && this.mcPlayerInventory.qfAdaptiveContext() == "Gear";
+         if(!gear) { this.qfAdaptiveRestore(); return; }
+         if(!this.mcPaperDollModule) return;
+         if(this._rendererController.isActive()) { this.qfAdaptiveRestore(); return; }
+         if(!this.qfAdaptiveActive)
+         {
+            this.qfAdaptiveActive = true;
+            this.qfAdaptiveBase = {x:this.mcPlayerInventory.x,y:this.mcPlayerInventory.y,sx:this.mcPlayerInventory.scaleX,sy:this.mcPlayerInventory.scaleY,rx:this.mcCharacterRenderer.x,ry:this.mcCharacterRenderer.y,rsx:this.mcCharacterRenderer.scaleX,rsy:this.mcCharacterRenderer.scaleY,head:this.iaiHeadOn};
+            this.qfAdaptiveSummary = new Sprite();
+            this.qfAdaptiveSummary.mouseEnabled = this.qfAdaptiveSummary.mouseChildren = false;
+            this.qfAdaptiveSummary.x = 72; this.qfAdaptiveSummary.y = 816;
+            addChild(this.qfAdaptiveSummary);
+            this.qfAdaptiveFields = [];
+            for(var i:int = 0; i < 6; i++) this.qfAdaptiveFields.push(this.qfAdaptiveText(this.qfAdaptiveSummary,"",0,i == 0 ? 0 : 38 + (i - 1) * 25,900,i == 0 ? 26 : 18));
+            this.qfAdaptiveActions = new Sprite(); addChild(this.qfAdaptiveActions);
+            this.qfAdaptiveButton("Inspect   I / View",72,true);
+            this.qfAdaptiveButton("Equipment   Tab / LS",364,false);
+            InputDelegate.getInstance().addEventListener(InputEvent.INPUT,this.qfAdaptiveInput,false,120,true);
+            stage.addEventListener(MouseEvent.MOUSE_WHEEL,this.qfAdaptiveWheel,true,120,true);
+            addEventListener(Event.REMOVED_FROM_STAGE,this.qfAdaptiveRemoved,false,0,true);
+         }
+         SlotBase.qfGearGrid = true; SlotBase.iaiNoSel = false;
+         this.iaiEqWant = false;
+         if(this.iaiEqOn) this.iaiEqApply(false);
+         this.iaiHeadOn = false;
+         if(this.iaiHeadSp) this.iaiHeadSp.visible = false;
+         if(this.iaiHint) this.iaiHint.visible = false;
+         // Keep accepted artwork and shared navigation. Suppress only the tooltip backing.
+         if(this.iaiBg) this.iaiBg.visible = false;
+         if(TooltipInventory.iaiStrip) TooltipInventory.iaiStrip.visible = false;
+         this.mcPlayerInventory.x = 72; this.mcPlayerInventory.y = 100;
+         this.mcPlayerInventory.scaleX = this.mcPlayerInventory.scaleY = 1.4;
+         this.mcPlayerInventory.qfAdaptiveViewport(true);
+         this.mcCharacterRenderer.x = 1060;
+         this.mcCharacterRenderer.scaleX = this.qfAdaptiveBase.rsx * 1.12;
+         this.mcCharacterRenderer.scaleY = this.qfAdaptiveBase.rsy * 1.12;
+         this._rendererController.setDefaultAnchor(1060,this.mcCharacterModelAnchor.y);
+         var targets:Boolean = this.qfAdaptiveAux || this.mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging();
+         SlotBase.qfAdaptiveTargets = targets;
+         this.mcPaperDollModule.qfGearReflow(targets);
+         this.qfAdaptiveActions.graphics.clear();
+         if(targets)
+         {
+            this.qfAdaptiveActions.graphics.beginFill(0x10120F,0.96);
+            this.qfAdaptiveActions.graphics.drawRoundRect(72,190,540,590,6);
+            this.qfAdaptiveActions.graphics.endFill();
+            // Panel under the existing native targets, never over Geralt.
+            if(getChildIndex(this.qfAdaptiveActions) > getChildIndex(this.mcPaperDollModule))
+               setChildIndex(this.qfAdaptiveActions,getChildIndex(this.mcPaperDollModule));
+         }
+         else if(this.qfAdaptiveInspect)
+         {
+            this.qfAdaptiveActions.graphics.beginFill(0x10120F,0.98);
+            this.qfAdaptiveActions.graphics.drawRoundRect(72,166,920,790,6);
+            this.qfAdaptiveActions.graphics.endFill();
+         }
+         this.mcPlayerInventory.visible = !targets && !this.qfAdaptiveInspect;
+         this.qfAdaptiveSummary.visible = !targets && !this.qfAdaptiveInspect;
+         if(!targets && this.mcPaperDollModule.focused > 0) selectTargetModule(this.mcPlayerInventory);
+         TooltipInventory.iaiDock = targets ? new Rectangle(620,166,390,790) : new Rectangle(72,166,920,790);
+         TooltipInventory.iaiPopSlot = null; TooltipInventory.iaiPopOn = !this.qfAdaptiveInspect;
+         var cim:ContextInfoManager = ContextInfoManager.getInstanse();
+         var tip:TooltipInventory = cim.iaiDockedTip();
+         if(tip)
+         {
+            this.qfAdaptiveTip = tip;
+            tip.qfAdaptiveDetails(this.qfAdaptiveInspect);
+            tip.visible = this.qfAdaptiveInspect || targets;
+         }
+         var rows:Array = tip && !cim.isHidden() ? tip.qfAdaptiveSummary() : [];
+         for(var n:int = 0; n < this.qfAdaptiveFields.length; n++)
+            TextField(this.qfAdaptiveFields[n]).htmlText = n < rows.length ? String(rows[n]) : "";
+         this.btnSort.x = 72; this.btnSortChange.x = this.btnSort.x + this.btnSort.actualWidth + 26;
+      }
+      protected function qfAdaptiveRestore() : void
+      {
+         SlotBase.qfGearGrid = false; SlotBase.qfAdaptiveTargets = false; SlotBase.qfGearResetPad();
+         if(!this.qfAdaptiveActive) return;
+         this.qfAdaptiveActive = false;
+         if(this.qfAdaptiveTip)
+         {
+            this.qfAdaptiveTip.qfAdaptiveDetails(false);
+            this.qfAdaptiveTip.visible = true;
+         }
+         TooltipInventory.iaiEqCard = TooltipInventory.iaiScrOn = false;
+         this.qfAdaptiveTip = null;
+         this.qfAdaptiveInspect = this.qfAdaptiveAux = false;
+         this.qfAdaptiveHeld = {};
+         this.mcPlayerInventory.enabled = this.mcPlayerInventory._inputEnabled = true;
+         this.mcPlayerInventory.visible = true;
+         this.mcPaperDollModule.qfGearRestore();
+         this.mcPlayerInventory.qfAdaptiveViewport(false);
+         this.mcPlayerInventory.x = this.qfAdaptiveBase.x; this.mcPlayerInventory.y = this.qfAdaptiveBase.y;
+         this.mcPlayerInventory.scaleX = this.qfAdaptiveBase.sx; this.mcPlayerInventory.scaleY = this.qfAdaptiveBase.sy;
+         this.mcCharacterRenderer.x = this.qfAdaptiveBase.rx; this.mcCharacterRenderer.y = this.qfAdaptiveBase.ry;
+         this.mcCharacterRenderer.scaleX = this.qfAdaptiveBase.rsx; this.mcCharacterRenderer.scaleY = this.qfAdaptiveBase.rsy;
+         this._rendererController.setDefaultAnchor(this.mcCharacterModelAnchor.x,this.mcCharacterModelAnchor.y);
+         this.iaiHeadOn = this.qfAdaptiveBase.head;
+         if(this.iaiBg) this.iaiBg.visible = true;
+         if(TooltipInventory.iaiStrip) TooltipInventory.iaiStrip.visible = true;
+         if(this.qfAdaptiveSummary.parent) this.qfAdaptiveSummary.parent.removeChild(this.qfAdaptiveSummary);
+         if(this.qfAdaptiveActions.parent) this.qfAdaptiveActions.parent.removeChild(this.qfAdaptiveActions);
+         InputDelegate.getInstance().removeEventListener(InputEvent.INPUT,this.qfAdaptiveInput);
+         if(stage) stage.removeEventListener(MouseEvent.MOUSE_WHEEL,this.qfAdaptiveWheel,true);
+         TooltipInventory.iaiDock = new Rectangle(584,166,540,1000);
+      }
+      protected function qfAdaptiveRemoved(e:Event) : void { this.qfAdaptiveRestore(); }
