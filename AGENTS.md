@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**S18 local alignment audition (2026-10-17; report78):** Three private timing options now at `build/music-material-selection/s18-local-alignment-final/index.html`, plus exact qualified A. Source112.8–130s/endpoint130s fixed. Compact100ms local dry-fade delay and500ms reverb-input taper share centers129.45/129.575/129.65; same room/RT60/gain, no late wet-output fade. Source valley/recovery and reference PCM reproduced. T1 is quieter; T2/T3 retain small local rises.208 tests and exact16-input/PCM/local-restoration gates pass. No subjective success or new acceptance; listen to the three final options only. Preserved internal superseded controls are not further choices. All other cues, ledger69 and game resources untouched.
+
+
 **Direct audio measurements (2026-10-17; report77):** Assistant received and analyzed the SHA-verified original S18 Opus + existing dry-only WAV. Robust local original-source 20–100ms RMS valley centered ~**129.57–129.58s** (player18.77s), with original source then recovering ~4.75dB by129.95s. Existing half-cosine dry fade imposes ~21dB attenuation at valley and ~56dB by129.95s, compounding source modulation into an unnatural late disappearance. Wet evidence from reports71–72 shows additional independent-send room growth after direct source drops. **Keep musical endpoint130s fixed.** See report77 for measured table, source hash, timing map and a bounded 3-center candidate search at129.45/129.575/129.65s; these are hypotheses for local crossover coordination, not approved DSP settings. Do not revive report75's superseded musical-boundary theory or rejected report74 constant-dB release. Only S18 local private audition, no other-cue or game changes.
 
 

@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**S18 local alignment audition (2026-10-17; report78):** Three private timing options now at `build/music-material-selection/s18-local-alignment-final/index.html`, plus exact qualified A. Source112.8–130s/endpoint130s fixed. Compact100ms local dry-fade delay and500ms reverb-input taper share centers129.45/129.575/129.65; same room/RT60/gain, no late wet-output fade. Source valley/recovery and reference PCM reproduced. T1 is quieter; T2/T3 retain small local rises.208 tests and exact16-input/PCM/local-restoration gates pass. No subjective success or new acceptance; listen to the three final options only. Preserved internal superseded controls are not further choices. All other cues, ledger69 and game resources untouched.
+
+
 **Direct source measurement (report77):** Uploaded SHA-matching original S18 Opus + dry-only control analyzed at20–100ms windows; strongest robust near-end source RMS valley129.57–129.58s, source recovery before130s; current artificial dry release deepens hole while independent wet can surge. Test only local crossover timing, preserving selected endpoint and all old audio.
 
 
@@ -159,3 +162,11 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 73. [Persistent S18 handoff diagnostic](73-s18-persistent-handoff-diagnostic.md): exact user complaint, source/dry comparison and one private dry-only diagnostic; no further wet treatment. [Evidence](73-s18-diagnostic-evidence.json).
 
 74. [S18 dry-release comparison](74-s18-dry-release-comparison.md): user confirms dry-only late dip; one opt-in even-dB comparison, unchanged cuts, earlier attenuation tradeoff,204 tests. [Evidence](74-s18-dry-release-evidence.json).
+
+75. [S18 constant-dB release rejection](75-s18-dry-db-release-rejection-and-boundary-diagnosis.md): rejected B; its proposed boundary theory is superseded by report76.
+
+76. [S18 fixed musical endpoint and local alignment](76-s18-local-dry-wet-fade-alignment.md): source130s explicitly confirmed; bounded local handoff correction.
+
+77. [Exact uploaded-source microdynamics](77-s18-uploaded-source-microdynamics-measurement.md): near129.575s valley, late recovery and source-clock timing hypotheses.
+
+78. [S18 local alignment trials](78-s18-local-alignment-trials.md): three final private options, measured source/dry/wet/sum, fixed endpoint,208 tests; subjective verdict pending. [Evidence](78-s18-local-alignment-evidence.json).

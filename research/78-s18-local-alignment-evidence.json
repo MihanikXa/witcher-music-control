@@ -1,0 +1,5664 @@
+{
+  "verification": {
+    "source_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+    "original_selected_render_sha256": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140",
+    "dry_control_sha256": "2c4d27fb2f87a651e566e9701d0eb7acd9c843c5dbc9b05271bdd52fd5e98add",
+    "new_renders": {
+      "T1": {
+        "file": "audio/S18-3-alignment-1.wav",
+        "sha256": "f7b2b7cc6f9ed1b9ab1f14edf0a8546981ed96bd54e939bc9827cc3f01440003",
+        "label": "Earlier: 129.450s source / 18.650s player",
+        "center_source_seconds": 129.45,
+        "center_player_seconds": 18.65,
+        "width_seconds": 0.5,
+        "qa": {
+          "sha256": "f7b2b7cc6f9ed1b9ab1f14edf0a8546981ed96bd54e939bc9827cc3f01440003",
+          "seconds": 32.2,
+          "channels": 2,
+          "rate": 48000,
+          "peak": 0.1334228515625,
+          "clipped_samples": 0,
+          "decoder_exact": true
+        }
+      },
+      "T2": {
+        "file": "audio/S18-3-alignment-2.wav",
+        "sha256": "3a199b2b6b2a1cb5525ef90e1007006b826b9e5fa5d00b286714a1f53a7c2139",
+        "label": "Natural-dip aligned: 129.575s source / 18.775s player",
+        "center_source_seconds": 129.575,
+        "center_player_seconds": 18.775,
+        "width_seconds": 0.5,
+        "qa": {
+          "sha256": "3a199b2b6b2a1cb5525ef90e1007006b826b9e5fa5d00b286714a1f53a7c2139",
+          "seconds": 32.2,
+          "channels": 2,
+          "rate": 48000,
+          "peak": 0.1334228515625,
+          "clipped_samples": 0,
+          "decoder_exact": true
+        }
+      },
+      "T3": {
+        "file": "audio/S18-3-alignment-3.wav",
+        "sha256": "5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd",
+        "label": "Later: 129.650s source / 18.850s player",
+        "center_source_seconds": 129.65,
+        "center_player_seconds": 18.85,
+        "width_seconds": 0.5,
+        "qa": {
+          "sha256": "5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd",
+          "seconds": 32.2,
+          "channels": 2,
+          "rate": 48000,
+          "peak": 0.1334228515625,
+          "clipped_samples": 0,
+          "decoder_exact": true
+        }
+      }
+    },
+    "source_cut": [
+      112.8,
+      130.0
+    ],
+    "endpoint_unchanged": true,
+    "earlier_fade_window_unchanged": [
+      127.8,
+      130
+    ],
+    "dry_phase_shift_seconds": 0.1,
+    "dry_phase_width_seconds": 0.5,
+    "send_taper_width_seconds": 0.5,
+    "independent_send_gain_unchanged": 0.1981443461969509,
+    "rt60": 5.5,
+    "fade_centers": [
+      129.45,
+      129.575,
+      129.65
+    ],
+    "pinned_selections_preserved": 11,
+    "immutable_inputs_preserved": 16,
+    "real_browser_tested": false,
+    "subjectively_listened": false,
+    "index_sha256": "5faee55ef30bcc28e7dc1a885588d9aee02726f740e635ca07720ce0ba93f5e2",
+    "measurements_sha256": "a4ca2f12ec6d51334ff698ee3179ff0995c59341a6ac4b695d78e6717276ce78",
+    "all_six_local_links_resolve": true,
+    "tests": {
+      "python_count": 208,
+      "passed": true
+    }
+  },
+  "measurements": {
+    "source_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+    "source_clock": "player_time + 110.8",
+    "window_centers_seconds": [
+      129.45,
+      129.575,
+      129.65
+    ],
+    "window_size_ms": [
+      20,
+      25,
+      50,
+      100
+    ],
+    "original_rows": [
+      {
+        "source_seconds": 129.25,
+        "player_seconds": 18.45,
+        "windows": {
+          "20": {
+            "original_dbfs": -28.617471304466463,
+            "actual_dry_pcm_dbfs": -40.30637174080168
+          },
+          "25": {
+            "original_dbfs": -28.773581525764147,
+            "actual_dry_pcm_dbfs": -40.46398774427238
+          },
+          "50": {
+            "original_dbfs": -28.97858498596272,
+            "actual_dry_pcm_dbfs": -40.64565744308135
+          },
+          "100": {
+            "original_dbfs": -29.176748183263058,
+            "actual_dry_pcm_dbfs": -40.76570269544617
+          }
+        }
+      },
+      {
+        "source_seconds": 129.275,
+        "player_seconds": 18.475,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.60263450415999,
+            "actual_dry_pcm_dbfs": -41.82733100289827
+          },
+          "25": {
+            "original_dbfs": -29.950396476025283,
+            "actual_dry_pcm_dbfs": -42.161867978462354
+          },
+          "50": {
+            "original_dbfs": -29.760156779038812,
+            "actual_dry_pcm_dbfs": -41.93722223824521
+          },
+          "100": {
+            "original_dbfs": -29.58419875365336,
+            "actual_dry_pcm_dbfs": -41.68164091300974
+          }
+        }
+      },
+      {
+        "source_seconds": 129.3,
+        "player_seconds": 18.5,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.55729692034404,
+            "actual_dry_pcm_dbfs": -43.326956495893555
+          },
+          "25": {
+            "original_dbfs": -30.41244717041532,
+            "actual_dry_pcm_dbfs": -43.17145085415075
+          },
+          "50": {
+            "original_dbfs": -30.288163906729718,
+            "actual_dry_pcm_dbfs": -43.04484168042105
+          },
+          "100": {
+            "original_dbfs": -30.167587595689625,
+            "actual_dry_pcm_dbfs": -42.82739485634995
+          }
+        }
+      },
+      {
+        "source_seconds": 129.325,
+        "player_seconds": 18.525,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.707532796050003,
+            "actual_dry_pcm_dbfs": -44.03643710436099
+          },
+          "25": {
+            "original_dbfs": -30.44279997065661,
+            "actual_dry_pcm_dbfs": -43.800171176909004
+          },
+          "50": {
+            "original_dbfs": -30.617236075752153,
+            "actual_dry_pcm_dbfs": -43.948342618905244
+          },
+          "100": {
+            "original_dbfs": -30.22318288845741,
+            "actual_dry_pcm_dbfs": -43.569357545739166
+          }
+        }
+      },
+      {
+        "source_seconds": 129.35,
+        "player_seconds": 18.55,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.262088609844383,
+            "actual_dry_pcm_dbfs": -44.26087686541734
+          },
+          "25": {
+            "original_dbfs": -30.394353146055387,
+            "actual_dry_pcm_dbfs": -44.366485480694706
+          },
+          "50": {
+            "original_dbfs": -30.159159828499966,
+            "actual_dry_pcm_dbfs": -44.16603656914237
+          },
+          "100": {
+            "original_dbfs": -30.024477635819203,
+            "actual_dry_pcm_dbfs": -44.02316687631213
+          }
+        }
+      },
+      {
+        "source_seconds": 129.375,
+        "player_seconds": 18.575,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.45338107324031,
+            "actual_dry_pcm_dbfs": -44.06289625144904
+          },
+          "25": {
+            "original_dbfs": -29.551902445251127,
+            "actual_dry_pcm_dbfs": -44.14817670361229
+          },
+          "50": {
+            "original_dbfs": -29.502992720683814,
+            "actual_dry_pcm_dbfs": -44.099302908493414
+          },
+          "100": {
+            "original_dbfs": -29.897084929972305,
+            "actual_dry_pcm_dbfs": -44.506270057893445
+          }
+        }
+      },
+      {
+        "source_seconds": 129.4,
+        "player_seconds": 18.6,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.00486916680012,
+            "actual_dry_pcm_dbfs": -44.24745111690755
+          },
+          "25": {
+            "original_dbfs": -29.20098456009078,
+            "actual_dry_pcm_dbfs": -44.448108692083885
+          },
+          "50": {
+            "original_dbfs": -29.64992892342248,
+            "actual_dry_pcm_dbfs": -44.87544106849179
+          },
+          "100": {
+            "original_dbfs": -29.702196763286732,
+            "actual_dry_pcm_dbfs": -44.87527007254129
+          }
+        }
+      },
+      {
+        "source_seconds": 129.425,
+        "player_seconds": 18.625,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.03656758949581,
+            "actual_dry_pcm_dbfs": -45.98111372385017
+          },
+          "25": {
+            "original_dbfs": -30.205276585496257,
+            "actual_dry_pcm_dbfs": -46.14235610151279
+          },
+          "50": {
+            "original_dbfs": -29.910979082081134,
+            "actual_dry_pcm_dbfs": -45.82071013057957
+          },
+          "100": {
+            "original_dbfs": -29.936685161751978,
+            "actual_dry_pcm_dbfs": -45.76253795918467
+          }
+        }
+      },
+      {
+        "source_seconds": 129.45,
+        "player_seconds": 18.65,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.46849621922387,
+            "actual_dry_pcm_dbfs": -47.15658823249158
+          },
+          "25": {
+            "original_dbfs": -30.230657854689266,
+            "actual_dry_pcm_dbfs": -46.90993221212413
+          },
+          "50": {
+            "original_dbfs": -30.243722359333717,
+            "actual_dry_pcm_dbfs": -46.878603000337776
+          },
+          "100": {
+            "original_dbfs": -30.19953754734315,
+            "actual_dry_pcm_dbfs": -46.758771206671845
+          }
+        }
+      },
+      {
+        "source_seconds": 129.475,
+        "player_seconds": 18.675,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.471722146242996,
+            "actual_dry_pcm_dbfs": -47.94566796137585
+          },
+          "25": {
+            "original_dbfs": -30.63663675795283,
+            "actual_dry_pcm_dbfs": -48.09094693082733
+          },
+          "50": {
+            "original_dbfs": -30.508641943940052,
+            "actual_dry_pcm_dbfs": -47.95691475390492
+          },
+          "100": {
+            "original_dbfs": -30.15593114673919,
+            "actual_dry_pcm_dbfs": -47.552798646486735
+          }
+        }
+      },
+      {
+        "source_seconds": 129.5,
+        "player_seconds": 18.7,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.647214507022134,
+            "actual_dry_pcm_dbfs": -47.90112363227451
+          },
+          "25": {
+            "original_dbfs": -30.04408834089277,
+            "actual_dry_pcm_dbfs": -48.304248925554674
+          },
+          "50": {
+            "original_dbfs": -30.069879498206692,
+            "actual_dry_pcm_dbfs": -48.35123861505614
+          },
+          "100": {
+            "original_dbfs": -30.24958756507003,
+            "actual_dry_pcm_dbfs": -48.468109969892346
+          }
+        }
+      },
+      {
+        "source_seconds": 129.525,
+        "player_seconds": 18.725,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.905215734408298,
+            "actual_dry_pcm_dbfs": -49.00433738853838
+          },
+          "25": {
+            "original_dbfs": -29.792065899001088,
+            "actual_dry_pcm_dbfs": -48.884111500679914
+          },
+          "50": {
+            "original_dbfs": -30.005119649777235,
+            "actual_dry_pcm_dbfs": -49.047605179887555
+          },
+          "100": {
+            "original_dbfs": -30.515693447955613,
+            "actual_dry_pcm_dbfs": -49.44859855854987
+          }
+        }
+      },
+      {
+        "source_seconds": 129.55,
+        "player_seconds": 18.75,
+        "windows": {
+          "20": {
+            "original_dbfs": -31.493715782352837,
+            "actual_dry_pcm_dbfs": -51.50546888249819
+          },
+          "25": {
+            "original_dbfs": -31.203258596661165,
+            "actual_dry_pcm_dbfs": -51.19231022809643
+          },
+          "50": {
+            "original_dbfs": -31.012562124775727,
+            "actual_dry_pcm_dbfs": -50.92054670956892
+          },
+          "100": {
+            "original_dbfs": -30.82478532576372,
+            "actual_dry_pcm_dbfs": -50.52605742295886
+          }
+        }
+      },
+      {
+        "source_seconds": 129.575,
+        "player_seconds": 18.775,
+        "windows": {
+          "20": {
+            "original_dbfs": -32.020472275683616,
+            "actual_dry_pcm_dbfs": -53.01094694775947
+          },
+          "25": {
+            "original_dbfs": -31.98669176942216,
+            "actual_dry_pcm_dbfs": -52.96439023595407
+          },
+          "50": {
+            "original_dbfs": -31.836003111004988,
+            "actual_dry_pcm_dbfs": -52.78487868695258
+          },
+          "100": {
+            "original_dbfs": -31.000033693483676,
+            "actual_dry_pcm_dbfs": -51.8611139441405
+          }
+        }
+      },
+      {
+        "source_seconds": 129.6,
+        "player_seconds": 18.8,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.89114929104997,
+            "actual_dry_pcm_dbfs": -52.913424817925375
+          },
+          "25": {
+            "original_dbfs": -30.8822898022688,
+            "actual_dry_pcm_dbfs": -52.8923578816737
+          },
+          "50": {
+            "original_dbfs": -30.987541299997364,
+            "actual_dry_pcm_dbfs": -53.06335914869252
+          },
+          "100": {
+            "original_dbfs": -30.723996926055754,
+            "actual_dry_pcm_dbfs": -52.87638811287727
+          }
+        }
+      },
+      {
+        "source_seconds": 129.625,
+        "player_seconds": 18.825,
+        "windows": {
+          "20": {
+            "original_dbfs": -30.32702715718276,
+            "actual_dry_pcm_dbfs": -53.41913678287063
+          },
+          "25": {
+            "original_dbfs": -30.220543360053963,
+            "actual_dry_pcm_dbfs": -53.32359631589477
+          },
+          "50": {
+            "original_dbfs": -29.83946108783899,
+            "actual_dry_pcm_dbfs": -52.969867296676185
+          },
+          "100": {
+            "original_dbfs": -30.096402683357017,
+            "actual_dry_pcm_dbfs": -53.341372483540525
+          }
+        }
+      },
+      {
+        "source_seconds": 129.65,
+        "player_seconds": 18.85,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.013676070646003,
+            "actual_dry_pcm_dbfs": -53.34440226549776
+          },
+          "25": {
+            "original_dbfs": -28.959157444598482,
+            "actual_dry_pcm_dbfs": -53.24636208165061
+          },
+          "50": {
+            "original_dbfs": -29.357353089354067,
+            "actual_dry_pcm_dbfs": -53.63840743015693
+          },
+          "100": {
+            "original_dbfs": -29.56336135373256,
+            "actual_dry_pcm_dbfs": -53.78609410529404
+          }
+        }
+      },
+      {
+        "source_seconds": 129.675,
+        "player_seconds": 18.875,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.063443766582186,
+            "actual_dry_pcm_dbfs": -54.58926718994367
+          },
+          "25": {
+            "original_dbfs": -29.42493358256602,
+            "actual_dry_pcm_dbfs": -54.95005369922328
+          },
+          "50": {
+            "original_dbfs": -29.303770177148486,
+            "actual_dry_pcm_dbfs": -54.792075042500684
+          },
+          "100": {
+            "original_dbfs": -29.23771240988183,
+            "actual_dry_pcm_dbfs": -54.65646810377485
+          }
+        }
+      },
+      {
+        "source_seconds": 129.7,
+        "player_seconds": 18.9,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.079297898435858,
+            "actual_dry_pcm_dbfs": -55.9576750715453
+          },
+          "25": {
+            "original_dbfs": -29.139309787510904,
+            "actual_dry_pcm_dbfs": -56.03304159657863
+          },
+          "50": {
+            "original_dbfs": -29.121279455967688,
+            "actual_dry_pcm_dbfs": -55.98870329521227
+          },
+          "100": {
+            "original_dbfs": -28.953145446203536,
+            "actual_dry_pcm_dbfs": -55.748950290335195
+          }
+        }
+      },
+      {
+        "source_seconds": 129.725,
+        "player_seconds": 18.925,
+        "windows": {
+          "20": {
+            "original_dbfs": -28.608131584026623,
+            "actual_dry_pcm_dbfs": -56.97929808916834
+          },
+          "25": {
+            "original_dbfs": -28.454157799726552,
+            "actual_dry_pcm_dbfs": -56.82193599871588
+          },
+          "50": {
+            "original_dbfs": -28.6287256920207,
+            "actual_dry_pcm_dbfs": -56.978039013397435
+          },
+          "100": {
+            "original_dbfs": -29.035137727601157,
+            "actual_dry_pcm_dbfs": -57.16340758662366
+          }
+        }
+      },
+      {
+        "source_seconds": 129.75,
+        "player_seconds": 18.95,
+        "windows": {
+          "20": {
+            "original_dbfs": -29.304176786066716,
+            "actual_dry_pcm_dbfs": -59.27964215664916
+          },
+          "25": {
+            "original_dbfs": -29.189043400437832,
+            "actual_dry_pcm_dbfs": -59.19709912805228
+          },
+          "50": {
+            "original_dbfs": -28.95067143077047,
+            "actual_dry_pcm_dbfs": -58.77869984365833
+          },
+          "100": {
+            "original_dbfs": -28.758004439638576,
+            "actual_dry_pcm_dbfs": -58.484820668163465
+          }
+        }
+      },
+      {
+        "source_seconds": 129.775,
+        "player_seconds": 18.975,
+        "windows": {
+          "20": {
+            "original_dbfs": -28.748167623118665,
+            "actual_dry_pcm_dbfs": -60.643958871622544
+          },
+          "25": {
+            "original_dbfs": -28.990146781363695,
+            "actual_dry_pcm_dbfs": -60.85302870126871
+          },
+          "50": {
+            "original_dbfs": -28.891249876918508,
+            "actual_dry_pcm_dbfs": -60.81136928697843
+          },
+          "100": {
+            "original_dbfs": -28.489560120031697,
+            "actual_dry_pcm_dbfs": -60.050992182185745
+          }
+        }
+      },
+      {
+        "source_seconds": 129.8,
+        "player_seconds": 19.0,
+        "windows": {
+          "20": {
+            "original_dbfs": -28.065627773902154,
+            "actual_dry_pcm_dbfs": -61.82463773264246
+          },
+          "25": {
+            "original_dbfs": -27.928481850543804,
+            "actual_dry_pcm_dbfs": -61.739739608460425
+          },
+          "50": {
+            "original_dbfs": -28.07274198642564,
+            "actual_dry_pcm_dbfs": -61.8580803415638
+          },
+          "100": {
+            "original_dbfs": -28.335261990864076,
+            "actual_dry_pcm_dbfs": -62.05850433845164
+          }
+        }
+      },
+      {
+        "source_seconds": 129.825,
+        "player_seconds": 19.025,
+        "windows": {
+          "20": {
+            "original_dbfs": -27.839725643461794,
+            "actual_dry_pcm_dbfs": -64.03930035157482
+          },
+          "25": {
+            "original_dbfs": -27.78861713873195,
+            "actual_dry_pcm_dbfs": -63.90551375232591
+          },
+          "50": {
+            "original_dbfs": -27.84244182254215,
+            "actual_dry_pcm_dbfs": -63.81491580101262
+          },
+          "100": {
+            "original_dbfs": -27.8304488654757,
+            "actual_dry_pcm_dbfs": -63.51827689981285
+          }
+        }
+      },
+      {
+        "source_seconds": 129.85,
+        "player_seconds": 19.05,
+        "windows": {
+          "20": {
+            "original_dbfs": -27.68355976569233,
+            "actual_dry_pcm_dbfs": -66.53606902320308
+          },
+          "25": {
+            "original_dbfs": -27.737220153032197,
+            "actual_dry_pcm_dbfs": -66.49538818864424
+          },
+          "50": {
+            "original_dbfs": -27.600961975845838,
+            "actual_dry_pcm_dbfs": -66.23972757916913
+          },
+          "100": {
+            "original_dbfs": -27.51646052107688,
+            "actual_dry_pcm_dbfs": -65.66341243014708
+          }
+        }
+      },
+      {
+        "source_seconds": 129.875,
+        "player_seconds": 19.075,
+        "windows": {
+          "20": {
+            "original_dbfs": -27.397042382128134,
+            "actual_dry_pcm_dbfs": -69.2199322172098
+          },
+          "25": {
+            "original_dbfs": -27.161672026590455,
+            "actual_dry_pcm_dbfs": -69.10109393819282
+          },
+          "50": {
+            "original_dbfs": -27.213248262944386,
+            "actual_dry_pcm_dbfs": -68.94758880716327
+          },
+          "100": {
+            "original_dbfs": -27.32676789533262,
+            "actual_dry_pcm_dbfs": -68.31501267559818
+          }
+        }
+      },
+      {
+        "source_seconds": 129.9,
+        "player_seconds": 19.1,
+        "windows": {
+          "20": {
+            "original_dbfs": -27.058088894355457,
+            "actual_dry_pcm_dbfs": -72.94022191640823
+          },
+          "25": {
+            "original_dbfs": -27.017322618037987,
+            "actual_dry_pcm_dbfs": -72.74606160214132
+          },
+          "50": {
+            "original_dbfs": -27.068861930236572,
+            "actual_dry_pcm_dbfs": -72.43349369511607
+          },
+          "100": {
+            "original_dbfs": -27.196327594633996,
+            "actual_dry_pcm_dbfs": -71.34012694144847
+          }
+        }
+      },
+      {
+        "source_seconds": 129.925,
+        "player_seconds": 19.125,
+        "windows": {
+          "20": {
+            "original_dbfs": -27.083258033812008,
+            "actual_dry_pcm_dbfs": -77.83886116302453
+          },
+          "25": {
+            "original_dbfs": -27.249434883271455,
+            "actual_dry_pcm_dbfs": -77.8886599470758
+          },
+          "50": {
+            "original_dbfs": -27.179472595637545,
+            "actual_dry_pcm_dbfs": -77.10467957700156
+          },
+          "100": {
+            "original_dbfs": -27.078349185563813,
+            "actual_dry_pcm_dbfs": -75.09996220245357
+          }
+        }
+      },
+      {
+        "source_seconds": 129.95,
+        "player_seconds": 19.15,
+        "windows": {
+          "20": {
+            "original_dbfs": -26.791387309560854,
+            "actual_dry_pcm_dbfs": -84.18833809849623
+          },
+          "25": {
+            "original_dbfs": -27.086594426167,
+            "actual_dry_pcm_dbfs": -84.41276018555244
+          },
+          "50": {
+            "original_dbfs": -27.08785721138396,
+            "actual_dry_pcm_dbfs": -83.27483094832743
+          },
+          "100": {
+            "original_dbfs": -26.88031552903034,
+            "actual_dry_pcm_dbfs": -79.96054253520191
+          }
+        }
+      }
+    ],
+    "valley_scan": [
+      {
+        "window_ms": 20,
+        "source_center_seconds": 129.5725,
+        "dbfs": -32.1086485930558
+      },
+      {
+        "window_ms": 25,
+        "source_center_seconds": 129.57,
+        "dbfs": -32.09075919638255
+      },
+      {
+        "window_ms": 50,
+        "source_center_seconds": 129.575,
+        "dbfs": -31.836003111004988
+      },
+      {
+        "window_ms": 75,
+        "source_center_seconds": 129.58,
+        "dbfs": -31.399768093135453
+      },
+      {
+        "window_ms": 100,
+        "source_center_seconds": 129.5725,
+        "dbfs": -31.112135951754812
+      }
+    ],
+    "bands_original": [
+      {
+        "hz": [
+          30,
+          200
+        ],
+        "rows": [
+          {
+            "source_seconds": 129.45,
+            "dbfs": -69.55473561605965
+          },
+          {
+            "source_seconds": 129.575,
+            "dbfs": -68.1376833983654
+          },
+          {
+            "source_seconds": 129.65,
+            "dbfs": -67.38298553255574
+          },
+          {
+            "source_seconds": 129.75,
+            "dbfs": -69.07554325480208
+          },
+          {
+            "source_seconds": 129.85,
+            "dbfs": -69.67004120108813
+          },
+          {
+            "source_seconds": 129.95,
+            "dbfs": -69.60310102459071
+          }
+        ]
+      },
+      {
+        "hz": [
+          200,
+          1000
+        ],
+        "rows": [
+          {
+            "source_seconds": 129.45,
+            "dbfs": -31.153084573115862
+          },
+          {
+            "source_seconds": 129.575,
+            "dbfs": -33.50235021687679
+          },
+          {
+            "source_seconds": 129.65,
+            "dbfs": -30.2770974574044
+          },
+          {
+            "source_seconds": 129.75,
+            "dbfs": -29.875930449344608
+          },
+          {
+            "source_seconds": 129.85,
+            "dbfs": -28.17547057798176
+          },
+          {
+            "source_seconds": 129.95,
+            "dbfs": -27.618641992321752
+          }
+        ]
+      },
+      {
+        "hz": [
+          1000,
+          4000
+        ],
+        "rows": [
+          {
+            "source_seconds": 129.45,
+            "dbfs": -37.959738790704144
+          },
+          {
+            "source_seconds": 129.575,
+            "dbfs": -37.66566523308303
+          },
+          {
+            "source_seconds": 129.65,
+            "dbfs": -37.54221448999868
+          },
+          {
+            "source_seconds": 129.75,
+            "dbfs": -36.882118811187546
+          },
+          {
+            "source_seconds": 129.85,
+            "dbfs": -37.95014605020111
+          },
+          {
+            "source_seconds": 129.95,
+            "dbfs": -37.02325423171758
+          }
+        ]
+      },
+      {
+        "hz": [
+          4000,
+          10000
+        ],
+        "rows": [
+          {
+            "source_seconds": 129.45,
+            "dbfs": -54.58269063405869
+          },
+          {
+            "source_seconds": 129.575,
+            "dbfs": -54.37065878537585
+          },
+          {
+            "source_seconds": 129.65,
+            "dbfs": -53.899312622343444
+          },
+          {
+            "source_seconds": 129.75,
+            "dbfs": -54.207102155448545
+          },
+          {
+            "source_seconds": 129.85,
+            "dbfs": -53.302242686844714
+          },
+          {
+            "source_seconds": 129.95,
+            "dbfs": -54.07083517489777
+          }
+        ]
+      }
+    ],
+    "wet_modulation_lag": {
+      "hop_ms": 10,
+      "window_ms": 20,
+      "best_lag_ms": 0,
+      "max_correlation": 0.2808144630303327,
+      "meaning": "energy-modulation alignment only; not acoustic path delay"
+    },
+    "candidates": {
+      "T1": {
+        "rows": [
+          {
+            "source_seconds": 129.25,
+            "player_seconds": 18.45,
+            "windows": {
+              "20": {
+                "source": -28.617471304466463,
+                "dry": -40.1059935792229,
+                "wet": -43.915203095940115,
+                "combined": -37.43444657432265
+              },
+              "25": {
+                "source": -28.773581525764147,
+                "dry": -40.26215672427139,
+                "wet": -43.89173803979055,
+                "combined": -37.47577986249628
+              },
+              "50": {
+                "source": -28.97858498596272,
+                "dry": -40.44439597025499,
+                "wet": -44.1435437250891,
+                "combined": -37.68698524242163
+              },
+              "100": {
+                "source": -29.176748183263058,
+                "dry": -40.55899582477778,
+                "wet": -44.125452834083106,
+                "combined": -37.64059542790263
+              }
+            }
+          },
+          {
+            "source_seconds": 129.275,
+            "player_seconds": 18.475,
+            "windows": {
+              "20": {
+                "source": -29.60263450415999,
+                "dry": -41.3830393360735,
+                "wet": -45.157001838480475,
+                "combined": -38.70568223411923
+              },
+              "25": {
+                "source": -29.950396476025283,
+                "dry": -41.72396274255205,
+                "wet": -45.549640516344965,
+                "combined": -39.31967954651866
+              },
+              "50": {
+                "source": -29.760156779038812,
+                "dry": -41.5110400614183,
+                "wet": -45.32084340480597,
+                "combined": -38.89340748708017
+              },
+              "100": {
+                "source": -29.58419875365336,
+                "dry": -41.27056918215425,
+                "wet": -45.05775459260814,
+                "combined": -38.665343276035664
+              }
+            }
+          },
+          {
+            "source_seconds": 129.3,
+            "player_seconds": 18.5,
+            "windows": {
+              "20": {
+                "source": -30.55729692034404,
+                "dry": -42.568940882238394,
+                "wet": -46.703000797752175,
+                "combined": -40.245490549412125
+              },
+              "25": {
+                "source": -30.41244717041532,
+                "dry": -42.41969503785816,
+                "wet": -46.29584479297907,
+                "combined": -39.73478983873565
+              },
+              "50": {
+                "source": -30.288163906729718,
+                "dry": -42.29172561231047,
+                "wet": -46.217173888724545,
+                "combined": -39.93020447278615
+              },
+              "100": {
+                "source": -30.167587595689625,
+                "dry": -42.12128506106123,
+                "wet": -45.443504044709385,
+                "combined": -39.474662366361486
+              }
+            }
+          },
+          {
+            "source_seconds": 129.325,
+            "player_seconds": 18.525,
+            "windows": {
+              "20": {
+                "source": -30.707532796050003,
+                "dry": -42.91939910829627,
+                "wet": -45.97161384049552,
+                "combined": -40.48471777586731
+              },
+              "25": {
+                "source": -30.44279997065661,
+                "dry": -42.66473145521311,
+                "wet": -45.93689516611255,
+                "combined": -40.403222746442694
+              },
+              "50": {
+                "source": -30.617236075752153,
+                "dry": -42.83151923074407,
+                "wet": -45.56973001128823,
+                "combined": -40.14591144766256
+              },
+              "100": {
+                "source": -30.22318288845741,
+                "dry": -42.450058399366675,
+                "wet": -45.37448662534481,
+                "combined": -39.99198468288317
+              }
+            }
+          },
+          {
+            "source_seconds": 129.35,
+            "player_seconds": 18.55,
+            "windows": {
+              "20": {
+                "source": -30.262088609844383,
+                "dry": -42.707204827553596,
+                "wet": -44.0271954406068,
+                "combined": -39.55701203224167
+              },
+              "25": {
+                "source": -30.394353146055387,
+                "dry": -42.830497628902975,
+                "wet": -44.50263719600122,
+                "combined": -39.96401653264622
+              },
+              "50": {
+                "source": -30.159159828499966,
+                "dry": -42.614382724529456,
+                "wet": -44.669041035299,
+                "combined": -40.054656440244656
+              },
+              "100": {
+                "source": -30.024477635819203,
+                "dry": -42.50111862874287,
+                "wet": -44.39038492832799,
+                "combined": -39.95904037507305
+              }
+            }
+          },
+          {
+            "source_seconds": 129.375,
+            "player_seconds": 18.575,
+            "windows": {
+              "20": {
+                "source": -29.45338107324031,
+                "dry": -42.13879703152588,
+                "wet": -43.33383140076017,
+                "combined": -39.782641290722665
+              },
+              "25": {
+                "source": -29.551902445251127,
+                "dry": -42.23286479166341,
+                "wet": -43.40207202871455,
+                "combined": -39.6324379535464
+              },
+              "50": {
+                "source": -29.502992720683814,
+                "dry": -42.194086732316336,
+                "wet": -43.46385888401065,
+                "combined": -39.77987949454335
+              },
+              "100": {
+                "source": -29.897084929972305,
+                "dry": -42.62915802554819,
+                "wet": -43.749451492870804,
+                "combined": -40.28734484008172
+              }
+            }
+          },
+          {
+            "source_seconds": 129.4,
+            "player_seconds": 18.6,
+            "windows": {
+              "20": {
+                "source": -29.00486916680012,
+                "dry": -41.99506458561693,
+                "wet": -43.52983005558879,
+                "combined": -40.68528969018844
+              },
+              "25": {
+                "source": -29.20098456009078,
+                "dry": -42.19487192985295,
+                "wet": -42.97371899333268,
+                "combined": -40.62573009077588
+              },
+              "50": {
+                "source": -29.64992892342248,
+                "dry": -42.64398376584185,
+                "wet": -42.99096247103144,
+                "combined": -40.533209632862196
+              },
+              "100": {
+                "source": -29.702196763286732,
+                "dry": -42.71944810291953,
+                "wet": -43.45346920895811,
+                "combined": -40.658539880478315
+              }
+            }
+          },
+          {
+            "source_seconds": 129.425,
+            "player_seconds": 18.625,
+            "windows": {
+              "20": {
+                "source": -30.03656758949581,
+                "dry": -43.447427600821996,
+                "wet": -43.05941345217705,
+                "combined": -41.20404494344456
+              },
+              "25": {
+                "source": -30.205276585496257,
+                "dry": -43.61288639775325,
+                "wet": -43.26799384098938,
+                "combined": -41.55217851696108
+              },
+              "50": {
+                "source": -29.910979082081134,
+                "dry": -43.317221921385155,
+                "wet": -43.443104329932424,
+                "combined": -41.761257743328564
+              },
+              "100": {
+                "source": -29.936685161751978,
+                "dry": -43.348468806481826,
+                "wet": -43.606640603685314,
+                "combined": -41.339970959924266
+              }
+            }
+          },
+          {
+            "source_seconds": 129.45,
+            "player_seconds": 18.65,
+            "windows": {
+              "20": {
+                "source": -30.46849621922387,
+                "dry": -44.43754140316324,
+                "wet": -44.114761337315755,
+                "combined": -42.6585484916512
+              },
+              "25": {
+                "source": -30.230657854689266,
+                "dry": -44.19467754325818,
+                "wet": -44.55527296713477,
+                "combined": -42.86671627905185
+              },
+              "50": {
+                "source": -30.243722359333717,
+                "dry": -44.18978450488598,
+                "wet": -44.32424937588327,
+                "combined": -42.33159131407794
+              },
+              "100": {
+                "source": -30.19953754734315,
+                "dry": -44.15100252736874,
+                "wet": -44.23818917184185,
+                "combined": -42.1485846202378
+              }
+            }
+          },
+          {
+            "source_seconds": 129.475,
+            "player_seconds": 18.675,
+            "windows": {
+              "20": {
+                "source": -30.471722146242996,
+                "dry": -45.15553486797466,
+                "wet": -45.26055121726996,
+                "combined": -42.90615249617221
+              },
+              "25": {
+                "source": -30.63663675795283,
+                "dry": -45.30275228781559,
+                "wet": -45.14654224093021,
+                "combined": -42.478392333041924
+              },
+              "50": {
+                "source": -30.508641943940052,
+                "dry": -45.18382523999244,
+                "wet": -45.212202501944645,
+                "combined": -42.57386815294322
+              },
+              "100": {
+                "source": -30.15593114673919,
+                "dry": -44.84888803862699,
+                "wet": -44.795759167472056,
+                "combined": -42.19181367110323
+              }
+            }
+          },
+          {
+            "source_seconds": 129.5,
+            "player_seconds": 18.7,
+            "windows": {
+              "20": {
+                "source": -29.647214507022134,
+                "dry": -45.15952675778011,
+                "wet": -45.42243727665213,
+                "combined": -41.66846404551422
+              },
+              "25": {
+                "source": -30.04408834089277,
+                "dry": -45.564564661393746,
+                "wet": -45.2436499350419,
+                "combined": -42.03041944884667
+              },
+              "50": {
+                "source": -30.069879498206692,
+                "dry": -45.62623182006046,
+                "wet": -45.3247661117847,
+                "combined": -42.05639484639221
+              },
+              "100": {
+                "source": -30.24958756507003,
+                "dry": -45.78005869406613,
+                "wet": -45.09071187472573,
+                "combined": -42.11863560716638
+              }
+            }
+          },
+          {
+            "source_seconds": 129.525,
+            "player_seconds": 18.725,
+            "windows": {
+              "20": {
+                "source": -29.905215734408298,
+                "dry": -46.43689659093839,
+                "wet": -44.87157299446366,
+                "combined": -41.484137568425425
+              },
+              "25": {
+                "source": -29.792065899001088,
+                "dry": -46.31491539223292,
+                "wet": -45.226993565707225,
+                "combined": -41.62711372635356
+              },
+              "50": {
+                "source": -30.005119649777235,
+                "dry": -46.47137433750008,
+                "wet": -44.97252757449271,
+                "combined": -41.70662617193436
+              },
+              "100": {
+                "source": -30.515693447955613,
+                "dry": -46.86634928755155,
+                "wet": -45.0005571688999,
+                "combined": -42.064807222650806
+              }
+            }
+          },
+          {
+            "source_seconds": 129.55,
+            "player_seconds": 18.75,
+            "windows": {
+              "20": {
+                "source": -31.493715782352837,
+                "dry": -49.23486510852088,
+                "wet": -44.52849772758987,
+                "combined": -42.1853175623485
+              },
+              "25": {
+                "source": -31.203258596661165,
+                "dry": -48.91267110396922,
+                "wet": -44.64934472099729,
+                "combined": -42.11007990163384
+              },
+              "50": {
+                "source": -31.012562124775727,
+                "dry": -48.60878122963341,
+                "wet": -44.69887881254223,
+                "combined": -42.07323592549074
+              },
+              "100": {
+                "source": -30.82478532576372,
+                "dry": -48.140467683038956,
+                "wet": -44.81341313447161,
+                "combined": -42.25244639451592
+              }
+            }
+          },
+          {
+            "source_seconds": 129.575,
+            "player_seconds": 18.775,
+            "windows": {
+              "20": {
+                "source": -32.020472275683616,
+                "dry": -51.143241038082635,
+                "wet": -44.76956540326748,
+                "combined": -43.05437898711669
+              },
+              "25": {
+                "source": -31.98669176942216,
+                "dry": -51.08928621662333,
+                "wet": -44.42422306109552,
+                "combined": -42.74163937044038
+              },
+              "50": {
+                "source": -31.836003111004988,
+                "dry": -50.88641277286061,
+                "wet": -44.65992279644209,
+                "combined": -42.87686114959187
+              },
+              "100": {
+                "source": -31.000033693483676,
+                "dry": -49.87438143929695,
+                "wet": -44.70980023396884,
+                "combined": -42.657170465472625
+              }
+            }
+          },
+          {
+            "source_seconds": 129.6,
+            "player_seconds": 18.8,
+            "windows": {
+              "20": {
+                "source": -30.89114929104997,
+                "dry": -51.52058032372832,
+                "wet": -44.42308060736032,
+                "combined": -43.0312808002148
+              },
+              "25": {
+                "source": -30.8822898022688,
+                "dry": -51.490589711153746,
+                "wet": -44.885962257291055,
+                "combined": -43.55477959037582
+              },
+              "50": {
+                "source": -30.987541299997364,
+                "dry": -51.667902429313585,
+                "wet": -44.720749189297784,
+                "combined": -43.331997569393906
+              },
+              "100": {
+                "source": -30.723996926055754,
+                "dry": -51.42125256188157,
+                "wet": -44.612183395728664,
+                "combined": -43.0420843280952
+              }
+            }
+          },
+          {
+            "source_seconds": 129.625,
+            "player_seconds": 18.825,
+            "windows": {
+              "20": {
+                "source": -30.32702715718276,
+                "dry": -52.5053797171024,
+                "wet": -44.63499410922667,
+                "combined": -43.33966503844281
+              },
+              "25": {
+                "source": -30.220543360053963,
+                "dry": -52.40895754251306,
+                "wet": -44.78781565323111,
+                "combined": -43.41723068633645
+              },
+              "50": {
+                "source": -29.83946108783899,
+                "dry": -52.031332994595644,
+                "wet": -44.56496306510063,
+                "combined": -43.21384270913775
+              },
+              "100": {
+                "source": -30.096402683357017,
+                "dry": -52.34003379345868,
+                "wet": -44.4415264656794,
+                "combined": -43.17059010731879
+              }
+            }
+          },
+          {
+            "source_seconds": 129.65,
+            "player_seconds": 18.85,
+            "windows": {
+              "20": {
+                "source": -29.013676070646003,
+                "dry": -52.89707431915693,
+                "wet": -44.267587610439605,
+                "combined": -43.159877606476215
+              },
+              "25": {
+                "source": -28.959157444598482,
+                "dry": -52.78026830519383,
+                "wet": -43.70735837275625,
+                "combined": -42.52629803795123
+              },
+              "50": {
+                "source": -29.357353089354067,
+                "dry": -53.13557785526915,
+                "wet": -44.1791765708237,
+                "combined": -43.014967085492735
+              },
+              "100": {
+                "source": -29.56336135373256,
+                "dry": -53.131645098080476,
+                "wet": -44.56253811998639,
+                "combined": -43.387149522715774
+              }
+            }
+          },
+          {
+            "source_seconds": 129.675,
+            "player_seconds": 18.875,
+            "windows": {
+              "20": {
+                "source": -29.063443766582186,
+                "dry": -54.45088767073792,
+                "wet": -44.704038107776995,
+                "combined": -43.67065889667601
+              },
+              "25": {
+                "source": -29.42493358256602,
+                "dry": -54.8087075453586,
+                "wet": -45.00146687240849,
+                "combined": -44.07627306841566
+              },
+              "50": {
+                "source": -29.303770177148486,
+                "dry": -54.6089325605445,
+                "wet": -44.56011452811924,
+                "combined": -43.56766069692918
+              },
+              "100": {
+                "source": -29.23771240988183,
+                "dry": -54.32257281105482,
+                "wet": -44.7961712923162,
+                "combined": -43.70207702416808
+              }
+            }
+          },
+          {
+            "source_seconds": 129.7,
+            "player_seconds": 18.9,
+            "windows": {
+              "20": {
+                "source": -29.079297898435858,
+                "dry": -55.95413952840518,
+                "wet": -45.15886926311136,
+                "combined": -44.10430344937971
+              },
+              "25": {
+                "source": -29.139309787510904,
+                "dry": -56.027826356695584,
+                "wet": -45.3939159915283,
+                "combined": -44.38837172397791
+              },
+              "50": {
+                "source": -29.121279455967688,
+                "dry": -55.961326918247,
+                "wet": -45.51557039911155,
+                "combined": -44.51870936594556
+              },
+              "100": {
+                "source": -28.953145446203536,
+                "dry": -55.633627946770744,
+                "wet": -45.14653454907755,
+                "combined": -44.13059389203762
+              }
+            }
+          },
+          {
+            "source_seconds": 129.725,
+            "player_seconds": 18.925,
+            "windows": {
+              "20": {
+                "source": -28.608131584026623,
+                "dry": -56.97927730788321,
+                "wet": -45.97300513425763,
+                "combined": -44.910393878542294
+              },
+              "25": {
+                "source": -28.454157799726552,
+                "dry": -56.82200234733258,
+                "wet": -45.72765514353301,
+                "combined": -44.6061541411412
+              },
+              "50": {
+                "source": -28.6287256920207,
+                "dry": -56.977285462101655,
+                "wet": -45.82468501037182,
+                "combined": -44.77751627756736
+              },
+              "100": {
+                "source": -29.035137727601157,
+                "dry": -57.14543992894867,
+                "wet": -45.80769083681255,
+                "combined": -44.86308276158377
+              }
+            }
+          },
+          {
+            "source_seconds": 129.75,
+            "player_seconds": 18.95,
+            "windows": {
+              "20": {
+                "source": -29.304176786066716,
+                "dry": -59.27708119512384,
+                "wet": -46.08483808849236,
+                "combined": -45.23083241473279
+              },
+              "25": {
+                "source": -29.189043400437832,
+                "dry": -59.19405261917852,
+                "wet": -46.2388255215391,
+                "combined": -45.4189349505825
+              },
+              "50": {
+                "source": -28.95067143077047,
+                "dry": -58.77867528829511,
+                "wet": -46.12088632771191,
+                "combined": -45.23713334710714
+              },
+              "100": {
+                "source": -28.758004439638576,
+                "dry": -58.484697520675525,
+                "wet": -46.17703710541048,
+                "combined": -45.228653819944725
+              }
+            }
+          },
+          {
+            "source_seconds": 129.775,
+            "player_seconds": 18.975,
+            "windows": {
+              "20": {
+                "source": -28.748167623118665,
+                "dry": -60.64700932147004,
+                "wet": -46.04034072742452,
+                "combined": -45.19603014622612
+              },
+              "25": {
+                "source": -28.990146781363695,
+                "dry": -60.8554456818603,
+                "wet": -46.46144071830891,
+                "combined": -45.67847532436752
+              },
+              "50": {
+                "source": -28.891249876918508,
+                "dry": -60.81277040136344,
+                "wet": -46.56052058716341,
+                "combined": -45.73214573542132
+              },
+              "100": {
+                "source": -28.489560120031697,
+                "dry": -60.0514844499006,
+                "wet": -46.39136035461033,
+                "combined": -45.518888494545
+              }
+            }
+          },
+          {
+            "source_seconds": 129.8,
+            "player_seconds": 19.0,
+            "windows": {
+              "20": {
+                "source": -28.065627773902154,
+                "dry": -61.82554451672612,
+                "wet": -47.00120012900082,
+                "combined": -46.10889865167341
+              },
+              "25": {
+                "source": -27.928481850543804,
+                "dry": -61.74073845558894,
+                "wet": -46.827106412164014,
+                "combined": -45.889367739859495
+              },
+              "50": {
+                "source": -28.07274198642564,
+                "dry": -61.859623017975565,
+                "wet": -46.6798045766991,
+                "combined": -45.82019894914747
+              },
+              "100": {
+                "source": -28.335261990864076,
+                "dry": -62.059574326586564,
+                "wet": -46.90753837588288,
+                "combined": -46.10754188629698
+              }
+            }
+          },
+          {
+            "source_seconds": 129.825,
+            "player_seconds": 19.025,
+            "windows": {
+              "20": {
+                "source": -27.839725643461794,
+                "dry": -64.03981727512868,
+                "wet": -47.82831770287306,
+                "combined": -47.05978640628298
+              },
+              "25": {
+                "source": -27.78861713873195,
+                "dry": -63.90809385069622,
+                "wet": -47.18225067973072,
+                "combined": -46.40506925940049
+              },
+              "50": {
+                "source": -27.84244182254215,
+                "dry": -63.8153246412088,
+                "wet": -47.28471113276858,
+                "combined": -46.51848327068015
+              },
+              "100": {
+                "source": -27.8304488654757,
+                "dry": -63.51908123488079,
+                "wet": -47.42660424039218,
+                "combined": -46.68500369338041
+              }
+            }
+          },
+          {
+            "source_seconds": 129.85,
+            "player_seconds": 19.05,
+            "windows": {
+              "20": {
+                "source": -27.68355976569233,
+                "dry": -66.53068488618332,
+                "wet": -47.96528157461192,
+                "combined": -47.421447214558086
+              },
+              "25": {
+                "source": -27.737220153032197,
+                "dry": -66.49189649711907,
+                "wet": -48.25594737631198,
+                "combined": -47.78367615229602
+              },
+              "50": {
+                "source": -27.600961975845838,
+                "dry": -66.2385075727584,
+                "wet": -48.32904802777442,
+                "combined": -47.76594533073836
+              },
+              "100": {
+                "source": -27.51646052107688,
+                "dry": -65.66286750952605,
+                "wet": -47.94978084949154,
+                "combined": -47.338676058573164
+              }
+            }
+          },
+          {
+            "source_seconds": 129.875,
+            "player_seconds": 19.075,
+            "windows": {
+              "20": {
+                "source": -27.397042382128134,
+                "dry": -69.21755099258677,
+                "wet": -48.453280794376724,
+                "combined": -48.06872869304091
+              },
+              "25": {
+                "source": -27.161672026590455,
+                "dry": -69.09999216109236,
+                "wet": -48.87770038077703,
+                "combined": -48.44930197053826
+              },
+              "50": {
+                "source": -27.213248262944386,
+                "dry": -68.94393572435503,
+                "wet": -48.73544333188222,
+                "combined": -48.350697476716704
+              },
+              "100": {
+                "source": -27.32676789533262,
+                "dry": -68.31388063663377,
+                "wet": -48.69751786287165,
+                "combined": -48.25232497953979
+              }
+            }
+          },
+          {
+            "source_seconds": 129.9,
+            "player_seconds": 19.1,
+            "windows": {
+              "20": {
+                "source": -27.058088894355457,
+                "dry": -72.93298778663137,
+                "wet": -49.31854062871327,
+                "combined": -49.04052520393701
+              },
+              "25": {
+                "source": -27.017322618037987,
+                "dry": -72.73879483408771,
+                "wet": -49.131525112484766,
+                "combined": -48.834622185834284
+              },
+              "50": {
+                "source": -27.068861930236572,
+                "dry": -72.4327278586514,
+                "wet": -49.10017266631978,
+                "combined": -48.80012689166553
+              },
+              "100": {
+                "source": -27.196327594633996,
+                "dry": -71.3389819180698,
+                "wet": -49.2820313767374,
+                "combined": -48.98839976742891
+              }
+            }
+          },
+          {
+            "source_seconds": 129.925,
+            "player_seconds": 19.125,
+            "windows": {
+              "20": {
+                "source": -27.083258033812008,
+                "dry": -77.87084777471142,
+                "wet": -49.98064452918349,
+                "combined": -49.82388368097198
+              },
+              "25": {
+                "source": -27.249434883271455,
+                "dry": -77.91981646501937,
+                "wet": -49.58488936925878,
+                "combined": -49.44097048647575
+              },
+              "50": {
+                "source": -27.179472595637545,
+                "dry": -77.11997805218168,
+                "wet": -49.90745161049897,
+                "combined": -49.73612713669523
+              },
+              "100": {
+                "source": -27.078349185563813,
+                "dry": -75.1051916096567,
+                "wet": -49.95543427071166,
+                "combined": -49.74138217963903
+              }
+            }
+          },
+          {
+            "source_seconds": 129.95,
+            "player_seconds": 19.15,
+            "windows": {
+              "20": {
+                "source": -26.791387309560854,
+                "dry": -84.24238865078003,
+                "wet": -50.892770669271705,
+                "combined": -50.81712145288682
+              },
+              "25": {
+                "source": -27.086594426167,
+                "dry": -84.47057459280234,
+                "wet": -51.43274738277951,
+                "combined": -51.35453431838403
+              },
+              "50": {
+                "source": -27.08785721138396,
+                "dry": -83.3534960100254,
+                "wet": -51.021480792139336,
+                "combined": -50.94475456646745
+              },
+              "100": {
+                "source": -26.88031552903034,
+                "dry": -79.98256230347393,
+                "wet": -50.66740816139779,
+                "combined": -50.55621201229735
+              }
+            }
+          }
+        ],
+        "proof": {
+          "send_policy": "pre_ending_fade",
+          "local_send_fade": {
+            "center_source_seconds": 129.45,
+            "width_seconds": 0.5
+          },
+          "local_dry_alignment": {
+            "center_source_seconds": 129.45,
+            "shift_seconds": 0.1,
+            "width_seconds": 0.5
+          },
+          "wet_gain": 0.1981443461969509,
+          "rt60": 5.5,
+          "cleanup_peak_dbfs": -147.523510340953,
+          "dry_stop_max_sample_delta": 0.0010907014588582456,
+          "post_stop_first_second_dbfs": -54.46262691299487,
+          "post_stop_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -51.76126651513738,
+              -53.536049884610875,
+              -56.337417305506776,
+              -60.48156082934212,
+              -62.86855984791014,
+              -64.70795306270357,
+              -68.91807319504791,
+              -70.81761529984927,
+              -74.29161450553381,
+              -77.89938304298678,
+              -77.70334644277592,
+              -82.29526725260718,
+              -85.44386179838477,
+              -86.1043203022423,
+              -89.77950646937657,
+              -93.43974534485318,
+              -95.204696463571,
+              -96.88942752724353,
+              -100.93537441871564,
+              -103.87718161013241,
+              -105.37663155139869,
+              -108.33380764432015,
+              -111.46009141587737,
+              -113.5540390085483,
+              -117.11341367146636,
+              -119.89318239135002,
+              -122.39036364657113,
+              -125.57891760750536,
+              -127.92527371472107,
+              -130.65315834496474,
+              -135.19155361377588,
+              -137.07433088866145,
+              -138.48214090185894,
+              -142.13189187407,
+              -144.83745193732398,
+              -146.88725544863146,
+              -149.4077428625656,
+              -152.72569743240928,
+              -155.2839497382212,
+              -157.67181370174646
+            ]
+          },
+          "prefix_exact": true,
+          "dry_after_window_exact": true,
+          "send_zero_after_window": true
+        }
+      },
+      "T2": {
+        "rows": [
+          {
+            "source_seconds": 129.25,
+            "player_seconds": 18.45,
+            "windows": {
+              "20": {
+                "source": -28.617471304466463,
+                "dry": -40.306268175473974,
+                "wet": -43.91296399268587,
+                "combined": -37.56630110222566
+              },
+              "25": {
+                "source": -28.773581525764147,
+                "dry": -40.463982372085205,
+                "wet": -43.8903093639407,
+                "combined": -37.6050639218998
+              },
+              "50": {
+                "source": -28.97858498596272,
+                "dry": -40.64547122004839,
+                "wet": -44.14090703420483,
+                "combined": -37.81609379884793
+              },
+              "100": {
+                "source": -29.176748183263058,
+                "dry": -40.76552478520948,
+                "wet": -44.12071409629091,
+                "combined": -37.763845760674414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.275,
+            "player_seconds": 18.475,
+            "windows": {
+              "20": {
+                "source": -29.60263450415999,
+                "dry": -41.827141087288254,
+                "wet": -45.14572423826942,
+                "combined": -38.98431383542812
+              },
+              "25": {
+                "source": -29.950396476025283,
+                "dry": -42.1615670602472,
+                "wet": -45.53896922021163,
+                "combined": -39.60079282095853
+              },
+              "50": {
+                "source": -29.760156779038812,
+                "dry": -41.937027342729436,
+                "wet": -45.30879479288317,
+                "combined": -39.16115944138107
+              },
+              "100": {
+                "source": -29.58419875365336,
+                "dry": -41.68145508324307,
+                "wet": -45.031559067083286,
+                "combined": -38.91714105108801
+              }
+            }
+          },
+          {
+            "source_seconds": 129.3,
+            "player_seconds": 18.5,
+            "windows": {
+              "20": {
+                "source": -30.55729692034404,
+                "dry": -43.3267420455698,
+                "wet": -46.65140877644032,
+                "combined": -40.727214058924886
+              },
+              "25": {
+                "source": -30.41244717041532,
+                "dry": -43.171262141787054,
+                "wet": -46.23991220994927,
+                "combined": -40.19566126517483
+              },
+              "50": {
+                "source": -30.288163906729718,
+                "dry": -43.0446565339446,
+                "wet": -46.153268707783326,
+                "combined": -40.3957596988066
+              },
+              "100": {
+                "source": -30.167587595689625,
+                "dry": -42.82396939623533,
+                "wet": -45.36664182108897,
+                "combined": -39.87966298898343
+              }
+            }
+          },
+          {
+            "source_seconds": 129.325,
+            "player_seconds": 18.525,
+            "windows": {
+              "20": {
+                "source": -30.707532796050003,
+                "dry": -44.03478014333143,
+                "wet": -45.842263514307255,
+                "combined": -41.11591752359025
+              },
+              "25": {
+                "source": -30.44279997065661,
+                "dry": -43.796955276405654,
+                "wet": -45.79153388893566,
+                "combined": -41.05002292188982
+              },
+              "50": {
+                "source": -30.617236075752153,
+                "dry": -43.939788869573704,
+                "wet": -45.42526977184412,
+                "combined": -40.74106901777134
+              },
+              "100": {
+                "source": -30.22318288845741,
+                "dry": -43.53078221725299,
+                "wet": -45.22069115605491,
+                "combined": -40.561686374841344
+              }
+            }
+          },
+          {
+            "source_seconds": 129.35,
+            "player_seconds": 18.55,
+            "windows": {
+              "20": {
+                "source": -30.262088609844383,
+                "dry": -44.190307568324705,
+                "wet": -43.81083207464911,
+                "combined": -40.1879497668181
+              },
+              "25": {
+                "source": -30.394353146055387,
+                "dry": -44.299784379157344,
+                "wet": -44.284953964452505,
+                "combined": -40.61867202436759
+              },
+              "50": {
+                "source": -30.159159828499966,
+                "dry": -44.078261900798154,
+                "wet": -44.45339883918727,
+                "combined": -40.7342051415612
+              },
+              "100": {
+                "source": -30.024477635819203,
+                "dry": -43.88972580101551,
+                "wet": -44.15678419816552,
+                "combined": -40.573260531469614
+              }
+            }
+          },
+          {
+            "source_seconds": 129.375,
+            "player_seconds": 18.575,
+            "windows": {
+              "20": {
+                "source": -29.45338107324031,
+                "dry": -43.81079894383927,
+                "wet": -43.04576012065526,
+                "combined": -40.41003626825385
+              },
+              "25": {
+                "source": -29.551902445251127,
+                "dry": -43.89988480731021,
+                "wet": -43.1381407337399,
+                "combined": -40.283719095596524
+              },
+              "50": {
+                "source": -29.502992720683814,
+                "dry": -43.84023326135741,
+                "wet": -43.17626532668668,
+                "combined": -40.41169555572985
+              },
+              "100": {
+                "source": -29.897084929972305,
+                "dry": -44.205290799398014,
+                "wet": -43.48585749471204,
+                "combined": -40.88467837839285
+              }
+            }
+          },
+          {
+            "source_seconds": 129.4,
+            "player_seconds": 18.6,
+            "windows": {
+              "20": {
+                "source": -29.00486916680012,
+                "dry": -43.705934057978205,
+                "wet": -43.227559134376406,
+                "combined": -41.327738385273676
+              },
+              "25": {
+                "source": -29.20098456009078,
+                "dry": -43.903633915719986,
+                "wet": -42.6457216433719,
+                "combined": -41.13394933055262
+              },
+              "50": {
+                "source": -29.64992892342248,
+                "dry": -44.33614746928807,
+                "wet": -42.69508453555115,
+                "combined": -41.040552874431356
+              },
+              "100": {
+                "source": -29.702196763286732,
+                "dry": -44.334995628601305,
+                "wet": -43.1779469824349,
+                "combined": -41.183029840536264
+              }
+            }
+          },
+          {
+            "source_seconds": 129.425,
+            "player_seconds": 18.625,
+            "windows": {
+              "20": {
+                "source": -30.03656758949581,
+                "dry": -45.03548464089782,
+                "wet": -42.758991867987355,
+                "combined": -41.53880138261641
+              },
+              "25": {
+                "source": -30.205276585496257,
+                "dry": -45.201065959210574,
+                "wet": -42.98171679426808,
+                "combined": -41.89781872311134
+              },
+              "50": {
+                "source": -29.910979082081134,
+                "dry": -44.89345748973506,
+                "wet": -43.179629289598616,
+                "combined": -42.12159262706799
+              },
+              "100": {
+                "source": -29.936685161751978,
+                "dry": -44.8751173281873,
+                "wet": -43.3312066065471,
+                "combined": -41.72564255514452
+              }
+            }
+          },
+          {
+            "source_seconds": 129.45,
+            "player_seconds": 18.65,
+            "windows": {
+              "20": {
+                "source": -30.46849621922387,
+                "dry": -45.7306389879621,
+                "wet": -43.947766326046235,
+                "combined": -42.807055334979836
+              },
+              "25": {
+                "source": -30.230657854689266,
+                "dry": -45.49010407770598,
+                "wet": -44.4070639208007,
+                "combined": -43.11270813102857
+              },
+              "50": {
+                "source": -30.243722359333717,
+                "dry": -45.490579529277284,
+                "wet": -44.07676091051933,
+                "combined": -42.53942034918002
+              },
+              "100": {
+                "source": -30.19953754734315,
+                "dry": -45.42893857622411,
+                "wet": -43.9320569255835,
+                "combined": -42.28632322921493
+              }
+            }
+          },
+          {
+            "source_seconds": 129.475,
+            "player_seconds": 18.675,
+            "windows": {
+              "20": {
+                "source": -30.471722146242996,
+                "dry": -46.00320623139811,
+                "wet": -44.82059289890963,
+                "combined": -42.706315402798054
+              },
+              "25": {
+                "source": -30.63663675795283,
+                "dry": -46.16201861837204,
+                "wet": -44.69288488189058,
+                "combined": -42.308758302698294
+              },
+              "50": {
+                "source": -30.508641943940052,
+                "dry": -46.03985389143488,
+                "wet": -44.8427415191461,
+                "combined": -42.45754935436732
+              },
+              "100": {
+                "source": -30.15593114673919,
+                "dry": -45.70286131055917,
+                "wet": -44.31494606020782,
+                "combined": -41.985074166348575
+              }
+            }
+          },
+          {
+            "source_seconds": 129.5,
+            "player_seconds": 18.7,
+            "windows": {
+              "20": {
+                "source": -29.647214507022134,
+                "dry": -45.47734920619512,
+                "wet": -44.727060872174455,
+                "combined": -41.23235947196648
+              },
+              "25": {
+                "source": -30.04408834089277,
+                "dry": -45.8779818510952,
+                "wet": -44.603900959850165,
+                "combined": -41.56060154650887
+              },
+              "50": {
+                "source": -30.069879498206692,
+                "dry": -45.92605501407543,
+                "wet": -44.566956157219565,
+                "combined": -41.493543911048846
+              },
+              "100": {
+                "source": -30.24958756507003,
+                "dry": -46.12937073220843,
+                "wet": -44.37166515757803,
+                "combined": -41.584240910906765
+              }
+            }
+          },
+          {
+            "source_seconds": 129.525,
+            "player_seconds": 18.725,
+            "windows": {
+              "20": {
+                "source": -29.905215734408298,
+                "dry": -46.130123269338654,
+                "wet": -43.87643504762813,
+                "combined": -40.65668694886877
+              },
+              "25": {
+                "source": -29.792065899001088,
+                "dry": -46.01534000760762,
+                "wet": -44.126962462406865,
+                "combined": -40.7331508648597
+              },
+              "50": {
+                "source": -30.005119649777235,
+                "dry": -46.220771597021304,
+                "wet": -43.94672279524662,
+                "combined": -40.85748389675244
+              },
+              "100": {
+                "source": -30.515693447955613,
+                "dry": -46.73381133239501,
+                "wet": -44.01236455818405,
+                "combined": -41.225742360347304
+              }
+            }
+          },
+          {
+            "source_seconds": 129.55,
+            "player_seconds": 18.75,
+            "windows": {
+              "20": {
+                "source": -31.493715782352837,
+                "dry": -48.25001254591442,
+                "wet": -43.37225221845295,
+                "combined": -41.0740256337491
+              },
+              "25": {
+                "source": -31.203258596661165,
+                "dry": -47.94803829467541,
+                "wet": -43.46284379551187,
+                "combined": -40.98779405842692
+              },
+              "50": {
+                "source": -31.012562124775727,
+                "dry": -47.72693753918609,
+                "wet": -43.520641420007124,
+                "combined": -40.97349964291881
+              },
+              "100": {
+                "source": -30.82478532576372,
+                "dry": -47.49059278050968,
+                "wet": -43.57889402616789,
+                "combined": -41.13125278121068
+              }
+            }
+          },
+          {
+            "source_seconds": 129.575,
+            "player_seconds": 18.775,
+            "windows": {
+              "20": {
+                "source": -32.020472275683616,
+                "dry": -49.48422898055463,
+                "wet": -43.28090817997659,
+                "combined": -41.50343521071761
+              },
+              "25": {
+                "source": -31.98669176942216,
+                "dry": -49.44292673458683,
+                "wet": -43.02751345755176,
+                "combined": -41.307896079600354
+              },
+              "50": {
+                "source": -31.836003111004988,
+                "dry": -49.29266371455806,
+                "wet": -43.23980082487004,
+                "combined": -41.42344743041865
+              },
+              "100": {
+                "source": -31.000033693483676,
+                "dry": -48.493959867696425,
+                "wet": -43.34276376402981,
+                "combined": -41.26087891883199
+              }
+            }
+          },
+          {
+            "source_seconds": 129.6,
+            "player_seconds": 18.8,
+            "windows": {
+              "20": {
+                "source": -30.89114929104997,
+                "dry": -49.25645789232624,
+                "wet": -42.91883524352904,
+                "combined": -41.317125874609715
+              },
+              "25": {
+                "source": -30.8822898022688,
+                "dry": -49.238101618042634,
+                "wet": -43.347915784213015,
+                "combined": -41.78519590652688
+              },
+              "50": {
+                "source": -30.987541299997364,
+                "dry": -49.42613812011559,
+                "wet": -43.171885839365416,
+                "combined": -41.56863054769603
+              },
+              "100": {
+                "source": -30.723996926055754,
+                "dry": -49.32348832411541,
+                "wet": -43.05383765394585,
+                "combined": -41.327533045757825
+              }
+            }
+          },
+          {
+            "source_seconds": 129.625,
+            "player_seconds": 18.825,
+            "windows": {
+              "20": {
+                "source": -30.32702715718276,
+                "dry": -49.780604499775976,
+                "wet": -42.9113713372023,
+                "combined": -41.35583448957753
+              },
+              "25": {
+                "source": -30.220543360053963,
+                "dry": -49.687553051920446,
+                "wet": -43.0422608037441,
+                "combined": -41.37698070894839
+              },
+              "50": {
+                "source": -29.83946108783899,
+                "dry": -49.35453328017384,
+                "wet": -42.87551145868125,
+                "combined": -41.23369124927977
+              },
+              "100": {
+                "source": -30.096402683357017,
+                "dry": -49.79102515554132,
+                "wet": -42.66160047046205,
+                "combined": -41.15752718509002
+              }
+            }
+          },
+          {
+            "source_seconds": 129.65,
+            "player_seconds": 18.85,
+            "windows": {
+              "20": {
+                "source": -29.013676070646003,
+                "dry": -49.89919288871465,
+                "wet": -42.38965772715193,
+                "combined": -40.92352717722412
+              },
+              "25": {
+                "source": -28.959157444598482,
+                "dry": -49.79248264824761,
+                "wet": -41.81207250205915,
+                "combined": -40.36805177743975
+              },
+              "50": {
+                "source": -29.357353089354067,
+                "dry": -50.18940490019969,
+                "wet": -42.2050177042281,
+                "combined": -40.78199588671325
+              },
+              "100": {
+                "source": -29.56336135373256,
+                "dry": -50.35307499448762,
+                "wet": -42.67095426384233,
+                "combined": -41.22238707070419
+              }
+            }
+          },
+          {
+            "source_seconds": 129.675,
+            "player_seconds": 18.875,
+            "windows": {
+              "20": {
+                "source": -29.063443766582186,
+                "dry": -51.466157149937466,
+                "wet": -42.58233520784269,
+                "combined": -41.276064990961636
+              },
+              "25": {
+                "source": -29.42493358256602,
+                "dry": -51.82633774070833,
+                "wet": -42.83348637544268,
+                "combined": -41.620673619074736
+              },
+              "50": {
+                "source": -29.303770177148486,
+                "dry": -51.65197959088318,
+                "wet": -42.47560007799308,
+                "combined": -41.2111122392158
+              },
+              "100": {
+                "source": -29.23771240988183,
+                "dry": -51.47739021224156,
+                "wet": -42.736161399262556,
+                "combined": -41.39268869184784
+              }
+            }
+          },
+          {
+            "source_seconds": 129.7,
+            "player_seconds": 18.9,
+            "windows": {
+              "20": {
+                "source": -29.079297898435858,
+                "dry": -53.31525825758984,
+                "wet": -42.881965367731915,
+                "combined": -41.60429447852959
+              },
+              "25": {
+                "source": -29.139309787510904,
+                "dry": -53.39415709022229,
+                "wet": -43.23309162478524,
+                "combined": -41.968375892707215
+              },
+              "50": {
+                "source": -29.121279455967688,
+                "dry": -53.316543312026155,
+                "wet": -43.34143554276678,
+                "combined": -42.103529863461304
+              },
+              "100": {
+                "source": -28.953145446203536,
+                "dry": -52.97302215100536,
+                "wet": -42.88059969036338,
+                "combined": -41.68404385473728
+              }
+            }
+          },
+          {
+            "source_seconds": 129.725,
+            "player_seconds": 18.925,
+            "windows": {
+              "20": {
+                "source": -28.608131584026623,
+                "dry": -54.9363212816775,
+                "wet": -43.55944302370916,
+                "combined": -42.437015695574786
+              },
+              "25": {
+                "source": -28.454157799726552,
+                "dry": -54.77217710160245,
+                "wet": -43.2728240783199,
+                "combined": -42.106830916760856
+              },
+              "50": {
+                "source": -28.6287256920207,
+                "dry": -54.880892502385386,
+                "wet": -43.327288387712876,
+                "combined": -42.21484164457517
+              },
+              "100": {
+                "source": -29.035137727601157,
+                "dry": -54.8566063617577,
+                "wet": -43.4130248365409,
+                "combined": -42.36225501109497
+              }
+            }
+          },
+          {
+            "source_seconds": 129.75,
+            "player_seconds": 18.95,
+            "windows": {
+              "20": {
+                "source": -29.304176786066716,
+                "dry": -57.88342350927503,
+                "wet": -43.49680605722442,
+                "combined": -42.66943060157398
+              },
+              "25": {
+                "source": -29.189043400437832,
+                "dry": -57.80529500422355,
+                "wet": -43.56565219594704,
+                "combined": -42.778854130782875
+              },
+              "50": {
+                "source": -28.95067143077047,
+                "dry": -57.26467595340122,
+                "wet": -43.48581401801482,
+                "combined": -42.63737523441203
+              },
+              "100": {
+                "source": -28.758004439638576,
+                "dry": -56.73467535794905,
+                "wet": -43.594408205667875,
+                "combined": -42.654344263146
+              }
+            }
+          },
+          {
+            "source_seconds": 129.775,
+            "player_seconds": 18.975,
+            "windows": {
+              "20": {
+                "source": -28.748167623118665,
+                "dry": -59.93422145736179,
+                "wet": -43.25431907406947,
+                "combined": -42.53043834747498
+              },
+              "25": {
+                "source": -28.990146781363695,
+                "dry": -60.125927177141925,
+                "wet": -43.801799413257505,
+                "combined": -43.09745359964548
+              },
+              "50": {
+                "source": -28.891249876918508,
+                "dry": -60.03613163034433,
+                "wet": -43.87904068453458,
+                "combined": -43.14338437397234
+              },
+              "100": {
+                "source": -28.489560120031697,
+                "dry": -58.8980955688729,
+                "wet": -43.667264403939754,
+                "combined": -42.88708684702874
+              }
+            }
+          },
+          {
+            "source_seconds": 129.8,
+            "player_seconds": 19.0,
+            "windows": {
+              "20": {
+                "source": -28.065627773902154,
+                "dry": -61.58180506284217,
+                "wet": -44.165438662861064,
+                "combined": -43.44130434254029
+              },
+              "25": {
+                "source": -27.928481850543804,
+                "dry": -61.49693358060701,
+                "wet": -43.94243011624447,
+                "combined": -43.1889402692276
+              },
+              "50": {
+                "source": -28.07274198642564,
+                "dry": -61.54694361603694,
+                "wet": -43.85662768260953,
+                "combined": -43.15203708118905
+              },
+              "100": {
+                "source": -28.335261990864076,
+                "dry": -61.5103958128154,
+                "wet": -44.095994997234264,
+                "combined": -43.42384834414163
+              }
+            }
+          },
+          {
+            "source_seconds": 129.825,
+            "player_seconds": 19.025,
+            "windows": {
+              "20": {
+                "source": -27.839725643461794,
+                "dry": -64.0329912162481,
+                "wet": -44.95759713671974,
+                "combined": -44.34406277124738
+              },
+              "25": {
+                "source": -27.78861713873195,
+                "dry": -63.89505587535929,
+                "wet": -44.27292343980628,
+                "combined": -43.674605676249534
+              },
+              "50": {
+                "source": -27.84244182254215,
+                "dry": -63.75933071478103,
+                "wet": -44.32435990820658,
+                "combined": -43.72368256862811
+              },
+              "100": {
+                "source": -27.8304488654757,
+                "dry": -63.28780669683083,
+                "wet": -44.50851754299499,
+                "combined": -43.910116845765366
+              }
+            }
+          },
+          {
+            "source_seconds": 129.85,
+            "player_seconds": 19.05,
+            "windows": {
+              "20": {
+                "source": -27.68355976569233,
+                "dry": -66.53068488618332,
+                "wet": -44.95660578236215,
+                "combined": -44.51753217169154
+              },
+              "25": {
+                "source": -27.737220153032197,
+                "dry": -66.49189649711907,
+                "wet": -45.21123290357867,
+                "combined": -44.80962354626749
+              },
+              "50": {
+                "source": -27.600961975845838,
+                "dry": -66.2385075727584,
+                "wet": -45.275839670723784,
+                "combined": -44.82910417026872
+              },
+              "100": {
+                "source": -27.51646052107688,
+                "dry": -65.61996123197662,
+                "wet": -44.91510727173946,
+                "combined": -44.43665112084851
+              }
+            }
+          },
+          {
+            "source_seconds": 129.875,
+            "player_seconds": 19.075,
+            "windows": {
+              "20": {
+                "source": -27.397042382128134,
+                "dry": -69.21755099258677,
+                "wet": -45.288289920359965,
+                "combined": -44.983560492284276
+              },
+              "25": {
+                "source": -27.161672026590455,
+                "dry": -69.09999216109236,
+                "wet": -45.76668429517271,
+                "combined": -45.43384935646219
+              },
+              "50": {
+                "source": -27.213248262944386,
+                "dry": -68.94393572435503,
+                "wet": -45.59905448230477,
+                "combined": -45.29010592765208
+              },
+              "100": {
+                "source": -27.32676789533262,
+                "dry": -68.31388063663377,
+                "wet": -45.45866826883955,
+                "combined": -45.11944372508196
+              }
+            }
+          },
+          {
+            "source_seconds": 129.9,
+            "player_seconds": 19.1,
+            "windows": {
+              "20": {
+                "source": -27.058088894355457,
+                "dry": -72.93298778663137,
+                "wet": -45.78641519348287,
+                "combined": -45.58535590668599
+              },
+              "25": {
+                "source": -27.017322618037987,
+                "dry": -72.73879483408771,
+                "wet": -45.54852597336519,
+                "combined": -45.33658054757812
+              },
+              "50": {
+                "source": -27.068861930236572,
+                "dry": -72.4327278586514,
+                "wet": -45.64953310319097,
+                "combined": -45.430592886354056
+              },
+              "100": {
+                "source": -27.196327594633996,
+                "dry": -71.3389819180698,
+                "wet": -45.88321640440075,
+                "combined": -45.66028956739078
+              }
+            }
+          },
+          {
+            "source_seconds": 129.925,
+            "player_seconds": 19.125,
+            "windows": {
+              "20": {
+                "source": -27.083258033812008,
+                "dry": -77.87084777471142,
+                "wet": -46.30403979252317,
+                "combined": -46.19188793802198
+              },
+              "25": {
+                "source": -27.249434883271455,
+                "dry": -77.91981646501937,
+                "wet": -45.99631187048264,
+                "combined": -45.89006791086392
+              },
+              "50": {
+                "source": -27.179472595637545,
+                "dry": -77.11997805218168,
+                "wet": -46.187281087951646,
+                "combined": -46.06499204972156
+              },
+              "100": {
+                "source": -27.078349185563813,
+                "dry": -75.1051916096567,
+                "wet": -46.318030366187784,
+                "combined": -46.16578730529616
+              }
+            }
+          },
+          {
+            "source_seconds": 129.95,
+            "player_seconds": 19.15,
+            "windows": {
+              "20": {
+                "source": -26.791387309560854,
+                "dry": -84.24238865078003,
+                "wet": -46.98542079474596,
+                "combined": -46.928279586015016
+              },
+              "25": {
+                "source": -27.086594426167,
+                "dry": -84.47057459280234,
+                "wet": -47.38852800181856,
+                "combined": -47.33114347369587
+              },
+              "50": {
+                "source": -27.08785721138396,
+                "dry": -83.3534960100254,
+                "wet": -47.10848430437568,
+                "combined": -47.05132073771167
+              },
+              "100": {
+                "source": -26.88031552903034,
+                "dry": -79.98256230347393,
+                "wet": -46.89725605128607,
+                "combined": -46.81748200085955
+              }
+            }
+          }
+        ],
+        "proof": {
+          "send_policy": "pre_ending_fade",
+          "local_send_fade": {
+            "center_source_seconds": 129.575,
+            "width_seconds": 0.5
+          },
+          "local_dry_alignment": {
+            "center_source_seconds": 129.575,
+            "shift_seconds": 0.1,
+            "width_seconds": 0.5
+          },
+          "wet_gain": 0.1981443461969509,
+          "rt60": 5.5,
+          "cleanup_peak_dbfs": -144.56827129117994,
+          "dry_stop_max_sample_delta": 0.0014016900441441791,
+          "post_stop_first_second_dbfs": -51.99043099462537,
+          "post_stop_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -49.32090354336877,
+              -51.22119450388687,
+              -53.44830045345689,
+              -58.14676340730643,
+              -60.462470581974515,
+              -62.4095620581641,
+              -66.81872283845162,
+              -68.66221622574906,
+              -72.53559564188393,
+              -75.6913248377769,
+              -76.11073436666085,
+              -80.57675444873689,
+              -83.16632712506559,
+              -84.4498587132624,
+              -87.25802419359252,
+              -90.78936528019301,
+              -92.91416175966245,
+              -94.24599127402828,
+              -97.88782976559705,
+              -101.28990894396127,
+              -102.60117301886241,
+              -105.30439896982494,
+              -109.25253113733663,
+              -110.87378887608905,
+              -114.34986065993604,
+              -117.71862166216539,
+              -120.12357071182717,
+              -123.5234179875677,
+              -125.65067661788649,
+              -129.0621860425764,
+              -132.91164480267705,
+              -134.95560911645322,
+              -137.0791317577412,
+              -139.65314473112397,
+              -143.15485871973146,
+              -144.96626527629854,
+              -146.80814047096936,
+              -150.63569172186055,
+              -152.81713759808272,
+              -154.8958212980804
+            ]
+          },
+          "prefix_exact": true,
+          "dry_after_window_exact": true,
+          "send_zero_after_window": true
+        }
+      },
+      "T3": {
+        "rows": [
+          {
+            "source_seconds": 129.25,
+            "player_seconds": 18.45,
+            "windows": {
+              "20": {
+                "source": -28.617471304466463,
+                "dry": -40.306268175473974,
+                "wet": -43.91296399268587,
+                "combined": -37.56630110222566
+              },
+              "25": {
+                "source": -28.773581525764147,
+                "dry": -40.463982372085205,
+                "wet": -43.8903093639407,
+                "combined": -37.6050639218998
+              },
+              "50": {
+                "source": -28.97858498596272,
+                "dry": -40.64547122004839,
+                "wet": -44.14090703420483,
+                "combined": -37.81609379884793
+              },
+              "100": {
+                "source": -29.176748183263058,
+                "dry": -40.76552478520948,
+                "wet": -44.12071409629091,
+                "combined": -37.763845760674414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.275,
+            "player_seconds": 18.475,
+            "windows": {
+              "20": {
+                "source": -29.60263450415999,
+                "dry": -41.827141087288254,
+                "wet": -45.14572423826942,
+                "combined": -38.98431383542812
+              },
+              "25": {
+                "source": -29.950396476025283,
+                "dry": -42.1615670602472,
+                "wet": -45.53896922021163,
+                "combined": -39.60079282095853
+              },
+              "50": {
+                "source": -29.760156779038812,
+                "dry": -41.937027342729436,
+                "wet": -45.30879479288317,
+                "combined": -39.16115944138107
+              },
+              "100": {
+                "source": -29.58419875365336,
+                "dry": -41.68145508324307,
+                "wet": -45.031559067083286,
+                "combined": -38.91714105108801
+              }
+            }
+          },
+          {
+            "source_seconds": 129.3,
+            "player_seconds": 18.5,
+            "windows": {
+              "20": {
+                "source": -30.55729692034404,
+                "dry": -43.3267420455698,
+                "wet": -46.65140877644032,
+                "combined": -40.727214058924886
+              },
+              "25": {
+                "source": -30.41244717041532,
+                "dry": -43.171262141787054,
+                "wet": -46.23991220994927,
+                "combined": -40.19566126517483
+              },
+              "50": {
+                "source": -30.288163906729718,
+                "dry": -43.0446565339446,
+                "wet": -46.153268707783326,
+                "combined": -40.3957596988066
+              },
+              "100": {
+                "source": -30.167587595689625,
+                "dry": -42.82711286087152,
+                "wet": -45.366641627479474,
+                "combined": -39.881624313601414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.325,
+            "player_seconds": 18.525,
+            "windows": {
+              "20": {
+                "source": -30.707532796050003,
+                "dry": -44.035794906700005,
+                "wet": -45.842263514307255,
+                "combined": -41.11652331182028
+              },
+              "25": {
+                "source": -30.44279997065661,
+                "dry": -43.799632397137735,
+                "wet": -45.79153388893566,
+                "combined": -41.05162651871298
+              },
+              "50": {
+                "source": -30.617236075752153,
+                "dry": -43.94792222895831,
+                "wet": -45.42526937936239,
+                "combined": -40.74585378959696
+              },
+              "100": {
+                "source": -30.22318288845741,
+                "dry": -43.56900687936053,
+                "wet": -45.22025568152573,
+                "combined": -40.5812251342399
+              }
+            }
+          },
+          {
+            "source_seconds": 129.35,
+            "player_seconds": 18.55,
+            "windows": {
+              "20": {
+                "source": -30.262088609844383,
+                "dry": -44.260535219934795,
+                "wet": -43.81067094718712,
+                "combined": -40.220029510540826
+              },
+              "25": {
+                "source": -30.394353146055387,
+                "dry": -44.36613902673004,
+                "wet": -44.28474105332309,
+                "combined": -40.65025259082269
+              },
+              "50": {
+                "source": -30.159159828499966,
+                "dry": -44.16547163801762,
+                "wet": -44.45266896366019,
+                "combined": -40.774965567433995
+              },
+              "100": {
+                "source": -30.024477635819203,
+                "dry": -44.022828552039435,
+                "wet": -44.15378516109635,
+                "combined": -40.63201196949695
+              }
+            }
+          },
+          {
+            "source_seconds": 129.375,
+            "player_seconds": 18.575,
+            "windows": {
+              "20": {
+                "source": -29.45338107324031,
+                "dry": -44.06258452801709,
+                "wet": -43.04181005111407,
+                "combined": -40.52105729173104
+              },
+              "25": {
+                "source": -29.551902445251127,
+                "dry": -44.147936903471376,
+                "wet": -43.134593015620595,
+                "combined": -40.3920452603723
+              },
+              "50": {
+                "source": -29.502992720683814,
+                "dry": -44.09904955428027,
+                "wet": -43.171480684824985,
+                "combined": -40.521078223247315
+              },
+              "100": {
+                "source": -29.897084929972305,
+                "dry": -44.501965974978745,
+                "wet": -43.479615997937216,
+                "combined": -40.990029527791414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.4,
+            "player_seconds": 18.6,
+            "windows": {
+              "20": {
+                "source": -29.00486916680012,
+                "dry": -44.24521955816435,
+                "wet": -43.218064752870376,
+                "combined": -41.55444169127638
+              },
+              "25": {
+                "source": -29.20098456009078,
+                "dry": -44.44514976718408,
+                "wet": -42.63357091847326,
+                "combined": -41.33130047720867
+              },
+              "50": {
+                "source": -29.64992892342248,
+                "dry": -44.86673846470909,
+                "wet": -42.685170311045695,
+                "combined": -41.21630092660219
+              },
+              "100": {
+                "source": -29.702196763286732,
+                "dry": -44.84244185871592,
+                "wet": -43.16896123589907,
+                "combined": -41.35336886960516
+              }
+            }
+          },
+          {
+            "source_seconds": 129.425,
+            "player_seconds": 18.625,
+            "windows": {
+              "20": {
+                "source": -30.03656758949581,
+                "dry": -45.91096327643699,
+                "wet": -42.74231760905121,
+                "combined": -41.79362126581629
+              },
+              "25": {
+                "source": -30.205276585496257,
+                "dry": -46.072020215032225,
+                "wet": -42.96771842346057,
+                "combined": -42.15063031001538
+              },
+              "50": {
+                "source": -29.910979082081134,
+                "dry": -45.73990915689467,
+                "wet": -43.16644324771998,
+                "combined": -42.38390258176221
+              },
+              "100": {
+                "source": -29.936685161751978,
+                "dry": -45.64635705681744,
+                "wet": -43.31935436879694,
+                "combined": -41.97745574849498
+              }
+            }
+          },
+          {
+            "source_seconds": 129.45,
+            "player_seconds": 18.65,
+            "windows": {
+              "20": {
+                "source": -30.46849621922387,
+                "dry": -46.87012108666616,
+                "wet": -43.94254410328329,
+                "combined": -43.13715373825058
+              },
+              "25": {
+                "source": -30.230657854689266,
+                "dry": -46.6250162349953,
+                "wet": -44.40381147604289,
+                "combined": -43.49362560167452
+              },
+              "50": {
+                "source": -30.243722359333717,
+                "dry": -46.59723033982668,
+                "wet": -44.06224614376191,
+                "combined": -42.900971424013164
+              },
+              "100": {
+                "source": -30.19953754734315,
+                "dry": -46.45604653452078,
+                "wet": -43.897890398758015,
+                "combined": -42.61661181409191
+              }
+            }
+          },
+          {
+            "source_seconds": 129.475,
+            "player_seconds": 18.675,
+            "windows": {
+              "20": {
+                "source": -30.471722146242996,
+                "dry": -47.298001614663214,
+                "wet": -44.74915128059698,
+                "combined": -43.090764995814666
+              },
+              "25": {
+                "source": -30.63663675795283,
+                "dry": -47.45284690720279,
+                "wet": -44.61645181417793,
+                "combined": -42.69689325287659
+              },
+              "50": {
+                "source": -30.508641943940052,
+                "dry": -47.31405045232347,
+                "wet": -44.77798721942172,
+                "combined": -42.862499866285965
+              },
+              "100": {
+                "source": -30.15593114673919,
+                "dry": -46.9020466981203,
+                "wet": -44.20505973619517,
+                "combined": -42.32850251016942
+              }
+            }
+          },
+          {
+            "source_seconds": 129.5,
+            "player_seconds": 18.7,
+            "windows": {
+              "20": {
+                "source": -29.647214507022134,
+                "dry": -46.799313497515556,
+                "wet": -44.54102811687968,
+                "combined": -41.64277384206493
+              },
+              "25": {
+                "source": -30.04408834089277,
+                "dry": -47.1983776101857,
+                "wet": -44.437707015474345,
+                "combined": -41.932207227324355
+              },
+              "50": {
+                "source": -30.069879498206692,
+                "dry": -47.22988291362489,
+                "wet": -44.35272976910804,
+                "combined": -41.82278101228772
+              },
+              "100": {
+                "source": -30.24958756507003,
+                "dry": -47.37589025466035,
+                "wet": -44.14981808830508,
+                "combined": -41.866068511545535
+              }
+            }
+          },
+          {
+            "source_seconds": 129.525,
+            "player_seconds": 18.725,
+            "windows": {
+              "20": {
+                "source": -29.905215734408298,
+                "dry": -47.35426472830199,
+                "wet": -43.53907307036536,
+                "combined": -40.87601875653626
+              },
+              "25": {
+                "source": -29.792065899001088,
+                "dry": -47.239022959480074,
+                "wet": -43.74228757176426,
+                "combined": -40.939116848207405
+              },
+              "50": {
+                "source": -30.005119649777235,
+                "dry": -47.43862333750124,
+                "wet": -43.60113247870244,
+                "combined": -41.05613032605727
+              },
+              "100": {
+                "source": -30.515693447955613,
+                "dry": -47.921502377800664,
+                "wet": -43.66784153475617,
+                "combined": -41.374125700877144
+              }
+            }
+          },
+          {
+            "source_seconds": 129.55,
+            "player_seconds": 18.75,
+            "windows": {
+              "20": {
+                "source": -31.493715782352837,
+                "dry": -49.25035575218846,
+                "wet": -42.939679036555205,
+                "combined": -41.038270145468616
+              },
+              "25": {
+                "source": -31.203258596661165,
+                "dry": -48.95348582961962,
+                "wet": -43.02243521858835,
+                "combined": -40.971371172997316
+              },
+              "50": {
+                "source": -31.012562124775727,
+                "dry": -48.7445180849026,
+                "wet": -43.07639263675101,
+                "combined": -40.96751034956388
+              },
+              "100": {
+                "source": -30.82478532576372,
+                "dry": -48.519771454874395,
+                "wet": -43.12526080170299,
+                "combined": -41.107629651827025
+              }
+            }
+          },
+          {
+            "source_seconds": 129.575,
+            "player_seconds": 18.775,
+            "windows": {
+              "20": {
+                "source": -32.020472275683616,
+                "dry": -50.14531934954931,
+                "wet": -42.71271299876829,
+                "combined": -41.20085403175766
+              },
+              "25": {
+                "source": -31.98669176942216,
+                "dry": -50.10826065035936,
+                "wet": -42.503963315979206,
+                "combined": -41.04833268696487
+              },
+              "50": {
+                "source": -31.836003111004988,
+                "dry": -49.96257926850006,
+                "wet": -42.69642098825585,
+                "combined": -41.15974700068194
+              },
+              "100": {
+                "source": -31.000033693483676,
+                "dry": -49.16844370677369,
+                "wet": -42.811259913255945,
+                "combined": -41.03423443532315
+              }
+            }
+          },
+          {
+            "source_seconds": 129.6,
+            "player_seconds": 18.8,
+            "windows": {
+              "20": {
+                "source": -30.89114929104997,
+                "dry": -49.48913886945214,
+                "wet": -42.328563457485934,
+                "combined": -40.879921222351385
+              },
+              "25": {
+                "source": -30.8822898022688,
+                "dry": -49.4765067944186,
+                "wet": -42.72980405651247,
+                "combined": -41.315953994592164
+              },
+              "50": {
+                "source": -30.987541299997364,
+                "dry": -49.638270676483394,
+                "wet": -42.56138621144086,
+                "combined": -41.10199967265721
+              },
+              "100": {
+                "source": -30.723996926055754,
+                "dry": -49.512006032972565,
+                "wet": -42.42655013460236,
+                "combined": -40.86217830771277
+              }
+            }
+          },
+          {
+            "source_seconds": 129.625,
+            "player_seconds": 18.825,
+            "windows": {
+              "20": {
+                "source": -30.32702715718276,
+                "dry": -49.532592077696734,
+                "wet": -42.195955378725934,
+                "combined": -40.707396451342326
+              },
+              "25": {
+                "source": -30.220543360053963,
+                "dry": -49.43649986335467,
+                "wet": -42.31131166402776,
+                "combined": -40.703490168566326
+              },
+              "50": {
+                "source": -29.83946108783899,
+                "dry": -49.103816228530725,
+                "wet": -42.17247246631245,
+                "combined": -40.58369747457111
+              },
+              "100": {
+                "source": -30.096402683357017,
+                "dry": -49.53100314244212,
+                "wet": -41.92582347796228,
+                "combined": -40.465501720236816
+              }
+            }
+          },
+          {
+            "source_seconds": 129.65,
+            "player_seconds": 18.85,
+            "windows": {
+              "20": {
+                "source": -29.013676070646003,
+                "dry": -49.090649165270435,
+                "wet": -41.598042733312106,
+                "combined": -40.05322310373081
+              },
+              "25": {
+                "source": -28.959157444598482,
+                "dry": -49.00605656361438,
+                "wet": -41.041972465332314,
+                "combined": -39.55287557106351
+              },
+              "50": {
+                "source": -29.357353089354067,
+                "dry": -49.42632130095945,
+                "wet": -41.37150772503611,
+                "combined": -39.910475010633576
+              },
+              "100": {
+                "source": -29.56336135373256,
+                "dry": -49.69397802228363,
+                "wet": -41.82571985037896,
+                "combined": -40.343455254846546
+              }
+            }
+          },
+          {
+            "source_seconds": 129.675,
+            "player_seconds": 18.875,
+            "windows": {
+              "20": {
+                "source": -29.063443766582186,
+                "dry": -50.142736413262355,
+                "wet": -41.571142707323965,
+                "combined": -40.14037135878145
+              },
+              "25": {
+                "source": -29.42493358256602,
+                "dry": -50.50572807554958,
+                "wet": -41.79058719306742,
+                "combined": -40.45137326768139
+              },
+              "50": {
+                "source": -29.303770177148486,
+                "dry": -50.37714003414454,
+                "wet": -41.5046175377601,
+                "combined": -40.11580897327795
+              },
+              "100": {
+                "source": -29.23771240988183,
+                "dry": -50.351457614267694,
+                "wet": -41.75135066838752,
+                "combined": -40.30287041222614
+              }
+            }
+          },
+          {
+            "source_seconds": 129.7,
+            "player_seconds": 18.9,
+            "windows": {
+              "20": {
+                "source": -29.079297898435858,
+                "dry": -51.476886844441985,
+                "wet": -41.69162457991657,
+                "combined": -40.22870282628836
+              },
+              "25": {
+                "source": -29.139309787510904,
+                "dry": -51.5551353577134,
+                "wet": -42.0855748032355,
+                "combined": -40.61147891142091
+              },
+              "50": {
+                "source": -29.121279455967688,
+                "dry": -51.528546715529615,
+                "wet": -42.16762748636072,
+                "combined": -40.734273248338646
+              },
+              "100": {
+                "source": -28.953145446203536,
+                "dry": -51.36646247940944,
+                "wet": -41.70434912940851,
+                "combined": -40.3618237827952
+              }
+            }
+          },
+          {
+            "source_seconds": 129.725,
+            "player_seconds": 18.925,
+            "windows": {
+              "20": {
+                "source": -28.608131584026623,
+                "dry": -52.64565684011358,
+                "wet": -42.17036577136642,
+                "combined": -40.86004699230201
+              },
+              "25": {
+                "source": -28.454157799726552,
+                "dry": -52.48904046311961,
+                "wet": -41.88199566451669,
+                "combined": -40.53136397652725
+              },
+              "50": {
+                "source": -28.6287256920207,
+                "dry": -52.649764371798724,
+                "wet": -41.913711032798844,
+                "combined": -40.62261587077128
+              },
+              "100": {
+                "source": -29.035137727601157,
+                "dry": -52.84158075461903,
+                "wet": -42.030726154655355,
+                "combined": -40.819135149414365
+              }
+            }
+          },
+          {
+            "source_seconds": 129.75,
+            "player_seconds": 18.95,
+            "windows": {
+              "20": {
+                "source": -29.304176786066716,
+                "dry": -55.27587102897952,
+                "wet": -41.92491748450475,
+                "combined": -40.94911340084082
+              },
+              "25": {
+                "source": -29.189043400437832,
+                "dry": -55.19974655267082,
+                "wet": -41.94392241760176,
+                "combined": -41.017187483418454
+              },
+              "50": {
+                "source": -28.95067143077047,
+                "dry": -54.732655209811696,
+                "wet": -41.89800876869011,
+                "combined": -40.90568837044812
+              },
+              "100": {
+                "source": -28.758004439638576,
+                "dry": -54.39229660015732,
+                "wet": -42.02108243616948,
+                "combined": -40.937842293528774
+              }
+            }
+          },
+          {
+            "source_seconds": 129.775,
+            "player_seconds": 18.975,
+            "windows": {
+              "20": {
+                "source": -28.748167623118665,
+                "dry": -57.20920249725658,
+                "wet": -41.495525971219145,
+                "combined": -40.65619610053085
+              },
+              "25": {
+                "source": -28.990146781363695,
+                "dry": -57.40369709611951,
+                "wet": -42.07446289116884,
+                "combined": -41.245054555590094
+              },
+              "50": {
+                "source": -28.891249876918508,
+                "dry": -57.34791765136187,
+                "wet": -42.13117584067659,
+                "combined": -41.27775227718498
+              },
+              "100": {
+                "source": -28.489560120031697,
+                "dry": -56.364364777717924,
+                "wet": -41.91173486599282,
+                "combined": -41.02598012283949
+              }
+            }
+          },
+          {
+            "source_seconds": 129.8,
+            "player_seconds": 19.0,
+            "windows": {
+              "20": {
+                "source": -28.065627773902154,
+                "dry": -59.02794676883734,
+                "wet": -42.228235442863486,
+                "combined": -41.42947982092825
+              },
+              "25": {
+                "source": -27.928481850543804,
+                "dry": -58.95322217417877,
+                "wet": -41.99971251102821,
+                "combined": -41.17210863182276
+              },
+              "50": {
+                "source": -28.07274198642564,
+                "dry": -59.00863224556055,
+                "wet": -41.92550448290427,
+                "combined": -41.14969888760038
+              },
+              "100": {
+                "source": -28.335261990864076,
+                "dry": -59.00149045561697,
+                "wet": -42.181045553789545,
+                "combined": -41.44897767551499
+              }
+            }
+          },
+          {
+            "source_seconds": 129.825,
+            "player_seconds": 19.025,
+            "windows": {
+              "20": {
+                "source": -27.839725643461794,
+                "dry": -62.103737599550044,
+                "wet": -42.82686904955209,
+                "combined": -42.21861091916207
+              },
+              "25": {
+                "source": -27.78861713873195,
+                "dry": -61.93258225782369,
+                "wet": -42.164158868445554,
+                "combined": -41.57156417202947
+              },
+              "50": {
+                "source": -27.84244182254215,
+                "dry": -61.70482641096876,
+                "wet": -42.23149457571744,
+                "combined": -41.62723189103295
+              },
+              "100": {
+                "source": -27.8304488654757,
+                "dry": -61.03577587162985,
+                "wet": -42.476812902365836,
+                "combined": -41.8560025552969
+              }
+            }
+          },
+          {
+            "source_seconds": 129.85,
+            "player_seconds": 19.05,
+            "windows": {
+              "20": {
+                "source": -27.68355976569233,
+                "dry": -65.4407081986661,
+                "wet": -42.78289983753667,
+                "combined": -42.3866677306152
+              },
+              "25": {
+                "source": -27.737220153032197,
+                "dry": -65.36124399570583,
+                "wet": -43.03541048411351,
+                "combined": -42.669054549505
+              },
+              "50": {
+                "source": -27.600961975845838,
+                "dry": -64.95940172392764,
+                "wet": -43.10842359467041,
+                "combined": -42.69991568770446
+              },
+              "100": {
+                "source": -27.51646052107688,
+                "dry": -63.87088349791271,
+                "wet": -42.8032506051138,
+                "combined": -42.34163259473435
+              }
+            }
+          },
+          {
+            "source_seconds": 129.875,
+            "player_seconds": 19.075,
+            "windows": {
+              "20": {
+                "source": -27.397042382128134,
+                "dry": -68.82208190940112,
+                "wet": -43.17725205281458,
+                "combined": -42.91784764277124
+              },
+              "25": {
+                "source": -27.161672026590455,
+                "dry": -68.7070567600674,
+                "wet": -43.65132261953518,
+                "combined": -43.37022162116949
+              },
+              "50": {
+                "source": -27.213248262944386,
+                "dry": -68.38903806776949,
+                "wet": -43.46185772928387,
+                "combined": -43.19714237229629
+              },
+              "100": {
+                "source": -27.32676789533262,
+                "dry": -67.2387506841199,
+                "wet": -43.273978980695844,
+                "combined": -42.97532498534403
+              }
+            }
+          },
+          {
+            "source_seconds": 129.9,
+            "player_seconds": 19.1,
+            "windows": {
+              "20": {
+                "source": -27.058088894355457,
+                "dry": -72.92127963010914,
+                "wet": -43.5909869119439,
+                "combined": -43.43047885842243
+              },
+              "25": {
+                "source": -27.017322618037987,
+                "dry": -72.71454843458773,
+                "wet": -43.313870919225,
+                "combined": -43.144644588236275
+              },
+              "50": {
+                "source": -27.068861930236572,
+                "dry": -72.3277618954869,
+                "wet": -43.44609640119682,
+                "combined": -43.2693891329551
+              },
+              "100": {
+                "source": -27.196327594633996,
+                "dry": -70.85344234124057,
+                "wet": -43.69109490053198,
+                "combined": -43.50455563666139
+              }
+            }
+          },
+          {
+            "source_seconds": 129.925,
+            "player_seconds": 19.125,
+            "windows": {
+              "20": {
+                "source": -27.083258033812008,
+                "dry": -77.87084777471142,
+                "wet": -44.06179082841467,
+                "combined": -43.97095454102819
+              },
+              "25": {
+                "source": -27.249434883271455,
+                "dry": -77.91981646501937,
+                "wet": -43.790661179068124,
+                "combined": -43.704722720772466
+              },
+              "50": {
+                "source": -27.179472595637545,
+                "dry": -77.11997805218168,
+                "wet": -43.93310966450629,
+                "combined": -43.835397939866056
+              },
+              "100": {
+                "source": -27.078349185563813,
+                "dry": -75.00799417386622,
+                "wet": -44.05836600155399,
+                "combined": -43.936707047332284
+              }
+            }
+          },
+          {
+            "source_seconds": 129.95,
+            "player_seconds": 19.15,
+            "windows": {
+              "20": {
+                "source": -26.791387309560854,
+                "dry": -84.24238865078003,
+                "wet": -44.637784478376034,
+                "combined": -44.59185756767053
+              },
+              "25": {
+                "source": -27.086594426167,
+                "dry": -84.47057459280234,
+                "wet": -45.018114057290965,
+                "combined": -44.972359857629854
+              },
+              "50": {
+                "source": -27.08785721138396,
+                "dry": -83.3534960100254,
+                "wet": -44.77134569878541,
+                "combined": -44.72551132009899
+              },
+              "100": {
+                "source": -26.88031552903034,
+                "dry": -79.98256230347393,
+                "wet": -44.5574997958102,
+                "combined": -44.49472915810939
+              }
+            }
+          }
+        ],
+        "proof": {
+          "send_policy": "pre_ending_fade",
+          "local_send_fade": {
+            "center_source_seconds": 129.65,
+            "width_seconds": 0.5
+          },
+          "local_dry_alignment": {
+            "center_source_seconds": 129.65,
+            "shift_seconds": 0.1,
+            "width_seconds": 0.5
+          },
+          "wet_gain": 0.1981443461969509,
+          "rt60": 5.5,
+          "cleanup_peak_dbfs": -142.96654731585463,
+          "dry_stop_max_sample_delta": 0.001565860107416908,
+          "post_stop_first_second_dbfs": -50.00391322721097,
+          "post_stop_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -47.21142312700537,
+              -49.41142619350281,
+              -51.53111398124027,
+              -56.05700422843627,
+              -58.61943365325385,
+              -60.79516365737233,
+              -65.00309361400754,
+              -67.02269246849517,
+              -71.08644158391475,
+              -74.01631129513545,
+              -74.86397391876119,
+              -79.21516187056412,
+              -81.46511843665553,
+              -83.09701911864244,
+              -85.63208176042662,
+              -88.8192472149035,
+              -91.11236525411016,
+              -92.50134947386644,
+              -95.73690989599825,
+              -99.24435782148807,
+              -100.7296723664946,
+              -103.22879806548184,
+              -107.2444785174481,
+              -109.00865335753934,
+              -112.34931156054404,
+              -115.78697291597078,
+              -118.38104096038924,
+              -121.88625507000211,
+              -123.91862487330839,
+              -127.67250591585834,
+              -131.2933740005572,
+              -133.38793319304455,
+              -135.9085697250012,
+              -138.0122108080919,
+              -141.62465165070103,
+              -143.4838037357365,
+              -145.12519524279395,
+              -148.75290826187518,
+              -151.0368655925197,
+              -153.19702915811274
+            ]
+          },
+          "prefix_exact": true,
+          "dry_after_window_exact": true,
+          "send_zero_after_window": true
+        }
+      },
+      "reference": {
+        "rows": [
+          {
+            "source_seconds": 129.25,
+            "player_seconds": 18.45,
+            "windows": {
+              "20": {
+                "source": -28.617471304466463,
+                "dry": -40.306268175473974,
+                "wet": -43.91296399268587,
+                "combined": -37.56630110222566
+              },
+              "25": {
+                "source": -28.773581525764147,
+                "dry": -40.463982372085205,
+                "wet": -43.8903093639407,
+                "combined": -37.6050639218998
+              },
+              "50": {
+                "source": -28.97858498596272,
+                "dry": -40.64547122004839,
+                "wet": -44.14090703420483,
+                "combined": -37.81609379884793
+              },
+              "100": {
+                "source": -29.176748183263058,
+                "dry": -40.76552478520948,
+                "wet": -44.12071409629091,
+                "combined": -37.763845760674414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.275,
+            "player_seconds": 18.475,
+            "windows": {
+              "20": {
+                "source": -29.60263450415999,
+                "dry": -41.827141087288254,
+                "wet": -45.14572423826942,
+                "combined": -38.98431383542812
+              },
+              "25": {
+                "source": -29.950396476025283,
+                "dry": -42.1615670602472,
+                "wet": -45.53896922021163,
+                "combined": -39.60079282095853
+              },
+              "50": {
+                "source": -29.760156779038812,
+                "dry": -41.937027342729436,
+                "wet": -45.30879479288317,
+                "combined": -39.16115944138107
+              },
+              "100": {
+                "source": -29.58419875365336,
+                "dry": -41.68145508324307,
+                "wet": -45.031559067083286,
+                "combined": -38.91714105108801
+              }
+            }
+          },
+          {
+            "source_seconds": 129.3,
+            "player_seconds": 18.5,
+            "windows": {
+              "20": {
+                "source": -30.55729692034404,
+                "dry": -43.3267420455698,
+                "wet": -46.65140877644032,
+                "combined": -40.727214058924886
+              },
+              "25": {
+                "source": -30.41244717041532,
+                "dry": -43.171262141787054,
+                "wet": -46.23991220994927,
+                "combined": -40.19566126517483
+              },
+              "50": {
+                "source": -30.288163906729718,
+                "dry": -43.0446565339446,
+                "wet": -46.153268707783326,
+                "combined": -40.3957596988066
+              },
+              "100": {
+                "source": -30.167587595689625,
+                "dry": -42.82711286087152,
+                "wet": -45.366641627479474,
+                "combined": -39.881624313601414
+              }
+            }
+          },
+          {
+            "source_seconds": 129.325,
+            "player_seconds": 18.525,
+            "windows": {
+              "20": {
+                "source": -30.707532796050003,
+                "dry": -44.035794906700005,
+                "wet": -45.842263514307255,
+                "combined": -41.11652331182028
+              },
+              "25": {
+                "source": -30.44279997065661,
+                "dry": -43.799632397137735,
+                "wet": -45.79153388893566,
+                "combined": -41.05162651871298
+              },
+              "50": {
+                "source": -30.617236075752153,
+                "dry": -43.94792222895831,
+                "wet": -45.42526937936239,
+                "combined": -40.74585378959696
+              },
+              "100": {
+                "source": -30.22318288845741,
+                "dry": -43.56900687936053,
+                "wet": -45.22025568152573,
+                "combined": -40.5812251342399
+              }
+            }
+          },
+          {
+            "source_seconds": 129.35,
+            "player_seconds": 18.55,
+            "windows": {
+              "20": {
+                "source": -30.262088609844383,
+                "dry": -44.260535219934795,
+                "wet": -43.81067094718712,
+                "combined": -40.220029510540826
+              },
+              "25": {
+                "source": -30.394353146055387,
+                "dry": -44.36613902673004,
+                "wet": -44.28474105332309,
+                "combined": -40.65025259082269
+              },
+              "50": {
+                "source": -30.159159828499966,
+                "dry": -44.16547163801762,
+                "wet": -44.45266896366019,
+                "combined": -40.774965567433995
+              },
+              "100": {
+                "source": -30.024477635819203,
+                "dry": -44.022828552039435,
+                "wet": -44.15378516109635,
+                "combined": -40.63201196949695
+              }
+            }
+          },
+          {
+            "source_seconds": 129.375,
+            "player_seconds": 18.575,
+            "windows": {
+              "20": {
+                "source": -29.45338107324031,
+                "dry": -44.06258452801709,
+                "wet": -43.04181005111407,
+                "combined": -40.52105729173104
+              },
+              "25": {
+                "source": -29.551902445251127,
+                "dry": -44.147936903471376,
+                "wet": -43.134593015620595,
+                "combined": -40.3920452603723
+              },
+              "50": {
+                "source": -29.502992720683814,
+                "dry": -44.09904955428027,
+                "wet": -43.171480684824985,
+                "combined": -40.521078223247315
+              },
+              "100": {
+                "source": -29.897084929972305,
+                "dry": -44.505873390864814,
+                "wet": -43.47961611035914,
+                "combined": -40.99106059297854
+              }
+            }
+          },
+          {
+            "source_seconds": 129.4,
+            "player_seconds": 18.6,
+            "windows": {
+              "20": {
+                "source": -29.00486916680012,
+                "dry": -44.24707060525583,
+                "wet": -43.218064752870376,
+                "combined": -41.55520002311569
+              },
+              "25": {
+                "source": -29.20098456009078,
+                "dry": -44.44781295932107,
+                "wet": -42.63357091847326,
+                "combined": -41.33228224885335
+              },
+              "50": {
+                "source": -29.64992892342248,
+                "dry": -44.875242531457225,
+                "wet": -42.685170498302,
+                "combined": -41.21847362946958
+              },
+              "100": {
+                "source": -29.702196763286732,
+                "dry": -44.874978856862775,
+                "wet": -43.16896079745569,
+                "combined": -41.36290066066977
+              }
+            }
+          },
+          {
+            "source_seconds": 129.425,
+            "player_seconds": 18.625,
+            "windows": {
+              "20": {
+                "source": -30.03656758949581,
+                "dry": -45.980794146611245,
+                "wet": -42.74223997624041,
+                "combined": -41.8143722851729
+              },
+              "25": {
+                "source": -30.205276585496257,
+                "dry": -46.14202792543823,
+                "wet": -42.967694261339425,
+                "combined": -42.17078242381124
+              },
+              "50": {
+                "source": -29.910979082081134,
+                "dry": -45.82036263757763,
+                "wet": -43.16644237134152,
+                "combined": -42.408112387608405
+              },
+              "100": {
+                "source": -29.936685161751978,
+                "dry": -45.76237873148811,
+                "wet": -43.319458335231396,
+                "combined": -42.01558416535116
+              }
+            }
+          },
+          {
+            "source_seconds": 129.45,
+            "player_seconds": 18.65,
+            "windows": {
+              "20": {
+                "source": -30.46849621922387,
+                "dry": -47.15654963718704,
+                "wet": -43.94319979655368,
+                "combined": -43.216416822025494
+              },
+              "25": {
+                "source": -30.230657854689266,
+                "dry": -46.909721810602896,
+                "wet": -44.40456017607795,
+                "combined": -43.58439566979069
+              },
+              "50": {
+                "source": -30.243722359333717,
+                "dry": -46.87850611984868,
+                "wet": -44.06249261520362,
+                "combined": -42.99264354690866
+              },
+              "100": {
+                "source": -30.19953754734315,
+                "dry": -46.75845941421977,
+                "wet": -43.89285987578128,
+                "combined": -42.73051318669565
+              }
+            }
+          },
+          {
+            "source_seconds": 129.475,
+            "player_seconds": 18.675,
+            "windows": {
+              "20": {
+                "source": -30.471722146242996,
+                "dry": -47.945964588700676,
+                "wet": -44.741213887614244,
+                "combined": -43.292305116451
+              },
+              "25": {
+                "source": -30.63663675795283,
+                "dry": -48.09126354962166,
+                "wet": -44.60714864305504,
+                "combined": -42.89890597455036
+              },
+              "50": {
+                "source": -30.508641943940052,
+                "dry": -47.95666134628985,
+                "wet": -44.76567761790565,
+                "combined": -43.07878063154376
+              },
+              "100": {
+                "source": -30.15593114673919,
+                "dry": -47.55250670513115,
+                "wet": -44.168176669008545,
+                "combined": -42.55070239860845
+              }
+            }
+          },
+          {
+            "source_seconds": 129.5,
+            "player_seconds": 18.7,
+            "windows": {
+              "20": {
+                "source": -29.647214507022134,
+                "dry": -47.90018311669201,
+                "wet": -44.479912599826065,
+                "combined": -42.005140227427574
+              },
+              "25": {
+                "source": -30.04408834089277,
+                "dry": -48.30340715666818,
+                "wet": -44.38098624200591,
+                "combined": -42.26405147948573
+              },
+              "50": {
+                "source": -30.069879498206692,
+                "dry": -48.350672888311166,
+                "wet": -44.27649678862838,
+                "combined": -42.149608795909685
+              },
+              "100": {
+                "source": -30.24958756507003,
+                "dry": -48.467791813949994,
+                "wet": -44.045799333450255,
+                "combined": -42.17292282815136
+              }
+            }
+          },
+          {
+            "source_seconds": 129.525,
+            "player_seconds": 18.725,
+            "windows": {
+              "20": {
+                "source": -29.905215734408298,
+                "dry": -49.0043194772643,
+                "wet": -43.37678987379198,
+                "combined": -41.26693556200373
+              },
+              "25": {
+                "source": -29.792065899001088,
+                "dry": -48.8836496709592,
+                "wet": -43.56114006653346,
+                "combined": -41.3356785946622
+              },
+              "50": {
+                "source": -30.005119649777235,
+                "dry": -49.04720379197081,
+                "wet": -43.42845239066254,
+                "combined": -41.42378941717115
+              },
+              "100": {
+                "source": -30.515693447955613,
+                "dry": -49.448075065014464,
+                "wet": -43.47685393551018,
+                "combined": -41.69071281885047
+              }
+            }
+          },
+          {
+            "source_seconds": 129.55,
+            "player_seconds": 18.75,
+            "windows": {
+              "20": {
+                "source": -31.493715782352837,
+                "dry": -51.50522453821232,
+                "wet": -42.66592822485576,
+                "combined": -41.30559870157087
+              },
+              "25": {
+                "source": -31.203258596661165,
+                "dry": -51.19197128846923,
+                "wet": -42.74862560081688,
+                "combined": -41.27499385566384
+              },
+              "50": {
+                "source": -31.012562124775727,
+                "dry": -50.92009952768003,
+                "wet": -42.801801532870066,
+                "combined": -41.2757053894451
+              },
+              "100": {
+                "source": -30.82478532576372,
+                "dry": -50.525578647417476,
+                "wet": -42.84561823686221,
+                "combined": -41.37937362968828
+              }
+            }
+          },
+          {
+            "source_seconds": 129.575,
+            "player_seconds": 18.775,
+            "windows": {
+              "20": {
+                "source": -32.020472275683616,
+                "dry": -53.00955508348555,
+                "wet": -42.337984520784,
+                "combined": -41.370158322492145
+              },
+              "25": {
+                "source": -31.98669176942216,
+                "dry": -52.962839495808936,
+                "wet": -42.15151930765545,
+                "combined": -41.21825037000846
+              },
+              "50": {
+                "source": -31.836003111004988,
+                "dry": -52.784216938899746,
+                "wet": -42.33182738754209,
+                "combined": -41.33540749273639
+              },
+              "100": {
+                "source": -31.000033693483676,
+                "dry": -51.86076028438907,
+                "wet": -42.44784172149614,
+                "combined": -41.267127078420785
+              }
+            }
+          },
+          {
+            "source_seconds": 129.6,
+            "player_seconds": 18.8,
+            "windows": {
+              "20": {
+                "source": -30.89114929104997,
+                "dry": -52.914233359662575,
+                "wet": -41.91731579357102,
+                "combined": -41.05970892198834
+              },
+              "25": {
+                "source": -30.8822898022688,
+                "dry": -52.8927300165254,
+                "wet": -42.29551448474914,
+                "combined": -41.4743292056006
+              },
+              "50": {
+                "source": -30.987541299997364,
+                "dry": -53.06315867103551,
+                "wet": -42.120569028449125,
+                "combined": -41.258565678129024
+              },
+              "100": {
+                "source": -30.723996926055754,
+                "dry": -52.876045469707336,
+                "wet": -41.94954029435938,
+                "combined": -41.005238816423685
+              }
+            }
+          },
+          {
+            "source_seconds": 129.625,
+            "player_seconds": 18.825,
+            "windows": {
+              "20": {
+                "source": -30.32702715718276,
+                "dry": -53.41959079058347,
+                "wet": -41.60058756305751,
+                "combined": -40.76522813444578
+              },
+              "25": {
+                "source": -30.220543360053963,
+                "dry": -53.32336587069949,
+                "wet": -41.70609168520555,
+                "combined": -40.78944267700149
+              },
+              "50": {
+                "source": -29.83946108783899,
+                "dry": -52.96985766936574,
+                "wet": -41.598198379926856,
+                "combined": -40.6984071952159
+              },
+              "100": {
+                "source": -30.096402683357017,
+                "dry": -53.34119709401847,
+                "wet": -41.30295566379269,
+                "combined": -40.480924622461664
+              }
+            }
+          },
+          {
+            "source_seconds": 129.65,
+            "player_seconds": 18.85,
+            "windows": {
+              "20": {
+                "source": -29.013676070646003,
+                "dry": -53.34440418853311,
+                "wet": -40.88808643433736,
+                "combined": -40.03778592637082
+              },
+              "25": {
+                "source": -28.959157444598482,
+                "dry": -53.246347688792504,
+                "wet": -40.368528228013844,
+                "combined": -39.55332829501491
+              },
+              "50": {
+                "source": -29.357353089354067,
+                "dry": -53.63826068082471,
+                "wet": -40.615151946088304,
+                "combined": -39.82160754490615
+              },
+              "100": {
+                "source": -29.56336135373256,
+                "dry": -53.78607392630493,
+                "wet": -40.99904749859374,
+                "combined": -40.18965441086774
+              }
+            }
+          },
+          {
+            "source_seconds": 129.675,
+            "player_seconds": 18.875,
+            "windows": {
+              "20": {
+                "source": -29.063443766582186,
+                "dry": -54.58837020972294,
+                "wet": -40.505782385033754,
+                "combined": -39.753391824077596
+              },
+              "25": {
+                "source": -29.42493358256602,
+                "dry": -54.9492476827362,
+                "wet": -40.68942402520114,
+                "combined": -39.99209320572859
+              },
+              "50": {
+                "source": -29.303770177148486,
+                "dry": -54.79203881107357,
+                "wet": -40.47262316474455,
+                "combined": -39.73429873236946
+              },
+              "100": {
+                "source": -29.23771240988183,
+                "dry": -54.65625458201589,
+                "wet": -40.626250370019534,
+                "combined": -39.85761999971647
+              }
+            }
+          },
+          {
+            "source_seconds": 129.7,
+            "player_seconds": 18.9,
+            "windows": {
+              "20": {
+                "source": -29.079297898435858,
+                "dry": -55.95866707795477,
+                "wet": -40.19514049798741,
+                "combined": -39.4343055724454
+              },
+              "25": {
+                "source": -29.139309787510904,
+                "dry": -56.034096078471656,
+                "wet": -40.6156400695931,
+                "combined": -39.837678490825766
+              },
+              "50": {
+                "source": -29.121279455967688,
+                "dry": -55.988375059123456,
+                "wet": -40.63737722872659,
+                "combined": -39.893933574755266
+              },
+              "100": {
+                "source": -28.953145446203536,
+                "dry": -55.748643789839285,
+                "wet": -40.10713620067328,
+                "combined": -39.429886802104235
+              }
+            }
+          },
+          {
+            "source_seconds": 129.725,
+            "player_seconds": 18.925,
+            "windows": {
+              "20": {
+                "source": -28.608131584026623,
+                "dry": -56.97927730788321,
+                "wet": -40.072300295651246,
+                "combined": -39.43781049724093
+              },
+              "25": {
+                "source": -28.454157799726552,
+                "dry": -56.82200234733258,
+                "wet": -39.797286075188666,
+                "combined": -39.137809580554006
+              },
+              "50": {
+                "source": -28.6287256920207,
+                "dry": -56.977285462101655,
+                "wet": -39.770034017327546,
+                "combined": -39.14542164247135
+              },
+              "100": {
+                "source": -29.035137727601157,
+                "dry": -57.16318402676102,
+                "wet": -39.877554399125486,
+                "combined": -39.29700521927713
+              }
+            }
+          },
+          {
+            "source_seconds": 129.75,
+            "player_seconds": 18.95,
+            "windows": {
+              "20": {
+                "source": -29.304176786066716,
+                "dry": -59.27708119512384,
+                "wet": -39.2458873685755,
+                "combined": -38.79342511746856
+              },
+              "25": {
+                "source": -29.189043400437832,
+                "dry": -59.19405261917852,
+                "wet": -39.21380052337439,
+                "combined": -38.788697552222274
+              },
+              "50": {
+                "source": -28.95067143077047,
+                "dry": -58.77867528829511,
+                "wet": -39.231081369317565,
+                "combined": -38.772296762702695
+              },
+              "100": {
+                "source": -28.758004439638576,
+                "dry": -58.484697520675525,
+                "wet": -39.31410324056996,
+                "combined": -38.809591528335346
+              }
+            }
+          },
+          {
+            "source_seconds": 129.775,
+            "player_seconds": 18.975,
+            "windows": {
+              "20": {
+                "source": -28.748167623118665,
+                "dry": -60.64700932147004,
+                "wet": -38.27530869450432,
+                "combined": -37.87647319554376
+              },
+              "25": {
+                "source": -28.990146781363695,
+                "dry": -60.8554456818603,
+                "wet": -38.89389386243029,
+                "combined": -38.497175456933896
+              },
+              "50": {
+                "source": -28.891249876918508,
+                "dry": -60.81277040136344,
+                "wet": -38.90152204843406,
+                "combined": -38.497876763581516
+              },
+              "100": {
+                "source": -28.489560120031697,
+                "dry": -60.0514844499006,
+                "wet": -38.56436508248269,
+                "combined": -38.159378915208265
+              }
+            }
+          },
+          {
+            "source_seconds": 129.8,
+            "player_seconds": 19.0,
+            "windows": {
+              "20": {
+                "source": -28.065627773902154,
+                "dry": -61.82554451672612,
+                "wet": -38.352375375547396,
+                "combined": -37.9761612991542
+              },
+              "25": {
+                "source": -27.928481850543804,
+                "dry": -61.74073845558894,
+                "wet": -38.133637655773256,
+                "combined": -37.740751026935044
+              },
+              "50": {
+                "source": -28.07274198642564,
+                "dry": -61.859623017975565,
+                "wet": -37.98651046449946,
+                "combined": -37.62236051361102
+              },
+              "100": {
+                "source": -28.335261990864076,
+                "dry": -62.059574326586564,
+                "wet": -38.16126916127538,
+                "combined": -37.831136450148435
+              }
+            }
+          },
+          {
+            "source_seconds": 129.825,
+            "player_seconds": 19.025,
+            "windows": {
+              "20": {
+                "source": -27.839725643461794,
+                "dry": -64.03981727512868,
+                "wet": -38.0146115636824,
+                "combined": -37.73295386183048
+              },
+              "25": {
+                "source": -27.78861713873195,
+                "dry": -63.90809385069622,
+                "wet": -37.37869155566216,
+                "combined": -37.106691849944596
+              },
+              "50": {
+                "source": -27.84244182254215,
+                "dry": -63.8153246412088,
+                "wet": -37.529007935927595,
+                "combined": -37.25326379230816
+              },
+              "100": {
+                "source": -27.8304488654757,
+                "dry": -63.51908123488079,
+                "wet": -37.85637685322063,
+                "combined": -37.58017566119567
+              }
+            }
+          },
+          {
+            "source_seconds": 129.85,
+            "player_seconds": 19.05,
+            "windows": {
+              "20": {
+                "source": -27.68355976569233,
+                "dry": -66.53068488618332,
+                "wet": -37.293669600298244,
+                "combined": -37.10575929747492
+              },
+              "25": {
+                "source": -27.737220153032197,
+                "dry": -66.49189649711907,
+                "wet": -37.661326310672635,
+                "combined": -37.485359158372155
+              },
+              "50": {
+                "source": -27.600961975845838,
+                "dry": -66.2385075727584,
+                "wet": -37.730029437850526,
+                "combined": -37.5383966292761
+              },
+              "100": {
+                "source": -27.51646052107688,
+                "dry": -65.66286750952605,
+                "wet": -37.5305088996325,
+                "combined": -37.32398922857961
+              }
+            }
+          },
+          {
+            "source_seconds": 129.875,
+            "player_seconds": 19.075,
+            "windows": {
+              "20": {
+                "source": -27.397042382128134,
+                "dry": -69.21755099258677,
+                "wet": -37.339414419799766,
+                "combined": -37.20344635788089
+              },
+              "25": {
+                "source": -27.161672026590455,
+                "dry": -69.09999216109236,
+                "wet": -37.73646408237863,
+                "combined": -37.589845687608445
+              },
+              "50": {
+                "source": -27.213248262944386,
+                "dry": -68.94393572435503,
+                "wet": -37.53201038226432,
+                "combined": -37.39588553205793
+              },
+              "100": {
+                "source": -27.32676789533262,
+                "dry": -68.31388063663377,
+                "wet": -37.29983431485798,
+                "combined": -37.16276352373799
+              }
+            }
+          },
+          {
+            "source_seconds": 129.9,
+            "player_seconds": 19.1,
+            "windows": {
+              "20": {
+                "source": -27.058088894355457,
+                "dry": -72.93298778663137,
+                "wet": -37.23360709413627,
+                "combined": -37.14552429907074
+              },
+              "25": {
+                "source": -27.017322618037987,
+                "dry": -72.73879483408771,
+                "wet": -36.78676531552113,
+                "combined": -36.69717715839496
+              },
+              "50": {
+                "source": -27.068861930236572,
+                "dry": -72.4327278586514,
+                "wet": -36.9084382096391,
+                "combined": -36.81704933845084
+              },
+              "100": {
+                "source": -27.196327594633996,
+                "dry": -71.3389819180698,
+                "wet": -37.169674906231855,
+                "combined": -37.0786613508167
+              }
+            }
+          },
+          {
+            "source_seconds": 129.925,
+            "player_seconds": 19.125,
+            "windows": {
+              "20": {
+                "source": -27.083258033812008,
+                "dry": -77.87084777471142,
+                "wet": -36.91219506900123,
+                "combined": -36.86100403854701
+              },
+              "25": {
+                "source": -27.249434883271455,
+                "dry": -77.91981646501937,
+                "wet": -36.71736608970471,
+                "combined": -36.66907524116318
+              },
+              "50": {
+                "source": -27.179472595637545,
+                "dry": -77.11997805218168,
+                "wet": -36.83525527676265,
+                "combined": -36.78303939975227
+              },
+              "100": {
+                "source": -27.078349185563813,
+                "dry": -75.1051916096567,
+                "wet": -36.98132516389952,
+                "combined": -36.922150947898004
+              }
+            }
+          },
+          {
+            "source_seconds": 129.95,
+            "player_seconds": 19.15,
+            "windows": {
+              "20": {
+                "source": -26.791387309560854,
+                "dry": -84.24238865078003,
+                "wet": -36.90147874266425,
+                "combined": -36.87514724116327
+              },
+              "25": {
+                "source": -27.086594426167,
+                "dry": -84.47057459280234,
+                "wet": -37.244072587804894,
+                "combined": -37.21823215386677
+              },
+              "50": {
+                "source": -27.08785721138396,
+                "dry": -83.3534960100254,
+                "wet": -37.055456278604424,
+                "combined": -37.029859287696034
+              },
+              "100": {
+                "source": -26.88031552903034,
+                "dry": -79.98256230347393,
+                "wet": -36.888330339803176,
+                "combined": -36.857824198314226
+              }
+            }
+          }
+        ],
+        "proof": {
+          "send_policy": "pre_ending_fade",
+          "wet_gain": 0.1981443461969509,
+          "rt60": 5.5,
+          "original_render_sha256": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140"
+        }
+      },
+      "bands_50ms": {
+        "30-200Hz": {
+          "reference": [
+            {
+              "source_seconds": 129.25,
+              "source": -68.47887423898187,
+              "dry": -80.23927739224489,
+              "wet": -88.07524367302419,
+              "combined": -77.9425606440726
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -67.9202926533568,
+              "dry": -81.90420399284929,
+              "wet": -87.40236149699264,
+              "combined": -79.42793281051286
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -69.55473561606013,
+              "dry": -86.17826775695886,
+              "wet": -88.78843955477541,
+              "combined": -83.73253485710762
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -69.48737287790563,
+              "dry": -89.57173835855977,
+              "wet": -88.70554812525668,
+              "combined": -84.65816886573153
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -68.13768339826237,
+              "dry": -89.24251179246471,
+              "wet": -88.80430889616336,
+              "combined": -84.6663958068445
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -67.38298554205811,
+              "dry": -91.60580549927914,
+              "wet": -86.81871487096907,
+              "combined": -84.07021559716105
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -69.07554234978508,
+              "dry": -99.10089470029732,
+              "wet": -84.84604785816232,
+              "combined": -84.07687760366872
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -69.66926697178097,
+              "dry": -108.30732481331881,
+              "wet": -85.71291347578253,
+              "combined": -85.70336289548217
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -68.97584110836186,
+              "dry": -128.24644427544004,
+              "wet": -85.8328366499793,
+              "combined": -85.82881477484068
+            }
+          ],
+          "T1": [
+            {
+              "source_seconds": 129.25,
+              "source": -68.47887423898187,
+              "dry": -80.00431504041494,
+              "wet": -88.08885125815196,
+              "combined": -77.77342423898259
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -67.9202926533568,
+              "dry": -80.36690408428186,
+              "wet": -87.72065980463728,
+              "combined": -78.44054693060373
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -69.55473561606013,
+              "dry": -83.4875277093353,
+              "wet": -89.53732215624356,
+              "combined": -82.48580124805281
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -69.48737287790563,
+              "dry": -87.32543884577936,
+              "wet": -90.08897344581528,
+              "combined": -84.0634558385048
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -68.13768339826237,
+              "dry": -87.40827763435307,
+              "wet": -90.26489073676841,
+              "combined": -84.3197887079868
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -67.38298554205811,
+              "dry": -91.08725688636432,
+              "wet": -89.35400328243581,
+              "combined": -85.85443613130474
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -69.07554234978508,
+              "dry": -99.10089636577746,
+              "wet": -89.96363405038144,
+              "combined": -88.69060322160605
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -69.66926697178097,
+              "dry": -108.30732470380747,
+              "wet": -92.47236587765892,
+              "combined": -92.55810239138165
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -68.97584110836186,
+              "dry": -128.24641271594245,
+              "wet": -92.63353509092427,
+              "combined": -92.62896925331847
+            }
+          ],
+          "T2": [
+            {
+              "source_seconds": 129.25,
+              "source": -68.47887423898187,
+              "dry": -80.23927751680411,
+              "wet": -88.07524367314079,
+              "combined": -77.94256073639889
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -67.9202926533568,
+              "dry": -81.8233113312637,
+              "wet": -87.40244374138781,
+              "combined": -79.37411720803125
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -69.55473561606013,
+              "dry": -84.79757034574456,
+              "wet": -88.89323610393618,
+              "combined": -82.90237482836021
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -69.48737287790563,
+              "dry": -86.31443510378027,
+              "wet": -89.29607749993644,
+              "combined": -83.17023873266695
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -68.13768339826237,
+              "dry": -85.726862994496,
+              "wet": -89.57766984669868,
+              "combined": -83.01749999582393
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -67.38298554205811,
+              "dry": -88.1427180054923,
+              "wet": -87.95169770494726,
+              "combined": -83.51583415363295
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -69.07554234978508,
+              "dry": -97.67673176379316,
+              "wet": -87.9407315410272,
+              "combined": -86.67726481641351
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -69.66926697178097,
+              "dry": -108.30703364741247,
+              "wet": -90.43389229331606,
+              "combined": -90.61388747328658
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -68.97584110836186,
+              "dry": -128.2464193359016,
+              "wet": -90.93982428764059,
+              "combined": -90.93773519639859
+            }
+          ],
+          "T3": [
+            {
+              "source_seconds": 129.25,
+              "source": -68.47887423898187,
+              "dry": -80.23927739086074,
+              "wet": -88.07524367302405,
+              "combined": -77.94256064327834
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -67.9202926533568,
+              "dry": -81.90420349647012,
+              "wet": -87.40236149678248,
+              "combined": -79.42793241312904
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -69.55473561606013,
+              "dry": -85.90460313799935,
+              "wet": -88.79397794320337,
+              "combined": -83.56474151439222
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -69.48737287790563,
+              "dry": -87.28049419558913,
+              "wet": -88.88959398383943,
+              "combined": -83.58345464699542
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -68.13768339826237,
+              "dry": -86.33511928021431,
+              "wet": -89.11424085866074,
+              "combined": -83.25034117012393
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -67.38298554205811,
+              "dry": -87.40454361920615,
+              "wet": -87.46954169237978,
+              "combined": -82.81491652286716
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -69.07554234978508,
+              "dry": -95.10396415922324,
+              "wet": -86.82436947592821,
+              "combined": -85.24466181093617
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -69.66926697178097,
+              "dry": -107.06720372508227,
+              "wet": -89.19344278468654,
+              "combined": -89.3395023221303
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -68.97584110836186,
+              "dry": -128.24768029542082,
+              "wet": -89.76507896742588,
+              "combined": -89.763233142179
+            }
+          ]
+        },
+        "200-1000Hz": {
+          "reference": [
+            {
+              "source_seconds": 129.25,
+              "source": -29.89130000959377,
+              "dry": -41.55029888344269,
+              "wet": -45.055389634009444,
+              "combined": -38.45793544213657
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -30.870468132962685,
+              "dry": -44.887200151216646,
+              "wet": -45.50111216537956,
+              "combined": -41.553349730807795
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -31.153084573115855,
+              "dry": -47.77337622968079,
+              "wet": -45.20146241582904,
+              "combined": -44.19603729287243
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -32.22177042464996,
+              "dry": -52.10765043539087,
+              "wet": -43.60429873320516,
+              "combined": -41.99802629358028
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -33.5023502168768,
+              "dry": -54.39757318310676,
+              "wet": -43.01602238612925,
+              "combined": -41.994024888342814
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -30.27709745740438,
+              "dry": -54.53535850182358,
+              "wet": -41.181192545748445,
+              "combined": -40.358922245998414
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -29.875930449344597,
+              "dry": -59.699083561835984,
+              "wet": -39.498062028868716,
+              "combined": -39.01734963988271
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -28.17547057798178,
+              "dry": -66.81942310997299,
+              "wet": -37.87035394300541,
+              "combined": -37.670703132238735
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -27.61865685717169,
+              "dry": -83.89505113577967,
+              "wet": -37.19702893566217,
+              "combined": -37.17108661511505
+            }
+          ],
+          "T1": [
+            {
+              "source_seconds": 129.25,
+              "source": -29.89130000959377,
+              "dry": -41.35219033770687,
+              "wet": -45.05662094068882,
+              "combined": -38.33207675166435
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -30.870468132962685,
+              "dry": -43.32936263027121,
+              "wet": -45.736513759664135,
+              "combined": -40.82480390766321
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -31.153084573115855,
+              "dry": -45.08764007585199,
+              "wet": -45.38770552984303,
+              "combined": -43.54334883312089
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -32.22177042464996,
+              "dry": -49.788673113394765,
+              "wet": -45.55925086277935,
+              "combined": -42.83493068644102
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -33.5023502168768,
+              "dry": -52.47747739143766,
+              "wet": -45.457016057374915,
+              "combined": -43.62315247420615
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -30.27709745740438,
+              "dry": -54.025400181946765,
+              "wet": -44.96871782577061,
+              "combined": -43.77427747460565
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -29.875930449344597,
+              "dry": -59.69908356216972,
+              "wet": -46.6826055514672,
+              "combined": -45.73748889392684
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -28.17547057798178,
+              "dry": -66.81942310997302,
+              "wet": -48.91544028966797,
+              "combined": -48.269161871262526
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -27.61865685717169,
+              "dry": -83.89505113483304,
+              "wet": -52.24578745102864,
+              "combined": -52.14516304380777
+            }
+          ],
+          "T2": [
+            {
+              "source_seconds": 129.25,
+              "source": -29.89130000959377,
+              "dry": -41.550298883442665,
+              "wet": -45.055389634009416,
+              "combined": -38.45793544213655
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -30.870468132962685,
+              "dry": -44.79824702397315,
+              "wet": -45.50187961691041,
+              "combined": -41.51195472287226
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -31.153084573115855,
+              "dry": -46.394987099801526,
+              "wet": -45.206774548081874,
+              "combined": -43.73986367281667
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -32.22177042464996,
+              "dry": -48.92160622549481,
+              "wet": -44.36809026346054,
+              "combined": -41.73395486944632
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -33.5023502168768,
+              "dry": -50.91626101534114,
+              "wet": -43.97957143552921,
+              "combined": -42.15809353182443
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -30.27709745740438,
+              "dry": -51.08174560389874,
+              "wet": -42.869693371299896,
+              "combined": -41.4216029454675
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -29.875930449344597,
+              "dry": -58.18219550785756,
+              "wet": -43.8968792195771,
+              "combined": -43.00277682970969
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -28.17547057798178,
+              "dry": -66.81942483777785,
+              "wet": -45.64573431319245,
+              "combined": -45.16128188405604
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -27.61865685717169,
+              "dry": -83.89505113483307,
+              "wet": -47.69453694138196,
+              "combined": -47.62997009471622
+            }
+          ],
+          "T3": [
+            {
+              "source_seconds": 129.25,
+              "source": -29.89130000959377,
+              "dry": -41.55029888344267,
+              "wet": -45.05538963400943,
+              "combined": -38.45793544213657
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -30.870468132962685,
+              "dry": -44.887200151234524,
+              "wet": -45.50111216537958,
+              "combined": -41.55334973078497
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -31.153084573115855,
+              "dry": -47.49714897486843,
+              "wet": -45.200694944705035,
+              "combined": -44.10427088740023
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -32.22177042464996,
+              "dry": -49.94580222569703,
+              "wet": -43.90516231448798,
+              "combined": -41.7107748028167
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -33.5023502168768,
+              "dry": -51.60640607558577,
+              "wet": -43.408216464037,
+              "combined": -41.86584866792232
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -30.27709745740438,
+              "dry": -50.328606671872926,
+              "wet": -41.98270258810963,
+              "combined": -40.49642145368567
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -29.875930449344597,
+              "dry": -55.65189916268163,
+              "wet": -42.23542153342108,
+              "combined": -41.205984084852304
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -28.17547057798178,
+              "dry": -65.54070637243129,
+              "wet": -43.366847662953504,
+              "combined": -42.93425949531971
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -27.61865685717169,
+              "dry": -83.89505113461857,
+              "wet": -45.13068954113473,
+              "combined": -45.08155045587444
+            }
+          ]
+        },
+        "1000-4000Hz": {
+          "reference": [
+            {
+              "source_seconds": 129.25,
+              "source": -37.088955506666345,
+              "dry": -48.79456444152708,
+              "wet": -52.39360680926444,
+              "combined": -47.214500985292524
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -39.68248120191084,
+              "dry": -53.63629091609002,
+              "wet": -51.711566893072515,
+              "combined": -49.32803337152028
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -37.959738790704144,
+              "dry": -54.645613403887666,
+              "wet": -50.775654212439214,
+              "combined": -49.60424936413951
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -38.67545548116058,
+              "dry": -58.68438520689104,
+              "wet": -50.93882319349861,
+              "combined": -50.0631072635273
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -37.66566523308303,
+              "dry": -58.763763807647756,
+              "wet": -51.300084123488574,
+              "combined": -50.504812888878014
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -37.54221448999868,
+              "dry": -61.93772337720557,
+              "wet": -50.26328312563126,
+              "combined": -49.67358790168195
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -36.882118811187546,
+              "dry": -66.71964809949424,
+              "wet": -51.93532979886395,
+              "combined": -51.84022290208407
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -37.95014605020111,
+              "dry": -76.48796340829185,
+              "wet": -53.761296682690386,
+              "combined": -53.776070491160645
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -37.02325423171758,
+              "dry": -93.19264274906537,
+              "wet": -52.42312259129492,
+              "combined": -52.4072342490699
+            }
+          ],
+          "T1": [
+            {
+              "source_seconds": 129.25,
+              "source": -37.088955506666345,
+              "dry": -48.57870226414681,
+              "wet": -52.40134741773069,
+              "combined": -47.06128305304945
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -39.68248120191084,
+              "dry": -52.119242804600574,
+              "wet": -51.84825010696191,
+              "combined": -48.70607533048567
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -37.959738790704144,
+              "dry": -51.94574363666386,
+              "wet": -51.28357051176609,
+              "combined": -48.94191894425806
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -38.67545548116058,
+              "dry": -56.40977307052003,
+              "wet": -52.41783195160603,
+              "combined": -50.78578122207354
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -37.66566523308303,
+              "dry": -56.93099785891616,
+              "wet": -52.90910458401535,
+              "combined": -51.56735498411469
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -37.54221448999868,
+              "dry": -61.472746547972875,
+              "wet": -52.22712312437718,
+              "combined": -51.3348280466488
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -36.882118811187546,
+              "dry": -66.71964809949424,
+              "wet": -55.72806710350069,
+              "combined": -55.365809126829085
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -37.95014605020111,
+              "dry": -76.48796340829185,
+              "wet": -57.779925197761386,
+              "combined": -57.811378513753944
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -37.02325423171758,
+              "dry": -93.19264274906537,
+              "wet": -57.420477661688444,
+              "combined": -57.4182859350647
+            }
+          ],
+          "T2": [
+            {
+              "source_seconds": 129.25,
+              "source": -37.088955506666345,
+              "dry": -48.79456444152708,
+              "wet": -52.39360680926444,
+              "combined": -47.214500985292524
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -39.68248120191084,
+              "dry": -53.557429974638886,
+              "wet": -51.71198178729587,
+              "combined": -49.292958091963044
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -37.959738790704144,
+              "dry": -53.22387465495292,
+              "wet": -50.816390147774804,
+              "combined": -49.1769006204911
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -38.67545548116058,
+              "dry": -55.45754057381738,
+              "wet": -51.38061705388418,
+              "combined": -49.71477002685263
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -37.66566523308303,
+              "dry": -55.24312036584912,
+              "wet": -51.831735498010126,
+              "combined": -50.18460605182519
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -37.54221448999868,
+              "dry": -58.51347266691345,
+              "wet": -51.037364085644406,
+              "combined": -49.864513452542084
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -36.882118811187546,
+              "dry": -65.21258704904508,
+              "wet": -54.326015768713944,
+              "combined": -53.986900224136164
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -37.95014605020111,
+              "dry": -76.4879633854775,
+              "wet": -56.67722606429072,
+              "combined": -56.64957954221144
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -37.02325423171758,
+              "dry": -93.19264274906537,
+              "wet": -56.474296145988646,
+              "combined": -56.46863503803333
+            }
+          ],
+          "T3": [
+            {
+              "source_seconds": 129.25,
+              "source": -37.088955506666345,
+              "dry": -48.79456444152708,
+              "wet": -52.39360680926444,
+              "combined": -47.214500985292524
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -39.68248120191084,
+              "dry": -53.63629091609002,
+              "wet": -51.711566893072515,
+              "combined": -49.32803337152028
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -37.959738790704144,
+              "dry": -54.34683113456916,
+              "wet": -50.777280361459425,
+              "combined": -49.51829986118434
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -38.67545548116058,
+              "dry": -56.44405572975846,
+              "wet": -51.0598943559646,
+              "combined": -49.734525015311554
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -37.66566523308303,
+              "dry": -55.855334703835325,
+              "wet": -51.47222397242487,
+              "combined": -50.06342651346132
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -37.54221448999868,
+              "dry": -57.699124525229166,
+              "wet": -50.61871642484355,
+              "combined": -49.39023224588457
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -36.882118811187546,
+              "dry": -62.6760169541545,
+              "wet": -53.55473997487302,
+              "combined": -53.072158319160785
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -37.95014605020111,
+              "dry": -75.19422032563202,
+              "wet": -56.13229532362075,
+              "combined": -56.09240277750315
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -37.02325423171758,
+              "dry": -93.19264274906537,
+              "wet": -56.22358425014105,
+              "combined": -56.215932474258594
+            }
+          ]
+        },
+        "4000-10000Hz": {
+          "reference": [
+            {
+              "source_seconds": 129.25,
+              "source": -55.54369874482225,
+              "dry": -67.2496204820935,
+              "wet": -76.95948579923517,
+              "combined": -66.80293207837462
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -54.794780433728754,
+              "dry": -68.7564441462509,
+              "wet": -74.7976917201941,
+              "combined": -67.82341595281208
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -54.58269063405869,
+              "dry": -71.29934654121381,
+              "wet": -75.56158785796288,
+              "combined": -69.5361375930253
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -54.23496433996508,
+              "dry": -74.26641384565573,
+              "wet": -74.39418240811882,
+              "combined": -70.53676920854771
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -54.37065878537585,
+              "dry": -75.27766410998109,
+              "wet": -74.25142558429803,
+              "combined": -70.89389839831173
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -53.899312622343444,
+              "dry": -78.08793273676162,
+              "wet": -74.53812266698192,
+              "combined": -72.63671081639285
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -54.207102155448545,
+              "dry": -84.12951994075,
+              "wet": -74.99090369692236,
+              "combined": -74.51863032661322
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -53.302242686844714,
+              "dry": -91.94300240356718,
+              "wet": -74.7440217892457,
+              "combined": -74.63554405734973
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -54.07083517489777,
+              "dry": -110.07009378500905,
+              "wet": -74.78112693175964,
+              "combined": -74.77269260965804
+            }
+          ],
+          "T1": [
+            {
+              "source_seconds": 129.25,
+              "source": -55.54369874482225,
+              "dry": -67.03293135243135,
+              "wet": -76.96649342909888,
+              "combined": -66.6073895495708
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -54.794780433728754,
+              "dry": -67.2332201350929,
+              "wet": -74.95506165293456,
+              "combined": -66.59701052508044
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -54.58269063405869,
+              "dry": -68.59392922646651,
+              "wet": -76.41076328198737,
+              "combined": -67.66030187113887
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -54.23496433996508,
+              "dry": -72.00041415417479,
+              "wet": -76.45936118424197,
+              "combined": -69.9910092364395
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -54.37065878537585,
+              "dry": -73.36289288139372,
+              "wet": -76.23065647161525,
+              "combined": -70.81732588628657
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -53.899312622343444,
+              "dry": -77.55864907403775,
+              "wet": -77.21380443030176,
+              "combined": -74.03823587449058
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -54.207102155448545,
+              "dry": -84.12951994075,
+              "wet": -79.72409739490578,
+              "combined": -78.69899482365538
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -53.302242686844714,
+              "dry": -91.94300240356718,
+              "wet": -80.19796526642808,
+              "combined": -79.94553023028209
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -54.07083517489777,
+              "dry": -110.07009378500905,
+              "wet": -81.32891813837617,
+              "combined": -81.34345324226376
+            }
+          ],
+          "T2": [
+            {
+              "source_seconds": 129.25,
+              "source": -55.54369874482225,
+              "dry": -67.2496204820935,
+              "wet": -76.95948579923517,
+              "combined": -66.80293207837462
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -54.794780433728754,
+              "dry": -68.67886051176197,
+              "wet": -74.79794114832211,
+              "combined": -67.76153935933746
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -54.58269063405869,
+              "dry": -69.85739866350771,
+              "wet": -75.66551066057448,
+              "combined": -68.49973993155908
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -54.23496433996508,
+              "dry": -71.03016932987603,
+              "wet": -75.03019092962245,
+              "combined": -68.86329739478609
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -54.37065878537585,
+              "dry": -71.79277373823304,
+              "wet": -74.9196197290735,
+              "combined": -69.33496237508476
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -53.899312622343444,
+              "dry": -74.61899079164434,
+              "wet": -75.74730237375037,
+              "combined": -71.77210097946929
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -54.207102155448545,
+              "dry": -82.65672522144345,
+              "wet": -78.0230463145414,
+              "combined": -76.95536739513805
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -53.302242686844714,
+              "dry": -91.9430023749737,
+              "wet": -78.69902120309168,
+              "combined": -78.49752586003761
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -54.07083517489777,
+              "dry": -110.07009378500905,
+              "wet": -79.75538783399517,
+              "combined": -79.76273686935465
+            }
+          ],
+          "T3": [
+            {
+              "source_seconds": 129.25,
+              "source": -55.54369874482225,
+              "dry": -67.2496204820935,
+              "wet": -76.95948579923517,
+              "combined": -66.80293207837462
+            },
+            {
+              "source_seconds": 129.35,
+              "source": -54.794780433728754,
+              "dry": -68.7564441462509,
+              "wet": -74.7976917201941,
+              "combined": -67.82341595281208
+            },
+            {
+              "source_seconds": 129.45,
+              "source": -54.58269063405869,
+              "dry": -70.98912310937824,
+              "wet": -75.56517262432897,
+              "combined": -69.31554856607656
+            },
+            {
+              "source_seconds": 129.55,
+              "source": -54.23496433996508,
+              "dry": -72.01070647924566,
+              "wet": -74.58637601260324,
+              "combined": -69.33626872385648
+            },
+            {
+              "source_seconds": 129.575,
+              "source": -54.37065878537585,
+              "dry": -72.47905652407535,
+              "wet": -74.47850057194829,
+              "combined": -69.58387154894996
+            },
+            {
+              "source_seconds": 129.65,
+              "source": -53.899312622343444,
+              "dry": -73.89488885640554,
+              "wet": -75.14146956513581,
+              "combined": -71.11175995877895
+            },
+            {
+              "source_seconds": 129.75,
+              "source": -54.207102155448545,
+              "dry": -80.10670617798729,
+              "wet": -76.99785434187346,
+              "combined": -75.44632159989312
+            },
+            {
+              "source_seconds": 129.85,
+              "source": -53.302242686844714,
+              "dry": -90.67436049703417,
+              "wet": -77.79679269163505,
+              "combined": -77.57015389479604
+            },
+            {
+              "source_seconds": 129.95,
+              "source": -54.07083517489777,
+              "dry": -110.07009378500905,
+              "wet": -78.69154090487218,
+              "combined": -78.69517761103307
+            }
+          ]
+        }
+      }
+    }
+  }
+}

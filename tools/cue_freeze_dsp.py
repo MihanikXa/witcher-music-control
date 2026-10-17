@@ -61,6 +61,43 @@ def dry_db_release(frames,rate,fade_in,fade_start,fade_stop,
     return env
 
 
+def aligned_dry_envelope(frames,rate,fade_in,fade_start,fade_stop,
+                         center_seconds,shift_seconds=.10,width_seconds=.5):
+    """Locally delay fade progress with a compact raised-cosine phase warp.
+
+    A bounded raised-cosine phase warp keeps both fade endpoints fixed and changes
+    neither the fade window nor the source. Unlike inverse-envelope correction,
+    it applies one small smooth timing offset, not source-following gain control.
+    """
+    if not np.isfinite([center_seconds,shift_seconds,width_seconds]).all():
+        raise ValueError('Non-finite alignment')
+    duration=fade_stop-fade_start
+    if duration<=0 or shift_seconds<=0 or width_seconds<=0:
+        raise ValueError('Invalid alignment')
+    if not fade_start<center_seconds<fade_stop:
+        raise ValueError('Alignment center outside fade')
+    if center_seconds-width_seconds/2<=fade_start or center_seconds+width_seconds/2>=fade_stop:
+        raise ValueError('Alignment window must remain inside existing fade')
+    env=dry_envelope(frames,rate,fade_in,fade_start,fade_stop)
+    a,b=round(fade_start*rate),min(frames,round(fade_stop*rate))
+    t=np.arange(b-a,dtype=float)/rate+fade_start
+    u=np.linspace(0,1,b-a)
+    z=(t-center_seconds)/(width_seconds/2)
+    inside=np.abs(z)<=1
+    g=np.zeros(len(t));g[inside]=.5+.5*np.cos(np.pi*z[inside])
+    phase=u-(shift_seconds/duration)*g
+    if np.min(np.diff(phase)) < -1e-12 or phase[0]<-1e-12 or phase[-1]>1+1e-12:
+        raise ValueError('Alignment would reverse or overshoot fade phase')
+    phase=np.clip(phase,0,1)
+    phase[0]=0.;phase[-1]=1.
+    # Preserve the exact original sampled curve outside the compact window.
+    changed=env[a:b].copy()
+    active=g>0
+    changed[active]=.5+.5*np.cos(np.pi*phase[active])
+    env[a:b]=changed
+    return env
+
+
 class Field:
     def __init__(self,rt60=3,rate=RATE):
         if rate!=RATE or not .2<rt60<20:raise ValueError('Unsupported field rate/RT60')
@@ -242,6 +279,11 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
     segment=source[a:b].copy();length=len(segment)/RATE
     fs,fe=[v-settings['source_in'] for v in settings['dry_fade']]
     env=dry_envelope(len(segment),RATE,settings['fade_in'],fs,fe)
+    dry_align=settings.get('local_dry_alignment')
+    if dry_align is not None:
+        center=dry_align['center_source_seconds']-settings['source_in']
+        env=aligned_dry_envelope(len(segment),RATE,settings['fade_in'],fs,fe,center,
+                                 dry_align.get('shift_seconds',.10),dry_align.get('width_seconds',.5))
     onset=settings.get('onset_mute_seconds',0)
     if onset:
         n=round(onset*RATE);r=round(settings.get('onset_ramp_seconds',.35)*RATE)
@@ -258,7 +300,10 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
                         signal.butter(2,lp,'lowpass',fs=RATE,output='sos')])
     send_policy=settings.get('send_policy','post_fader')
     if send_policy not in ('post_fader','pre_ending_fade','tapered_ending'):raise ValueError('Unsupported send policy')
+    if settings.get('local_send_fade') is not None and send_policy=='post_fader':
+        raise ValueError('Local independent-send taper requires independent send policy')
     excitation=padded
+    send_envelope=env.copy()
     send_guard=0
     if send_policy in ('pre_ending_fade','tapered_ending'):
         # Experimental v3: preserve dry edit exactly, but avoid draining the room
@@ -275,7 +320,22 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
             ending=dry_envelope(len(segment),RATE,0,fs,fe)
             entrance*=ending**power
         entrance[stop_frame-n:stop_frame]*=1-ramp(n);entrance[stop_frame:]=0
+        local=settings.get('local_send_fade')
+        if local is not None:
+            center=local['center_source_seconds']-settings['source_in']
+            width=local['width_seconds']
+            if not np.isfinite([center,width]).all() or width<=0:
+                raise ValueError('Invalid local send fade')
+            lo,hi=center-width/2,center+width/2
+            if lo<0 or hi>=length or hi>=fe:
+                raise ValueError('Local send fade must finish before source endpoint')
+            x=np.arange(len(segment))/RATE
+            mask=np.ones(len(segment));active=(x>=lo)&(x<=hi)
+            mask[x>hi]=0
+            mask[active]=1-ramp(int(active.sum()))
+            entrance*=mask
         excitation=np.zeros_like(padded);excitation[:len(segment)]=segment*entrance[:,None]
+        send_envelope=entrance
     filtered=signal.sosfilt(sos,excitation,axis=0)
     field=Field(rt60)
     # Both modes have exactly the same audible field before dry stop.
@@ -321,8 +381,10 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
         wet_control_checks=controls,
         send_policy=send_policy,send_stop_guard_seconds=send_guard,
         send_ending_fade_power=settings.get('send_ending_fade_power') if send_policy=='tapered_ending' else None,
+        local_send_fade=settings.get('local_send_fade'),
+        local_dry_alignment=settings.get('local_dry_alignment'),
         entire_transition_geometry=release_diagnostics(raw,max(0,fs-1)),
         release_diagnostics=release_diagnostics(raw,fe),
         post_stop_first_second_dbfs=float(20*np.log10(max(np.sqrt(np.mean(raw[stop:stop+RATE]**2)),1e-12))))
-    components=dict(dry=padded,wet=wet,source_envelope=env)
+    components=dict(dry=padded,wet=wet,source_envelope=env,send_envelope=send_envelope)
     return np.pad(raw,((round(lead*RATE),round(trail*RATE)),(0,0))),proof,components
