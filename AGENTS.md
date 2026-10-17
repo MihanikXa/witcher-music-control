@@ -5,7 +5,23 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest v2 in-game styling priorities — user explicit (17 October)
+## Latest v3 typography runtime comparison (17 October)
+
+User reports v3 "Much better but not quite it" with current versus
+reference **same Greater Blue Mutagen** screenshots. The icon art,
+shared slim topbar and Alchemy composition now appear substantially aligned.
+Main remaining visual differences: synthetic Gentium small caps are
+lighter/narrower than the authored IM Fell SC reference; center
+heading lacks width/tracking; center recipe ingredient warning is red
+while reference is neutral; prose wraps to two lines versus one; menu
+footer lettering is still conventional. Read
+[Menus v3 runtime follow-up](research/menus087-v3-runtime-typography-feedback.md).
+Do not recook icons or change HDR/background/layout on these screenshots.
+Use a bounded Alchemy-first font styling pass, then other menu roles,
+without changing the accepted RC2 HUD. This review is not a user-approved
+line-by-line typography specification.
+
+## Prior v2 in-game styling priorities — user explicit (17 October)
 
 The common Ink & Iron 0.8.7 layout/engraving/header now looks substantially
 right. The user's **main remaining concern is typography and text color**;
