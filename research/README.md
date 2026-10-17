@@ -123,3 +123,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 61. [Private cue edits and freeze auditions](61-private-cue-edits-and-freeze-auditions.md):24 user-directed source-clock excerpts,34 actual PCM previews, five dry/decay/freeze comparisons, independently implemented lossless FDN, exact crop/silence/headroom checks, offline export test and single-cue regeneration.184 tests pass; actual browser/subjective listening unverified. [Plan](61-private-cue-edit-plan.json), [sanitized evidence](61-private-cue-edit-evidence.json).
 
 62. [Cue-tail audible handoff defect and small v2 plan](62-cue-tail-handoff-defect-review.md); [verbatim export](62-user-cue-edit-decisions.json). Broad dry/wet dip, plateau and separate end fade; preserve v1, stop unnecessary listening, first try continuous reverb and coherent release on a few controls.
+
+63. [Longer natural reverb decay preference](63-longer-natural-reverb-decay-preference.md): latest user instruction prioritizes smoother, longer conventional reverb tails on most cues, with continuous early wet send and no late hold/second fade; small v2 audio comparison first.

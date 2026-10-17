@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Latest user preference (2026-10-17; report63):** User says "A longer conventional reverb decay I recon would be helpful for most too." Prioritize **longer smooth natural conventional decays (B) for most private Sparse cue endings** in the next small v2 sample, not only S07-b. Keep a subtle reverb send present before the original dry fade; let it decay after source stop without the v1 wet jump/hold/second fade. Tune RT60 and sufficient render length per cue; do not treat 'most' as all or silently abandon optional freeze C. Preserve original user cut clocks and avoid re-rendering all24 before representative listening approval. See reports62–63.
+
+
 **Latest audible correction (2026-10-17; report62):** The user auditioned part of report61 and provided an exported 24-cue JSON (8 Adjust,2 Keep,14 Unreviewed, with one Unreviewed carrying notes). They hear a repeatable **dry dip → late wet increase/freeze plateau → second fade** in most inspected cues. Preserve the exact raw responses at `research/62-user-cue-edit-decisions.json`; independent code-level diagnosis and v2 experiment scope in report62. **Do not ask for remaining v1 review or re-render all24 before proving a fix.** Prefer a small continuous-send/one-release B/C DSP comparison with S05-short/S11-short/S12-1/S07-b and S04-b onset check. The user's earlier source edits, original reports and v1 files must remain untouched; no bank/game integration.
 
 

@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Latest audition refinement (2026-10-17; report63):** User requests longer, smoother conventional reverb decay for most sparse-cue endings, not only S07-b. Next experiment should compare a few revised continuously present reverb B tails; freeze C remains optional. Preserve original cuts and v1 samples; no game integration. See [report63](research/63-longer-natural-reverb-decay-preference.md).
+
+
 **Latest user audition finding (2026-10-17):** Report61's freeze-tail previews repeatedly show an audible dry/wet handoff, plateau and second fade. Stop further v1 listening; only small v2 common-envelope DSP repair should proceed. Exact user's exported feedback and separately evidenced diagnosis are in [report62](research/62-cue-tail-handoff-defect-review.md) and [raw decisions](research/62-user-cue-edit-decisions.json). No game integration or updated audio has been made.
 
 
