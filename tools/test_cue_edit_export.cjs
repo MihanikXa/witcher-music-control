@@ -17,7 +17,7 @@ class Element {
  click(){downloads.push({name:this.download,href:this.href})}
 }
 const cards=manifest.cues.map(c=>{
- const selectors={};for(const s of ['audio','.variant','.play','.ending','.position','.verdict','.preferred','textarea'])selectors[s]=new Element();
+ const selectors={};for(const s of ['audio','.variant','.play','.ending','.position','.verdict','.preferred','textarea','.seamless','.resolution','.tail','.artifact'])selectors[s]=new Element();
  const primary=manifest.primary_variant||'C';
  selectors.audio.src=c.renders[primary].file;selectors.audio.duration=c.proof.output_seconds;
  selectors['.variant'].value=primary;selectors['.preferred'].value='';selectors['.verdict'].value='Unreviewed';
@@ -37,6 +37,10 @@ const card=cards[0],audio=card.querySelector('audio');card.querySelector('.play'
 if(cards.length>1){cards[1].querySelector('.play').onclick();assert.equal(audio.paused,true)}
 card.querySelector('.ending').onclick();assert.ok(audio.currentTime>=manifest.lead_silence);
 card.querySelector('.verdict').value='Adjust';card.querySelector('textarea').value='Offline test — shorter freeze, keep the source cut.';
+if(manifest.kind==='preregistered-treatment-trial'){
+ card.querySelector('.seamless').value='No';card.querySelector('.resolution').value='Uncertain';
+ card.querySelector('.tail').value='Too intrusive';card.querySelector('.artifact').value='Heard one — see notes';
+}
 card.querySelector('textarea').oninput();
 if(manifest.cues[0].renders.B){card.querySelector('.variant').value='B';card.querySelector('.variant').onchange();assert.equal(audio.src,manifest.cues[0].renders.B.file);assert.equal(card.querySelector('.preferred').value,'');card.querySelector('.preferred').value='B'}
 ids['#show'].onclick();const result=JSON.parse(ids['#json'].value);
@@ -45,6 +49,15 @@ assert.equal(result.decisions[0].source_in,manifest.cues[0].settings.source_in);
 assert.equal(result.decisions[0].source_out,manifest.cues[0].settings.source_out);
 assert.equal(result.decisions[0].settings.verbatim_notes,manifest.cues[0].settings.verbatim_notes);
 assert.ok(result.decisions[0].notes.includes('Offline test'));assert.equal(ids['#fallback'].open,true);
+if(manifest.kind==='preregistered-treatment-trial'){
+ assert.equal(result.kind,'preregistered-treatment-trial-outcomes');
+ assert.equal(result.prediction_registration.commit,manifest.registration.commit);
+ assert.deepEqual(result.decisions[0].frozen_prediction,manifest.cues[0].prediction);
+ assert.equal(result.decisions[0].evaluation.seamless,'No');
+ assert.equal(result.decisions[0].evaluation.tail,'Too intrusive');
+ assert.equal(manifest.cues[0].prediction.confidence,result.decisions[0].frozen_prediction.confidence);
+ result.decisions.forEach((d,i)=>assert.deepEqual(d.frozen_prediction,manifest.cues[i].prediction));
+}
 ids['#export'].onclick();assert.equal(downloads.length,1);assert.ok(downloads[0].name.startsWith('wmc-cue-edit-decisions-'));
 assert.ok(blobs.has(downloads[0].href));ids['#stop'].onclick();assert.ok(allAudio.every(a=>a.paused));
 blobs.get(downloads[0].href).text().then(text=>{assert.equal(JSON.parse(text).decisions.length,manifest.cues.length);

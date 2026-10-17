@@ -3,7 +3,7 @@
 **Latest direction (report68, 2026-10-17):** Transparent and preregistered treatment triage for remaining Sparse cue endings; only six varied private test renders, then user review. Report67 pins the five accepted source-specific endings; no universal preset or full24 rollout.
 
 
-**Current reading order:** report67 records accepted S05-short B v3 and S11-short C v3, completing the five representative private cue choices alongside report65. Report66 contains the controlled implementation; historical failures remain preserved. No universal preset, automatic all24 propagation or game integration.
+**Current reading order:** report69 completes report68’s source-only preregistration and six-cue private trial. Predictions remain immutable; user listening outcomes are not yet recorded. Reports58–67 preserve original selections and five exact accepted renders. No further rendering, automatic library rollout or game integration until trial feedback.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -138,3 +138,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 67. [Two v3 endings accepted](67-user-accepts-two-v3-endings.md): direct user choices complete five representative private-render approvals; [exact selections and hashes](67-accepted-private-cue-selections.json). No audio changed.
 
 68. [Preregistered remaining-cue treatment selection handoff](68-remainder-treatment-prediction-handoff.md): survey unapproved passage endings, rule-based prospective parameter selection, six-case private audition (two prior-defect probes / four fresh), immutable prediction ledger, and strict stop before expansion.
+
+69. [Preregistered six-cue treatment trial](69-preregistered-treatment-trial.md): complete24-entry source survey,18 pending policies, predictions committed before eight trial WAVs across six cues.200 tests and exact accepted-input checks pass; three primary listening warnings remain. [Frozen ledger](69-treatment-predictions.json), [technical evidence](69-treatment-trial-evidence.json). Human evaluation pending.

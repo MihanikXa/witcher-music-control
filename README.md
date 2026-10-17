@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Six-cue prediction trial ready (2026-10-17; report69):** All24 original excerpts surveyed;18 pending including two restricted S14 comparisons. Predictions/rule/source measurements frozen in commit `7bbb0db` before rendering. Private `build/music-material-selection/treatment-trial-v1/index.html` has six primaries/eight new WAVs, natural B throughout and controlled natural C only on S07-c/S12-2.200 tests, PCM/registration/input gates and outcome-export tests pass; accepted five and S05-main are exact. No fit accuracy or subjective success claimed. S07-c weak tail/steep handoff, S12-2 spectral change and S16-2 steep handoff remain listening warnings; do not retune ledger or promote alternatives after seeing measurements. Human outcomes must be separate JSON. Stop at this six-cue audition; no full-library, Wwise, game or scheduler work.
+
+
 **Next authorized research (report68, 2026-10-17):** Predict treatment choices for remaining private sparse-cue endings from measured properties and five previously accepted examples. Preregister the rules/ledger; build only a six-case (two known failure / four fresh) private listening trial, then wait for feedback before scaling. No Wwise, game integration or copyrighted audio redistribution. See [handoff specification](research/68-remainder-treatment-prediction-handoff.md).
 
 

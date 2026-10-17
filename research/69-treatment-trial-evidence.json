@@ -1,0 +1,412 @@
+{
+  "passed": true,
+  "engineering_safety_passed": true,
+  "technical_review_flags": [],
+  "audition_review_flags": [
+    {
+      "cue": "S07-c",
+      "variant": "B",
+      "kind": "fast_handoff_review",
+      "threshold_db": 6,
+      "limitation": "Conservative diagnostic review threshold, not a preregistered preference rule or a perceptual pass/fail. Prediction remains unchanged."
+    },
+    {
+      "cue": "S12-2",
+      "variant": "B",
+      "kind": "spectral_change_review",
+      "threshold": 0.65,
+      "limitation": "Change can come from the composition or spectral filtering; listening required. Not a preregistered preference threshold."
+    },
+    {
+      "cue": "S12-2",
+      "variant": "C",
+      "kind": "fast_handoff_review",
+      "threshold_db": 6,
+      "limitation": "Conservative diagnostic review threshold, not a preregistered preference rule or a perceptual pass/fail. Prediction remains unchanged."
+    },
+    {
+      "cue": "S12-2",
+      "variant": "C",
+      "kind": "spectral_change_review",
+      "threshold": 0.65,
+      "limitation": "Change can come from the composition or spectral filtering; listening required. Not a preregistered preference threshold."
+    },
+    {
+      "cue": "S16-2",
+      "variant": "B",
+      "kind": "fast_handoff_review",
+      "threshold_db": 6,
+      "limitation": "Conservative diagnostic review threshold, not a preregistered preference rule or a perceptual pass/fail. Prediction remains unchanged."
+    }
+  ],
+  "musical_fit": "pending human evaluation; no prediction was promoted after rendering",
+  "registration": {
+    "commit": "7bbb0db605510ad7c379ae61aaf40fa71bf8f1d5",
+    "ledger_sha256": "8010166243425ae68b7cf6a71433f74b88752e2f4dab090fcb65ab39b5557ebd",
+    "git_blob_sha256": "47a6e989852a126378b979a93522fd935b4fdd6e48deeaf6f55a24b9973ee026",
+    "comparison": "exact bytes after CRLF-to-LF only",
+    "render_start_utc": "2026-10-17T04:00:56.207898+00:00"
+  },
+  "new_renders": 8,
+  "cues": 6,
+  "immutable_inputs_verified": 22,
+  "index_sha256": "b90b570b515960bae42068e00789aa4245c746a02a96d77c337e2916d25cd804",
+  "metadata_sha256": "df395beaf3a20e2166b7ad4a42db57a0c14897502e2758695ae9d2d34fdf2256",
+  "source_measurements_not_subjective": true,
+  "browser_playback_verified": false,
+  "subjectively_listened": false,
+  "results": [
+    {
+      "cue": "S07-c",
+      "variant": "B",
+      "qa": {
+        "sha256": "8210bb16d375f454aef53af2d14c989035e9c5b5029bd59f6e138e55d9a1979a",
+        "seconds": 37.45,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.18817138671875,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "long_explicit_or_provisional_fade",
+      "original_fade": [
+        172,
+        176.9
+      ],
+      "actual_fade": [
+        172,
+        176.9
+      ],
+      "rt60": 7,
+      "wet_gain": 0.33505496893282255,
+      "cleanup_peak_dbfs": -157.87659468319117,
+      "dry_stop_sample_delta": 5.2010224321180404e-05,
+      "handoff_drop_db": 8.792985916180434,
+      "spectral_distance": 0.3212748364918211,
+      "post_stop_first_second_dbfs": -72.80009059277674,
+      "post_source_review": false
+    },
+    {
+      "cue": "S07-c",
+      "variant": "C",
+      "qa": {
+        "sha256": "d0c9aa198c42c21c6b88fcc2e3fd1024eee3d73332c1f4e3a09e690a39510bd5",
+        "seconds": 37.45,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.188232421875,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "long_explicit_or_provisional_fade",
+      "original_fade": [
+        172,
+        176.9
+      ],
+      "actual_fade": [
+        172,
+        176.9
+      ],
+      "rt60": 7,
+      "wet_gain": 0.33505496893282255,
+      "cleanup_peak_dbfs": -135.71189503577685,
+      "dry_stop_sample_delta": 0.0007954494493813153,
+      "handoff_drop_db": 3.4427027461021424,
+      "spectral_distance": 0.3211548560407079,
+      "post_stop_first_second_dbfs": -52.23438152308586,
+      "post_source_review": false
+    },
+    {
+      "cue": "S12-2",
+      "variant": "B",
+      "qa": {
+        "sha256": "1df4cf103ee2854b38b9460ebbb9a344cbae347650932751ce85b8c9a9d32451",
+        "seconds": 29.0,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.229095458984375,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "active_short_fade",
+      "original_fade": [
+        34.8,
+        35.5
+      ],
+      "actual_fade": [
+        33.3,
+        35.5
+      ],
+      "rt60": 5.5,
+      "wet_gain": 0.2696003766646726,
+      "cleanup_peak_dbfs": -141.50911796224807,
+      "dry_stop_sample_delta": 0.0021533521531584073,
+      "handoff_drop_db": 4.037662050323668,
+      "spectral_distance": 0.8889273807637774,
+      "post_stop_first_second_dbfs": -48.78068221804654,
+      "post_source_review": false
+    },
+    {
+      "cue": "S12-2",
+      "variant": "C",
+      "qa": {
+        "sha256": "cdc90781691dd58a529aad2429798ca1a9acd7b9df345a6b216167e0cd3b2b4c",
+        "seconds": 29.0,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.240692138671875,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "active_short_fade",
+      "original_fade": [
+        34.8,
+        35.5
+      ],
+      "actual_fade": [
+        34.8,
+        35.5
+      ],
+      "rt60": 5.5,
+      "wet_gain": 0.2696003766646726,
+      "cleanup_peak_dbfs": -141.50911796224807,
+      "dry_stop_sample_delta": 0.00215332231598876,
+      "handoff_drop_db": 8.430655556715365,
+      "spectral_distance": 0.6513706069655008,
+      "post_stop_first_second_dbfs": -48.78068221804654,
+      "post_source_review": false
+    },
+    {
+      "cue": "S15-a",
+      "variant": "B",
+      "qa": {
+        "sha256": "f08cdbcf31df9b8a9ff77703335a4ef26acfd398abb21a5d82dbe0fdddabcec7",
+        "seconds": 42.05,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.566741943359375,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "long_explicit_or_provisional_fade",
+      "original_fade": [
+        21,
+        25.5
+      ],
+      "actual_fade": [
+        21,
+        25.5
+      ],
+      "rt60": 7,
+      "wet_gain": 0.14344413563881692,
+      "cleanup_peak_dbfs": -153.56030656639848,
+      "dry_stop_sample_delta": 0.0001741639459950336,
+      "handoff_drop_db": 4.3157899612737864,
+      "spectral_distance": 0.5294460587303866,
+      "post_stop_first_second_dbfs": -67.68759843377782,
+      "post_source_review": false
+    },
+    {
+      "cue": "S16-2",
+      "variant": "B",
+      "qa": {
+        "sha256": "4e9104c02fded256d63af1a48b132a83215a3cd9bbc359cd28ea2b7ff91e037a",
+        "seconds": 76.175,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.40093994140625,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "active_moderate_fade",
+      "original_fade": [
+        98.6,
+        101.1
+      ],
+      "actual_fade": [
+        98.6,
+        101.1
+      ],
+      "rt60": 7.5,
+      "wet_gain": 0.21806096687747503,
+      "cleanup_peak_dbfs": -145.61134574002622,
+      "dry_stop_sample_delta": 0.00040040214829589803,
+      "handoff_drop_db": 6.209303369705438,
+      "spectral_distance": 0.27854485080216096,
+      "post_stop_first_second_dbfs": -60.59919969706898,
+      "post_source_review": false
+    },
+    {
+      "cue": "S18-3",
+      "variant": "B",
+      "qa": {
+        "sha256": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140",
+        "seconds": 32.2,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.1334228515625,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "active_short_fade",
+      "original_fade": [
+        128.4,
+        130
+      ],
+      "actual_fade": [
+        127.8,
+        130
+      ],
+      "rt60": 5.5,
+      "wet_gain": 0.1981443461969509,
+      "cleanup_peak_dbfs": -137.12036575454408,
+      "dry_stop_sample_delta": 0.002805337575164584,
+      "handoff_drop_db": 4.55171985857293,
+      "spectral_distance": 0.37127282357197466,
+      "post_stop_first_second_dbfs": -41.27165873010556,
+      "post_source_review": false
+    },
+    {
+      "cue": "S20-a",
+      "variant": "B",
+      "qa": {
+        "sha256": "201f61e89d973a814b87ac1ebdfd8187449fd1794b69d7253dacd37245cf78c4",
+        "seconds": 56.525,
+        "channels": 2,
+        "rate": 48000,
+        "peak": 0.958831787109375,
+        "clipped_samples": 0,
+        "decoder_exact": true
+      },
+      "prediction_family": "active_moderate_fade",
+      "original_fade": [
+        38,
+        40.8
+      ],
+      "actual_fade": [
+        38,
+        40.8
+      ],
+      "rt60": 6.5,
+      "wet_gain": 0.1808228116321121,
+      "cleanup_peak_dbfs": -137.06396957591582,
+      "dry_stop_sample_delta": 0.0020148039073959413,
+      "handoff_drop_db": 5.712604144146852,
+      "spectral_distance": 0.4931204843358413,
+      "post_stop_first_second_dbfs": -53.86232789175466,
+      "post_source_review": false
+    }
+  ],
+  "peak_and_tail_estimates": [
+    {
+      "cue": "S07-c",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.1882911700543049,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 0.65
+    },
+    {
+      "cue": "S07-c",
+      "variant": "C",
+      "four_times_oversampled_peak_estimate": 0.1883522440634046,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 3.1500000000000004
+    },
+    {
+      "cue": "S12-2",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.2292754346190907,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 2.8000000000000003
+    },
+    {
+      "cue": "S12-2",
+      "variant": "C",
+      "four_times_oversampled_peak_estimate": 0.24087645350668363,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 2.8000000000000003
+    },
+    {
+      "cue": "S15-a",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.5695850067900282,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 1.2000000000000002
+    },
+    {
+      "cue": "S16-2",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.40119516577577974,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 2.3000000000000003
+    },
+    {
+      "cue": "S18-3",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.13350778389189444,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 3.3000000000000003
+    },
+    {
+      "cue": "S20-a",
+      "variant": "B",
+      "four_times_oversampled_peak_estimate": 0.960298275695756,
+      "post_stop_last_50ms_window_above_minus75_end_seconds": 2.9000000000000004
+    }
+  ],
+  "source_spectral_controls": [
+    {
+      "cue": "S07-c",
+      "source_distance": 0.32265649529038976,
+      "render_distances": {
+        "B": 0.3212770025104763,
+        "C": 0.3211535713625854,
+        "A": 0.3203923927103951
+      }
+    },
+    {
+      "cue": "S12-2",
+      "source_distance": 0.6163253221742189,
+      "render_distances": {
+        "B": 0.8889330744123467,
+        "C": 0.6513712428463452,
+        "A": 0.6163231264936615
+      }
+    },
+    {
+      "cue": "S15-a",
+      "source_distance": 0.4684977663162172,
+      "render_distances": {
+        "B": 0.529445541902841
+      }
+    },
+    {
+      "cue": "S16-2",
+      "source_distance": 0.44998222467843363,
+      "render_distances": {
+        "B": 0.278493306287789
+      }
+    },
+    {
+      "cue": "S18-3",
+      "source_distance": 0.595464782366728,
+      "render_distances": {
+        "B": 0.3712742173565641
+      }
+    },
+    {
+      "cue": "S20-a",
+      "source_distance": 0.5024939168974505,
+      "render_distances": {
+        "B": 0.4931203362240848
+      }
+    }
+  ],
+  "single_primary_regeneration": {
+    "cue": "S12-2",
+    "variant": "B",
+    "sha256": "1df4cf103ee2854b38b9460ebbb9a344cbae347650932751ce85b8c9a9d32451",
+    "hash_identical": true
+  },
+  "tests": {
+    "python_count": 200,
+    "python_passed": true,
+    "offline_client_and_evaluation_export_passed": true,
+    "real_browser_tested": false
+  },
+  "new_audio_bytes": 65251552,
+  "human_outcomes": "None recorded; future JSON is separate from immutable ledger."
+}
