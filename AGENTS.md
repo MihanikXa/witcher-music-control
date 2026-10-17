@@ -5,7 +5,19 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest v3 typography runtime comparison (17 October)
+## Latest explicit correction — menu row internal alignment (17 October)
+
+User approves the previous typography/secondary-color/prose/footer finishing
+scope **but adds alignment**. Cropped current-vs-reference Alchemy row screenshots
+show the `Ingredients missing` secondary label **too low and detached from its
+recipe title** even when the row border, icon and title are close. Preserve
+icons, menu layout/geometry, navigation and background as user requests.
+Inspect actual `ItemCraftingModule` row placement and `qfCaps` field metrics;
+fix only internal two-line label positioning with selected/unselected and
+controller navigation checks, NOT entire list geometry. Details:
+[menu row alignment correction](research/menus087-v3-runtime-typography-feedback.md).
+
+## Prior v3 typography runtime comparison (17 October)
 
 User reports v3 "Much better but not quite it" with current versus
 reference **same Greater Blue Mutagen** screenshots. The icon art,
