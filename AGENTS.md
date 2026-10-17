@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Remainder batch ready (2026-10-17; report81):** Report80 preparation fulfilled. Private `build/music-material-selection/remainder-batch-v1/index.html` has all10 ordinary primaries,2 segregated comparison-only S14 cues and3 single-variable alternatives (15 new WAVs). B is primary; C is conventional diagnostic, not freeze. S12-4/S16-3/S14-2 retain recorded release with no added room; S14-2 has fixed−0.31dB headroom. S12-3 and S18-2 retain visible transition-review warnings.215 Python tests, offline export/client, exact PCM/source/timing/alternative gates and32 preserved inputs pass. Eleven accepted report79 files plus S05-main remain exact; no S18-3 retuning. No subjective success or new acceptance. STOP for one consolidated listening export; no other-cue rollout, Wwise/game/scheduler or distribution. See report81 and pending-only render manifest.
+
+
 **Current user authorization (2026-10-17; report80):** Following report79 S18-3 **T3 'good enough'** acceptance, user requests **'get to the rest of them'**. Prepare the **10 remaining ordinary source-selected excerpts in ONE private batch** using measured and calibrated per-cue natural room/fade choices; optional max3 diagnostic alternates total. Plus two S14 **comparison-only, isolated/restricted** references if feasible, never normal deployment approvals. Current11 accepted SHA-pinned renders in report79 + separately accepted S05-main B v1 must stay exact. Follow report80 for ten exact cue IDs/timings, earlier negative feedback and pending-review status. Do not re-render all24 or reopen S18, do not alter Wwise/game/scheduler or distribute audio. Stop for one consolidated listening export.
 
 

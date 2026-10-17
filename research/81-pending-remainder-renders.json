@@ -1,0 +1,285 @@
+{
+  "kind": "Pending private audition render manifest; not accepted selections",
+  "plan_sha256": "aa1ef5e4c052df5d38fc73fe8437ef8e12e93b970ac11e9cddc7cf9b2fc8b17f",
+  "cues": [
+    {
+      "cue": "S04-a",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S04-a-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "c995686ad3bf4e4aef068b61b5fc398aefeb97ac8c17e1f4a77dd36357ff9317",
+            "seconds": 49.0,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.281219482421875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        },
+        "C": {
+          "file": "audio/S04-a-C.wav",
+          "label": "C \u2014 one-variable diagnostic: send_policy=pre_ending_fade",
+          "qa": {
+            "sha256": "b621f888f7cf1e9b3590b47fdc14984b637765465939051b0b767f3b7d0d9989",
+            "seconds": 49.0,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.281219482421875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S11-long",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S11-long-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "7865da2dc87c8b695e8f3c72e1fa37393df822f0f78774d5d2f3d9a0e81a9aa9",
+            "seconds": 108.0,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.629058837890625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        },
+        "C": {
+          "file": "audio/S11-long-C.wav",
+          "label": "C \u2014 one-variable diagnostic: continuous_wet_db=-12",
+          "qa": {
+            "sha256": "42b85b640cecb0ad61048e115ce481cc35cc88e3233e543ed7903303a7975227",
+            "seconds": 108.0,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.628570556640625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S07-a",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S07-a-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "04c57a6cce9430468cb779d1e964a06846a366b737d68c71113b485b9b846ecb",
+            "seconds": 89.25,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.9591064453125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S12-3",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S12-3-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "cd4529e4df1e8886b3934f3474d3de17952d383066447136a8f5c39cf1267e9e",
+            "seconds": 28.725,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.354888916015625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        },
+        "C": {
+          "file": "audio/S12-3-C.wav",
+          "label": "C \u2014 one-variable diagnostic: send_policy=pre_ending_fade",
+          "qa": {
+            "sha256": "82b1c6e7869535e4a80dd359f7e2fd876e8f6c43936ca7ce8387fb89b4428c3e",
+            "seconds": 28.725,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.354888916015625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S12-4",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S12-4-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "63b212c3665546b3a6a0a23909331a9f6c0a233ec6fab4c42f2306b011664a91",
+            "seconds": 29.545333333333332,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.303192138671875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S15-b",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S15-b-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "297cef4995b41ed3201feb63fe3d40adc7bd284aaf8e57c7c4d6d7b01c4642e0",
+            "seconds": 48.55,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.590545654296875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S16-1",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S16-1-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "1c901f412cdddaedb271367baa3f412f62e60fdbd1d16b01883eaf0d7875b793",
+            "seconds": 58.025,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.29443359375,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S16-3",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S16-3-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "62dbe3247c6d60b96b4dab75e880a7b386df83cef75b309e8a57a934a8ac6fb3",
+            "seconds": 37.233333333333334,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.365020751953125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S18-1",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S18-1-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "a7203e27770c33ad24c97f6ebc0424c9e3efaa2edfc2f06e139bec6da4ff7583",
+            "seconds": 46.7,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.565673828125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S18-2",
+      "comparison_only": false,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S18-2-B.wav",
+          "label": "B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "cbfc2bd48e89dfcbf8db7e55a2ec3f4f79b7d9e3f47966bfc188a13c0a144f06",
+            "seconds": 66.7,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.811065673828125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S14-1",
+      "comparison_only": true,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S14-1-B.wav",
+          "label": "Private comparison only \u00b7 B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "66ea0bffbfef812db5962ce5818e87b92704b6c35388e917af7472b2ad777b23",
+            "seconds": 79.5,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.950103759765625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    },
+    {
+      "cue": "S14-2",
+      "comparison_only": true,
+      "status": "Unreviewed",
+      "variants": {
+        "B": {
+          "file": "audio/S14-2-B.wav",
+          "label": "Private comparison only \u00b7 B \u2014 new primary (unreviewed)",
+          "qa": {
+            "sha256": "3adf5f9d74dbd7bd275a99b89bbdb16c21fca9dc87d8fc2ac2a2e0d9fdb297e0",
+            "seconds": 72.5,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.9599609375,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          }
+        }
+      }
+    }
+  ]
+}

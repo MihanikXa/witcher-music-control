@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Remainder batch ready (2026-10-17; report81):** Report80 preparation fulfilled. Private `build/music-material-selection/remainder-batch-v1/index.html` has all10 ordinary primaries,2 segregated comparison-only S14 cues and3 single-variable alternatives (15 new WAVs). B is primary; C is conventional diagnostic, not freeze. S12-4/S16-3/S14-2 retain recorded release with no added room; S14-2 has fixed−0.31dB headroom. S12-3 and S18-2 retain visible transition-review warnings.215 Python tests, offline export/client, exact PCM/source/timing/alternative gates and32 preserved inputs pass. Eleven accepted report79 files plus S05-main remain exact; no S18-3 retuning. No subjective success or new acceptance. STOP for one consolidated listening export; no other-cue rollout, Wwise/game/scheduler or distribution. See report81 and pending-only render manifest.
+
+
 **Latest active handoff (report80):** Batch prepare ten remaining ordinary source-selected cue endings, retain eleven report79 accepted hashes and separately accepted S05-main B, keep two S14 passages clearly comparison-only. Consolidated private HTML+feedback; no inferred approval/game use.
 
 
@@ -178,3 +181,7 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 78. [S18 local alignment trials](78-s18-local-alignment-trials.md): three final private options, measured source/dry/wet/sum, fixed endpoint,208 tests; subjective verdict pending. [Evidence](78-s18-local-alignment-evidence.json).
 
 79. [S18 T3 user acceptance](79-s18-t3-user-acceptance.md): exact “good enough” verdict, hash pin and [updated eleven-cue snapshot](79-accepted-private-cue-selections.json). No new processing or rollout.
+
+80. [Remaining-cue batch handoff](80-remaining-cues-batch-audition-handoff.md): authorized ten ordinary and two restricted comparisons, fulfilled by81.
+
+81. [Remaining batch audition results](81-remainder-batch-audition-results.md): ten ordinary primaries, two restricted S14 comparisons, three alternatives and215 tests; pending one user listening export. [Plan](81-remainder-batch-plan.json), [source observations](81-remainder-source-analysis.json), [completion evidence](81-remainder-batch-evidence.json), [pending render hashes](81-pending-remainder-renders.json).

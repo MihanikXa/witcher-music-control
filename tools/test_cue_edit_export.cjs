@@ -58,6 +58,20 @@ if(manifest.kind==='preregistered-treatment-trial'){
  assert.equal(manifest.cues[0].prediction.confidence,result.decisions[0].frozen_prediction.confidence);
  result.decisions.forEach((d,i)=>assert.deepEqual(d.frozen_prediction,manifest.cues[i].prediction));
 }
+if(manifest.kind==='remainder-batch-private-audition'){
+ assert.equal(result.kind,'remainder-batch-private-outcomes');
+ assert.equal(result.ordinary_decisions.length,10);assert.equal(result.restricted_comparisons.length,2);
+ assert.equal(result.decisions[0].current_treatment_reasoning,manifest.cues[0].reasoning);
+ assert.equal(result.decisions[0].timing_authority,manifest.cues[0].timing_authority);
+ assert.ok(!result.decisions.some(d=>d.cue==='S18-3'));
+ assert.equal(manifest.cues.filter(c=>c.renders.C).length,3);
+ assert.deepEqual(result.restricted_comparisons.map(d=>d.cue),['S14-1','S14-2']);
+ const restricted=cards.find(c=>c.dataset.cue==='S14-1');restricted.querySelector('.verdict').value='Keep';
+ const again=context.gather();const kept=again.restricted_comparisons.find(d=>d.cue==='S14-1');
+ assert.equal(kept.verdict,'Keep');assert.equal(kept.comparison_only,true);
+ assert.ok(kept.allowed_use.includes('private comparison only'));
+ assert.ok(!again.ordinary_decisions.some(d=>d.cue.startsWith('S14')));
+}
 ids['#export'].onclick();assert.equal(downloads.length,1);assert.ok(downloads[0].name.startsWith('wmc-cue-edit-decisions-'));
 assert.ok(blobs.has(downloads[0].href));ids['#stop'].onclick();assert.ok(allAudio.every(a=>a.paused));
 blobs.get(downloads[0].href).text().then(text=>{assert.equal(JSON.parse(text).decisions.length,manifest.cues.length);
