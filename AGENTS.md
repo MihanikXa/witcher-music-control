@@ -5,7 +5,34 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest user completion and active next work — 17 October 2026
+## Latest P1 in-game rejection — user explicit (17 October 2026)
+
+The first **Adaptive Inventory v2 Gear Prototype 1** has now been shown in-game
+and the user's exact response is: **"No idea the fuck this is"**.
+Treat the **visual/UX candidate as rejected**, NOT as accepted because 16 tests
+and native compile passed. Save the private P1 files only as functional
+reference; recommend switching the test profile back to accepted Menus v4
+Inventory until a new candidate. The screenshot and evidence are described in
+[the P1 rejection report](research/adaptive-inventory-v2-p1-runtime-rejection.md).
+
+Do **not** iterate by moving the existing native section groups, scaling the grid
+again, adding another detached tooltip strip or another footer button row. The
+user wanted an integrated adaptive item-driven composition; P1 displays
+WEAPONS/ARMOR tiny clusters in the upper left, giant dead space, a disconnected
+Geralt far right, native subnavigation/category icons colliding with Ink & Iron
+header, duplicate bottom control systems and **no selected-item contextual
+summary**. These are screenshot observations/assistant interpretation, while
+the user quote above is direct evidence.
+
+Next work is **diagnosis and a materially different design/architecture**,
+including runtime tracing of the missing summary and explicit shared-header/
+native-category/footer ownership, then a cohesive state-driven first screen
+that handles very sparse **and** full inventories. Preserve Gentium/Menus v4,
+item art, HUD RC2, Hoods, input contracts and manual rollback. No broad mod/QoL
+installation or automatic live changes. Require visual geometry and functional
+proof before declaring the next candidate done.
+
+## Prior user completion and earlier inventory plan — 17 October 2026
 
 The user said **"Alright, all done. Let's continue to the next task"**
 following Menus v4 Typography Finishing. Treat the menu appearance work as
