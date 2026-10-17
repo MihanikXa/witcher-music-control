@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Latest S18 result (report75, 2026-10-17):** User strongly rejects the report74 constant-dB dry-only B release as a worse/sudden dip. Its 72dB attenuation over2.2s sinks source much earlier. S18 source remains active at the selected130s cut and continues to157.01s, so inspect musical endpoint appropriateness before further DSP variants. Old selected files preserved; no new accepted S18 correction. [Report75](research/75-s18-dry-db-release-rejection-and-boundary-diagnosis.md).
+
+
 **S18 dry fade follow-up (2026-10-17; report74):** User confirms quick dip at the end of dry-only control. One opt-in even-dB dry comparison at `build/music-material-selection/s18-dry-fade-v2/index.html` keeps source/fade clocks, changes only release curve; earlier attenuation is an explicit tradeoff. No new wet treatment or accepted correction.204 tests pass;11 pinned selections and ledger69 exact. Listen to A/B before further wet tuning or rollout.
 
 

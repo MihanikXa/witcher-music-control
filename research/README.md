@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Newest S18 outcome (report75):** report74 B dry-only constant-dB release is explicitly rejected by user (substantially more sudden dip). Focus future diagnosis on whether selected source130s is a musically usable stop, since original continues to157s; no new correction approved. All prior selections/ledger preserved.
+
+
 **Latest direction (report68, 2026-10-17):** Transparent and preregistered treatment triage for remaining Sparse cue endings; only six varied private test renders, then user review. Report67 pins the five accepted source-specific endings; no universal preset or full24 rollout.
 
 

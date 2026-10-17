@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Latest S18 listening correction (2026-10-17; report75):** User rejects report74's B (72dB/2.2s constant-decibel **dry-only** release) as 'ten time worse', with a much more sudden dip. The report74 measured signal is already nearly28dB quieter at player18s than A, effectively inaudible by18.8. Do not re-propose this release or infer math/204 tests equal musical success. Report73 shows the raw source remains active near the manually selected source130s cutoff, and report57 lists full S18 audio157.01s; consider whether musical cut/phrase completion, not another send-curve tweak, is the underlying blocker. Preserve user-chosen130s unless explicitly revisited; no new treatment or game change is authorized. See report75.
+
+
 **S18 dry fade follow-up (2026-10-17; report74):** User confirms quick dip at the end of dry-only control. One opt-in even-dB dry comparison at `build/music-material-selection/s18-dry-fade-v2/index.html` keeps source/fade clocks, changes only release curve; earlier attenuation is an explicit tradeoff. No new wet treatment or accepted correction.204 tests pass;11 pinned selections and ledger69 exact. Listen to A/B before further wet tuning or rollout.
 
 
