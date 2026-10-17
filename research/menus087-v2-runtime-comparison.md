@@ -18,7 +18,17 @@ This is **positive partial visual feedback** after v2; user has not approved eve
 - **Header size/weight and line spacing:** the authored top-bar placement is now present, but letterform widths and apparent weight differ with Gentium vs IM Fell; likely typographic adaptation task, not old top-bar resource still winning.
 - **Do not compare item value, recipe ingredient ratio, gold/level, or exact selected-row scroll offset as styling defects** because the screenshots are not state-matched.
 
-## Next narrow scope
+## Latest user clarification — 17 October 2026 (explicit; supersedes inferred priorities)
+
+> I think saturation and contrast is probably hdr, the main problem is typography and text color. And the icons don't look right too.
+
+**Explicit user evidence/preferences:** The user identifies **typography and text color** as the primary remaining visual problem; **icons** also look wrong. They think capture/HDR explains apparent saturation and contrast differences. These are user judgments and a plausible capture hypothesis, **not confirmation of a measured HDR transfer function**. Do **not** initiate background brightening, global saturation changes or contrast adjustment simply to match the two differently captured screenshots.
+
+**Next task order (assistant interpretation of user priorities):** (1) Menu-local typography system with retained Gentium/QuietFolio font family but source/reference-driven size, hierarchy, small-caps treatment, tracking, alignment, secondary text color, focus/disabled states and footer; (2) exact original 0.8.7 All-in-One **Icon Pack** provenance and effective texture ownership, with an optional art-only private integration preserving meaningful correction mods; (3) any contrast/HDR tuning only after a controlled SDR/HDR apples-to-apples comparison and a separate user request. Do not reopen fixed shared header/Alchemy geometry. Keep accepted HUD RC2 and independent art/Map fixes unchanged.
+
+**Validation:** Prefer matched item/recipe, same display settings and image output for visual comparison; inspect compiled TextField/TextFormat/AS formatting rather than treating missing IM Fell SC as a license to replace the chosen Gentium family. Avoid blanket uppercasing localized data and check long labels. Ask user to review an in-game typography + icon candidate rather than claiming screenshot parity from static tests.
+
+## Previous assistant narrow scope (superseded where priorities conflict)
 
 1. Preserve the now-functional shared 0.8.7 menu/header/engraving integration and frozen accepted HUD RC2.
 2. Audit the separate original upstream **Icon Pack inside the pinned 0.8.7 All-in-One** against currently installed icons, and a BIA/other corrected texture collision ledger. Build one optional, reversible art-only candidate if it gives closer reference fidelity without overwriting accepted repairs.

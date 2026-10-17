@@ -5,6 +5,20 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
+## Latest v2 in-game styling priorities — user explicit (17 October)
+
+The common Ink & Iron 0.8.7 layout/engraving/header now looks substantially
+right. The user's **main remaining concern is typography and text color**;
+item **icons also look wrong**. They suspect photo/screenshot saturation and
+contrast differences are **HDR**, so **do not tune global brightness/saturation,
+background contrast or HUD palette on that evidence**.
+Read [latest explicit clarification](research/menus087-v2-runtime-comparison.md).
+Next, target **menu-local Gentium hierarchy, small-cap treatment, sizes,
+alignment and text colors**, plus provenance/texture-owner checks for the
+**Icon Pack** already supplied in the 0.8.7 All-in-One but omitted from v2.
+Preserve shared layout, accepted HUD RC2 and functional integrations. Do not
+continue Gear-grid v2 until common menu fidelity is accepted.
+
 ## Latest typography directive — user explicit (17 October)
 
 Keep QuietFolio/Gentium's font family/library, **not** current menu typography
