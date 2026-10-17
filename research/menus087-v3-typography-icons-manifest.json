@@ -1,0 +1,994 @@
+{
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\menus087-v3\\Ink-Iron-0.8.7-Menus-v3-Typography-Icons-private-test.zip",
+  "zip_sha256": "919c635d37941db936ea9583a7d554baea0755daf594e07f3832228b06157965",
+  "bytes": 579604415,
+  "parent_sha256": "fbd89f94bebabf2fdef9764d17d9e13048bd721a8849f880f316a10feb835bb8",
+  "resources": [
+    {
+      "resource": "gameplay/gui_new/swf/common/panel_common.redswf",
+      "input_sha256": "bf33bface6bf6145fd10a1d828790e0b32004c8f0559d21b339e644385089fa7",
+      "output_sha256": "bbf4e2ad27b0d5cbe465e819df04c02be4611a0ee82b692b98ad9e1feebc7653",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf",
+      "input_sha256": "1f2be1e5f3b2cf57c7060145a6205ad0ee2c61bf69a128db167b2dfb732e7ab1",
+      "output_sha256": "e0d34e7e313a8f2201e4b8f20401c6ac961e46226647a13280d9f9df032e53a4",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf",
+      "input_sha256": "31f6d5ba8359097587ab71d6b3a3cef0f656db52e029c5f21816f5721b50dc17",
+      "output_sha256": "0dfd8cfdc57b852d37b49f56f81d8d8329fc30d9d45cf86ce7c52512f140ddf5",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+      "input_sha256": "443fb8746df1108a697b894f980727880ffca9c5ed5b0f135c7a76446eaa0b16",
+      "output_sha256": "2d87c4a1909ba9396878a9f3e08ff53dd6594b8d9e3bab9e26684b4bfa8315f8",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "MenuInventory",
+          "input_sha256": "212f7435f80fb2624518817cc4bf44e203b1609dc514f832decf933faa03fc4c",
+          "output_sha256": "8b069468ba2108d9c660afc514e387a27bbb629847d21316b02c59437add272d"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/common/componentslib.redswf",
+      "input_sha256": "0cd5bae1d776311f22ec38ecca229949cf3c83f936c84147f95fcb427da7cd71",
+      "output_sha256": "70a5042d44c57ec5cdcb1761fd872e680c7e7904407009b101cdff696043452e",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/character/panel_character_dupe.redswf",
+      "input_sha256": "f18e48edb05ecb6522b5c662f4403a74bd0eb7319eb27617bb0a6339ce187f30",
+      "output_sha256": "e1006f2ea9988d8263dfdfda3856f78d4f1ef62bff21af7d0fedfaa3c9ca0209",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "MenuCharacterDupe",
+          "input_sha256": "77e7860d37fcd7a044c68cf9519eb8da58d38338c332a0046912e05e6516cffa",
+          "output_sha256": "d20c8e96c6492377f73ececb5881cb4461063c5015f13d4ef4afefed41b67398"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf",
+      "input_sha256": "5cb9dcef0e7483f4bf99c0abbf2b87a84b05045a98557a7e4feaf087263bba27",
+      "output_sha256": "120b1426c696f8a0c8537c38eec46a724556fed3bf3ad4eef6b8a0af6602af79",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "ItemCraftingModule",
+          "input_sha256": "244f9b105489d586fb12a311e75455a250de8290b8fd490f9692938c3315967d",
+          "output_sha256": "7deabf02cd9d135a99337c8e41d13c9b07bbf162c4f4ff95bc7000d76a212703"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/crafting/panel_crafting.redswf",
+      "input_sha256": "383ee947019cdeca6e37e43a6ab5b7b81d5f2237476d12b93346a7acb25ebb3a",
+      "output_sha256": "04b33a1dd8c6c96adbdbc98c2c2f5035fc0b2a58dd5b405497b7de78d316ed9b",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "ItemCraftingModule",
+          "input_sha256": "244f9b105489d586fb12a311e75455a250de8290b8fd490f9692938c3315967d",
+          "output_sha256": "7deabf02cd9d135a99337c8e41d13c9b07bbf162c4f4ff95bc7000d76a212703"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_blacksmith.redswf",
+      "input_sha256": "7f87d86c774b721a3df20839540801e2ae148c9fcf8a60a009ff7387a8ab5331",
+      "output_sha256": "71d0fc45899b53f748d03c7d5e11e524de3c3aae483c96c3fe1c9113497478ff",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_enchanting.redswf",
+      "input_sha256": "a9df108492a3bc9876fc4c5d65cd705a6edabec023c5b7c3698574644095353b",
+      "output_sha256": "595d3ad7cdea5f8cb16807dae971b2d30745230500797e630ffdaa7c5ae2c90c",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf",
+      "input_sha256": "d72563d9d350d04ceecce7860abe74ae08f655aad010d13ef02f96078685f0f1",
+      "output_sha256": "157d9d28af4cd33f55efe5322468c20b0a9e463d8e5952627751f2ae06c0547a",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/journal/panel_journal_quests.redswf",
+      "input_sha256": "26cdf240af8965c5ab1e52a13d4d57a1fa6d45bbf61fe03810a67d58a522195a",
+      "output_sha256": "1c478b0fa70fd0f9b0278197e01ff43b72dcc1e6f20dd4577290078f31cf5c83",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "TextAreaModule",
+          "input_sha256": "04914210f1b1e762e40d79167a1b0503b91d5f8bfeeb77f3bb5c065897a29d21",
+          "output_sha256": "2132a8cccd1dd8b12d0befb13657c13e436601621d7b22d3dc53fea1e3ab9283"
+        },
+        {
+          "class_name": "FeedbackDropdownMenuListItem",
+          "input_sha256": "2504b7cf12d261c3ba5885be1ba8149fdf700ad38568c4b7dd5a2ead4ad833c9",
+          "output_sha256": "37ae8c3dde39653dd75aa147e59ed8c95fe691404e5518745ac0f57d3f512b19"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_main.redswf",
+      "input_sha256": "8ee5f1085cda16ce865c777058db89259bd4514bbaea111f7a0034e3a7196bba",
+      "output_sha256": "3aa0142a4eb0b4d6c4e4f13bb3df8c5b21e538426d5a03362aecf97689be37bb",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf",
+      "input_sha256": "90b4076b4a10fcea5eeacb0dc7ce810431eb709fb0e5e4f4a1091ab2c4b617e2",
+      "output_sha256": "e754db887da4d471b960cb7505c7bf701ab440ab6fa8e218e81d30bb8fad6efc",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "TextAreaModule",
+          "input_sha256": "6ee6c64863b42e5d19829a92b350d3683e24d3faae915b619c1b25bdbc8fe10b",
+          "output_sha256": "b773dd050ae33f63b6ba6be4ddc9220f90b54a0c25d34a75a83cfcc418424120"
+        },
+        {
+          "class_name": "FeedbackDropdownMenuListItem",
+          "input_sha256": "c4ec7de9545df961f555a94323f29568dc4d6e0b049c05b88321c3f12159383c",
+          "output_sha256": "8f435ff1748576458f0d7b8626457527bd16ef1b4b826e8df91b7bb45302e39d"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf",
+      "input_sha256": "2f06e8254224bf0a96825a2ea836428f762ac9b7c3600b4ad8dc91fbb19f562e",
+      "output_sha256": "8cd93101988586a0f90a51585faaeaf1f3409a7dfe416de5c09e7817af026c05",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "TextAreaModule",
+          "input_sha256": "e03e32c764e068313c1ec3e782406d72e8b08b6060e340b92511724644745820",
+          "output_sha256": "46b26eb5b007962a1f293c5058adc894184056851dc4d2c77d879c3eb3febc9b"
+        },
+        {
+          "class_name": "FeedbackDropdownMenuListItem",
+          "input_sha256": "2504b7cf12d261c3ba5885be1ba8149fdf700ad38568c4b7dd5a2ead4ad833c9",
+          "output_sha256": "37ae8c3dde39653dd75aa147e59ed8c95fe691404e5518745ac0f57d3f512b19"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf",
+      "input_sha256": "bbd451a8aa06371fdd829f5dfadfcb902a7626dbca2c033013fbc60fd4881764",
+      "output_sha256": "f6cdad663f56422a9eb7f73e96f06a37c0a0515ba61b13a19435f7828219228c",
+      "retained_v2_exact": false,
+      "classes": [
+        {
+          "class_name": "TextAreaModule",
+          "input_sha256": "fbc619448d9c548fc8d83add03733b6a0986341a50fd5044b3389ab201240120",
+          "output_sha256": "684e2cf277aa420a6e844ec35fccf68032a8c2168804e11b841f71e5c92ad28b"
+        },
+        {
+          "class_name": "FeedbackDropdownMenuListItem",
+          "input_sha256": "2504b7cf12d261c3ba5885be1ba8149fdf700ad38568c4b7dd5a2ead4ad833c9",
+          "output_sha256": "37ae8c3dde39653dd75aa147e59ed8c95fe691404e5518745ac0f57d3f512b19"
+        }
+      ]
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf",
+      "input_sha256": "d8d55d572452b14c7a5abe59567461e632b2ccb06774a51d01f4e00b767087cb",
+      "output_sha256": "284664c8444d649f6dc17860f641c5e97665845e6b072d2a738470b74a08294c",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_tutorial.redswf",
+      "input_sha256": "ecf62b6d785f6dd7f834b4b038e3713faac7465857a7199c74ca0c97271c159c",
+      "output_sha256": "28cfe62e6c9ead49a45b35de13da9ffd72e961cd9e86cd10d6f6197c3dff320e",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_message.redswf",
+      "input_sha256": "db08636f4190210d7c61cbde366f170ee72883a92952fd779011a747b769f395",
+      "output_sha256": "2064dd23003c3d2038d8deef4e5bb99d79876b8b2fa4f57bfb1dd51a66069f99",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_item_selection.redswf",
+      "input_sha256": "845e33194ddf0ea99551b00749d2d7084fa7ef36b29365ffd223e3efa14ef6fb",
+      "output_sha256": "05597e95d3eb53c2adbad5c75fceb082a074583c805e281720a7b24d82f31ca3",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf",
+      "input_sha256": "be17ec5eed1b10ca4ad4ae1c6164c737d4c83948b02ec1dbb06d5b871e7885dd",
+      "output_sha256": "b236eee0b271cebced08c25f70bde2fcb67d36db6f7b5f092a52918b351e359d",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf",
+      "input_sha256": "2af8e5a9199440afc37915432866974a01cde4176054884796be601b85b04dff",
+      "output_sha256": "745402885523b5517dbfae03f392f725f9eda18d5a2a7ef7b453cff33d48ca49",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_loot.redswf",
+      "input_sha256": "8bf5a5aec1800482339b318dcd5c9c54157127e9dea1e7f2f250954e6639f407",
+      "output_sha256": "b920ab7c09b16b3d129410aed071a802d45918cd578eb78496bebeb754fce41b",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/repair/panel_transmog.redswf",
+      "input_sha256": "50c4846e5ba694d70a90f09fd7f8fab94831d29a06d293e2a6fa6db1e6b61254",
+      "output_sha256": "94fa08a9b1c86ad2df6ac4fe686bf5ab8ad876b544ec809fd2bd803e38145ac8",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/character/panel_character.redswf",
+      "input_sha256": "a7782afa944c41613420e2603065b7067ffdd3e8a481d265175af04320f56a01",
+      "output_sha256": "ad789027dfdd7d44a6557baae21c54e57482540f6db2914d4cd44220beb2bb29",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/glossary/panel_glossary_storybook.redswf",
+      "input_sha256": "d59641748590acab2055a152efa482caca0f521d7a50a2f7743d22e5c0b05eb9",
+      "output_sha256": "bfce22af0575b10bf6ecc2505b80b71d0d885b293158e6cc3fe5a6e71e8e38ff",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/inventory/panel_inventorysockets.redswf",
+      "input_sha256": "747826d2e6cf1da1e884e97f2afa4e65bd6b59e5821060cee907699bbaa959e3",
+      "output_sha256": "0e84e288f277ecfacb46c2b2855b4e9d434e0cda1faed3eeab97ff855c763b06",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/loading/loadingscreen.redswf",
+      "input_sha256": "4adfa748c0225c95ee6f4a4328855f554138c2fdd7737951851d7506fc5b1ee7",
+      "output_sha256": "dd82df053adaa4f83e603bd92ed03bca0b7606cbfd73592753406192e7aa25ec",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_credits.redswf",
+      "input_sha256": "ac1e726da69fb7ed98687f74b1a86dba3dc2af6a7d2768790353cde749770d52",
+      "output_sha256": "189dc69b26edb6f7a9fe1cf058dc67a4600b3817aff0366ed9bbf57ae6f92eab",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_mainmenu_autosavewarning.redswf",
+      "input_sha256": "3a1854105249d22dd2a4c7d6a047d1bd97339d1957fdef0b4b1aba448da94afe",
+      "output_sha256": "3f6c5fc892317bd25f75599efe3cdf983dbe1e814c2ca810821e6dbe70072f7c",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_recapmovies.redswf",
+      "input_sha256": "d223c0ae1d1736fc40b369c47c08b6ee51d04180ff438a59745ef57614c0c92f",
+      "output_sha256": "c44ad8ab31f96a6d0fa826602e2bf3d10a130e329a0d930fc9c93a165fa9e188",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/mainmenu/panel_startupmovies.redswf",
+      "input_sha256": "4b49881e364ee0d3d0242a8471412283ceb02593606504a95f163459e7153a0f",
+      "output_sha256": "02f4461a74ac4298d82b3c9fd54e2a5e299d07b6f80940fa05e50ef20dca4f60",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/modmenu/panel_modmenu.redswf",
+      "input_sha256": "257012b04c4589302af0fbc59b1c1d839c93b70b2b53b2ba7f5d28e65a10be4c",
+      "output_sha256": "8d7a84ff4c53f40a2b24bc9821617e3437c00294d41a5b3bcaa47cf817bd9db1",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/photomode/photomode.redswf",
+      "input_sha256": "3b1394264646ab6adc0a7f5d4458a5456da82f228b9d9dda36498227f7fc2029",
+      "output_sha256": "7996ba70d1c631a07e21f5db961206283ffec95e21554a01dbae6185b48ed9a7",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/popups/popup_overlay.redswf",
+      "input_sha256": "22dea1d1dfc42b645f3c3acd6e6bbb3e7f6082aad5d7d40ab8ce70082cd6052a",
+      "output_sha256": "0278e5af06e51b0118d0b5b8175bd76e889e46322a169d23889b1c4caf424296",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/preparation/panel_preparation.redswf",
+      "input_sha256": "7ad9c732c5ceff7815db556d64a75cd2bc34a935ed540454389799c7c0dcd697",
+      "output_sha256": "9e390e995df6043587259e52d32b9f3776b35a85a12886c1a5da54ae839e1fee",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/startup/panel_startup.redswf",
+      "input_sha256": "1aa83c2d971aecd591a144fe039c9bf3f15fe10de6028cbfaf486b4bc58d61da",
+      "output_sha256": "3f3f79a15c2f4be3ccc08a50346e70e7c9ddd5af53fcb900362086b309c4c981",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/uirescale/panel_uirescale.redswf",
+      "input_sha256": "ce22dc38873382501c83c5e020b578c08b8bf0cabcc0152f132ef8cc74414ee9",
+      "output_sha256": "1b98ff291f9524c53b559f850497242685a9b4c7555e61354d945942a3f85e77",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/character/panel_character_perks.redswf",
+      "input_sha256": "327ed329d079f14e6affed2ed0dd798b042a0fb76377d8d668ddbb31d00de7eb",
+      "output_sha256": "327ed329d079f14e6affed2ed0dd798b042a0fb76377d8d668ddbb31d00de7eb",
+      "retained_v2_exact": true,
+      "classes": []
+    },
+    {
+      "resource": "gameplay/gui_new/swf/meditation/panel_meditation.redswf",
+      "input_sha256": "45c0a00bf425f3e62ad4e4d8b1a0c58bd12aa0b85701b1b15e2c28d8041d3ad6",
+      "output_sha256": "45c0a00bf425f3e62ad4e4d8b1a0c58bd12aa0b85701b1b15e2c28d8041d3ad6",
+      "retained_v2_exact": true,
+      "classes": []
+    }
+  ],
+  "native": [
+    {
+      "label": "cook",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "cook",
+        "-platform=pc",
+        "-mod=C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\workspace",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\native-final\\cooked"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.17 04:02:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.17 04:02:08][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "validate",
+        "-db=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\native-final\\cooked\\cook.db",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\native-final\\validation"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.17 04:02:55][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.17 04:02:55][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "pack",
+        "-dir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\native-final\\pack-input",
+        "-outdir=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\packed",
+        "-compression=ZLIB"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.17 04:03:14][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.17 04:03:14][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "metadata",
+      "command": [
+        "C:\\Dev\\witcher-ui-overhaul\\build\\ink-hud-v3-native-runner\\bin\\x64_RedKit\\wcc_lite.exe",
+        "metadatastore",
+        "-path=C:\\Dev\\witcher-ui-overhaul\\build\\menus087-v3\\packed"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.17 04:03:58][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.17 04:03:58][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "members": {
+    "Mods/modInkAndIronGlossary/content/metadata.store": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e",
+    "Mods/modInkAndIronGlossary/content/texture.cache": "571632f27965479c4c78c0b72b3a5560e99128537aa720fa0af7a27c7d99e4b5",
+    "Mods/modInkAndIronMap_Inked/content/metadata.store": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e",
+    "Mods/modInkAndIronMap_Inked/content/texture.cache": "2391d8077fc11cb6e3e5572d00f480e366d399a1121f1f350363ea034940f6e2",
+    "Mods/modInkIronMenus087/content/blob0.bundle": "88f9375bd3043c970191561bf64e3ab1cc7c40870a7de36dcde4cdf662d0fea6",
+    "Mods/modInkIronMenus087/content/metadata.store": "48dce2cdb27690df8b6f8d074b257dfe32a3f82d4930d4b125f6d2bc1babcdb1",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_bgart.ws": "fd9ffcd8b0a07397109078de6c29de6f64273c98dad620ba4ec4a78c6210d261",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_character.ws": "4ee373a947610617b10bb2d6b46bc75574e595cc1686cc72dca264962c0d7248",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_charlayout.ws": "ac9cb28c4d75c39c0712c447e12f850444fef474147b2a7c8aa5f3d9ef2f1dea",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_equipfirst.ws": "b0235c29a26e209e15d0f16742e11c1e2f58e0d68030356e36f0b74c25a77c4c",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_inventory.ws": "061739ae9d7e6334a314ecaed59aa394fe5066c6ccb38b08b4e78965c83dae46",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_invheader.ws": "1b35a9f969f6004fdaebe66f4a34fd97c84a1f81965f9970cc8f001eb5ac3001",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_loot.ws": "1b8f0d240a1ce7dfe2e3c64524c9548490a15835e1251f460a689c1536c83a9f",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_map.ws": "897806fe9d639a04f6705cb733d20f9ba459462f92d955c6ef456f92dfec24b8",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_menuinfo.ws": "02ab85724cc0999c87a6231d6b0d330ffd2700545a29fc6c222d605265bb2ed3",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_questlevel.ws": "24087ad393929392b9a471ea6e6cec7166941f576d71ed09f0b41d84f0402bae",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_rarity.ws": "d4ae049fdd53207a824e43c36a164e7afd14f2239170cfe009633a3e3d657961",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_saveload.ws": "9a45e086dd8ec568fecf09ffad27ad4000731cb17fbf498fa6099b18c2a188bf",
+    "Mods/modInkIronMenus087/content/scripts/local/inkironui_shop.ws": "5825b1abef4e982505d6115425472140e5acacea1e2ca4a3cd00b6d934a6d7e6",
+    "Mods/modInkIronMenus087/content/texture.cache": "549077e44a62b5f83565b2f86562754fdff518580a0667bcd6e2275cfdea3dda",
+    "bin/config/r4game/user_config_matrix/pc/modInkIronHUDBatch.xml": "b67d0aa80e3fd32be51f72f1bee6889aa90aaecd5d495e5830b11c2febee63a4",
+    "Mods/modInkIronMenuItemArt/content/texture.cache": "bdc8c917cfbca18c6d0747237376e5abf0f1ae028aa5f371c3ba35b496d54ff0",
+    "Mods/modInkIronMenuItemArt/content/metadata.store": "7b9022db93f0652ba7e2c7c094f8f9e30e40569c60d6ac20744cd286143afa7e"
+  },
+  "runtime_tested": false,
+  "live_unchanged": true,
+  "scripts_unchanged": true,
+  "icons": {
+    "upstream_archive_sha256": "1dbc4884fb61418af69066f972eafab61be373ed28ed1ef05c06bb091b73a56b",
+    "source_sha256": "bedaa7026864f41589e5cd8d1b5edd4aa405d50d3608768ff4ce5d465ee28781",
+    "output_sha256": "bdc8c917cfbca18c6d0747237376e5abf0f1ae028aa5f371c3ba35b496d54ff0",
+    "source_entries": 2433,
+    "selected_entries": 2079,
+    "excluded_existing_fixes": [
+      "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl1_02_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl3_02_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl3_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl1_02_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl3_02_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl4_02_64x128.png",
+      "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl4_64x128.png",
+      "gameplay/gui_new/icons/inventory/other/painting_of_hemmelfart_64x64.png",
+      "gameplay/gui_new/icons/inventory/weapons/witcher_silver_bear_sword_lvl1_64x128.png"
+    ],
+    "collisions": [
+      {
+        "owner": "modbrothersinarms",
+        "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modbrothersinarms\\content\\texture.cache",
+        "priority": "9",
+        "keys": [
+          "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl1_02_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl3_02_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_heavy_boots_lvl3_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl1_02_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl3_02_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl4_02_64x128.png",
+          "gameplay/gui_new/icons/inventory/armors/common_light_boots_lvl4_64x128.png",
+          "gameplay/gui_new/icons/inventory/other/painting_of_hemmelfart_64x64.png",
+          "gameplay/gui_new/icons/inventory/weapons/witcher_silver_bear_sword_lvl1_64x128.png"
+        ]
+      }
+    ],
+    "dlc_caches_read": 2,
+    "pixels_recompressed": false,
+    "index_reconstructed": true,
+    "author_metadata_unchanged": true
+  },
+  "date": "2026-10-17",
+  "release": "Menus v3 \u2014 Typography and Icon Refinement",
+  "native_metadata_reconstructed": false,
+  "item_cache_index_reconstructed": true,
+  "texture_ledger": "menus087-v3-item-textures.csv",
+  "texture_ledger_sha256": "cee0f88725608f0c19e32fbe3dd2fe4ab1eb70594f1070a30f2790763eb23712",
+  "typography": {
+    "small_cap_ratio": 0.8,
+    "tracking": 0.65,
+    "minimum_fit_ratio": 0.82,
+    "source_strings_changed": false,
+    "font_library_replaced": false,
+    "modified_movies": 8,
+    "modified_classes": 12,
+    "retained_v2_movies_exact": 32
+  },
+  "previews": {
+    "font_path": "C:\\Dev\\witcher-ui-overhaul\\build\\gentium-font-source-final\\QuietFolioBook-Regular.ttf",
+    "font_sha256": "50c95ce717f0468f6750084036d75cfea5445e44f9e584f14c20e769c49bb859",
+    "gentium_opentype_features": [
+      "aalt",
+      "c2sc",
+      "ccmp",
+      "cv13",
+      "cv14",
+      "cv17",
+      "cv19",
+      "cv20",
+      "cv25",
+      "cv28",
+      "cv37",
+      "cv43",
+      "cv44",
+      "cv46",
+      "cv47",
+      "cv49",
+      "cv55",
+      "cv57",
+      "cv62",
+      "cv68",
+      "cv69",
+      "cv70",
+      "cv71",
+      "cv75",
+      "cv76",
+      "cv77",
+      "cv78",
+      "cv79",
+      "cv80",
+      "cv81",
+      "cv82",
+      "cv83",
+      "cv84",
+      "cv90",
+      "cv91",
+      "cv92",
+      "cv98",
+      "frac",
+      "liga",
+      "lnum",
+      "locl",
+      "onum",
+      "smcp",
+      "ss01",
+      "ss04",
+      "ss05",
+      "ss07",
+      "ss11",
+      "ss12",
+      "subs",
+      "sups"
+    ],
+    "smcp_available_in_ttf": true,
+    "uses_existing_swf_glyphs": true,
+    "model_metrics": [
+      {
+        "text": "Greater Blue Mutagen",
+        "base_size": 18,
+        "lowercase_size": 14.4,
+        "width": 181.50000000000006,
+        "authored_width": 480,
+        "fits_model": true
+      },
+      {
+        "text": "Ingredients missing",
+        "base_size": 16,
+        "lowercase_size": 12.8,
+        "width": 139.35000000000005,
+        "authored_width": 480,
+        "fits_model": true
+      },
+      {
+        "text": "Alchemy ingredients",
+        "base_size": 21,
+        "lowercase_size": 16.8,
+        "width": 188.35000000000008,
+        "authored_width": 480,
+        "fits_model": true
+      },
+      {
+        "text": "\u00c9lixir de la Rivi\u00e8re \u2014 Wolf\u2019s Hour",
+        "base_size": 18,
+        "lowercase_size": 14.4,
+        "width": 276.6,
+        "authored_width": 480,
+        "fits_model": true
+      },
+      {
+        "text": "Enhanced Legendary Wolven Silver Sword",
+        "base_size": 18,
+        "lowercase_size": 14.4,
+        "width": 340.6999999999999,
+        "authored_width": 480,
+        "fits_model": true
+      }
+    ],
+    "icons": [
+      {
+        "resource": "gameplay/gui_new/icons/inventory/mutagens/mutagen-01-normal-64x64.png",
+        "author_decoded_sha256": "df5bbefc7f40353d7eec04d52ef3f6f2939922596b54ff287880c723c2afcee6",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "269bf8e8547986008ec2fbf7827ce365d62caf41f84d9f753712451ec0ed9020",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "gameplay/gui_new/icons/inventory/mutagens/mutagen-02-normal-64x64.png",
+        "author_decoded_sha256": "904fc1f53cc00cf2284cebf09296d1e34806b91dfdae0f11f9a8188e80d5dc14",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "a1b9b12fd21a6d0631b62bbd4495d8fd64a2c9b5c35bdba1f5ee197c37123b64",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "gameplay/gui_new/icons/inventory/mutagens/mutagen-03-normal-64x64.png",
+        "author_decoded_sha256": "d08baf87a61e556cab36d8545b2108aa8c656c1aaea833e06a8f1df91b04de3b",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "bce52469c92543ae05fe78b3b56535c6b55a82859956655e659dcecbc23952fc",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "gameplay/gui_new/icons/inventory/ingredients/alchemy/alcohol_alcohest_64x64.png",
+        "author_decoded_sha256": "8970f320cef03b316f0ebbda08a46a5f60d4ec3df951d90e7908de33bb507549",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "953ce20ddee20b2c2e0d041124abe07ed068b94fd14c7fd1c837d59b20f997f3",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "dlc/bob/data/gameplay/gui_new/icons/inventory/weapons/crossbow/crossbow_toussaint_1_64x128.png",
+        "author_decoded_sha256": "3bd4b4c22e24b6b77d205da14d7d531ca0192b9aba576f1f5a3fc1f5621f9556",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "dc6ae79cd47844cad66f172b7827eb78022271c5db8d05e09c541b2e6a60e06d",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "dlc/bob/data/gameplay/gui_new/icons/inventory/armors/bear_armor_4_64x128.png",
+        "author_decoded_sha256": "fc2b8ccb0100b680fa28554aa24f68eb6b287de3f7d9fcb7e3a91d5b9923d32d",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "f0292b6b66ece7157232277c7b0acfe1fbdd04883fdf752befc2b16bee0f39d2",
+            "different_from_author": true
+          }
+        ]
+      },
+      {
+        "resource": "dlc/bob/data/gameplay/gui_new/icons/inventory/food/alcohol_bourgogne_chardonnay_64x64.png",
+        "author_decoded_sha256": "be58eab268ab495084dddefaf061b7e9a0b52751de11c75548b1bbf2519dc9b5",
+        "base_candidates": [
+          {
+            "path": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\texture.cache",
+            "sha256": "69c7be2f35b64ac8ec5516782e1fb6742cb8cfb773423beca95f5516f884d3a0",
+            "different_from_author": true
+          }
+        ]
+      }
+    ],
+    "runtime_rendering_proven": false
+  },
+  "initial_installed_v2_check": {
+    "passed": true,
+    "errors": [],
+    "effective_winners": {
+      "gameplay/gui_new/swf/glossary/panel_glossary_storybook.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "bfce22af0575b10bf6ecc2505b80b71d0d885b293158e6cc3fe5a6e71e8e38ff",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/repair/panel_blacksmith.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "71d0fc45899b53f748d03c7d5e11e524de3c3aae483c96c3fe1c9113497478ff",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/popups/popup_overlay.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "0278e5af06e51b0118d0b5b8175bd76e889e46322a169d23889b1c4caf424296",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/common/panel_common.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "bbf4e2ad27b0d5cbe465e819df04c02be4611a0ee82b692b98ad9e1feebc7653",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/repair/panel_transmog.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "94fa08a9b1c86ad2df6ac4fe686bf5ab8ad876b544ec809fd2bd803e38145ac8",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/glossary/panel_glossary_tutorials.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "284664c8444d649f6dc17860f641c5e97665845e6b072d2a738470b74a08294c",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/mainmenu/panel_startupmovies.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "02f4461a74ac4298d82b3c9fd54e2a5e299d07b6f80940fa05e50ef20dca4f60",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/modmenu/panel_modmenu.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "8d7a84ff4c53f40a2b24bc9821617e3437c00294d41a5b3bcaa47cf817bd9db1",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/meditation/panel_meditation.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "45c0a00bf425f3e62ad4e4d8b1a0c58bd12aa0b85701b1b15e2c28d8041d3ad6",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "5cb9dcef0e7483f4bf99c0abbf2b87a84b05045a98557a7e4feaf087263bba27",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/popups/popup_tutorial.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "28cfe62e6c9ead49a45b35de13da9ffd72e961cd9e86cd10d6f6197c3dff320e",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/preparation/panel_preparation.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "9e390e995df6043587259e52d32b9f3776b35a85a12886c1a5da54ae839e1fee",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/popups/popup_loot.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "b920ab7c09b16b3d129410aed071a802d45918cd578eb78496bebeb754fce41b",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/journal/panel_journal_quests.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "26cdf240af8965c5ab1e52a13d4d57a1fa6d45bbf61fe03810a67d58a522195a",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/inventory/panel_inventory.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "443fb8746df1108a697b894f980727880ffca9c5ed5b0f135c7a76446eaa0b16",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/popups/popup_item_selection.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "05597e95d3eb53c2adbad5c75fceb082a074583c805e281720a7b24d82f31ca3",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/worldmap/panel_worldmap.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "157d9d28af4cd33f55efe5322468c20b0a9e463d8e5952627751f2ae06c0547a",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/glossary/panel_glossary_main.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "3aa0142a4eb0b4d6c4e4f13bb3df8c5b21e538426d5a03362aecf97689be37bb",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/character/panel_character.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "ad789027dfdd7d44a6557baae21c54e57482540f6db2914d4cd44220beb2bb29",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/startup/panel_startup.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "3f3f79a15c2f4be3ccc08a50346e70e7c9ddd5af53fcb900362086b309c4c981",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/mainmenu/panel_mainmenu_autosavewarning.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "3f6c5fc892317bd25f75599efe3cdf983dbe1e814c2ca810821e6dbe70072f7c",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/mainmenu/panel_recapmovies.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "c44ad8ab31f96a6d0fa826602e2bf3d10a130e329a0d930fc9c93a165fa9e188",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/mainmenu/panel_ingamemenu.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "e0d34e7e313a8f2201e4b8f20401c6ac961e46226647a13280d9f9df032e53a4",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/character/panel_character_dupe.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "f18e48edb05ecb6522b5c662f4403a74bd0eb7319eb27617bb0a6339ce187f30",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/meditation/panel_meditation_clock.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "0dfd8cfdc57b852d37b49f56f81d8d8329fc30d9d45cf86ce7c52512f140ddf5",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/character/panel_character_perks.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "327ed329d079f14e6affed2ed0dd798b042a0fb76377d8d668ddbb31d00de7eb",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/mainmenu/panel_credits.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "189dc69b26edb6f7a9fe1cf058dc67a4600b3817aff0366ed9bbf57ae6f92eab",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/photomode/photomode.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "7996ba70d1c631a07e21f5db961206283ffec95e21554a01dbae6185b48ed9a7",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/glossary/panel_glossary_bestiary.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "90b4076b4a10fcea5eeacb0dc7ce810431eb709fb0e5e4f4a1091ab2c4b617e2",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/deathscreen/deathscreenmenu.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "745402885523b5517dbfae03f392f725f9eda18d5a2a7ef7b453cff33d48ca49",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/glossary/panel_glossary_books.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "2f06e8254224bf0a96825a2ea836428f762ac9b7c3600b4ad8dc91fbb19f562e",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/crafting/panel_crafting.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "383ee947019cdeca6e37e43a6ab5b7b81d5f2237476d12b93346a7acb25ebb3a",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/repair/panel_enchanting.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "595d3ad7cdea5f8cb16807dae971b2d30745230500797e630ffdaa7c5ae2c90c",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/inventory/panel_inventorysockets.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "0e84e288f277ecfacb46c2b2855b4e9d434e0cda1faed3eeab97ff855c763b06",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/uirescale/panel_uirescale.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "1b98ff291f9524c53b559f850497242685a9b4c7555e61354d945942a3f85e77",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/noticeboard/panel_noticeboard.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "b236eee0b271cebced08c25f70bde2fcb67d36db6f7b5f092a52918b351e359d",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/loading/loadingscreen.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "dd82df053adaa4f83e603bd92ed03bca0b7606cbfd73592753406192e7aa25ec",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/popups/popup_message.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "2064dd23003c3d2038d8deef4e5bb99d79876b8b2fa4f57bfb1dd51a66069f99",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/glossary/panel_glossary_encyclopedia.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "bbd451a8aa06371fdd829f5dfadfcb902a7626dbca2c033013fbc60fd4881764",
+        "enabled": "1",
+        "priority": "13"
+      },
+      "gameplay/gui_new/swf/common/componentslib.redswf": {
+        "owner": "modInkIronMenus087",
+        "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+        "sha256": "70a5042d44c57ec5cdcb1761fd872e680c7e7904407009b101cdff696043452e",
+        "enabled": "1",
+        "priority": "13"
+      }
+    },
+    "runtime_rendering_verified": false
+  },
+  "tests": {
+    "count": 13,
+    "elapsed_seconds": 18.783,
+    "passed": true,
+    "log_sha256": "478f1d9dedf172e79448265265036648da48071b8fbf17dbf3af9e25f26cd33e"
+  },
+  "native_log_hashes": {
+    "cook.full.log": "faa49345cc43d50ab7e61339d879bf66ef5c958d10198878617d66725e90bc3e",
+    "cook.stdout.log": "402cb1b703d8b367bae696a0b4cd8ab103c90c8d83ec992bd732df0c5089a08d",
+    "metadata.full.log": "df754e5da4bbadbd1a0f4f1747a12badf63abd21b42865e1c7f54b948dfbf06f",
+    "metadata.stdout.log": "c087db0154ca7e7fa732c8d91fe82ea628564926f30bca2e8df20985537012ab",
+    "pack.full.log": "d75d8f682b10f21f8be066522c024b1daaf23b5ee8d017f57a7d0172affe9fba",
+    "pack.stdout.log": "8f1dd96e3b3796bb3683143308a87297a485ef158ae1ec6b84c85b69e64151be",
+    "validate.full.log": "bc0d337ff48feb981b528bc5aea9c0cbab747a0336f6aa6e213cee6ee40b485a",
+    "validate.stdout.log": "9c979235ea00784c76b712406dd990d5b17bd4cd37e48644ce66ddc5eb5e156c"
+  },
+  "source_hashes": {
+    "tools\\refine-menu-typography.py": "4a9e856d0906197ae8d55bf7168251341787d6b3214d8649aacf9a17b8746eca",
+    "tools\\build-menu-typography.py": "b7469bbcc3fb9742bfe0713fa7244813b359cc64ee4dcb5d81db494b5ad2fb3c",
+    "tools\\preview-menu-refinement.py": "042676b0a8461de06a922884834ff7fb82d7c9adc1200196f02667b9aa1ec3f0",
+    "tools\\verify-menu-visual-install.py": "3c32373299e042de59a317aacc94bf67e4d022b295601e00ca790f0b6a8defc8",
+    "tests\\test_menu_typography.py": "4de9ca0fe7d193613fbce19add00bfe52d97fc2de0d1e3cc7a6ec89432e5ad55"
+  }
+}

@@ -12,8 +12,8 @@ def mismatches(expected, observed):
     return [dict(resource=k,expected=v,actual=observed.get(k)) for k,v in expected.items() if observed.get(k)!=v]
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--report',type=Path,default=ROOT/'build/menus087-v2/installed-verification.json');a=ap.parse_args()
-    release=json.loads((c.OUT/'receipt.json').read_text());prepared=release['prepared'];b=c.b
+    ap=argparse.ArgumentParser();ap.add_argument('--report',type=Path,default=ROOT/'build/menus087-v2/installed-verification.json');ap.add_argument('--release',type=Path,default=c.OUT/'receipt.json');a=ap.parse_args()
+    release=json.loads(a.release.read_text());prepared=release.get('prepared') or {'resources':release['resources']};b=c.b
     cfg=configparser.ConfigParser();cfg.read_string(b.m.b.settings_text(b.m.v.SETTINGS))
     expected={r['resource']:r['output_sha256'] for r in prepared['resources']}
     owners=b.m.b.owners(b.m.v.GAME,cfg,set(expected),c.OUT);observed={};winners={}
@@ -24,7 +24,8 @@ def main():
         data=b.m.b.read_bundle(p,next(e for e in b.m.b.audit.entries(p) if e['resource']==key),b.m.v.GAME,c.OUT) if p.suffix=='.bundle' else p.read_bytes()
         observed[key]=b.m.b.audit.sha(data);winners[key]=winner
     errors=mismatches(expected,observed)
-    for mod in ('modInkIronMenus087','modInkAndIronGlossary','modInkAndIronMap_Inked'):
+    required_mods={name.split('/')[1] for name in release['members'] if name.startswith('Mods/')}
+    for mod in sorted(required_mods):
         if mod not in cfg or cfg[mod].get('Enabled')!='1':errors.append(dict(disabled_or_missing=mod))
     if 'modbrothersinarms' in cfg and cfg['modbrothersinarms'].get('Enabled')=='1' and 'modInkAndIronGlossary' in cfg:
         if int(cfg['modbrothersinarms'].get('Priority','999999'))>=int(cfg['modInkAndIronGlossary'].get('Priority','999999')):
