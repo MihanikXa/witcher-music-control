@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Latest user trial outcomes (2026-10-17; report70):** Export selects Keep/B for all six preregistered primaries. S07-c/S12-2 regression cases and S15-a/S16-2/S20-a have seamless/resolving/appropriate evaluations; S16 artifact field remains Unreviewed. **S18-3 is Keep/B with an unresolved qualification:** not seamless, tail too intrusive, slight volume bump at19s. Preserve exact raw outcomes and ledger69 unchanged; do not report six unqualified successes or fitted accuracy. Eleven cumulative choices are pinned, with S18 qualification; S05-main remains separate. Next correction, if requested, is S18-3 only. No automatic remainder rollout or game integration.
+
+
 **Six-cue prediction trial ready (2026-10-17; report69):** All24 original excerpts surveyed;18 pending including two restricted S14 comparisons. Predictions/rule/source measurements frozen in commit `7bbb0db` before rendering. Private `build/music-material-selection/treatment-trial-v1/index.html` has six primaries/eight new WAVs, natural B throughout and controlled natural C only on S07-c/S12-2.200 tests, PCM/registration/input gates and outcome-export tests pass; accepted five and S05-main are exact. No fit accuracy or subjective success claimed. S07-c weak tail/steep handoff, S12-2 spectral change and S16-2 steep handoff remain listening warnings; do not retune ledger or promote alternatives after seeing measurements. Human outcomes must be separate JSON. Stop at this six-cue audition; no full-library, Wwise, game or scheduler work.
 
 

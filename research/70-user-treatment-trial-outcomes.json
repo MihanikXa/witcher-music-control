@@ -1,0 +1,770 @@
+{
+  "schema": 1,
+  "kind": "preregistered-treatment-trial-outcomes",
+  "plan_sha256": "8010166243425ae68b7cf6a71433f74b88752e2f4dab090fcb65ab39b5557ebd",
+  "feedback_sha256": "28517bbe32f0e442825e5cb6cc845ddd1adfcb49fadced86057c7fd8752f9d0a",
+  "source_metadata_sha256": "7fde43a4ede8daded1920f1647f40b27a7dca50845ceefdf72c8eff71bb4ea74",
+  "decisions": [
+    {
+      "cue": "S07-c",
+      "source": "S07",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "title": "S07 · Nightfall",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Brief punctuation (per excerpt note)",
+      "source_in": 156,
+      "source_out": 176.9,
+      "dry_fade": [
+        172,
+        176.9
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S07-c",
+        "source": "S07",
+        "source_title": "S07 · Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 156,
+        "source_out": 176.9,
+        "dry_fade": [
+          172,
+          176.9
+        ],
+        "fade_in": 1.2,
+        "highpass_hz": 240,
+        "lowpass_hz": 3300,
+        "assumption": "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 2,
+        "family": "long_explicit_or_provisional_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "original_dry_fade": [
+          172,
+          176.9
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 11.549999999999999,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 7,
+        "v1_source_assumption": "Keep156s source start, including any existing quiet portion;1.2s provisional entrance, no automated onset relocation."
+      },
+      "render_hashes": {
+        "B": "8210bb16d375f454aef53af2d14c989035e9c5b5029bd59f6e138e55d9a1979a",
+        "C": "d0c9aa198c42c21c6b88fcc2e3fd1024eee3d73332c1f4e3a09e690a39510bd5",
+        "A": "8903bbd1b2c36d4c66a5471e3a67ae93f5e52ea0585c80b4a8f3ca3df5ceb71a"
+      },
+      "frozen_prediction": {
+        "family": "long_explicit_or_provisional_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "rt60": 7,
+        "source_in": 156,
+        "source_out": 176.9,
+        "dry_fade": [
+          172,
+          176.9
+        ],
+        "original_dry_fade": [
+          172,
+          176.9
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 1.2,
+        "highpass_hz": 240,
+        "lowpass_hz": 3300,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 11.549999999999999,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "known_problem_note",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      }
+    },
+    {
+      "cue": "S12-2",
+      "source": "S12",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S12 · Island B - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 21.5,
+      "source_out": 35.5,
+      "dry_fade": [
+        33.3,
+        35.5
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S12-2",
+        "source": "S12",
+        "source_title": "S12 · Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 21.5,
+        "source_out": 35.5,
+        "dry_fade": [
+          33.3,
+          35.5
+        ],
+        "fade_in": 0.35,
+        "highpass_hz": 260,
+        "lowpass_hz": 3700,
+        "assumption": "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule. Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed. Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 2,
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "pre_ending_fade",
+        "continuous_wet_db": -14,
+        "original_dry_fade": [
+          34.8,
+          35.5
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule.",
+          "Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 5.5,
+        "v1_source_assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade."
+      },
+      "render_hashes": {
+        "B": "1df4cf103ee2854b38b9460ebbb9a344cbae347650932751ce85b8c9a9d32451",
+        "C": "cdc90781691dd58a529aad2429798ca1a9acd7b9df345a6b216167e0cd3b2b4c",
+        "A": "73d00b821f43abc16bfcd51d02bcc532c257e6c6472f35a149bc8573cb4be761"
+      },
+      "frozen_prediction": {
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "pre_ending_fade",
+        "continuous_wet_db": -14,
+        "rt60": 5.5,
+        "source_in": 21.5,
+        "source_out": 35.5,
+        "dry_fade": [
+          33.3,
+          35.5
+        ],
+        "original_dry_fade": [
+          34.8,
+          35.5
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 0.35,
+        "highpass_hz": 260,
+        "lowpass_hz": 3700,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule.",
+          "Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "known_problem_note",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      }
+    },
+    {
+      "cue": "S15-a",
+      "source": "S15",
+      "source_identity": {
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "origin_label": "GWENT: Rogue Mage"
+      },
+      "title": "S15 · What Lies Ahead",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 25.5,
+      "dry_fade": [
+        21,
+        25.5
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S15-a",
+        "source": "S15",
+        "source_title": "S15 · What Lies Ahead",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation.",
+        "source_in": 0,
+        "source_out": 25.5,
+        "dry_fade": [
+          21,
+          25.5
+        ],
+        "fade_in": 0.02,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "assumption": "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "long_explicit_or_provisional_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "original_dry_fade": [
+          21,
+          25.5
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 11.549999999999999,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 7,
+        "v1_source_assumption": "Exact user fades and source ranges; second entrance duration0.8s provisional."
+      },
+      "render_hashes": {
+        "B": "f08cdbcf31df9b8a9ff77703335a4ef26acfd398abb21a5d82dbe0fdddabcec7"
+      },
+      "frozen_prediction": {
+        "family": "long_explicit_or_provisional_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "rt60": 7,
+        "source_in": 0,
+        "source_out": 25.5,
+        "dry_fade": [
+          21,
+          25.5
+        ],
+        "original_dry_fade": [
+          21,
+          25.5
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 0.02,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 11.549999999999999,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Existing >=3.5s fade provides room for post-fader integration; avoid sustaining an older harmonic field through a long changing phrase."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "fresh_unreviewed",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      }
+    },
+    {
+      "cue": "S16-2",
+      "source": "S16",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S16 · Southern ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 42.3,
+      "source_out": 101.1,
+      "dry_fade": [
+        98.6,
+        101.1
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S16-2",
+        "source": "S16",
+        "source_title": "S16 · Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 42.3,
+        "source_out": 101.1,
+        "dry_fade": [
+          98.6,
+          101.1
+        ],
+        "fade_in": 1,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "assumption": "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_moderate_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "original_dry_fade": [
+          98.6,
+          101.1
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 12.375,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 7.5,
+        "v1_source_assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending."
+      },
+      "render_hashes": {
+        "B": "4e9104c02fded256d63af1a48b132a83215a3cd9bbc359cd28ea2b7ff91e037a"
+      },
+      "frozen_prediction": {
+        "family": "active_moderate_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "rt60": 7.5,
+        "source_in": 42.3,
+        "source_out": 101.1,
+        "dry_fade": [
+          98.6,
+          101.1
+        ],
+        "original_dry_fade": [
+          98.6,
+          101.1
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 1,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 12.375,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "fresh_unreviewed",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "Unreviewed"
+      }
+    },
+    {
+      "cue": "S18-3",
+      "source": "S18",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S18 · Island alternate pads arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 112.8,
+      "source_out": 130,
+      "dry_fade": [
+        127.8,
+        130
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "There seems to be a slight volume bump at 19s",
+      "settings": {
+        "cue": "S18-3",
+        "source": "S18",
+        "source_title": "S18 · Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 112.8,
+        "source_out": 130,
+        "dry_fade": [
+          127.8,
+          130
+        ],
+        "fade_in": 0.8,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "assumption": "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule. Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed. Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "pre_ending_fade",
+        "continuous_wet_db": -14,
+        "original_dry_fade": [
+          128.4,
+          130
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule.",
+          "Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 5.5,
+        "v1_source_assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional."
+      },
+      "render_hashes": {
+        "B": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140"
+      },
+      "frozen_prediction": {
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "pre_ending_fade",
+        "continuous_wet_db": -14,
+        "rt60": 5.5,
+        "source_in": 112.8,
+        "source_out": 130,
+        "dry_fade": [
+          127.8,
+          130
+        ],
+        "original_dry_fade": [
+          128.4,
+          130
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 0.8,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Active source with <2s existing fade risks rapid direct/room handoff; established room and independent ending send follow the accepted S05 family, not a fitted rule.",
+          "Only the earlier Codex-provisional fade is extended to2.2s; source endpoint remains fixed.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "fresh_unreviewed",
+      "evaluation": {
+        "seamless": "No",
+        "resolution": "Yes",
+        "tail": "Too intrusive",
+        "artifact": "None heard"
+      }
+    },
+    {
+      "cue": "S20-a",
+      "source": "S20",
+      "source_identity": {
+        "media": 841561382,
+        "bank": "music_nomansgrad",
+        "segment": 894778287,
+        "track": 1020785585,
+        "original": "music\\nomansgrad\\novigrad_rich_district\\tw3_novigrad_04_exploration_night_14.02.06.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S20 · City night - complete arrangement",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 0,
+      "source_out": 40.8,
+      "dry_fade": [
+        38,
+        40.8
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S20-a",
+        "source": "S20",
+        "source_title": "S20 · City night - complete arrangement",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Fade out from 38s to approx 40.8s atmospheric development/punctuation.",
+        "source_in": 0,
+        "source_out": 40.8,
+        "dry_fade": [
+          38,
+          40.8
+        ],
+        "fade_in": 0.02,
+        "highpass_hz": 200,
+        "lowpass_hz": 3500,
+        "assumption": "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer. Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown. Natural decay; no late wet attack/hold or new freeze.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_moderate_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "original_dry_fade": [
+          38,
+          40.8
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10.725,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "rt60": 6.5,
+        "v1_source_assumption": "Exact38-40.8s dry fade. Frozen extension separately labeled."
+      },
+      "render_hashes": {
+        "B": "201f61e89d973a814b87ac1ebdfd8187449fd1794b69d7253dacd37245cf78c4"
+      },
+      "frozen_prediction": {
+        "family": "active_moderate_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -17,
+        "rt60": 6.5,
+        "source_in": 0,
+        "source_out": 40.8,
+        "dry_fade": [
+          38,
+          40.8
+        ],
+        "original_dry_fade": [
+          38,
+          40.8
+        ],
+        "explicit_fade_preserved": true,
+        "fade_in": 0.02,
+        "highpass_hz": 200,
+        "lowpass_hz": 3500,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10.725,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Moderate fade: start with accepted S11-style continuously active post-fader room; lower mix than−14dB is a conservative untested transfer.",
+          "Elevated pitch-class/spectral change proxy: do not automatically freeze; actual harmonic coherence remains unknown."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ]
+      },
+      "trial_group": "fresh_unreviewed",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      }
+    }
+  ],
+  "prediction_registration": {
+    "commit": "7bbb0db605510ad7c379ae61aaf40fa71bf8f1d5",
+    "ledger_sha256": "8010166243425ae68b7cf6a71433f74b88752e2f4dab090fcb65ab39b5557ebd",
+    "git_blob_sha256": "47a6e989852a126378b979a93522fd935b4fdd6e48deeaf6f55a24b9973ee026",
+    "comparison": "exact bytes after CRLF-to-LF only",
+    "render_start_utc": "2026-10-17T04:00:56.207898+00:00"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "scope": "Cumulative five earlier selections plus six trial choices. Preserve S18-3 qualification; S05-main B v1 remains a separate accepted reference. No rollout authorization.",
+  "trial_export_sha256": "d5a2b2116a4117b30daf391fea87add8ac78f2d5932840078dbe546bdab7ed5e",
+  "frozen_ledger_sha256": "8010166243425ae68b7cf6a71433f74b88752e2f4dab090fcb65ab39b5557ebd",
+  "selections": [
+    {
+      "cue": "S05-short",
+      "version": "v3",
+      "treatment": "B",
+      "acceptance_evidence": "report67 direct message",
+      "file": "build/music-material-selection/cue-edits-v3/audio/S05-short-B.wav",
+      "sha256": "3617b4143a9c21980a3de1f7984d8a92aae2527d16c1b7ec90fcbffca370d718",
+      "label": "B \u2014 v3 primary: gentler 2s dry fade, established room",
+      "source_cut": [
+        0,
+        23.7
+      ],
+      "dry_fade": [
+        21.7,
+        23.7
+      ]
+    },
+    {
+      "cue": "S11-short",
+      "version": "v3",
+      "treatment": "C",
+      "acceptance_evidence": "report67 direct message",
+      "file": "build/music-material-selection/cue-edits-v3/audio/S11-short-C.wav",
+      "sha256": "907b75d86e0c3c352cf44831a68ff46f280da2ebff6de3199b610c50227223ae",
+      "label": "C \u2014 v3 control: original dry fade, fading source send",
+      "source_cut": [
+        0,
+        20
+      ],
+      "dry_fade": [
+        18,
+        20
+      ]
+    },
+    {
+      "cue": "S12-1",
+      "version": "v2",
+      "treatment": "C",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S12-1-C.wav",
+      "sha256": "a14cf5c6ad57981bf0d403ec73940b334844f79cb9f2e8b4ae1d778c3319a6c9",
+      "label": "C \u2014 v2 freeze / immediate release 4.5s",
+      "source_cut": [
+        5,
+        21
+      ],
+      "dry_fade": [
+        20.4,
+        21
+      ]
+    },
+    {
+      "cue": "S07-b",
+      "version": "v2",
+      "treatment": "B",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S07-b-B.wav",
+      "sha256": "96dfbb194de104e5a57a9819589ac95482857a76d7a5fe5e0e2c77decad60c04",
+      "label": "B \u2014 v2 natural decay (primary), RT60 7s",
+      "source_cut": [
+        81,
+        115
+      ],
+      "dry_fade": [
+        111,
+        115
+      ]
+    },
+    {
+      "cue": "S04-b",
+      "version": "v2",
+      "treatment": "C",
+      "acceptance_evidence": "report65 user export",
+      "file": "build/music-material-selection/cue-edits-v2/audio/S04-b-C.wav",
+      "sha256": "db7df8e97cc4d1d1b5956461be134bbd0a6a730f6a9dcd4dd55e1da8a65b797f",
+      "label": "C \u2014 v2 freeze / immediate release 5s",
+      "source_cut": [
+        34,
+        60.757333333333335
+      ],
+      "dry_fade": [
+        59.757333333333335,
+        60.757333333333335
+      ]
+    },
+    {
+      "cue": "S07-c",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S07-c-B.wav",
+      "sha256": "8210bb16d375f454aef53af2d14c989035e9c5b5029bd59f6e138e55d9a1979a",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S12-2",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S12-2-B.wav",
+      "sha256": "1df4cf103ee2854b38b9460ebbb9a344cbae347650932751ce85b8c9a9d32451",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S15-a",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S15-a-B.wav",
+      "sha256": "f08cdbcf31df9b8a9ff77703335a4ef26acfd398abb21a5d82dbe0fdddabcec7",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    },
+    {
+      "cue": "S16-2",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S16-2-B.wav",
+      "sha256": "4e9104c02fded256d63af1a48b132a83215a3cd9bbc359cd28ea2b7ff91e037a",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "Unreviewed"
+      },
+      "notes": "",
+      "qualification": "No artifact evaluation supplied."
+    },
+    {
+      "cue": "S18-3",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S18-3-B.wav",
+      "sha256": "ec84e5ec9e35d99b1f0ef7a8d7cc5766b513b6d5f3ff2afee378362c6e254140",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "No",
+        "resolution": "Yes",
+        "tail": "Too intrusive",
+        "artifact": "None heard"
+      },
+      "notes": "There seems to be a slight volume bump at 19s",
+      "qualification": "Keep selected, but explicitly not seamless and tail too intrusive; follow-up unresolved."
+    },
+    {
+      "cue": "S20-a",
+      "version": "treatment-trial-v1",
+      "treatment": "B",
+      "file": "build/music-material-selection/treatment-trial-v1/audio/S20-a-B.wav",
+      "sha256": "201f61e89d973a814b87ac1ebdfd8187449fd1794b69d7253dacd37245cf78c4",
+      "verdict": "Keep",
+      "evaluation": {
+        "seamless": "Yes",
+        "resolution": "Yes",
+        "tail": "Appropriate",
+        "artifact": "None heard"
+      },
+      "notes": "",
+      "qualification": "No issue reported in this export."
+    }
+  ]
+}
