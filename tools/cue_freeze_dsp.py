@@ -32,6 +32,35 @@ def dry_envelope(frames,rate,fade_in,fade_start,fade_stop):
     return env
 
 
+def dry_db_release(frames,rate,fade_in,fade_start,fade_stop,
+                   depth_db=72.,onset_seconds=.12,cleanup_seconds=.02):
+    """Opt-in dry diagnostic: smooth onset, constant dB slope, quiet cleanup.
+
+    Legacy dry_envelope remains unchanged. Cleanup reaches digital zero only
+    after depth_db attenuation; it is not a second audible release stage.
+    """
+    if not np.isfinite([depth_db,onset_seconds,cleanup_seconds]).all():
+        raise ValueError('Non-finite release settings')
+    if not 40<=depth_db<=120 or onset_seconds<=0 or cleanup_seconds<=0:
+        raise ValueError('Invalid release settings')
+    env=dry_envelope(frames,rate,fade_in,fade_start,fade_stop)
+    a,b=round(fade_start*rate),min(frames,round(fade_stop*rate))
+    count=b-a;cleanup=round(cleanup_seconds*rate);onset=onset_seconds*rate
+    main=count-cleanup
+    if cleanup<2 or main<3 or onset>=main-1:
+        raise ValueError('Release window too short')
+    t=np.arange(main,dtype=float)
+    # Integrate a half-cosine velocity onset; then follow a constant dB rate.
+    progress=np.where(t<onset,t/2-onset/(2*np.pi)*np.sin(np.pi*t/onset),t-onset/2)
+    gain=10**(-depth_db*progress/progress[-1]/20)
+    ending=np.r_[gain,gain[-1]*(1-ramp(cleanup))]
+    # Preserve the separately specified entrance, including overlapping cases.
+    entrance=np.ones(frames);n=min(frames,round(fade_in*rate))
+    if n>=2:entrance[:n]=ramp(n)
+    env[a:b]=ending*entrance[a:b]
+    return env
+
+
 class Field:
     def __init__(self,rt60=3,rate=RATE):
         if rate!=RATE or not .2<rt60<20:raise ValueError('Unsupported field rate/RT60')

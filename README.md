@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**S18 dry fade follow-up (2026-10-17; report74):** User confirms quick dip at the end of dry-only control. One opt-in even-dB dry comparison at `build/music-material-selection/s18-dry-fade-v2/index.html` keeps source/fade clocks, changes only release curve; earlier attenuation is an explicit tradeoff. No new wet treatment or accepted correction.204 tests pass;11 pinned selections and ledger69 exact. Listen to A/B before further wet tuning or rollout.
+
+
 **Persistent S18 failure (2026-10-17; report73):** User still hears dip near18.8s → constant level → separate fade. No report72 variant is accepted; latest feedback does not identify B/C individually. Stop blind send-taper iterations. One dry-only diagnostic at `build/music-material-selection/s18-handoff-diagnostic/index.html` compares exact existing dry fade against unfaded original and prior partial C; no new wet correction. Dry falls~33dB while original source remains active. Need human distinction whether dry-only already has the objectionable dip before choosing another mechanism.201 tests pass; accepted files and ledger69 unchanged. No rollout/game integration.
 
 

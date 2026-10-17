@@ -3,7 +3,7 @@
 **Latest direction (report68, 2026-10-17):** Transparent and preregistered treatment triage for remaining Sparse cue endings; only six varied private test renders, then user review. Report67 pins the five accepted source-specific endings; no universal preset or full24 rollout.
 
 
-**Current reading order:** report73 records persistent S18 handoff failure and provides a dry-only diagnostic. No partial taper is newly accepted. Obtain the dry-only listening distinction before another correction; preserve all successful cues and prediction69. No library rollout or game integration.
+**Current reading order:** report74 records the dry-only late-dip confirmation and one dry-release A/B comparison. No wet correction is accepted; compare release shape before further tuning. Preserve accepted cues and ledger69; no rollout or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -148,3 +148,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 72. [S18 dip and partial-send follow-up](72-s18-dip-feedback-and-partial-send.md): exact user correction, two controlled tapers,201 tests and unchanged dry/accepted-input checks; listening pending. [Plan](72-s18-partial-send-plan.json), [evidence](72-s18-partial-send-evidence.json).
 
 73. [Persistent S18 handoff diagnostic](73-s18-persistent-handoff-diagnostic.md): exact user complaint, source/dry comparison and one private dry-only diagnostic; no further wet treatment. [Evidence](73-s18-diagnostic-evidence.json).
+
+74. [S18 dry-release comparison](74-s18-dry-release-comparison.md): user confirms dry-only late dip; one opt-in even-dB comparison, unchanged cuts, earlier attenuation tradeoff,204 tests. [Evidence](74-s18-dry-release-evidence.json).
