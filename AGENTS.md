@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**S18 accepted (2026-10-17; report79):** User: “T3 is good enough.” Exact report78 T3 SHA256 `5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd` is now selected for S18-3; keep the practical qualification, not a claim of perfect seamlessness. Current eleven-cue snapshot: `research/79-accepted-private-cue-selections.json`; only S18 supersedes report70, which stays immutable for historical gates. Other ten choices, separate S05-main, endpoint130s, ledger69 and all audio remain intact. Stop S18 tuning; no automatic remainder rollout or integration.
+
+
 **S18 local alignment audition (2026-10-17; report78):** Three private timing options now at `build/music-material-selection/s18-local-alignment-final/index.html`, plus exact qualified A. Source112.8–130s/endpoint130s fixed. Compact100ms local dry-fade delay and500ms reverb-input taper share centers129.45/129.575/129.65; same room/RT60/gain, no late wet-output fade. Source valley/recovery and reference PCM reproduced. T1 is quieter; T2/T3 retain small local rises.208 tests and exact16-input/PCM/local-restoration gates pass. No subjective success or new acceptance; listen to the three final options only. Preserved internal superseded controls are not further choices. All other cues, ledger69 and game resources untouched.
 
 
