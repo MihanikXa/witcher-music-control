@@ -1,6 +1,6 @@
 # Music research and design decisions
 
-**Current reading order:** report64 is the completed five-cue corrective audio audition; reports58–63 are immutable user cuts/feedback and defect diagnosis. Conventional continuous-send decay is primary; user listening approval is required before scaling. All scheduler, bank and gameplay work remains deferred. Historical regional and architecture findings below remain evidence, not the current task.
+**Current reading order:** report65 records partial v2 listening acceptance: three Keep, two unresolved Adjust. Report64 is the corrective implementation and technical evidence, not proof of perceptual success for the two remaining cues. Reports58–63 preserve original cuts, preferences and earlier feedback. No full24 propagation or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -127,3 +127,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 63. [Longer natural reverb decay preference](63-longer-natural-reverb-decay-preference.md): latest user instruction prioritizes smoother, longer conventional reverb tails on most cues, with continuous early wet send and no late hold/second fade; small v2 audio comparison first.
 
 64. [Continuous reverb-tail correction](64-continuous-reverb-tail-correction.md): five cues,12 new private PCM renders, continuous post-fader B with longer RT60, optional freeze with immediate release, unchanged v1 comparisons and explicit S04 onset edit.191 tests and independent PCM/preservation/client gates pass; user listening remains required. [Plan](64-continuous-tail-plan.json), [evidence](64-continuous-tail-evidence.json).
+
+65. [User v2 cue-tail feedback](65-user-cue-tail-v2-feedback.md): three specific renders accepted; S05-short/S11-short retain audible handoff problems despite passing technical checks. [Byte-exact decisions](65-user-cue-tail-v2-decisions.json). No audio regenerated.
