@@ -88,6 +88,9 @@ class MigrationTests(unittest.TestCase):
  def test_native_pack_extraction_and_live_baseline_frozen(self):
   receipt=json.loads((b.OUT/'receipt.json').read_text());self.assertEqual({r['label'] for r in receipt['native'] if r['passed']},{'cook','validate','pack','metadata'})
   for key in self.prepared['keys']:self.assertEqual(b.m.b.bars.extract(b.OUT/'packed/blob0.bundle',key),(b.OUT/'prepared-inputs'/key).read_bytes())
-  self.assertEqual(b.m.b.bars.snapshot(b.m.v.GAME,b.m.v.SETTINGS),self.ledger['frozen'])
+  # Historical v1 tests must compare its recorded build snapshot, not reject a
+  # later user-authorized deployment. The v2 suite checks today's live freeze.
+  self.assertEqual(json.loads((b.OUT/'frozen.json').read_text()),self.ledger['frozen'])
+  self.assertTrue(receipt['frozen_unchanged'])
   with zipfile.ZipFile(receipt['zip_path']) as z:self.assertIsNone(z.testzip());self.assertFalse(any('inkGearGrid' in n for n in z.namelist()))
 if __name__=='__main__':unittest.main()
