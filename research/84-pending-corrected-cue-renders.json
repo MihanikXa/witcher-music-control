@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "status": "Pending user listening; no new acceptance",
+  "plan": "research/84-five-cue-correction-plan.json",
+  "cues": [
+    {
+      "cue": "S04-a",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S04-a-B.wav",
+      "sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82",
+      "source_cut": [
+        3.15,
+        34
+      ],
+      "dry_fade": [
+        31.0,
+        34.0
+      ],
+      "future_sparse_eligible": true
+    },
+    {
+      "cue": "S16-1",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S16-1-B.wav",
+      "sha256": "f6a8eb78ee42bd8f4ed65d4216b0c1c348e8c6359b27f3fcc16613c7da3f569e",
+      "source_cut": [
+        0,
+        42.3
+      ],
+      "dry_fade": [
+        35.0,
+        42.3
+      ],
+      "future_sparse_eligible": true
+    },
+    {
+      "cue": "S18-2",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S18-2-B.wav",
+      "sha256": "89ac5a6f95b66a938c1bd3f2b0500acd8a452d7c40e1818da8e5e2cc5da1d3a7",
+      "source_cut": [
+        61,
+        100.8
+      ],
+      "dry_fade": [
+        97.5,
+        100.8
+      ],
+      "future_sparse_eligible": true
+    },
+    {
+      "cue": "S14-1",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S14-1-B.wav",
+      "sha256": "b6b5fba304627c3c3c8ebaece76ddd6fb53578bbd64bedda21860a6733e5f4d3",
+      "source_cut": [
+        0,
+        64.5
+      ],
+      "dry_fade": [
+        62.3,
+        64.5
+      ],
+      "future_sparse_eligible": true
+    },
+    {
+      "cue": "S14-2",
+      "file": "build/music-material-selection/five-cue-corrections-v1/audio/S14-2-B.wav",
+      "sha256": "afb781d285813d1fadc5974d8971ed3d8f0221361c238ee71b642856c3da96bd",
+      "source_cut": [
+        64.5,
+        132.0
+      ],
+      "dry_fade": [
+        131.98,
+        132.0
+      ],
+      "future_sparse_eligible": true
+    }
+  ]
+}

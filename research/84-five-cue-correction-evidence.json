@@ -1,0 +1,2413 @@
+{
+  "schema": 1,
+  "kind": "five-cue-corrective-pending-evidence",
+  "plan_sha256": "bf1261a854e0ff09efeb5d7e3c1cc87911b42227a28923d4dcc91eaea6d6d268",
+  "verification": {
+    "technical_integrity_passed": true,
+    "accepted18_plus_separate_main_preserved": true,
+    "primaries": 5,
+    "alternatives": 0,
+    "subjective_success": false,
+    "results": [
+      {
+        "cue": "S04-a",
+        "sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82",
+        "settings": {
+          "cue": "S04-a",
+          "source": "S04",
+          "source_title": "S04 · Island A - base arrangement",
+          "source_role": "Brief punctuation",
+          "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+          "source_in": 3.15,
+          "source_out": 34,
+          "dry_fade": [
+            31.0,
+            34.0
+          ],
+          "fade_in": 0.02,
+          "tail_extra": 3.2,
+          "wet_db_relative": -14,
+          "prime_seconds": 4,
+          "highpass_hz": 220,
+          "lowpass_hz": 3800,
+          "hold_after_dry": 0.2,
+          "wet_attack": 0.8,
+          "rt60": 5.5,
+          "freeze_transition": 0.1,
+          "compare": true,
+          "variants": [
+            "B"
+          ],
+          "assumption": "Original remains near−92dBFS through source3.15s. Remove only this prefix, preserve the entire preferred C PCM suffix exactly, including its ending. Standard2s context stays.",
+          "comparison_only": false,
+          "stage": 1,
+          "family": "active_short_fade",
+          "treatment": "natural_decay",
+          "send_policy": "pre_ending_fade",
+          "continuous_wet_db": -14,
+          "original_dry_fade": [
+            33,
+            34
+          ],
+          "explicit_fade_preserved": true,
+          "send_stop_guard_seconds": 0.02,
+          "render_extra_seconds": 10,
+          "lead_silence": 2,
+          "trail_silence": 3,
+          "reasoning": [
+            "Original remains near−92dBFS through source3.15s. Remove only this prefix, preserve the entire preferred C PCM suffix exactly, including its ending. Standard2s context stays."
+          ],
+          "confidence": "provisional / low for musical fit; deterministic technical selection",
+          "risks": [
+            "Room coloration or wash",
+            "Perceived handoff despite smooth RMS",
+            "Possible wrong musical resolution",
+            "Base-stem balance may not represent full native arrangement"
+          ],
+          "measurement_unknowns": [
+            "True room decay",
+            "Actual chord progression and cadence",
+            "Human tail preference"
+          ],
+          "guard_peak_ceiling_dbfs": -60
+        },
+        "post_source_seconds_dbfs": [
+          -57.07614227553996,
+          -68.68987063891423,
+          -81.08301986289278,
+          -91.34798693683481,
+          -102.4705581973759,
+          -240.0,
+          -240.0,
+          -240.0,
+          -240.0,
+          -240.0
+        ],
+        "warnings": [
+          "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+        ],
+        "cleanup_peak_dbfs": -151.30306474145226
+      },
+      {
+        "cue": "S16-1",
+        "sha256": "f6a8eb78ee42bd8f4ed65d4216b0c1c348e8c6359b27f3fcc16613c7da3f569e",
+        "settings": {
+          "cue": "S16-1",
+          "source": "S16",
+          "source_title": "S16 · Southern ambient arrangement 01",
+          "source_role": "Atmospheric development",
+          "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+          "source_in": 0,
+          "source_out": 42.3,
+          "dry_fade": [
+            35.0,
+            42.3
+          ],
+          "fade_in": 0.02,
+          "tail_extra": 4,
+          "wet_db_relative": -15,
+          "prime_seconds": 3.8,
+          "highpass_hz": 190,
+          "lowpass_hz": 3400,
+          "hold_after_dry": 0.2,
+          "wet_attack": 1.0,
+          "rt60": 8.0,
+          "freeze_transition": 0.1,
+          "compare": true,
+          "variants": [
+            "B"
+          ],
+          "assumption": "Original stays roughly−25dBFS through42.3s. Old2.2s fade causes the disappearance. Begin a7.3s smooth release at35s, with continuously established8s post-fader room; no wet hold.",
+          "comparison_only": false,
+          "stage": 3,
+          "family": "active_short_fade",
+          "treatment": "natural_decay",
+          "send_policy": "post_fader",
+          "continuous_wet_db": -14,
+          "original_dry_fade": [
+            40.5,
+            42.3
+          ],
+          "explicit_fade_preserved": true,
+          "send_stop_guard_seconds": 0.02,
+          "render_extra_seconds": 10,
+          "lead_silence": 2,
+          "trail_silence": 3,
+          "reasoning": [
+            "Original stays roughly−25dBFS through42.3s. Old2.2s fade causes the disappearance. Begin a7.3s smooth release at35s, with continuously established8s post-fader room; no wet hold."
+          ],
+          "confidence": "provisional / low for musical fit; deterministic technical selection",
+          "risks": [
+            "Room coloration or wash",
+            "Perceived handoff despite smooth RMS",
+            "Possible wrong musical resolution",
+            "Base-stem balance may not represent full native arrangement"
+          ],
+          "measurement_unknowns": [
+            "True room decay",
+            "Actual chord progression and cadence",
+            "Human tail preference"
+          ],
+          "guard_peak_ceiling_dbfs": -60
+        },
+        "post_source_seconds_dbfs": [
+          -66.3691591670542,
+          -73.94526914662704,
+          -81.33904293090829,
+          -88.69822118294904,
+          -95.37427296210879,
+          -106.38789404908123,
+          -240.0,
+          -240.0,
+          -240.0,
+          -240.0
+        ],
+        "warnings": [],
+        "cleanup_peak_dbfs": -151.59237521440684
+      },
+      {
+        "cue": "S18-2",
+        "sha256": "89ac5a6f95b66a938c1bd3f2b0500acd8a452d7c40e1818da8e5e2cc5da1d3a7",
+        "settings": {
+          "cue": "S18-2",
+          "source": "S18",
+          "source_title": "S18 · Island alternate pads arrangement",
+          "source_role": "Brief punctuation",
+          "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+          "source_in": 61,
+          "source_out": 100.8,
+          "dry_fade": [
+            97.5,
+            100.8
+          ],
+          "fade_in": 1.3,
+          "tail_extra": 4.5,
+          "wet_db_relative": -16,
+          "prime_seconds": 3.6,
+          "highpass_hz": 170,
+          "lowpass_hz": 3900,
+          "hold_after_dry": 0.2,
+          "wet_attack": 1.0,
+          "rt60": 6.0,
+          "freeze_transition": 0.1,
+          "compare": true,
+          "variants": [
+            "B"
+          ],
+          "assumption": "Source declines from about−15dBFS at98s toward−25dBFS at100s before the new rise after101s. Proposed97.5–100.8s fade ends before the rejected return; no later samples feed dry or room. Cadence remains a listening decision.",
+          "comparison_only": false,
+          "stage": 3,
+          "family": "active_moderate_fade",
+          "treatment": "natural_decay",
+          "send_policy": "post_fader",
+          "continuous_wet_db": -20,
+          "original_dry_fade": [
+            109.9,
+            112.7
+          ],
+          "explicit_fade_preserved": true,
+          "send_stop_guard_seconds": 0.02,
+          "render_extra_seconds": 12.375,
+          "lead_silence": 2,
+          "trail_silence": 3,
+          "reasoning": [
+            "Source declines from about−15dBFS at98s toward−25dBFS at100s before the new rise after101s. Proposed97.5–100.8s fade ends before the rejected return; no later samples feed dry or room. Cadence remains a listening decision."
+          ],
+          "confidence": "provisional / low for musical fit; deterministic technical selection",
+          "risks": [
+            "Room coloration or wash",
+            "Perceived handoff despite smooth RMS",
+            "Possible wrong musical resolution",
+            "Base-stem balance may not represent full native arrangement"
+          ],
+          "measurement_unknowns": [
+            "True room decay",
+            "Actual chord progression and cadence",
+            "Human tail preference"
+          ],
+          "guard_peak_ceiling_dbfs": -60
+        },
+        "post_source_seconds_dbfs": [
+          -57.34608011630183,
+          -67.56170220038241,
+          -77.46456445837153,
+          -86.69750691779004,
+          -95.98231163540986,
+          -114.80416723966506,
+          -240.0,
+          -240.0,
+          -240.0,
+          -240.0
+        ],
+        "warnings": [],
+        "cleanup_peak_dbfs": -143.79065432581365
+      },
+      {
+        "cue": "S14-1",
+        "sha256": "b6b5fba304627c3c3c8ebaece76ddd6fb53578bbd64bedda21860a6733e5f4d3",
+        "settings": {
+          "cue": "S14-1",
+          "source": "S14",
+          "source_title": "S14 · Reusable ambient arrangement 01",
+          "source_role": "Atmospheric development",
+          "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+          "source_in": 0,
+          "source_out": 64.5,
+          "dry_fade": [
+            62.3,
+            64.5
+          ],
+          "fade_in": 0.02,
+          "tail_extra": 4.2,
+          "wet_db_relative": -17,
+          "prime_seconds": 3.6,
+          "highpass_hz": 80,
+          "lowpass_hz": 3000,
+          "hold_after_dry": 0.2,
+          "wet_attack": 1.0,
+          "rt60": 8.5,
+          "freeze_transition": 0.1,
+          "compare": true,
+          "variants": [
+            "B"
+          ],
+          "assumption": "Source60–64.5s carries30–120Hz energy around−25.6dBFS, stronger than120–250Hz. Lower send HP250→80Hz and8.5s real decay carry more low-note energy. Fixed−13dB pre-fade wet target; no late gain automation.",
+          "comparison_only": false,
+          "stage": 3,
+          "family": "active_short_fade",
+          "treatment": "natural_decay",
+          "send_policy": "post_fader",
+          "continuous_wet_db": -13,
+          "original_dry_fade": [
+            63,
+            64.5
+          ],
+          "explicit_fade_preserved": true,
+          "send_stop_guard_seconds": 0.02,
+          "render_extra_seconds": 10,
+          "lead_silence": 2,
+          "trail_silence": 3,
+          "reasoning": [
+            "Source60–64.5s carries30–120Hz energy around−25.6dBFS, stronger than120–250Hz. Lower send HP250→80Hz and8.5s real decay carry more low-note energy. Fixed−13dB pre-fade wet target; no late gain automation."
+          ],
+          "confidence": "provisional / low for musical fit; deterministic technical selection",
+          "risks": [
+            "Room coloration or wash",
+            "Perceived handoff despite smooth RMS",
+            "Possible wrong musical resolution",
+            "Base-stem balance may not represent full native arrangement"
+          ],
+          "measurement_unknowns": [
+            "True room decay",
+            "Actual chord progression and cadence",
+            "Human tail preference"
+          ],
+          "guard_peak_ceiling_dbfs": -60
+        },
+        "post_source_seconds_dbfs": [
+          -51.34467441069026,
+          -58.64164261247829,
+          -65.31091417694309,
+          -72.6965365583296,
+          -79.35956954233237,
+          -86.980428878835,
+          -92.60769214110779,
+          -101.16369405294083,
+          -132.3501985257536,
+          -240.0
+        ],
+        "warnings": [],
+        "cleanup_peak_dbfs": -137.42347036838962
+      },
+      {
+        "cue": "S14-2",
+        "sha256": "afb781d285813d1fadc5974d8971ed3d8f0221361c238ee71b642856c3da96bd",
+        "settings": {
+          "cue": "S14-2",
+          "source": "S14",
+          "source_title": "S14 · Reusable ambient arrangement 01",
+          "source_role": "Atmospheric development",
+          "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+          "source_in": 64.5,
+          "source_out": 132.0,
+          "dry_fade": [
+            131.98,
+            132.0
+          ],
+          "fade_in": 0.9,
+          "tail_extra": 4.2,
+          "wet_db_relative": -17,
+          "prime_seconds": 3.6,
+          "highpass_hz": 80,
+          "lowpass_hz": 3000,
+          "hold_after_dry": 0.2,
+          "wet_attack": 1.0,
+          "rt60": 9.0,
+          "freeze_transition": 0.1,
+          "compare": true,
+          "variants": [
+            "B"
+          ],
+          "assumption": "Original125–132s low band dominates; recorded release falls rapidly after130.5s. Establish restrained80Hz–3kHz9s room throughout, fed only by the current passage and post-fader source. Preserve original near-silent20ms guard and constant headroom reduction.",
+          "comparison_only": false,
+          "stage": 3,
+          "family": "already_dissipating",
+          "treatment": "natural_decay",
+          "send_policy": "post_fader",
+          "continuous_wet_db": -14,
+          "original_dry_fade": [
+            129.5,
+            132.0
+          ],
+          "explicit_fade_preserved": true,
+          "send_stop_guard_seconds": 0.02,
+          "render_extra_seconds": 10,
+          "lead_silence": 2,
+          "trail_silence": 3,
+          "reasoning": [
+            "Original125–132s low band dominates; recorded release falls rapidly after130.5s. Establish restrained80Hz–3kHz9s room throughout, fed only by the current passage and post-fader source. Preserve original near-silent20ms guard and constant headroom reduction."
+          ],
+          "confidence": "provisional / low for musical fit; deterministic technical selection",
+          "risks": [
+            "Room coloration or wash",
+            "Perceived handoff despite smooth RMS",
+            "Possible wrong musical resolution",
+            "Base-stem balance may not represent full native arrangement"
+          ],
+          "measurement_unknowns": [
+            "True room decay",
+            "Actual chord progression and cadence",
+            "Human tail preference"
+          ],
+          "guard_peak_ceiling_dbfs": -60
+        },
+        "post_source_seconds_dbfs": [
+          -61.16792725071558,
+          -67.97089823738504,
+          -74.46471109893061,
+          -80.842030556033,
+          -87.99276324239389,
+          -93.4890530281133,
+          -101.30760418585035,
+          -128.99227750652167,
+          -240.0,
+          -240.0
+        ],
+        "warnings": [
+          "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+        ],
+        "cleanup_peak_dbfs": -148.16430377528124
+      }
+    ]
+  },
+  "cues": [
+    {
+      "settings": {
+        "cue": "S04-a",
+        "source": "S04",
+        "source_title": "S04 · Island A - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+        "source_in": 3.15,
+        "source_out": 34,
+        "dry_fade": [
+          31.0,
+          34.0
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.2,
+        "wet_db_relative": -14,
+        "prime_seconds": 4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3800,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 5.5,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "B"
+        ],
+        "assumption": "Original remains near−92dBFS through source3.15s. Remove only this prefix, preserve the entire preferred C PCM suffix exactly, including its ending. Standard2s context stays.",
+        "comparison_only": false,
+        "stage": 1,
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "pre_ending_fade",
+        "continuous_wet_db": -14,
+        "original_dry_fade": [
+          33,
+          34
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Original remains near−92dBFS through source3.15s. Remove only this prefix, preserve the entire preferred C PCM suffix exactly, including its ending. Standard2s context stays."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "guard_peak_ceiling_dbfs": -60
+      },
+      "source_identity": {
+        "media": 311392293,
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "b6bfff553124bde68de4e928c28c5a501bedd70bc70f4b63009e9f8bf1bb3199",
+      "reasoning": "Original remains near−92dBFS through source3.15s. Remove only this prefix, preserve the entire preferred C PCM suffix exactly, including its ending. Standard2s context stays.",
+      "timing_authority": "Report83 user correction; exact revised engineering settings provisional. Standard2s lead preserved.",
+      "onset_note": "A source start 0s; B source start 3.15s. A/B switches follow source time.",
+      "renders": {
+        "B": {
+          "file": "audio/S04-a-B.wav",
+          "label": "B — corrected, pending listening",
+          "qa": {
+            "sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82",
+            "seconds": 45.85,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.281219482421875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 3.15
+        },
+        "A": {
+          "file": "../remainder-batch-v1/audio/S04-a-C.wav",
+          "label": "A — unchanged preferred previous render",
+          "qa": {
+            "sha256": "b621f888f7cf1e9b3590b47fdc14984b637765465939051b0b767f3b7d0d9989",
+            "seconds": 49.0,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.281219482421875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 0
+        }
+      },
+      "previous_source_in": 0,
+      "metrics": {
+        "previous": {
+          "maximum_processing_excess_drop_100ms_db": 4.260411839311729,
+          "maximum_processing_excess_rise_100ms_db": 4.664899563141702,
+          "maximum_combined_rise_100ms_db": 1.636597334980678,
+          "last_source_second_wet_growth_db": 1.8211098577541804,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -53.36860561842614,
+              -57.92098373075466,
+              -59.88130156169195,
+              -62.24319037180447,
+              -65.05532216902638,
+              -69.53804165396058,
+              -71.2690423813474,
+              -73.69212176360153,
+              -77.98688611101802,
+              -81.05044390752943,
+              -82.71178528479956,
+              -86.84587653244803,
+              -88.25391010937813,
+              -92.17596936602374,
+              -92.8732478301567,
+              -95.00540063149784,
+              -98.04729746520437,
+              -105.03162590018769,
+              -104.6712223655727,
+              -113.77687356144092,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [
+            "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+          ],
+          "sampled_transition": [
+            {
+              "source_seconds": 30.5,
+              "levels": {
+                "source": -31.201087795152738,
+                "dry": -31.201087795152738,
+                "wet": -44.06817596336516,
+                "combined": -31.815128484606245
+              }
+            },
+            {
+              "source_seconds": 30.5,
+              "levels": {
+                "source": -31.201087795152738,
+                "dry": -31.201087795152738,
+                "wet": -44.06817596336516,
+                "combined": -31.815128484606245
+              }
+            },
+            {
+              "source_seconds": 31.999999999999915,
+              "levels": {
+                "source": -28.37953310475832,
+                "dry": -30.887766927992963,
+                "wet": -41.679622517149696,
+                "combined": -30.01194819649399
+              }
+            },
+            {
+              "source_seconds": 32.99999999999986,
+              "levels": {
+                "source": -33.986390060848414,
+                "dry": -46.02926328846727,
+                "wet": -42.19137164263369,
+                "combined": -40.14739693305978
+              }
+            },
+            {
+              "source_seconds": 33.49999999999983,
+              "levels": {
+                "source": -37.18597741713596,
+                "dry": -60.61212680956167,
+                "wet": -48.56247283365815,
+                "combined": -49.222771315296676
+              }
+            },
+            {
+              "source_seconds": 33.9999999999998,
+              "levels": {
+                "source": -38.67745840821886,
+                "dry": -121.6812155541359,
+                "wet": -51.492554182325385,
+                "combined": -51.4928956420093
+              }
+            },
+            {
+              "source_seconds": 34.999999999999744,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -62.98557216427813,
+                "combined": -62.98557216427813
+              }
+            },
+            {
+              "source_seconds": 35.94999999999969,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -75.43564079150607,
+                "combined": -75.43564079150607
+              }
+            }
+          ]
+        },
+        "corrected": {
+          "maximum_processing_excess_drop_100ms_db": 4.260411839311729,
+          "maximum_processing_excess_rise_100ms_db": 4.664899563141702,
+          "maximum_combined_rise_100ms_db": 1.636597334980678,
+          "last_source_second_wet_growth_db": 1.8211098577541804,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -53.36860561842614,
+              -57.92098373075466,
+              -59.88130156169195,
+              -62.24319037180447,
+              -65.05532216902638,
+              -69.53804165396058,
+              -71.2690423813474,
+              -73.69212176360153,
+              -77.98688611101802,
+              -81.05044390752943,
+              -82.71178528479956,
+              -86.84587653244803,
+              -88.25391010937813,
+              -92.17596936602374,
+              -92.8732478301567,
+              -95.00540063149784,
+              -98.04729746520437,
+              -105.03162590018769,
+              -104.6712223655727,
+              -113.77687356144092,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [
+            "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+          ],
+          "sampled_transition": [
+            {
+              "source_seconds": 30.5,
+              "levels": {
+                "source": -31.201087795152738,
+                "dry": -31.201087795152738,
+                "wet": -44.06817596336516,
+                "combined": -31.815128484606245
+              }
+            },
+            {
+              "source_seconds": 30.5,
+              "levels": {
+                "source": -31.201087795152738,
+                "dry": -31.201087795152738,
+                "wet": -44.06817596336516,
+                "combined": -31.815128484606245
+              }
+            },
+            {
+              "source_seconds": 31.999999999999915,
+              "levels": {
+                "source": -28.37953310475832,
+                "dry": -30.887766927992963,
+                "wet": -41.679622517149696,
+                "combined": -30.01194819649399
+              }
+            },
+            {
+              "source_seconds": 32.99999999999986,
+              "levels": {
+                "source": -33.986390060848414,
+                "dry": -46.02926328846727,
+                "wet": -42.19137164263369,
+                "combined": -40.14739693305978
+              }
+            },
+            {
+              "source_seconds": 33.49999999999983,
+              "levels": {
+                "source": -37.18597741713596,
+                "dry": -60.61212680956167,
+                "wet": -48.56247283365815,
+                "combined": -49.222771315296676
+              }
+            },
+            {
+              "source_seconds": 33.9999999999998,
+              "levels": {
+                "source": -38.67745840821886,
+                "dry": -121.6812155541359,
+                "wet": -51.492554182325385,
+                "combined": -51.4928956420093
+              }
+            },
+            {
+              "source_seconds": 34.999999999999744,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -62.98557216427813,
+                "combined": -62.98557216427813
+              }
+            },
+            {
+              "source_seconds": 35.94999999999969,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -75.43564079150607,
+                "combined": -75.43564079150607
+              }
+            }
+          ]
+        }
+      },
+      "corrected_low_band_post_source": {
+        "30-120Hz": [
+          -100.5038881772536,
+          -114.49019979819039,
+          -121.98069136826078,
+          -123.98729752475445,
+          -121.3263521253978
+        ],
+        "120-250Hz": [
+          -84.46549433034033,
+          -96.52844106223633,
+          -109.34978417960897,
+          -116.96818186095088,
+          -116.07757710730645
+        ],
+        "250-500Hz": [
+          -54.196328504441986,
+          -65.62197958183198,
+          -80.42413082393468,
+          -93.65109098935208,
+          -99.77100648603361
+        ]
+      },
+      "render_proof": {
+        "source_start_frame": 151200,
+        "source_end_frame": 1632000,
+        "rt60": 5.5,
+        "wet_gain": 0.18232922080001343,
+        "send_policy": "pre_ending_fade",
+        "cleanup_peak_dbfs": -151.30306474145226,
+        "dry_stop_max_sample_delta": 0.0012097152553203865
+      }
+    },
+    {
+      "settings": {
+        "cue": "S16-1",
+        "source": "S16",
+        "source_title": "S16 · Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 42.3,
+        "dry_fade": [
+          35.0,
+          42.3
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 8.0,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "B"
+        ],
+        "assumption": "Original stays roughly−25dBFS through42.3s. Old2.2s fade causes the disappearance. Begin a7.3s smooth release at35s, with continuously established8s post-fader room; no wet hold.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -14,
+        "original_dry_fade": [
+          40.5,
+          42.3
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Original stays roughly−25dBFS through42.3s. Old2.2s fade causes the disappearance. Begin a7.3s smooth release at35s, with continuously established8s post-fader room; no wet hold."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "guard_peak_ceiling_dbfs": -60
+      },
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "624241bec884d04fbcc6661d5ed5c343e7cca316cd9f1e89e530cdfdaece390d",
+      "reasoning": "Original stays roughly−25dBFS through42.3s. Old2.2s fade causes the disappearance. Begin a7.3s smooth release at35s, with continuously established8s post-fader room; no wet hold.",
+      "timing_authority": "Report83 user correction; exact revised engineering settings provisional. Standard2s lead preserved.",
+      "onset_note": "A source start 0s; B source start 0s. A/B switches follow source time.",
+      "renders": {
+        "B": {
+          "file": "audio/S16-1-B.wav",
+          "label": "B — corrected, pending listening",
+          "qa": {
+            "sha256": "f6a8eb78ee42bd8f4ed65d4216b0c1c348e8c6359b27f3fcc16613c7da3f569e",
+            "seconds": 60.5,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.29766845703125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 0
+        },
+        "A": {
+          "file": "../remainder-batch-v1/audio/S16-1-B.wav",
+          "label": "A — unchanged preferred previous render",
+          "qa": {
+            "sha256": "1c901f412cdddaedb271367baa3f412f62e60fdbd1d16b01883eaf0d7875b793",
+            "seconds": 58.025,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.29443359375,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 0
+        }
+      },
+      "previous_source_in": 0,
+      "metrics": {
+        "previous": {
+          "maximum_processing_excess_drop_100ms_db": 3.7716452656002346,
+          "maximum_processing_excess_rise_100ms_db": 0.0,
+          "maximum_combined_rise_100ms_db": 0.0,
+          "last_source_second_wet_growth_db": 2.622511518532683,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -53.723043424858815,
+              -55.6979999198238,
+              -57.665774604833324,
+              -60.590048816326664,
+              -62.64324378749103,
+              -64.73452322437677,
+              -68.13523745016413,
+              -69.38872468580402,
+              -72.3858523950406,
+              -73.50420068983391,
+              -77.34011740564172,
+              -78.39497765244772,
+              -81.27504626923896,
+              -83.2396172553919,
+              -86.39420764375669,
+              -87.7581841597991,
+              -89.98331470810746,
+              -92.00498345278143,
+              -94.04687859123399,
+              -96.32164383662426,
+              -97.56645778110895,
+              -103.87036124323616,
+              -112.68096311376948,
+              -122.35019852575361,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [],
+          "sampled_transition": [
+            {
+              "source_seconds": 39.3,
+              "levels": {
+                "source": -26.78329924632948,
+                "dry": -26.78329924632948,
+                "wet": -41.036289219175266,
+                "combined": -26.803110000664162
+              }
+            },
+            {
+              "source_seconds": 39.3,
+              "levels": {
+                "source": -26.78329924632948,
+                "dry": -26.78329924632948,
+                "wet": -41.036289219175266,
+                "combined": -26.803110000664162
+              }
+            },
+            {
+              "source_seconds": 40.29999999999994,
+              "levels": {
+                "source": -24.964237556129657,
+                "dry": -25.144575586245544,
+                "wet": -43.739117502390094,
+                "combined": -25.08954968446158
+              }
+            },
+            {
+              "source_seconds": 41.29999999999988,
+              "levels": {
+                "source": -23.14687750850553,
+                "dry": -30.49015087643719,
+                "wet": -44.67870158432106,
+                "combined": -30.448285076225137
+              }
+            },
+            {
+              "source_seconds": 41.799999999999855,
+              "levels": {
+                "source": -25.589291872745633,
+                "dry": -43.78183169780507,
+                "wet": -46.57927637755996,
+                "combined": -41.76164517822552
+              }
+            },
+            {
+              "source_seconds": 42.29999999999983,
+              "levels": {
+                "source": -27.472353244097402,
+                "dry": -105.29841252990975,
+                "wet": -52.584192606880976,
+                "combined": -52.5848395095404
+              }
+            },
+            {
+              "source_seconds": 43.29999999999977,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -61.06088920223957,
+                "combined": -61.06088920223957
+              }
+            },
+            {
+              "source_seconds": 44.249999999999716,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -69.77787798740464,
+                "combined": -69.77787798740464
+              }
+            }
+          ]
+        },
+        "corrected": {
+          "maximum_processing_excess_drop_100ms_db": 3.5863184515720015,
+          "maximum_processing_excess_rise_100ms_db": 2.017493859531239,
+          "maximum_combined_rise_100ms_db": 0.9005270483210168,
+          "last_source_second_wet_growth_db": 2.172648987424438,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -63.90589552622335,
+              -66.54690403833438,
+              -67.49791399080905,
+              -69.33793130615004,
+              -71.54631853308588,
+              -73.302583540512,
+              -76.41055866385724,
+              -76.72364973044009,
+              -79.2501459011567,
+              -80.22246944924163,
+              -84.11514281784338,
+              -84.17059809108872,
+              -86.65223637832725,
+              -87.87731811319594,
+              -91.39596785890578,
+              -92.21058402924255,
+              -93.6944317480791,
+              -95.38115437633306,
+              -97.90316599166718,
+              -100.67813860960393,
+              -100.9250840804392,
+              -103.48361354875031,
+              -105.27353440212502,
+              -108.4538456062986,
+              -108.36679918264302,
+              -111.33899825525324,
+              -111.84202053339936,
+              -115.76185048484773,
+              -116.46606444552519,
+              -118.49556116894246,
+              -119.53523611431149,
+              -122.42361346571107,
+              -124.2983021282022,
+              -126.07390796294587,
+              -127.4801901644432,
+              -129.21570927735948,
+              -132.85197763886794,
+              -132.9837332289947,
+              -135.63166918899174,
+              -136.09475269879223,
+              -140.49050804385757,
+              -140.9838921092753,
+              -142.77975811497427,
+              -143.75082039194146,
+              -147.53891043123593,
+              -148.53328673752847,
+              -150.481603175619,
+              -151.8643247785521,
+              -153.8160883314579,
+              -157.1535939623214,
+              -157.44747234631282,
+              -159.94986344831307,
+              -161.93213147268509
+            ]
+          },
+          "warnings": [],
+          "sampled_transition": [
+            {
+              "source_seconds": 36.2999999999999,
+              "levels": {
+                "source": -25.94796641106402,
+                "dry": -26.63499448570242,
+                "wet": -37.302440088545794,
+                "combined": -25.963425515113286
+              }
+            },
+            {
+              "source_seconds": 38.299999999999784,
+              "levels": {
+                "source": -24.192588336312312,
+                "dry": -28.993227505527102,
+                "wet": -40.323179083267966,
+                "combined": -28.412153372001875
+              }
+            },
+            {
+              "source_seconds": 40.29999999999967,
+              "levels": {
+                "source": -24.964237556129657,
+                "dry": -40.15761555593518,
+                "wet": -52.034193863447776,
+                "combined": -39.32951364751196
+              }
+            },
+            {
+              "source_seconds": 41.29999999999961,
+              "levels": {
+                "source": -23.14687750850553,
+                "dry": -49.95463339684093,
+                "wet": -56.312656294236575,
+                "combined": -49.09419170269185
+              }
+            },
+            {
+              "source_seconds": 41.799999999999585,
+              "levels": {
+                "source": -25.589291872745633,
+                "dry": -64.27621533460407,
+                "wet": -58.68167852220773,
+                "combined": -57.18449422458119
+              }
+            },
+            {
+              "source_seconds": 42.29999999999956,
+              "levels": {
+                "source": -27.472353244097402,
+                "dry": -126.13392526357971,
+                "wet": -62.47138900890906,
+                "combined": -62.471373556227334
+              }
+            },
+            {
+              "source_seconds": 43.2999999999995,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -69.75488224631236,
+                "combined": -69.75488224631236
+              }
+            },
+            {
+              "source_seconds": 44.249999999999446,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -76.36494772641157,
+                "combined": -76.36494772641157
+              }
+            }
+          ]
+        }
+      },
+      "corrected_low_band_post_source": {
+        "30-120Hz": [
+          -91.84925541270798,
+          -99.33315109241171,
+          -106.52176488957875,
+          -114.16434958013568,
+          -122.48512072413567
+        ],
+        "120-250Hz": [
+          -68.41801108653762,
+          -75.69490654122157,
+          -82.8704435389734,
+          -90.79921067951794,
+          -98.73956372680213
+        ],
+        "250-500Hz": [
+          -64.49487382441896,
+          -72.40784622011289,
+          -80.60736311006721,
+          -89.84800582568879,
+          -97.77055342139681
+        ]
+      },
+      "render_proof": {
+        "source_start_frame": 0,
+        "source_end_frame": 2030400,
+        "rt60": 8.0,
+        "wet_gain": 0.19137499347458758,
+        "send_policy": "post_fader",
+        "cleanup_peak_dbfs": -151.59237521440684,
+        "dry_stop_max_sample_delta": 9.190991311563187e-05
+      }
+    },
+    {
+      "settings": {
+        "cue": "S18-2",
+        "source": "S18",
+        "source_title": "S18 · Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 61,
+        "source_out": 100.8,
+        "dry_fade": [
+          97.5,
+          100.8
+        ],
+        "fade_in": 1.3,
+        "tail_extra": 4.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 6.0,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "B"
+        ],
+        "assumption": "Source declines from about−15dBFS at98s toward−25dBFS at100s before the new rise after101s. Proposed97.5–100.8s fade ends before the rejected return; no later samples feed dry or room. Cadence remains a listening decision.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_moderate_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -20,
+        "original_dry_fade": [
+          109.9,
+          112.7
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 12.375,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Source declines from about−15dBFS at98s toward−25dBFS at100s before the new rise after101s. Proposed97.5–100.8s fade ends before the rejected return; no later samples feed dry or room. Cadence remains a listening decision."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "guard_peak_ceiling_dbfs": -60
+      },
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "97663b268c063e35f0e4f6ac2f1fa3ade10289d93cf4994e46663580576ea8dc",
+      "reasoning": "Source declines from about−15dBFS at98s toward−25dBFS at100s before the new rise after101s. Proposed97.5–100.8s fade ends before the rejected return; no later samples feed dry or room. Cadence remains a listening decision.",
+      "timing_authority": "Report83 user correction; exact revised engineering settings provisional. Standard2s lead preserved.",
+      "onset_note": "A source start 61s; B source start 61s. A/B switches follow source time.",
+      "renders": {
+        "B": {
+          "file": "audio/S18-2-B.wav",
+          "label": "B — corrected, pending listening",
+          "qa": {
+            "sha256": "89ac5a6f95b66a938c1bd3f2b0500acd8a452d7c40e1818da8e5e2cc5da1d3a7",
+            "seconds": 54.8,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.70263671875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 61
+        },
+        "A": {
+          "file": "../remainder-batch-v1/audio/S18-2-B.wav",
+          "label": "A — unchanged preferred previous render",
+          "qa": {
+            "sha256": "cbfc2bd48e89dfcbf8db7e55a2ec3f4f79b7d9e3f47966bfc188a13c0a144f06",
+            "seconds": 66.7,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.811065673828125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 61
+        }
+      },
+      "previous_source_in": 61,
+      "metrics": {
+        "previous": {
+          "maximum_processing_excess_drop_100ms_db": 4.568870144956094,
+          "maximum_processing_excess_rise_100ms_db": 4.919857328491645,
+          "maximum_combined_rise_100ms_db": 0.39264229426313335,
+          "last_source_second_wet_growth_db": 2.2365874585394465,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -65.01398400948061,
+              -66.74891152072146,
+              -71.10174716513731,
+              -73.43315176336178,
+              -74.7551669336209,
+              -78.03041005587954,
+              -80.84595014925961,
+              -82.79652851524517,
+              -84.71821546707254,
+              -88.82387188370048,
+              -90.29274311632699,
+              -91.85698438765087,
+              -93.01363873917813,
+              -96.33829319960027,
+              -99.7162052124136,
+              -106.00206830962341,
+              -107.81701512528323,
+              -118.20046504604542,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [
+            "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+          ],
+          "sampled_transition": [
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            },
+            {
+              "source_seconds": 109.4,
+              "levels": {
+                "source": -24.059074173982186,
+                "dry": -24.059074173982186,
+                "wet": -41.602875471389076,
+                "combined": -23.757893501348747
+              }
+            }
+          ]
+        },
+        "corrected": {
+          "maximum_processing_excess_drop_100ms_db": 4.602062960102273,
+          "maximum_processing_excess_rise_100ms_db": 0.3253530775760076,
+          "maximum_combined_rise_100ms_db": 1.0675973881183438,
+          "last_source_second_wet_growth_db": 1.0710451291922851,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -54.59758666756811,
+              -56.46921364148134,
+              -59.67290499079766,
+              -62.46260627548268,
+              -64.34450000497426,
+              -67.70038811295561,
+              -70.34284190347753,
+              -71.49676034000481,
+              -74.58952940698173,
+              -77.51957904375585,
+              -79.023815395254,
+              -81.9081156145988,
+              -84.33054593679044,
+              -86.1129701315434,
+              -88.62161112245548,
+              -91.39236032034889,
+              -93.70306097604056,
+              -96.07583570700685,
+              -99.3972961541856,
+              -101.29243483556101,
+              -103.38663908379394,
+              -107.15067290977217,
+              -109.72807533855045,
+              -111.4896864117103,
+              -114.76393481053306,
+              -117.28878230114108,
+              -119.32061276882708,
+              -123.02787241875433,
+              -124.69078061249346,
+              -126.90226773539976,
+              -130.04348579075725,
+              -131.7688860508565,
+              -133.86844965552663,
+              -136.79193216096886,
+              -139.6616882316893,
+              -141.01358924202003,
+              -143.59898094950046,
+              -146.67337687455262,
+              -148.34667548632558,
+              -151.84596073004883
+            ]
+          },
+          "warnings": [],
+          "sampled_transition": [
+            {
+              "source_seconds": 97.0,
+              "levels": {
+                "source": -15.307936308373908,
+                "dry": -15.307936308373908,
+                "wet": -35.160748166943,
+                "combined": -15.506571095844706
+              }
+            },
+            {
+              "source_seconds": 97.0,
+              "levels": {
+                "source": -15.307936308373908,
+                "dry": -15.307936308373908,
+                "wet": -35.160748166943,
+                "combined": -15.506571095844706
+              }
+            },
+            {
+              "source_seconds": 98.80000000000041,
+              "levels": {
+                "source": -19.181484994464135,
+                "dry": -22.747126750233523,
+                "wet": -38.79790530138838,
+                "combined": -22.573776141444593
+              }
+            },
+            {
+              "source_seconds": 99.80000000000064,
+              "levels": {
+                "source": -22.24764852586294,
+                "dry": -35.78572094934564,
+                "wet": -42.77338242426421,
+                "combined": -35.53410874262119
+              }
+            },
+            {
+              "source_seconds": 100.30000000000075,
+              "levels": {
+                "source": -24.259119860128514,
+                "dry": -49.252014994636696,
+                "wet": -47.95490023267078,
+                "combined": -43.49353048701609
+              }
+            },
+            {
+              "source_seconds": 100.80000000000086,
+              "levels": {
+                "source": -29.070539664316257,
+                "dry": -112.92318628576066,
+                "wet": -53.542358448789,
+                "combined": -53.54134322750238
+              }
+            },
+            {
+              "source_seconds": 101.80000000000109,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -62.88672689228764,
+                "combined": -62.88672689228764
+              }
+            },
+            {
+              "source_seconds": 102.75000000000131,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -72.53223549130014,
+                "combined": -72.53223549130014
+              }
+            }
+          ]
+        }
+      },
+      "corrected_low_band_post_source": {
+        "30-120Hz": [
+          -76.99906483506015,
+          -86.17315664731201,
+          -95.51419770300518,
+          -103.73612354303661,
+          -112.5851995916639
+        ],
+        "120-250Hz": [
+          -61.43393026189781,
+          -72.34777517426527,
+          -80.39250438041812,
+          -91.88758787050614,
+          -102.06508342055592
+        ],
+        "250-500Hz": [
+          -54.78359179805004,
+          -64.06653439818365,
+          -73.65276990907992,
+          -84.83557425564945,
+          -93.77021379446107
+        ]
+      },
+      "render_proof": {
+        "source_start_frame": 2928000,
+        "source_end_frame": 4838400,
+        "rt60": 6.0,
+        "wet_gain": 0.0779837515687052,
+        "send_policy": "post_fader",
+        "cleanup_peak_dbfs": -143.79065432581365,
+        "dry_stop_max_sample_delta": 0.00030168629837400585
+      }
+    },
+    {
+      "settings": {
+        "cue": "S14-1",
+        "source": "S14",
+        "source_title": "S14 · Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 64.5,
+        "dry_fade": [
+          62.3,
+          64.5
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 80,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 8.5,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "B"
+        ],
+        "assumption": "Source60–64.5s carries30–120Hz energy around−25.6dBFS, stronger than120–250Hz. Lower send HP250→80Hz and8.5s real decay carry more low-note energy. Fixed−13dB pre-fade wet target; no late gain automation.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "active_short_fade",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -13,
+        "original_dry_fade": [
+          63,
+          64.5
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Source60–64.5s carries30–120Hz energy around−25.6dBFS, stronger than120–250Hz. Lower send HP250→80Hz and8.5s real decay carry more low-note energy. Fixed−13dB pre-fade wet target; no late gain automation."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "guard_peak_ceiling_dbfs": -60
+      },
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "d74dfa183e847fe7f9df604961a0160ddf96582b29db1451e9eb485cf63216f9",
+      "reasoning": "Source60–64.5s carries30–120Hz energy around−25.6dBFS, stronger than120–250Hz. Lower send HP250→80Hz and8.5s real decay carry more low-note energy. Fixed−13dB pre-fade wet target; no late gain automation.",
+      "timing_authority": "Report83 user correction; exact revised engineering settings provisional. Standard2s lead preserved.",
+      "onset_note": "A source start 0s; B source start 0s. A/B switches follow source time.",
+      "renders": {
+        "B": {
+          "file": "audio/S14-1-B.wav",
+          "label": "B — corrected, pending listening",
+          "qa": {
+            "sha256": "b6b5fba304627c3c3c8ebaece76ddd6fb53578bbd64bedda21860a6733e5f4d3",
+            "seconds": 83.525,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.842559814453125,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 0
+        },
+        "A": {
+          "file": "../remainder-batch-v1/audio/S14-1-B.wav",
+          "label": "A — unchanged preferred previous render",
+          "qa": {
+            "sha256": "66ea0bffbfef812db5962ce5818e87b92704b6c35388e917af7472b2ad777b23",
+            "seconds": 79.5,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.950103759765625,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 0
+        }
+      },
+      "previous_source_in": 0,
+      "metrics": {
+        "previous": {
+          "maximum_processing_excess_drop_100ms_db": 4.48330573948277,
+          "maximum_processing_excess_rise_100ms_db": 0.0,
+          "maximum_combined_rise_100ms_db": 0.0,
+          "last_source_second_wet_growth_db": 0.22355886331463637,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -66.7509257012957,
+              -69.87256996009468,
+              -72.25926908510662,
+              -73.33287708662215,
+              -77.02765008376103,
+              -80.03361701021416,
+              -82.96793759009117,
+              -86.12370716664104,
+              -87.71993331488935,
+              -91.00396562912923,
+              -92.49323992885519,
+              -94.80416723966506,
+              -97.68646591388921,
+              -102.20219394708872,
+              -110.9304777666828,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [],
+          "sampled_transition": [
+            {
+              "source_seconds": 61.5,
+              "levels": {
+                "source": -22.742369159151576,
+                "dry": -22.742369159151576,
+                "wet": -41.81832508162907,
+                "combined": -22.746357772931724
+              }
+            },
+            {
+              "source_seconds": 61.5,
+              "levels": {
+                "source": -22.742369159151576,
+                "dry": -22.742369159151576,
+                "wet": -41.81832508162907,
+                "combined": -22.746357772931724
+              }
+            },
+            {
+              "source_seconds": 62.49999999999994,
+              "levels": {
+                "source": -25.317173776185363,
+                "dry": -25.494206269104296,
+                "wet": -49.36547726119544,
+                "combined": -25.363531567057574
+              }
+            },
+            {
+              "source_seconds": 63.499999999999886,
+              "levels": {
+                "source": -24.36518051087115,
+                "dry": -31.68940501687921,
+                "wet": -53.33934336552708,
+                "combined": -31.656007871627295
+              }
+            },
+            {
+              "source_seconds": 63.99999999999986,
+              "levels": {
+                "source": -25.77777288088532,
+                "dry": -44.13168961434675,
+                "wet": -59.857969917676485,
+                "combined": -44.07674496535933
+              }
+            },
+            {
+              "source_seconds": 64.49999999999983,
+              "levels": {
+                "source": -31.613537674312763,
+                "dry": -111.21898096704871,
+                "wet": -64.97707824687777,
+                "combined": -64.97204849095384
+              }
+            },
+            {
+              "source_seconds": 65.49999999999977,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -75.33020377685725,
+                "combined": -75.33020377685725
+              }
+            },
+            {
+              "source_seconds": 66.44999999999972,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -86.6474940509458,
+                "combined": -86.6474940509458
+              }
+            }
+          ]
+        },
+        "corrected": {
+          "maximum_processing_excess_drop_100ms_db": 2.7669872275079044,
+          "maximum_processing_excess_rise_100ms_db": 1.190128417615142,
+          "maximum_combined_rise_100ms_db": 0.0,
+          "last_source_second_wet_growth_db": 0.22111885552648403,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -49.4491699814962,
+              -50.796489903109084,
+              -52.80301845955666,
+              -53.53739729992435,
+              -56.49003284910065,
+              -58.11592991118876,
+              -59.77336138295519,
+              -62.01972541975151,
+              -63.01479167298231,
+              -65.13097894899373,
+              -66.56766799017905,
+              -68.22443859705524,
+              -70.20472943800337,
+              -72.29685826305544,
+              -74.27577972961637,
+              -76.39412264589001,
+              -77.23988592843203,
+              -78.92393387568367,
+              -80.69001535883979,
+              -82.35736222948668,
+              -85.09411215455776,
+              -86.37975757684981,
+              -88.74011924085487,
+              -90.01211904353305,
+              -91.0652647407309,
+              -92.75958737807474,
+              -94.98001233151751,
+              -96.58362705118793,
+              -99.15117072370757,
+              -100.59529018486526,
+              -102.037559544872,
+              -103.925659645872,
+              -105.10460677608663,
+              -107.53095269982236,
+              -108.72563851270331,
+              -111.16020584540075,
+              -113.34268537133522,
+              -114.74305509959557,
+              -116.24622152534965,
+              -118.0364853309333,
+              -119.40443738144786,
+              -121.53803730463721,
+              -123.26407807310409,
+              -125.26045961901247,
+              -127.49920363864574,
+              -128.60223525949488,
+              -130.65101732555001,
+              -131.38274886705352,
+              -133.44085340492225,
+              -135.7007380341069,
+              -137.58498195803804,
+              -139.60941506720968,
+              -141.09479824281146,
+              -142.4290723773425,
+              -144.37534961139295,
+              -146.58235206440855,
+              -170.15605088102086
+            ]
+          },
+          "warnings": [],
+          "sampled_transition": [
+            {
+              "source_seconds": 61.5,
+              "levels": {
+                "source": -24.153990644865722,
+                "dry": -24.153990644865722,
+                "wet": -33.9798012698854,
+                "combined": -23.839492220150014
+              }
+            },
+            {
+              "source_seconds": 61.5,
+              "levels": {
+                "source": -24.153990644865722,
+                "dry": -24.153990644865722,
+                "wet": -33.9798012698854,
+                "combined": -23.839492220150014
+              }
+            },
+            {
+              "source_seconds": 62.49999999999994,
+              "levels": {
+                "source": -26.728795261899506,
+                "dry": -26.905827754818446,
+                "wet": -38.81181479232724,
+                "combined": -26.208491610317278
+              }
+            },
+            {
+              "source_seconds": 63.499999999999886,
+              "levels": {
+                "source": -25.7768019965853,
+                "dry": -33.101026502593356,
+                "wet": -40.425175628426935,
+                "combined": -32.4085277521454
+              }
+            },
+            {
+              "source_seconds": 63.99999999999986,
+              "levels": {
+                "source": -27.189394366599466,
+                "dry": -45.5433111000609,
+                "wet": -45.18999953496277,
+                "combined": -44.03183602807359
+              }
+            },
+            {
+              "source_seconds": 64.49999999999983,
+              "levels": {
+                "source": -33.02515916002691,
+                "dry": -112.63060245276286,
+                "wet": -48.492824655276166,
+                "combined": -48.4928226526832
+              }
+            },
+            {
+              "source_seconds": 65.49999999999977,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -55.254076098617375,
+                "combined": -55.254076098617375
+              }
+            },
+            {
+              "source_seconds": 66.44999999999972,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -62.474959626602995,
+                "combined": -62.474959626602995
+              }
+            }
+          ]
+        }
+      },
+      "corrected_low_band_post_source": {
+        "30-120Hz": [
+          -55.12248239607658,
+          -64.41981902368227,
+          -69.97241087036846,
+          -76.17069361474694,
+          -84.81902714252303
+        ],
+        "120-250Hz": [
+          -51.54012699345799,
+          -57.81027589928958,
+          -65.07587373697388,
+          -71.10189779204401,
+          -78.24097514782889
+        ],
+        "250-500Hz": [
+          -55.830975570758014,
+          -63.11901510692898,
+          -70.41335938213399,
+          -78.05890736695218,
+          -85.24107505540628
+        ]
+      },
+      "render_proof": {
+        "source_start_frame": 0,
+        "source_end_frame": 3096000,
+        "rt60": 8.5,
+        "wet_gain": 0.2163427787970385,
+        "send_policy": "post_fader",
+        "cleanup_peak_dbfs": -137.42347036838962,
+        "dry_stop_max_sample_delta": 0.00030123011351994734
+      }
+    },
+    {
+      "settings": {
+        "cue": "S14-2",
+        "source": "S14",
+        "source_title": "S14 · Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 64.5,
+        "source_out": 132.0,
+        "dry_fade": [
+          131.98,
+          132.0
+        ],
+        "fade_in": 0.9,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 80,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1.0,
+        "rt60": 9.0,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "B"
+        ],
+        "assumption": "Original125–132s low band dominates; recorded release falls rapidly after130.5s. Establish restrained80Hz–3kHz9s room throughout, fed only by the current passage and post-fader source. Preserve original near-silent20ms guard and constant headroom reduction.",
+        "comparison_only": false,
+        "stage": 3,
+        "family": "already_dissipating",
+        "treatment": "natural_decay",
+        "send_policy": "post_fader",
+        "continuous_wet_db": -14,
+        "original_dry_fade": [
+          129.5,
+          132.0
+        ],
+        "explicit_fade_preserved": true,
+        "send_stop_guard_seconds": 0.02,
+        "render_extra_seconds": 10,
+        "lead_silence": 2,
+        "trail_silence": 3,
+        "reasoning": [
+          "Original125–132s low band dominates; recorded release falls rapidly after130.5s. Establish restrained80Hz–3kHz9s room throughout, fed only by the current passage and post-fader source. Preserve original near-silent20ms guard and constant headroom reduction."
+        ],
+        "confidence": "provisional / low for musical fit; deterministic technical selection",
+        "risks": [
+          "Room coloration or wash",
+          "Perceived handoff despite smooth RMS",
+          "Possible wrong musical resolution",
+          "Base-stem balance may not represent full native arrangement"
+        ],
+        "measurement_unknowns": [
+          "True room decay",
+          "Actual chord progression and cadence",
+          "Human tail preference"
+        ],
+        "guard_peak_ceiling_dbfs": -60
+      },
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "source_preview_sha256": "d74dfa183e847fe7f9df604961a0160ddf96582b29db1451e9eb485cf63216f9",
+      "reasoning": "Original125–132s low band dominates; recorded release falls rapidly after130.5s. Establish restrained80Hz–3kHz9s room throughout, fed only by the current passage and post-fader source. Preserve original near-silent20ms guard and constant headroom reduction.",
+      "timing_authority": "Report83 user correction; exact revised engineering settings provisional. Standard2s lead preserved.",
+      "onset_note": "A source start 64.5s; B source start 64.5s. A/B switches follow source time.",
+      "renders": {
+        "B": {
+          "file": "audio/S14-2-B.wav",
+          "label": "B — corrected, pending listening",
+          "qa": {
+            "sha256": "afb781d285813d1fadc5974d8971ed3d8f0221361c238ee71b642856c3da96bd",
+            "seconds": 87.35,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.876678466796875,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 64.5
+        },
+        "A": {
+          "file": "../remainder-batch-v1/audio/S14-2-B.wav",
+          "label": "A — unchanged preferred previous render",
+          "qa": {
+            "sha256": "3adf5f9d74dbd7bd275a99b89bbdb16c21fca9dc87d8fc2ac2a2e0d9fdb297e0",
+            "seconds": 72.5,
+            "channels": 2,
+            "rate": 48000,
+            "peak": 0.9599609375,
+            "clipped_samples": 0,
+            "decoder_exact": true
+          },
+          "source_in": 64.5
+        }
+      },
+      "previous_source_in": 64.5,
+      "metrics": {
+        "previous": {
+          "maximum_processing_excess_drop_100ms_db": 0.003625832771412263,
+          "maximum_processing_excess_rise_100ms_db": 0.004687071860786318,
+          "maximum_combined_rise_100ms_db": 0.06188615590944835,
+          "last_source_second_wet_growth_db": 0.0,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0,
+              -240.0
+            ]
+          },
+          "warnings": [
+            "Original recording already decays; no added room. Endpoint guard threshold is engineering evidence, not an audibility verdict."
+          ],
+          "sampled_transition": [
+            {
+              "source_seconds": 129.0,
+              "levels": {
+                "source": -28.791040653505714,
+                "dry": -29.10121387349829,
+                "wet": -101.06818784013662,
+                "combined": -29.101471287293016
+              }
+            },
+            {
+              "source_seconds": 129.0,
+              "levels": {
+                "source": -28.791040653505714,
+                "dry": -29.10121387349829,
+                "wet": -101.06818784013662,
+                "combined": -29.101471287293016
+              }
+            },
+            {
+              "source_seconds": 130.00000000000023,
+              "levels": {
+                "source": -33.70566099361989,
+                "dry": -34.015834213612465,
+                "wet": -101.10330645595916,
+                "combined": -34.01614413778068
+              }
+            },
+            {
+              "source_seconds": 131.00000000000045,
+              "levels": {
+                "source": -45.408521189984285,
+                "dry": -45.71869440997686,
+                "wet": -101.17962654940126,
+                "combined": -45.71901444994416
+              }
+            },
+            {
+              "source_seconds": 131.50000000000057,
+              "levels": {
+                "source": -61.02027787226351,
+                "dry": -61.33045109225609,
+                "wet": -101.1348897754194,
+                "combined": -61.32941457724396
+              }
+            },
+            {
+              "source_seconds": 132.00000000000068,
+              "levels": {
+                "source": -91.52895972898554,
+                "dry": -92.85884729886928,
+                "wet": -105.7403454024645,
+                "combined": -92.66692593028972
+              }
+            },
+            {
+              "source_seconds": 133.0000000000009,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -240.0,
+                "combined": -240.0
+              }
+            },
+            {
+              "source_seconds": 133.95000000000113,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -240.0,
+                "combined": -240.0
+              }
+            }
+          ]
+        },
+        "corrected": {
+          "maximum_processing_excess_drop_100ms_db": 1.218087106889321,
+          "maximum_processing_excess_rise_100ms_db": 6.003536895476124,
+          "maximum_combined_rise_100ms_db": 1.5589590911284148,
+          "last_source_second_wet_growth_db": 2.5511344409168473,
+          "post_source_geometry": {
+            "max_sustained_rebound_db": 0.0,
+            "rebound_review": false,
+            "plateau_window_starts": [],
+            "post_stop_250ms_dbfs": [
+              -58.73270298852337,
+              -60.53548720720764,
+              -63.05935854193191,
+              -64.69293592285227,
+              -66.21926486529851,
+              -67.56011169917156,
+              -68.68586812949732,
+              -70.53529171643986,
+              -72.31738685534864,
+              -73.65443826840759,
+              -75.98727546587145,
+              -78.03350356966564,
+              -78.62593787382441,
+              -80.72259723683314,
+              -82.75482259715392,
+              -82.94656971867182,
+              -86.01954285406038,
+              -87.97179974185083,
+              -89.42764109261391,
+              -91.05218286232089,
+              -92.19226172982505,
+              -94.04838902317383,
+              -95.67594748751364,
+              -97.15707030644032,
+              -98.69223651716581,
+              -101.5524179590621,
+              -102.45655262034558,
+              -103.82080838415288,
+              -106.44980162059613,
+              -106.79331284895008,
+              -108.50114781185623,
+              -110.94174926892569,
+              -112.61655658626623,
+              -114.33611321832362,
+              -116.196867948319,
+              -117.50987358570755,
+              -118.53905874231987,
+              -120.63743100683914,
+              -121.95980044886767,
+              -124.00632317253299,
+              -126.2445005838546,
+              -126.98193954319484,
+              -129.82213749088726,
+              -131.30678003329848,
+              -131.69976402347163,
+              -134.0331205614458,
+              -136.13298994221975,
+              -137.36840810554366,
+              -139.7381162531068,
+              -141.1061630398543,
+              -142.21215744608435,
+              -143.96190016314623,
+              -145.63362712147057,
+              -146.76006762992608,
+              -149.1719179013607,
+              -150.698841386725,
+              -152.2917230689531,
+              -154.6374884484484,
+              -155.30820340546208,
+              -161.78081504895886
+            ]
+          },
+          "warnings": [
+            "Local decay slope differs from original source by >3dB/100ms; room may carry a source dip. Listen for a separate handoff; this is not necessarily a literal volume rise."
+          ],
+          "sampled_transition": [
+            {
+              "source_seconds": 129.0,
+              "levels": {
+                "source": -30.202662139219857,
+                "dry": -30.202662139219857,
+                "wet": -43.66662699033572,
+                "combined": -29.921907654614678
+              }
+            },
+            {
+              "source_seconds": 129.0,
+              "levels": {
+                "source": -30.202662139219857,
+                "dry": -30.202662139219857,
+                "wet": -43.66662699033572,
+                "combined": -29.921907654614678
+              }
+            },
+            {
+              "source_seconds": 130.00000000000023,
+              "levels": {
+                "source": -35.11728247933404,
+                "dry": -35.11728247933404,
+                "wet": -46.98171965496151,
+                "combined": -34.64227006172736
+              }
+            },
+            {
+              "source_seconds": 131.00000000000045,
+              "levels": {
+                "source": -46.82014267569842,
+                "dry": -46.82014267569842,
+                "wet": -53.354088751211044,
+                "combined": -45.88683295739575
+              }
+            },
+            {
+              "source_seconds": 131.50000000000057,
+              "levels": {
+                "source": -62.431899357977656,
+                "dry": -62.431899357977656,
+                "wet": -55.24559364653065,
+                "combined": -54.32133316765661
+              }
+            },
+            {
+              "source_seconds": 132.00000000000068,
+              "levels": {
+                "source": -92.94058121469968,
+                "dry": -93.96029556459085,
+                "wet": -56.98670687427155,
+                "combined": -56.97341631472277
+              }
+            },
+            {
+              "source_seconds": 133.0000000000009,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -64.17880100942585,
+                "combined": -64.17880100942585
+              }
+            },
+            {
+              "source_seconds": 133.95000000000113,
+              "levels": {
+                "source": -240.0,
+                "dry": -240.0,
+                "wet": -70.84847303907068,
+                "combined": -70.84847303907068
+              }
+            }
+          ]
+        }
+      },
+      "corrected_low_band_post_source": {
+        "30-120Hz": [
+          -68.28991738080498,
+          -75.01411435612815,
+          -85.23021863959883,
+          -91.86032107148252,
+          -95.48801684144614
+        ],
+        "120-250Hz": [
+          -58.06578754313307,
+          -64.79823564009361,
+          -72.96761298647417,
+          -80.88042512011057,
+          -86.98291568226034
+        ],
+        "250-500Hz": [
+          -65.61363479566894,
+          -72.86013459490998,
+          -81.01922361632604,
+          -84.2452185966172,
+          -91.92686451405015
+        ]
+      },
+      "render_proof": {
+        "source_start_frame": 3096000,
+        "source_end_frame": 6336000,
+        "rt60": 9.0,
+        "wet_gain": 0.13872375787886546,
+        "send_policy": "post_fader",
+        "cleanup_peak_dbfs": -148.16430377528124,
+        "dry_stop_max_sample_delta": 0.00011227645906364226
+      }
+    }
+  ],
+  "subjectively_listened": false,
+  "real_browser_playback_verified": false,
+  "accepted19_audio_preserved": true
+}

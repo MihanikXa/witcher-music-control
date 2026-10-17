@@ -1,5 +1,7 @@
 # Witcher Music Control
 
+**Five corrective auditions ready (report84, 2026-10-17):** Private `build/music-material-selection/five-cue-corrections-v1/index.html` contains exactly5 new pending primaries and unchanged A references; no alternatives. S04-a trims source0–3.15s only with exact preferred C PCM ending; S16-1 fades35–42.3s; S18-2 ends100.8s before rejected return; S14 uses low-aware80Hz natural8.5/9s room with fixed headroom. S14 future-use eligibility supersedes old blanket comparison-only labels, not authored-route/rights protection. All18 report82 accepted files plus S05-main remain exact.222 Python tests and offline client/source/PCM gates pass; S04/S14-2 relative-slope warnings remain for listening. No subjective success or new acceptance; STOP for the five-cue export. No game/Wwise/scheduler changes.
+
 **Active next work (report83, 2026-10-17):** One targeted local corrective audition for S04-a, S16-1, S18-2 and two S14 endings after report82 feedback. Accepted18 renders + S05-main remain untouched; current S14 policy allows potential Sparse use but does not accept new audio or grant integration/distribution. [Five-cue handoff](research/83-five-cue-targeted-corrections-handoff.md).
 
 

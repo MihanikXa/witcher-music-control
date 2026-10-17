@@ -72,6 +72,19 @@ if(manifest.kind==='remainder-batch-private-audition'){
  assert.ok(kept.allowed_use.includes('private comparison only'));
  assert.ok(!again.ordinary_decisions.some(d=>d.cue.startsWith('S14')));
 }
+if(manifest.kind==='five-cue-targeted-corrections'){
+ assert.equal(result.kind,'five-cue-correction-outcomes');
+ assert.equal(result.decisions.length,5);assert.equal(result.restricted_comparisons.length,0);
+ assert.ok(result.decisions.every(d=>d.comparison_only===false));
+ assert.ok(result.scope.includes('S14 eligible'));
+ assert.ok(!html.includes('<h1>S14 — private comparison only</h1>'));
+ const first=cards[0],a=first.querySelector('audio'),v=first.querySelector('.variant');
+ a.currentTime=10;v.value='A';v.onchange();
+ assert.ok(Math.abs(a.currentTime-13.15)<1e-9);
+ v.value='B';v.onchange();assert.ok(Math.abs(a.currentTime-10)<1e-9);
+ const s14=cards.find(c=>c.dataset.cue==='S14-1');s14.querySelector('.verdict').value='Keep';
+ const again=context.gather();assert.ok(again.ordinary_decisions.some(d=>d.cue==='S14-1'&&d.verdict==='Keep'));
+}
 ids['#export'].onclick();assert.equal(downloads.length,1);assert.ok(downloads[0].name.startsWith('wmc-cue-edit-decisions-'));
 assert.ok(blobs.has(downloads[0].href));ids['#stop'].onclick();assert.ok(allAudio.every(a=>a.paused));
 blobs.get(downloads[0].href).text().then(text=>{assert.equal(JSON.parse(text).decisions.length,manifest.cues.length);
