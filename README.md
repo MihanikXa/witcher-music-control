@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Next step (2026-10-17; report80):** S18-3 T3 is accepted as 'good enough' (report79). The cue ledger has11 current approved selections plus separate S05-main B v1. Prepare the **remaining10 ordinary private cue edits as one batch**, up to3 well-justified diagnostic alternatives, and optionally two separately restricted S14 private comparisons; user listening before acceptance. [One-batch handoff](research/80-remaining-cues-batch-audition-handoff.md). No game integration or distribution.
+
+
 **S18 accepted (2026-10-17; report79):** User: “T3 is good enough.” Exact report78 T3 SHA256 `5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd` is now selected for S18-3; keep the practical qualification, not a claim of perfect seamlessness. Current eleven-cue snapshot: `research/79-accepted-private-cue-selections.json`; only S18 supersedes report70, which stays immutable for historical gates. Other ten choices, separate S05-main, endpoint130s, ledger69 and all audio remain intact. Stop S18 tuning; no automatic remainder rollout or integration.
 
 

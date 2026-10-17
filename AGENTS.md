@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Current user authorization (2026-10-17; report80):** Following report79 S18-3 **T3 'good enough'** acceptance, user requests **'get to the rest of them'**. Prepare the **10 remaining ordinary source-selected excerpts in ONE private batch** using measured and calibrated per-cue natural room/fade choices; optional max3 diagnostic alternates total. Plus two S14 **comparison-only, isolated/restricted** references if feasible, never normal deployment approvals. Current11 accepted SHA-pinned renders in report79 + separately accepted S05-main B v1 must stay exact. Follow report80 for ten exact cue IDs/timings, earlier negative feedback and pending-review status. Do not re-render all24 or reopen S18, do not alter Wwise/game/scheduler or distribute audio. Stop for one consolidated listening export.
+
+
 **S18 accepted (2026-10-17; report79):** User: “T3 is good enough.” Exact report78 T3 SHA256 `5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd` is now selected for S18-3; keep the practical qualification, not a claim of perfect seamlessness. Current eleven-cue snapshot: `research/79-accepted-private-cue-selections.json`; only S18 supersedes report70, which stays immutable for historical gates. Other ten choices, separate S05-main, endpoint130s, ledger69 and all audio remain intact. Stop S18 tuning; no automatic remainder rollout or integration.
 
 

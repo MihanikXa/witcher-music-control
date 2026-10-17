@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Latest active handoff (report80):** Batch prepare ten remaining ordinary source-selected cue endings, retain eleven report79 accepted hashes and separately accepted S05-main B, keep two S14 passages clearly comparison-only. Consolidated private HTML+feedback; no inferred approval/game use.
+
+
 **S18 accepted (2026-10-17; report79):** User: “T3 is good enough.” Exact report78 T3 SHA256 `5951314953b4df6708fc761d11624a239a44c25e0404dc6b353f8074330083dd` is now selected for S18-3; keep the practical qualification, not a claim of perfect seamlessness. Current eleven-cue snapshot: `research/79-accepted-private-cue-selections.json`; only S18 supersedes report70, which stays immutable for historical gates. Other ten choices, separate S05-main, endpoint130s, ledger69 and all audio remain intact. Stop S18 tuning; no automatic remainder rollout or integration.
 
 
