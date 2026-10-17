@@ -1,6 +1,6 @@
 # Music research and design decisions
 
-**Current reading order:** report66 provides a two-cue v3 handoff comparison following report65’s partial v2 acceptance. The three accepted v2 renders remain untouched. New B/C are conventional controls; measured improvement is not listening approval. Reports58–65 preserve original cuts, preferences and feedback. No all24 propagation or game integration.
+**Current reading order:** report67 records accepted S05-short B v3 and S11-short C v3, completing the five representative private cue choices alongside report65. Report66 contains the controlled implementation; historical failures remain preserved. No universal preset, automatic all24 propagation or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -131,3 +131,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 65. [User v2 cue-tail feedback](65-user-cue-tail-v2-feedback.md): three specific renders accepted; S05-short/S11-short retain audible handoff problems despite passing technical checks. [Byte-exact decisions](65-user-cue-tail-v2-decisions.json). No audio regenerated.
 
 66. [Two-cue handoff balance correction](66-two-cue-handoff-balance-correction.md): stronger established room, bounded send/fade comparisons, six new private WAVs,193 tests and exact preservation/regeneration checks. User listening pending. [Plan](66-handoff-balance-plan.json), [evidence](66-handoff-balance-evidence.json).
+
+67. [Two v3 endings accepted](67-user-accepts-two-v3-endings.md): direct user choices complete five representative private-render approvals; [exact selections and hashes](67-accepted-private-cue-selections.json). No audio changed.

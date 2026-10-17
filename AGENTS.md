@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Latest explicit acceptance (2026-10-17; report67):** User selects S05-short **B v3** and S11-short **C v3** “for sure.” Both are conventional decay; S11 C uses the post-fader send, not freeze or the independent-send B. Together with report65’s S12-1 C v2, S07-b B v2 and S04-b C v2, all five representative excerpts now have accepted exact renders. Hash pins and verbatim message are in report67. Preserve them; no universal preset, automatic all24 propagation or game integration is authorized.
+
+
 **Current two-cue comparison (2026-10-17; report66):** New private v3 page at `build/music-material-selection/cue-edits-v3/index.html` revises only S05-short/S11-short. Both new B/C are conventional decay, not freeze: stronger continuously established room balance; pre-ending-fade send comparison; S05 B revises our provisional700ms fade to2s with same23.7s cut, S11 keeps exact18–20s fade. Six new WAVs include dry diagnostics. Measured handoff steepness improves, but listening approval is pending.193 tests pass,51 v1/v2 input fingerprints and three accepted cues unchanged. No full24 propagation or game integration; see report66.
 
 
