@@ -5,7 +5,29 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest explicit correction — menu row internal alignment (17 October)
+## Latest user completion and active next work — 17 October 2026
+
+The user said **"Alright, all done. Let's continue to the next task"**
+following Menus v4 Typography Finishing. Treat the menu appearance work as
+**accepted/closed by the user** and leave it alone unless they report a new
+problem. This is a broad user completion statement, **not** a case-by-case
+functional test report. The v4 native cook/validate commandlet stalled; its
+source verified fallback built the release and 13 targeted tests passed.
+See [v4 receipt](research/menus087-v4-typography-finishing.md). Native
+verification may be done as a separate housekeeping check if tool startup
+recovers; it must not drive further visual modifications or block new work.
+
+**Next active workstream: Inventory v2**. Read
+[inventory phase transition](research/inventory-v2-phase-transition.md),
+[user's explicit v1 feedback](research/ink-gear-grid-v1-user-feedback.md), and
+[current inventory UX direction](design/inventory-ux-direction.md). Start from
+the **working 0.8.7 Menus v4 inventory resource/compatibility stack**, not the
+old 0.8.6 prototype SWF as a replacement. Reuse v1 only for functional ideas/
+proven code contracts; do not carry forward its visually rejected arrangement.
+Preserve approved Menus v4, Item Art, Bestiary Art, Map Inked, and HUD RC2.
+No automatic Vortex/game/live save or merge changes.
+
+## Historical explicit correction — menu row internal alignment (17 October)
 
 User approves the previous typography/secondary-color/prose/footer finishing
 scope **but adds alignment**. Cropped current-vs-reference Alchemy row screenshots
