@@ -1,0 +1,1403 @@
+{
+  "schema": 1,
+  "kind": "private-cue-edit-listening-decisions",
+  "plan_sha256": "9f9606b6646f45ff4c7ff1d74c6a3b588c583c8212e03057f8d5b849eed6db05",
+  "feedback_sha256": "28517bbe32f0e442825e5cb6cc845ddd1adfcb49fadced86057c7fd8752f9d0a",
+  "source_metadata_sha256": "7fde43a4ede8daded1920f1647f40b27a7dca50845ceefdf72c8eff71bb4ea74",
+  "decisions": [
+    {
+      "cue": "S04-a",
+      "source": "S04",
+      "source_identity": {
+        "media": 311392293,
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S04 · Island A - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 34,
+      "dry_fade": [
+        33,
+        34
+      ],
+      "verdict": "Adjust",
+      "preferred": "B",
+      "notes": "Way too sudden on both B and C. B sounds more natural. And the audible start is at about 5s.",
+      "settings": {
+        "cue": "S04-a",
+        "source": "S04",
+        "source_title": "S04 · Island A - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+        "source_in": 0,
+        "source_out": 34,
+        "dry_fade": [
+          33,
+          34
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.2,
+        "wet_db_relative": -14,
+        "prime_seconds": 4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3800,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Split exactly34s; unspecified dry ending provisionally fades33-34s. Freeze at33s may capture earlier reverberant notes across the source silence.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "render_hashes": {
+        "A": "e1c7115f31d5f2c31012e6d9abee39b84bac00452f9d109cc77bf82ca2341b40",
+        "B": "66ff0021d3c762f2cc2e792552b8226ac6afa98c6fcdef98db6c27d2ce80b098",
+        "C": "f55a0c4b5ba9589ec06a4c938b0bfd445430298944f5c1f5d99710c18ca00489"
+      }
+    },
+    {
+      "cue": "S04-b",
+      "source": "S04",
+      "source_identity": {
+        "media": 311392293,
+        "bank": "music_skellige",
+        "segment": 263850977,
+        "track": 535110851,
+        "original": "music\\skellige\\spikeroog\\skl_11_Exploration_A_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S04 · Island A - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 34,
+      "source_out": 60.757333333333335,
+      "dry_fade": [
+        59.757333333333335,
+        60.757333333333335
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "The actual start should be around 3s, the tiny bleep at the start shouldn't be there. The freeze tail shouldn't hold constant after a little fade, then we get 2 fades which sound unnatural. First sudden jump in loudness is at 24-25s and next fade is audible at the end, should be gradual not fade hold fade.",
+      "settings": {
+        "cue": "S04-b",
+        "source": "S04",
+        "source_title": "S04 · Island A - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "I would split it into two at 0:34 mark where there is silence and use both as punctuation.",
+        "source_in": 34,
+        "source_out": 60.757333333333335,
+        "dry_fade": [
+          59.757333333333335,
+          60.757333333333335
+        ],
+        "fade_in": 0.5,
+        "tail_extra": 3,
+        "wet_db_relative": -15,
+        "prime_seconds": 3,
+        "highpass_hz": 200,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Second piece starts exactly34s, through full source end; provisional final1s dry fade and0.5s entrance. Initial endpoint capture failed the audible-tail floor; capture moved to57s without changing source interval or dry fade.",
+        "comparison_only": false,
+        "stage": 1,
+        "freeze_at": 57
+      },
+      "render_hashes": {
+        "C": "1332f6da4ee3b6a96a9d9ec2fabb3dc65eb497df258260162cc9212db1ede707"
+      }
+    },
+    {
+      "cue": "S05-main",
+      "source": "S05",
+      "source_identity": {
+        "media": 988417140,
+        "bank": "music_nomansgrad",
+        "segment": 1778517274,
+        "tracks": [
+          906711869
+        ],
+        "origin_label": "The Witcher"
+      },
+      "title": "S05 · Dialogue - Neutral",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 47.5,
+      "dry_fade": [
+        42,
+        47
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "",
+      "settings": {
+        "cue": "S05-main",
+        "source": "S05",
+        "source_title": "S05 · Dialogue - Neutral",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade from 0:42 to 0:47, end at approximately 0:47.5. Can also break at 23.7s for a first shorter segment for variation.",
+        "source_in": 0,
+        "source_out": 47.5,
+        "dry_fade": [
+          42,
+          47
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.2,
+        "highpass_hz": 180,
+        "lowpass_hz": 4200,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Dry gain reaches zero at47s, followed by the requested source endpoint47.5s. Freeze tail may extend beyond it, explicitly labeled.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "render_hashes": {
+        "A": "c94c0d09b398e50c9ae2876ba137a6985a2ec3291c6f9b8b52e06877f9985a00",
+        "B": "1f267727b6d531200099bf70656218e364de7982e1a2e508031cf9f8f8c90c35",
+        "C": "834e1f41ef06061c964f440547fa80538d034cbfe21ebe3e03a35bb1b0dc477e"
+      }
+    },
+    {
+      "cue": "S05-short",
+      "source": "S05",
+      "source_identity": {
+        "media": 988417140,
+        "bank": "music_nomansgrad",
+        "segment": 1778517274,
+        "tracks": [
+          906711869
+        ],
+        "origin_label": "The Witcher"
+      },
+      "title": "S05 · Dialogue - Neutral",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 23.7,
+      "dry_fade": [
+        23,
+        23.7
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "Again very noticable jump to freeze tail and then another fade at the end, sounds unnatural.",
+      "settings": {
+        "cue": "S05-short",
+        "source": "S05",
+        "source_title": "S05 · Dialogue - Neutral",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade from 0:42 to 0:47, end at approximately 0:47.5. Can also break at 23.7s for a first shorter segment for variation.",
+        "source_in": 0,
+        "source_out": 23.7,
+        "dry_fade": [
+          23,
+          23.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 2.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 2.6,
+        "highpass_hz": 180,
+        "lowpass_hz": 4400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Only the requested first shorter variation is rendered; no invented23.7-47.5s remainder. Last0.7s fade is provisional.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "render_hashes": {
+        "C": "867157b4be90bb06a7a4b29bb6600a1224e7b728be7a71f8fd7dfa25f0838329"
+      }
+    },
+    {
+      "cue": "S11-short",
+      "source": "S11",
+      "source_identity": {        "media": 940375184,
+        "bank": "music_nomansgrad",
+        "segment": 2059321025,
+        "tracks": [
+          1618748664
+        ],
+        "origin_label": "The Witcher 2"
+      },
+      "title": "S11 · A Quiet Corner",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 20,
+      "dry_fade": [
+        18,
+        20
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "Again very noticable jump to freeze tail and then another fade at the end, sounds unnatural.",
+      "settings": {
+        "cue": "S11-short",
+        "source": "S11",
+        "source_title": "S11 · A Quiet Corner",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From start to fade out start at 0:18 and stop at 0:20, preferrably with added reverb freeze tail. From start to fade out starting at 1:30 and end at 1:33 could work as atmospheric development. And the whole thing can work as a long-specific composition.",
+        "source_in": 0,
+        "source_out": 20,
+        "dry_fade": [
+          18,
+          20
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.5,
+        "wet_db_relative": -13,
+        "prime_seconds": 3.8,
+        "highpass_hz": 230,
+        "lowpass_hz": 3200,
+        "hold_after_dry": 0.3,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Exact18-20s dry fade; field captured at18s. Added frozen tail remains an audition proposal, not part of the original source range.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "render_hashes": {
+        "A": "7e63aebb80c413c4e886faaf2b4e73144ef1b70a2f7cea8144bf0c4aa8c43fe1",
+        "B": "365898d7ffdc5bf1922655cc9e54c22b9244c2776bee82d33e71e8a15546d746",
+        "C": "9cd9afd46c9161d919a81f59f0d2b0c82bce4766b97a12970279a07ea06587fc"
+      }
+    },
+    {
+      "cue": "S11-long",
+      "source": "S11",
+      "source_identity": {
+        "media": 940375184,
+        "bank": "music_nomansgrad",
+        "segment": 2059321025,
+        "tracks": [
+          1618748664
+        ],
+        "origin_label": "The Witcher 2"
+      },
+      "title": "S11 · A Quiet Corner",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Atmospheric development (per excerpt note)",
+      "source_in": 0,
+      "source_out": 93,
+      "dry_fade": [
+        90,
+        93
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "Again very noticable, a bit less than others, jump to freeze tail and then another fade at the end, sounds unnatural.",
+      "settings": {
+        "cue": "S11-long",
+        "source": "S11",
+        "source_title": "S11 · A Quiet Corner",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From start to fade out start at 0:18 and stop at 0:20, preferrably with added reverb freeze tail. From start to fade out starting at 1:30 and end at 1:33 could work as atmospheric development. And the whole thing can work as a long-specific composition.",
+        "source_in": 0,
+        "source_out": 93,
+        "dry_fade": [
+          90,
+          93
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 5,
+        "wet_db_relative": -16,
+        "prime_seconds": 4,
+        "highpass_hz": 200,
+        "lowpass_hz": 3700,
+        "hold_after_dry": 0.4,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact90-93s dry fade; whole original remains separately accessible, not re-cut.",
+        "comparison_only": false,
+        "stage": 1
+      },
+      "render_hashes": {
+        "C": "b09cbabb95f98e1ffd3192a47546eab51bd071e85194677c85092f995b28a155"
+      }
+    },
+    {
+      "cue": "S07-a",
+      "source": "S07",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "title": "S07 · Nightfall",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development",
+      "source_in": 0,
+      "source_out": 72.7,
+      "dry_fade": [
+        67,
+        72.7
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "A bit too much constant volume hold on freeze again and sudden fade at the end.",
+      "settings": {
+        "cue": "S07-a",
+        "source": "S07",
+        "source_title": "S07 · Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 0,
+        "source_out": 72.7,
+        "dry_fade": [
+          67,
+          72.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 200,
+        "lowpass_hz": 3800,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact supplied fade/stop. Frozen field may extend4.5s beyond dry stop; no retimed musical boundaries.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "C": "26e9d3e8f31c663afc9ec5ab80d5a94620c13d57f6bb3de80f4a742e3ce0d0f6"
+      }
+    },
+    {
+      "cue": "S07-b",
+      "source": "S07",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "title": "S07 · Nightfall",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Brief punctuation (per excerpt note)",
+      "source_in": 81,
+      "source_out": 115,
+      "dry_fade": [
+        111,
+        115
+      ],
+      "verdict": "Keep",
+      "preferred": "B",
+      "notes": "Need longer reverb decay here.",
+      "settings": {
+        "cue": "S07-b",
+        "source": "S07",
+        "source_title": "S07 · Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 81,
+        "source_out": 115,
+        "dry_fade": [
+          111,
+          115
+        ],
+        "fade_in": 1.1,
+        "tail_extra": 3.5,
+        "wet_db_relative": -15,
+        "prime_seconds": 3,
+        "highpass_hz": 230,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Entrance begins exactly81s; unspecified fade-in duration provisionally1.1s.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "A": "a1cd6ec52061d786523e809210bbc4a2890accf19ca3a687fea03b5d17ee0bf3",
+        "B": "d3d950e07048b0b7c0ffe40def3882f3499d87d6e362477203f26bec588ae169",
+        "C": "2ea701a338ba1b11662e7ba346accdf8314ae63c8ca72dbe9296048ecf8143f5"
+      }
+    },
+    {
+      "cue": "S07-c",
+      "source": "S07",
+      "source_identity": {
+        "media": 948095561,
+        "bank": "music_skellige",
+        "segment": 194348349,
+        "tracks": [
+          1410135514
+        ],
+        "origin_label": "Nyghtfall"
+      },
+      "title": "S07 · Nightfall",
+      "source_role": "Atmospheric development",      "excerpt_role": "Brief punctuation (per excerpt note)",
+      "source_in": 156,
+      "source_out": 176.9,
+      "dry_fade": [
+        172,
+        176.9
+      ],
+      "verdict": "Adjust",
+      "preferred": "",
+      "notes": "Freeze started too early and same as others, would also be interested in hearing just longer reverb.",
+      "settings": {
+        "cue": "S07-c",
+        "source": "S07",
+        "source_title": "S07 · Nightfall",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Sound a bit dramatic, a bit night time, but could also work for some region that is a bit more dramatic in day. 1st atmospheric development can fade from 1:07 to stop at approximately 1:12.7 and end there for a first track. And the second track could start from fade in at 1:21 as mostly punctuation and fade out from 1:51 and stop at 1:55. Last punctuation could be from 2:36 to fade out start at 2:52 and stop at 2:56.9 or so.",
+        "source_in": 156,
+        "source_out": 176.9,
+        "dry_fade": [
+          172,
+          176.9
+        ],
+        "fade_in": 1.2,
+        "tail_extra": 4.2,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.6,
+        "highpass_hz": 240,
+        "lowpass_hz": 3300,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Keep156s source start, including any existing quiet portion;1.2s provisional entrance, no automated onset relocation.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "C": "8903bbd1b2c36d4c66a5471e3a67ae93f5e52ea0585c80b4a8f3ca3df5ceb71a"
+      }
+    },
+    {
+      "cue": "S12-1",
+      "source": "S12",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S12 · Island B - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 5,
+      "source_out": 21,
+      "dry_fade": [
+        20.4,
+        21
+      ],
+      "verdict": "Adjust",
+      "preferred": "C",
+      "notes": "Here it's even more noticable with a volume dip and then again freeze reappearance.",
+      "settings": {
+        "cue": "S12-1",
+        "source": "S12",
+        "source_title": "S12 · Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 5,
+        "source_out": 21,
+        "dry_fade": [
+          20.4,
+          21
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 2.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 4000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "C": "f969bb54cdd11dd1bcfff342dbdf2f91ec4fa521da3e6a8406907b8f96ab7559"
+      }
+    },
+    {
+      "cue": "S12-2",
+      "source": "S12",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S12 · Island B - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 21.5,
+      "source_out": 35.5,
+      "dry_fade": [
+        34.8,
+        35.5
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "Same as last, and too sudden B reverb decay candidate again.",
+      "settings": {
+        "cue": "S12-2",
+        "source": "S12",
+        "source_title": "S12 · Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 21.5,
+        "source_out": 35.5,
+        "dry_fade": [
+          34.8,
+          35.5
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 2.8,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3700,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": true,
+        "variants": [
+          "A",
+          "B",
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "A": "0ec3087ca4e5884dc95503bee031519069a9f0b60590da6430b8167cd81afa47",
+        "B": "73d00b821f43abc16bfcd51d02bcc532c257e6c6472f35a149bc8573cb4be761",
+        "C": "28713e972f3ffb876fabaf457dfd420ba1b81a1d266afda0cd4f3ea83e1c8aeb"
+      }
+    },
+    {
+      "cue": "S12-3",
+      "source": "S12",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S12 · Island B - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 35.5,
+      "source_out": 48.5,
+      "dry_fade": [
+        47.7,
+        48.5
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S12-3",
+        "source": "S12",
+        "source_title": "S12 · Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 35.5,
+        "source_out": 48.5,
+        "dry_fade": [
+          47.7,
+          48.5
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 3,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3500,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade.",
+        "comparison_only": false,
+        "stage": 2
+      },
+      "render_hashes": {
+        "C": "4a6deb352c4eb09322ab3a26eda1c2e112e272fa0da1d1332b3bb9ab9dd5aa33"
+      }
+    },
+    {
+      "cue": "S12-4",
+      "source": "S12",
+      "source_identity": {
+        "media": 886014434,
+        "bank": "music_skellige",
+        "segment": 175437664,
+        "track": 312812702,
+        "original": "music\\skellige\\an_skellig\\skl Exploration 12_B_L1_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S12 · Island B - base arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 48.5,
+      "source_out": 73.04533333333333,
+      "dry_fade": [
+        71.84533333333333,
+        73.04533333333333
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S12-4",
+        "source": "S12",
+        "source_title": "S12 · Island B - base arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "From 0:05 to 0:21 could work as a punctuation. From 0:21.5 to 0:35.5 could work as another punctuation. And from 0:35.5 to 0:48.5 third punctuation. And from 0:48.5 to the end as fourth.",
+        "source_in": 48.5,
+        "source_out": 73.04533333333333,        "dry_fade": [
+          71.84533333333333,
+          73.04533333333333
+        ],
+        "fade_in": 0.35,
+        "tail_extra": 3.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 2.2,
+        "highpass_hz": 260,
+        "lowpass_hz": 3600,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user source interval; unspecified mid-source entrance0.35s and short final dry fade are provisional. Final piece uses1.2s dry fade. Capture at69s anticipates the existing quiet source tail; dry endpoint unchanged.",
+        "comparison_only": false,
+        "stage": 2,
+        "freeze_at": 69
+      },
+      "render_hashes": {
+        "C": "bfc66531110ce60acedaa8f38eb5f3e5b28c612ed524d5b50ae23a67b282c5ad"
+      }
+    },
+    {
+      "cue": "S15-a",
+      "source": "S15",
+      "source_identity": {
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "origin_label": "GWENT: Rogue Mage"
+      },
+      "title": "S15 · What Lies Ahead",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 25.5,
+      "dry_fade": [
+        21,
+        25.5
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S15-a",
+        "source": "S15",
+        "source_title": "S15 · What Lies Ahead",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation.",
+        "source_in": 0,
+        "source_out": 25.5,
+        "dry_fade": [
+          21,
+          25.5
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user fades and source ranges; second entrance duration0.8s provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "a9e1189bc7ec756edee2709b114e60d86645bd8902e4567c0e3241e663415c41"
+      }
+    },
+    {
+      "cue": "S15-b",
+      "source": "S15",
+      "source_identity": {
+        "media": 924004613,
+        "bank": "music_nomansgrad",
+        "segment": 299193909,
+        "tracks": [
+          1311610146
+        ],
+        "origin_label": "GWENT: Rogue Mage"
+      },
+      "title": "S15 · What Lies Ahead",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 25.5,
+      "source_out": 57.5,
+      "dry_fade": [
+        52,
+        57.5
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S15-b",
+        "source": "S15",
+        "source_title": "S15 · What Lies Ahead",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Fade out at 0:21 to 0:25.5 end punctuation. Fade in from 0:25.5 to fade out at 0:52 to end at 0:57.5 another punctuation.",
+        "source_in": 25.5,
+        "source_out": 57.5,
+        "dry_fade": [
+          52,
+          57.5
+        ],
+        "fade_in": 0.8,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.4,
+        "highpass_hz": 220,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user fades and source ranges; second entrance duration0.8s provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "7e08cecfae35b61d3ef192e2410bd2860f3e3e2be9c265f7a22b23210da10dae"
+      }
+    },
+    {
+      "cue": "S16-1",
+      "source": "S16",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S16 · Southern ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 0,
+      "source_out": 42.3,
+      "dry_fade": [
+        40.5,
+        42.3
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S16-1",
+        "source": "S16",
+        "source_title": "S16 · Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 42.3,
+        "dry_fade": [
+          40.5,
+          42.3
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "c4e650264b028497f6b3956ed1b6347705b1e0341986cc99f4751bcf1975ecab"
+      }
+    },
+    {
+      "cue": "S16-2",
+      "source": "S16",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S16 · Southern ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 42.3,
+      "source_out": 101.1,
+      "dry_fade": [
+        98.6,
+        101.1
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S16-2",
+        "source": "S16",
+        "source_title": "S16 · Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 42.3,
+        "source_out": 101.1,
+        "dry_fade": [
+          98.6,
+          101.1
+        ],
+        "fade_in": 1,
+        "tail_extra": 4.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "f67cd70bbcb7cbb486f7e616fe10d31b873691b2c3567e9f5d1ea98030928c6d"
+      }
+    },
+    {
+      "cue": "S16-3",
+      "source": "S16",
+      "source_identity": {
+        "media": 265936293,
+        "bank": "music_toussaint",
+        "segment": 626459345,
+        "track": 374771226,
+        "original": "music\\toussaint\\general_hub\\tw3_bob_21_expl_amb_01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S16 · Southern ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 101.1,
+      "source_out": 133.33333333333334,
+      "dry_fade": [
+        130.83333333333334,
+        133.33333333333334
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S16-3",
+        "source": "S16",
+        "source_title": "S16 · Southern ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Three atmospheric developments with fades break at 42.3s or so and another one at 101.1s, which also could work as punctuations. Sound night timey or magical, a bit otherwordly.",
+        "source_in": 101.1,
+        "source_out": 133.33333333333334,
+        "dry_fade": [
+          130.83333333333334,
+          133.33333333333334
+        ],
+        "fade_in": 1,
+        "tail_extra": 3.8,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.8,
+        "highpass_hz": 190,
+        "lowpass_hz": 3400,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact user split42.3/101.1s. Unspecified fades provisionally1s entrance and1.8-2.5s ending; final piece uses2.5s ending.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "a10854c5e729c75ea2c2d3a31cc671592b1dae4984cc8163da0e1f6ea92ed307"
+      }
+    },
+    {
+      "cue": "S18-1",
+      "source": "S18",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S18 · Island alternate pads arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 0,
+      "source_out": 31.7,
+      "dry_fade": [
+        30.1,
+        31.7
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S18-1",
+        "source": "S18",
+        "source_title": "S18 · Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 0,
+        "source_out": 31.7,
+        "dry_fade": [
+          30.1,
+          31.7
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 3.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "48b7c55a8e9f9b0b90aabdb4eb7726c44f83ebb410cbc4c3d2152b4c473e5705"
+      }
+    },
+    {
+      "cue": "S18-2",
+      "source": "S18",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S18 · Island alternate pads arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Atmospheric development (per excerpt note)",
+      "source_in": 61,
+      "source_out": 112.7,
+      "dry_fade": [
+        109.9,
+        112.7
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S18-2",
+        "source": "S18",
+        "source_title": "S18 · Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 61,
+        "source_out": 112.7,
+        "dry_fade": [
+          109.9,
+          112.7
+        ],
+        "fade_in": 1.3,
+        "tail_extra": 4.5,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "ad20472e7aa54eda87fdf02c58626f7ef8b63a1ea35cead7d763bc9a295e5d73"
+      }
+    },
+    {
+      "cue": "S18-3",
+      "source": "S18",
+      "source_identity": {
+        "media": 755958339,
+        "bank": "music_skellige",
+        "segment": 421373096,
+        "track": 706524924,
+        "original": "music\\skellige\\faroe\\SKL_13_Exploration_PadsMix_bip.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S18 · Island alternate pads arrangement",
+      "source_role": "Brief punctuation",
+      "excerpt_role": "Brief punctuation",
+      "source_in": 112.8,
+      "source_out": 130,
+      "dry_fade": [
+        128.4,
+        130
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S18-3",
+        "source": "S18",
+        "source_title": "S18 · Island alternate pads arrangement",
+        "source_role": "Brief punctuation",
+        "verbatim_notes": "Break at 31.7s for the first punctuation. From 61s to 112.7s atmospheric development. From 112.8s till 130s 2nd punctuation.",
+        "source_in": 112.8,
+        "source_out": 130,
+        "dry_fade": [
+          128.4,
+          130
+        ],
+        "fade_in": 0.8,
+        "tail_extra": 3.2,
+        "wet_db_relative": -16,
+        "prime_seconds": 3.6,
+        "highpass_hz": 170,
+        "lowpass_hz": 3900,
+        "hold_after_dry": 0.2,
+        "wet_attack": 0.8,
+        "rt60": 2.8,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact requested ranges only; omitted gaps remain omitted. Fade lengths were unspecified and are provisional.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "1a75617a6c43403fa5b26991422070385f86a96d93c0d477b8714a4b7f2bbda7"
+      }
+    },
+    {
+      "cue": "S20-a",
+      "source": "S20",
+      "source_identity": {
+        "media": 841561382,
+        "bank": "music_nomansgrad",
+        "segment": 894778287,
+        "track": 1020785585,
+        "original": "music\\nomansgrad\\novigrad_rich_district\\tw3_novigrad_04_exploration_night_14.02.06.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S20 · City night - complete arrangement",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development / punctuation (per excerpt note)",
+      "source_in": 0,      "source_out": 40.8,
+      "dry_fade": [
+        38,
+        40.8
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S20-a",
+        "source": "S20",
+        "source_title": "S20 · City night - complete arrangement",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Fade out from 38s to approx 40.8s atmospheric development/punctuation.",
+        "source_in": 0,
+        "source_out": 40.8,
+        "dry_fade": [
+          38,
+          40.8
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.3,
+        "wet_db_relative": -15,
+        "prime_seconds": 3.6,
+        "highpass_hz": 200,
+        "lowpass_hz": 3500,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "Exact38-40.8s dry fade. Frozen extension separately labeled.",
+        "comparison_only": false,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "e7c84a51e010cbfb216232de7ea67fd8aa86b9a618db1fafeb4e5d1f4165a9a6"
+      }
+    },
+    {
+      "cue": "S14-1",
+      "source": "S14",
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S14 · Reusable ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development",
+      "source_in": 0,
+      "source_out": 64.5,
+      "dry_fade": [
+        63,
+        64.5
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S14-1",
+        "source": "S14",
+        "source_title": "S14 · Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 0,
+        "source_out": 64.5,
+        "dry_fade": [
+          63,
+          64.5
+        ],
+        "fade_in": 0.02,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 250,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "COMPARISON ONLY: authored-source reuse unchanged. Split64.5s exact; ending1.5s/2.5s and second entrance0.9s are provisional.",
+        "comparison_only": true,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "ffa559ac37df926ff67ead439eb8c7bcfca7470f655e2e6918813293f1ad6d11"
+      }
+    },
+    {
+      "cue": "S14-2",
+      "source": "S14",
+      "source_identity": {
+        "media": 219787535,
+        "bank": "music_skellige",
+        "segment": 877863662,
+        "track": 165976335,
+        "original": "music\\ambients\\tw3_dialog_ambient01.wav",
+        "origin_label": "The Witcher 3 native audition source"
+      },
+      "title": "S14 · Reusable ambient arrangement 01",
+      "source_role": "Atmospheric development",
+      "excerpt_role": "Atmospheric development",
+      "source_in": 64.5,
+      "source_out": 132,
+      "dry_fade": [
+        129.5,
+        132
+      ],
+      "verdict": "Unreviewed",
+      "preferred": "",
+      "notes": "",
+      "settings": {
+        "cue": "S14-2",
+        "source": "S14",
+        "source_title": "S14 · Reusable ambient arrangement 01",
+        "source_role": "Atmospheric development",
+        "verbatim_notes": "Two atmospheric developments with fades break at 64.5. Sound night timey, darkish or magical, a bit otherwordly.",
+        "source_in": 64.5,
+        "source_out": 132,
+        "dry_fade": [
+          129.5,
+          132
+        ],
+        "fade_in": 0.9,
+        "tail_extra": 4.2,
+        "wet_db_relative": -17,
+        "prime_seconds": 3.6,
+        "highpass_hz": 250,
+        "lowpass_hz": 3000,
+        "hold_after_dry": 0.2,
+        "wet_attack": 1,
+        "rt60": 3.6,
+        "freeze_transition": 0.1,
+        "compare": false,
+        "variants": [
+          "C"
+        ],
+        "assumption": "COMPARISON ONLY: authored-source reuse unchanged. Split64.5s exact; ending1.5s/2.5s and second entrance0.9s are provisional.",
+        "comparison_only": true,
+        "stage": 3
+      },
+      "render_hashes": {
+        "C": "30f67ea333728cdbee7f4d6e2e2ceaf6d2a5ef04a71dc24e1d038b0377a4ba92"
+      }
+    }
+  ]
+}

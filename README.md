@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Latest user audition finding (2026-10-17):** Report61's freeze-tail previews repeatedly show an audible dry/wet handoff, plateau and second fade. Stop further v1 listening; only small v2 common-envelope DSP repair should proceed. Exact user's exported feedback and separately evidenced diagnosis are in [report62](research/62-cue-tail-handoff-defect-review.md) and [raw decisions](research/62-user-cue-edit-decisions.json). No game integration or updated audio has been made.
+
+
 **Private cue edits ready (report61, 2026-10-17):** [24 edited excerpts /34 audio renders](research/61-private-cue-edits-and-freeze-auditions.md) follow the user's source-clock cuts. Open build/music-material-selection/cue-edits-v1/index.html for genuine freeze tails, five dry/reverb/freeze A/B/C comparisons and decision export. Exact PCM/crop/freeze-state checks and184 Python tests pass; client/export logic is tested offline. Actual browser playback was blocked from automation and is unverified; subjective musical quality awaits user listening. Full originals, accepted releases, game and Vortex are unchanged. Next: audition and export Keep/Adjust/Reject before any integration or trigger work.
 
 
