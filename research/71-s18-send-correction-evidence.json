@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "cue": "S18-3",
+  "new_renders": 1,
+  "new_sha256": "6a585f0406e9303451c9f33ef857cdb96f069d11bf1e2c2578d081bcb5e09c98",
+  "immutable_inputs": 16,
+  "identical_original_reconstruction": true,
+  "identical_dry_and_pre_fade": true,
+  "no_clipping": true,
+  "post_source_geometry": {
+    "max_sustained_rebound_db": 0.0,
+    "rebound_review": false,
+    "plateau_window_starts": [],
+    "post_stop_250ms_dbfs": [
+      -58.444174426745114,
+      -60.63209917561848,
+      -63.244346715930334,
+      -66.56173369600499,
+      -69.33994219593345,
+      -71.49613900732481,
+      -74.48533147581863,
+      -76.82918787971212,
+      -80.21770979411187,
+      -83.7642765232333,
+      -84.2820097805817,
+      -87.59850875203423,
+      -91.39734781742135,
+      -93.40912744444326,
+      -95.88088467194972,
+      -99.48657666149381,
+      -102.76744111669807,
+      -103.67823097315524,
+      -107.08604630982391,
+      -111.20399101872417,
+      -112.67120092961531,
+      -115.08581904393331,
+      -117.54780844331385,
+      -120.65773309185205,
+      -123.88457617005095,
+      -125.7985968502655,
+      -129.19972735916397,
+      -131.692137391729,
+      -134.2537045552539,
+      -136.70595692683503,
+      -140.34429450960386,
+      -143.65689303775713,
+      -144.98821788108728,
+      -147.51501685321844,
+      -150.8584347572043,
+      -153.86007479336962,
+      -155.90732954446608,
+      -158.99994712724887,
+      -162.31638800781707,
+      -165.1982122366886
+    ]
+  },
+  "cleanup_peak_dbfs": -154.12227639605214,
+  "dry_stop_sample_delta": 0.0005141088383003358,
+  "index_sha256": "dc683259f4d59bc98f01e55d2b9a6d1c739a6506bcc126776da90aa2b3c2c108",
+  "metadata_sha256": "570ddd0537e96ad8b0ea62867f6031becd2e00dacd9bd1812778152fdebd63fc",
+  "subjectively_listened": false,
+  "real_browser_tested": false,
+  "changes": {
+    "send_policy": [
+      "pre_ending_fade",
+      "post_fader"
+    ],
+    "wet_gain_unchanged": 0.1981443461969509,
+    "dry_exact": true,
+    "pre_fade_exact_until_player_seconds": 17.0
+  },
+  "comparison": {
+    "A_post_source_first_second_dbfs": -41.27165873010556,
+    "B_post_source_first_second_dbfs": -61.26411782419052
+  },
+  "measurements_100ms": {
+    "A": [
+      {
+        "player_seconds": 18.3,
+        "dry_dbfs": -39.05928524216134,
+        "wet_dbfs": -42.24593850466871,
+        "combined_dbfs": -36.47064300543929
+      },
+      {
+        "player_seconds": 18.4,
+        "dry_dbfs": -40.76552478520948,
+        "wet_dbfs": -44.12071409629091,
+        "combined_dbfs": -37.763845760674414
+      },
+      {
+        "player_seconds": 18.5,
+        "dry_dbfs": -44.022828552039435,
+        "wet_dbfs": -44.15378516109635,
+        "combined_dbfs": -40.63201196949695
+      },
+      {
+        "player_seconds": 18.6,
+        "dry_dbfs": -46.75845941421977,
+        "wet_dbfs": -43.89285987578128,
+        "combined_dbfs": -42.73051318669565
+      },
+      {
+        "player_seconds": 18.7,
+        "dry_dbfs": -50.525578647417476,
+        "wet_dbfs": -42.84561823686221,
+        "combined_dbfs": -41.37937362968828
+      },
+      {
+        "player_seconds": 18.8,
+        "dry_dbfs": -53.78607392630493,
+        "wet_dbfs": -40.99904749859374,
+        "combined_dbfs": -40.18965441086774
+      },
+      {
+        "player_seconds": 18.9,
+        "dry_dbfs": -58.484697520675525,
+        "wet_dbfs": -39.31410324056996,
+        "combined_dbfs": -38.809591528335346
+      },
+      {
+        "player_seconds": 19.0,
+        "dry_dbfs": -65.66286750952605,
+        "wet_dbfs": -37.5305088996325,
+        "combined_dbfs": -37.32398922857961
+      },
+      {
+        "player_seconds": 19.1,
+        "dry_dbfs": -79.98256230347393,
+        "wet_dbfs": -36.888330339803176,
+        "combined_dbfs": -36.857824198314226
+      },
+      {
+        "player_seconds": 19.2,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -37.47348479010406,
+        "combined_dbfs": -37.47348479010406
+      },
+      {
+        "player_seconds": 19.3,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -38.54166601667607,
+        "combined_dbfs": -38.54166601667607
+      },
+      {
+        "player_seconds": 19.4,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -39.358965950798805,
+        "combined_dbfs": -39.358965950798805
+      },
+      {
+        "player_seconds": 19.5,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -40.567437411703786,
+        "combined_dbfs": -40.567437411703786
+      },
+      {
+        "player_seconds": 19.6,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -41.42662735798933,
+        "combined_dbfs": -41.42662735798933
+      },
+      {
+        "player_seconds": 19.7,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -43.44258837418308,
+        "combined_dbfs": -43.44258837418308
+      },
+      {
+        "player_seconds": 19.8,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -44.080520792898916,
+        "combined_dbfs": -44.080520792898916
+      }
+    ],
+    "B": [
+      {
+        "player_seconds": 18.3,
+        "dry_dbfs": -39.05928524216134,
+        "wet_dbfs": -46.04101412661397,
+        "combined_dbfs": -37.859482935345724
+      },
+      {
+        "player_seconds": 18.4,
+        "dry_dbfs": -40.76552478520948,
+        "wet_dbfs": -48.7812981229419,
+        "combined_dbfs": -39.49538603390498
+      },
+      {
+        "player_seconds": 18.5,
+        "dry_dbfs": -44.022828552039435,
+        "wet_dbfs": -51.66978379283041,
+        "combined_dbfs": -43.3870385073231
+      },
+      {
+        "player_seconds": 18.6,
+        "dry_dbfs": -46.75845941421977,
+        "wet_dbfs": -52.03903787911956,
+        "combined_dbfs": -46.611573249167655
+      },
+      {
+        "player_seconds": 18.7,
+        "dry_dbfs": -50.525578647417476,
+        "wet_dbfs": -53.71209164875833,
+        "combined_dbfs": -48.556986518046585
+      },
+      {
+        "player_seconds": 18.8,
+        "dry_dbfs": -53.78607392630493,
+        "wet_dbfs": -51.878176089005734,
+        "combined_dbfs": -49.173327764737714
+      },
+      {
+        "player_seconds": 18.9,
+        "dry_dbfs": -58.484697520675525,
+        "wet_dbfs": -52.81046082983931,
+        "combined_dbfs": -50.902083021840674
+      },
+      {
+        "player_seconds": 19.0,
+        "dry_dbfs": -65.66286750952605,
+        "wet_dbfs": -53.832687373250074,
+        "combined_dbfs": -52.63698027092373
+      },
+      {
+        "player_seconds": 19.1,
+        "dry_dbfs": -79.98256230347393,
+        "wet_dbfs": -57.13329945322851,
+        "combined_dbfs": -56.835114942368
+      },
+      {
+        "player_seconds": 19.2,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -56.86411196920279,
+        "combined_dbfs": -56.86411196920279
+      },
+      {
+        "player_seconds": 19.3,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -60.060966866381506,
+        "combined_dbfs": -60.060966866381506
+      },
+      {
+        "player_seconds": 19.4,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -59.61307953497212,
+        "combined_dbfs": -59.61307953497212
+      },
+      {
+        "player_seconds": 19.5,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -61.679030041314284,
+        "combined_dbfs": -61.679030041314284
+      },
+      {
+        "player_seconds": 19.6,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -60.35679688876325,
+        "combined_dbfs": -60.35679688876325
+      },
+      {
+        "player_seconds": 19.7,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -62.728486002052065,
+        "combined_dbfs": -62.728486002052065
+      },
+      {
+        "player_seconds": 19.8,
+        "dry_dbfs": -240.0,
+        "wet_dbfs": -63.2112281947022,
+        "combined_dbfs": -63.2112281947022
+      }
+    ]
+  },
+  "new_render_qa": {
+    "sha256": "6a585f0406e9303451c9f33ef857cdb96f069d11bf1e2c2578d081bcb5e09c98",
+    "seconds": 32.2,
+    "channels": 2,
+    "rate": 48000,
+    "peak": 0.1334228515625,
+    "clipped_samples": 0,
+    "decoder_exact": true
+  },
+  "tests": {
+    "existing_python_tests": 200,
+    "passed": true,
+    "offline_client_passed": true,
+    "real_browser_tested": false
+  }
+}

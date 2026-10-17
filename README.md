@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**S18-only correction ready (2026-10-17; report71):** Measured player18.6–19.1s wet growth causes the reported combined rebound while dry fades. One new candidate at `build/music-material-selection/s18-correction-v1/index.html` changes only S18-3 send from independent to post-fader; source112.8–130s, fade127.8–130s, RT60/gain/filters remain exact. Original A preserved; corrected B removes measured rebound but has ~20dB quieter post-source tail, so listening approval is pending.200 tests and PCM/client/input checks pass; all other selections and ledger69 unchanged. No broader rendering or game integration.
+
+
 **Latest user trial outcomes (2026-10-17; report70):** Export selects Keep/B for all six preregistered primaries. S07-c/S12-2 regression cases and S15-a/S16-2/S20-a have seamless/resolving/appropriate evaluations; S16 artifact field remains Unreviewed. **S18-3 is Keep/B with an unresolved qualification:** not seamless, tail too intrusive, slight volume bump at19s. Preserve exact raw outcomes and ledger69 unchanged; do not report six unqualified successes or fitted accuracy. Eleven cumulative choices are pinned, with S18 qualification; S05-main remains separate. Next correction, if requested, is S18-3 only. No automatic remainder rollout or game integration.
 
 
