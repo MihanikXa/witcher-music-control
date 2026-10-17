@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Next authorized research (report68, 2026-10-17):** Predict treatment choices for remaining private sparse-cue endings from measured properties and five previously accepted examples. Preregister the rules/ledger; build only a six-case (two known failure / four fresh) private listening trial, then wait for feedback before scaling. No Wwise, game integration or copyrighted audio redistribution. See [handoff specification](research/68-remainder-treatment-prediction-handoff.md).
+
+
 **Latest explicit acceptance (2026-10-17; report67):** User selects S05-short **B v3** and S11-short **C v3** “for sure.” Both are conventional decay; S11 C uses the post-fader send, not freeze or the independent-send B. Together with report65’s S12-1 C v2, S07-b B v2 and S04-b C v2, all five representative excerpts now have accepted exact renders. Hash pins and verbatim message are in report67. Preserve them; no universal preset, automatic all24 propagation or game integration is authorized.
 
 

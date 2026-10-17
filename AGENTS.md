@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Current authorized handoff (2026-10-17; report68):** After five accepted report67 private cue endings, user asks to progress through the rest with **predictive treatment triage + six representative test excerpts**. Read report68. Survey all remaining report61 excerpt endings with source-clock measurements and user notes; derive a modest explicit rule from accepted examples without inventing fit accuracy; **freeze a per-cue prediction ledger before trial rendering**, then audition just six diverse pending cues (two previously problematic, four unreviewed). Default hypothesis favors continuous longer *natural* reverb, optional coherent freeze; do not automatically use identical settings or re-render all24. Preserve five pinned accepted renders, separately accepted S05-main B v1, report58 wording, protected S14, audio/rights boundaries and all WMC releases. No game/Wwise/scheduler change.
+
+
 **Latest explicit acceptance (2026-10-17; report67):** User selects S05-short **B v3** and S11-short **C v3** “for sure.” Both are conventional decay; S11 C uses the post-fader send, not freeze or the independent-send B. Together with report65’s S12-1 C v2, S07-b B v2 and S04-b C v2, all five representative excerpts now have accepted exact renders. Hash pins and verbatim message are in report67. Preserve them; no universal preset, automatic all24 propagation or game integration is authorized.
 
 

@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Latest direction (report68, 2026-10-17):** Transparent and preregistered treatment triage for remaining Sparse cue endings; only six varied private test renders, then user review. Report67 pins the five accepted source-specific endings; no universal preset or full24 rollout.
+
+
 **Current reading order:** report67 records accepted S05-short B v3 and S11-short C v3, completing the five representative private cue choices alongside report65. Report66 contains the controlled implementation; historical failures remain preserved. No universal preset, automatic all24 propagation or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
@@ -133,3 +136,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 66. [Two-cue handoff balance correction](66-two-cue-handoff-balance-correction.md): stronger established room, bounded send/fade comparisons, six new private WAVs,193 tests and exact preservation/regeneration checks. User listening pending. [Plan](66-handoff-balance-plan.json), [evidence](66-handoff-balance-evidence.json).
 
 67. [Two v3 endings accepted](67-user-accepts-two-v3-endings.md): direct user choices complete five representative private-render approvals; [exact selections and hashes](67-accepted-private-cue-selections.json). No audio changed.
+
+68. [Preregistered remaining-cue treatment selection handoff](68-remainder-treatment-prediction-handoff.md): survey unapproved passage endings, rule-based prospective parameter selection, six-case private audition (two prior-defect probes / four fresh), immutable prediction ledger, and strict stop before expansion.
