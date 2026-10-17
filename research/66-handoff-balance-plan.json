@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "immutable_inputs": {
+    "research/64-continuous-tail-plan.json": "7e0b1250b5d4865b014f70164a1d819fd126441b524d1eae661ae0c5686615f3",
+    "research/64-continuous-tail-evidence.json": "42c162ce04953b5d1a56c8debce2624b2741242df20f74042670cd45d4bc2ccd",
+    "research/65-user-cue-tail-v2-decisions.json": "7edf9dabcb766d73bfd6fd423334a1c99009de3aa1eebf60b67d434328fd3498",
+    "build/music-material-selection/cue-edits-v2/renders.json": "02d75518be6b274805fb0349f27ff2887236752ffcf78a0f231bc730d20d916d",
+    "build/music-material-selection/cue-edits-v1/renders.json": "8782a8ba42d901b013fe2aa13c522930740494489216f2c944ba207fc3acd344",
+    "build/music-material-selection/cue-edits-v2/audio/S04-b-B.wav": "44f3558bf87c65a249b883f8e5bdfe5d26d7050cb7f014c0b6ab4b7390f79686",
+    "build/music-material-selection/cue-edits-v2/audio/S04-b-C.wav": "db7df8e97cc4d1d1b5956461be134bbd0a6a730f6a9dcd4dd55e1da8a65b797f",
+    "build/music-material-selection/cue-edits-v2/audio/S05-short-B.wav": "d0a82b7ca40396fc9712763eb1b0b7b1c16f62571d8359d153bf8d42f704f2e8",
+    "build/music-material-selection/cue-edits-v2/audio/S05-short-C.wav": "6e1c3ed87bc6bf281f36aad15a412eeda626fba5d9098703130700a506a49bf8",
+    "build/music-material-selection/cue-edits-v2/audio/S07-b-B-long.wav": "f6c26df58ed12ae5b7d4b0b56a67b79a47bf823e4b2d3380f2938cb6445d7bc3",
+    "build/music-material-selection/cue-edits-v2/audio/S07-b-B.wav": "96dfbb194de104e5a57a9819589ac95482857a76d7a5fe5e0e2c77decad60c04",
+    "build/music-material-selection/cue-edits-v2/audio/S07-b-C.wav": "890bdad5789050688b200a27eb9c473d30a3f66c9836cdf64847262f46293505",
+    "build/music-material-selection/cue-edits-v2/audio/S11-short-B-long.wav": "620aead4aefd738af7950563e0a0f468483ee4ecee38455526eb91a162c2ba71",
+    "build/music-material-selection/cue-edits-v2/audio/S11-short-B.wav": "bf32657eaff306381612548c7b567244831ad603dd8fb81cbc0be07d1df7de7f",
+    "build/music-material-selection/cue-edits-v2/audio/S11-short-C.wav": "de7dc805722d29894019c10d4058ed952275dd805b4d7a4be866ef989e1595fa",
+    "build/music-material-selection/cue-edits-v2/audio/S12-1-B.wav": "4347249135bab915cc272a388dc18654bd2bd5ab8ac269866c4bcdc2821de964",
+    "build/music-material-selection/cue-edits-v2/audio/S12-1-C.wav": "a14cf5c6ad57981bf0d403ec73940b334844f79cb9f2e8b4ae1d778c3319a6c9",
+    "build/music-material-selection/cue-edits-v1/audio/S04-a-A.wav": "e1c7115f31d5f2c31012e6d9abee39b84bac00452f9d109cc77bf82ca2341b40",
+    "build/music-material-selection/cue-edits-v1/audio/S04-a-B.wav": "66ff0021d3c762f2cc2e792552b8226ac6afa98c6fcdef98db6c27d2ce80b098",
+    "build/music-material-selection/cue-edits-v1/audio/S04-a-C.wav": "f55a0c4b5ba9589ec06a4c938b0bfd445430298944f5c1f5d99710c18ca00489",
+    "build/music-material-selection/cue-edits-v1/audio/S04-b-C.wav": "1332f6da4ee3b6a96a9d9ec2fabb3dc65eb497df258260162cc9212db1ede707",
+    "build/music-material-selection/cue-edits-v1/audio/S05-main-A.wav": "c94c0d09b398e50c9ae2876ba137a6985a2ec3291c6f9b8b52e06877f9985a00",
+    "build/music-material-selection/cue-edits-v1/audio/S05-main-B.wav": "1f267727b6d531200099bf70656218e364de7982e1a2e508031cf9f8f8c90c35",
+    "build/music-material-selection/cue-edits-v1/audio/S05-main-C.wav": "834e1f41ef06061c964f440547fa80538d034cbfe21ebe3e03a35bb1b0dc477e",
+    "build/music-material-selection/cue-edits-v1/audio/S05-short-C.wav": "867157b4be90bb06a7a4b29bb6600a1224e7b728be7a71f8fd7dfa25f0838329",
+    "build/music-material-selection/cue-edits-v1/audio/S07-a-C.wav": "26e9d3e8f31c663afc9ec5ab80d5a94620c13d57f6bb3de80f4a742e3ce0d0f6",
+    "build/music-material-selection/cue-edits-v1/audio/S07-b-A.wav": "a1cd6ec52061d786523e809210bbc4a2890accf19ca3a687fea03b5d17ee0bf3",
+    "build/music-material-selection/cue-edits-v1/audio/S07-b-B.wav": "d3d950e07048b0b7c0ffe40def3882f3499d87d6e362477203f26bec588ae169",
+    "build/music-material-selection/cue-edits-v1/audio/S07-b-C.wav": "2ea701a338ba1b11662e7ba346accdf8314ae63c8ca72dbe9296048ecf8143f5",
+    "build/music-material-selection/cue-edits-v1/audio/S07-c-C.wav": "8903bbd1b2c36d4c66a5471e3a67ae93f5e52ea0585c80b4a8f3ca3df5ceb71a",
+    "build/music-material-selection/cue-edits-v1/audio/S11-long-C.wav": "b09cbabb95f98e1ffd3192a47546eab51bd071e85194677c85092f995b28a155",
+    "build/music-material-selection/cue-edits-v1/audio/S11-short-A.wav": "7e63aebb80c413c4e886faaf2b4e73144ef1b70a2f7cea8144bf0c4aa8c43fe1",
+    "build/music-material-selection/cue-edits-v1/audio/S11-short-B.wav": "365898d7ffdc5bf1922655cc9e54c22b9244c2776bee82d33e71e8a15546d746",
+    "build/music-material-selection/cue-edits-v1/audio/S11-short-C.wav": "9cd9afd46c9161d919a81f59f0d2b0c82bce4766b97a12970279a07ea06587fc",
+    "build/music-material-selection/cue-edits-v1/audio/S12-1-C.wav": "f969bb54cdd11dd1bcfff342dbdf2f91ec4fa521da3e6a8406907b8f96ab7559",
+    "build/music-material-selection/cue-edits-v1/audio/S12-2-A.wav": "0ec3087ca4e5884dc95503bee031519069a9f0b60590da6430b8167cd81afa47",
+    "build/music-material-selection/cue-edits-v1/audio/S12-2-B.wav": "73d00b821f43abc16bfcd51d02bcc532c257e6c6472f35a149bc8573cb4be761",
+    "build/music-material-selection/cue-edits-v1/audio/S12-2-C.wav": "28713e972f3ffb876fabaf457dfd420ba1b81a1d266afda0cd4f3ea83e1c8aeb",
+    "build/music-material-selection/cue-edits-v1/audio/S12-3-C.wav": "4a6deb352c4eb09322ab3a26eda1c2e112e272fa0da1d1332b3bb9ab9dd5aa33",
+    "build/music-material-selection/cue-edits-v1/audio/S12-4-C.wav": "bfc66531110ce60acedaa8f38eb5f3e5b28c612ed524d5b50ae23a67b282c5ad",
+    "build/music-material-selection/cue-edits-v1/audio/S14-1-C.wav": "ffa559ac37df926ff67ead439eb8c7bcfca7470f655e2e6918813293f1ad6d11",
+    "build/music-material-selection/cue-edits-v1/audio/S14-2-C.wav": "30f67ea333728cdbee7f4d6e2e2ceaf6d2a5ef04a71dc24e1d038b0377a4ba92",
+    "build/music-material-selection/cue-edits-v1/audio/S15-a-C.wav": "a9e1189bc7ec756edee2709b114e60d86645bd8902e4567c0e3241e663415c41",
+    "build/music-material-selection/cue-edits-v1/audio/S15-b-C.wav": "7e08cecfae35b61d3ef192e2410bd2860f3e3e2be9c265f7a22b23210da10dae",
+    "build/music-material-selection/cue-edits-v1/audio/S16-1-C.wav": "c4e650264b028497f6b3956ed1b6347705b1e0341986cc99f4751bcf1975ecab",
+    "build/music-material-selection/cue-edits-v1/audio/S16-2-C.wav": "f67cd70bbcb7cbb486f7e616fe10d31b873691b2c3567e9f5d1ea98030928c6d",
+    "build/music-material-selection/cue-edits-v1/audio/S16-3-C.wav": "a10854c5e729c75ea2c2d3a31cc671592b1dae4984cc8163da0e1f6ea92ed307",
+    "build/music-material-selection/cue-edits-v1/audio/S18-1-C.wav": "48b7c55a8e9f9b0b90aabdb4eb7726c44f83ebb410cbc4c3d2152b4c473e5705",
+    "build/music-material-selection/cue-edits-v1/audio/S18-2-C.wav": "ad20472e7aa54eda87fdf02c58626f7ef8b63a1ea35cead7d763bc9a295e5d73",
+    "build/music-material-selection/cue-edits-v1/audio/S18-3-C.wav": "1a75617a6c43403fa5b26991422070385f86a96d93c0d477b8714a4b7f2bbda7",
+    "build/music-material-selection/cue-edits-v1/audio/S20-a-C.wav": "e7c84a51e010cbfb216232de7ea67fd8aa86b9a618db1fafeb4e5d1f4165a9a6"
+  },
+  "scope": "Two unresolved cues only. No new freeze variant because reported v2 B/C handoff is shared before freeze. Preserve all accepted audio. No game integration.",
+  "cues": [
+    {
+      "cue": "S05-short",
+      "wet_db": -14,
+      "same_until_player": 23.7,
+      "ending_button_relative": 21.7,
+      "measurement_player_range": [
+        23,
+        26.5
+      ],
+      "note": "B replaces our provisional 23\u201323.7s fade with 21.7\u201323.7s. C retains 23\u201323.7s. Both keep source cut23.7s and use the same fixed pre-ending-fade send and gain. The earlier fade is provisional for listening, not a change to your source split.",
+      "variants": {
+        "B": {
+          "send_policy": "pre_ending_fade",
+          "dry_fade": [
+            21.7,
+            23.7
+          ],
+          "label": "B \u2014 v3 primary: gentler 2s dry fade, established room"
+        },
+        "C": {
+          "send_policy": "pre_ending_fade",
+          "dry_fade": [
+            23,
+            23.7
+          ],
+          "label": "C \u2014 v3 control: original 0.7s fade, same room"
+        }
+      }
+    },
+    {
+      "cue": "S11-short",
+      "wet_db": -14,
+      "same_until_player": 20,
+      "ending_button_relative": 18,
+      "measurement_player_range": [
+        19,
+        23
+      ],
+      "note": "B and C retain your exact18\u201320s dry fade. B feeds the room independently of that ending fade; C uses the fading dry send. They share the same fixed wet gain and are identical before the dry fade starts.",
+      "variants": {
+        "B": {
+          "send_policy": "pre_ending_fade",
+          "dry_fade": [
+            18,
+            20
+          ],
+          "label": "B \u2014 v3 primary: original dry fade, sustained source send"
+        },
+        "C": {
+          "send_policy": "post_fader",
+          "dry_fade": [
+            18,
+            20
+          ],
+          "label": "C \u2014 v3 control: original dry fade, fading source send"
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Music research and design decisions
 
-**Current reading order:** report65 records partial v2 listening acceptance: three Keep, two unresolved Adjust. Report64 is the corrective implementation and technical evidence, not proof of perceptual success for the two remaining cues. Reports58–63 preserve original cuts, preferences and earlier feedback. No full24 propagation or game integration.
+**Current reading order:** report66 provides a two-cue v3 handoff comparison following report65’s partial v2 acceptance. The three accepted v2 renders remain untouched. New B/C are conventional controls; measured improvement is not listening approval. Reports58–65 preserve original cuts, preferences and feedback. No all24 propagation or game integration.
 
 This index includes **historical investigations** and the current Stage 1 direct-State-volume plan. Earlier reports 04–12 describe superseded or optional constructions; read 13–14 for the active engineering direction. Claims are either observed evidence, inference or untested hypotheses:
 
@@ -129,3 +129,5 @@ Current next action (report50): the reviewed eight-region policy now ships five 
 64. [Continuous reverb-tail correction](64-continuous-reverb-tail-correction.md): five cues,12 new private PCM renders, continuous post-fader B with longer RT60, optional freeze with immediate release, unchanged v1 comparisons and explicit S04 onset edit.191 tests and independent PCM/preservation/client gates pass; user listening remains required. [Plan](64-continuous-tail-plan.json), [evidence](64-continuous-tail-evidence.json).
 
 65. [User v2 cue-tail feedback](65-user-cue-tail-v2-feedback.md): three specific renders accepted; S05-short/S11-short retain audible handoff problems despite passing technical checks. [Byte-exact decisions](65-user-cue-tail-v2-decisions.json). No audio regenerated.
+
+66. [Two-cue handoff balance correction](66-two-cue-handoff-balance-correction.md): stronger established room, bounded send/fade comparisons, six new private WAVs,193 tests and exact preservation/regeneration checks. User listening pending. [Plan](66-handoff-balance-plan.json), [evidence](66-handoff-balance-evidence.json).

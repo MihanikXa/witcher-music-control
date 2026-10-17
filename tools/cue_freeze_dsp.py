@@ -199,9 +199,11 @@ def finish_quiet_tail(raw):
 
 
 def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=2, trail=3):
-    """V2: continuous post-fader send; natural decay or immediate single freeze release.
+    """Continuous send; natural decay or immediate single freeze release.
 
     Kept separate from render_variants so accepted v1 files remain reproducible.
+    Default preserves v2 post-fader behavior; v3 optionally bypasses ending fade
+    for room excitation only, keeping the dry edit and source stop independent.
     No late wet normalization, attack, hold, sidechain or perceptual auto-correction.
     Freeze occurs at actual dry stop, not at the beginning of a changing phrase's fade.
     """
@@ -225,7 +227,22 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
     if not 80<=hp<lp<=8000:raise ValueError('Unsafe field bandwidth')
     sos=np.concatenate([signal.butter(2,hp,'highpass',fs=RATE,output='sos'),
                         signal.butter(2,lp,'lowpass',fs=RATE,output='sos')])
-    filtered=signal.sosfilt(sos,padded,axis=0)
+    send_policy=settings.get('send_policy','post_fader')
+    if send_policy not in ('post_fader','pre_ending_fade'):raise ValueError('Unsupported send policy')
+    excitation=padded
+    send_guard=0
+    if send_policy=='pre_ending_fade':
+        # Experimental v3: preserve dry edit exactly, but avoid draining the room
+        # while dry fades. The source stops at the same cut; no music beyond it.
+        if onset:raise ValueError('Pre-ending send onset repair needs separate review')
+        send_guard=settings.get('send_stop_guard_seconds',.02)
+        n=round(send_guard*RATE);stop_frame=round(fe*RATE)
+        if not 2<=n<round((fe-fs)*RATE):raise ValueError('Invalid excitation-stop guard')
+        entrance=np.ones(len(segment));ni=round(settings['fade_in']*RATE)
+        if ni>=2:entrance[:ni]*=ramp(ni)
+        entrance[stop_frame-n:stop_frame]*=1-ramp(n);entrance[stop_frame:]=0
+        excitation=np.zeros_like(padded);excitation[:len(segment)]=segment*entrance[:,None]
+    filtered=signal.sosfilt(sos,excitation,axis=0)
     field=Field(rt60)
     # Both modes have exactly the same audible field before dry stop.
     stop=round(fe*RATE)
@@ -268,6 +285,7 @@ def render_continuous(source, settings, rt60, freeze=False, wet_gain=None, lead=
         dry_stop_max_sample_delta=seam,energy_trace=trace,initial_energy=initial,
         settled_energy_relative_range=drift,windows_50ms=win,
         wet_control_checks=controls,
+        send_policy=send_policy,send_stop_guard_seconds=send_guard,
         entire_transition_geometry=release_diagnostics(raw,max(0,fs-1)),
         release_diagnostics=release_diagnostics(raw,fe),
         post_stop_first_second_dbfs=float(20*np.log10(max(np.sqrt(np.mean(raw[stop:stop+RATE]**2)),1e-12))))

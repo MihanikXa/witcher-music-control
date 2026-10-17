@@ -77,5 +77,23 @@ class ContinuousTailTests(unittest.TestCase):
         self.assertEqual(finish_quiet_tail(quiet),1e-6)
         self.assertTrue(np.all(quiet[-1]==0))
 
+    def test_pre_ending_send_changes_room_without_changing_dry_or_cut(self):
+        source=self.source();s=self.settings()
+        a,p,ac=render_continuous(source,s,4)
+        b,q,bc=render_continuous(source,{**s,'send_policy':'pre_ending_fade'},4,wet_gain=p['wet_gain'])
+        self.assertTrue(np.array_equal(ac['dry'],bc['dry']))
+        self.assertTrue(np.array_equal(a[:5*RATE],b[:5*RATE])) # Up to player5 = source fade start3.
+        self.assertEqual(p['source_end_frame'],q['source_end_frame'])
+        self.assertGreater(q['post_stop_first_second_dbfs'],p['post_stop_first_second_dbfs']+5)
+        self.assertEqual(q['send_stop_guard_seconds'],.02)
+        self.assertLess(q['cleanup_peak_dbfs'],-100)
+        self.assertFalse(q['release_diagnostics']['rebound_review'])
+
+    def test_unreviewed_send_policies_and_onset_paths_fail_closed(self):
+        for settings in [{**self.settings(),'send_policy':'unknown'},
+                         {**self.settings(),'send_policy':'pre_ending_fade','onset_mute_seconds':.5},
+                         {**self.settings(),'send_policy':'pre_ending_fade','send_stop_guard_seconds':3}]:
+            with self.assertRaises(ValueError):render_continuous(self.source(),settings,4)
+
 
 if __name__=='__main__':unittest.main()
