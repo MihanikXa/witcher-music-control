@@ -5,7 +5,33 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Explicit approval of equipped marker and Review — 18 October 2026
+## Active Inventory implementation route — 18 October 2026
+
+The user-approved 1672x941 screenshot is **the visual authority**:
+vertical category rail → compact one-column text/icon item list →
+persistent middle details → right-side Geralt. No redesign of its proportions,
+typographic hierarchy, character size or footer. Reuse the approved existing
+**equipped notch/stripe**. The new **Review** category appears FIRST and
+filters genuine significant acquisitions, not routine repeated materials.
+
+**Read before another Codex implementation**:
+- [Native source-to-screen map](design/inventory-approved-implementation-map.md)
+- [Review acquisition/state contract](design/inventory-review-behavior-contract.md)
+- [User-approved visual reference](design/inventory-reference-accepted-review.md)
+
+The screenshot is NOT committed to Git; place the unchanged original in the
+ignored local `reference/inventory-design/approved-inventory-reference.png`.
+Verify SHA-256 `9e7d6bdb0bad0d28b5bacfc02e8433dac177b34690303acee8af6cd03b235ac9`.
+If absent, ask user for file; do not infer visual target from P1/P2.
+
+Next is **Gate 0–1 only**: inspect accepted Menus v4 native resource owners,
+exact equipped notch, item row/data/actions, background/footer and produce
+sparse+dense visual proofs against reference. Obtain user visual approval
+before native binary build. P1/P2 layout and flicker are rejected; use only
+their functional source evidence. Review exact policy thresholds are examples,
+not explicit user choices. No automatic Vortex, game, merge or save changes.
+
+## Historical approval note — equipped marker and Review — 18 October 2026
 
 User confirms the small **equipped notch/stripe already exists and is accepted**
 in their current working Inventory design; reuse it **exactly**, no new marker

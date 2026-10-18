@@ -50,3 +50,14 @@ Data model/technical care:
 - The image example displays populated list rows and stats, but static generated image values are **illustrative**, not validated in-game item data.
 
 This document supersedes earlier assistant-proposed Gear gallery, small-item grid and layout tuning; preserve historical implementation notes as rejected experimental evidence.
+
+## Current source map and staged route — 18 October 2026
+
+The approved screenshot is mapped to Witcher 3 owners and source boundaries in
+[the implementation map](inventory-approved-implementation-map.md), with
+[Review behavior](inventory-review-behavior-contract.md).
+These are planning specifications, not a compiled candidate or permission to
+change the live game. The exact screenshot must also be copied to the ignored
+local `reference/inventory-design/` checkout for Codex; do not visually
+approximate using P1/P2 source.
+

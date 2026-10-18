@@ -29,6 +29,15 @@ material. See [selected visual reference and Review policy](inventory-reference-
 This overrides earlier large-grid Gallery designs and prior "no permanent
 review tab" proposals. No implementation approved yet.
 
+**Current approved route (18 October):** the older large-grid Gear
+implementation roadmap below is **historical and superseded** by the user's
+chosen vertical-category / compact-list / full-details / Geralt concept,
+existing equipped notch and first-category Review. Read
+[the source-to-screen map](inventory-approved-implementation-map.md)
+and [Review behavior](inventory-review-behavior-contract.md) instead.
+The approved middle details region **remains persistent**; historical assistant
+preferences to collapse it are no longer valid.
+
 ## Historical guiding principle
 Items that require no decision should generate no management task. Separate native item/action state, custom display/focus, and optional third-party filtering/cleanup. One Inventory screen, no persistent three-column details dashboard.
 
