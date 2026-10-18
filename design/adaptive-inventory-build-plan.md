@@ -2,7 +2,15 @@
 
 Status: proposal for user review, not code deployed or runtime certified. Work only on ui-overhaul, preserve the accepted 0.8.7 Menus v4, Gentium/Item Art/Bestiary/Map and HUD RC2.
 
-**17 October implementation update:** [Gear Prototype 1](../research/adaptive-inventory-v2-gear-p1.md)
+**18 October correction (supersedes P1 \"first playable\" success framing):** The
+user *rejected* P1 in-game. Its old-orbit background, native topbar collisions,
+tiny scattered groups, blank contextual summary, duplicate/hardcoded
+keyboard/gamepad footer and detached Geralt contradict the agreed UX.
+The active next work is [the P2 composition/interaction contract](adaptive-inventory-p2-composition-contract.md).
+Do **not** infer that P1's native validation or 16 offline tests establish
+visual usability; preserve P1 only as a functional experiment.
+
+**Historical 17 October implementation update:** [Gear Prototype 1](../research/adaptive-inventory-v2-gear-p1.md)
 is implemented and privately packaged on the accepted v4 Inventory. Final native
 cook/validate/pack/metadata and 16 targeted offline tests pass; in-game acceptance
 and manual installation remain pending. [QoL source findings/adoption matrix](../research/adaptive-inventory-v2-qol.md)

@@ -5,7 +5,23 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest user corrections to rejected Inventory P1 — 18 October 2026
+## Active next work — P2 coherent Inventory composition contract (18 October 2026)
+
+User agreed to **prepare the source-grounded visual/interaction specification
+before another expensive full Inventory build**. Read
+[Adaptive Inventory P2 composition/interaction contract](design/adaptive-inventory-p2-composition-contract.md)
+first. This document is a proposed design, **not an accepted P2 implementation**.
+Major requirements: one quiet common navigation, reflow the actual native item
+slots into a cohesive gallery, selected-item summary must genuinely populate,
+Geralt integrated, remove obsolete **Inventory-specific old-slot background**,
+one device- and mode-sensitive footer provider, proper sparse/dense geometry.
+Distinguish compiled source observations from unknown actual movie child
+ownership and current input-device API. First build is a bounded structural
+proof with a user screenshot gate, **not** another whole adaptive QoL rollout.
+Preserve accepted Menus v4/Gentium/art, HUD RC2, v1/P1 rollback and no live
+deployment.
+
+## Prior user corrections to rejected Inventory P1 — 18 October 2026
 
 The user agrees P1 failed and adds two **explicit** defects:
 (1) its Inventory background/engraving composition assumes the old equipment
