@@ -5,7 +5,20 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## P2 first runtime screenshot — 18 October 2026
+## Most recent user authority — P2 rejected (18 October 2026)
+
+P2 is **explicitly rejected** for giant low-resolution detached item icons,
+small/disconnected Geralt, off-style green-black canvas, disorganized/wasteful
+screen and flashes/disappearing-reappearing elements during actions. Read
+[direct P2 rejection](research/adaptive-inventory-p2-user-rejection.md).
+This supersedes the previous recommendation to do a bounded P2 refinement.
+Preserve P2 as code/diagnostic evidence only. Next: revert the test profile
+to Menus v4 manually; get explicit user acceptance of a real-scale static
+sparse+dense visual composition *before any further native Inventory build*.
+Trace P2 flicker separately, without asserting a root cause; preserve HUD RC2,
+the accepted menu baseline and existing working mods. No automatic live edits.
+
+## Historical P2 first runtime screenshot — 18 October 2026
 
 The user supplied a **first in-game P2 screenshot** and asked to check the
 repository. See [P2 first runtime review](research/adaptive-inventory-p2-runtime-first-screenshot.md).
