@@ -81,3 +81,15 @@ interaction**, not checksums. No new permanent tabs/animated dashboards/
 inventory QoL additions required in this rescue.
 
 User screenshot is in conversation attachment, not in public repo.
+
+## Follow-up direct user corrections — 18 October 2026
+
+The user explicitly agreed with the earlier rejection and added, verbatim:
+
+> Agree with all. And 6. background is a mess too, it assumes the existence of previous slots around geralt. And also doesn't seem very adaptive to controller/keyboard.
+
+**This supersedes the earlier assistant wording that background engravings merely "remain but do not fix hierarchy".** The user rejects the actual **Inventory background composition** because its illustrations/ornaments are situated relative to the old equipment orbit. The next Inventory design must remove or recompose those specific Inventory/old-slot-dependent layers while preserving the approved Ink & Iron appearance and shared menus elsewhere. Do not infer that turning up alpha or changing global HDR will fix it. Trace the real owners of each visual layer (Inventory movie vs shared art/cache), then build a coherent Inventory-only backdrop for the new layout. Preserve original assets/rollback; no screenshot-driven invention of texture ownership.
+
+**Input adaptation is a separate explicit requirement:** The user says the screen does not seem properly adaptive to keyboard/controller. In P1's `src/inventory/adaptive/AdaptiveMenu.asinc`, `qfAdaptiveButton` inserts permanently visible literal labels (`Inspect   I / View`, `Equipment   Tab / LS`), irrespective of currently active device, while the native footer continues to render Xbox glyphs/actions. This is source-supported evidence of a static mixed-input presentation, not proof every controller event itself is broken. The future design must have **one live input-prompt owner** and context/device-sensitive actions: mouse/keyboard prompts when keyboard/mouse active, correct gamepad glyphs when controller active, update on switching devices, only valid hints for browsing/inspection/auxiliary states, no redundant footer+button layer. Reuse verified native input-device detection and focus conventions. Audit whether the existing quick bindings (I / View, Tab / LS, Esc / B, Shift/LT) conflict with global/menu commands; don't claim they work merely because static tests pass. Check controller hold/repeat, directional focus, escape/back and input-device transition in-game.
+
+**Explicit redesign acceptance gate:** Visual smoke-test on a sparse inventory must show (a) no obsolete slot-dependent background engravings, (b) one integrated navigation/footer system, (c) no keyboard labels attached to controller-only visuals, (d) a working selected-item summary and (e) responsive layout. Use a populated inventory as second test. P1 itself remains rejected; preserve its code only as contract evidence.

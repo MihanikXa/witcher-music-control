@@ -5,7 +5,22 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest P1 in-game rejection — user explicit (17 October 2026)
+## Latest user corrections to rejected Inventory P1 — 18 October 2026
+
+The user agrees P1 failed and adds two **explicit** defects:
+(1) its Inventory background/engraving composition assumes the old equipment
+slots around Geralt; (2) the interface is not convincingly adaptive to
+controller versus keyboard. See
+[direct user correction and scoped requirements](research/adaptive-inventory-v2-p1-runtime-rejection.md).
+The next Inventory design must remove/recompose **slot-dependent background
+art only within Inventory**, retaining accepted art elsewhere, and own one
+context/device-sensitive prompt system rather than hardcoded mixed I/View,
+Tab/LS labels plus a second native footer. Verify live input-device changes,
+controller focus and prompt transitions. These are independent of the already
+listed layout, summary and empty-space failures. P1 remains rejected; do not
+proceed by coordinate-only patches or misleading static UI proofs.
+
+## Prior P1 in-game rejection — user explicit (17 October 2026)
 
 The first **Adaptive Inventory v2 Gear Prototype 1** has now been shown in-game
 and the user's exact response is: **"No idea the fuck this is"**.
