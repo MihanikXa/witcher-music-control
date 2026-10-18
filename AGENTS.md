@@ -5,7 +5,26 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Most recent user authority — P2 rejected (18 October 2026)
+## Latest accepted Inventory visual direction and Review (18 October 2026)
+
+The user chose a **specific generated concept screenshot** as the preferred
+Inventory layout: one vertical category rail, adjacent **compact one-column
+item list**, middle selected-item details, and Geralt on the right with a
+quiet footer/background. Read
+[accepted reference and explicit correction](design/inventory-reference-accepted-review.md).
+The user **rejects ALL assistant refinements** to Geralt size, detail
+hierarchy, category rail spacing and footer, except equipped-state marking
+may warrant a subtle solution. **Add Review as the FIRST category**, for
+noteworthy newly acquired items (not every herb/duplicate material), rather
+than a raw Recent tab. Real acquisition history and durable per-item
+dismissal must underpin Review; initial eligibility rules are candidates,
+not user-approved scores. The user's visual direction supersedes the prior
+Gear grid/gallery, P1/P2 plans. Do not do another experimental native build
+or alter accepted Menus v4/HUD RC2 without a reviewed source/visual plan.
+The reference image exists in conversation, not repo; do not claim pixel-level
+specification from the source code alone.
+
+## Historical user authority — P2 rejected (18 October 2026)
 
 P2 is **explicitly rejected** for giant low-resolution detached item icons,
 small/disconnected Geralt, off-style green-black canvas, disorganized/wasteful

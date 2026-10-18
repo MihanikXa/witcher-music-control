@@ -18,7 +18,18 @@ cover all three supplied archives and current FriendlyHUD/AutoLoot. No optional
 runtime mod was integrated. After Gear acceptance, prioritize adaptive
 Usables/Satchel before acquisition-aware Review or safe bulk cleanup.
 
-## Guiding principle
+**18 October visual-direction supersession:** The user selected a generated
+concept image with **left category rail → adjacent compact item list → central
+details → right-hand Geralt**, and explicitly rejected assistant suggestions
+to shrink Geralt, alter detail hierarchy, tighten rail spacing or restyle
+footer. Only **equipped markers** remain open for possible refinement.
+The user adds **Review/To Review as FIRST category**: a persisted
+acquisition-aware attention filter that does NOT flag the hundredth routine
+material. See [selected visual reference and Review policy](inventory-reference-accepted-review.md).
+This overrides earlier large-grid Gallery designs and prior "no permanent
+review tab" proposals. No implementation approved yet.
+
+## Historical guiding principle
 Items that require no decision should generate no management task. Separate native item/action state, custom display/focus, and optional third-party filtering/cleanup. One Inventory screen, no persistent three-column details dashboard.
 
 ## First playable release: Gear
