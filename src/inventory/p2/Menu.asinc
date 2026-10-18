@@ -1,0 +1,282 @@
+      protected var p2Allowed:Boolean = false;
+      protected var p2Active:Boolean = false;
+      protected var p2Mode:String = "Browse";
+      protected var p2Base:Object;
+      protected var p2Scene:Sprite;
+      protected var p2Summary:Sprite;
+      protected var p2Fields:Array;
+      protected var p2Layout:Object;
+      protected var p2LayoutKey:String = "";
+      protected var p2Selection:uint = 0;
+      protected var p2SelectedRevision:int = -1;
+      protected var p2SummaryDirty:Boolean = true;
+      protected var p2Tip:TooltipInventory;
+      protected var p2SummaryTarget:uint = 0;
+      protected var p2SavedSelection:Object;
+      protected var p2PreviewMask:Shape;
+      protected var p2CompareHeld:Boolean = false;
+      protected var p2Comparing:Boolean = false;
+      public function qfGearEnabled(on:Boolean) : void
+      {
+         this.p2Allowed = on;
+         if(!on) this.p2Leave();
+      }
+      protected function p2Text(size:Number) : TextField
+      {
+         var tf:TextField = new TextField();
+         tf.embedFonts = true; tf.selectable = false; tf.mouseEnabled = false;
+         tf.defaultTextFormat = new TextFormat("$NormalFont",size,0xD1C7B1);
+         tf.multiline = false; tf.wordWrap = false;
+         this.p2Summary.addChild(tf); return tf;
+      }
+      protected function p2NativeModal() : Boolean
+      {
+         return this.mcSortingMode.visible || this.mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging() || this._rendererController.isActive();
+      }
+      protected function p2Enter() : void
+      {
+         this.p2Active = true; this.p2Mode = "Browse";
+         this.p2Base = {rendererX:this.mcCharacterRenderer.x,rendererY:this.mcCharacterRenderer.y,sx:this.mcCharacterRenderer.scaleX,sy:this.mcCharacterRenderer.scaleY,mask:this.mcCharacterRenderer.mask,dock:TooltipInventory.iaiDock ? TooltipInventory.iaiDock.clone() : null,head:this.iaiHeadOn,eq:this.iaiEqWant,sortX:this.btnSort.x,sortY:this.btnSort.y,changeX:this.btnSortChange.x,changeY:this.btnSortChange.y,drop:this.dropSlot.visible};
+         SlotBase.qfGearGrid = true;
+         ContextInfoManager.p2Active = true;
+         ContextInfoManager.p2Payloads = {};
+         ContextInfoManager.getInstanse().iaiDropDocked();
+         this.p2Scene = new Sprite(); this.p2Scene.mouseEnabled = this.p2Scene.mouseChildren = false;
+         addChildAt(this.p2Scene,getChildIndex(this.mcPlayerInventory));
+         this.p2Summary = new Sprite(); this.p2Summary.mouseEnabled = this.p2Summary.mouseChildren = false;
+         addChild(this.p2Summary);
+         this.p2Fields = [this.p2Text(27),this.p2Text(22),this.p2Text(18)];
+         this.p2PreviewMask = new Shape(); addChild(this.p2PreviewMask);
+         this.mcCharacterRenderer.mask = this.p2PreviewMask;
+         this.mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.INDEX_CHANGE,this.p2SelectionChanged,false,0,true);
+         this.mcPlayerInventory.mcPlayerGrid.addEventListener("p2GalleryChanged",this.p2SelectionChanged,false,0,true);
+         this.mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.ITEM_ROLL_OVER,this.p2Hover,false,0,true);
+         this.mcPlayerInventory.addEventListener("p2Exit",this.p2Removed,false,0,true);
+         ContextInfoManager.getInstanse().addEventListener("p2ItemData",this.p2DataArrived,false,0,true);
+         InputManager.getInstance().addEventListener(ControllerChangeEvent.CONTROLLER_CHANGE,this.p2Device,false,0,true);
+         InputDelegate.getInstance().addEventListener(InputEvent.INPUT,this.p2Input,false,120,true);
+         stage.addEventListener(MouseEvent.MOUSE_WHEEL,this.p2Wheel,true,120,true);
+         addEventListener(Event.REMOVED_FROM_STAGE,this.p2Removed,false,0,true);
+         this.p2SummaryDirty = this.p2FooterDirty = true;
+         this.p2Selection = 0; this.p2SelectedRevision = -1; this.p2LayoutKey = "";
+      }
+      protected function p2Hover(e:ListEvent) : void
+      {
+         if(!this.p2Active || this.p2Mode != "Browse" || !InputManager.getInstance().isMouse()) return;
+         if(e.itemRenderer) this.mcPlayerInventory.mcPlayerGrid.selectedIndex = e.itemRenderer.index;
+      }
+      protected function p2SelectionChanged(e:Event) : void { this.p2SummaryDirty = this.p2FooterDirty = true; }
+      protected function p2DataArrived(e:Event) : void { this.p2SummaryDirty = true; }
+      protected function p2Device(e:ControllerChangeEvent) : void { this.p2FooterDirty = true; }
+      protected function p2RenderSummary() : void
+      {
+         var grid:SlotsListGrid = this.mcPlayerInventory.mcPlayerGrid;
+         var stub:Object = grid.p2Selected();
+         if(!stub) { for each(var blank:TextField in this.p2Fields) blank.text = ""; return; }
+         var id:uint = uint(stub.id);
+         var changed:Boolean = id != this.p2Selection || grid.p2Revision != this.p2SelectedRevision;
+         if(changed)
+         {
+            this.p2Selection = id; this.p2SelectedRevision = grid.p2Revision;
+            this.p2SummaryTarget = id;
+            // Verified native command -> current Inventory provider -> ItemId
+            // keyed dataReceiver. No visible TooltipInventory is required.
+            dispatchEvent(new GameEvent(GameEvent.CALL,"OnGetItemData",[id,int(stub.slotType)]));
+         }
+         var payload:Object = ContextInfoManager.p2Payloads[String(id)];
+         var name:String = payload && payload.ItemName ? String(payload.ItemName) : (stub.itemName ? String(stub.itemName) : String(stub.category || "Equipment"));
+         var primary:String = "";
+         var tradeoff:String = "";
+         if(payload)
+         {
+            if(Number(payload.PrimaryStatValue) > 0)
+            {
+               var value:Number = Number(payload.PrimaryStatValue);
+               var spread:Number = Number(payload.PrimaryStatDelta);
+               primary = String(payload.PrimaryStatLabel || "") + "  " + (spread > 0 ? Math.round(value - value * spread) + "–" + Math.round(value + value * spread) : String(Math.round(value)));
+               if(payload.PrimaryStatDiffStr) primary += "   " + String(payload.PrimaryStatDiffStr);
+            }
+            if(payload.RequiredLevel) tradeoff = String(payload.RequiredLevel);
+            if(payload.WarningMessage) tradeoff += "   " + String(payload.WarningMessage);
+            if(payload.equippedItemData && payload.SocketsList is Array && payload.equippedItemData.SocketsList is Array && payload.SocketsList.length != payload.equippedItemData.SocketsList.length)
+               tradeoff += "   Sockets " + payload.SocketsList.length + " / " + payload.equippedItemData.SocketsList.length + " equipped";
+         }
+         if(primary == "") primary = Boolean(stub.isEquipped) ? "[[panel_blacksmith_equipped]]" : String(payload && payload.ItemType ? payload.ItemType : stub.category || "");
+         TextField(this.p2Fields[0]).htmlText = name;
+         TextField(this.p2Fields[1]).htmlText = primary;
+         TextField(this.p2Fields[2]).htmlText = tradeoff;
+         if(this.p2Mode == "Inspect" && payload) this.p2ShowDetails(payload);
+      }
+      protected function p2ShowDetails(payload:Object) : void
+      {
+         if(!this.p2Tip)
+         {
+            var type:Class = getDefinitionByName("ItemTooltipRef_mouse") as Class;
+            this.p2Tip = new type() as TooltipInventory;
+            if(!this.p2Tip) return;
+            addChild(this.p2Tip);
+         }
+         this.p2Tip.p2Details(payload,this.p2Layout.content);
+      }
+      protected function p2SetMode(mode:String) : void
+      {
+         if(!this.p2Active || this.p2NativeModal()) return;
+         var grid:SlotsListGrid = this.mcPlayerInventory.mcPlayerGrid;
+         if(this.p2Mode == "Browse") this.p2SavedSelection = {id:this.p2Selection,scroll:grid.scrollPosition};
+         if(this.p2Tip) { this.p2Tip.p2Close(); this.p2Tip = null; }
+         ContextInfoManager.getInstanse().iaiDropDocked();
+         this.p2Mode = mode; ContextInfoManager.p2Mode = mode;
+         this.mcPlayerInventory.enabled = this.mcPlayerInventory._inputEnabled = mode == "Browse";
+         this.mcPlayerInventory.mcPlayerGrid.visible = mode == "Browse";
+         this.p2Summary.visible = mode == "Browse";
+         var targetRect:Rectangle = this.p2Layout.content.clone(); targetRect.width *= 0.56;
+         this.mcPaperDollModule.p2Targets(targetRect,mode == "Auxiliary");
+         if(mode == "Auxiliary")
+         {
+            selectTargetModule(this.mcPaperDollModule);
+            this.mcPaperDollModule.mcPaperdoll.selectedIndex = this.mcPaperDollModule.mcPaperDollSlot3.index;
+         }
+         else if(mode == "Browse")
+         {
+            selectTargetModule(this.mcPlayerInventory);
+            if(this.p2SavedSelection)
+            {
+               var selected:SlotBase = grid.getSlotByID(this.p2SavedSelection.id);
+               if(selected) grid.selectedIndex = selected.index;
+               grid.scrollPosition = this.p2SavedSelection.scroll;
+            }
+         }
+         this.p2SummaryDirty = this.p2FooterDirty = true;
+      }
+      protected function p2Input(e:InputEvent) : void
+      {
+         if(!this.p2Active || e.handled || !e.details || this.p2NativeModal()) return;
+         var d:InputDetails = e.details;
+         var inspect:Boolean = d.code == KeyCode.I || d.navEquivalent == NavigationCode.GAMEPAD_BACK;
+         var aux:Boolean = d.code == KeyCode.TAB || d.navEquivalent == NavigationCode.GAMEPAD_L3;
+         var back:Boolean = d.code == KeyCode.ESCAPE || d.navEquivalent == NavigationCode.GAMEPAD_B;
+         if(this.p2Mode == "Inspect" && !(inspect || back))
+         {
+            if(d.code == KeyCode.SHIFT || d.code == KeyCode.SHIFT_LEFT || d.code == KeyCode.SHIFT_RIGHT || d.navEquivalent == NavigationCode.GAMEPAD_L2)
+            {
+               if(d.value == InputValue.KEY_DOWN) { this.p2CompareHeld = true; this.p2Comparing = true; }
+               else if(d.value == InputValue.KEY_UP) { this.p2Comparing = InputManager.getInstance().isMouse() && !this.p2CompareHeld ? !this.p2Comparing : false; this.p2CompareHeld = false; }
+               if(this.p2Tip) this.p2Tip.showEquippedTooltip(this.p2Comparing);
+               e.handled = true; e.stopImmediatePropagation(); return;
+            }
+            var n:String = d.navEquivalent;
+            var scroll:int = n == NavigationCode.UP || n == NavigationCode.RIGHT_STICK_UP || n == NavigationCode.PAGE_UP ? -1 : (n == NavigationCode.DOWN || n == NavigationCode.RIGHT_STICK_DOWN || n == NavigationCode.PAGE_DOWN ? 1 : 0);
+            if(scroll && this.p2Tip && SlotBase.qfGearPadAllow(d,getTimer()) && d.value != InputValue.KEY_UP) this.p2Tip.iaiScrBy(scroll * 48);
+            e.handled = true; e.stopImmediatePropagation(); return;
+         }
+         if(inspect || aux || back && this.p2Mode != "Browse")
+         {
+            if(d.value == InputValue.KEY_UP)
+            {
+               if(back || inspect && this.p2Mode == "Inspect" || aux && this.p2Mode == "Auxiliary") this.p2SetMode("Browse");
+               else if(inspect) this.p2SetMode("Inspect");
+               else this.p2SetMode("Auxiliary");
+            }
+            e.handled = true; e.stopImmediatePropagation();
+         }
+      }
+      protected function p2Wheel(e:MouseEvent) : void
+      {
+         if(this.p2Active && this.p2Mode == "Inspect" && this.p2Tip)
+         { this.p2Tip.iaiScrBy(e.delta > 0 ? -60 : 60); e.stopImmediatePropagation(); }
+      }
+      protected function p2Tick() : void
+      {
+         var wanted:Boolean = this.p2Allowed && this._inventoryMode == IMS_Player && this.mcPlayerInventory.iaiEqTab() == 4 && !this._rendererController.isActive();
+         if(!wanted) { this.p2Leave(); return; }
+         if(!this.mcPaperDollModule) return;
+         if(!this.p2Active) this.p2Enter();
+         this.iaiEqWant = false; if(this.iaiEqOn) this.iaiEqApply(false);
+         this.iaiHeadOn = false;
+         if(this.iaiHeadSp) this.iaiHeadSp.visible = false;
+         if(this.iaiHint) this.iaiHint.visible = false;
+         if(this.iaiBg) this.iaiBg.visible = false;
+         if(this.iaiArtHost) this.iaiArtHost.visible = false;
+         if(TooltipInventory.iaiStrip) TooltipInventory.iaiStrip.visible = false;
+         this.dropSlot.visible = false;
+         var topLeft:Point = this.globalToLocal(new Point(0,0));
+         var bottomRight:Point = this.globalToLocal(new Point(stage.stageWidth,stage.stageHeight));
+         var w:Number = bottomRight.x - topLeft.x;
+         var h:Number = bottomRight.y - topLeft.y;
+         var grid:SlotsListGrid = this.mcPlayerInventory.mcPlayerGrid;
+         var count:int = grid.p2Count();
+         // Density changes at content/size boundaries, never for selection.
+         var key:String = String(w) + ":" + h + ":" + (count <= 8 ? 0 : (count <= 36 ? 1 : 2));
+         if(key != this.p2LayoutKey)
+         {
+            this.p2LayoutKey = key; this.p2Layout = this.p2Geometry(w,h,count);
+            var g:Object = this.p2Layout;
+            ContextInfoManager.p2Area = new Rectangle(g.content.x + g.content.width * 0.58,g.content.y,g.content.width * 0.42,g.content.height);
+            this.p2Scene.graphics.clear();
+            this.p2Scene.graphics.beginFill(0x0C0E0C,1);
+            this.p2Scene.graphics.drawRect(0,h * 0.11,w,h * 0.81);
+            this.p2Scene.graphics.endFill();
+            this.mcPlayerInventory.p2Arrange(g.gallery,g.cols,g.cell,g.rows,g.nav);
+            for(var i:int = 0; i < 3; i++)
+            {
+               var field:TextField = this.p2Fields[i];
+               field.x = g.summary.x; field.y = g.summary.y + i * 30 * g.unit;
+               field.width = g.summary.width; field.height = 34 * g.unit;
+            }
+            this.p2PreviewMask.graphics.clear(); this.p2PreviewMask.graphics.beginFill(0xFFFFFF);
+            this.p2PreviewMask.graphics.drawRect(g.preview.x,g.preview.y,g.preview.width,g.preview.height); this.p2PreviewMask.graphics.endFill();
+            this.mcCharacterRenderer.scaleX = this.p2Base.sx * 1.10;
+            this.mcCharacterRenderer.scaleY = this.p2Base.sy * 1.10;
+            // Real texture holder center is (481,485) in the authored clip.
+            this.mcCharacterRenderer.x = g.preview.x + g.preview.width / 2 - 481 * this.mcCharacterRenderer.scaleX;
+            this.mcCharacterRenderer.y = g.preview.y + g.preview.height / 2 - 485 * this.mcCharacterRenderer.scaleY;
+            this._rendererController.setDefaultAnchor(this.mcCharacterRenderer.x,this.mcCharacterRenderer.y);
+            this.btnSort.x = g.nav.right - this.btnSort.actualWidth - this.btnSortChange.actualWidth - 20;
+            this.btnSort.y = this.btnSortChange.y = g.nav.y;
+            this.btnSortChange.x = this.btnSort.x + this.btnSort.actualWidth + 16;
+            this.p2SummaryDirty = true;
+         }
+         var targets:Boolean = this.p2Mode == "Auxiliary" || this.mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging();
+         var auxRect:Rectangle = this.p2Layout.content.clone(); auxRect.width *= 0.56;
+         this.mcPaperDollModule.p2Targets(auxRect,targets);
+         grid.visible = this.p2Mode == "Browse" && !targets;
+         this.p2Summary.visible = this.p2Mode == "Browse" && !targets;
+         if(!targets && this.mcPaperDollModule.focused > 0) selectTargetModule(this.mcPlayerInventory);
+         if(this.p2SummaryDirty) { this.p2SummaryDirty = false; this.p2RenderSummary(); }
+         this.p2Feedback();
+      }
+      protected function p2Leave() : void
+      {
+         if(!this.p2Active) return;
+         this.p2Active = false;
+         if(this.p2Tip) { this.p2Tip.p2Close(); this.p2Tip = null; }
+         ContextInfoManager.p2Active = false; ContextInfoManager.p2Mode = "Browse";
+         ContextInfoManager.getInstanse().iaiDropDocked();
+         TooltipInventory.iaiDock = this.p2Base.dock;
+         SlotBase.qfGearGrid = false; SlotBase.qfGearResetPad();
+         this.mcPlayerInventory.p2Restore(); this.mcPaperDollModule.p2Restore();
+         this.mcPlayerInventory.enabled = this.mcPlayerInventory._inputEnabled = true;
+         this.mcPlayerInventory.mcPlayerGrid.visible = true;
+         this.mcCharacterRenderer.x = this.p2Base.rendererX; this.mcCharacterRenderer.y = this.p2Base.rendererY;
+         this.mcCharacterRenderer.scaleX = this.p2Base.sx; this.mcCharacterRenderer.scaleY = this.p2Base.sy;
+         this.mcCharacterRenderer.mask = this.p2Base.mask;
+         this._rendererController.setDefaultAnchor(this.mcCharacterModelAnchor.x,this.mcCharacterModelAnchor.y);
+         this.iaiHeadOn = this.p2Base.head; this.iaiEqWant = this.p2Base.eq;
+         if(this.iaiArtHost) this.iaiArtHost.visible = true;
+         if(this.iaiBg) this.iaiBg.visible = true;
+         if(TooltipInventory.iaiStrip) TooltipInventory.iaiStrip.visible = true;
+         this.btnSort.x = this.p2Base.sortX; this.btnSort.y = this.p2Base.sortY;
+         this.btnSortChange.x = this.p2Base.changeX; this.btnSortChange.y = this.p2Base.changeY;
+         this.dropSlot.visible = this.p2Base.drop;
+         this.p2RestoreFooter();
+         this.mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.INDEX_CHANGE,this.p2SelectionChanged);
+         this.mcPlayerInventory.mcPlayerGrid.removeEventListener("p2GalleryChanged",this.p2SelectionChanged);
+         this.mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.ITEM_ROLL_OVER,this.p2Hover);
+         this.mcPlayerInventory.removeEventListener("p2Exit",this.p2Removed);
+         ContextInfoManager.getInstanse().removeEventListener("p2ItemData",this.p2DataArrived);
+         InputManager.getInstance().removeEventListener(ControllerChangeEvent.CONTROLLER_CHANGE,this.p2Device);
+         InputDelegate.getInstance().removeEventListener(InputEvent.INPUT,this.p2Input);
+         if(stage) stage.removeEventListener(MouseEvent.MOUSE_WHEEL,this.p2Wheel,true);
+         for each(var object:DisplayObject in [this.p2Scene,this.p2Summary,this.p2PreviewMask]) if(object && object.parent) object.parent.removeChild(object);
+      }
+      protected function p2Removed(e:Event) : void { this.p2Leave(); }

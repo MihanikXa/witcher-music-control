@@ -1,0 +1,53 @@
+      protected var p2ModuleBase:Object;
+      protected var p2CategoryBase:Array;
+      public function p2Arrange(rect:Rectangle, cols:int, cell:Number, rows:int, nav:Rectangle) : void
+      {
+         if(!this.p2ModuleBase)
+         {
+            this.p2ModuleBase = {x:x,y:y,sx:scaleX,sy:scaleY,maskW:this.maskClip.width,maskH:this.maskClip.height,height:this._gridRenderHeight,mx:this.mcListContainer.x,my:this.mcListContainer.y,gx:this.mcPlayerGrid.x,gy:this.mcPlayerGrid.y,maskX:this.maskClip.x,maskY:this.maskClip.y};
+            this.p2CategoryBase = [];
+            for(var k:int = 0; k < mcTabList.numRenderers; k++)
+            {
+               var it:MovieClip = mcTabList.getRendererAt(k) as MovieClip;
+               if(it) this.p2CategoryBase.push({it:it,x:it.x,y:it.y,sx:it.scaleX,sy:it.scaleY});
+            }
+         }
+         x = 0; y = 0; scaleX = scaleY = 1;
+         GTweener.removeTweens(this.maskClip);
+         this._gridRenderHeight = rows * cell;
+         this.maskClip.x = rect.x + cols * cell / 2;
+         this.maskClip.y = rect.y;
+         this.maskClip.width = cols * cell;
+         this.maskClip.height = rows * cell;
+         var maskBounds:Rectangle = this.maskClip.getBounds(this);
+         this.maskClip.x += rect.x - maskBounds.x; this.maskClip.y += rect.y - maskBounds.y;
+         this.mcListContainer.x = rect.x; this.mcListContainer.y = rect.y;
+         this.mcPlayerGrid.x = this.mcPlayerGrid.y = 0;
+         this.mcPlayerGrid.p2Configure(cols,cell,rows);
+         if(this._sectionTitlesContainer) this._sectionTitlesContainer.visible = false;
+         if(txtTitle) txtTitle.visible = false;
+         graphics.clear();
+         for(k = 0; k < mcTabList.numRenderers; k++)
+         {
+            it = mcTabList.getRendererAt(k) as MovieClip;
+            if(it) { it.x = nav.x + (k + 0.5) * nav.width * 0.58 / 6; it.y = nav.y + nav.height / 2; it.scaleX = it.scaleY = 0.62; }
+         }
+      }
+      public function p2Restore() : void
+      {
+         if(!this.p2ModuleBase) return;
+         this.mcPlayerGrid.p2Restore();
+         x = this.p2ModuleBase.x; y = this.p2ModuleBase.y;
+         scaleX = this.p2ModuleBase.sx; scaleY = this.p2ModuleBase.sy;
+         this.maskClip.x = this.p2ModuleBase.maskX; this.maskClip.y = this.p2ModuleBase.maskY;
+         this.maskClip.height = this.p2ModuleBase.maskH;
+         this.maskClip.width = this.p2ModuleBase.maskW;
+         this._gridRenderHeight = this.p2ModuleBase.height;
+         this.mcListContainer.x = this.p2ModuleBase.mx; this.mcListContainer.y = this.p2ModuleBase.my;
+         this.mcPlayerGrid.x = this.p2ModuleBase.gx; this.mcPlayerGrid.y = this.p2ModuleBase.gy;
+         for each(var row:Object in this.p2CategoryBase) { row.it.x = row.x; row.it.y = row.y; row.it.scaleX = row.sx; row.it.scaleY = row.sy; }
+         if(txtTitle) txtTitle.visible = true;
+         if(this._sectionTitlesContainer) this._sectionTitlesContainer.visible = true;
+         this.p2ModuleBase = null;
+         this.iaiDrawTabs();
+      }

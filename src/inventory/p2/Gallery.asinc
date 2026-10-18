@@ -1,0 +1,76 @@
+      public var p2Gallery:Boolean = false;
+      public var p2Revision:int = 0;
+      protected var p2GridBase:Object;
+      protected var p2Rebuilding:Boolean = false;
+      public function p2Configure(cols:int, cell:Number, pageRows:int) : void
+      {
+         if(!this.p2GridBase) this.p2GridBase = {columns:this._columns,rows:this._rows,cell:this._gridSquareSize,height:this._gridRenderHeight,visible:this._numRowsVisible,ignore:this._ignoreGridPosition};
+         if(this.p2Gallery && this._columns == cols && this._gridSquareSize == cell && this._rows == pageRows) return;
+         this.p2Gallery = true;
+         this._columns = cols; this._gridSquareSize = cell;
+         this._rows = this._numRowsVisible = pageRows;
+         this._gridRenderHeight = pageRows * cell;
+         this._ignoreGridPosition = true;
+         this.p2Populate(false,true);
+      }
+      public function p2Restore() : void
+      {
+         if(!this.p2GridBase) return;
+         this.p2Gallery = false;
+         this._columns = this.p2GridBase.columns; this._rows = this.p2GridBase.rows;
+         this._gridSquareSize = this.p2GridBase.cell;
+         this._gridRenderHeight = this.p2GridBase.height; this._numRowsVisible = this.p2GridBase.visible;
+         this._ignoreGridPosition = this.p2GridBase.ignore;
+         this.p2GridBase = null;
+         for each(var r:IInventorySlot in _renderers) { DisplayObject(r).scaleX = DisplayObject(r).scaleY = 1; }
+         this.updateColumnsPaddingMap();
+         invalidateData();
+      }
+      public function p2Selected() : Object
+      {
+         var s:SlotBase = getSelectedRenderer() as SlotBase;
+         return s && s.data ? s.data : null;
+      }
+      public function p2Count() : int { return _data ? _data.length : 0; }
+      public function p2Populate(useData:Boolean = false, sortNew:Boolean = false) : void
+      {
+         if(!this.p2Gallery || this.p2Rebuilding) return;
+         this.p2Rebuilding = true;
+         var selected:Object = this.p2Selected();
+         var savedId:Number = selected ? Number(selected.id) : NaN;
+         var savedScroll:uint = scrollPosition;
+         this._paddingsMap = null;
+         var unique:Object = {};
+         var list:Array = [];
+         var source:Array = [];
+         if(useData) source = _data as Array;
+         else for each(var existing:IInventorySlot in _renderers) if(existing && !existing.isEmpty() && !existing.uplink) source.push(existing.data);
+         for each(var item:ItemDataStub in source)
+            if(item && !item.invisible && !unique[String(item.id)]) { unique[String(item.id)] = true; list.push(item); }
+         this.cleanUpRenderers();
+         this._data = list;
+         // Explicit native sort/provider refreshes sort. Incremental equip data
+         // updates retain the existing browse order and selected position.
+         if(useData || sortNew) this.sortList(list);
+         // Row-major first-fit over one lattice. Section IDs remain metadata.
+         for each(item in list) this.populateItemData(item,false);
+         this.removeUselessRows();
+         for(var i:int = 0; i < _renderers.length; i++)
+         {
+            var r:IInventorySlot = _renderers[i] as IInventorySlot;
+            DisplayObject(r).scaleX = DisplayObject(r).scaleY = this._gridSquareSize / CommonConstants.INVENTORY_GRID_SIZE;
+            this.repositionRenderer(i,r);
+         }
+         // Native updateRendererBounds invalidates DATA; calling it from this
+         // populate path would schedule an endless populate/request loop.
+         this._renderBounds = this.gridMask ? this.gridMask.getBounds(stage) : null;
+         this.validateRenderersSpecial();
+         var index:int = isNaN(savedId) ? -1 : getIdIndex(uint(savedId));
+         if(index >= 0) selectedIndex = index;
+         else findSelection();
+         this.updateScrollBar();
+         scrollPosition = Math.min(savedScroll,this._maxOffset);
+         this.p2Rebuilding = false;
+         ++this.p2Revision;
+         dispatchEvent(new Event("p2GalleryChanged",true));
+      }

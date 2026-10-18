@@ -1,0 +1,14 @@
+      protected function p2Geometry(w:Number, h:Number, count:int) : Object
+      {
+         var unit:Number = h / 1080;
+         var content:Rectangle = new Rectangle(w * 0.04,h * 0.18,w * 0.57,h * 0.70);
+         var preview:Rectangle = new Rectangle(w * 0.63,h * 0.18,w * 0.33,h * 0.70);
+         var cols:int = count <= 8 ? 3 : (count <= 36 ? 6 : 7);
+         var cell:Number = Math.floor(Math.min(count <= 8 ? 128 * unit : 96 * unit,content.width / cols));
+         var rows:int = count <= 8 ? 4 : 6;
+         rows = Math.min(rows,Math.floor((content.height - 116 * unit) / cell));
+         rows = Math.max(2,rows);
+         var gallery:Rectangle = new Rectangle(content.x + (content.width - cols * cell) / 2,content.y + (content.height - rows * cell - 108 * unit) / 2,cols * cell,rows * cell);
+         var summary:Rectangle = new Rectangle(content.x + 20 * unit,gallery.bottom + 24 * unit,content.width - 40 * unit,90 * unit);
+         return {content:content,preview:preview,gallery:gallery,summary:summary,nav:new Rectangle(content.x,h * 0.12,content.width,42 * unit),cols:cols,cell:cell,rows:rows,unit:unit};
+      }

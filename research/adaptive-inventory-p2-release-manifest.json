@@ -1,0 +1,104 @@
+{
+  "version": "Adaptive Inventory P2 \u2014 Coherent Gear Prototype",
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "10da6355d37cd23d9948431a31ab58c71765dfd3c8caca77b9bf898b3a9545e2",
+  "zip_path": "C:\\Dev\\witcher-ui-overhaul\\deploy\\adaptive-inventory-p2\\Adaptive-Inventory-P2-Coherent-Gear-private.zip",
+  "zip_sha256": "0f26fea465512ca4a81c120e7e5207c014db1e912ff3e117f2bbc06518b1b415",
+  "bytes": 1122621,
+  "changed_classes": [
+    "ContextInfoManager",
+    "SlotBase",
+    "SlotsListBase",
+    "SlotsListGrid",
+    "TooltipInventory",
+    "InventoryTabbedListModule",
+    "MenuInventory",
+    "ModulePaperdoll"
+  ],
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "geometry_cases": 24,
+  "non_code_and_textures_exact": true,
+  "shared_and_hoods_classes_exact": true,
+  "native_resource_complete": true,
+  "native_complete": true,
+  "reconstruction_used": false,
+  "live_unchanged": true,
+  "runtime_tested": false,
+  "original_sources": {
+    "tools\\build-inventory-p2.py": "348cc3cec91a4c7d4e0f5b479cfafd1905fb962846bf15a83380327741b9ea71",
+    "tools\\patch-inventory-p2.py": "f942204d9adab0c4763b6d4a9cd839664afc93d9b40ffeca90b828675c20abf5",
+    "tools\\verify-inventory-p2.py": "774298a568198e4c652ac344d629840a3862c4585c3602bf313881a95896eb05",
+    "src\\inventory\\p2\\Footer.asinc": "b955992e275e9bf37763a3a48383c26be44fee058d4f5c4387092473e59c606e",
+    "src\\inventory\\p2\\Gallery.asinc": "aa636ded7671778272da1db961104002b7447944dfcb6a2000008f9e1f95a800",
+    "src\\inventory\\p2\\Geometry.asinc": "91d53198bcfd3275fb604f32e88e1219670869a27dde8c33c091145aeb626134",
+    "src\\inventory\\p2\\Menu.asinc": "927b5747794f5d1c1644660490da9cd98a0d0dac1bdd561681cd51151f29ce6f",
+    "src\\inventory\\p2\\Module.asinc": "9a62e9ecdb6e71339b56942765a672284a991b9fda8b6b5d73aa2683e159f3ab",
+    "src\\inventory\\p2\\Tooltip.asinc": "856aab0ec18eb8d56787bb43710545b4e5639f1eac1532c09320c3937f12867d"
+  },
+  "resource": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+  "native_commands": [
+    {
+      "label": "cook",
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.18 15:30:10][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.18 15:30:10][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "validate",
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.18 15:30:56][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.18 15:30:56][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "pack",
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.18 15:31:18][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.18 15:31:18][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    },
+    {
+      "label": "metadata",
+      "exit_code": 0,
+      "passed": true,
+      "assertions": [
+        "[2026.10.18 15:31:42][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\core\\depotDirectory.cpp:11] ( Halt ). Depot directory path should end with \\ or /",
+        "[2026.10.18 15:31:43][Error][Assert] [D:\\Main.Lava\\dev\\src\\common\\engine\\soundFileLoader.cpp:101] ( soundBank != nullptr ). Always loaded bank is not in the banks array - [ly_animal_dog.bnk]!"
+      ]
+    }
+  ],
+  "script_compile": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "631bf3d7a9d4503fa84cf6c2bc3fb282d4447387a20cb6b1a673a9fe785a0c7b"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "780a81f628bd035b9b482059cf53a9a4e78fe77c10d058fbab4ef434a50fbb9b"
+    }
+  ],
+  "script_diagnostics": "Control and candidate warnings/assertions match; opaque dependencies remain outside the assembly.",
+  "offline_tests": {
+    "passed": 13,
+    "skipped": 0,
+    "command": "python -m unittest discover -s tests -p test_inventory_p2.py -v"
+  },
+  "runtime_acceptance": "Pending: no live scene, glyph transition, screenshot or functional acceptance claimed.",
+  "earlier_iteration": "Before the final populate-loop correction, cook/validate/pack passed but metadata startup timed out three times. Logs retained privately under before-loop-fix. Final source was recooked and all four native stages passed.",
+  "package_members": {
+    "Mods/modAdaptiveInventoryP2/content/blob0.bundle": "d95a8c9fe3eec5137b0767a0b6e15de87923fbea8902a539e5fb7c03c10e6063",
+    "Mods/modAdaptiveInventoryP2/content/metadata.store": "80c08fcd97d8731ba40ce45e677bc4a40cf7e3ef7e138a61ed99a7565278878f",
+    "Mods/modAdaptiveInventoryP2/content/scripts/local/inkGearGrid.ws": "48b66bcbb088c873750220f48fef0cb6f6905f9483f4b3efd58fe15cdc510e43"
+  }
+}

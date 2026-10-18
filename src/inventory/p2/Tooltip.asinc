@@ -1,0 +1,17 @@
+      protected var p2DetailsOn:Boolean = false;
+      public function p2Details(value:Object, rect:Rectangle) : void
+      {
+         this.p2DetailsOn = true;
+         this.iaiDocked = true;
+         iaiDock = rect.clone(); iaiPopOn = false; iaiEqCard = iaiScrOn = true;
+         this.anchorRect = new Rectangle(rect.x + IAI_OX,rect.y + IAI_OY,0,0);
+         this.data = value;
+         this.validateNow();
+      }
+      public function p2Close() : void
+      {
+         this.iaiScrOff();
+         this.p2DetailsOn = false;
+         iaiEqCard = iaiScrOn = false;
+         if(parent) parent.removeChild(this);
+      }

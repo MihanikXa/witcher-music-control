@@ -1,0 +1,87 @@
+      protected var p2Footer:Object;
+      protected var p2FooterBase:Object;
+      protected var p2FooterDirty:Boolean = true;
+      protected var p2NativeHints:Array = [];
+      protected function p2FindCommon(node:DisplayObjectContainer, depth:int = 0) : Object
+      {
+         if(depth > 12) return null;
+         if(node.hasOwnProperty("mcInpuFeedback") && node.hasOwnProperty("mcMenuHub")) return node;
+         for(var i:int = 0; i < node.numChildren; i++)
+         {
+            var child:DisplayObjectContainer = node.getChildAt(i) as DisplayObjectContainer;
+            if(child) { var found:Object = this.p2FindCommon(child,depth + 1); if(found) return found; }
+         }
+         return null;
+      }
+      protected function p2Binding(id:uint, label:String, nav:String, key:int) : KeyBindingData
+      {
+         var b:KeyBindingData = new KeyBindingData();
+         b.actionId = id; b.label = label; b.gamepad_navEquivalent = nav;
+         b.keyboard_keyCode = key; b.isAlreadyLocalized = true;
+         return b;
+      }
+      protected function p2Feedback() : void
+      {
+         if(!this.p2Footer)
+         {
+            var common:Object = this.p2FindCommon(stage);
+            if(!common) return;
+            this.p2Footer = common.mcInpuFeedback;
+            this.p2FooterBase = {clickable:this.p2Footer.clickable,emulate:this.p2Footer.emulateInputEvent,direct:this.p2Footer.directWsCall};
+            trace("P2 feedback owner: " + getQualifiedClassName(common));
+         }
+         var container:Sprite = this.p2Footer.buttonsContainer as Sprite;
+         var current:Array = [];
+         var own:Boolean = false;
+         for(var i:int = 0; i < container.numChildren; i++)
+         {
+            var button:InputFeedbackButton = container.getChildAt(i) as InputFeedbackButton;
+            if(button)
+            {
+               var binding:KeyBindingData = button.getBindingData();
+               if(binding) { current.push(binding); if(binding.actionId == 810001) own = true; }
+            }
+         }
+         // Native selection/modal updates can replace the list. Capture their
+         // current action availability, then compose through the SAME renderer.
+         if(!own && current.length) { this.p2NativeHints = current; this.p2FooterDirty = true; }
+         if(!this.p2FooterDirty) return;
+         if(this.p2NativeModal()) return;
+         var list:Array = [];
+         list.push(this.p2Binding(810001,"Back",NavigationCode.GAMEPAD_B,KeyCode.ESCAPE));
+         if(this.p2Mode == "Browse")
+         {
+            for each(binding in this.p2NativeHints)
+               if(binding.gamepad_navEquivalent == NavigationCode.GAMEPAD_A) { list.push(binding); break; }
+            list.push(this.p2Binding(810002,"Inspect",NavigationCode.GAMEPAD_BACK,KeyCode.I));
+            list.push(this.p2Binding(810003,"Equipment",NavigationCode.GAMEPAD_L3,KeyCode.TAB));
+            // Native sort bindings are retained as actual data, not guessed keys.
+            for each(binding in this.p2NativeHints)
+               if(binding.keyboard_keyCode == KeyCode.Q || binding.gamepad_navEquivalent == NavigationCode.GAMEPAD_RSTICK_HOLD) { list.push(binding); break; }
+         }
+         else if(this.p2Mode == "Inspect")
+         {
+            list.push(this.p2Binding(810004,"Compare",NavigationCode.GAMEPAD_L2,KeyCode.SHIFT));
+            list.push(this.p2Binding(810005,"Scroll",NavigationCode.GAMEPAD_RSTICK_SCROLL,KeyCode.PAGE_DOWN));
+         }
+         else
+         {
+            for each(binding in this.p2NativeHints)
+               if(binding.gamepad_navEquivalent == NavigationCode.GAMEPAD_A) { list.push(binding); break; }
+         }
+         this.p2Footer.clickable = true;
+         this.p2Footer.emulateInputEvent = true;
+         this.p2Footer.directWsCall = false;
+         this.p2Footer.handleSetupButtons(list);
+         this.p2FooterDirty = false;
+      }
+      protected function p2RestoreFooter() : void
+      {
+         if(!this.p2Footer) return;
+         this.p2Footer.clickable = this.p2FooterBase.clickable;
+         this.p2Footer.emulateInputEvent = this.p2FooterBase.emulate;
+         this.p2Footer.directWsCall = this.p2FooterBase.direct;
+         this.p2Footer.handleSetupButtons(this.p2NativeHints);
+         this.p2Footer = null;
+         InputFeedbackManager.updateButtons(this);
+      }
