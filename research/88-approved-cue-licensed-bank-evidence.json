@@ -1,0 +1,436 @@
+{
+  "passed": true,
+  "source": {
+    "passed": true,
+    "segment": {
+      "id": "{22B6E6E1-528D-47DD-98F1-C1B3C1AD800A}",
+      "short_id": 1029261546
+    },
+    "track": {
+      "id": "{B211039F-7CD2-440C-8D5F-E7D950C95BEB}",
+      "short_id": 499024852
+    },
+    "source_id": "{E5D0BCDE-A793-465C-9836-B563CB186CB2}",
+    "media_id": 383927916,
+    "added_guids": [
+      "383927916",
+      "{1B6A0BBE-F013-4973-9694-5C8549F1B8E4}",
+      "{22B6E6E1-528D-47DD-98F1-C1B3C1AD800A}",
+      "{3704FE56-7126-4D52-A1DC-98C8F9111C67}",
+      "{58205DEA-62A7-4731-8A7E-BDB54D776881}",
+      "{B211039F-7CD2-440C-8D5F-E7D950C95BEB}",
+      "{C66B4ECE-D439-442E-A9B9-46C31EB2A70B}",
+      "{C75E0F5E-0C6C-4A4E-BDAF-FF3423214A4A}",
+      "{E5D0BCDE-A793-465C-9836-B563CB186CB2}"
+    ],
+    "exact_restoration": true,
+    "source_sha256": "5e677a1da33213e55b1ae4540397adee184e9dcbfa9e93eb6aa2ebae10d6cabc",
+    "musical_exit_ms": 30850.0,
+    "duration_ms": 40850.0
+  },
+  "work_units": 1508,
+  "original_audio": 47,
+  "generation_exit": 2,
+  "warnings": 15,
+  "baseline_warnings_exact": true,
+  "candidate_sha256": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+  "baseline_sha256": "5b28f4ee5f286ec46a80120ea632c1d2ca715c0e2b05fb90ddd411f16e9a953a",
+  "candidate_bytes": 2036164,
+  "hirc_count": 492,
+  "delta": {
+    "added": [
+      {
+        "id": 499024852,
+        "type": 11
+      },
+      {
+        "id": 1029261546,
+        "type": 10
+      }
+    ],
+    "removed": [],
+    "changed": [
+      {
+        "id": 133462974,
+        "type": 13,
+        "before_bytes": 388,
+        "after_bytes": 347
+      },
+      {
+        "id": 168472101,
+        "type": 13,
+        "before_bytes": 383,
+        "after_bytes": 388
+      },
+      {
+        "id": 251819879,
+        "type": 13,
+        "before_bytes": 199,
+        "after_bytes": 316
+      },
+      {
+        "id": 531434506,
+        "type": 13,
+        "before_bytes": 199,
+        "after_bytes": 316
+      },
+      {
+        "id": 589261176,
+        "type": 13,
+        "before_bytes": 199,
+        "after_bytes": 316
+      },
+      {
+        "id": 833483595,
+        "type": 13,
+        "before_bytes": 204,
+        "after_bytes": 204
+      },
+      {
+        "id": 883068472,
+        "type": 13,
+        "before_bytes": 199,
+        "after_bytes": 204
+      },
+      {
+        "id": 1049502408,
+        "type": 13,
+        "before_bytes": 204,
+        "after_bytes": 204
+      }
+    ],
+    "chunk_changed": [
+      "BKHD",
+      "DATA",
+      "DIDX",
+      "HIRC"
+    ]
+  },
+  "records": {
+    "168472101": {
+      "kind": 13,
+      "parent": 866607386,
+      "baseline_state_offset": 28,
+      "candidate_state_offset": 33,
+      "immutable_remainder_exact": true
+    },
+    "251819879": {
+      "kind": 13,
+      "parent": 336932756,
+      "baseline_state_offset": 28,
+      "candidate_state_offset": 28,
+      "immutable_remainder_exact": true
+    },
+    "531434506": {
+      "kind": 13,
+      "parent": 491650214,
+      "baseline_state_offset": 28,
+      "candidate_state_offset": 28,
+      "immutable_remainder_exact": true
+    },
+    "589261176": {
+      "kind": 13,
+      "parent": 192931013,
+      "baseline_state_offset": 28,
+      "candidate_state_offset": 28,
+      "immutable_remainder_exact": true
+    },
+    "833483595": {
+      "kind": 13,
+      "parent": 850899831,
+      "baseline_state_offset": 33,
+      "candidate_state_offset": 33,
+      "immutable_remainder_exact": true
+    },
+    "883068472": {
+      "kind": 13,
+      "parent": 840282456,
+      "baseline_state_offset": 28,
+      "candidate_state_offset": 33,
+      "immutable_remainder_exact": true
+    },
+    "1049502408": {
+      "kind": 13,
+      "parent": 657429646,
+      "baseline_state_offset": 33,
+      "candidate_state_offset": 33,
+      "immutable_remainder_exact": true
+    },
+    "133462974": {
+      "parent": 866607386,
+      "children": [
+        4111369,
+        319905093,
+        1029261546
+      ],
+      "state": {
+        "start": 33,
+        "end": 140,
+        "properties": [
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "groups": [
+          {
+            "id": 766723505,
+            "sync": 0,
+            "states": [
+              {
+                "id": 360867343,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 1432638110,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 1795056175,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 2213237662,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 3708995963,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 3757878140,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 3817056875,
+                "properties": {
+                  "0": -200.0
+                }
+              },
+              {
+                "id": 3985602033,
+                "properties": {
+                  "0": -200.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "playlist": [
+        {
+          "segment": 0,
+          "item": 557790425,
+          "children": 2,
+          "type": 0,
+          "loop": 0,
+          "loop_min": 0,
+          "loop_max": 0,
+          "weight": 50000,
+          "avoid": 1,
+          "use_weight": 1,
+          "shuffle": 0,
+          "offset": 257
+        },
+        {
+          "segment": 1029261546,
+          "item": 680234690,
+          "children": 0,
+          "type": 4294967295,
+          "loop": 1,
+          "loop_min": 0,
+          "loop_max": 0,
+          "weight": 50000,
+          "avoid": 0,
+          "use_weight": 0,
+          "shuffle": 0,
+          "offset": 287
+        },
+        {
+          "segment": 4111369,
+          "item": 390269321,
+          "children": 0,
+          "type": 4294967295,
+          "loop": 3,
+          "loop_min": 0,
+          "loop_max": 0,
+          "weight": 50000,
+          "avoid": 0,
+          "use_weight": 0,
+          "shuffle": 0,
+          "offset": 317
+        }
+      ],
+      "immutable_remainder_exact": true
+    }
+  },
+  "new_records": {
+    "segment": {
+      "bus": 0,
+      "parent": 133462974,
+      "properties": {},
+      "positioning": [
+        0,
+        null
+      ],
+      "reflections": 0,
+      "state": {
+        "start": 28,
+        "end": 30,
+        "properties": [],
+        "groups": []
+      },
+      "rtpc": [],
+      "children": [
+        499024852
+      ],
+      "meter": [
+        16000.0,
+        0.0,
+        60.0,
+        4,
+        4,
+        1
+      ],
+      "stingers": [],
+      "duration_ms": 40850.0,
+      "markers": [
+        {
+          "id": 43573010,
+          "position": 0.0,
+          "name": ""
+        },
+        {
+          "id": 1539036744,
+          "position": 30850.0,
+          "name": ""
+        }
+      ]
+    },
+    "track": {
+      "bus": 0,
+      "parent": 1029261546,
+      "properties": {},
+      "positioning": [
+        0,
+        null
+      ],
+      "reflections": 0,
+      "state": {
+        "start": 102,
+        "end": 104,
+        "properties": [],
+        "groups": []
+      },
+      "sources": [
+        {
+          "plugin": 262145,
+          "streaming": 0,
+          "id": 383927916,
+          "memory": 1860773,
+          "flags": 0,
+          "plugin_parameters": null
+        }
+      ],
+      "clips": [
+        {
+          "track": 0,
+          "source": 383927916,
+          "event": 0,
+          "play_at": 0.0,
+          "begin": 0.0,
+          "end": 0.0,
+          "duration": 40850.0
+        }
+      ],
+      "subtracks": 1,
+      "automation": [],
+      "rtpc": [],
+      "track_type": 0,
+      "lookahead": 0
+    }
+  },
+  "new_media": {
+    "id": 383927916,
+    "bytes": 1860773,
+    "sha256": "3da5f548a8eb6cf890e2e8c10ce2c30e709a7e9f799975bbcd39cc34a54fbae8",
+    "format": "Wwise Vorbis",
+    "frames": 1960800,
+    "channels": 2,
+    "rate": 48000,
+    "embedded": true,
+    "official_cache_exact": true,
+    "decoded_pcm_verified": false
+  },
+  "original_embedded_exact": 7,
+  "original_metadata_and_external_payloads_exact": 47,
+  "header": {
+    "version": 150,
+    "bank_id": 3228744150,
+    "language_id": 393239870,
+    "alignment_flags": 16,
+    "project_id": 17637,
+    "bank_type": 0,
+    "hash_hex": "d00722d3c4db1460dd3526d0e6fbf4be",
+    "padding_hex": "",
+    "metadata_hash": "{D32207D0-DBC4-6014-DD35-26D0E6FBF4BE}",
+    "hash_matches_metadata_guid": true
+  },
+  "generated_init_exact": true,
+  "generated_init_sha256": "ec6060226583cda325b3175dd990bf7a77c4c49a7a6a57ba0130089b0ea69b01",
+  "native_init_sha256": "2dcb418b9f96389a57341a49e86cdcb0c18d95552a0e17dccf10d4df1d54d277",
+  "all24_accepted_exact": true,
+  "retail_verified": false,
+  "encoded_media_auditioned": false,
+  "release_ready": false,
+  "generation_repeats": [
+    {
+      "output": "generated-banks-licensed",
+      "exit": 2,
+      "bank": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+      "init": "ec6060226583cda325b3175dd990bf7a77c4c49a7a6a57ba0130089b0ea69b01",
+      "warnings_exact": true
+    },
+    {
+      "output": "generated-banks-decoded",
+      "exit": 2,
+      "bank": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+      "init": "ec6060226583cda325b3175dd990bf7a77c4c49a7a6a57ba0130089b0ea69b01",
+      "warnings_exact": true
+    },
+    {
+      "output": "generated-banks-reconverted",
+      "exit": 2,
+      "bank": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+      "init": "ec6060226583cda325b3175dd990bf7a77c4c49a7a6a57ba0130089b0ea69b01",
+      "warnings_exact": true
+    }
+  ],
+  "encoded_decoder_check": {
+    "ffmpeg_decoded": false,
+    "official_cache_requested": true,
+    "fresh_new_cue_reconversion": true,
+    "readable_decoded_pcm_produced": false,
+    "no_codec_installed": true
+  },
+  "fresh_reconversion_full_gate_passed": true,
+  "repository_tests": {
+    "passed": true,
+    "count": 231,
+    "command": "python -m unittest discover -s tools -p 'test_*.py'"
+  },
+  "task_owned_wwise_processes_remaining": 0
+}

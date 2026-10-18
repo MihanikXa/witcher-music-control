@@ -25,7 +25,7 @@ class Waapi:
         return result
 
 
-def generate(console, project, output, bank='music_prologue'):
+def generate(console, project, output, bank='music_prologue', decode_media=False):
     project = build_path(project)
     output = build_path(output)
     if project.parent.name == "validation":
@@ -46,6 +46,10 @@ def generate(console, project, output, bank='music_prologue'):
             "--custom-post-gen-cmd", "Windows", "",
             "--custom-global-opening-cmd", "",
             "--custom-global-closing-cmd", ""]
+    if decode_media:
+        # Official converter's PCM cache is needed to inspect newly encoded media.
+        # Default production generation remains unchanged and avoids this expense.
+        args.remove('--no-decode')
     (output / "command.json").write_text(json.dumps(args, indent=2) + "\n")
     with (output / "generation.log").open("w", encoding="utf-8") as log:
         process = subprocess.run(args, cwd=project.parent, stdout=log, stderr=subprocess.STDOUT)
@@ -65,5 +69,7 @@ if __name__ == "__main__":
     parser.add_argument("--project", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument('--bank', default='music_prologue')
+    parser.add_argument('--decode-media', action='store_true',
+                        help='Generate official decoded cache for new-media verification')
     args = parser.parse_args()
-    generate(args.console, args.project, args.output, args.bank)
+    generate(args.console, args.project, args.output, args.bank, args.decode_media)
