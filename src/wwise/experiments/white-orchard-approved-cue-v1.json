@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "purpose": "private-single-cue-authoring-proof-not-release",
+  "accepted_cue": "S04-a",
+  "accepted_version": "five-cue-corrections-v1 B",
+  "accepted_sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82",
+  "authoring_pcm_sha256": "5e677a1da33213e55b1ae4540397adee184e9dcbfa9e93eb6aa2ebae10d6cabc",
+  "removed_wrapper_frames": {"lead": 96000, "trail": 144000},
+  "rate": 48000,
+  "channels": 2,
+  "bits": 16,
+  "entry_ms": 0,
+  "exit_ms": 30850,
+  "source_duration_ms": 40850,
+  "baked_post_exit_ms": 10000,
+  "clock": {"override": true, "tempo": 60, "time_signature": [4, 4], "provenance": "native selected phrase"},
+  "native_sparse_spec": "src/wwise/experiments/white-orchard-sparse-v1.json",
+  "playlist_short_id": 133462974,
+  "rest_segment_short_id": 4111369,
+  "test_rest_loops": 3,
+  "new_segment_name": "WMC_S04a_approved",
+  "observed_generated_ids": {
+    "segment": 1029261546,
+    "track": 499024852,
+    "media": 383927916
+  },
+  "identity_policy": "WAAPI generates fresh identities on reproduction; validate every GUID, ShortID and media ID against complete original source and native banks before acceptance.",
+  "gain_policy": "Report55 local State scopes; exploration audible only in selected day leg; dialogue muted; native combat/outro/authored ancestry untouched.",
+  "unresolved": "No final location assignment, cadence, rest persistence, cue weights, distribution or retail compatibility is approved."
+}
