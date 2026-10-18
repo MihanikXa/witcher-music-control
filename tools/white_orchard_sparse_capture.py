@@ -67,7 +67,7 @@ def cleanup(api, capture, transports):
     return errors
 
 
-def run(project,port,label,selected=None):
+def run(project,port,label,selected=None,observer=None):
     project=build_path(project)
     api=Waapi(port)
     if project.parent.name!='validation' or Path(api.call('ak.wwise.core.getProjectInfo')['path']).resolve()!=project:
@@ -143,6 +143,7 @@ def run(project,port,label,selected=None):
                      initial_state=case.get('state','exploration'),location=location,
                      technical_isolation=bool(restore),primed_before_play=True)
             result['cases'].append(row)
+            if observer is not None:row['initial_engine']=observer(api)
             started=time.monotonic();pending=list(case['actions']);last_write=0
             while time.monotonic()-started < case['duration']:
                 elapsed=time.monotonic()-started
@@ -153,6 +154,7 @@ def run(project,port,label,selected=None):
                     elif kind=='rtpc':api.call('ak.soundengine.setRTPCValue',{'rtpc':name,'value':value})
                     else:raise ValueError('Unknown scheduled action')
                     row['events'].append(dict(scheduled=when,accepted=time.monotonic()-started,kind=kind,name=name,value=value))
+                    if observer is not None:row['events'][-1]['engine_after']=observer(api)
                 voices=api.call('ak.wwise.core.profiler.getVoices',{'time':'capture'},
                     {'return':['pipelineID','objectGUID','objectName','baseVolume','isVirtual','isStarted']})['return']
                 contributions={str(v['pipelineID']):api.call('ak.wwise.core.profiler.getVoiceContributions',

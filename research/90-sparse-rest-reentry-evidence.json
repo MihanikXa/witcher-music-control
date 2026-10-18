@@ -1,0 +1,3235 @@
+{
+  "schema": 1,
+  "passed": true,
+  "checks": [
+    {
+      "name": "complete-source-and-preservation",
+      "passed": true
+    },
+    {
+      "name": "original-explicit-and-fallback-dialogue-duration",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "bad-initial-PCM-rejected",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:redundant-state:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:redundant-state:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:location-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:location-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:daynight-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/diagnosis-v1:daynight-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:initial-State",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:location-ack",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:location-ack",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:location-ack",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-a/validation/event-confirmation-v1:redundant-event-confirmation:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:location-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:location-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:location-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:location-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:daynight-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:daynight-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:daynight-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-b/validation/diagnosis-v2:daynight-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:combat-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:rapid-combat:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "baseline-c/validation/diagnosis-v2:rapid-combat:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:location-early:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:location-early:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:location-early:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:daynight-late:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:daynight-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:daynight-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:combat-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:combat-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:combat-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:location-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:location-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:daynight-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:daynight-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:combat-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/discriminators-v3:combat-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:daynight-early:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:daynight-early:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:daynight-early:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:daynight-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:daynight-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:location-early:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:location-early:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:location-early:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:daynight-late:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:daynight-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:daynight-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:combat-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:combat-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:combat-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:location-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:location-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "location-early:fresh-bounded-rest",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:daynight-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:daynight-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "daynight-late:fresh-bounded-rest",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:combat-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:combat-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "combat-music:native-outro-and-bounded-return",
+      "passed": true
+    },
+    {
+      "name": "combat-music:native-intensity",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:location-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:location-music:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:location-music:location-ack",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:daynight-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:daynight-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:daynight-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-early:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-early:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-early:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-late:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-late:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:cycles-master:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-rest:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-rest:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:protected-world:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:gwent:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:redundant-event:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "redundant-event:continued-cadence",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:location-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:location-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "location-music:fresh-bounded-rest",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:daynight-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:daynight-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "daynight-music:fresh-bounded-rest",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-early:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-early:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "combat-early:native-outro-and-bounded-return",
+      "passed": true
+    },
+    {
+      "name": "combat-early:native-intensity",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-late:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:combat-late:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "combat-late:native-outro-and-bounded-return",
+      "passed": true
+    },
+    {
+      "name": "combat-late:native-intensity",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:rapid-combat:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "rapid-combat:native-outro-and-bounded-return",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:cycles-master:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:cycles-master:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "cycles-master:Music-master",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "authored-music:authored-native-gain",
+      "passed": true
+    },
+    {
+      "name": "authored-music:no-late-generic-cue",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-rest:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-rest:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "authored-rest:authored-native-gain",
+      "passed": true
+    },
+    {
+      "name": "authored-rest:no-late-generic-cue",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:authored-recovery:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "authored-recovery:authored-native-gain",
+      "passed": true
+    },
+    {
+      "name": "authored-recovery:no-late-generic-cue",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:dialogue-scenes:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "dialogue-scenes:generic-dialogue-suppressed",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:protected-world:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:protected-world:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "protected-world:Music-master",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:gwent:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:gwent:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "gwent-native-gain",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:complete-clean",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:source-fingerprint",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:dialogue-music:initial-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:dialogue-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:dialogue-music:known-asynchronous-State",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:dialogue-music:finalized-PCM",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:dialogue-music:PCM-identity",
+      "passed": true
+    },
+    {
+      "name": "dialogue-music:generic-dialogue-suppressed",
+      "passed": true
+    },
+    {
+      "name": "rest-first-exact-case-coverage",
+      "passed": true
+    },
+    {
+      "name": "complete-approved-waveform-tail-rest",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/discriminators-v1:closed-source-exact",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/regression-v1:closed-source-exact",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/dialogue-v1:closed-source-exact",
+      "passed": true
+    },
+    {
+      "name": "candidate-a/validation/history-early-v1:closed-source-exact",
+      "passed": true
+    },
+    {
+      "name": "candidate-b/validation/state-settling-v1:closed-source-exact",
+      "passed": true
+    },
+    {
+      "name": "A-discriminator-independent-source-and-cleanup",
+      "passed": true
+    },
+    {
+      "name": "settling-probe-complete-clean",
+      "passed": true
+    },
+    {
+      "name": "settled-State:combat",
+      "passed": true
+    },
+    {
+      "name": "settled-State:exploration",
+      "passed": true
+    },
+    {
+      "name": "settled-State:dialog_scene",
+      "passed": true
+    },
+    {
+      "name": "settled-State:exploration",
+      "passed": true
+    }
+  ],
+  "source": {
+    "passed": true,
+    "projects": [
+      {
+        "name": "baseline-a",
+        "work_units": 1508,
+        "original_audio": 47,
+        "source_sha256": "a0beae9fbf32d55054c2cb8ea10a2cc8f0034b699d9c921fef1e1351075b53ff",
+        "source_gate": {
+          "passed": true,
+          "baseline_exact": true
+        }
+      },
+      {
+        "name": "baseline-b",
+        "work_units": 1508,
+        "original_audio": 47,
+        "source_sha256": "a0beae9fbf32d55054c2cb8ea10a2cc8f0034b699d9c921fef1e1351075b53ff",
+        "source_gate": {
+          "passed": true,
+          "baseline_exact": true
+        }
+      },
+      {
+        "name": "baseline-c",
+        "work_units": 1508,
+        "original_audio": 47,
+        "source_sha256": "a0beae9fbf32d55054c2cb8ea10a2cc8f0034b699d9c921fef1e1351075b53ff",
+        "source_gate": {
+          "passed": true,
+          "baseline_exact": true
+        }
+      },
+      {
+        "name": "candidate-a",
+        "work_units": 1508,
+        "original_audio": 47,
+        "source_sha256": "752b340a9f74f6f3588d0b771ac9169ca97d23fdda9351215ffb4382c486ad66",
+        "source_gate": {
+          "passed": true,
+          "mode": "history-rest",
+          "added_guids": [
+            "{8F3CFFD6-72F5-492E-AFA1-F12445CB31FA}",
+            "{AE270AE6-A2C0-481D-988C-AD9EEEB0DAA2}",
+            "{8D1E6D85-A8C5-42F2-A187-9F958332A365}",
+            "{C2C26C87-05CD-4A35-9165-A5A5AA773DBB}",
+            "{3929C51E-F79E-4DED-8AD2-D15D05EFD27F}",
+            "{E83DF4AC-756C-4908-83C4-0824BF8C6CB8}"
+          ],
+          "complete_source_reconstruction": true,
+          "new_source_audio": false,
+          "native_fades_sync_outro_unchanged": true
+        }
+      },
+      {
+        "name": "candidate-b",
+        "work_units": 1508,
+        "original_audio": 47,
+        "source_sha256": "a5c759d7d4ccd2d182ce28398f634d9dc8095a6aba804b1e46f6c96decc7530a",
+        "source_gate": {
+          "passed": true,
+          "mode": "rest-first",
+          "added_guids": [],
+          "complete_source_reconstruction": true,
+          "new_source_audio": false,
+          "native_fades_sync_outro_unchanged": true
+        }
+      }
+    ],
+    "closure": {
+      "event_work_units": 542,
+      "transition_conflicts": 0,
+      "direct_event_conflicts": 0,
+      "reviewed_consumers": {
+        "{4A23933D-BE41-4C79-BED2-337D24C605EA}": [
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "underwater_focus"
+            ]
+          ]
+        ],
+        "{DB2D1857-52A0-4562-BA04-3104EB7CA2AA}": [
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{69A0E6D6-863F-4734-AFBD-5EF86286C098}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{5963D5CD-2EBE-4FFF-AD38-253D18C433B3}": [
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "underwater_focus"
+            ]
+          ],
+          [
+            "{CBBBF34E-04BB-4675-ABA0-89E34BDCAF09}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{D79C5D2C-22B5-4855-882B-FD18E348605D}": [
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{00F2D643-114B-46E4-B5EB-4B78ED19D3A6}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{3EA3656B-F8B4-4B72-93D9-535D2ECBBD9E}": [
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "underwater_focus"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{062586AE-541C-4AC2-96D2-04868DFECF2B}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{C38A35E3-857B-4035-9852-B3F01E78ADA6}": [
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "underwater_focus"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{DAFA9756-7CF8-4A6A-8AC0-01FC8D05F7DF}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{C0E409DC-01A4-4C40-9393-51BD4D89A0A0}": [
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "underwater_focus"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{A604F34A-9FF8-47D7-BB54-D7556B5A36C9}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ],
+        "{7F25E162-CD2C-4E73-8A67-E3DCB41564BA}": [
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "exploration"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "cutscene"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "dialog_scene"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "exploration_night"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "focus_exploration"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "dialog_scene_night"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "underwater"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "boat"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "underwater_focus"
+            ]
+          ],
+          [
+            "{35573860-934D-499C-82F2-6B240BFF81F3}",
+            [
+              "focus_exploration_night"
+            ]
+          ]
+        ]
+      }
+    },
+    "approved24_exact": true,
+    "retained_bank_sha256": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+    "native_init_sha256": "2dcb418b9f96389a57341a49e86cdcb0c18d95552a0e17dccf10d4df1d54d277",
+    "original_events_unchanged": true,
+    "generated_banks": false,
+    "retail_verified": false
+  },
+  "inputs": [
+    {
+      "path": "build/sparse-reentry-pilot-v1/source-gate-final-v3.json",
+      "sha256": "92289658eeada23f4dcc08496300ece67811ee7805f2b93d923764afb342166a"
+    },
+    {
+      "path": "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\assets\\w3_audio\\States\\global_states.wwu",
+      "sha256": "062491186278a25f68ee44cb7b2f1147dc0f97a23e2738d7549a188ec5b9b6d7"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-a/validation/diagnosis-v1/measurements.json",
+      "sha256": "bb7f65cdd266cd64be4adb0a8c4b69630b1cc98e21b9fab88783a2f4ca4c3a4d"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-a/validation/diagnosis-v1/results.json",
+      "sha256": "6c3e3d0af82b3dcce2576018526e4e93cfbf08b388bda7c69eccd166aa85c3c5"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-a/validation/event-confirmation-v1/measurements.json",
+      "sha256": "9ca4f6a1e39f11a8d300bbb42ecfce4673581f84dbe504b7d2d1e850a27c6027"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-a/validation/event-confirmation-v1/results.json",
+      "sha256": "03a23e5a173bea1632e0a1f0345486f5097ab34daccccc3580d4be988ec71265"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-b/validation/diagnosis-v2/measurements.json",
+      "sha256": "0bd4640a73374643418685a73de9a17fee58ea6271a422311513c4963524e847"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-b/validation/diagnosis-v2/results.json",
+      "sha256": "d79510b011f2d230acfe8bcc1dc24f38e8e7f3d9a5984187f6e9f1b849dec5ae"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-c/validation/diagnosis-v2/measurements.json",
+      "sha256": "c477a437069d61f2ba96cd5fcb5143385dc39eddcd83837fd018f937f92b8a1d"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/baseline-c/validation/diagnosis-v2/results.json",
+      "sha256": "812de748b4ea084b1a0b283d88422b0b54ce4b79280a78d38bdf43083306d2d3"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/discriminators-v3/measurements.json",
+      "sha256": "c89768cb5efab2ac6dd0b12a8bec5733695236650ebc7c0044b4112ae5237f29"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/discriminators-v3/results.json",
+      "sha256": "ef6d87a6e7f42b861c2284aba94a21ec31e8ba6ef3351007778b34829e1e1e4e"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/history-early-v1/measurements.json",
+      "sha256": "1664f79c585c285a970a285c8debea0f4c77dd7645029e93fa54645053255c94"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/history-early-v1/results.json",
+      "sha256": "ac4e41c29204d5a21b7efc515b670eb60bdb1db50be7e9a6cb811a6cba210ea4"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/discriminators-v1/measurements.json",
+      "sha256": "bc5a97cad40dd55d1a090ece146cac618879d192c82f0c2c774080e5635a7a21"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/discriminators-v1/results.json",
+      "sha256": "bbc4b948b170480cb9fd60a5753153310e407c7c44b717cfd95a45435026e54f"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/regression-v1/measurements.json",
+      "sha256": "becf388cce9d8b8f7ede50e5cfe057b74adac034ae3eacb0ea59f8cf4b081caa"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/regression-v1/results.json",
+      "sha256": "30adebb27e38b56da0c017c11a1cfd5f44e538df910855258360506409174de3"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/dialogue-v1/measurements.json",
+      "sha256": "86e901ca3e7c476c4c2544d596725b2c5a6e8f406fd205e99022f4d6821266e5"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/dialogue-v1/results.json",
+      "sha256": "e007175e3511140b358f497ce234765f2e1bccbc3a60913dfea804edeace34a2"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b-pcm-proof.json",
+      "sha256": "e31223a2421a8c5c02845b1255460e7debed48982c2a6613dd3d71c3c1c68320"
+    },
+    {
+      "path": "research/87-approved-cue-sparse-evidence.json",
+      "sha256": "650262a6535de34adc58135570789f62fed962b79ebb5761b14d28f236a6020b"
+    },
+    {
+      "path": "build/sparse-approved-cue-pilot-v1/native/validation/matrix-v1/approved-cue-measurements.json",
+      "sha256": "281bcf763a47d95eeec14a76a2aa967c20d4da7b2b1434096a25d42d4d4143b2"
+    },
+    {
+      "path": "build/sparse-approved-cue-pilot-v1/minimal/validation/matrix-v1/approved-cue-measurements.json",
+      "sha256": "792598b253fb3b54d915d4860cf13e4a4a0f6088d4c002db8063e9e24d8d51f0"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/discriminators-v1-lifecycle.json",
+      "sha256": "3234d290912485e3360c459304be20b4d424c74cb8023502367e07e7848f7d4d"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/regression-v1-lifecycle.json",
+      "sha256": "ae51c37998c357e5bac22498db4bb3b506576b6dcd8f03ffebf2807a3bf33ca5"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/dialogue-v1-lifecycle.json",
+      "sha256": "1e5c25a1e7bd82beb78e3aebeb3b54cd2f83e006ec38dd08e619a6573ade3046"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/history-early-v1-lifecycle.json",
+      "sha256": "857113c5d0e69c7fb192596b11b51d62fd7c47c69f56ca2e6516f0c5db2a754c"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/state-settling-v1-lifecycle.json",
+      "sha256": "eae7ee9a5c78665e984e334446c27a1f963e67a70b517c585841fb0713e90970"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-a/validation/discriminators-v3-lifecycle.json",
+      "sha256": "4a74cf7ff6818e7cfc26089eb4d2ad375060b87baa7f7d18352874e438b1f86a"
+    },
+    {
+      "path": "build/sparse-reentry-pilot-v1/candidate-b/validation/state-settling-v1/results.json",
+      "sha256": "805659c14f7c8c6585b2a08160250a44da3af7be9277471678b52afae2cf7633"
+    }
+  ],
+  "capture_case_counts": {
+    "baseline": 13,
+    "history-rest": 4,
+    "rest-first": 17
+  },
+  "groups": {
+    "baseline": {
+      "redundant-state": {
+        "pcm_sha256": "38e8e02169b8b97ec8978a8af3108f33ffa310392ff762f857ee172408c7f347",
+        "pcm_seconds": 128.16,
+        "redundant": {
+          "first_pipeline": 18,
+          "first": 2.0873035000040545,
+          "last": 42.792277900000045,
+          "second": 63.05090249999921,
+          "cadence": 60.963598999995156,
+          "normal_cadence_preserved": true,
+          "cadences": [
+            60.963598999995156,
+            60.8134349000029
+          ],
+          "events": [
+            {
+              "scheduled": 6,
+              "accepted": 6.196655700005067,
+              "kind": "state",
+              "name": "exploration",
+              "value": null
+            },
+            {
+              "scheduled": 44,
+              "accepted": 44.01143650000449,
+              "kind": "state",
+              "name": "exploration",
+              "value": null
+            },
+            {
+              "scheduled": 57,
+              "accepted": 57.207129400005215,
+              "kind": "state",
+              "name": "exploration",
+              "value": null
+            }
+          ]
+        }
+      },
+      "location-music": {
+        "pcm_sha256": "e6777573faa681a65976513d0ee68a3ef43bf77db78864267033fc8ec32c255b",
+        "pcm_seconds": 50.64533333333333,
+        "return": {
+          "return_accepted": 12.183173199999146,
+          "next_cue": 14.695828200005053,
+          "delay": 2.512655000005907,
+          "uninterrupted_nominal_boundary": 63.058288600004744,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 37,
+              "first": 33.058288600004744,
+              "last": 42.691366500002914
+            },
+            {
+              "pipeline": 38,
+              "first": 42.93932300000597,
+              "last": 52.880888700005016
+            },
+            {
+              "pipeline": 39,
+              "first": 53.08311320000212,
+              "last": 62.85931780000101
+            }
+          ]
+        }
+      },
+      "daynight-music": {
+        "pcm_sha256": "3042a047daf8461013b44b258a8fe24846ea8263656351e2a36c42a02bba79fd",
+        "pcm_seconds": 51.25333333333333,
+        "return": {
+          "return_accepted": 12.059386600005382,
+          "next_cue": 14.081505500005733,
+          "delay": 2.0221189000003505,
+          "uninterrupted_nominal_boundary": 62.90365710000333,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 51,
+              "first": 32.90365710000333,
+              "last": 42.869155799999135
+            },
+            {
+              "pipeline": 52,
+              "first": 43.071988400006376,
+              "last": 52.71796750000067
+            },
+            {
+              "pipeline": 53,
+              "first": 52.93303310000192,
+              "last": 62.840786100001424
+            }
+          ]
+        }
+      },
+      "redundant-event-confirmation": {
+        "pcm_sha256": "e7698bf69d6d6f8abd869496d281401e38e76c0f92f66152cebc2878f82181aa",
+        "pcm_seconds": 73.14133333333334,
+        "redundant": {
+          "first_pipeline": 4,
+          "first": 2.1486712000005355,
+          "last": 42.683847200001765,
+          "second": 62.92220770000131,
+          "cadence": 60.77353650000077,
+          "normal_cadence_preserved": true,
+          "cadences": [
+            60.77353650000077
+          ],
+          "events": [
+            {
+              "scheduled": 6,
+              "accepted": 6.006276399999479,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 44,
+              "accepted": 44.082381799998984,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 57,
+              "accepted": 57.10867359999975,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "location-early": {
+        "pcm_sha256": "d0696b596b7053c449a1be4b4fa9da53449932c9918e5006300784d30246e184",
+        "pcm_seconds": 40.608,
+        "return": {
+          "return_accepted": 48.15549440000177,
+          "next_cue": 49.784372499998426,
+          "delay": 1.6288780999966548,
+          "uninterrupted_nominal_boundary": 62.93584550000378,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 11,
+              "first": 73.84958580000239,
+              "last": 83.70472919999884
+            },
+            {
+              "pipeline": 12,
+              "first": 83.9092770999996,
+              "last": 89.93840169999748
+            }
+          ]
+        }
+      },
+      "location-late": {
+        "pcm_sha256": "995dda018e671de338fe01dd7272893e9380c1e4bf4980cec517d25881ef9776",
+        "pcm_seconds": 37.61066666666667,
+        "return": {
+          "return_accepted": 60.02767329999915,
+          "next_cue": 62.532373299996834,
+          "delay": 2.5046999999976833,
+          "uninterrupted_nominal_boundary": 62.93811870000354,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 24,
+              "first": 83.87041139999928,
+              "last": 93.5489751999994
+            },
+            {
+              "pipeline": 25,
+              "first": 93.7991206000006,
+              "last": 99.84262360000139
+            }
+          ]
+        }
+      },
+      "daynight-early": {
+        "pcm_sha256": "f956b76f04bd852466e71ca8b5c36eda8e649781f570f7a28030e2478b884842",
+        "pcm_seconds": 41.056,
+        "return": {
+          "return_accepted": 48.166369999999006,
+          "next_cue": 49.31158510000387,
+          "delay": 1.1452151000048616,
+          "uninterrupted_nominal_boundary": 62.95709899999929,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 38,
+              "first": 73.78631170000153,
+              "last": 83.59001510000235
+            },
+            {
+              "pipeline": 39,
+              "first": 83.79030720000446,
+              "last": 89.99974099999963
+            }
+          ]
+        }
+      },
+      "daynight-late": {
+        "pcm_sha256": "db8022907e8e11ce797e1982bbb3a9ddd6fdc399d1eaa0cf47e7bb5ac3d16c1c",
+        "pcm_seconds": 38.165333333333336,
+        "return": {
+          "return_accepted": 60.17174430000159,
+          "next_cue": 62.25789580000128,
+          "delay": 2.086151499999687,
+          "uninterrupted_nominal_boundary": 63.00392570000258,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 53,
+              "first": 83.82922630000394,
+              "last": 93.66358729999774
+            },
+            {
+              "pipeline": 54,
+              "first": 93.86643259999983,
+              "last": 99.9154692000011
+            }
+          ]
+        }
+      },
+      "combat-music": {
+        "pcm_sha256": "5498fa2e2ef6c8668328636338ca87391739042857d3f59d48073fa0cf4d3c08",
+        "pcm_seconds": 98.208,
+        "combat": {
+          "combat_accepted": 6.012278299996979,
+          "exploration_accepted": 30.12155399999756,
+          "entry_latency": 1.536730300002091,
+          "outro_first": 30.70186599999579,
+          "outro_last": 35.55654449999565,
+          "outro_span": 4.854678499999864,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 30.95067310000013,
+          "cue_delay": 0.8291191000025719,
+          "cue_outro_overlap": true,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 30.70186599999579,
+              "last": 35.55654449999565,
+              "span": 4.854678499999864,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": true
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": false,
+          "complete_native_outro": true,
+          "bounded_quiet_return": false,
+          "tested_30s_guard": false,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -18.463504791259766,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -785.1344604492188,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              9.012278299996979,
+              11.631365499997628
+            ],
+            [
+              35,
+              13.131365499997628,
+              17.682994699993287
+            ],
+            [
+              100,
+              19.182994699993287,
+              29.62155399999756
+            ]
+          ]
+        }
+      },
+      "combat-early": {
+        "pcm_sha256": "6f81716c42feae0f273e83f39df5fd5249f58c8f43a5b2eed2821ed9806df908",
+        "pcm_seconds": 118.12266666666666,
+        "combat": {
+          "combat_accepted": 44.22041760000138,
+          "exploration_accepted": 66.16719220000232,
+          "entry_latency": 0.4833126000012271,
+          "outro_first": 67.18656039999769,
+          "outro_last": 71.90404580000177,
+          "outro_span": 4.71748540000408,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 67.45189329999994,
+          "cue_delay": 1.2847010999976192,
+          "cue_outro_overlap": true,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 67.18656039999769,
+              "last": 71.90404580000177,
+              "span": 4.71748540000408,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": true
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": false,
+          "complete_native_outro": true,
+          "bounded_quiet_return": false,
+          "tested_30s_guard": false,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -17.0,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -783.6162109375,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              47.22041760000138,
+              49.567707399997744
+            ],
+            [
+              35,
+              51.067707399997744,
+              55.58985560000292
+            ],
+            [
+              100,
+              57.08985560000292,
+              65.66719220000232
+            ]
+          ]
+        }
+      },
+      "combat-late": {
+        "pcm_sha256": "7583b645329e26458bdb186d6ad38e8f4a294f758d67b943b3773f5bbe153f0b",
+        "pcm_seconds": 133.216,
+        "combat": {
+          "combat_accepted": 57.02298249999876,
+          "exploration_accepted": 82.03556369999569,
+          "entry_latency": 0.895867500003078,
+          "outro_first": 82.5725237000006,
+          "outro_last": 87.53384569999616,
+          "outro_span": 4.961321999995562,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 82.85414019999735,
+          "cue_delay": 0.8185765000016545,
+          "cue_outro_overlap": true,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 82.5725237000006,
+              "last": 87.53384569999616,
+              "span": 4.961321999995562,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": true
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": false,
+          "complete_native_outro": true,
+          "bounded_quiet_return": false,
+          "tested_30s_guard": false,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -17.0,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -783.6932067871094,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              60.02298249999876,
+              62.560027999999875
+            ],
+            [
+              35,
+              64.06002799999987,
+              68.70668969999679
+            ],
+            [
+              100,
+              70.20668969999679,
+              81.53556369999569
+            ]
+          ]
+        }
+      },
+      "rapid-combat": {
+        "pcm_sha256": "aea50cbf64c10de995eb3206207becb36a096df17f6b2202061c959f454ac508",
+        "pcm_seconds": 98.02666666666667,
+        "combat": {
+          "combat_accepted": 6.0292772999964654,
+          "exploration_accepted": 42.16656890000013,
+          "entry_latency": 1.5218324000015855,
+          "outro_first": 43.360499100002926,
+          "outro_last": 48.246325300002354,
+          "outro_span": 4.885826199999428,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 43.60805770000297,
+          "cue_delay": 1.441488800002844,
+          "cue_outro_overlap": true,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 21.120515599999635,
+              "last": 26.122624700001325,
+              "span": 5.0021091000016895,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": true
+            },
+            {
+              "first": 43.360499100002926,
+              "last": 48.246325300002354,
+              "span": 4.885826199999428,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": true
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": false,
+          "complete_native_outro": true,
+          "bounded_quiet_return": false,
+          "tested_30s_guard": false,
+          "threat_0_35_100": true
+        }
+      }
+    },
+    "history-rest": {
+      "location-early": {
+        "pcm_sha256": "6aa92cc04e0e0c9c81107a91ec797421d910bfff0d089fc127e524c04da40eb0",
+        "pcm_seconds": 40.714666666666666,
+        "return": {
+          "return_accepted": 48.10812839999926,
+          "next_cue": 49.68771239999842,
+          "delay": 1.5795839999991586,
+          "uninterrupted_nominal_boundary": 63.12072949999856,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 11,
+              "first": 73.94329260000086,
+              "last": 83.72207770000023
+            },
+            {
+              "pipeline": 12,
+              "first": 83.92499690000113,
+              "last": 90.04130430000077
+            }
+          ]
+        }
+      },
+      "daynight-late": {
+        "pcm_sha256": "07dfb3c80dcc482248e9e3e6a180830ce349b187592136e9544fb89f6d4841c0",
+        "pcm_seconds": 38.336,
+        "return": {
+          "return_accepted": 60.12239100000079,
+          "next_cue": 68.0874928000012,
+          "delay": 7.9651018000004115,
+          "uninterrupted_nominal_boundary": 62.893382800000836,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 25,
+              "first": 62.060582400001294,
+              "last": 67.88373960000172
+            },
+            {
+              "pipeline": 27,
+              "first": 98.88947010000265,
+              "last": 100.01836750000075
+            }
+          ]
+        }
+      },
+      "combat-music": {
+        "pcm_sha256": "110fecab04a81aecd605d7b86b52c0e35e101bdeb2dc39d0476691ab8f70ff97",
+        "pcm_seconds": 98.18666666666667,
+        "combat": {
+          "combat_accepted": 6.200717900002928,
+          "exploration_accepted": 30.01613940000243,
+          "entry_latency": 1.1404025999981968,
+          "outro_first": 30.6068073000024,
+          "outro_last": 35.48280870000235,
+          "outro_span": 4.87600139999995,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 62.20062940000207,
+          "cue_delay": 32.18448999999964,
+          "cue_outro_overlap": false,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 30.6068073000024,
+              "last": 35.48280870000235,
+              "span": 4.87600139999995,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": true,
+          "complete_native_outro": true,
+          "bounded_quiet_return": true,
+          "tested_30s_guard": true,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -18.256364822387695,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -784.9120483398438,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              9.200717900002928,
+              11.585507500003587
+            ],
+            [
+              35,
+              13.085507500003587,
+              17.645583100002113
+            ],
+            [
+              100,
+              19.145583100002113,
+              29.51613940000243
+            ]
+          ]
+        }
+      },
+      "daynight-early": {
+        "pcm_sha256": "ff03ffd058ad84e4ea3f16c37e75b2d0a395b4aa8d2fbef181c1e29fb80e160c",
+        "pcm_seconds": 40.949333333333335,
+        "return": {
+          "return_accepted": 48.037130400000024,
+          "next_cue": 67.26701350000076,
+          "delay": 19.229883100000734,
+          "uninterrupted_nominal_boundary": 63.08710710000014,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 12,
+              "first": 49.432522700000845,
+              "last": 57.14837139999872
+            },
+            {
+              "pipeline": 13,
+              "first": 57.350707599998714,
+              "last": 67.06491689999893
+            }
+          ]
+        }
+      }
+    },
+    "rest-first": {
+      "location-early": {
+        "pcm_sha256": "b5aeb26d166eb547b2d8ceef510e5d11775595035036149bfef56598a10f2a5a",
+        "pcm_seconds": 73.152,
+        "return": {
+          "return_accepted": 10.077050300002156,
+          "next_cue": 42.048113699998794,
+          "delay": 31.971063399996638,
+          "uninterrupted_nominal_boundary": 32.188206300001184,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 9,
+              "first": 12.223950499999773,
+              "last": 21.828644799999893
+            },
+            {
+              "pipeline": 10,
+              "first": 22.028282400002354,
+              "last": 31.904495700000552
+            },
+            {
+              "pipeline": 11,
+              "first": 32.10667110000213,
+              "last": 41.845433099999354
+            },
+            {
+              "pipeline": 13,
+              "first": 72.94337710000036,
+              "last": 74.9405837000013
+            }
+          ]
+        }
+      },
+      "daynight-late": {
+        "pcm_sha256": "39baf8c17d87a2427af46cd1bee045bb918c5e4afef7177b9644c3c56aa10e8c",
+        "pcm_seconds": 65.04533333333333,
+        "return": {
+          "return_accepted": 30.115294799998082,
+          "next_cue": 62.03942019999886,
+          "delay": 31.924125400000776,
+          "uninterrupted_nominal_boundary": 32.109449999999924,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 26,
+              "first": 32.31722810000065,
+              "last": 41.875493200001074
+            },
+            {
+              "pipeline": 27,
+              "first": 42.077184800000396,
+              "last": 51.8157581000014
+            },
+            {
+              "pipeline": 28,
+              "first": 52.21950460000153,
+              "last": 61.821911300001375
+            },
+            {
+              "pipeline": 30,
+              "first": 92.97392119999859,
+              "last": 94.9708673999994
+            }
+          ]
+        }
+      },
+      "combat-music": {
+        "pcm_sha256": "ec547297b93eed173e4fca01694f89ede4335004837faca7e2d58f2b9bfd5f19",
+        "pcm_seconds": 128.04266666666666,
+        "combat": {
+          "combat_accepted": 36.091087799999514,
+          "exploration_accepted": 60.15970009999728,
+          "entry_latency": 1.3236201999970945,
+          "outro_first": 61.37881070000003,
+          "outro_last": 66.39375829999699,
+          "outro_span": 5.014947599996958,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 89.11731939999663,
+          "cue_delay": 28.95761929999935,
+          "cue_outro_overlap": false,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 61.37881070000003,
+              "last": 66.39375829999699,
+              "span": 5.014947599996958,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": true,
+          "complete_native_outro": true,
+          "bounded_quiet_return": true,
+          "tested_30s_guard": true,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -18.545751571655273,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -785.1895751953125,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              39.091087799999514,
+              41.665268099997775
+            ],
+            [
+              35,
+              43.165268099997775,
+              47.71139019999828
+            ],
+            [
+              100,
+              49.21139019999828,
+              59.65970009999728
+            ]
+          ]
+        }
+      },
+      "redundant-event": {
+        "pcm_sha256": "6f5eecbcce516bbdbb4a0991618bb4a44bea1bb6677dcd6643bc58ef7f14a2f1",
+        "pcm_seconds": 148.128,
+        "redundant": {
+          "first_pipeline": 9,
+          "first": 32.12501060000068,
+          "last": 72.83275830000275,
+          "second": 92.89534110000022,
+          "cadence": 60.770330499999545,
+          "normal_cadence_preserved": true,
+          "cadences": [
+            60.770330499999545
+          ],
+          "events": [
+            {
+              "scheduled": 6,
+              "accepted": 6.0795095000030415,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 26,
+              "accepted": 26.09538000000248,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 36,
+              "accepted": 36.06459830000313,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 74,
+              "accepted": 74.04009170000063,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            },
+            {
+              "scheduled": 87,
+              "accepted": 87.15448340000148,
+              "kind": "event",
+              "name": "mus_loc_prologue_village",
+              "value": null,
+              "engine_after": {
+                "game_state": {
+                  "return": {
+                    "id": "{BC94CBF1-ED34-4FFC-AC1B-5790AEE3092D}",
+                    "name": "exploration"
+                  }
+                },
+                "location": {
+                  "return": {
+                    "id": "{D57826A6-CF4D-4BC7-8B61-E24DB02B4310}",
+                    "name": "village"
+                  }
+                },
+                "music_type": {
+                  "return": {
+                    "id": "{DE82D8E6-029B-4576-A822-C459B1055E9A}",
+                    "name": "world_music"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "location-music": {
+        "pcm_sha256": "61009c24975be5299814c25cc22885870ad82fa548a2e73beb52886679609276",
+        "pcm_seconds": 62.602666666666664,
+        "return": {
+          "return_accepted": 42.1513578999984,
+          "next_cue": 72.09623219999776,
+          "delay": 29.944874299999356,
+          "uninterrupted_nominal_boundary": 32.156666199996835,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 27,
+              "first": 44.56561679999868,
+              "last": 51.92297799999869
+            },
+            {
+              "pipeline": 28,
+              "first": 52.12358139999924,
+              "last": 61.83004399999845
+            },
+            {
+              "pipeline": 29,
+              "first": 62.049988399998256,
+              "last": 71.86244739999893
+            },
+            {
+              "pipeline": 31,
+              "first": 102.96871729999839,
+              "last": 106.86090369999874
+            }
+          ]
+        }
+      },
+      "daynight-music": {
+        "pcm_sha256": "3f6309e7a4c1a5c06eed7eb531672c2eff5eb10a94ad118fa32e7b21eabb9ae2",
+        "pcm_seconds": 63.349333333333334,
+        "return": {
+          "return_accepted": 42.09332220000215,
+          "next_cue": 72.04700850000154,
+          "delay": 29.95368629999939,
+          "uninterrupted_nominal_boundary": 32.17421090000062,
+          "new_rest_pipelines": [
+            {
+              "pipeline": 44,
+              "first": 43.92158200000267,
+              "last": 51.90899830000126
+            },
+            {
+              "pipeline": 45,
+              "first": 52.1094230000017,
+              "last": 61.9290510000028
+            },
+            {
+              "pipeline": 46,
+              "first": 62.128281700002844,
+              "last": 71.84275280000293
+            },
+            {
+              "pipeline": 48,
+              "first": 102.97305990000314,
+              "last": 106.99466300000131
+            }
+          ]
+        }
+      },
+      "combat-early": {
+        "pcm_sha256": "88f85708ad99738030dc6e3eb92efa552754bd6635289bddf14b0288951cbf3c",
+        "pcm_seconds": 98.16533333333334,
+        "combat": {
+          "combat_accepted": 6.021821099999215,
+          "exploration_accepted": 30.046511000000464,
+          "entry_latency": 0.9288261000001512,
+          "outro_first": 30.910787199998595,
+          "outro_last": 35.90300349999961,
+          "outro_span": 4.992216300001019,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 58.59891109999808,
+          "cue_delay": 28.552400099997612,
+          "cue_outro_overlap": false,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 30.910787199998595,
+              "last": 35.90300349999961,
+              "span": 4.992216300001019,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": true,
+          "complete_native_outro": true,
+          "bounded_quiet_return": true,
+          "tested_30s_guard": true,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -17.366317749023438,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -784.0075988769531,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              9.021821099999215,
+              11.569257099999959
+            ],
+            [
+              35,
+              13.069257099999959,
+              17.59272509999937
+            ],
+            [
+              100,
+              19.09272509999937,
+              29.546511000000464
+            ]
+          ]
+        }
+      },
+      "combat-late": {
+        "pcm_sha256": "b0f965c5ee68004dd58112ec6722479d6c5b5ac88b34ee9ddfc58b1d7e0fd26d",
+        "pcm_seconds": 118.22933333333333,
+        "combat": {
+          "combat_accepted": 26.166124399998807,
+          "exploration_accepted": 50.02051829999982,
+          "entry_latency": 0.7509804000001168,
+          "outro_first": 51.25966689999768,
+          "outro_last": 55.7770967999968,
+          "outro_span": 4.517429899999115,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 78.62764199999947,
+          "cue_delay": 28.607123699999647,
+          "cue_outro_overlap": false,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 51.25966689999768,
+              "last": 55.7770967999968,
+              "span": 4.517429899999115,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": true,
+          "complete_native_outro": true,
+          "bounded_quiet_return": true,
+          "tested_30s_guard": true,
+          "threat_0_35_100": true
+        },
+        "intensity": {
+          "passed": true,
+          "levels": {
+            "layer1": {
+              "0": -17.342336654663086,
+              "35": -17.0,
+              "100": -17.0
+            },
+            "layer2": {
+              "0": -783.982421875,
+              "35": -19.0,
+              "100": -19.0
+            }
+          },
+          "windows": [
+            [
+              0,
+              29.166124399998807,
+              31.55010239999683
+            ],
+            [
+              35,
+              33.05010239999683,
+              37.62397189999683
+            ],
+            [
+              100,
+              39.12397189999683,
+              49.52051829999982
+            ]
+          ]
+        }
+      },
+      "rapid-combat": {
+        "pcm_sha256": "fe1837bc8ea51c7f7b476b72960ae67780d222f2944522c121e3287369d526d0",
+        "pcm_seconds": 98.18666666666667,
+        "combat": {
+          "combat_accepted": 6.072384699997201,
+          "exploration_accepted": 42.04538319999847,
+          "entry_latency": 0.8791621000018495,
+          "outro_first": 42.78811779999887,
+          "outro_last": 47.622214499999245,
+          "outro_span": 4.834096700000373,
+          "outro_middle_db": -19.0,
+          "cue_after_return": 65.67729439999675,
+          "cue_delay": 23.631911199998285,
+          "cue_outro_overlap": false,
+          "threat_values": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "all_outros": [
+            {
+              "first": 20.6678095999996,
+              "last": 25.59298459999991,
+              "span": 4.9251750000003085,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            },
+            {
+              "first": 42.78811779999887,
+              "last": 47.622214499999245,
+              "span": 4.834096700000373,
+              "middle_db": -19.0,
+              "native_complete": true,
+              "cue_overlap": false
+            }
+          ],
+          "complete_native_outros": true,
+          "no_cue_during_any_outro": true,
+          "complete_native_outro": true,
+          "bounded_quiet_return": true,
+          "tested_30s_guard": false,
+          "threat_0_35_100": true
+        }
+      },
+      "cycles-master": {
+        "pcm_sha256": "3bf2df085a248853df54533ee9abec384cf95fc7c13520b983cebf242d288fe8",
+        "pcm_seconds": 153.12,
+        "master": {
+          "passed": true,
+          "levels": {
+            "50": -25.020599365234375,
+            "100": -19.0
+          },
+          "windows": [
+            [
+              50,
+              40.19152189999659,
+              42.19152189999659
+            ],
+            [
+              100,
+              48.117378899998585,
+              50.117378899998585
+            ]
+          ]
+        }
+      },
+      "authored-music": {
+        "pcm_sha256": "85758011d103dd25d6715efd594848593f1d9e72e89303f5cfb6fefd08fedca4",
+        "pcm_seconds": 25.152,
+        "authored_peak_db": -22.0
+      },
+      "authored-rest": {
+        "pcm_sha256": "f409536b35e6fb702c0c29feb9fe3d345e53e21fbe37e3fc1a0eb225ac9641b5",
+        "pcm_seconds": 35.296,
+        "authored_peak_db": -22.0
+      },
+      "authored-recovery": {
+        "pcm_sha256": "c1e72971abe21e990f15a24eddc6dd4d67db748e6f3447ee6589d755078e5baa",
+        "pcm_seconds": 73.16266666666667,
+        "authored_peak_db": -22.0
+      },
+      "dialogue-scenes": {
+        "pcm_sha256": "722c4dbef9416c2b1ef3cd403a130c3f666e7bb2d3aacf98407a68040efdfa4f",
+        "pcm_seconds": 13.077333333333334
+      },
+      "protected-world": {
+        "pcm_sha256": "f97c06b022cb5f585d78634ee60da0e673fe0f0d3e6efb8427f4001fac3e880b",
+        "pcm_seconds": 23.872,
+        "master": {
+          "passed": true,
+          "levels": {
+            "50": -23.020599365234375,
+            "100": -17.0
+          },
+          "windows": [
+            [
+              50,
+              10.061305700000958,
+              12.061305700000958
+            ],
+            [
+              100,
+              19.08757130000231,
+              21.08757130000231
+            ]
+          ]
+        }
+      },
+      "gwent": {
+        "pcm_sha256": "c68a540a8bb3c2a4a7f1cab91629019f1b5e755e666b3702165a26e09be0de7b",
+        "pcm_seconds": 18.965333333333334,
+        "peak_db": -17.0
+      },
+      "dialogue-music": {
+        "pcm_sha256": "0cf67521afc9da1093690f9c157130d7559d8f4f45e2dd5256631f16adbbd171",
+        "pcm_seconds": 65.088
+      }
+    }
+  },
+  "prior_controls": {
+    "native": {
+      "cases": 10,
+      "regenerated": false
+    },
+    "minimal": {
+      "cases": 10,
+      "regenerated": false
+    }
+  },
+  "historical_report87_status": "Authoring/playback proof passed; generated-bank proof blocked by fresh-project entitlement",
+  "waveform": {
+    "passed": true,
+    "first_offset_frames": 1440256,
+    "second_offset_frames": 4361056,
+    "first_offset_seconds": 30.005333333333333,
+    "second_offset_seconds": 90.85533333333333,
+    "cadence_seconds": 60.85,
+    "expected_gain_db": -18.996625900268555,
+    "first_checks": [
+      {
+        "source_from": 4,
+        "source_to": 4.5,
+        "maximum_error_pcm16": 0.989844120398299,
+        "rms_error_pcm16": 0.5592740231683998
+      },
+      {
+        "source_from": 20,
+        "source_to": 25,
+        "maximum_error_pcm16": 0.989844120398299,
+        "rms_error_pcm16": 0.5354986903160882
+      },
+      {
+        "source_from": 30.85,
+        "source_to": 33,
+        "maximum_error_pcm16": 0.989844120398299,
+        "rms_error_pcm16": 0.5169279759460433
+      },
+      {
+        "source_from": 33,
+        "source_to": 40.85,
+        "maximum_error_pcm16": 0.8979635164402965,
+        "rms_error_pcm16": 0.09722289574570228
+      }
+    ],
+    "complete_second_phrase": {
+      "maximum_error_pcm16": 0.989844120398299,
+      "rms_error_pcm16": 0.4886610960149723
+    },
+    "complete_source_frames": 1960800,
+    "extra_channels_zero": true,
+    "allocated_tail_then_rest_zero": true,
+    "initial_rest_zero": true,
+    "timing_note": "Recorder clock, not event/action wall clock. Initial rest is intentional native playback, not an audition wrapper."
+  },
+  "cleanup": [
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "closed": true,
+      "source_exact": true
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "closed": true,
+      "source_exact": true
+    },
+    {
+      "path": "candidate-b/validation/dialogue-v1",
+      "closed": true,
+      "source_exact": true
+    },
+    {
+      "path": "candidate-a/validation/history-early-v1",
+      "closed": true,
+      "source_exact": true
+    },
+    {
+      "path": "candidate-b/validation/state-settling-v1",
+      "closed": true,
+      "source_exact": true
+    }
+  ],
+  "retained_lifecycle_defect": {
+    "raw_source_exact": false,
+    "source_after_sha256": "752b340a9f74f6f3588d0b771ac9169ca97d23fdda9351215ffb4382c486ad66",
+    "independently_verified_sha256": "752b340a9f74f6f3588d0b771ac9169ca97d23fdda9351215ffb4382c486ad66",
+    "reason": "Expected hash variable was shadowed by a settings tuple; fixed for subsequent capture."
+  },
+  "observer_coverage": [
+    {
+      "path": "baseline-a/validation/diagnosis-v1",
+      "cases": 4,
+      "getter_cases": 0,
+      "limitation": "Baseline precedes getter observer; API acknowledgements/profiler only."
+    },
+    {
+      "path": "baseline-a/validation/event-confirmation-v1",
+      "cases": 1,
+      "getter_cases": 1,
+      "limitation": null
+    },
+    {
+      "path": "baseline-b/validation/diagnosis-v2",
+      "cases": 4,
+      "getter_cases": 0,
+      "limitation": "Baseline precedes getter observer; API acknowledgements/profiler only."
+    },
+    {
+      "path": "baseline-c/validation/diagnosis-v2",
+      "cases": 4,
+      "getter_cases": 0,
+      "limitation": "Baseline precedes getter observer; API acknowledgements/profiler only."
+    },
+    {
+      "path": "candidate-a/validation/discriminators-v3",
+      "cases": 3,
+      "getter_cases": 3,
+      "limitation": null
+    },
+    {
+      "path": "candidate-a/validation/history-early-v1",
+      "cases": 1,
+      "getter_cases": 1,
+      "limitation": null
+    },
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "cases": 3,
+      "getter_cases": 3,
+      "limitation": null
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "cases": 13,
+      "getter_cases": 13,
+      "limitation": null
+    },
+    {
+      "path": "candidate-b/validation/dialogue-v1",
+      "cases": 1,
+      "getter_cases": 1,
+      "limitation": null
+    }
+  ],
+  "immediate_State_observations": [
+    {
+      "path": "candidate-a/validation/discriminators-v3",
+      "case": "daynight-late",
+      "accepted": 56.06362889999946,
+      "requested": "exploration_night",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-a/validation/discriminators-v3",
+      "case": "daynight-late",
+      "accepted": 60.12239100000079,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "exploration_night"
+    },
+    {
+      "path": "candidate-a/validation/discriminators-v3",
+      "case": "combat-music",
+      "accepted": 6.200717900002928,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-a/validation/discriminators-v3",
+      "case": "combat-music",
+      "accepted": 30.01613940000243,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-a/validation/history-early-v1",
+      "case": "daynight-early",
+      "accepted": 44.19787730000098,
+      "requested": "exploration_night",
+      "immediate_getter": "exploration_night",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-a/validation/history-early-v1",
+      "case": "daynight-early",
+      "accepted": 48.037130400000024,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "exploration_night"
+    },
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "case": "daynight-late",
+      "accepted": 26.15447470000072,
+      "requested": "exploration_night",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "case": "daynight-late",
+      "accepted": 30.115294799998082,
+      "requested": "exploration",
+      "immediate_getter": "exploration_night",
+      "previous": "exploration_night"
+    },
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "case": "combat-music",
+      "accepted": 36.091087799999514,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/discriminators-v1",
+      "case": "combat-music",
+      "accepted": 60.15970009999728,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "daynight-music",
+      "accepted": 36.19986229999995,
+      "requested": "exploration_night",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "daynight-music",
+      "accepted": 42.09332220000215,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "exploration_night"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "combat-early",
+      "accepted": 6.021821099999215,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "combat-early",
+      "accepted": 30.046511000000464,
+      "requested": "exploration",
+      "immediate_getter": "combat",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "combat-late",
+      "accepted": 26.166124399998807,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "combat-late",
+      "accepted": 50.02051829999982,
+      "requested": "exploration",
+      "immediate_getter": "combat",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "rapid-combat",
+      "accepted": 6.072384699997201,
+      "requested": "combat",
+      "immediate_getter": "combat",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "rapid-combat",
+      "accepted": 20.11441829999967,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "rapid-combat",
+      "accepted": 23.02713059999951,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "rapid-combat",
+      "accepted": 42.04538319999847,
+      "requested": "exploration",
+      "immediate_getter": "combat",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "authored-music",
+      "accepted": 36.1080378000006,
+      "requested": "dialog_scene",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "authored-rest",
+      "accepted": 6.007894399997895,
+      "requested": "dialog_scene",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "authored-recovery",
+      "accepted": 6.018147400001908,
+      "requested": "combat",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "authored-recovery",
+      "accepted": 22.08052669999961,
+      "requested": "exploration",
+      "immediate_getter": "exploration",
+      "previous": "combat"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "authored-recovery",
+      "accepted": 24.23165710000103,
+      "requested": "dialog_scene",
+      "immediate_getter": "dialog_scene",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 8.187230599996838,
+      "requested": "dialog_scene",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 20.16786449999927,
+      "requested": "exploration",
+      "immediate_getter": "dialog_scene",
+      "previous": "dialog_scene"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 42.078950299997814,
+      "requested": "cutscene",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 43.10478359999979,
+      "requested": "dialog_scene",
+      "immediate_getter": "cutscene",
+      "previous": "cutscene"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 51.0903049999979,
+      "requested": "movie",
+      "immediate_getter": "movie",
+      "previous": "dialog_scene"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 52.181640199996764,
+      "requested": "music_only",
+      "immediate_getter": "movie",
+      "previous": "movie"
+    },
+    {
+      "path": "candidate-b/validation/regression-v1",
+      "case": "dialogue-scenes",
+      "accepted": 60.09629539999878,
+      "requested": "exploration",
+      "immediate_getter": "music_only",
+      "previous": "music_only"
+    },
+    {
+      "path": "candidate-b/validation/dialogue-v1",
+      "case": "dialogue-music",
+      "accepted": 36.05216569999902,
+      "requested": "dialog_scene",
+      "immediate_getter": "exploration",
+      "previous": "exploration"
+    },
+    {
+      "path": "candidate-b/validation/dialogue-v1",
+      "case": "dialogue-music",
+      "accepted": 50.08399060000011,
+      "requested": "exploration",
+      "immediate_getter": "dialog_scene",
+      "previous": "dialog_scene"
+    }
+  ],
+  "settling_probe": [
+    {
+      "requested": "combat",
+      "samples": [
+        {
+          "time": 0.01433770000221557,
+          "state": "exploration"
+        },
+        {
+          "time": 0.06667469999956666,
+          "state": "combat"
+        },
+        {
+          "time": 0.11923500000193599,
+          "state": "combat"
+        },
+        {
+          "time": 0.17148079999969923,
+          "state": "combat"
+        },
+        {
+          "time": 0.22331470000062836,
+          "state": "combat"
+        },
+        {
+          "time": 0.27538280000226223,
+          "state": "combat"
+        }
+      ],
+      "first_matching_delay": 0.06667469999956666
+    },
+    {
+      "requested": "exploration",
+      "samples": [
+        {
+          "time": 0.014408900002308656,
+          "state": "combat"
+        },
+        {
+          "time": 0.06656510000175331,
+          "state": "exploration"
+        },
+        {
+          "time": 0.11895590000131051,
+          "state": "exploration"
+        },
+        {
+          "time": 0.1709173000017472,
+          "state": "exploration"
+        },
+        {
+          "time": 0.2231104000020423,
+          "state": "exploration"
+        },
+        {
+          "time": 0.2755603000005067,
+          "state": "exploration"
+        }
+      ],
+      "first_matching_delay": 0.06656510000175331
+    },
+    {
+      "requested": "dialog_scene",
+      "samples": [
+        {
+          "time": 0.014491900001303293,
+          "state": "exploration"
+        },
+        {
+          "time": 0.06638659999953234,
+          "state": "dialog_scene"
+        },
+        {
+          "time": 0.11844980000023497,
+          "state": "dialog_scene"
+        },
+        {
+          "time": 0.1708327999986068,
+          "state": "dialog_scene"
+        },
+        {
+          "time": 0.22292640000159736,
+          "state": "dialog_scene"
+        },
+        {
+          "time": 0.27486530000169296,
+          "state": "dialog_scene"
+        }
+      ],
+      "first_matching_delay": 0.06638659999953234
+    },
+    {
+      "requested": "exploration",
+      "samples": [
+        {
+          "time": 0.01809080000020913,
+          "state": "dialog_scene"
+        },
+        {
+          "time": 0.0714987999999721,
+          "state": "exploration"
+        },
+        {
+          "time": 0.12458829999741283,
+          "state": "exploration"
+        },
+        {
+          "time": 0.17837080000026617,
+          "state": "exploration"
+        },
+        {
+          "time": 0.23216479999973672,
+          "state": "exploration"
+        },
+        {
+          "time": 0.2853642999980366,
+          "state": "exploration"
+        }
+      ],
+      "first_matching_delay": 0.0714987999999721
+    }
+  ],
+  "native_dialogue_fade_seconds": 2.0,
+  "generated_banks": false,
+  "new_bank_verified": false,
+  "retail_verified": false,
+  "defaults_approved": false
+}
