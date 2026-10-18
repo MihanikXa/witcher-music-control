@@ -13,10 +13,22 @@ After the assistant proposed shrinking Geralt, changing detail hierarchy, compre
 - **Preserve the concept as shown.** Do not independently shrink Geralt, adjust density/spacing of the rail, alter mid-panel hierarchy or rework footer. The screenshot is a user-selected *visual reference*; it is not proof of technical viability or pixel-exact approved asset coordinates.
 - Do **not** revert to the large tile-based Inventory Grid/Gear gallery or Gear/Usables/Satchel-only category strip. The reference prefers **a one-column item list** with contained icon, name, concise subtitle and a distinct selected-item details panel.
 - **Add a first category above Weapons** to handle actionable newly acquired items, provisionally titled **Review** or **To Review**. This is NOT an unfiltered Recent tab, nor every item that acquired the vanilla 'new' flag.
-- Equipped state is the only design element the user suggested might merit refinement: subtle but unambiguous native equipped badge/corner marker in item list and accurate compare/equip actions. Do not add an equipment orbit, a second equipped sidebar or another competing item collection.
+- Equipped state is **settled**: reuse the exact small notch/stripe already present in the user's accepted current design. Confirm its actual implementation ownership before porting it. Do not invent alternative badges, an equipment orbit, a second equipped sidebar or a competing item collection.
 - Don't make unsolicited changes to typography, button footer, Geralt proportion, background or global menu while implementing this direction.
 
-## Review — proposed behavioral contract, not final user-approved eligibility algorithm
+## Final explicit user approval — 18 October 2026
+
+The user confirms, verbatim:
+
+> Equipped is easy, just a small notch/stripe that we already have in our approved implemented design rn. And I agree on review addition and design.
+
+**Decisions finalized:**
+- Reuse **the exact existing, user-approved small equipped-item notch/stripe from the accepted current Inventory implementation**. Do not invent a new badge, prominent marker, second equipment rail or other state treatment. Find and preserve its exact source/movie ownership from Menus v4/current approved installed resource; the earlier P1/P2 rendering implementations are rejected even where they incidentally use native markers.
+- The **selected concept's overall visual composition and the first-category Review attention model are approved**. Do not revisit proportions, typography, category density or footer without new user feedback.
+- **Review is not Recent:** noteworthy newly acquired items enter a persistent, dismissible review list; routine repeated materials do not. The high-level principle is approved, while specific eligibility thresholds, edge cases and persistence choices remain engineering details to substantiate before shipping.
+- Next step is a source-mapped implementation plan based on the approved reference, not more speculative visual alternatives or resurrecting P1/P2 layout.
+
+## Review — approved principle; detailed eligibility policy still to verify
 
 Purpose: surface newly acquired things that plausibly require **a decision**; ordinary accumulated materials should not generate inspection chores. The first category lives within the same Inventory view and uses the **same item list, selected-item details and Geralt placement**. A small count of pending items may appear beside Review; no separate popup or intrusive alerts.
 

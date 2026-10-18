@@ -5,7 +5,20 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest accepted Inventory visual direction and Review (18 October 2026)
+## Explicit approval of equipped marker and Review — 18 October 2026
+
+User confirms the small **equipped notch/stripe already exists and is accepted**
+in their current working Inventory design; reuse it **exactly**, no new marker
+concept or separate equipment display. User explicitly agrees to the
+selected concept composition **and Review as the first attention-filtered
+category**. See
+[final user approval](design/inventory-reference-accepted-review.md).
+High-level Review inclusion/exclusion is approved; exact item-rule corner
+cases and persistence semantics need implementation verification.
+P1/P2 visual layouts remain rejected. Next work is source-mapping/plan for
+faithful approved reference, not another unconstrained speculative redesign.
+
+## Earlier visual direction and Review (18 October 2026)
 
 The user chose a **specific generated concept screenshot** as the preferred
 Inventory layout: one vertical category rail, adjacent **compact one-column
