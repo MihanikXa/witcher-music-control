@@ -256,3 +256,16 @@ Next sequence after **user visual approval**:
 
 All P1/P2 candidates remain historical evidence. No generated images, decoded
 art, fonts, vendor movies or mod packages enter Git in this Gate 0–1 work.
+
+## User clarification after reviewing proofs — 18 October 2026
+
+User approved the Gate 0–1 direction, including the sparse/populated
+compositions, and explicitly permits substantial simplification of background,
+ground and lighting. The requirement is **analogous composition and complete
+visual cohesion with an aesthetically pleasing result**, not the source
+image's exact scenery or character illumination. This corrects the historical
+"resolve backdrop/pose feasibility first" statement above: it is no longer
+a blocker for a first playable slice. Next: implement one Weapons list and
+persistent native details with live Geralt against a neutral cohesive Ink &
+Iron-compatible background; user must evaluate it in game. Source/installed
+integrity, no flicker, input/device behavior and rollback remain mandatory.

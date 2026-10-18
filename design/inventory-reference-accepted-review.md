@@ -61,3 +61,26 @@ change the live game. The exact screenshot must also be copied to the ignored
 local `reference/inventory-design/` checkout for Codex; do not visually
 approximate using P1/P2 source.
 
+
+## Latest user acceptance — 18 October 2026: layout approved, environmental treatment flexible
+
+The user reviewed Codex's sparse/populated Gate 1 visual proofs and replied:
+
+> Agree on all, and by the way we can for sure, simplify the background and ground substantially and don't have to reproduce the lighting 1 to 1 either, but the cohesion of the whole ui and layout should be analogous, as well as being aesthetically pleasant.
+
+This is explicit approval of the **current source/visual direction** and a
+constraint correction, **not** acceptance of a playable implementation.
+Keep the selected concept's structural hierarchy, rail and row scale, details
+placement, Geralt's relative composition, typography, approved equipped notch,
+and footer. However, exact background scenery, fog, stone ground, pose-specific
+lighting and promotional scene matching are **not hard requirements**. An
+appropriately simplified **neutral dark, ink/charcoal background and subtle
+grounding/shadow** are acceptable if they retain deliberate visual cohesion
+and aesthetic quality. Do not interpret simplification as approval for the
+flat green-black P2 panel, ungrounded Geralt or a visually disconnected void.
+
+This approval unblocks **a narrowly scoped playable Weapons slice**. A
+realistic live Geralt renderer and source-supported simplified atmosphere are
+appropriate; make exact scenic replication a non-blocking optional improvement.
+User in-game visual and interaction acceptance remain separate gates.
+

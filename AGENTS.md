@@ -5,7 +5,28 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Active Inventory implementation route — 18 October 2026
+## Latest explicit acceptance and background flexibility — 18 October 2026
+
+The user **agrees with the Gate 0–1 visual proofs and technical findings** and
+clarifies explicitly that the scenery, ground and lighting may be substantially
+simplified; **the whole UI's cohesion, analogous approved layout and aesthetic
+quality** matter more than matching the generated backdrop 1:1. See
+[visual reference acceptance](design/inventory-reference-accepted-review.md).
+This supersedes earlier notes that reproducing the exact backdrop/pose/lighting
+must block a functional Weapons slice. Preserve the approved rail, native-scale
+rows, persistent middle details, Geralt's relative placement/proportions,
+accepted equipped notch, one footer and user-approved visual hierarchy.
+A neutral charcoal/ink background, understated ground/shadow and simplified
+lighting are acceptable if Geralt and all regions feel deliberately integrated;
+do not reintroduce green opaque fill, disconnected black voids or old-slot
+engravings. Avoid gratuitous design changes to anything except environmental
+treatment. **Next task can be a tightly bounded first playable Weapons slice**,
+with real background/model tests and flicker instrumentation; no need for
+pixel-identical scenery reconstruction. Review remains approved as first rail
+category, but persistent acquisition integration follows the foundational
+list implementation. No automatic Vortex/game/settings/save changes.
+
+## Prior Inventory implementation route — 18 October 2026
 
 The user-approved 1672x941 screenshot is **the visual authority**:
 vertical category rail → compact one-column text/icon item list →

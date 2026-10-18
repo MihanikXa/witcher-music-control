@@ -25,7 +25,7 @@ Image is 1672 × 941; the following are approximate reference *visual bands*, no
 
 ### Visual identity to preserve
 
-The accepted Ink & Iron slim common menu, Gentium menu typography, item artwork, neutral charcoal/ink background treatment, restrained gold selection, and game controller icons. In particular the image's scenic dark ambience is a **visual objective** but *not proof* that the game renders a 3D scene behind the menu. Trace the existing Inventory background pipeline and choose a legal, source-supported game art/scene treatment. Do not reintroduce old equipment-orbit art or create a green-black opaque `0x0C0E0C` rectangle. If the scenic backdrop cannot be realized without a major renderer/asset change, report the exact limitation and offer a bounded authentic game asset variant **for user approval**; do not invent visual substitutions.
+The accepted Ink & Iron slim common menu, Gentium menu typography, item artwork, neutral charcoal/ink visual language, restrained gold selection and game controller icons. **Newest user correction:** background, ground and exact character lighting may be simplified substantially; an analogous, aesthetically coherent screen is the target, **not** pixel-identical scene/fog/stone recreation. Trace the existing Inventory background and live Geralt pipeline, then implement a restrained source-supported neutral dark/ink treatment and subtle visual grounding; preserve the reference's region relationships and Geralt proportions. Do not reuse old equipment-orbit art, P2's green-black opaque `0x0C0E0C` rectangle or a visually disconnected void. Do **not** block first playable implementation solely because the generated scene asset or exact lighting cannot be recreated; show the user the actual in-game result for evaluation.
 
 ## 2. Visual region → actual technical owners
 
@@ -66,13 +66,13 @@ Existing renderers are scaleform ActionScript and support many native callbacks.
 - Decompile/inspect exact current `SlotBase` equipped **notch/stripe** and its semantic state, plus native rail/category providers, item data row path, text-format aliases, Geralt anchor, background and footer. No native build until the reference and current owner are verified.
 - Pin a **source ownership mapping** with actual class/function and display symbol; do not mistake old prototype methods for existing accepted v4 behavior.
 
-**Gate 1 — static reference-faithful region proof (before expensive native cook).**
+**Gate 1 — static reference-faithful region proof (completed and accepted by the user, 18 October).**
 - Produce **a visual arrangement test** at 1672×941 screenshot aspect, 1920×1080 and 3840×2160, anchored to the screenshot's areas. Use real source item images at their actual in-game display scale, no forced 2× upscaling. Both six-item and populated data must preserve **the same rail/list/details/Geralt proportions**.
 - Use an extracted screenshot composite or authored nonshipping UI test with **real reference-specific proportions**. Do not substitute a generic grid wireframe or include fabricated game attributes in shipping.
 - Verify category rail size, item row height/icon quality, aligned details and character, footer readability and scrollbar; prevent region collisions and prevent transformed hit bounds from diverging from visuals.
 - This is a **visual gate**: report a contact sheet or two screenshots to the user before implementation, without another uncontrolled P1/P2 binary.
 
-**Gate 2 — functional row renderer and detail contract.**
+**Gate 2 — next active task: functional row renderer and detail contract, including a simplified but cohesive background and correctly framed live Geralt.**
 - Against accepted v4 and no optional runtime QoL mods, implement the actual single-column item row renderer and rail; use native provider items and stable real ID mapping. Initially **one category with a selection**; no altered equipped/inventory game data.
 - Implement correct native selection, equip/unequip, selected detail data (the **full reference-style panel**), single footer and model scene. Stable display objects, dirty-on-data updates, frame/visibility diagnostics for flicker.
 - Preserve native model, item events, drag/drop, equipped notch, Hoods, and character interactions. Test input for mouse/keyboard/controller and modal states.
@@ -105,6 +105,6 @@ Existing renderers are scaleform ActionScript and support many native callbacks.
 
 ## 5. Next handoff and immediate deliverable
 
-The next Codex run should be a **bounded Gate 0–1** exercise: establish current v4/native item-row interfaces, original approved notch and actual background/footer ownership, then produce **visually faithful sparse and populated layout proofs** grounded in the user's *exact* screenshot. Do **not** build a new large runtime release in that same speculative run. Once the visual proof is accepted, commission Gate 2's first single-category functional implementation.
+**Gate 0–1 has now been completed and visually approved by the user.** The next Codex run should implement **Gate 2: one bounded first-playable Weapons category** against accepted Menus v4, with actual ID-backed compact list rows, persistent selected-item details, real live Geralt at the approved relative scale and an aesthetically coherent simplified neutral background/ground/shadow. Exact environment and lighting replication is **not** a blocker. Preserve one native footer, the accepted notch and current input/action interfaces; instrument and prevent reintroduced renderer-flicker. Stop after one rollbackable candidate and obtain in-game screenshot and action feedback before broader rail/Review implementation.
 
 This staged plan deliberately spends a short visual/source checkpoint before another long native cook, because both earlier P1 and P2 were technically validated but decisively failed user perception and stability.
