@@ -1,13 +1,13 @@
 # Adaptive Inventory P2 — coherent composition and interaction contract
 
-**18 October 2026 · design/specification only · branch \`ui-overhaul\`.**
+**18 October 2026 · design/specification only · branch `ui-overhaul`.**
 P1 is explicitly rejected by the user. This is a **proposed implementable next design**, not an accepted screenshot, proven live rendering contract or permission to deploy. The next implementation must obtain in-game approval before expanding to Usables/Satchel or additional third-party QoL mods.
 
 ## 0. Authority, evidence and design decisions
 
 ### Explicit user preferences and observations
 
-- Reject the first Gear-grid v1's small/dotted grid, foot-level utility slots, oversized static details, redundant information and intrusive footer (see \`research/ink-gear-grid-v1-user-feedback.md\`).
+- Reject the first Gear-grid v1's small/dotted grid, foot-level utility slots, oversized static details, redundant information and intrusive footer (see `research/ink-gear-grid-v1-user-feedback.md`).
 - Keep the accepted **Ink & Iron 0.8.7 Menus v4**, Gentium/QuietFolio typography, item artwork, shared slim navigation and HUD v4/RC2.
 - P1 screenshot was rejected: “No idea the fuck this is.” The user further explicitly agreed to the prior analysis and said:
   > And 6. background is a mess too, it assumes the existence of previous slots around geralt. And also doesn't seem very adaptive to controller/keyboard.
@@ -18,15 +18,15 @@ P1 is explicitly rejected by the user. This is a **proposed implementable next d
 
 | Surface and candidate owner | Exact evidence | Known/pending |
 |---|---|---|
-| Shared global top navigation | Menus v4 \`MenuCommon\` / its \`TopBarNew\` and artwork are deliberately retained; P1 screenshot shows the expected slender global row. | **Frozen**, do not edit shared global menu resource. |
-| Native Inventory section/category heading and giant icons | P1 screenshot visibly shows \`EQUIPMENT\`, gears, armor/swords icons near/in the shared header. \`InventoryTabbedListModule\` and \`MenuInventory\` exist in Inventory movie. | **Actual child clip/object ownership and event handlers not established publicly**; decompile \`panel_inventory.redswf\` and trace runtime display list before hiding/relocating. Do not assume they belong to common header. |
-| Inventory-specific background and decorative slot orbit | P1's \`qfAdaptiveRefresh\` hides \`iaiBg\`, \`iaiHeadSp\` and \`iaiHint\`, but **does not hide \`iaiArtHost\`**. \`ModulePaperdoll.qfGearReflow\` hides \`iaiDeco\`, \`iaiHorse\` and segment borders. Screenshot still shows faint sword/armor/bottle silhouettes where old orbit belonged. | Strong evidence of **unowned surviving art layers**; exactly which visual is \`iaiArtHost\` vs cached texture vs another clip is **unverified**. Enumerate every visible descendant and \`inkart:\` resource in private local build before removing. |
-| Native items, layout and equipped marker | \`mcPlayerInventory\` -> \`InventoryTabbedListModule\` -> \`SlotsListGrid\`, \`SlotBase\`. P1 changes scale to 1.4 and viewport to 384, but retains native \`WEAPONS\`/\`ARMOR\` sections. Item count is sparse on shown level-1 save. | Scaling nine columns is **not** a unified adaptive layout. Real item IDs, ownership, filters, focus, equipped marker, tall-item footprints must remain native and functional. |
-| Geralt renderer | \`mcCharacterRenderer\` and \`_rendererController.setDefaultAnchor\`; P1 places x=1060 and +12% from original. | Rendered full body in the screenshot; placement relative to the browse and summary region is disconnected. Original anchor/scale must be snapshotted and restored in other states. |
-| Contextual summary | \`qfAdaptiveSummary\` is a new Sprite at (72,816), six TextFields; data comes from \`ContextInfoManager.getInstanse().iaiDockedTip()\` only when \`!isHidden()\`, then \`TooltipInventory.qfAdaptiveSummary()\` reads \`_data\`. | Blank on screen despite selected sword. **Do not assume** reason; trace selection event, tooltip instance/source, \`_data\`, visibility and formatting. Need a selected-item-based data contract that does not require a **visible** tooltip. |
-| Existing input-feedback owner | Menus v4 \`MenuCommon\` owns its \`mcInpuFeedback\` subtree and footer formatting; P1 retains the native command hints. | Confirm method/interface for state-specific prompt changes on actual 5.01 movie; **no whole new footer**. |
-| Added P1 input layer | \`qfAdaptiveButton\` constructs two permanent 270×38 button sprites at y=992 with hardcoded combined \`I / View\` and \`Tab / LS\`, alongside existing native hints. \`qfAdaptiveInput\` intercepts View/Select, I, Tab, LS, Esc/B through InputDelegate. | Evidenced duplicated mixed-device prompts. Actual key ownership/collisions, most recent-device API, hold/release routing and keyboard-to-controller transitions still require runtime test. |
-| Native equipment targets and special features | \`ModulePaperdoll\` holds 20 native slots; Hoods \`SlotPaperdoll.canDrop\` and \`ItemDataStub.isDyeable\` retained byte/source-exact in P1; \`inkGearGrid.ws\` adds true equipped gear to grid. | Preserve all 20 native targets for drag/drop, Roach, crossbow, quickslot, Hoods dye, even if not displayed in browsing mode. |
+| Shared global top navigation | Menus v4 `MenuCommon` / its `TopBarNew` and artwork are deliberately retained; P1 screenshot shows the expected slender global row. | **Frozen**, do not edit shared global menu resource. |
+| Native Inventory section/category heading and giant icons | P1 screenshot visibly shows `EQUIPMENT`, gears, armor/swords icons near/in the shared header. `InventoryTabbedListModule` and `MenuInventory` exist in Inventory movie. | **Actual child clip/object ownership and event handlers not established publicly**; decompile `panel_inventory.redswf` and trace runtime display list before hiding/relocating. Do not assume they belong to common header. |
+| Inventory-specific background and decorative slot orbit | P1's `qfAdaptiveRefresh` hides `iaiBg`, `iaiHeadSp` and `iaiHint`, but **does not hide `iaiArtHost`**. `ModulePaperdoll.qfGearReflow` hides `iaiDeco`, `iaiHorse` and segment borders. Screenshot still shows faint sword/armor/bottle silhouettes where old orbit belonged. | Strong evidence of **unowned surviving art layers**; exactly which visual is `iaiArtHost` vs cached texture vs another clip is **unverified**. Enumerate every visible descendant and `inkart:` resource in private local build before removing. |
+| Native items, layout and equipped marker | `mcPlayerInventory` -> `InventoryTabbedListModule` -> `SlotsListGrid`, `SlotBase`. P1 changes scale to 1.4 and viewport to 384, but retains native `WEAPONS`/`ARMOR` sections. Item count is sparse on shown level-1 save. | Scaling nine columns is **not** a unified adaptive layout. Real item IDs, ownership, filters, focus, equipped marker, tall-item footprints must remain native and functional. |
+| Geralt renderer | `mcCharacterRenderer` and `_rendererController.setDefaultAnchor`; P1 places x=1060 and +12% from original. | Rendered full body in the screenshot; placement relative to the browse and summary region is disconnected. Original anchor/scale must be snapshotted and restored in other states. |
+| Contextual summary | `qfAdaptiveSummary` is a new Sprite at (72,816), six TextFields; data comes from `ContextInfoManager.getInstanse().iaiDockedTip()` only when `!isHidden()`, then `TooltipInventory.qfAdaptiveSummary()` reads `_data`. | Blank on screen despite selected sword. **Do not assume** reason; trace selection event, tooltip instance/source, `_data`, visibility and formatting. Need a selected-item-based data contract that does not require a **visible** tooltip. |
+| Existing input-feedback owner | Menus v4 `MenuCommon` owns its `mcInpuFeedback` subtree and footer formatting; P1 retains the native command hints. | Confirm method/interface for state-specific prompt changes on actual 5.01 movie; **no whole new footer**. |
+| Added P1 input layer | `qfAdaptiveButton` constructs two permanent 270×38 button sprites at y=992 with hardcoded combined `I / View` and `Tab / LS`, alongside existing native hints. `qfAdaptiveInput` intercepts View/Select, I, Tab, LS, Esc/B through InputDelegate. | Evidenced duplicated mixed-device prompts. Actual key ownership/collisions, most recent-device API, hold/release routing and keyboard-to-controller transitions still require runtime test. |
+| Native equipment targets and special features | `ModulePaperdoll` holds 20 native slots; Hoods `SlotPaperdoll.canDrop` and `ItemDataStub.isDyeable` retained byte/source-exact in P1; `inkGearGrid.ws` adds true equipped gear to grid. | Preserve all 20 native targets for drag/drop, Roach, crossbow, quickslot, Hoods dye, even if not displayed in browsing mode. |
 | External mods and game states | P1 is player Gear category (4) gated and restores other native categories/shop/stash/horse. Sort Everything, Recent Loot and Junk Not Treasure were audited, **not installed**. | Keep current 5.01 merged scripts/FriendlyHUD/AutoLoot/RC2. No third-party integration in P2 structural proof. |
 
 This table is an **ownership audit starting point**, not a claim that every display child has already been isolated. The compiled accepted movie, FFDec export and the running scene are the final sources for unknown owners.
@@ -44,7 +44,7 @@ This table is an **ownership audit starting point**, not a claim that every disp
 
 ### Schematic only — not a replacement screenshot
 
-\`\`\`text
+```text
 ┌────────────────────────────────────────────────────────────────────┐
 │  ACCEPTED INK & IRON GLOBAL NAVIGATION (unchanged)                 │
 ├────────────────────────────────────────────────────────────────────┤
@@ -63,9 +63,9 @@ This table is an **ownership audit starting point**, not a claim that every disp
 ├────────────────────────────────────────────────────────────────────┤
 │  ONE relevant set of hints, adapted to input device + mode         │
 └────────────────────────────────────────────────────────────────────┘
-\`\`\`
+```
 
-In real builds: no hardcoded \`Selected:\` placeholder, fake stat values or artificial duplicate items. There should be **one selection, one focus, one displayed equipped marker**, and no separate footer button surfaces.
+In real builds: no hardcoded `Selected:` placeholder, fake stat values or artificial duplicate items. There should be **one selection, one focus, one displayed equipped marker**, and no separate footer button surfaces.
 
 ### Geometry and responsive sizing (proposed, must measure native bounds)
 
@@ -81,7 +81,7 @@ In real builds: no hardcoded \`Selected:\` placeholder, fake stat values or arti
 **The user explicitly rejects the old-slot-dependent background.** The previous faint armor/sword/bottle ornaments were created for Geralt surrounded by equipment targets, not for the new browse–preview composition.
 
 - Inventory Gear normal browse should use **quiet charcoal/ink negative space with at most a low-prominence regionally appropriate wash/texture**, never the silhouettes of vanished equipment orbit slots. Do not solve by alpha/HDR adjustment.
-- Before modifying: dump the **actual Inventory movie display list** (\`iaiArtHost\`, \`iaiBg\`, \`iaiDeco\`, \`iaiHorse\`, slot segment art and any remaining original decorative clips), their parent coordinate spaces, visibility and resource/texture keys. Differentiate \`MenuCommon\` shared \`inkart:\` art from the Inventory-owned layers.
+- Before modifying: dump the **actual Inventory movie display list** (`iaiArtHost`, `iaiBg`, `iaiDeco`, `iaiHorse`, slot segment art and any remaining original decorative clips), their parent coordinate spaces, visibility and resource/texture keys. Differentiate `MenuCommon` shared `inkart:` art from the Inventory-owned layers.
 - Remove/hide/recompose only the **Inventory-specific obsolete layers in Gear mode**, with state snapshot/restore. If the offending image is sourced via a shared art cache, preserve that cache and suppress its **Inventory invocation/host only**, rather than changing the texture globally. Preserve accepted shared background art on Alchemy, Glossary, Character, Map, etc.
 - If nothing tasteful can be derived from existing art without old-slot assumptions, **use simple dark canvas rather than invented decorative ornamentation**. Any world-visible transparency requires proving the game scene actually renders beneath Inventory in the user’s setup; otherwise no pretend glass effect.
 - In inspect/auxiliary states, remain compositionally consistent; old art should not flash during mode transitions or focus updates.
@@ -99,11 +99,11 @@ In real builds: no hardcoded \`Selected:\` placeholder, fake stat values or arti
 | **Other inventory contexts** | Other native player categories, stash, shop, horse | Remain existing v4 until separately designed and tested | Full restoration of transforms, masks, focus, listeners, art and footer |
 | **Keyboard ↔ controller transition** (orthogonal, not a new page) | Existing focus and selection remain; **only prompt language/glyphs and pointer affordance** update | Detect current input source using verified game-native APIs/events; mouse hover focus must not steal controller selection when pointer is stationary | No duplicate hints, no lost focus, no key-up ghost events |
 
-Device switching must work inside Browse, Inspect and Auxiliary without exiting the menu. The actual current device detection source and accepted glyph API must be identified from **current MenuCommon/InputFeedback**; do not invent event names or hardcode static labels. Native gamepad prompts use the working v4 button art and actual button symbols, not text like \`I / View\` rendered for both devices. Keyboard mode uses currently bound actions; no permanent gamepad glyph row. Controller/gamepad glyphs should not claim remapping they cannot observe.
+Device switching must work inside Browse, Inspect and Auxiliary without exiting the menu. The actual current device detection source and accepted glyph API must be identified from **current MenuCommon/InputFeedback**; do not invent event names or hardcode static labels. Native gamepad prompts use the working v4 button art and actual button symbols, not text like `I / View` rendered for both devices. Keyboard mode uses currently bound actions; no permanent gamepad glyph row. Controller/gamepad glyphs should not claim remapping they cannot observe.
 
 ### One input-feedback owner
 
-- **Prefer the existing \`MenuCommon.mcInpuFeedback\` provider**. Inventory reports its state/action availability to that feedback contract. If the current provider is not safely controllable, isolate it and design **one** Inventory-only row; hide the other feedback renderer *only in Inventory Gear mode*, retaining any required input listeners. No independent P1 \`qfAdaptiveButton\` strip.
+- **Prefer the existing `MenuCommon.mcInpuFeedback` provider**. Inventory reports its state/action availability to that feedback contract. If the current provider is not safely controllable, isolate it and design **one** Inventory-only row; hide the other feedback renderer *only in Inventory Gear mode*, retaining any required input listeners. No independent P1 `qfAdaptiveButton` strip.
 - Mouse actions should appear as restrained context affordances (hover/click on real targets), not giant permanent buttons; action discoverability is addressed by tooltips/active hints, not footer duplication.
 - Map each action by **semantic command**, then attach keyboard/gamepad/mouse bindings through verified existing game data. Proposed actions: Navigate/Select, Equip or Unequip, Inspect, Compare, Auxiliary/Target, Sort/Filter, Back. Exact physical keys **must be audited** against native sort, MenuCommon, FriendlyHUD/OW and RC2 before adoption.
 - Separate actual **input dispatch** from **prompt rendering**. Switching device repaints hints only; it does not change or reset menu state.
@@ -114,9 +114,9 @@ Device switching must work inside Browse, Inspect and Auxiliary without exiting 
 The blank P1 summary is a **blocking defect**. Show working real data before investing in additional category redesign.
 
 - Single **selected item identity** from the active gallery renderer/native ID is the truth. Do not derive “selected” from hover-only tooltip display state.
-- On identity change, native item update, equip/re-equip, category change: refresh summary **from an authoritative data provider** (likely existing SlotBase/ContextInfoManager/TooltipInventory payload, to be tested). If the native tooltip is hidden deliberately, **that must not invalidate the summary**. Trace creation/update of \`_data\` and \`equippedItemData\`; test tooltip-disabled settings and mouse/controller selection.
+- On identity change, native item update, equip/re-equip, category change: refresh summary **from an authoritative data provider** (likely existing SlotBase/ContextInfoManager/TooltipInventory payload, to be tested). If the native tooltip is hidden deliberately, **that must not invalidate the summary**. Trace creation/update of `_data` and `equippedItemData`; test tooltip-disabled settings and mouse/controller selection.
 - Display **item name and one primary stat/value** when available, plus an explicit true comparison if supported. Only display genuine changes; no fabricated “best” rank. Include unmet level requirement/socket tradeoff only when meaningful and actually supplied.
-- When no comparison exists, show the selected item name and relevant action, **not a blank band** or invented \`+0\`.
+- When no comparison exists, show the selected item name and relevant action, **not a blank band** or invented `+0`.
 - Use a compact summary (2–3 optical lines) integrated within the main gallery plane. Reserve full tooltip prose/set stats for Inspect. Ensure selected item's name, contents and colors use accepted Gentium v4 styles.
 - Avoid repeated per-frame rebuilding of paperdoll/tooltip TextFields. Use **dirty-state updates** for selected ID, data/equipment changes, mode, layout and device. Retain source-of-truth and stable field instances; proof must show item events actually fire.
 
@@ -124,15 +124,15 @@ The blank P1 summary is a **blocking defect**. Show working real data before inv
 
 ### Gate A — cheap ownership and layout proof (before a full cook)
 
-1. Read exact accepted v4 \`panel_inventory.redswf\`/private release and installed ownership. Reproduce P1 as the negative baseline but **do not use its movie as the new source**.
-2. Export and enumerate **display-list children & art layers** for Inventory (including \`iaiArtHost\`, secondary headers and native \`MenuCommon\` boundary), with source class, local/global bounds, visibility and events. Record what survives in Gear.
+1. Read exact accepted v4 `panel_inventory.redswf`/private release and installed ownership. Reproduce P1 as the negative baseline but **do not use its movie as the new source**.
+2. Export and enumerate **display-list children & art layers** for Inventory (including `iaiArtHost`, secondary headers and native `MenuCommon` boundary), with source class, local/global bounds, visibility and events. Record what survives in Gear.
 3. Trace actual tooltip/selected data lifecycle, feedback owner and device detection. For unverified providers, document the missing evidence rather than silently inventing APIs.
 4. Produce **two scene geometry checks** for the actual six-item early save and a larger fixture. Plot/tally real slot positions, native hit bounds, label positions, text bounds, art bounds and protected header/footer collision boxes using private inspection scripts/exports. Textual contract and private debug overlays are fine; no need to create a decorative mockup.
 5. Present one stable composition that uses the measured safe area. If item reflow or summary data are impossible to prove from source, **stop** and report exact blocker instead of a fake playable package.
 
 ### Gate B — one narrow structural first-playable proof
 
-1. Start from **accepted Menus v4**; modify only \`panel_inventory.redswf\` with targeted original code. Keep native script annotation only for already verified equipped-in-grid behavior.
+1. Start from **accepted Menus v4**; modify only `panel_inventory.redswf` with targeted original code. Keep native script annotation only for already verified equipped-in-grid behavior.
 2. **Suppress obsolete Inventory artwork** and duplicate native secondary header/feedback visually, preserving their needed listeners/data until equivalent navigation is wired.
 3. Draw one actual continuous Gallery and properly framed Geralt; size responsively for sparse/dense; preserve grid native renderer IDs, drag and action contracts and equipped corner marks.
 4. **Wire and demonstrate real selected-item summary** without hidden-tooltip dependency. If summary can't populate, this gate fails.
@@ -160,6 +160,6 @@ The blank P1 summary is a **blocking defect**. Show working real data before inv
 
 This is the design specification for Codex, **not a request to install a new mod now**. No automatic Vortex deployment, input configuration changes, merged-script rebuild, save writes or bundled copyrighted upstream movie assets. Keep P1/v1 in their existing ignored private deploy directories for functional comparison, not as the visual template.
 
-Primary sources: \`research/adaptive-inventory-v2-p1-runtime-rejection.md\`, \`research/adaptive-inventory-v2-gear-p1.md\`, \`research/menus087-v4-typography-finishing.md\`, \`src/inventory/adaptive/AdaptiveMenu.asinc\`, \`src/inventory/GearPaperdoll.asinc\`, \`tools/patch-adaptive-inventory.py\`, \`design/inventory-ux-direction.md\`, \`design/adaptive-inventory-build-plan.md\`.
+Primary sources: `research/adaptive-inventory-v2-p1-runtime-rejection.md`, `research/adaptive-inventory-v2-gear-p1.md`, `research/menus087-v4-typography-finishing.md`, `src/inventory/adaptive/AdaptiveMenu.asinc`, `src/inventory/GearPaperdoll.asinc`, `tools/patch-adaptive-inventory.py`, `design/inventory-ux-direction.md`, `design/adaptive-inventory-build-plan.md`.
 
 **Status:** coherent proposed visual/interaction contract, backed by public repo code and user-reported P1 screenshot failure. Exact asset ancestry, native device events, tooltip data routing and layout stage extents still require the locally available private v4 movie and an in-game smoke test before implementation can be declared accepted.

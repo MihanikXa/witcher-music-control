@@ -2,7 +2,7 @@
 
 Status: proposal for user review, not code deployed or runtime certified. Work only on ui-overhaul, preserve the accepted 0.8.7 Menus v4, Gentium/Item Art/Bestiary/Map and HUD RC2.
 
-**18 October correction (supersedes P1 \"first playable\" success framing):** The
+**18 October correction (supersedes P1 "first playable" success framing):** The
 user *rejected* P1 in-game. Its old-orbit background, native topbar collisions,
 tiny scattered groups, blank contextual summary, duplicate/hardcoded
 keyboard/gamepad footer and detached Geralt contradict the agreed UX.
