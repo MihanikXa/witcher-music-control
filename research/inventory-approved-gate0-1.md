@@ -269,3 +269,16 @@ a blocker for a first playable slice. Next: implement one Weapons list and
 persistent native details with live Geralt against a neutral cohesive Ink &
 Iron-compatible background; user must evaluate it in game. Source/installed
 integrity, no flicker, input/device behavior and rollback remain mandatory.
+
+## 18 October newest scope correction — unified categories
+
+The user questioned whether a Weapons-only playable slice would be *harder* because
+it requires switching between redesigned and vanilla category layouts.
+This changes the next implementation target to a **unified player-Inventory
+row/list/details architecture across all normal categories**, tested progressively
+but shipped as one coherent candidate. See
+[unified scope](../design/inventory-unified-category-build-scope.md). Review
+acquisition persistence remains a separate system, while shop/stash/horse modes
+retain native v4. The historical Gate 2 Weapons-only recommendation above is
+superseded; all native eligible tags must be accounted for with original
+type-specific actions before declaring category parity.

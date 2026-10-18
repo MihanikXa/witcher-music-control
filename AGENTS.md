@@ -5,7 +5,34 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest explicit acceptance and background flexibility — 18 October 2026
+## Latest explicit implementation-scope correction — 18 October 2026
+
+The user questions the earlier **Weapons-only playable slice**, explicitly
+reasoning that once Inventory logic/layout are redesigned, implementing all
+ordinary categories under one system could be simpler than combining two
+incompatible logic/layout systems. This is a valid architectural change.
+Read [unified player Inventory scope](design/inventory-unified-category-build-scope.md).
+
+**Next first-playable candidate should target one shared player-Inventory UI
+framework across the normal categories** (Weapons, Armor, Consumables, Bombs,
+Pockets, Quest Items, Other), using the exact user-approved category rail,
+one retained horizontal row renderer/list controller, persistent middle details,
+Geralt, subdued cohesive background and one device-adaptive footer. Category
+variation belongs in data projection, sorting and native actions, NOT separate
+visual layouts. Test each type incrementally, but avoid a shipped
+"redesigned Weapons vs old vanilla other categories" hybrid if practical.
+
+This expands the previous Gate 2 scope, not authorization for a monolithic
+new acquisition ledger, merchant/stash/horse redesign or other QoL add-ons.
+**Review remains first in the approved rail**; its genuine saved acquisition
+ledger is a separate, later gated source integration unless independently
+proved safe. Do not show fake counts, inert buttons or pretend Review works.
+Preserve all items/tags, special Hoods/OW/Roach/quickslot native actions, and
+test intermediate exceptions before deciding a fallback is necessary.
+User in-game acceptance and anti-flicker behavior remain required; no
+automatic Vortex/game/save modifications.
+
+## Previous acceptance and background flexibility — 18 October 2026
 
 The user **agrees with the Gate 0–1 visual proofs and technical findings** and
 clarifies explicitly that the scenery, ground and lighting may be substantially
