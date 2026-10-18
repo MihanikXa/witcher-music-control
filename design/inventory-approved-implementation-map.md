@@ -4,6 +4,15 @@
 
 ## 1. Authority, exact visual reference, boundaries
 
+**Gate 0 update:** local-copy verification found SHA-256
+`b1443ffafc009a5f123d6c971e3ea1e47572763b229595ab78d76799bde87313`,
+1672×941. The user explicitly authorized it after the mismatch: **“Use the current
+local image”**. The original expected hash below remains historical provenance.
+See [Gate 0–1 source/proof receipt](../research/inventory-approved-gate0-1.md)
+and [Review/stability plan](inventory-approved-review-and-stability-plan.md).
+Static proofs are prepared; their visual approval is still pending. No playable
+replacement or native build was produced in that run.
+
 The user **approved the generated concept screenshot** (conversation upload `image(20261018-163558).png`, 1672 × 941, source SHA-256 `9e7d6bdb0bad0d28b5bacfc02e8433dac177b34690303acee8af6cd03b235ac9`) and explicitly **rejected** changes to Geralt scale, details typography/hierarchy, category spacing and footer, except that equipped gear should retain **the already accepted small notch/stripe**. The user also approved an attention-filtered **Review** category as the **first** category. See `design/inventory-reference-accepted-review.md`. All P1/P2 visual layouts are rejected; their source may be inspected only as technical/negative evidence.
 
 **Codex must have the exact screenshot locally:** put the unchanged image at **`C:\Dev\witcher-ui-overhaul\reference\inventory-design\approved-inventory-reference.png`**. This is a private, ignored reference asset, **not** a GitHub-delivered image or a license to copy fabricated mockup item stats. Verify its SHA-256 before visual work; ask the user for the file if absent. The image is available for the user to download from this conversation, but no Windows checkout transfer has been performed.

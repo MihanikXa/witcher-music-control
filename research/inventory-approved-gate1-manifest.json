@@ -1,0 +1,133 @@
+{
+  "status": "Gate 0\u20131 static proofs prepared; user visual approval pending",
+  "reference": {
+    "path": "C:\\Dev\\witcher-ui-overhaul\\reference\\inventory-design\\approved-inventory-reference.png",
+    "sha256": "b1443ffafc009a5f123d6c971e3ea1e47572763b229595ab78d76799bde87313",
+    "specification_sha256": "9e7d6bdb0bad0d28b5bacfc02e8433dac177b34690303acee8af6cd03b235ac9",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "authorization": "User: Use the current local image; hash mismatch explicitly approved in this task"
+  },
+  "baseline": {
+    "resource": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+    "sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+    "export_verified_exact": true
+  },
+  "current_owners": {
+    "gameplay/gui_new/swf/common/panel_common.redswf": {
+      "owner": "modInkIronMenus087",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+      "sha256": "54915e76c9bea31d67d9f64ec688b268ee86939e58c6712438cbc3192c82eb8c",
+      "enabled": "1",
+      "priority": "13"
+    },
+    "gameplay/gui_new/swf/inventory/panel_inventory.redswf": {
+      "owner": "modInkIronMenus087",
+      "container": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\modInkIronMenus087\\content\\blob0.bundle",
+      "sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+      "enabled": "1",
+      "priority": "13"
+    }
+  },
+  "current_script_provider_pins_verified": 55,
+  "marker": {
+    "owner": "SlotBase.iaiDrawLess, flags & 4",
+    "state": "SlotInventoryGrid.iaiFlags: _data.isEquipped",
+    "color": 11832388,
+    "hex": "#B48C44",
+    "alpha": 0.9,
+    "vertices": [
+      [
+        3,
+        3
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        3,
+        12
+      ],
+      [
+        3,
+        3
+      ]
+    ],
+    "scale": "k cancels concatenated X scale; 9 logical-unit legs, 3-unit inset",
+    "old_equipedIcon": "alpha 0; not the accepted corner mark"
+  },
+  "proofs": {
+    "sparse": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\inventory-approved-gate1\\sparse-1672x941.png",
+      "sha256": "5d497bfa28f21eea515df9a1877b08f8f509827100480665bf73025efe3d3473",
+      "visible_rows": 2,
+      "total_weapon_rows": 2,
+      "total_equipment_items": 6,
+      "review_count": 2,
+      "review_count_illustrative": true
+    },
+    "populated": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\inventory-approved-gate1\\populated-1672x941.png",
+      "sha256": "4e4333cb7cdbbddf29e5a9439fb9b2e1722864f5b970746bb485fd5e7e1db780",
+      "visible_rows": 7,
+      "total_weapon_rows": 30,
+      "total_equipment_items": null,
+      "review_count": 3,
+      "review_count_illustrative": true
+    },
+    "six-row-fit": {
+      "path": "C:\\Dev\\witcher-ui-overhaul\\build\\inventory-approved-gate1\\six-row-fit-1672x941.png",
+      "sha256": "8c67ecbbe769c01fb47abb1d852f9ee2c0edeb598ca0513fb1aa57117b40f36c",
+      "visible_rows": 6,
+      "total_weapon_rows": 6,
+      "total_equipment_items": null,
+      "review_count": 2,
+      "review_count_illustrative": true
+    }
+  },
+  "protected_regions": {
+    "global_header": [
+      0,
+      0,
+      1672,
+      130
+    ],
+    "details": [
+      632,
+      138,
+      1080,
+      810
+    ],
+    "geralt_and_backdrop": [
+      1080,
+      100,
+      1672,
+      820
+    ],
+    "footer": [
+      0,
+      820,
+      1672,
+      941
+    ]
+  },
+  "provenance_limits": [
+    "Reference Geralt, details, scenery, header and footer retained as pixels: not actual game assets extracted or runtime reproduction.",
+    "Original selected details/stat numbers and currency/level/footer keys remain reference illustrations, not verified item stats or bindings.",
+    "Row names are representative English fixture labels; localized runtime names require native provider enrichment.",
+    "Review counts and dense inventory count are illustrative. Sparse membership is modeled from reported gear count, not save data.",
+    "1080p/4K exports are composition projections of a 1672x941 reference; do not establish runtime UI scale, source-art detail or 4K sharpness.",
+    "Occluded row substrate reconstructed from same-Y edge colors; neutral reference-derived interpolation, no replacement scenic asset."
+  ],
+  "checks": {
+    "tests_passed": 10,
+    "tests_skipped": 0,
+    "native_build_run": false,
+    "runtime_verified": false,
+    "live_changes": false
+  },
+  "comparison_path": "C:\\Dev\\witcher-ui-overhaul\\build\\inventory-approved-gate1\\reference-comparison.png"
+}

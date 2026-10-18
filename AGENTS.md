@@ -24,6 +24,16 @@ ignored local `reference/inventory-design/approved-inventory-reference.png`.
 Verify SHA-256 `9e7d6bdb0bad0d28b5bacfc02e8433dac177b34690303acee8af6cd03b235ac9`.
 If absent, ask user for file; do not infer visual target from P1/P2.
 
+**Gate 0 local-copy authorization (18 October):** the supplied local PNG is
+1672×941 but hashes to
+`b1443ffafc009a5f123d6c971e3ea1e47572763b229595ab78d76799bde87313`.
+After the mismatch was reported, the user explicitly replied **“Use the current
+local image”**. This copy is now authorized; retain the historical hash as
+provenance, not a reason to request the same confirmation again. Gate 0–1
+findings/proofs are recorded in
+[the source and visual receipt](research/inventory-approved-gate0-1.md).
+**Proof approval remains pending; no native build is authorized by this receipt.**
+
 Next is **Gate 0–1 only**: inspect accepted Menus v4 native resource owners,
 exact equipped notch, item row/data/actions, background/footer and produce
 sparse+dense visual proofs against reference. Obtain user visual approval
