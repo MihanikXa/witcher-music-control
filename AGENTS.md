@@ -5,7 +5,26 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Active next work — P2 coherent Inventory composition contract (18 October 2026)
+## P2 first runtime screenshot — 18 October 2026
+
+The user supplied a **first in-game P2 screenshot** and asked to check the
+repository. See [P2 first runtime review](research/adaptive-inventory-p2-runtime-first-screenshot.md).
+Do **not** classify it as user approval or explicit rejection. Observed partial
+success: obsolete orbit engravings removed; clean shared header; native
+Disglair item summary now displays actual name, damage/+20 and level 2
+requirement; duplicate button rectangles gone. Remaining deficiencies:
+the sparse first-fit item gallery still looks visually fragmented; summary is
+anchored far to the left of a centered gallery by `p2Geometry()`; category
+icons are tiny and low-legibility; footer still appears to be **native hints**
+despite P2's attempted native-feedback override; red-X selected item is likely
+a native required-level restriction and must be traced, not blindly erased.
+Next action is a **bounded source/runtime correction of gallery+summary cohesion,
+navigation legibility and footer owner**, not a third unbounded rewrite or QoL
+feature import. Test both KB and pad, preserve v4/HUD RC2.
+The image shows the game within a roughly 910×512 desktop window; don't claim
+full-screen 1080p/4K or device-transition acceptance.
+
+## Prior P2 composition contract (18 October 2026)
 
 User agreed to **prepare the source-grounded visual/interaction specification
 before another expensive full Inventory build**. Read

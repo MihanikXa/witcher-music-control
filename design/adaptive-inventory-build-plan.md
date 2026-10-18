@@ -1,6 +1,6 @@
 # Adaptive Inventory — proposed staged build (17 October 2026)
 
-Status: proposal for user review, not code deployed or runtime certified. Work only on ui-overhaul, preserve the accepted 0.8.7 Menus v4, Gentium/Item Art/Bestiary/Map and HUD RC2.
+Status: P2 built, first runtime screenshot supplied (see [P2 screenshot review](../research/adaptive-inventory-p2-runtime-first-screenshot.md)); proposal for further refinement, not code deployed or runtime certified. Work only on ui-overhaul, preserve the accepted 0.8.7 Menus v4, Gentium/Item Art/Bestiary/Map and HUD RC2.
 
 **18 October correction (supersedes P1 "first playable" success framing):** The
 user *rejected* P1 in-game. Its old-orbit background, native topbar collisions,
