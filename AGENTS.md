@@ -5,7 +5,26 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest explicit implementation-scope correction — 18 October 2026
+## Latest actual Unified P1 runtime screenshot — FAILED (19 October 2026)
+
+The user supplied the first real in-game screenshot and responded **"No idea
+wtf this is."** Unified Inventory P1 **fails basic visual/runtime integration**:
+its new left rail draws, but the old Inventory category bar, WEAPONS/ARMOR
+dotted grid and 20-slot paperdoll equipment orbit remain; horizontal item
+rows and middle selected-item details are missing. Read the
+[first Unified P1 runtime failure report](research/inventory-approved-unified-p1-runtime-failure.md)
+before further work. **Do not recommend cosmetic tuning, a P2 rebuild, Review
+features or another full category implementation until the live runtime
+display-owner/data-binding failure is diagnosed.** Inspect active resource owner
+and native annotation, then trace the exact event chain
+`aiEnter → aiArrange/aiEnable → OnApprovedRefresh → aiData → row paint →
+OnApprovedDetails → aiPayload`, and which native lifecycle methods reactivate
+old UI layers. Original P1 final native cook timed out; controlled packaging
+passed but native candidate not validated. All offline mocked tests were
+insufficient to detect this. Leave working Menus v4/HUD RC2 untouched; advise
+manual disabling of P1 in cloned profile for rollback. No automatic live edits.
+
+## Previous implementation-scope correction — 18 October 2026
 
 **19 October implementation receipt:** the private unified first-playable
 candidate is now documented in
