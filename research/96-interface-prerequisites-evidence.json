@@ -1,0 +1,2447 @@
+{
+  "schema": 1,
+  "source": {
+    "passed": true,
+    "only_removed_playlist_reference": "{E628DC21-010A-49FB-BA2F-DDB4B588857B}",
+    "original_segment_and_pcm_retained": true,
+    "all_native_transition_and_gain_semantics_exact": true,
+    "work_units": 1508,
+    "event_work_units": 542,
+    "original_audio": 47,
+    "cue_sha256": "5e677a1da33213e55b1ae4540397adee184e9dcbfa9e93eb6aa2ebae10d6cabc",
+    "approved24_exact": true,
+    "globals_and_events_on_disk_exact": true,
+    "music_sha256": "1a148316567f90233926e66499b3f321308b38f1c6d0f070bd05aef0cc9ac230"
+  },
+  "positive_pcm": {
+    "passed": true,
+    "source_frames": 1960800,
+    "source_seconds": 40.85,
+    "recorder_offset_frames": 204160,
+    "recorder_offset_seconds": 4.253333333333333,
+    "expected_native_gain_db": -18.996625900268555,
+    "maximum_pcm16_error": 0.989844120398299,
+    "rms_pcm16_error": 0.4886610960149723,
+    "other_channels_zero": true,
+    "complete_baked_tail": true,
+    "post_tail_rest_exact_zero": true,
+    "recorder_sha256": "f525415c633ee0270878289d8b8869316849dad3b0b31222710b9110ef6e0483"
+  },
+  "approach_count": 1,
+  "protected_request_proven": false,
+  "retail_tested": false,
+  "new_banks_generated": false,
+  "finding": "Request starts the exact cue but permits combat/outro overlap and stale dialogue requests. Reject as protected gateway.",
+  "artifacts": {
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-captures\\results.json": "ca9e970b57b2f77edd733bc041551aac1a3b9da8a328138cf412561a1b78f78a",
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-lifecycle.json": "91fc2ec15754e5b081a8b51b0d3c7876edc7492538652df3c556beeb4a0494cd",
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-followup\\results.json": "3d9e09d1c2e3cb004f4a02e91ce6d5e0a97bd0638bd4d149b2e6d0b9a859c59e",
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-followup-lifecycle.json": "f6e65dcc8751e9d1bd4802ee69d9cf19128eb524bc21d529fd588183fd8681a4",
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-expiry\\results.json": "d36bdadcef40335b8c29ba905c989d8b9091fafe70f14f65c53a6fbc38d73fa7",
+    "build\\sparse-interface-prerequisites-v1\\wwise\\candidate\\validation\\stinger-expiry-lifecycle.json": "015879a76ad0f83dfd8b398d5916ef8724d9edbabf6b9ea646763120dc4c55b6",
+    "build/sparse-interface-prerequisites-v1/tests-final-v2.log": "8c726970fd2d530812ccf5fe6d2d9625ece26b7e3e1c3be43bf4ccde3dfaf859",
+    "build/sparse-interface-prerequisites-v1/review-final.json": "f658a9c79176d78d54287cdfa56593885bd4515855bc0908e8356598267e2c78",
+    "build/sparse-interface-prerequisites-v1/retained-evidence-review.json": "a5cf0f5ae497b26f185b63675e8e7fac2f0f8d60e20b47b120de21cab8ba157c",
+    "build/sparse-interface-prerequisites-v1/native-log/audit.json": "63411bf1132dfebee1d62069c98d10fb8a8933c86349b405066b4b7f8b4049fb"
+  },
+  "native_logger": {
+    "schema": 1,
+    "sha256": "2df765398a3d1f165db418271be7200178320a4466817379f2fa0dc0001fb101",
+    "image_base": 5368709120,
+    "finding": "LogChannel initially dispatches to no-op through writable slot; native startup can rebind it. Initial stub alone does NOT prove logging disabled.",
+    "runtime_hooking_excluded": true,
+    "retail_observed": false,
+    "registration": {
+      "string_rva": 56814952,
+      "registration_rva": 41180059,
+      "handler_range": [
+        41177920,
+        41178138
+      ],
+      "dispatch": [
+        {
+          "call_rva": 41178106,
+          "slot_rva": 67484320,
+          "slot_readonly": false,
+          "destination_rva": 41178320,
+          "destination_prefix": "c20000"
+        }
+      ]
+    },
+    "native_slot_writes": [
+      36208277,
+      38655010,
+      38655308
+    ],
+    "verified_image_layout": {
+      "config": [
+        {
+          "group": "Scripts",
+          "key": "LogDebugScripts",
+          "node_rva": 85234200,
+          "value_rva": 85234248
+        },
+        {
+          "group": "Scripts",
+          "key": "DebugScriptsForceFlush",
+          "node_rva": 85234256,
+          "value_rva": 85234304
+        },
+        {
+          "group": "Scripts",
+          "key": "DebugScriptsLogDir",
+          "node_rva": 96493440,
+          "value_rva": 96493496,
+          "storage": "BSS initialized by native constructor 0x1cd3ca..0x1cd42c"
+        }
+      ],
+      "initializer_rva": 36208224,
+      "startup_call_rva": 36202243,
+      "callback_rva": 36208880,
+      "callback_assignment_rva": 36208277,
+      "filename": "scriptslog.txt",
+      "open_mode": "w",
+      "append_filename_instructions": [
+        36210003,
+        36210208
+      ],
+      "file_open_rva": 36210281,
+      "line_format": "[channel] text + newline",
+      "force_flush_branch_rva": 36209171,
+      "native_guard": "Initializer skips when byte at engine-global+0x17c is nonzero; meaning/runtime value not established.",
+      "operating_status": "Static complete native file path. Retail execution/config delivery requires user smoke test, not DebugView."
+    }
+  },
+  "preservation": {
+    "approved24_exact": true,
+    "ten_release_native_inputs_exact": true,
+    "report88_bank_exact": true,
+    "report90_music_hashes_exact": true,
+    "native_compiler_runtime_inputs_exact": 68
+  },
+  "observer": {
+    "observer_source_sha256": "8c78e5fa5b95390364e72a55ed5db73b19215ecf7c55b852c2fe89b053069acc",
+    "compiler_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "compiler_assert_counts": {
+      "baseline": 20893,
+      "candidate": 20901,
+      "matched_declaration_control": 20901
+    },
+    "compiled_full_merged_mods": false,
+    "retail_observed": false,
+    "zip_sha256": "8cb59a83e77c328b2cd050c252411feefa21b8a257b0abd15d9a85f45ab16568",
+    "source_unchanged": true,
+    "recompiled_this_task": false,
+    "ready_for_unconditional_install": false
+  },
+  "cases": [
+    {
+      "case": "no-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "86e6e26b61bab0907c34e302a6f06163af9aa78a16529375ece4ff5c8e90da48",
+        "seconds": 53.19466666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 0
+      },
+      "pipelines": [
+        {
+          "pipeline": 4,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1252438999999868,
+          "last": 11.8804054000002,
+          "peak": -19.0,
+          "audible_first": 2.1252438999999868,
+          "audible_last": 11.8804054000002
+        },
+        {
+          "pipeline": 7,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.0833204999999,
+          "last": 21.957274700000198,
+          "peak": -19.0,
+          "audible_first": 12.0833204999999,
+          "audible_last": 21.957274700000198
+        },
+        {
+          "pipeline": 8,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.159985600000255,
+          "last": 31.97347329999957,
+          "peak": -19.0,
+          "audible_first": 22.159985600000255,
+          "audible_last": 31.97347329999957
+        },
+        {
+          "pipeline": 9,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.181682499999624,
+          "last": 41.89478959999997,
+          "peak": -19.0,
+          "audible_first": 32.181682499999624,
+          "audible_last": 41.89478959999997
+        },
+        {
+          "pipeline": 10,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 42.094890000000305,
+          "last": 51.91113349999978,
+          "peak": -19.0,
+          "audible_first": 42.094890000000305,
+          "audible_last": 51.91113349999978
+        },
+        {
+          "pipeline": 11,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 52.11381999999958,
+          "last": 54.982418999999936,
+          "peak": -19.0,
+          "audible_first": 52.11381999999958,
+          "audible_last": 54.982418999999936
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": []
+    },
+    {
+      "case": "valid-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "f525415c633ee0270878289d8b8869316849dad3b0b31222710b9110ef6e0483",
+        "seconds": 53.184,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1035
+      },
+      "pipelines": [
+        {
+          "pipeline": 15,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1558273000000554,
+          "last": 12.015843300000597,
+          "peak": -19.0,
+          "audible_first": 2.1558273000000554,
+          "audible_last": 12.015843300000597
+        },
+        {
+          "pipeline": 18,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.308578699999998,
+          "last": 47.06127100000049,
+          "peak": -19.0,
+          "audible_first": 6.308578699999998,
+          "audible_last": 47.06127100000049
+        },
+        {
+          "pipeline": 19,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.233464300000378,
+          "last": 21.959169400000064,
+          "peak": -19.0,
+          "audible_first": 12.233464300000378,
+          "audible_last": 21.959169400000064
+        },
+        {
+          "pipeline": 20,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.18193860000065,
+          "last": 31.83717240000078,
+          "peak": -19.0,
+          "audible_first": 22.18193860000065,
+          "audible_last": 31.83717240000078
+        },
+        {
+          "pipeline": 21,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.07177180000053,
+          "last": 42.00611580000077,
+          "peak": -19.0,
+          "audible_first": 32.07177180000053,
+          "audible_last": 42.00611580000077
+        },
+        {
+          "pipeline": 22,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 42.22534640000049,
+          "last": 51.892866300000605,
+          "peak": -19.0,
+          "audible_first": 42.22534640000049,
+          "audible_last": 51.892866300000605
+        },
+        {
+          "pipeline": 23,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 52.095339700000295,
+          "last": 54.99099550000028,
+          "peak": -19.0,
+          "audible_first": 52.095339700000295,
+          "audible_last": 54.99099550000028
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.034824300000764,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "duplicate-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "b1784d270e156aeefd78b85a351796da86dd96549f2a1a09c795c856b9ccecd0",
+        "seconds": 53.22666666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1035
+      },
+      "pipelines": [
+        {
+          "pipeline": 27,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.128140799999528,
+          "last": 11.800797599999896,
+          "peak": -19.0,
+          "audible_first": 2.128140799999528,
+          "audible_last": 11.800797599999896
+        },
+        {
+          "pipeline": 30,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.450922400000309,
+          "last": 47.047378399999616,
+          "peak": -19.0,
+          "audible_first": 6.450922400000309,
+          "audible_last": 47.047378399999616
+        },
+        {
+          "pipeline": 31,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.019617500000095,
+          "last": 21.788780599999882,
+          "peak": -19.0,
+          "audible_first": 12.019617500000095,
+          "audible_last": 21.788780599999882
+        },
+        {
+          "pipeline": 32,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.03826879999997,
+          "last": 31.83367730000009,
+          "peak": -19.0,
+          "audible_first": 22.03826879999997,
+          "audible_last": 31.83367730000009
+        },
+        {
+          "pipeline": 33,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.05087800000001,
+          "last": 41.92004910000014,
+          "peak": -19.0,
+          "audible_first": 32.05087800000001,
+          "audible_last": 41.92004910000014
+        },
+        {
+          "pipeline": 34,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 42.14013479999994,
+          "last": 51.863505799999984,
+          "peak": -19.0,
+          "audible_first": 42.14013479999994,
+          "audible_last": 51.863505799999984
+        },
+        {
+          "pipeline": 35,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 52.09830299999976,
+          "last": 54.98345410000002,
+          "peak": -19.0,
+          "audible_first": 52.09830299999976,
+          "audible_last": 54.98345410000002
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.144159100000252,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.181422099999509,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "combat-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "2191bfb890585ff9b4966874085396bcb895e4ddf83a0079e5596d40e133380a",
+        "seconds": 43.168,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 5991
+      },
+      "pipelines": [
+        {
+          "pipeline": 39,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.14497080000001,
+          "last": 8.380611999999928,
+          "peak": -19.0,
+          "audible_first": 2.14497080000001,
+          "audible_last": 8.380611999999928
+        },
+        {
+          "pipeline": 42,
+          "role": "combat",
+          "ids": [
+            387301552,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 5.037014099999396,
+          "last": 26.10589230000005,
+          "peak": -19.0,
+          "audible_first": 12.25529749999987,
+          "audible_last": 26.10589230000005
+        },
+        {
+          "pipeline": 43,
+          "role": "combat",
+          "ids": [
+            113931885,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 5.037014099999396,
+          "last": 26.10589230000005,
+          "peak": -17.0,
+          "audible_first": 5.037014099999396,
+          "audible_last": 26.10589230000005
+        },
+        {
+          "pipeline": 44,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.574730100000124,
+          "last": 44.97606529999939,
+          "peak": -19.0,
+          "audible_first": 6.574730100000124,
+          "audible_last": 44.97606529999939
+        },
+        {
+          "pipeline": 45,
+          "role": "outro",
+          "ids": [
+            1035757740,
+            800050000,
+            626252931,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 24.7668292999997,
+          "last": 29.555207399999745,
+          "peak": -19.0,
+          "audible_first": 24.7668292999997,
+          "audible_last": 29.555207399999745
+        },
+        {
+          "pipeline": 46,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 25.029501799999707,
+          "last": 26.371253700000125,
+          "peak": -24.111637115478516,
+          "audible_first": 25.029501799999707,
+          "audible_last": 26.371253700000125
+        },
+        {
+          "pipeline": 47,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 26.60512860000017,
+          "last": 36.41814269999941,
+          "peak": -19.0,
+          "audible_first": 26.60512860000017,
+          "audible_last": 36.41814269999941
+        },
+        {
+          "pipeline": 48,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 36.63389079999979,
+          "last": 44.97606529999939,
+          "peak": -19.0,
+          "audible_first": 36.63389079999979,
+          "audible_last": 44.97606529999939
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0,
+          35.0,
+          100.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.13621509999939,
+          "kind": "state",
+          "name": "combat",
+          "value": null
+        },
+        {
+          "scheduled": 6,
+          "accepted": 6.188028300000042,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.151032400000076,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 35
+        },
+        {
+          "scheduled": 18,
+          "accepted": 18.075448599999618,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 100
+        },
+        {
+          "scheduled": 24,
+          "accepted": 24.178046500000164,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "outro-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "cae8c673e1c52b974f6102e77644323aabdaaaac856af8e629ed0a3a2da69405",
+        "seconds": 53.16266666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 5923
+      },
+      "pipelines": [
+        {
+          "pipeline": 52,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.0151723999997557,
+          "last": 8.377512399999432,
+          "peak": -19.0,
+          "audible_first": 2.0151723999997557,
+          "audible_last": 8.377512399999432
+        },
+        {
+          "pipeline": 55,
+          "role": "combat",
+          "ids": [
+            387301552,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 4.9771082999996,
+          "last": 26.941289599999436,
+          "peak": -19.0,
+          "audible_first": 12.146057299999484,
+          "audible_last": 26.941289599999436
+        },
+        {
+          "pipeline": 56,
+          "role": "combat",
+          "ids": [
+            113931885,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 4.9771082999996,
+          "last": 26.941289599999436,
+          "peak": -17.0,
+          "audible_first": 4.9771082999996,
+          "audible_last": 26.941289599999436
+        },
+        {
+          "pipeline": 57,
+          "role": "outro",
+          "ids": [
+            1035757740,
+            800050000,
+            626252931,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 25.4131311000001,
+          "last": 30.317222199999378,
+          "peak": -19.0,
+          "audible_first": 25.4131311000001,
+          "audible_last": 30.317222199999378
+        },
+        {
+          "pipeline": 58,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 26.691620699999476,
+          "last": 36.37818330000027,
+          "peak": -19.0,
+          "audible_first": 26.691620699999476,
+          "audible_last": 36.37818330000027
+        },
+        {
+          "pipeline": 59,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 36.5823077999994,
+          "last": 46.427075599999625,
+          "peak": -19.0,
+          "audible_first": 36.5823077999994,
+          "audible_last": 46.427075599999625
+        },
+        {
+          "pipeline": 60,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 46.64278439999998,
+          "last": 54.94177279999985,
+          "peak": -19.0,
+          "audible_first": 46.64278439999998,
+          "audible_last": 54.94177279999985
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0,
+          35.0,
+          100.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.04757139999947,
+          "kind": "state",
+          "name": "combat",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.074426899999708,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 35
+        },
+        {
+          "scheduled": 18,
+          "accepted": 18.201774999999543,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 100
+        },
+        {
+          "scheduled": 24,
+          "accepted": 24.204208799999833,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        },
+        {
+          "scheduled": 25,
+          "accepted": 25.109183900000062,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "authored-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "d70ce21b62f52e67cad9fd7a3584c09fbb76a9c1a9ee34218bee96cd6ba4f7ae",
+        "seconds": 22.122666666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1938
+      },
+      "pipelines": [
+        {
+          "pipeline": 64,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1374728000000687,
+          "last": 9.79446199999984,
+          "peak": -19.0,
+          "audible_first": 2.1374728000000687,
+          "audible_last": 6.120932200000425
+        },
+        {
+          "pipeline": 67,
+          "role": "other",
+          "ids": [
+            368548582,
+            986167915,
+            617047328,
+            772546391,
+            323955723,
+            287204113
+          ],
+          "first": 8.204313199999888,
+          "last": 13.781908699999804,
+          "peak": -18.10757064819336,
+          "audible_first": 8.204313199999888,
+          "audible_last": 13.781908699999804
+        },
+        {
+          "pipeline": 68,
+          "role": "other",
+          "ids": [
+            574869588,
+            855009386,
+            933909186,
+            636579916,
+            323955723,
+            287204113
+          ],
+          "first": 10.263568100000157,
+          "last": 29.903466700000536,
+          "peak": -22.0,
+          "audible_first": 10.263568100000157,
+          "audible_last": 29.903466700000536
+        },
+        {
+          "pipeline": 69,
+          "role": "other",
+          "ids": [
+            493488625,
+            855009386,
+            933909186,
+            636579916,
+            323955723,
+            287204113
+          ],
+          "first": 10.263568100000157,
+          "last": 29.903466700000536,
+          "peak": -22.0,
+          "audible_first": 10.263568100000157,
+          "audible_last": 29.903466700000536
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.145001900000352,
+          "kind": "state",
+          "name": "dialog_scene",
+          "value": null
+        },
+        {
+          "scheduled": 4.1,
+          "accepted": 4.1713871000001745,
+          "kind": "event",
+          "name": "mus_q001_tavern_conversation",
+          "value": null
+        },
+        {
+          "scheduled": 9,
+          "accepted": 9.050500700000157,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "dialogue-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "779693e1da5bf7f6739d9437b1412c028e903d0d9ea743e28bce3f08cfd395fc",
+        "seconds": 16.917333333333332,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1035
+      },
+      "pipelines": [
+        {
+          "pipeline": 73,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.015468300000066,
+          "last": 11.742935100000068,
+          "peak": -19.18471336364746,
+          "audible_first": 2.015468300000066,
+          "audible_last": 5.990273299999899
+        },
+        {
+          "pipeline": 76,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 9.279419899999994,
+          "last": 34.93428529999983,
+          "peak": -19.0,
+          "audible_first": 18.291537099999914,
+          "audible_last": 34.93428529999983
+        },
+        {
+          "pipeline": 77,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.222484699999768,
+          "last": 21.770089999999982,
+          "peak": -19.0,
+          "audible_first": 18.291537099999914,
+          "audible_last": 21.770089999999982
+        },
+        {
+          "pipeline": 78,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.205933399999594,
+          "last": 31.743956000000253,
+          "peak": -19.0,
+          "audible_first": 22.205933399999594,
+          "audible_last": 31.743956000000253
+        },
+        {
+          "pipeline": 79,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.24075660000017,
+          "last": 34.93428529999983,
+          "peak": -19.0,
+          "audible_first": 32.24075660000017,
+          "audible_last": 34.93428529999983
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.061660800000027,
+          "kind": "state",
+          "name": "dialog_scene",
+          "value": null
+        },
+        {
+          "scheduled": 9,
+          "accepted": 9.020176900000479,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 18,
+          "accepted": 18.19158580000021,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "wrong-location-return",
+      "complete": true,
+      "pcm": {
+        "sha256": "eddb4f142d3f3d763c839483b9afe79ccb03fa2a0b3fd73220d344bff25dcafa",
+        "seconds": 17.717333333333332,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 0
+      },
+      "pipelines": [
+        {
+          "pipeline": 83,
+          "role": "other",
+          "ids": [
+            566669767,
+            523415893,
+            883068472,
+            840282456,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1931776999999784,
+          "last": 21.20540650000021,
+          "peak": -217.0,
+          "audible_first": null,
+          "audible_last": null
+        },
+        {
+          "pipeline": 86,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 17.410494700000527,
+          "last": 21.830471899999793,
+          "peak": -19.0,
+          "audible_first": 17.410494700000527,
+          "audible_last": 21.830471899999793
+        },
+        {
+          "pipeline": 87,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.03328479999982,
+          "last": 31.9260991000001,
+          "peak": -19.0,
+          "audible_first": 22.03328479999982,
+          "audible_last": 31.9260991000001
+        },
+        {
+          "pipeline": 88,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.12805500000013,
+          "last": 34.85759180000059,
+          "peak": -19.0,
+          "audible_first": 32.12805500000013,
+          "audible_last": 34.85759180000059
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.058081300000595,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 16,
+          "accepted": 16.015460100000382,
+          "kind": "event",
+          "name": "mus_loc_prologue_village",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "gwent-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "4612d8e8ef844cd9512163d1f462f3d63052a16e79f385e49ef2ca3769d3a6f3",
+        "seconds": 18.218666666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 3093
+      },
+      "pipelines": [
+        {
+          "pipeline": 92,
+          "role": "other",
+          "ids": [
+            99803610,
+            541885096,
+            561432243,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1480970000002344,
+          "last": 20.003420600000027,
+          "peak": -17.0,
+          "audible_first": 2.1480970000002344,
+          "audible_last": 20.003420600000027
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.0945903000001636,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "cancel-active",
+      "complete": true,
+      "pcm": {
+        "sha256": "96a35b258a8a07f1db112f46f84d5ada6265332b1d271a795002391707ad93eb",
+        "seconds": 23.17866666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 832
+      },
+      "pipelines": [
+        {
+          "pipeline": 4,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.105831799999578,
+          "last": 11.835940599999958,
+          "peak": -19.0,
+          "audible_first": 2.105831799999578,
+          "audible_last": 11.835940599999958
+        },
+        {
+          "pipeline": 7,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.472860899999432,
+          "last": 24.969628699999703,
+          "peak": -19.0,
+          "audible_first": 6.472860899999432,
+          "audible_last": 24.969628699999703
+        },
+        {
+          "pipeline": 8,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.055466399999204,
+          "last": 21.828470699999343,
+          "peak": -19.0,
+          "audible_first": 12.055466399999204,
+          "audible_last": 21.828470699999343
+        },
+        {
+          "pipeline": 9,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.078255599999466,
+          "last": 24.969628699999703,
+          "peak": -19.0,
+          "audible_first": 22.078255599999466,
+          "audible_last": 24.969628699999703
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.180776199999855,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.217674699999407,
+          "kind": "event",
+          "name": "WMC_Private_Cancel_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "active-then-combat",
+      "complete": true,
+      "pcm": {
+        "sha256": "75a0c78e684e87653284aeb2d24b29099cdf86db290faf3543cfc10ed4dde28d",
+        "seconds": 53.09866666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 5851
+      },
+      "pipelines": [
+        {
+          "pipeline": 13,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1640323000001445,
+          "last": 11.810025800000403,
+          "peak": -19.0,
+          "audible_first": 2.1640323000001445,
+          "audible_last": 11.810025800000403
+        },
+        {
+          "pipeline": 16,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.304950900000222,
+          "last": 46.98422589999973,
+          "peak": -19.0,
+          "audible_first": 6.304950900000222,
+          "audible_last": 46.98422589999973
+        },
+        {
+          "pipeline": 17,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.280110599999716,
+          "last": 16.351376800000253,
+          "peak": -19.0,
+          "audible_first": 12.280110599999716,
+          "audible_last": 16.351376800000253
+        },
+        {
+          "pipeline": 18,
+          "role": "combat",
+          "ids": [
+            387301552,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.980080299999827,
+          "last": 34.05950850000045,
+          "peak": -19.0,
+          "audible_first": 20.194418600000063,
+          "audible_last": 34.05950850000045
+        },
+        {
+          "pipeline": 19,
+          "role": "combat",
+          "ids": [
+            113931885,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.980080299999827,
+          "last": 34.05950850000045,
+          "peak": -17.0,
+          "audible_first": 12.980080299999827,
+          "audible_last": 34.05950850000045
+        },
+        {
+          "pipeline": 20,
+          "role": "outro",
+          "ids": [
+            1035757740,
+            800050000,
+            626252931,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.732603800000106,
+          "last": 37.612982999999986,
+          "peak": -19.0,
+          "audible_first": 32.732603800000106,
+          "audible_last": 37.612982999999986
+        },
+        {
+          "pipeline": 21,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.99718720000055,
+          "last": 34.29128370000035,
+          "peak": -24.568893432617188,
+          "audible_first": 32.99718720000055,
+          "audible_last": 34.29128370000035
+        },
+        {
+          "pipeline": 22,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 34.758899100000235,
+          "last": 44.31683570000041,
+          "peak": -19.0,
+          "audible_first": 34.758899100000235,
+          "audible_last": 44.31683570000041
+        },
+        {
+          "pipeline": 23,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 44.553310299999794,
+          "last": 54.48361709999972,
+          "peak": -19.0,
+          "audible_first": 44.77462430000014,
+          "audible_last": 54.48361709999972
+        },
+        {
+          "pipeline": 24,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 54.68764030000057,
+          "last": 54.89238430000023,
+          "peak": -19.0,
+          "audible_first": 54.68764030000057,
+          "audible_last": 54.89238430000023
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0,
+          35.0,
+          100.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.026672099999814,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.20654259999992,
+          "kind": "state",
+          "name": "combat",
+          "value": null
+        },
+        {
+          "scheduled": 20,
+          "accepted": 20.106527599999936,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 35
+        },
+        {
+          "scheduled": 26,
+          "accepted": 26.068988099999842,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 100
+        },
+        {
+          "scheduled": 32,
+          "accepted": 32.14128290000008,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "active-then-authored",
+      "complete": true,
+      "pcm": {
+        "sha256": "1f31270770cb76cc998af1678c82bfaa1b4256adf0dffb14adb6fc2de1904cba",
+        "seconds": 19.136,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1938
+      },
+      "pipelines": [
+        {
+          "pipeline": 28,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1467804000003525,
+          "last": 11.982479199999943,
+          "peak": -19.0,
+          "audible_first": 2.1467804000003525,
+          "audible_last": 11.982479199999943
+        },
+        {
+          "pipeline": 31,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.353937300000325,
+          "last": 34.940062200000284,
+          "peak": -19.0,
+          "audible_first": 6.353937300000325,
+          "audible_last": 14.058198599999741
+        },
+        {
+          "pipeline": 32,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.267140500000096,
+          "last": 17.81461390000004,
+          "peak": -19.499412536621094,
+          "audible_first": 12.267140500000096,
+          "audible_last": 14.058198599999741
+        },
+        {
+          "pipeline": 33,
+          "role": "other",
+          "ids": [
+            368548582,
+            986167915,
+            617047328,
+            772546391,
+            323955723,
+            287204113
+          ],
+          "first": 16.134952299999895,
+          "last": 21.920034400000077,
+          "peak": -18.153982162475586,
+          "audible_first": 16.134952299999895,
+          "audible_last": 21.920034400000077
+        },
+        {
+          "pipeline": 34,
+          "role": "other",
+          "ids": [
+            574869588,
+            855009386,
+            933909186,
+            636579916,
+            323955723,
+            287204113
+          ],
+          "first": 18.329250599999796,
+          "last": 34.940062200000284,
+          "peak": -22.0,
+          "audible_first": 18.329250599999796,
+          "audible_last": 34.940062200000284
+        },
+        {
+          "pipeline": 35,
+          "role": "other",
+          "ids": [
+            493488625,
+            855009386,
+            933909186,
+            636579916,
+            323955723,
+            287204113
+          ],
+          "first": 18.329250599999796,
+          "last": 34.940062200000284,
+          "peak": -22.0,
+          "audible_first": 18.329250599999796,
+          "audible_last": 34.940062200000284
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.015412200000355,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.154810400000315,
+          "kind": "state",
+          "name": "dialog_scene",
+          "value": null
+        },
+        {
+          "scheduled": 12.1,
+          "accepted": 12.171601500000179,
+          "kind": "event",
+          "name": "mus_q001_tavern_conversation",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "request-master",
+      "complete": true,
+      "pcm": {
+        "sha256": "013be8c06b3f9b8293db944b0ce22316ecee3db23113d187a2189f069acb2992",
+        "seconds": 53.23733333333333,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1035
+      },
+      "pipelines": [
+        {
+          "pipeline": 39,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.133079799999905,
+          "last": 11.964447700000164,
+          "peak": -19.0,
+          "audible_first": 2.133079799999905,
+          "audible_last": 11.964447700000164
+        },
+        {
+          "pipeline": 42,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 6.318346699999893,
+          "last": 47.051584699999694,
+          "peak": -19.0,
+          "audible_first": 6.318346699999893,
+          "audible_last": 47.051584699999694
+        },
+        {
+          "pipeline": 43,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.179571200000282,
+          "last": 21.94117879999976,
+          "peak": -19.0,
+          "audible_first": 12.179571200000282,
+          "audible_last": 21.94117879999976
+        },
+        {
+          "pipeline": 44,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.158634399999755,
+          "last": 31.995931800000108,
+          "peak": -19.0,
+          "audible_first": 22.158634399999755,
+          "audible_last": 31.995931800000108
+        },
+        {
+          "pipeline": 45,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.21399620000011,
+          "last": 41.984787499999584,
+          "peak": -19.0,
+          "audible_first": 32.21399620000011,
+          "audible_last": 41.984787499999584
+        },
+        {
+          "pipeline": 46,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 42.20448409999972,
+          "last": 51.96278580000035,
+          "peak": -19.0,
+          "audible_first": 42.20448409999972,
+          "audible_last": 51.96278580000035
+        },
+        {
+          "pipeline": 47,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 52.16549709999981,
+          "last": 55.02446669999972,
+          "peak": -19.0,
+          "audible_first": 52.16549709999981,
+          "audible_last": 55.02446669999972
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          50.0,
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 6,
+          "accepted": 6.0434917000002315,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 15,
+          "accepted": 15.022856300000058,
+          "kind": "rtpc",
+          "name": "menu_volume_music",
+          "value": 50
+        },
+        {
+          "scheduled": 24,
+          "accepted": 24.082887499999742,
+          "kind": "rtpc",
+          "name": "menu_volume_music",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "case": "late-outro-request",
+      "complete": true,
+      "pcm": {
+        "sha256": "c410c195a8c50c84efc57c4d81e8056f9636be8343c722d486bb59f0f1d9f2fa",
+        "seconds": 53.09866666666667,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 5923
+      },
+      "pipelines": [
+        {
+          "pipeline": 4,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.097475100000338,
+          "last": 8.494278999999551,
+          "peak": -19.0,
+          "audible_first": 2.097475100000338,
+          "audible_last": 8.494278999999551
+        },
+        {
+          "pipeline": 7,
+          "role": "combat",
+          "ids": [
+            387301552,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 4.90513110000029,
+          "last": 26.920158699999774,
+          "peak": -19.0,
+          "audible_first": 12.30213459999959,
+          "audible_last": 26.920158699999774
+        },
+        {
+          "pipeline": 8,
+          "role": "combat",
+          "ids": [
+            113931885,
+            336486603,
+            112626980,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 4.90513110000029,
+          "last": 26.920158699999774,
+          "peak": -17.0,
+          "audible_first": 4.90513110000029,
+          "audible_last": 26.920158699999774
+        },
+        {
+          "pipeline": 9,
+          "role": "outro",
+          "ids": [
+            1035757740,
+            800050000,
+            626252931,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 25.628008800000316,
+          "last": 30.49954499999967,
+          "peak": -19.0,
+          "audible_first": 25.628008800000316,
+          "audible_last": 30.49954499999967
+        },
+        {
+          "pipeline": 10,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 26.673976799999764,
+          "last": 36.39646340000036,
+          "peak": -19.0,
+          "audible_first": 26.673976799999764,
+          "audible_last": 36.39646340000036
+        },
+        {
+          "pipeline": 11,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 28.578895800000282,
+          "last": 54.89148699999987,
+          "peak": -19.0,
+          "audible_first": 28.578895800000282,
+          "audible_last": 54.89148699999987
+        },
+        {
+          "pipeline": 12,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 36.646807699999954,
+          "last": 46.49508690000039,
+          "peak": -19.0,
+          "audible_first": 36.646807699999954,
+          "audible_last": 46.49508690000039
+        },
+        {
+          "pipeline": 13,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 46.72939750000023,
+          "last": 54.89148699999987,
+          "peak": -19.0,
+          "audible_first": 46.72939750000023,
+          "audible_last": 54.89148699999987
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0,
+          35.0,
+          100.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.1929112999996505,
+          "kind": "state",
+          "name": "combat",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.211525300000176,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 35
+        },
+        {
+          "scheduled": 18,
+          "accepted": 18.0634399999999,
+          "kind": "rtpc",
+          "name": "threat_rating",
+          "value": 100
+        },
+        {
+          "scheduled": 24,
+          "accepted": 24.19323710000026,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        },
+        {
+          "scheduled": 28,
+          "accepted": 28.222355400000197,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        }
+      ]
+    },
+    {
+      "case": "cancel-ineligible",
+      "complete": true,
+      "pcm": {
+        "sha256": "cab64197fa9b7b8a232fe1d80c941cc48f83b5c09c2fc46e30596e5947baeb85",
+        "seconds": 16.906666666666666,
+        "channels": 6,
+        "rate": 48000,
+        "peak": 1035
+      },
+      "pipelines": [
+        {
+          "pipeline": 17,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 2.1291933000002246,
+          "last": 11.788268600000265,
+          "peak": -19.0,
+          "audible_first": 2.1291933000002246,
+          "audible_last": 6.0751765000004525
+        },
+        {
+          "pipeline": 20,
+          "role": "cue",
+          "ids": [
+            499024852,
+            1029261546,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 9.506020599999829,
+          "last": 34.8736686000002,
+          "peak": -19.0,
+          "audible_first": 18.2040164,
+          "audible_last": 34.8736686000002
+        },
+        {
+          "pipeline": 21,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 12.304137199999786,
+          "last": 21.92210189999969,
+          "peak": -19.0,
+          "audible_first": 18.2040164,
+          "audible_last": 21.92210189999969
+        },
+        {
+          "pipeline": 22,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 22.172223399999893,
+          "last": 31.97641079999994,
+          "peak": -19.0,
+          "audible_first": 22.172223399999893,
+          "audible_last": 31.97641079999994
+        },
+        {
+          "pipeline": 23,
+          "role": "rest",
+          "ids": [
+            1050507998,
+            4111369,
+            133462974,
+            866607386,
+            1033516231,
+            287204113
+          ],
+          "first": 32.20959810000022,
+          "last": 34.8736686000002,
+          "peak": -19.0,
+          "audible_first": 32.20959810000022,
+          "audible_last": 34.8736686000002
+        }
+      ],
+      "rtpcs": {
+        "18446744073709551615:threat_rating": [
+          0.0
+        ],
+        "18446744073709551615:menu_volume_music": [
+          0.0
+        ],
+        "18446744073709551614:threat_rating": [
+          0.0
+        ],
+        "18446744073709551614:menu_volume_music": [
+          100.0
+        ]
+      },
+      "events": [
+        {
+          "scheduled": 4,
+          "accepted": 4.166397199999665,
+          "kind": "state",
+          "name": "dialog_scene",
+          "value": null
+        },
+        {
+          "scheduled": 9,
+          "accepted": 9.181224799999654,
+          "kind": "event",
+          "name": "WMC_Private_Request_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 12,
+          "accepted": 12.202793700000257,
+          "kind": "event",
+          "name": "WMC_Private_Cancel_Stinger",
+          "value": null
+        },
+        {
+          "scheduled": 18,
+          "accepted": 18.133529900000212,
+          "kind": "state",
+          "name": "exploration",
+          "value": null
+        }
+      ]
+    }
+  ],
+  "tests": {
+    "python_tests": 289,
+    "passed": true,
+    "negative_gate_messages_expected": true
+  },
+  "limitations": [
+    "No retail game/log delivery tested.",
+    "Negative request controls are observations, not protection proofs; persistent stinger cooldown/history was not independently reset per case.",
+    "Trigger reuse is private authoring only; hidden native producers and production Init compatibility not established.",
+    "Profiler lifetime is not PCM audibility; dialogue cue is virtual/muted until return.",
+    "Only one request hypothesis tested. No safe second approach within current constraints."
+  ],
+  "unsafe_overlap_intervals": {
+    "combat-request": [
+      [
+        12.25529749999987,
+        26.10589230000005
+      ],
+      [
+        6.574730100000124,
+        26.10589230000005
+      ]
+    ],
+    "late-outro-request": [
+      [
+        28.578895800000282,
+        30.49954499999967
+      ]
+    ],
+    "active-then-combat": [
+      [
+        20.194418600000063,
+        34.05950850000045
+      ],
+      [
+        12.980080299999827,
+        34.05950850000045
+      ]
+    ]
+  }
+}
