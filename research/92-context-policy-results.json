@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "provenance": "simulation only; no playback",
+  "profiles": {
+    "restrained": {
+      "name": "restrained",
+      "baseline": 0.0011111111111111111,
+      "opportunity": 0.005555555555555556,
+      "random_rate": 0.0015384615384615385,
+      "window": 60,
+      "stable": 8,
+      "quiet_floor": 30,
+      "ramp": 120,
+      "excerpt_gap": 420,
+      "family_gap": 240,
+      "recovery": 45
+    },
+    "contrast": {
+      "name": "contrast",
+      "baseline": 0.0022222222222222222,
+      "opportunity": 0.01,
+      "random_rate": 0.0030303030303030303,
+      "window": 60,
+      "stable": 8,
+      "quiet_floor": 30,
+      "ramp": 120,
+      "excerpt_gap": 420,
+      "family_gap": 240,
+      "recovery": 45
+    }
+  },
+  "installed_sources_checked_this_run": true,
+  "three_private_cues_checked_this_run": true,
+  "catalog_sha256": "72b9ffd105eff0747ddab518ccec9a13c4efbef1436c275b79e8b96d90b301bf",
+  "illustrative_cues": [
+    {
+      "id": "S04-b",
+      "family": "native:263850977",
+      "seconds": 36.757333333333335,
+      "role": "punctuation",
+      "sha256": "db7df8e97cc4d1d1b5956461be134bbd0a6a730f6a9dcd4dd55e1da8a65b797f"
+    },
+    {
+      "id": "S16-2",
+      "family": "native:626459345",
+      "seconds": 71.175,
+      "role": "atmospheric",
+      "sha256": "4e9104c02fded256d63af1a48b132a83215a3cd9bbc359cd28ea2b7ff91e037a"
+    },
+    {
+      "id": "S04-a",
+      "family": "native:263850977",
+      "seconds": 40.85,
+      "role": "punctuation",
+      "sha256": "2fb3282aea3474fada19b823ffb6dc6b9b794efa1f75aa347df00adf3d3cff82"
+    }
+  ],
+  "seeds": [
+    0,
+    199
+  ],
+  "hazard": "Integrated exponential threshold; baseline ramp + max active optional-window boost. No callback-count Bernoulli.",
+  "comparison_limit": "Randomized constant rate differs from contextual hazard budget; shared native hard gates; no aesthetic success claim.",
+  "summary": [
+    {
+      "profile": "restrained",
+      "approach": "randomized",
+      "runs": 1200,
+      "mean_starts": 2.1108333333333333,
+      "mean_allocation_fraction": 0.04479993820138503,
+      "zero_start_runs": 309,
+      "recent_family_repeats": 336,
+      "recent_excerpt_repeats": 357,
+      "editorial_hypothesis_mismatches": 540,
+      "expired_opportunities": 0,
+      "interruptions": 142
+    },
+    {
+      "profile": "restrained",
+      "approach": "contextual",
+      "runs": 1200,
+      "mean_starts": 1.4383333333333332,
+      "mean_allocation_fraction": 0.028651825560568025,
+      "zero_start_runs": 388,
+      "recent_family_repeats": 0,
+      "recent_excerpt_repeats": 0,
+      "editorial_hypothesis_mismatches": 0,
+      "expired_opportunities": 1257,
+      "interruptions": 131
+    },
+    {
+      "profile": "contrast",
+      "approach": "randomized",
+      "runs": 1200,
+      "mean_starts": 3.7533333333333334,
+      "mean_allocation_fraction": 0.08068512702971063,
+      "zero_start_runs": 179,
+      "recent_family_repeats": 1015,
+      "recent_excerpt_repeats": 1017,
+      "editorial_hypothesis_mismatches": 974,
+      "expired_opportunities": 0,
+      "interruptions": 257
+    },
+    {
+      "profile": "contrast",
+      "approach": "contextual",
+      "runs": 1200,
+      "mean_starts": 2.3633333333333333,
+      "mean_allocation_fraction": 0.04746392203995939,
+      "zero_start_runs": 254,
+      "recent_family_repeats": 0,
+      "recent_excerpt_repeats": 0,
+      "editorial_hypothesis_mismatches": 0,
+      "expired_opportunities": 1083,
+      "interruptions": 237
+    }
+  ],
+  "run_count": 4800,
+  "portable_math_replay_exact": true,
+  "repository_tests": {
+    "passed": 268,
+    "log_sha256": "592ae32362f6dc17666bc4c623f4a907981834360c94c16428ef95712c908e31"
+  },
+  "preservation": {
+    "approved24_exact": true,
+    "retained_release_inputs": {
+      "build\\white-orchard-transition-fix\\candidate-banks-licensed\\music_prologue.bnk": "925e912387fd47aa1e5d9213c9e2cbc8d94eb82e9d66e565f3e9dccb42ca0d6d",
+      "build\\consolidated-expansion\\nml-v2\\candidate-banks-licensed\\music_nomansgrad.bnk": "7317029446858ddf5fa1958ecab6021263c62b097ea0b28218505f591a60bb78",
+      "build\\skellige-v3\\candidate-banks-licensed\\music_skellige.bnk": "4c6ea268545a02248dd2fad146d9c625e23d479f7e4fccf40fee34c6acacfc27",
+      "build\\full-game-v4\\candidate-km-native-author-licensed\\music_kaer_morhen.bnk": "e13353cbd89df3e7d9b19371b39baf12246c43dcb94a2ca6fa756b6da9b07cf9",
+      "build\\full-game-v4\\candidate-toussaint-native-author-licensed\\music_toussaint.bnk": "1332b66ba21a1c973cbf6e09f6979642ae998a3e3c8e132c5194a1d56b6afecb",
+      "build\\consolidated-expansion\\two-bank-expanded-v2\\archives\\WMC Consolidated - White Orchard D and Expanded NML v2.zip": "6478460bf8c4dc0f68b24464503808852a9bb65b921a6f84e9909c245da1f512",
+      "build\\skellige-v3\\consolidated-v3-visible\\archives\\WMC Consolidated v3 - White Orchard, Velen Novigrad, Skellige.zip": "432de7fddb522436603e88e7714b44f7e615e8cabce397bf213c59b3f746e803",
+      "build\\full-game-v4\\consolidated-v4\\archives\\WMC Consolidated v4 - Reviewed Full Game Regions.zip": "b3312226b6f0b1520ed3a1d30516fe044fad900cc2508f641fe802138bc11ce3",
+      "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\soundbanks\\Pc\\Init.bnk": "2dcb418b9f96389a57341a49e86cdcb0c18d95552a0e17dccf10d4df1d54d277",
+      "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\assets\\w3_audio\\Interactive Music Hierarchy\\music.wwu": "f8184d13ea08f6bc161719884e9341bdfd3a3e7666b203c296ffae37d4e08251"
+    },
+    "retained_report88_bank": "4759b863ac1e2700627811922d3f07b17397635b03a97af212e8657d33fb27bc",
+    "report90_music_sources_exact": true,
+    "native_init_sha256": "2dcb418b9f96389a57341a49e86cdcb0c18d95552a0e17dccf10d4df1d54d277",
+    "game_or_Wwise_launched": false
+  },
+  "artifacts": {
+    "build\\sparse-context-audit-v1\\final\\results.json": "6f086ab7e3fb733bc269a41bb0899944a563da82888d71493e0d4119288cad1c",
+    "build\\sparse-context-audit-v1\\final\\traces.json": "f316c90c3dcb9ece47795e1ba47d762721ef86bb83dc9e803344d5c29105d4ab",
+    "build\\sparse-context-audit-v1\\final\\summary.csv": "72952848137c63391d66ef86d8a7cf173034adfe52a5d2f757b5129cbbe5137a",
+    "build\\sparse-context-audit-v1\\final\\index.html": "f7b066ae578fc128541febeccf8f8a7821236665bfc4c442e63fe94b8a80d4c7"
+  },
+  "per_trace_contextual": [
+    {
+      "profile": "restrained",
+      "trace": "duplicates_boundaries_load",
+      "runs": 200,
+      "mean_starts": 1.68,
+      "zero_start_runs": 28,
+      "max_allocation_fraction": 0.12447222222222214
+    },
+    {
+      "profile": "restrained",
+      "trace": "limited_palette",
+      "runs": 200,
+      "mean_starts": 2.115,
+      "zero_start_runs": 13,
+      "max_allocation_fraction": 0.09603430555555544
+    },
+    {
+      "profile": "restrained",
+      "trace": "missing_outro_observation",
+      "runs": 200,
+      "mean_starts": 0.115,
+      "zero_start_runs": 177,
+      "max_allocation_fraction": 0.02269444444444444
+    },
+    {
+      "profile": "restrained",
+      "trace": "native_priority",
+      "runs": 200,
+      "mean_starts": 0.84,
+      "zero_start_runs": 71,
+      "max_allocation_fraction": 0.0979116866272947
+    },
+    {
+      "profile": "restrained",
+      "trace": "optional_not_compulsory",
+      "runs": 200,
+      "mean_starts": 0.595,
+      "zero_start_runs": 98,
+      "max_allocation_fraction": 0.09077777777777779
+    },
+    {
+      "profile": "restrained",
+      "trace": "stable_exploration",
+      "runs": 200,
+      "mean_starts": 3.285,
+      "zero_start_runs": 1,
+      "max_allocation_fraction": 0.10535129629629637
+    },
+    {
+      "profile": "contrast",
+      "trace": "duplicates_boundaries_load",
+      "runs": 200,
+      "mean_starts": 2.815,
+      "zero_start_runs": 5,
+      "max_allocation_fraction": 0.1476757329063907
+    },
+    {
+      "profile": "contrast",
+      "trace": "limited_palette",
+      "runs": 200,
+      "mean_starts": 3.39,
+      "zero_start_runs": 0,
+      "max_allocation_fraction": 0.1266654166666665
+    },
+    {
+      "profile": "contrast",
+      "trace": "missing_outro_observation",
+      "runs": 200,
+      "mean_starts": 0.2,
+      "zero_start_runs": 160,
+      "max_allocation_fraction": 0.02269444444444444
+    },
+    {
+      "profile": "contrast",
+      "trace": "native_priority",
+      "runs": 200,
+      "mean_starts": 1.495,
+      "zero_start_runs": 33,
+      "max_allocation_fraction": 0.1279338095238095
+    },
+    {
+      "profile": "contrast",
+      "trace": "optional_not_compulsory",
+      "runs": 200,
+      "mean_starts": 1,
+      "zero_start_runs": 56,
+      "max_allocation_fraction": 0.12572723054025015
+    },
+    {
+      "profile": "contrast",
+      "trace": "stable_exploration",
+      "runs": 200,
+      "mean_starts": 5.28,
+      "zero_start_runs": 0,
+      "max_allocation_fraction": 0.11669851851851851
+    }
+  ]
+}

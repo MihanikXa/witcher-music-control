@@ -1,0 +1,1149 @@
+[
+  {
+    "id": "stable_exploration",
+    "duration": 3600,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 900,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-A",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 910,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-A",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 1500,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "weather": "rain"
+        }
+      },
+      {
+        "time": 1500,
+        "kind": "opportunity",
+        "type": "weather_change",
+        "id": "weather-A",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 2100,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "activity": "horse"
+        }
+      },
+      {
+        "time": 2700,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "activity": "foot",
+          "daypart": "night",
+          "game_state": "exploration_night"
+        }
+      }
+    ]
+  },
+  {
+    "id": "optional_not_compulsory",
+    "duration": 900,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 1,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 5,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 10,
+        "kind": "opportunity",
+        "type": "location_arrival",
+        "id": "arrival-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 10,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 15,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 20,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 25,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 30,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 35,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 40,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 45,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 50,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 55,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 60,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 65,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 70,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 75,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-B",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 80,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "native_owner": "authored"
+        }
+      },
+      {
+        "time": 130,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "native_owner": "generic"
+        }
+      },
+      {
+        "time": 200,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "selector": "ambiguous_world"
+        }
+      },
+      {
+        "time": 300,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "selector": "reviewed_generic"
+        }
+      }
+    ]
+  },
+  {
+    "id": "native_priority",
+    "duration": 1400,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "night",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration_night",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 130,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-C",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 180,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "combat",
+          "native_owner": "combat"
+        }
+      },
+      {
+        "time": 205,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "exploration",
+          "native_owner": "generic"
+        }
+      },
+      {
+        "time": 211,
+        "kind": "outro_end",
+        "generation": 0,
+        "combat_epoch": 1
+      },
+      {
+        "time": 250,
+        "kind": "opportunity",
+        "type": "location_arrival",
+        "id": "arrival-C",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 450,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "native_owner": "authored"
+        }
+      },
+      {
+        "time": 520,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "native_owner": "generic"
+        }
+      },
+      {
+        "time": 600,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "dialog_scene",
+          "scene": true
+        }
+      },
+      {
+        "time": 630,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "exploration",
+          "scene": false
+        }
+      },
+      {
+        "time": 750,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "gwent"
+        }
+      },
+      {
+        "time": 780,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "exploration"
+        }
+      },
+      {
+        "time": 900,
+        "kind": "load"
+      },
+      {
+        "time": 920,
+        "kind": "context",
+        "generation": 1,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "night",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration_night",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 1150,
+        "kind": "context",
+        "generation": 1,
+        "values": {
+          "native_owner": "unknown"
+        }
+      },
+      {
+        "time": 1250,
+        "kind": "context",
+        "generation": 1,
+        "values": {
+          "native_owner": "generic"
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing_outro_observation",
+    "duration": 1800,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 180,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "combat",
+          "native_owner": "combat"
+        }
+      },
+      {
+        "time": 210,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 250,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "pin-D",
+        "generation": 0,
+        "first": true,
+        "local": true
+      }
+    ]
+  },
+  {
+    "id": "duplicates_boundaries_load",
+    "duration": 1800,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 2,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 4,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 6,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 8,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 10,
+        "kind": "opportunity",
+        "type": "location_arrival",
+        "id": "arrival-A",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 10,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 12,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 14,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 16,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 18,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 20,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 22,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 24,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 26,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 28,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 30,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 32,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 34,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 36,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 38,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 40,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 42,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 44,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 46,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 48,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 50,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 52,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 54,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 56,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 58,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 60,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 62,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 64,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 66,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 68,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 70,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 72,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 74,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 76,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 78,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 80,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 82,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 84,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 86,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 88,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 90,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 92,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 94,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 96,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 98,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 100,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 150,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_B"
+        }
+      },
+      {
+        "time": 151,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 152,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_B"
+        }
+      },
+      {
+        "time": 153,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 154,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_B"
+        }
+      },
+      {
+        "time": 155,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_A"
+        }
+      },
+      {
+        "time": 156,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "location": "synthetic_generic_B"
+        }
+      },
+      {
+        "time": 160,
+        "kind": "opportunity",
+        "type": "location_arrival",
+        "id": "arrival-A",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 600,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_B",
+          "location": "synthetic_generic_C"
+        }
+      },
+      {
+        "time": 610,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 900,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "daypart": "night",
+          "game_state": "exploration_night"
+        }
+      },
+      {
+        "time": 1000,
+        "kind": "load"
+      },
+      {
+        "time": 1001,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 1050,
+        "kind": "context",
+        "generation": 1,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "night",
+          "weather": "clear",
+          "activity": "foot",
+          "game_state": "exploration_night",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 1051,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "stale-pin",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 1100,
+        "kind": "opportunity",
+        "type": "first_discovery",
+        "id": "fresh-pin",
+        "generation": 1,
+        "first": true,
+        "local": true
+      }
+    ]
+  },
+  {
+    "id": "limited_palette",
+    "duration": 2400,
+    "provenance": "simulated",
+    "evidence_limit": "Synthetic normalized inputs, not captured gameplay. native_owner/reviewed selector/outro_end and playback acceptance are oracle contracts, not verified script getters.",
+    "events": [
+      {
+        "time": 0,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "region": "synthetic_region_A",
+          "location": "synthetic_generic_A",
+          "selector": "reviewed_generic",
+          "daypart": "day",
+          "weather": "clear",
+          "activity": "horse",
+          "game_state": "exploration",
+          "native_owner": "generic",
+          "threatened": false,
+          "scene": false,
+          "paused": false,
+          "loading": false,
+          "outro_clear": true
+        }
+      },
+      {
+        "time": 500,
+        "kind": "opportunity",
+        "type": "location_arrival",
+        "id": "arrival-E",
+        "generation": 0,
+        "first": true,
+        "local": true
+      },
+      {
+        "time": 1800,
+        "kind": "context",
+        "generation": 0,
+        "values": {
+          "daypart": "night",
+          "game_state": "exploration_night",
+          "activity": "foot"
+        }
+      }
+    ]
+  }
+]
