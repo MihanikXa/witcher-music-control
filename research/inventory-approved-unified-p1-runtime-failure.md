@@ -38,3 +38,43 @@ Latest pre-feedback candidate: commit `02b9389991355afca9a32fd5301ec289d8c3ee17`
 ## User-facing check
 
 The screenshot needs to show only one vertical category rail, one compact text-and-icon item list, one genuine middle details panel, Geralt integrated, no old dotted grid/top categories/orbit and a single footer. This is a minimum viability gate, not final gameplay acceptance.
+
+## Explicit follow-up correction: nonfunctionality, incomplete native items, and background (19 October 2026)
+
+The user directly corrected the previous assistant review:
+
+> It's also not functional by the way. And even with overlap it shows only one sword for some reason as original dotted ui, also you didn't notive the awful background integration
+
+**This is a stronger failure classification than an incomplete visual replacement.** The user explicitly says the candidate does **not work**, and that even the original-looking grid has only one weapon visible, which is an **item visibility/data presentation or filtering regression candidate**, not merely native UI still being drawn. The user's words are evidence of failure; **specific broken key actions and whether data is missing versus hidden have not yet been enumerated**. Do not claim the original Inventory remains usable underneath. Compare against the accepted v4 Inventory on the same save, before and after candidate activation, with no item-affecting save modification.
+
+### Image-grounded background defects missed in prior analysis
+
+The candidate shows a broad flat charcoal/grey rectangle spanning much of the center/right content, with a **hard horizontal termination above the footer** around y≈829 in the user's 1649×928 image and an abrupt contrast/boundary relative to the surrounding black. Native equipment circle ornaments and Geralt appear in front of it, while the rail/center/list regions have visibly different visual materials. The absence of integrated ground/shadow makes the character and equipment arrangement even less coherent. **Do not consider this a successful simplified background** merely because it is not the earlier green-black fill.
+
+Source evidence: `src/inventory/unified/Scene.asinc::aiEnter` draws directly on `aiScene.graphics` a linear gradient:
+`createGradientBox(1920,860,0,0,115)`,
+`beginGradientFill("linear",[0x09090B,0x252526],[0.88,0.7],[0,255],matrix)`,
+`drawRect(0,115,1920,850)`.
+The fixed 115–965 **authored-stage** y coverage and high-opacity flat gradient can account for the rectangular image and the scaled bottom cutoff. The separate radial ellipse `drawEllipse(1245,875,510,70)` is a small grounding attempt, not effective in the shown composition. **This does not prove the runtime layer order, mask and exact screenshot cutoff owner**; trace those. Do not fix by merely darkening/brightening the rectangle or moving its edge. Revisit a coherent, understated backdrop across the approved rail/list/details/Geralt frame only after functional scene ownership is working.
+
+### Item disappearance / nonfunctionality: mandatory diagnostic chain
+
+User specifically observes only **one sword** in the surviving original dotted grid. The screenshot also shows a native-looking armor/other object, but *neither* the approved list nor its details. First determine if the source list contains the other known weapons:
+1. With the **same unmodified test save**, compare v4 baseline vs P1 for actual owned IDs, equipped IDs, native grid item counts and native filter state **before visual population**.
+2. Instrument `_inv.GetAllItems` total, each `ShouldShowItem` native-filter result, number of unique eligible IDs, and per-group counts emitted by `AiApprovedGroup`. Check `aiApprovedProbe` restoration and `_playerInv.GetFilterType()` restoration even on early termination or error.
+3. Instrument whether `SetInventoryFlashObjectForItem` preserves each real item ID and whether `inventory.approved.items` was published with the expected count. Verify annotation compiled/loaded/actually invoked in live game.
+4. Instrument `initDataBindings`, `aiData(value)` arrival, `aiAll.length`, selected group `list.length`, grid `aiItems.length`, `_renderers` visible count and retained/native renderer alpha/visibility. Distinguish **lost in enumeration** vs **filtered out** vs **transmitted but not bound** vs **created but clipped/hidden**.
+5. Trace item click, D-pad/keyboard action and normal native equip action end-to-end before claiming usable interactions; capture the first broken transition, not just visual success.
+6. Trace each native writer that resets native grid, original sections, paperdoll/20 slot visibility, and whether `aiTargets(false)` addresses the actual descendant clips/owners. Do not repeatedly hide controls on EnterFrame as a substitute for ownership.
+7. Confirm the actual active SWF hash/resource winner and annotation is installed; the new rail proves some candidate code executes, not that the rest of the resource/script integration works. Controlled reconstruction is separate from native candidate validation.
+
+### Next implementation / release gate
+
+**Freeze candidate: no other whole-Inventory build until these failures are isolated.** The next successful test must simultaneously demonstrate:
+- Native actual items are present: no missing sword(s) relative to a known v4 same-save baseline.
+- Horizontal selected row displays with real item name, and a real selected-item details payload appears.
+- The old dotted grid/category strip/20-slot orbit are absent in standard player browsing, without breaking on-demand native targets.
+- Clicking/navigating/selecting/equipping functions in practice (mouse/keyboard/controller as applicable), with no evident flashing or overlapping input owners.
+- A **coherent background with no obvious hard rectangular cutoff**, matched to the approved image's overall scene/material treatment (exact scenery/lighting optional).
+
+Do not claim this user feedback authorized gameplay files, Vortex, settings or saves to be modified automatically. Roll back manually to Menus v4 in a cloned test profile.

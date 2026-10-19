@@ -5,7 +5,28 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
-## Latest actual Unified P1 runtime screenshot — FAILED (19 October 2026)
+## Most recent Unified P1 user correction — 19 October 2026
+
+The user confirms Unified P1 is **NOT FUNCTIONAL**, not merely visually
+overlapped. The surviving **original dotted grid displays only one sword**,
+suggesting a separate item enumeration/filter/display regression, **not proof
+of data loss**. The screenshot's **flat grey charcoal background rectangle,
+hard bottom cutoff and disconnected ground/Geralt treatment** are also
+explicitly rejected; prior report overlooked this. Read
+[Unified P1 revised runtime failure](research/inventory-approved-unified-p1-runtime-failure.md).
+The user's feedback supersedes the earlier milder visual-only review.
+
+Next work MUST be narrow, read-only runtime diagnosis: same-save Menus v4
+baseline comparison, owned IDs/native filter counts, annotation script load,
+GetAllItems → ShouldShowItem → flash publisher → binding → aiData → real row →
+real details, old UI visibility writers and actual action dispatch. Examine
+aiScene's authored fixed 1920x850 nearly opaque gradient for the hard cutoff;
+do not rescue it with cosmetic alpha or position tweaks. No full new candidate,
+Review acquisition code or other UI work before native item parity + working
+interactions + single scene can be established. Disable rejected candidate
+manually for regular play. No automatic Vortex, game or save changes.
+
+## Previous Unified P1 runtime screenshot — FAILED (19 October 2026)
 
 The user supplied the first real in-game screenshot and responded **"No idea
 wtf this is."** Unified Inventory P1 **fails basic visual/runtime integration**:
