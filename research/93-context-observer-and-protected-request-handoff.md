@@ -1,0 +1,63 @@
+# 93 — Real context observer and protected Wwise request proof (Codex handoff)
+
+Date: 2026-10-19. The user approved moving from report92's *synthetic* contextual-policy model toward **two practical proofs**: (1) a small log-only WitcherScript observer of naturally occurring gameplay context, and (2) an isolated Wwise request/commit path that safely arbitrates Sparse playback under existing native authored/combat music. This supersedes report92's "stop for review" boundary for **the named two proofs only**.
+
+## The problem and nonnegotiable distinctions
+
+Reports85–90 establish 24 accepted private edited cues, an actual S04-a imported Wwise MusicSegment, a native-source/authoring playback proof with baked tail and combat/authored interruptions, an offline generated-bank proof for the older cue sequence, and an alternate **rest-first** authoring-only prototype. Report92 investigates 19 signal families and proves a **seeded mathematical simulation** of optional contextual opportunities. Its \`native_owner\`, \`reviewed_selector\`, \`outro_end\` and cue-request acceptance are explicitly **oracle inputs**, not proven WitcherScript or gameplay APIs.
+
+The immediate goal is **grounded event delivery and safe musical ownership**, not an expanded probability model or another rest-timer investigation. Native \`game_state=exploration\` is not proof that quest/scene music is absent or that the native combat outro is finished. An imported script audio-event function is not necessarily an interceptor for every native/quest musical event. A Play directly addressed to an imported Wwise child can bypass the normal root selector and is **not** an acceptable protected request path.
+
+Work must remain reversible and staged. **Codex may implement and locally compile/test the log-only observation mod in an isolated output and create a manual user-test package/instructions, but must not automatically install/enable it, launch/change the retail game, switch Vortex profiles, alter real saves, or perform progression.** If actual capture is unavailable without the user's manual retail session, record it as awaiting user testing. **The Wwise request gate is a separate isolated authoring-only proof**, never a retail playback claim. Any merged, playable end-to-end mod or deployment awaits new authorization.
+
+## Stage 0 — Inspect before editing
+
+Read \`AGENTS.md\`, reports08,27–29,50–55,85–93, plus the Wwise fixture specs, \`tools/sparse_approved_*\`, \`tools/sparse_reentry_*\`, \`tools/sparse_context_*\`, and actual report92 JSON signal catalog. Verify branch head and pin/hashes of all 24 accepted WAVs, report88 bank, native Init, report90 candidates and installed/REDkit script source that the observer would touch. The last complete suite was 268 Python tests; do not claim that the current suite still has that count until re-run.
+
+Inspect the actual WitcherScript compiler/REDkit and installed-game version, installed script-mod packaging/merge workflow and compatible logging APIs **from local source/tool evidence** before proposing hook implementation. Do not invent functions, script import signatures, logger destinations, or working mod load order. Detect existing user's WitcherScript mods and potential conflicts **read-only**; no automatic merger or overwrites. Do not copy untrusted Music Plus code; report53 is background evidence only.
+
+## Stage A — Very small log-only gameplay-context observer
+
+**Aim:** a compilable and installable-by-user *diagnostic* artifact that records whether actual normal gameplay delivers the proposed information. It makes **no decisions and no music calls**.
+
+Candidate low-risk context snapshots (strictly source-verified symbols; not all required if compilation shows gaps):
+- Current coarse region/area via native public accessor; scene/dialogue/multimedia exclusion; pause/load state and load-generation boundary.
+- Logical \`GetCurrentGameState\`; native \`ShouldEnableCombatMusic\` / conservative threat; do **not** infer exact combat-outro completion from a logical State transition.
+- Stable day/night; on-foot versus fully mounted horse/boat; a conservative interior flag if available.
+- Optional compact weather snapshot if the verified getter is cheap and reliable (weather-change event delivery remains a separate question).
+- Exactly **one deliberately narrow first-discovery source path** such as the existing player fast-travel-area trigger / first-discovery wrapper, if locally hookable without broad replacement. Confirm player identity and first-discovery transition, stable tag identity and nearby/local provenance. A generic map-pin-changed event, quest-side remote discovery or repeated old marker **must not** be treated as first discovery.
+
+Test the least invasive integration path: ideally localized hooks/event subscriber plus low-rate state-change snapshots. Avoid mutating core \`SoundGameStateChange\` / \`InitializeAreaMusic\`, quest rules or all map-pin behavior merely to intercept signals. If overriding existing script methods is necessary, justify scope; compile in a throwaway mod-tree and report every conflict. No every-frame position/velocity scanner or gameplay-distance "vista detector."
+
+Log **only on meaningful changes** plus bounded occasional health heartbeat if needed. Format a structured, versioned trace with monotonic test-session clock, lifecycle epoch, signal origin, normalized field values, whether observation was delivered, and explicit \`unknown\` owner/outro. Avoid world coordinates, NPC/quest spoilers, save filenames/account data. Choose/prove a real log sink in local toolchain; no fictional \`print\` API. Keep rate/data bounded, recover from missing objects and load/pause, and prevent logging feedback loops. Provide a sanitized parser from raw locally ignored traces into report92's typed event schema, preserving distinctions between **observed vs inferred vs unavailable**. Do not insert oracle owner/outro/selector data or silently populate unavailable fields with \`generic\`/\`true\`.
+
+**Local verifications:** actual offline WitcherScript compiler result where feasible; exact build packaging metadata; static baseline diff/whitelist; duplicate/day-night/change/load, missing entity and malformed log parser tests. Produce a non-invasive user-operated checklist for a normal existing save: ordinary walking/mount/region observation, optional natural scene/combat, a genuine *already accessible* first discovery **if available**; no forced story progress, no dangerous location, no save editing. Installation/activation is not part of this Codex task; user can apply it manually after reviewing the artifact. No retail event-observation claims unless there are actual user-supplied/logged captures.
+
+If compilation is blocked, stop trying speculative patches; report exact error, available script hooks, minimal user prerequisite and still deliver the safe static/parsing evidence.
+
+## Stage B — Separate protected Wwise cue request/commit proof
+
+**Aim:** test how a request *could* reach the single approved **S04-a** cue only when native Wwise genuinely selects the reviewed generic White Orchard village/day leg. Use fresh ignored isolated native/Minimal/Sparse Wwise authoring project clones. Do not import any additional WAV or alter report85 selected PCM, source markers, 60BPM 4/4, baked reverb, original silence segment, combat/outro/gwent, authored actions, native global State/Switch/RTPC definitions or original Init.
+
+Design and compare **one minimal bounded candidate** (a second variation only if a specific negative test exposes an ambiguity) for a source-scoped **request/commit gate** under selected generic playlist shortID 133462974:
+- A candidate request should be *eligible for audition only* on the reviewed native generic branch. Native location, \`music_type\`, \`game_state\`, native transitions and actor's original Music volume remain controlling. No direct child Play, bypass of ancestor selection, global music-volume hack or unconditional new music event.
+- Test requests delivered while genuine generic path active; same request repeated; wrong location; combat during cue, rest and native outro; authored q001 both during music/rest and after combat; ambiguous authored-world exception; ordinary dialogue, cutscene/movie/music-only, Gwent, loading/reselection. Validate native-veto precedence with actual voice ancestry/profiler and Music-bus PCM, not only script-supplied flags or synthesized simulator owners.
+- The request must expire/ignore on wrong context or lifecycle; no deferred pile of stingers after an authored event. Document what actually owns request identity, expiry and acknowledgement. **If Wwise cannot enforce an essential guard using existing hierarchy/available authoring primitives without new global Init or unproven script state, fail closed and state the concrete missing contract.** No fake success by manually toggling a Switch during a favorable transport and assuming game-side delivery.
+- Preserve report90's tested native combat outro and recoverable Wwise quiet-time behavior; treat B's initial rest duration as a diagnostic fixture, not a user preference. Cue should play once per *accepted* request, with its complete approved exit/baked tail, then ambient-only rest. A request during native priority must never force musical playback by bypassing the selector. Do not promise sub-sample interruption timing from 0.2–0.3s Wwise profiler polling.
+
+Validation must reuse the exact 1,508-WWU original/542-event-work-unit closure framework, native/baseline/sparse controls, report87's source identity and stereo PCM test, report88 binary/dependency gates where relevant and report90 gain/outro regressions. Define explicit source-diff/allowlist for any added nodes/fields and rejection tests for new unexpected events, conflicting IDs, altered original media, changed native transitions, and wrong ownership. Track pre/post hash of all 24 accepted WAVs and ten existing release/native pins. Do not silently retrofit an existing static-only bank validator to permit new dynamic graph objects.
+
+Do **not** cook, package, deploy, recopy licence files, modify installed game, run arbitrary third-party binaries or claim new retail compatibility. A clean isolated Wwise authoring experiment suffices; if source semantics and actual playback cannot both be measured, state what was established and what remains unresolved.
+
+## Deliverables and evidence boundary
+
+- Fresh ignored root: \`build/sparse-live-context-pilot-v1/\`, with \`observer/\` private diagnostic build/logs and \`wwise-request/\` isolated authoring/PCM traces. Never put copyrighted audio, real gameplay traces, saves, WEM, licensed banks, game scripts copied wholesale or licence/private machine information into Git.
+- Commit original source for a limited log-only observer (if it can be compiled), the minimal user-facing manual test/rollback instructions, sanitized signal mapping, log parser and tests, optional independently gated Wwise request experiment tooling/source spec, and **\`research/94-context-observer-and-wwise-request-results.md\`** (or next free number). Clearly identify **implemented vs compiled vs Wwise-authoring measured vs user-retail observed vs untested**.
+- Observer must be log-only and optional. No production probability defaults, automated in-game controller, 24-cue schedule, music editor/sliders, full-game banks, Vortex installation or final cue geography. Do not manufacture evidence to fill missing runtime logs.
+- Gate outcomes:
+  1. Does a compiled log-only diagnostic receive real source-defined public signals when a user runs it? If no retail trace is available, mark **pending user operation**; never claim observed.
+  2. Are filtered first-discoveries and lifecycle boundary semantics viable without broad gameplay overrides? If not, explain and revert to a smaller public-context trace.
+  3. Can a protected Wwise single-cue request be accepted/rejected at the reviewed generic-selector boundary, including native authored/combat ownership and full combat outro? If no, identify exact missing safety enforcement.
+  4. What *minimal* next step would connect trustworthy observed context to the measured protected request gate without bypassing native music?
+
+**Stop after this two-proof bounded pilot or the first meaningful blocker; request user-run retail test if necessary. No automated game mutation or end-to-end claims.**
