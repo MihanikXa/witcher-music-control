@@ -1,0 +1,93 @@
+      public var aiRows:Boolean = false;
+      public var aiTop:int = 0;
+      public var aiRevision:int = 0;
+      protected var aiItems:Array = [];
+      protected var aiPool:Array = [];
+      protected var aiGridBase:Object;
+      public function aiNeedData() : void { dispatchEvent(new Event("approvedRefreshNeeded",true)); }
+      public function aiSelected() : Object
+      { var r:SlotBase = getSelectedRenderer() as SlotBase; return r ? r.data : null; }
+      public function aiEnable() : void
+      {
+         if(aiRows) return;
+         aiGridBase = {cols:_columns,rows:_rows,cell:_gridSquareSize,height:_gridRenderHeight,visible:_numRowsVisible,bar:handleScrollBar,offset:_offset,cx:_canvas.x,cy:_canvas.y,barVisible:_scrollBar?_scrollBar.visible:false,highlight:_highlightCanvas?_highlightCanvas.visible:false};
+         // Retain original native grid renderers separately for special-mode restore.
+         aiGridBase.renderers = _renderers; aiGridBase.data = _data;
+         for each(var old:IBaseSlot in _renderers) DisplayObject(old).visible = false;
+         _renderers = new Vector.<IBaseSlot>(); _selectedIndex = -1;
+         aiRows = true; handleScrollBar = false; _columns = 1;
+         _offset=0;_canvas.x=_canvas.y=0;
+         if(_scrollBar)_scrollBar.visible=false;if(_highlightCanvas)_highlightCanvas.visible=false;
+         _rows = _numRowsVisible = 7; _gridSquareSize = 105.6; _gridRenderHeight = 726;
+         for(var i:int = 0; i < 9; i++)
+         {
+            var r:SlotBase = new _slotRendererRef() as SlotBase;
+            r.aiRow = true; r.useContextMgr = true; r.validationBounds = null;
+            _canvas.addChild(r); setupRenderer(r); r.visible = false; aiPool.push(r);
+            SlotBase.aiLog("row-create",String(i));
+         }
+      }
+      public function aiDisable() : void
+      {
+         if(!aiRows) return;
+         aiRows = false;
+         for each(var r:SlotBase in aiPool) { r.cleanup(); cleanUpRenderer(r); _canvas.removeChild(r); SlotBase.aiLog("row-destroy"); }
+         aiPool = []; _renderers = aiGridBase.renderers; _data = aiGridBase.data;
+         for each(var old:IBaseSlot in _renderers) DisplayObject(old).visible = true;
+         _columns = aiGridBase.cols; _rows = aiGridBase.rows; _gridSquareSize = aiGridBase.cell;
+         _gridRenderHeight = aiGridBase.height; _numRowsVisible = aiGridBase.visible; handleScrollBar = aiGridBase.bar;
+         _offset=aiGridBase.offset;_canvas.x=aiGridBase.cx;_canvas.y=aiGridBase.cy;
+         if(_scrollBar)_scrollBar.visible=aiGridBase.barVisible;if(_highlightCanvas)_highlightCanvas.visible=aiGridBase.highlight;
+         aiGridBase = null; _selectedIndex = -1; invalidateData();
+      }
+      public function aiSort(list:Array) : void { this.sortList(list); }
+      public function aiIndex(id:uint) : int
+      { for(var i:int=0;i<aiItems.length;i++) if(uint(aiItems[i].id)==id) return i; return -1; }
+      public function aiSetItems(items:Array, id:uint = 0, top:int = -1) : void
+      {
+         var selected:Object = aiSelected();
+         var previousAt:int=selected?aiIndex(uint(selected.id)):aiTop;
+         if(!id && selected) id = uint(selected.id);
+         aiItems = items; _data = items;
+         if(top >= 0) aiTop = top;
+         var at:int = aiIndex(id);
+         if(at < 0 && aiItems.length) at = Math.min(Math.max(0,previousAt),aiItems.length-1);
+         aiTop = Math.max(0,Math.min(aiTop,Math.max(0,aiItems.length-7)));
+         if(at >= 0) { if(at < aiTop) aiTop = at; if(at >= aiTop+7) aiTop = at-6; }
+         aiPaint(at); ++aiRevision;
+      }
+      protected function aiPaint(selectedAbsolute:int) : void
+      {
+         var used:Array = []; var chosen:Array = []; var i:int; var r:SlotBase; var item:ItemDataStub;
+         // Match retained IDs FIRST so scrolling/equip never rebinds an unchanged icon.
+         for(i=0;i<Math.min(7,aiItems.length-aiTop);i++)
+         {
+            item = aiItems[aiTop+i] as ItemDataStub; r = null;
+            for each(var candidate:SlotBase in aiPool) if(candidate.data && uint(candidate.data.id)==uint(item.id) && used.indexOf(candidate)<0) { r=candidate; break; }
+            chosen.push(r); if(r) used.push(r);
+         }
+         for(i=0;i<chosen.length;i++) if(!chosen[i])
+         {
+            for each(candidate in aiPool) if(used.indexOf(candidate)<0) { chosen[i]=candidate; used.push(candidate); break; }
+         }
+         _selectedIndex = -1; _renderers = new Vector.<IBaseSlot>();
+         for each(candidate in aiPool) { candidate.selected = false; if(used.indexOf(candidate)<0) candidate.visible = false; }
+         for(i=0;i<chosen.length;i++)
+         {
+            r = chosen[i]; r.index = i; r.x=0; r.y=i*105.6; r.scaleX=r.scaleY=1; r.visible=true;
+            r.aiBind(aiItems[aiTop+i] as ItemDataStub); _renderers.push(r);
+         }
+         _renderersCount = chosen.length;
+         if(selectedAbsolute>=0 && chosen.length) selectedIndex=selectedAbsolute-aiTop;
+         dispatchEvent(new Event("approvedRowsChanged",true));
+      }
+      public function aiMove(delta:int) : void
+      {
+         if(!aiItems.length) return;
+         var current:Object=aiSelected(); var at:int=current ? aiIndex(uint(current.id)) : 0;
+         at=Math.max(0,Math.min(aiItems.length-1,at+delta));
+         if(at<aiTop || at>=aiTop+7)
+         { aiTop=Math.max(0,Math.min(Math.max(0,aiItems.length-7),at<aiTop ? at : at-6)); aiPaint(at); }
+         else selectedIndex=at-aiTop;
+      }
+      public function aiWheel(delta:int) : void { aiMove(delta > 0 ? -1 : 1); }

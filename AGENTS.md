@@ -7,6 +7,21 @@ Do not modify the user's installed game, Vortex deployment/staging, Documents se
 
 ## Latest explicit implementation-scope correction — 18 October 2026
 
+**19 October implementation receipt:** the private unified first-playable
+candidate is now documented in
+[Approved Inventory Unified P1](research/inventory-approved-unified-p1.md).
+Source is `src/inventory/unified/`; reproducible entry point is
+`tools/build-approved-inventory.py`. It transforms exact accepted v4, uses one
+retained row/controller/details scene across ordinary player categories and
+reserves disabled Review first. **Not yet visually/functionally accepted in game.**
+Final native cook hit a blank startup timeout; released bundle/metadata use
+independently controlled reconstruction. Exact released annotations match the
+successful compiler controls. Eight targeted tests pass, not runtime acceptance.
+Check native tutorial-tab progression, model/details framing, all heterogeneous
+actions, device switching and zero flicker in the user's first test. No live
+installation/settings/merge/save changes were made. Do not start Review ledger,
+bulk cleanup or another composition redesign before this candidate is evaluated.
+
 The user questions the earlier **Weapons-only playable slice**, explicitly
 reasoning that once Inventory logic/layout are redesigned, implementing all
 ordinary categories under one system could be simpler than combining two

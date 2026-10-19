@@ -1,0 +1,25 @@
+      protected var aiModuleBase:Object;
+      public function aiArrange() : void
+      {
+         if(aiModuleBase)return;
+         aiModuleBase={x:x,y:y,sx:scaleX,sy:scaleY,mx:maskClip.x,my:maskClip.y,mw:maskClip.width,mh:maskClip.height,cx:mcListContainer.x,cy:mcListContainer.y,gx:mcPlayerGrid.x,gy:mcPlayerGrid.y,title:txtTitle.visible,tabs:mcTabList.visible,sections:_sectionTitlesContainer?_sectionTitlesContainer.visible:false};
+         x=y=0;scaleX=scaleY=1;GTweener.removeTweens(maskClip);
+         maskClip.width=338;maskClip.height=726;
+         var bounds:Rectangle=maskClip.getBounds(this);
+         maskClip.x+=365-bounds.x;maskClip.y+=200-bounds.y;
+         mcListContainer.x=365;mcListContainer.y=200;mcPlayerGrid.x=mcPlayerGrid.y=0;
+         txtTitle.visible=mcTabList.visible=false;
+         if(_sectionTitlesContainer)_sectionTitlesContainer.visible=false;
+         graphics.clear();mcPlayerGrid.aiEnable();
+      }
+      public function aiRestore() : void
+      {
+         if(!aiModuleBase)return;
+         mcPlayerGrid.aiDisable();
+         x=aiModuleBase.x;y=aiModuleBase.y;scaleX=aiModuleBase.sx;scaleY=aiModuleBase.sy;
+         maskClip.x=aiModuleBase.mx;maskClip.y=aiModuleBase.my;maskClip.width=aiModuleBase.mw;maskClip.height=aiModuleBase.mh;
+         mcListContainer.x=aiModuleBase.cx;mcListContainer.y=aiModuleBase.cy;mcPlayerGrid.x=aiModuleBase.gx;mcPlayerGrid.y=aiModuleBase.gy;
+         txtTitle.visible=aiModuleBase.title;mcTabList.visible=aiModuleBase.tabs;
+         if(_sectionTitlesContainer)_sectionTitlesContainer.visible=aiModuleBase.sections;
+         aiModuleBase=null;iaiDrawTabs();
+      }

@@ -1,0 +1,63 @@
+      public var aiRow:Boolean = false;
+      public static var aiDiagnostics:Boolean = false;
+      public static var aiEventSequence:uint=0;
+      protected var aiName:TextField;
+      protected var aiType:TextField;
+      protected var aiNumber:TextField;
+      public var aiSignature:String = "";
+      public static function aiLog(event:String, detail:String = "") : void
+      { if(aiDiagnostics) trace("ApprovedInventory " + (++aiEventSequence) + " @" + getTimer() + " " + event + " " + detail); }
+      public function aiBind(value:ItemDataStub) : void
+      {
+         aiRow = true;
+         var signature:String = value ? [value.id,value.iconPath,value.itemName,value.aiSubtitle,value.quantity,value.charges,value.isEquipped,value.cantEquip,value.needRepair,value.socketsCount,value.socketsUsedCount,value.isNew,value.itemColor,value.hasOwnProperty("locked") ? value.locked : false].join("|") : "";
+         if(signature == aiSignature) {_data=value;return;}
+         aiSignature = signature;
+         // Native data/updateState/action/drag listeners; no cleanup for same ID.
+         data = value;
+         forceValidateNow(); aiFormatRow();
+         aiLog("row-bind",value ? String(value.id) : "empty");
+      }
+      protected function aiField(size:Number, color:uint) : TextField
+      {
+         var tf:TextField = new TextField(); tf.embedFonts = true;
+         tf.mouseEnabled = tf.selectable = false;
+         tf.defaultTextFormat = new TextFormat("$NormalFont",size,color);
+         addChild(tf); return tf;
+      }
+      public function aiFormatRow() : void
+      {
+         if(!aiRow) return;
+         if(!aiName) { aiName = aiField(20,0xE6E0D2); aiType = aiField(16,0xA29F96); aiNumber = aiField(16,0xC7BBA6); }
+         aiName.x = aiType.x = 94; aiName.y = 22; aiType.y = 50;
+         aiName.width = aiType.width = 234; aiName.height = aiType.height = 28;
+         aiNumber.x = 272; aiNumber.y = 65; aiNumber.width = 58; aiNumber.height = 22;
+         var name:String = _data ? String(_data.itemName || "") : "";
+         aiName.text = name;
+         while(aiName.textWidth > 229 && name.length > 1) { name = name.substr(0,name.length - 1); aiName.text = name + "…"; }
+         aiType.text = _data ? String(_data.aiSubtitle || _data.category || "") : "";
+         aiNumber.htmlText = _data && _data.charges ? String(_data.charges) : (_data && int(_data.quantity) > 1 ? "×" + _data.quantity : "");
+         if(_imageLoader)
+         {
+            _imageLoader.maintainAspectRatio = true; _imageLoader.setActualSize(53,80);
+            _imageLoader.x = 22; _imageLoader.y = 5;
+         }
+         for each(var o:DisplayObject in [mcFrame,mcBackground,mcColorBackground,mcSlotOverlays]) if(o) o.visible = false;
+         if(mcHitArea) { mcHitArea.width = 338; mcHitArea.height = 90; mcHitArea.x = 169; mcHitArea.y = 45; }
+         if(mcCantEquipIcon) { mcCantEquipIcon.x = 319; mcCantEquipIcon.y = 14; mcCantEquipIcon.scaleX = mcCantEquipIcon.scaleY = 0.6; }
+         iaiDraw();
+      }
+      protected function aiPaintRow(g:Graphics, r:Rectangle, k:Number, sel:Boolean, flags:int) : void
+      {
+         sel=selected; // v4 globally suppresses native grid highlight; rows own it.
+         g.lineStyle(1.2 * k,sel ? 0xCAA469 : 0x565650,sel ? 1 : 0.45,true,"none");
+         g.beginFill(sel ? 0x30291E : 0x111112,sel ? 0.32 : 0.12);
+         g.drawRoundRect(0,0,338,90,3,3); g.endFill(); g.lineStyle();
+         if((flags & 4) != 0)
+         {
+            // Exact accepted v4 corner mark, translated to the icon well.
+            g.beginFill(11832388,0.9);
+            g.moveTo(22 + 3*k,5 + 3*k); g.lineTo(22 + 12*k,5 + 3*k);
+            g.lineTo(22 + 3*k,5 + 12*k); g.lineTo(22 + 3*k,5 + 3*k); g.endFill();
+         }
+      }

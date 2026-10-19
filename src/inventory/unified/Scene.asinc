@@ -1,0 +1,315 @@
+      protected var aiAllowed:Boolean = false;
+      protected var aiActive:Boolean = false;
+      protected var aiRefresh:Boolean = false;
+      protected var aiAll:Array = [];
+      protected var aiGroup:int = 1;
+      protected var aiFocus:int = 1; // 0 rail, 1 list, 2 details, 3 native equipment
+      protected var aiScene:Sprite;
+      protected var aiRail:Array = [];
+      protected var aiHeader:TextField;
+      protected var aiEmpty:TextField;
+      protected var aiPendingName:TextField;
+      protected var aiScroll:Shape;
+      protected var aiModelMask:Shape;
+      protected var aiTip:TooltipInventory;
+      protected var aiBase:Object;
+      protected var aiStates:Object = {};
+      protected var aiCurrentID:uint = 0;
+      protected var aiPayloadRevision:int = -1;
+      protected var aiRequestSerial:int=0;
+      protected var aiUpdating:Boolean=false;
+      protected var aiSuspended:Boolean=false;
+      protected var aiTargetState:Boolean=false;
+      protected var aiSortState:Boolean=false;
+      protected var aiDetailsRect:Rectangle = new Rectangle(747,190,464,730);
+      protected var aiLabels:Array = ["Review","Weapons","Armor","Consumables","Bombs","Pockets","Quest Items","Other"];
+      public function approvedEnabled(on:Boolean) : void
+      { aiAllowed=on; if(!on) aiLeave(); }
+      public function approvedDiagnostics(on:Boolean) : void
+      { SlotBase.aiDiagnostics=on; SlotBase.aiLog("diagnostics",String(on)); }
+      protected function aiText(parent:Sprite,text:String,x:Number,y:Number,w:Number,size:Number,color:uint) : TextField
+      {
+         var f:TextField=new TextField();f.embedFonts=true;f.selectable=f.mouseEnabled=false;
+         f.defaultTextFormat=new TextFormat("$NormalFont",size,color);f.x=x;f.y=y;f.width=w;f.height=size+10;
+         f.text=text;parent.addChild(f);return f;
+      }
+      protected function aiEnter() : void
+      {
+         aiActive=true;
+         aiBase={x:mcCharacterRenderer.x,y:mcCharacterRenderer.y,sx:mcCharacterRenderer.scaleX,sy:mcCharacterRenderer.scaleY,mask:mcCharacterRenderer.mask,head:iaiHeadOn,eq:iaiEqWant,dock:TooltipInventory.iaiDock ? TooltipInventory.iaiDock.clone():null,sort:btnSort.visible,change:btnSortChange.visible,drop:dropSlot.visible};
+         SlotBase.qfGearGrid=true;ContextInfoManager.aiUnified=true;
+         ContextInfoManager.getInstanse().iaiDropDocked();
+         iaiEqWant=false;if(iaiEqOn) iaiEqApply(false);
+         iaiHeadOn=false;if(iaiHeadSp) iaiHeadSp.visible=false;if(iaiHint) iaiHint.visible=false;
+         if(iaiArtHost) iaiArtHost.visible=false;if(iaiBg) iaiBg.visible=false;
+         if(TooltipInventory.iaiStrip) TooltipInventory.iaiStrip.visible=false;
+         btnSort.visible=btnSortChange.visible=false;dropSlot.visible=false;
+         if(_btn_switch_sections!=-1){InputFeedbackManager.removeButton(this,_btn_switch_sections);_btn_switch_sections=-1;}
+         if(_btn_sort_id!=-1)InputFeedbackManager.removeButton(this,_btn_sort_id);
+         _btn_sort_id=InputFeedbackManager.appendButton(this,NavigationCode.GAMEPAD_RSTICK_HOLD,KeyCode.F,"panel_button_common_sort_items");
+         aiScene=new Sprite();aiScene.mouseEnabled=false;addChildAt(aiScene,Math.min(getChildIndex(mcPlayerInventory),getChildIndex(mcCharacterRenderer)));
+         var matrix:Matrix=new Matrix();matrix.createGradientBox(1920,860,0,0,115);
+         aiScene.graphics.beginGradientFill("linear",[0x09090B,0x252526],[0.88,0.7],[0,255],matrix);
+         aiScene.graphics.drawRect(0,115,1920,850);aiScene.graphics.endFill();
+         matrix.createGradientBox(510,70,0,1245,875);
+         aiScene.graphics.beginGradientFill("radial",[0,0],[0.55,0],[0,255],matrix);aiScene.graphics.drawEllipse(1245,875,510,70);aiScene.graphics.endFill();
+         for(var i:int=0;i<8;i++)
+         {
+            var s:Sprite=new Sprite();s.x=52;s.y=174.5+i*90.72;s.name=String(i);s.mouseChildren=false;
+            s.graphics.beginFill(0,0.001);s.graphics.drawRect(0,0,274,86);s.graphics.endFill();
+            s.graphics.lineStyle(1,0x55554E,0.22);s.graphics.moveTo(0,85);s.graphics.lineTo(274,85);
+            aiScene.addChild(s);aiRail.push(s);
+            aiText(s,String(aiLabels[i]).toUpperCase(),69,26,190,20,i==0?0x777570:0xD7D0C2);
+            if(i==0) aiText(s,"Not enabled",69,54,185,14,0x777570);
+            else { s.addEventListener(MouseEvent.CLICK,aiRailClick,false,0,true);s.buttonMode=true; }
+         }
+         aiHeader=aiText(aiScene,"",365,158,340,20,0xD7D0C2);
+         aiEmpty=aiText(aiScene,"No items in this category",385,240,310,19,0xA29F96);aiEmpty.visible=false;
+         aiPendingName=aiText(aiScene,"",761,228,435,32,0xD7D0C2);
+         aiScroll=new Shape();aiScene.addChild(aiScroll);
+         aiConfigureRailIcons();
+         mcPlayerInventory.aiArrange();mcPlayerInventory.visible=true;
+         mcPlayerInventory.addEventListener("approvedRefreshNeeded",aiNeedsData,false,0,true);
+         mcPlayerInventory.addEventListener("approvedRowsChanged",aiRowsChanged,false,0,true);
+         mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.INDEX_CHANGE,aiSelection,false,0,true);
+         mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.ITEM_ROLL_OVER,aiHover,false,0,true);
+         ContextInfoManager.getInstanse().addEventListener("approvedPayload",aiPayload,false,0,true);
+         InputDelegate.getInstance().addEventListener(InputEvent.INPUT,aiInput,false,120,true);
+         InputManager.getInstance().addEventListener(ControllerChangeEvent.CONTROLLER_CHANGE,aiDevice,false,0,true);
+         stage.addEventListener(MouseEvent.MOUSE_WHEEL,aiWheel,true,120,true);
+         addEventListener(Event.REMOVED_FROM_STAGE,aiRemoved,false,0,true);
+         var type:Class=getDefinitionByName("ItemTooltipRef_mouse") as Class;aiTip=new type() as TooltipInventory;
+         aiTip.aiPersistent=true;aiTip.visible=false;addChild(aiTip);
+         mcCharacterRenderer.scaleX=mcCharacterRenderer.scaleY=1.05;
+         mcCharacterRenderer.x=1510-481*1.05;mcCharacterRenderer.y=528-485*1.05;
+         aiModelMask=new Shape();aiModelMask.graphics.beginFill(0xFFFFFF);aiModelMask.graphics.drawRect(1245,120,630,810);aiModelMask.graphics.endFill();
+         addChild(aiModelMask);mcCharacterRenderer.mask=aiModelMask;
+         _rendererController.setDefaultAnchor(mcCharacterRenderer.x,mcCharacterRenderer.y);
+         mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),false);
+         selectTargetModule(mcPlayerInventory);aiRefresh=true;aiPaintRail();aiMode(1);
+         dispatchEvent(new GameEvent(GameEvent.CALL,"OnSetCurrentPlayerGrid",["inventory.grid.player"]));
+         SlotBase.aiLog("enter","player");
+      }
+      protected function aiConfigureRailIcons() : void
+      {
+         // Retain native tab icon artwork for the corresponding semantic groups.
+         var type:Class=getDefinitionByName("TabListItemRef") as Class;
+         var labels:Array=["","WEAPONS","WEAPONS","POTIONS","POTIONS","DEFAULT","QUEST_ITEMS","INGREDIENTS"];
+         var slots:Array=[0,InventorySlotType.SteelSword,InventorySlotType.Armor,InventorySlotType.Potion1,InventorySlotType.Petard1,InventorySlotType.Quickslot1,0,0];
+         for(var i:int=1;i<8;i++)
+         {
+            var source:SlotPaperdoll=slots[i]?mcPaperDollModule.mcPaperdoll.getRendererForSlotType(slots[i]) as SlotPaperdoll:null;
+            if(source && source.defaultIcon)
+            {
+               // Snapshot the actual native silhouette once at 4x rail resolution.
+               // Keep native equipment targets in their original owner/parent.
+               var r:Rectangle=source.defaultIcon.getBounds(source.defaultIcon);
+               if(r.width>0 && r.height>0)
+               {
+                  var factor:Number=160/Math.max(r.width,r.height);
+                  var pixels:BitmapData=new BitmapData(Math.max(1,Math.ceil(r.width*factor)),Math.max(1,Math.ceil(r.height*factor)),true,0);
+                  var transform:Matrix=new Matrix(factor,0,0,factor,-r.x*factor,-r.y*factor);
+                  pixels.draw(source.defaultIcon,transform,new ColorTransform(0,0,0,1,215,208,194,0),null,null,true);
+                  var bitmap:Bitmap=new Bitmap(pixels,"auto",true);bitmap.scaleX=bitmap.scaleY=0.25;
+                  bitmap.x=34-bitmap.width/2;bitmap.y=43-bitmap.height/2;aiRail[i].addChild(bitmap);
+                  continue;
+               }
+            }
+            var tab:Object=new type();tab.setData({icon:labels[i]});tab.validateNow();
+            var icon:MovieClip=tab.mcIcon as MovieClip;
+            if(icon) { aiRail[i].addChild(icon);icon.x=34;icon.y=43;icon.scaleX=icon.scaleY=0.48;icon.mouseEnabled=icon.mouseChildren=false; }
+         }
+      }
+      protected function aiNeedsData(e:Event) : void { aiRefresh=true; }
+      protected function aiData(value:Array) : void
+      {
+         if(!aiActive)return;
+         var seen:Object={};var items:Array=[];
+         for each(var d:ItemDataStub in value) if(d && !seen[String(d.id)]) { seen[String(d.id)]=true;items.push(d); }
+         aiAll=items;aiShowGroup(aiGroup,false);SlotBase.aiLog("dataset",String(items.length));
+      }
+      protected function aiShowGroup(group:int, save:Boolean=true) : void
+      {
+         var grid:SlotsListGrid=mcPlayerInventory.mcPlayerGrid;var current:Object=grid.aiSelected();
+         aiStates[String(aiGroup)]={id:current?uint(current.id):0,top:grid.aiTop};
+         aiGroup=group;var list:Array=[];for each(var d:ItemDataStub in aiAll) if(int(d.aiGroup)==group)list.push(d);
+         grid.aiSort(list);
+         if(!save)
+         {
+            var ordered:Array=[];var remaining:Object={};
+            for each(var fresh:Object in list)remaining[String(fresh.id)]=fresh;
+            for each(var prior:Object in grid.data)if(remaining[String(prior.id)]){ordered.push(remaining[String(prior.id)]);delete remaining[String(prior.id)];}
+            for each(fresh in list)if(remaining[String(fresh.id)])ordered.push(fresh);
+            list=ordered;
+         }
+         var state:Object=aiStates[String(group)];
+         aiUpdating=true;grid.aiSetItems(list,state?uint(state.id):0,state?int(state.top):0);aiUpdating=false;
+         aiPaintRail();aiSelectData(true);SlotBase.aiLog("category",String(group));
+      }
+      protected function aiSortCurrent() : void
+      {
+         var grid:SlotsListGrid=mcPlayerInventory.mcPlayerGrid;var d:Object=grid.aiSelected();
+         var list:Array=grid.data.concat();grid.aiSort(list);aiUpdating=true;grid.aiSetItems(list,d?uint(d.id):0,grid.aiTop);aiUpdating=false;
+         aiSelectData(true);
+         dispatchEvent(new GameEvent(GameEvent.CALL,"OnSortingRequested"));
+      }
+      protected function aiPaintRail() : void
+      {
+         for(var i:int=1;i<8;i++)
+         {
+            var rail:Sprite=aiRail[i];rail.graphics.clear();
+            rail.graphics.beginFill(0,0.001);rail.graphics.drawRect(0,0,274,86);rail.graphics.endFill();
+            rail.graphics.lineStyle(1,0x55554E,0.22);rail.graphics.moveTo(0,85);rail.graphics.lineTo(274,85);
+            if(i==aiGroup) { rail.graphics.beginFill(0xB48C44,0.12);rail.graphics.drawRect(0,0,274,86);rail.graphics.endFill();rail.graphics.lineStyle(1.6,0xB48C44,1);rail.graphics.moveTo(0,0);rail.graphics.lineTo(0,85); }
+            var count:int=0;for each(var d:Object in aiAll)if(int(d.aiGroup)==i)++count;
+            var field:TextField=rail.getChildByName("count") as TextField;
+            if(!field){field=aiText(rail,"",235,28,34,18,0xCBBBA1);field.name="count";}
+            field.text=count?String(count):"";
+         }
+         aiHeader.text=String(aiLabels[aiGroup]).toUpperCase();
+         aiEmpty.visible=mcPlayerInventory.mcPlayerGrid.data.length==0;
+      }
+      protected function aiRailClick(e:MouseEvent) : void { aiShowGroup(int(e.currentTarget.name));aiMode(1); }
+      protected function aiRowsChanged(e:Event) : void
+      {
+         if(!aiScroll)return;var grid:SlotsListGrid=mcPlayerInventory.mcPlayerGrid;var n:int=grid.data.length;
+         aiScroll.graphics.clear();if(n<=7)return;
+         aiScroll.graphics.lineStyle(1,0x55554E,0.45);aiScroll.graphics.moveTo(714,200);aiScroll.graphics.lineTo(714,924);
+         var h:Number=724*7/n;var y:Number=200+(724-h)*grid.aiTop/Math.max(1,n-7);
+         aiScroll.graphics.lineStyle(2,0xB48C44,0.8);aiScroll.graphics.moveTo(714,y);aiScroll.graphics.lineTo(714,y+h);
+      }
+      protected function aiSelection(e:Event) : void { if(!aiUpdating)aiSelectData(false); }
+      protected function aiHover(e:ListEvent) : void
+      { if(aiFocus==1 && InputManager.getInstance().isMouse() && e.itemRenderer)mcPlayerInventory.mcPlayerGrid.selectedIndex=e.itemRenderer.index; }
+      protected function aiSelectData(force:Boolean=false) : void
+      {
+         if(aiFocus==3 || aiSuspended)return;
+         var d:Object=mcPlayerInventory.mcPlayerGrid.aiSelected();
+         if(!d){aiCurrentID=0;aiPendingName.text="";aiTip.visible=false;return;}
+         var id:uint=uint(d.id);
+         if(force || aiCurrentID!=id)
+         {
+            aiPendingName.text=aiCurrentID!=id||!aiTip.visible?String(d.itemName || ""):"";
+            aiCurrentID=id;
+            aiTip.aiPending(aiCurrentID,String(d.itemName||""));
+            dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedDetails",[id,++aiRequestSerial]));
+            SlotBase.aiLog("details-request",String(id)+"/"+String(aiRequestSerial));
+         }
+      }
+      protected function aiPayload(e:Event) : void
+      {
+         var payload:Object=ContextInfoManager.aiPayload;
+         if(!aiActive || !payload || uint(payload.ItemId)!=aiCurrentID || int(payload.aiRequestSerial)!=aiRequestSerial){SlotBase.aiLog("stale-payload");return;}
+         aiTip.aiPresent(payload,aiDetailsRect);aiPendingName.text="";
+         if(aiFocus==3||aiSuspended||aiTargetState)aiTip.visible=false;
+         SlotBase.aiLog("details-payload",String(payload.ItemId));
+      }
+      protected function aiMode(mode:int) : void
+      {
+         if(!aiActive)return;aiFocus=mode;
+         mcPlayerInventory.enabled=mcPlayerInventory._inputEnabled=mode==1;
+         if(mode==1)selectTargetModule(mcPlayerInventory);
+         mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),mode==3);
+         ContextInfoManager.aiNativeTargets=mode==3;
+         mcPlayerInventory.mcPlayerGrid.visible=mode!=3;
+         aiTip.visible=mode!=3 && aiCurrentID!=0;
+         if(mode==3){selectTargetModule(mcPaperDollModule);mcPaperDollModule.mcPaperdoll.selectedIndex=mcPaperDollModule.mcPaperDollSlot3.index;}
+         dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedMode",[mode]));SlotBase.aiLog("focus",String(mode));
+         if(mode==1)aiSelectData(true);
+      }
+      protected function aiDevice(e:ControllerChangeEvent) : void
+      {
+         SlotBase.qfGearResetPad();
+         if(_btn_switch_sections!=-1){InputFeedbackManager.removeButton(this,_btn_switch_sections);_btn_switch_sections=-1;}
+         SlotBase.aiLog("device",InputManager.getInstance().isGamepad()?"pad":"keyboard/mouse");
+      }
+      protected function aiModal() : Boolean
+      { return mcSortingMode.visible || mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging() || _rendererController.isActive(); }
+      protected function aiInput(e:InputEvent) : void
+      {
+         if(!aiActive || e.handled || !e.details || aiModal())return;
+         var d:InputDetails=e.details;CommonUtils.fixupKeyCode(d);CommonUtils.convertWASDCodeToNavEquivalent(d);
+         var n:String=d.navEquivalent;var up:Boolean=d.value==InputValue.KEY_UP;
+         var directional:Boolean=n==NavigationCode.UP||n==NavigationCode.DOWN||n==NavigationCode.LEFT||n==NavigationCode.RIGHT;
+         var back:Boolean=d.code==KeyCode.ESCAPE||n==NavigationCode.GAMEPAD_B;
+         var aux:Boolean=d.code==KeyCode.TAB||n==NavigationCode.GAMEPAD_L3;
+         var detail:Boolean=d.code==KeyCode.I||n==NavigationCode.GAMEPAD_BACK;
+         if(aux||detail||back&&aiFocus!=1)
+         { if(up)aiMode(back?1:(aux?(aiFocus==3?1:3):(aiFocus==2?1:2)));e.handled=true;e.stopImmediatePropagation();return; }
+         if(aiFocus==3)return;
+         if(d.code==KeyCode.SHIFT||d.code==KeyCode.SHIFT_LEFT||d.code==KeyCode.SHIFT_RIGHT||n==NavigationCode.GAMEPAD_L2)
+         {aiTip.showEquippedTooltip(!up);e.handled=true;e.stopImmediatePropagation();return;}
+         if(directional)
+         {
+            var allow:Boolean=SlotBase.qfGearPadAllow(d,getTimer());
+            if(!up && allow)
+            {
+               if(n==NavigationCode.LEFT)aiMode(aiFocus==2?1:0);
+               else if(n==NavigationCode.RIGHT)aiMode(aiFocus==0?1:2);
+               else if(aiFocus==0)aiShowGroup(Math.max(1,Math.min(7,aiGroup+(n==NavigationCode.UP?-1:1))));
+               else if(aiFocus==2)aiTip.iaiScrBy(n==NavigationCode.UP?-48:48);
+               else mcPlayerInventory.mcPlayerGrid.aiMove(n==NavigationCode.UP?-1:1);
+            }
+            e.handled=true;e.stopImmediatePropagation();return;
+         }
+         if(aiFocus==2){
+            if(!up && (n==NavigationCode.RIGHT_STICK_UP||n==NavigationCode.RIGHT_STICK_DOWN||n==NavigationCode.PAGE_UP||n==NavigationCode.PAGE_DOWN))aiTip.iaiScrBy(n==NavigationCode.RIGHT_STICK_UP||n==NavigationCode.PAGE_UP?-48:48);
+            e.handled=true;e.stopImmediatePropagation();
+         }
+      }
+      protected function aiWheel(e:MouseEvent) : void
+      {
+         if(!aiActive||aiModal()||aiFocus==3)return;
+         var point:Point=globalToLocal(new Point(e.stageX,e.stageY));
+         if(point.x>=747 || aiFocus==2)aiTip.iaiScrBy(e.delta>0?-60:60);
+         else mcPlayerInventory.mcPlayerGrid.aiWheel(e.delta);
+         e.stopImmediatePropagation();
+      }
+      protected function aiTick() : void
+      {
+         if(!aiAllowed || _inventoryMode!=IMS_Player){aiLeave();return;}
+         if(!mcPaperDollModule)return;
+         if(!aiActive)aiEnter();
+         var stats:Boolean=_rendererController.isActive();
+         var targets:Boolean=aiFocus==3||mcSelectionMode.isActive()||SlotsTransferManager.getInstance().isDragging();
+         var sorting:Boolean=mcSortingMode.visible;
+         if(stats!=aiSuspended || targets!=aiTargetState || sorting!=aiSortState)
+         {
+            var resumed:Boolean=(aiSuspended||aiTargetState)&&!stats&&!targets;
+            aiSuspended=stats;aiTargetState=targets;aiSortState=sorting;
+            ContextInfoManager.aiNativeTargets=targets||stats;
+            mcCharacterRenderer.mask=stats?aiBase.mask:aiModelMask;
+            aiScene.visible=!stats;mcPlayerInventory.mcPlayerGrid.visible=!stats&&!targets;
+            aiTip.visible=!stats&&!targets&&!sorting&&aiCurrentID!=0;
+            aiPendingName.visible=!stats&&!targets;
+            mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),!stats&&targets);
+            if(!stats&&!targets&&aiFocus==1)selectTargetModule(mcPlayerInventory);
+            if(sorting)setChildIndex(mcSortingMode,numChildren-1);
+            if(resumed)aiSelectData(true);
+            SlotBase.aiLog("visibility",String(stats)+"/"+String(targets));
+         }
+         // Data/state dirty work only. No row/model/layout teardown per frame.
+         if(aiRefresh){aiRefresh=false;dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedRefresh"));}
+      }
+      protected function aiRemoved(e:Event) : void {aiLeave();}
+      protected function aiLeave() : void
+      {
+         if(!aiActive)return;aiActive=false;ContextInfoManager.aiUnified=ContextInfoManager.aiNativeTargets=false;SlotBase.qfGearGrid=false;SlotBase.qfGearResetPad();
+         mcPlayerInventory.removeEventListener("approvedRefreshNeeded",aiNeedsData);mcPlayerInventory.removeEventListener("approvedRowsChanged",aiRowsChanged);
+         mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.INDEX_CHANGE,aiSelection);mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.ITEM_ROLL_OVER,aiHover);
+         ContextInfoManager.getInstanse().removeEventListener("approvedPayload",aiPayload);
+         InputDelegate.getInstance().removeEventListener(InputEvent.INPUT,aiInput);InputManager.getInstance().removeEventListener(ControllerChangeEvent.CONTROLLER_CHANGE,aiDevice);
+         if(stage)stage.removeEventListener(MouseEvent.MOUSE_WHEEL,aiWheel,true);
+         mcPlayerInventory.aiRestore();mcPaperDollModule.aiRestore();
+         mcPlayerInventory.enabled=mcPlayerInventory._inputEnabled=true;
+         aiTip.aiClose();aiTip=null;removeChild(aiScene);aiScene=null;aiRail=[];
+         mcCharacterRenderer.x=aiBase.x;mcCharacterRenderer.y=aiBase.y;mcCharacterRenderer.scaleX=aiBase.sx;mcCharacterRenderer.scaleY=aiBase.sy;mcCharacterRenderer.mask=aiBase.mask;
+         removeChild(aiModelMask);aiModelMask=null;
+         _rendererController.setDefaultAnchor(mcCharacterModelAnchor.x,mcCharacterModelAnchor.y);
+         iaiHeadOn=aiBase.head;iaiEqWant=aiBase.eq;
+         if(iaiArtHost)iaiArtHost.visible=true;if(iaiBg)iaiBg.visible=true;if(TooltipInventory.iaiStrip)TooltipInventory.iaiStrip.visible=true;
+         btnSort.visible=aiBase.sort;btnSortChange.visible=aiBase.change;dropSlot.visible=aiBase.drop;
+         if(_btn_sort_id!=-1)InputFeedbackManager.removeButton(this,_btn_sort_id);
+         _btn_sort_id=InputFeedbackManager.appendButton(this,NavigationCode.GAMEPAD_RSTICK_HOLD,-1,"panel_button_common_sort_items");
+         TooltipInventory.iaiDock=aiBase.dock;aiCurrentID=0;aiAll=[];SlotBase.aiLog("leave","special/closed");
+      }

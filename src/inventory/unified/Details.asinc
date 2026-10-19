@@ -1,0 +1,20 @@
+      public var aiPersistent:Boolean=false;
+      protected var aiItem:uint=0;
+      public function aiPending(id:uint,name:String) : void
+      {
+         if(aiItem!=id){visible=false;iaiScr=0;}
+      }
+      public function aiPresent(value:Object,rect:Rectangle) : void
+      {
+         var changed:Boolean=aiItem!=uint(value.ItemId);
+         aiItem=uint(value.ItemId);iaiDocked=true;
+         iaiDock=rect.clone();iaiPopOn=false;iaiEqCard=iaiScrOn=true;
+         anchorRect=new Rectangle(rect.x+IAI_OX,rect.y+IAI_OY,0,0);
+         if(changed)iaiScr=0;
+         data=value;validateNow();visible=true;
+      }
+      public function aiClose() : void
+      {
+         iaiScrOff();iaiEqCard=iaiScrOn=false;
+         if(parent)parent.removeChild(this);
+      }

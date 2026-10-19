@@ -1,0 +1,242 @@
+{
+  "version": "Approved Inventory \u2014 Unified P1",
+  "key": "gameplay/gui_new/swf/inventory/panel_inventory.redswf",
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "8a61619d9439887c72142c95e43430db3be8ed56f294ae364d4bcb5183478436",
+  "changed_classes": [
+    "ContextInfoManager",
+    "SlotBase",
+    "SlotInventoryGrid",
+    "SlotsListBase",
+    "SlotsListGrid",
+    "TooltipInventory",
+    "InventoryTabbedListModule",
+    "MenuInventory",
+    "ModulePaperdoll"
+  ],
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "zip_sha256": "9f3a0592704f1dc632ade76a0ce755849155b89e234bf6e8d43932b40d0c69f3",
+  "native_complete": false,
+  "runtime_tested": false,
+  "live_unchanged": true,
+  "private_zip": "deploy/approved-inventory-unified-p1/Approved-Inventory-Unified-P1-private.zip",
+  "zip_bytes": 1126639,
+  "reference_sha256": "b1443ffafc009a5f123d6c971e3ea1e47572763b229595ab78d76799bde87313",
+  "annotation_sha256": "3e081eb6506d60776c5082a2254affc8bf3f1d70a9160e96d605a14dac727740",
+  "script_controls": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "2d4e2f4ccf4fa4225ab3971fa6948f0065e073b02c9ac0b8034da1c9359a37a1"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "222377f6a33a9386879420f16c0b107b167b316d08bd1f70e30827a8575e1a9c"
+    }
+  ],
+  "native_final_attempt": [
+    {
+      "label": "cook",
+      "exit_code": null,
+      "passed": false,
+      "timeout_seconds": 90
+    }
+  ],
+  "fallback": {
+    "native_candidate_validated": false,
+    "controls": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\packed",
+        "bundle_sha256": "30e02c646e260c39cf37439226b29b4c5517bacc454b524fe6c7947266c93af2",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-final\\packed",
+        "bundle_sha256": "6cebf1fa7ae290b4d182cab6b5bfe9e1c3d38396e5016564e6810e2f5552a2fd",
+        "byte_identical": true
+      }
+    ],
+    "metadata_controls": [
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\ink-gear-grid-v1-focus\\packed",
+        "sha256": "48c176e500201ef241ea86de29a7f42305bcc2b6629d87f931386fccdf33d0de",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\editor-cook-resolved\\packed",
+        "sha256": "143930c12e176fb6681500c8f4cbfaee931915a377bc6817c03665c25ef1b367",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\npc-shadow-unique-cook\\packed",
+        "sha256": "802d59f610cf43e096a046c6b4830f727ad84c900c1d80c09bb2075b5f0bf016",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\field-folio-control-v2\\packed",
+        "sha256": "382262efb8ad159039ee0191ac008ecfbee0c3d28f6eca18ca51dc382fec2ca6",
+        "byte_identical": true
+      },
+      {
+        "path": "C:\\Dev\\witcher-ui-overhaul\\build\\subtitle-shadow-control-v1\\packed",
+        "sha256": "def52687256a19790fccc1c151a9fe549701a3faf95327d2bf019ace9a37b7b4",
+        "byte_identical": true
+      }
+    ],
+    "independent_changed_bundle_and_metadata_exact": true,
+    "exact_extraction": true,
+    "method": "same-key one-resource native-control reconstruction; no native success claimed",
+    "compressor": "Standard zlib 1.3.1; DLL SHA-256 cb7ab3788d10940df874acd97b1821bbb5ee4a91f3eec11982bb5bf7a3c96443"
+  },
+  "tests": {
+    "algorithms": {
+      "authored_algorithm_cases": 12,
+      "category_cases": 21,
+      "pooled_instances": 9,
+      "unchanged_icon_reloads": 0,
+      "native_display_engine_executed": false
+    },
+    "geometry": [
+      {
+        "viewport": [
+          1649,
+          928
+        ],
+        "scale": 0.8588541666666667,
+        "logical_regions": {
+          "rail": [
+            52.0,
+            174.5,
+            274.0,
+            721.04
+          ],
+          "list": [
+            365.0,
+            200.0,
+            338.0,
+            726.0
+          ],
+          "details": [
+            747.0,
+            190.0,
+            464.0,
+            730.0
+          ]
+        },
+        "preview_mask": [
+          1245.0,
+          120.0,
+          630.0,
+          810.0
+        ],
+        "real_character_pixels_unverified": true
+      },
+      {
+        "viewport": [
+          1672,
+          941
+        ],
+        "scale": 0.8708333333333333,
+        "logical_regions": {
+          "rail": [
+            52.0,
+            174.5,
+            274.0,
+            721.04
+          ],
+          "list": [
+            365.0,
+            200.0,
+            338.0,
+            726.0
+          ],
+          "details": [
+            747.0,
+            190.0,
+            464.0,
+            730.0
+          ]
+        },
+        "preview_mask": [
+          1245.0,
+          120.0,
+          630.0,
+          810.0
+        ],
+        "real_character_pixels_unverified": true
+      },
+      {
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scale": 1.0,
+        "logical_regions": {
+          "rail": [
+            52.0,
+            174.5,
+            274.0,
+            721.04
+          ],
+          "list": [
+            365.0,
+            200.0,
+            338.0,
+            726.0
+          ],
+          "details": [
+            747.0,
+            190.0,
+            464.0,
+            730.0
+          ]
+        },
+        "preview_mask": [
+          1245.0,
+          120.0,
+          630.0,
+          810.0
+        ],
+        "real_character_pixels_unverified": true
+      },
+      {
+        "viewport": [
+          3840,
+          2160
+        ],
+        "scale": 2.0,
+        "logical_regions": {
+          "rail": [
+            52.0,
+            174.5,
+            274.0,
+            721.04
+          ],
+          "list": [
+            365.0,
+            200.0,
+            338.0,
+            726.0
+          ],
+          "details": [
+            747.0,
+            190.0,
+            464.0,
+            730.0
+          ]
+        },
+        "preview_mask": [
+          1245.0,
+          120.0,
+          630.0,
+          810.0
+        ],
+        "real_character_pixels_unverified": true
+      }
+    ],
+    "runtime_acceptance": false
+  }
+}
