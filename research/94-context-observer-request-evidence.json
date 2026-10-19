@@ -1,0 +1,515 @@
+{
+  "schema": 1,
+  "date": "2026-10-19",
+  "observer_source_sha256": "8c78e5fa5b95390364e72a55ed5db73b19215ecf7c55b852c2fe89b053069acc",
+  "observer_compiled": true,
+  "compiler_sha256": "9f448e0c8b9ea1ea803d0ae543f2fcd6e905088b8b71f54da2bff22c6cf318fc",
+  "compiler_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "pristine_script_files": 1525,
+  "candidate_blob_sha256": "302aa4b2732852978fc48a5acdf31c595348be92c2ded493d1bcb6227bf73db3",
+  "compiler_assert_counts": {
+    "baseline": 20893,
+    "candidate": 20901,
+    "matched_declaration_control": 20901
+  },
+  "compiler_diagnostic_review": "Only native scriptCompiledCode.cpp:56 count+8; exact same diagnostics in matched wrapper/API control.",
+  "compiled_full_merged_mods": false,
+  "retail_log_sink_verified": false,
+  "retail_observed": false,
+  "preservation": {
+    "approved24_exact": true,
+    "ten_release_native_inputs_exact": true,
+    "report88_bank_exact": true,
+    "report90_music_hashes_exact": true,
+    "native_compiler_runtime_inputs_exact": 68
+  },
+  "wwise": {
+    "version": "2023.1.19.8928",
+    "source_proof": {
+      "passed": true,
+      "original_work_units": 1508,
+      "event_work_units": 542,
+      "original_media": 47,
+      "cue_sha256": "5e677a1da33213e55b1ae4540397adee184e9dcbfa9e93eb6aa2ebae10d6cabc",
+      "music_sha256": "a5c759d7d4ccd2d182ce28398f634d9dc8095a6aba804b1e46f6c96decc7530a",
+      "globals_and_event_work_units_exact": true,
+      "changes_from_retained_rest_first_source": 0
+    },
+    "captures": [
+      {
+        "case": "rest-control",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "21d23d04a5e95feff2292999813ef215318fe1e0cbffedd8ab389a08ce9559a3",
+          "seconds": 16.213333333333335,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 0,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              16.2
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1355360000015935,
+            "last": 11.856281899999885,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 12.05865150000318,
+            "last": 18.012842300006014,
+            "peak": -19.0
+          }
+        ]
+      },
+      {
+        "case": "rest-request",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "43a80fcdc1e6c0f439e655abae4da728f224f8503633f0b98cee694f3681a4b2",
+          "seconds": 16.096,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 0,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              16.05
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1615421999958926,
+            "last": 11.815484999999171,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 12.018114300000889,
+            "last": 17.86122169999726,
+            "peak": -19.0
+          }
+        ]
+      },
+      {
+        "case": "duplicate-request",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "0a47e523dafbd9c18dc73838a508649f4d37a2e5f735c6178ae86c3e9db0dfc9",
+          "seconds": 21.152,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 0,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              21.150000000000002
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1536410999979125,
+            "last": 11.946164100001624,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 12.148702499995125,
+            "last": 21.905260499996075,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 22.106238200001826,
+            "last": 22.931482699998014,
+            "peak": -19.0
+          }
+        ]
+      },
+      {
+        "case": "outro-control",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "b1e3b5c547a09588c1ad18aa5398d91e1a6b47b725e064da9e5c382127884b94",
+          "seconds": 48.10666666666667,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 5923,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              2.75
+            ],
+            [
+              27.650000000000002,
+              44.550000000000004
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1503665000054752,
+            "last": 8.331828400005179,
+            "peak": -19.0
+          },
+          {
+            "role": "combat",
+            "first": 4.969833200004359,
+            "last": 26.081188300006033,
+            "peak": -19.0
+          },
+          {
+            "role": "combat",
+            "first": 4.969833200004359,
+            "last": 26.081188300006033,
+            "peak": -17.0
+          },
+          {
+            "role": "outro",
+            "first": 24.73604730000079,
+            "last": 29.453224500000942,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 25.034528600001067,
+            "last": 26.33163250000507,
+            "peak": -24.223712921142578
+          },
+          {
+            "role": "rest",
+            "first": 26.548829500003194,
+            "last": 36.318837099999655,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 36.53460350000387,
+            "last": 46.48594060000323,
+            "peak": -19.0
+          },
+          {
+            "role": "cue",
+            "first": 46.689728500001365,
+            "last": 49.87986549999914,
+            "peak": -19.0
+          }
+        ]
+      },
+      {
+        "case": "outro-request",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0,
+            35.0,
+            100.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "17069723b2554f271b39275737e17f508a0984ac9d53e4f1c4d0cc27478ba798",
+          "seconds": 48.074666666666666,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 5923,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              2.75
+            ],
+            [
+              27.650000000000002,
+              44.550000000000004
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1289312000008067,
+            "last": 8.322548199997982,
+            "peak": -19.0
+          },
+          {
+            "role": "combat",
+            "first": 4.949480299997958,
+            "last": 26.12802119999833,
+            "peak": -19.0
+          },
+          {
+            "role": "combat",
+            "first": 4.949480299997958,
+            "last": 26.12802119999833,
+            "peak": -17.0
+          },
+          {
+            "role": "outro",
+            "first": 24.818863699998474,
+            "last": 29.52466010000353,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 24.818863699998474,
+            "last": 26.36104090000299,
+            "peak": -24.223712921142578
+          },
+          {
+            "role": "rest",
+            "first": 26.57844479999767,
+            "last": 36.37410590000218,
+            "peak": -19.0
+          },
+          {
+            "role": "rest",
+            "first": 36.57608820000314,
+            "last": 46.33961629999976,
+            "peak": -19.0
+          },
+          {
+            "role": "cue",
+            "first": 46.58006739999837,
+            "last": 49.88045009999769,
+            "peak": -19.0
+          }
+        ]
+      },
+      {
+        "case": "authored-request",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "1e2ff1fd20954012b1249e128a8de239d8748e65d5ab5ef8d982e07519b5c437",
+          "seconds": 17.130666666666666,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 1938,
+          "exact_zero_intervals": [],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "rest",
+            "first": 2.1263439999966067,
+            "last": 9.840738699997019,
+            "peak": -19.0
+          },
+          {
+            "role": "other",
+            "first": 8.236559199998737,
+            "last": 13.960820799999055,
+            "peak": -18.1307430267334
+          },
+          {
+            "role": "other",
+            "first": 10.076117099997646,
+            "last": 24.929618299996946,
+            "peak": -22.0
+          },
+          {
+            "role": "other",
+            "first": 10.076117099997646,
+            "last": 24.929618299996946,
+            "peak": -22.0
+          }
+        ]
+      },
+      {
+        "case": "wrong-place-request",
+        "rtpcs": {
+          "18446744073709551615:threat_rating": [
+            0.0
+          ],
+          "18446744073709551615:menu_volume_music": [
+            0.0
+          ],
+          "18446744073709551614:threat_rating": [
+            0.0
+          ],
+          "18446744073709551614:menu_volume_music": [
+            100.0
+          ]
+        },
+        "pcm": {
+          "sha256": "e23760f0fe106ebaff9b30061d0166db246de8469bbba7da5650a2026cb56db3",
+          "seconds": 0.096,
+          "channels": 6,
+          "rate": 48000,
+          "peak": 0,
+          "exact_zero_intervals": [
+            [
+              0.0,
+              0.05
+            ]
+          ],
+          "format": {
+            "codec": 65534,
+            "container_bits": 16,
+            "valid_bits": 0
+          }
+        },
+        "pipelines": [
+          {
+            "role": "other",
+            "first": 2.158720200000971,
+            "last": 17.947158399998443,
+            "peak": -217.0
+          }
+        ]
+      }
+    ],
+    "protected_request_gate_proven": false,
+    "first_candidate": "Selected-playlist Seek reference rejected by actual authoring engine.",
+    "second_candidate": "Parent MusicSwitch Seek did not produce request-driven cue acceptance.",
+    "warnings": [
+      "WAMP port bind warning retained; HTTP exact project/version checked.",
+      "WwiseConsole exit1 follows explicit project.close; capture script exited0."
+    ],
+    "lifecycle": {
+      "source_before": "a5c759d7d4ccd2d182ce28398f634d9dc8095a6aba804b1e46f6c96decc7530a",
+      "source_after": "a5c759d7d4ccd2d182ce28398f634d9dc8095a6aba804b1e46f6c96decc7530a",
+      "source_unchanged": true,
+      "cleanup_errors": [],
+      "process_exit": 1
+    }
+  },
+  "artifacts": {
+    "build\\sparse-live-context-pilot-v1\\observer\\baseline-v5.full.log": "843b236325745974500bf1de1859c521b028c87faacd43470208d7f4b8a416fb",
+    "build\\sparse-live-context-pilot-v1\\observer\\candidate-v1.full.log": "3a37a84d42d8ce9a4babdc163432bba5703ab80ab394e3aa670bdb4314192b66",
+    "build\\sparse-live-context-pilot-v1\\observer\\matched-control.full.log": "7ab004682dff23a7814dd74c7f002639df1483f0213599969a403f1080de1e6b",
+    "build\\sparse-live-context-pilot-v1\\wwise-request\\candidate\\validation\\request-general-captures\\results.json": "b6d40d8dde24f0327d460582724da01cac3687383fd7d990e5545d9cbc7ce817",
+    "build\\sparse-live-context-pilot-v1\\tests-final.log": "a116705f3194e3cc3e9f7af656137e3ede38bed2d3c674a0852d59143ef72ddf"
+  },
+  "manual_diagnostic_archive": {
+    "path": "build\\sparse-live-context-pilot-v1\\observer\\manual\\WMC Context Observer - Diagnostic Source.zip",
+    "sha256": "8cb59a83e77c328b2cd050c252411feefa21b8a257b0abd15d9a85f45ab16568",
+    "entries": [
+      "Mods/modWMCContextObserver/content/scripts/local/wmcContextObserver.ws"
+    ],
+    "source_readback_exact": true,
+    "capture_ready": false,
+    "installed": false
+  },
+  "repository_tests": {
+    "passed": 281,
+    "log": "build/sparse-live-context-pilot-v1/tests-final-v2.log",
+    "sha256": "dfc29ede8de6417105f94dc55c64220965692d5288022293c3b02dd4bd5f31b8"
+  }
+}
