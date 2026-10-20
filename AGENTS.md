@@ -1,6 +1,15 @@
 # Codex instructions — independent Witcher 3 UI project
 
 ## Scope and authority
+
+**20 October r3 runtime / r4 diagnostic:** the user's screenshot shows the
+custom scene owns browsing (old tabs/dots/orbit removed), but every visited
+category has zero rows. Optional fault is `1 lookup #1009`. See
+[r4 data-boundary receipt](research/inventory-approved-unified-p1-r4-data-boundary.md).
+The three custom Flash callbacks were plain functions rather than the native
+script event contract. R4 corrects them and pins sent/ack/owned/published/binding
+counters without console setup. Compilation is not proof of native dispatch;
+actual r4 row/details/action results remain pending. Do not expand features.
 Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do not alter `main` or `general-merge`. The primary authority for runtime resources is the *installed* The Witcher 3 Remastered 5.01/REDkit version; downloaded font/name-color mods are references, not guaranteed compatibility.
 
 **20 October diagnostic receipt:** see

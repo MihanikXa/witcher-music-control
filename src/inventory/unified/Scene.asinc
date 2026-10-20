@@ -326,7 +326,7 @@
             SlotBase.aiLog("visibility",String(stats)+"/"+String(targets));
          }
          // Data/state dirty work only. No row/model/layout teardown per frame.
-         if(aiRefresh){aiRefresh=false;dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedRefresh"));}
+         if(aiRefresh){aiRefresh=false;aiEvidence("refresh.dispatch",String(++aiRefreshDispatches));dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedRefresh"));}
       }
       protected function aiRemoved(e:Event) : void {aiLeave();}
       protected function aiLeave() : void

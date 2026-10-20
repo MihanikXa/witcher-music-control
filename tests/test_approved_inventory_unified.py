@@ -78,15 +78,29 @@ class UnifiedInventory(unittest.TestCase):
     def test_private_diagnostic_binary_and_script_pins_when_available(self):
         b=load('build-approved-inventory');out=ROOT/'build/approved-inventory-runtime-diagnostic'
         if (ROOT/'build/approved-inventory-runtime-diagnostic-r3/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r3'
+        if (ROOT/'build/approved-inventory-runtime-diagnostic-r4/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r4'
         if not (out/'receipt.json').exists():self.skipTest('Private diagnostic assets not available')
         d=json.loads((out/'receipt.json').read_text());source=(b.BASE/'prepared-inputs'/b.KEY).read_bytes();data=(out/'prepared-inputs'/b.KEY).read_bytes()
         native=b.b.b.m.b.font.native
         self.assertEqual([c['tail'] for c in native.chunks(source)[1:]],[c['tail'] for c in native.chunks(data)[1:]])
         self.assertTrue(all(c['crc_valid'] for c in native.chunks(data)))
-        self.assertEqual(b.sha(b.SCRIPT),d['annotation_sha256'])
+        # A previously built diagnostic is a historical immutable receipt.
+        # Its annotation is checked against the ZIP, not newer working source.
+        import zipfile,hashlib
+        with zipfile.ZipFile(d['zip_path']) as z:
+            annotation=z.read('Mods/modApprovedInventoryUnifiedP1/content/scripts/local/approvedInventory.ws')
+        self.assertEqual(hashlib.sha256(annotation).hexdigest(),d['annotation_sha256'])
         self.assertEqual(b.sha(Path(d['zip_path'])),d['zip_sha256'])
         after=Path(d['abc'])/'after/scripts'
         for name in ('SlotPaperdoll','ItemDataStub','RuntimeAssetsManager','CharacterRendererController','ModuleInputFeedback'):
             self.assertEqual(b.gate.one(name).read_bytes(),next(after.rglob(name+'.as')).read_bytes())
         self.assertFalse(d['native_candidate_validated']);self.assertFalse(d['game_execution'])
+    def test_flash_custom_callbacks_are_script_events(self):
+        scene=(ROOT/'src/inventory/unified/Scene.asinc').read_text()
+        script=(ROOT/'src/inventory/unified/approvedInventory.ws').read_text()
+        calls=set(re.findall(r'GameEvent.CALL,"(OnApproved\w+)"',scene))
+        self.assertEqual(calls,{'OnApprovedRefresh','OnApprovedMode','OnApprovedDetails'})
+        for name in calls:
+            self.assertRegex(script,r'@addMethod\(CR4InventoryMenu\)\s+event '+name+r'\(')
+            self.assertNotRegex(script,r'function '+name+r'\(')
 if __name__=='__main__':unittest.main()

@@ -4,6 +4,7 @@
       protected var aiEvidenceLines:Array=[];
       protected var aiEvidenceSummary:Object={};
       protected var aiFault:Boolean=false;
+      protected var aiRefreshDispatches:uint=0;
       public function approvedEvidence(message:String) : void {aiEvidence("script",message);}
       protected function aiEvidence(step:String,detail:String="") : void
       {
@@ -11,15 +12,17 @@
          var line:String=String(getTimer())+" "+step+" "+detail;
          trace("ApprovedEvidence "+line);aiEvidenceLines.push(line);
          if(step=="script" && (detail.indexOf("owned=")==0 || detail.indexOf("publish=")==0))aiEvidenceSummary[detail.split("=")[0]]=detail;
+         if(step=="script" && detail.indexOf("refresh.request")==0)aiEvidenceSummary["ack"]=detail;
+         if(step=="binding.items")aiEvidenceSummary["binding"]=detail;
          if(step=="rail.icon.skipped" && !aiEvidenceSummary["iconFault"])aiEvidenceSummary["iconFault"]="FIRST OPTIONAL ICON FAULT: "+detail;
-         if(aiEvidenceLines.length>18)aiEvidenceLines.shift();
+         if(aiEvidenceLines.length>12)aiEvidenceLines.shift();
          if(!aiDiagnosticText)
          {
             aiDiagnosticText=aiText(this,"",730,540,510,15,0xFFFFFF);
             aiDiagnosticText.height=425;aiDiagnosticText.multiline=true;aiDiagnosticText.wordWrap=true;
             aiDiagnosticText.background=true;aiDiagnosticText.backgroundColor=0x111111;
          }
-         aiDiagnosticText.text="DIAGNOSTIC ONLY - F8 snapshot / overlay\n"+String(aiEvidenceSummary["iconFault"]||"")+"\n"+String(aiEvidenceSummary["owned"]||"")+"\n"+String(aiEvidenceSummary["publish"]||"")+"\n"+aiEvidenceLines.join("\n");
+         aiDiagnosticText.text="DIAGNOSTIC ONLY - F8 snapshot / overlay\n"+String(aiEvidenceSummary["iconFault"]||"")+"\nREFRESH SENT="+aiRefreshDispatches+" SCRIPT="+String(aiEvidenceSummary["ack"]||"not received")+"\n"+String(aiEvidenceSummary["owned"]||"owned: not received")+"\n"+String(aiEvidenceSummary["publish"]||"publish: not received")+"\nBINDING="+String(aiEvidenceSummary["binding"]||"not received")+"\n"+aiEvidenceLines.join("\n");
          setChildIndex(aiDiagnosticText,numChildren-1);
       }
       protected function aiData(value:Array) : void

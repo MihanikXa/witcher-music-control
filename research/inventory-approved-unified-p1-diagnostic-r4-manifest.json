@@ -1,0 +1,46 @@
+{
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "4a3a533c44aa35dcd23ce6501dcd83ff24308f345e70b977bb1b54ff6dac3de6",
+  "zip_sha256": "55c43cc7050efc688049edf986e5e34ce474aa85ca539a64e45aadbea6fb15fb",
+  "annotation_sha256": "65f0c3b6564f53502de4e6a8129cbfa8e174701a4bd87651a24fa83379fe637a",
+  "native_cook_attempted": false,
+  "native_candidate_validated": false,
+  "game_execution": false,
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "version": "Unified P1 \u2014 diagnostic r4, native event data bridge",
+  "date": "2026-10-20",
+  "zip_path": "deploy/approved-inventory-runtime-diagnostic-r4/Approved-Inventory-P1-DIAGNOSTIC-r4-private.zip",
+  "compiled_classes": [
+    "MenuInventory"
+  ],
+  "targeted_tests": 13,
+  "reconstruction_controls_passed": true,
+  "runtime_status": "r3 scene takeover observed; r4 dispatch, parity and equip unverified",
+  "screenshot_sha256": "9362f59e2e72f7499a80b44d4a6e7b34232daf1409a3966f069b01d36ecb8bc4",
+  "script_controls": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "8a6f5f0f9748f7700f6306c5af67c8a0511f3fcdb7cd1d2c547257becf61b1ab"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "e7a99cd05bcb56a18ce59f0b10c0860d4fbac72c80cbb01de938ff7fb4b459cb"
+    }
+  ],
+  "source_hashes": {
+    "src/inventory/unified/approvedInventory.ws": "65f0c3b6564f53502de4e6a8129cbfa8e174701a4bd87651a24fa83379fe637a",
+    "src/inventory/unified/Details.asinc": "070d16a67e3fd7196e4784921fc8b1e8ef0159d6cd0e956a64cadc7a036db653",
+    "src/inventory/unified/Diagnostics.asinc": "ab4cb933b6615fa817af93a323f77f87f98cddd625f90554f88041896e340628",
+    "src/inventory/unified/List.asinc": "a96da513736696938d0570f54a18362b937869220e71b15e4bec17919a4d516c",
+    "src/inventory/unified/Module.asinc": "9e15678cc13d9e8d18e77bf35429c062e3b85633e803f810c2c3386c08b368d1",
+    "src/inventory/unified/Row.asinc": "1e0253189e2b70da3983218d84a0847a5448dd875166ac8fbadd2a21fed7613d",
+    "src/inventory/unified/Scene.asinc": "58055e5146bcd677443e0d28e247d55eb0bf7313c06bf041726e9776852aafd7",
+    "tools/build-approved-inventory-diagnostic.py": "66dd0fd15eeb076aa2ce0493dd586cf4e5d899997f05a8e84e46a67007d4bd3a",
+    "tools/diagnose-approved-inventory.py": "6c5b68918e638794c32cc035643aab8ca81c418173926813d8e713dcdaf9f0b6",
+    "tests/test_approved_inventory_unified.py": "a660ac58affded090322964cd59232f0ac14acec624447ec1acddc98b1305327"
+  }
+}

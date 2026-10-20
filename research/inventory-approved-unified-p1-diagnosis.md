@@ -282,3 +282,9 @@ enabled), same priority/save. Capture the overlay immediately; it should show
 entry finishes, check one real sword row/details/action as above. No visual or
 functional acceptance is inferred from compilation. R3 receipt is
 `inventory-approved-unified-p1-diagnostic-r3-manifest.json`.
+
+**Subsequent r3 game screenshot:** takeover completes but all visited categories
+show zero rows; optional error is `1 lookup #1009`. The next source-contract
+correction and persistent data-flow evidence are documented in
+[r4 data-boundary follow-up](inventory-approved-unified-p1-r4-data-boundary.md).
+Do not infer owned-item counts or runtime callback success from the empty scene.

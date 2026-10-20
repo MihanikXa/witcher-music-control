@@ -5,6 +5,17 @@
 @addField(W3GuiPlayerInventoryComponent) var aiApprovedProbe : bool;
 @addField(W3PlayerWitcher) var aiApprovedTrace : bool;
 
+// Low-volume bridge acknowledgements reach the opt-in movie overlay even when
+// the per-item console trace flag is off. Normal movies discard this evidence.
+@addMethod(CR4InventoryMenu)
+function AiApprovedStatus(message : string)
+{
+    var callback : CScriptedFlashFunction;
+    if(!GetMenuFlash())return;
+    callback=GetMenuFlash().GetMemberFlashFunction("approvedEvidence");
+    if(callback)callback.InvokeSelfOneArg(FlashArgString(message));
+}
+
 @addMethod(CR4InventoryMenu)
 function AiApprovedEvidence(message : string)
 {
@@ -84,7 +95,7 @@ function SetInventoryFlashObjectForItem(itemId : SItemUniqueId, out flashObject 
     }
 }
 @addMethod(CR4InventoryMenu)
-function OnApprovedRefresh()
+event OnApprovedRefresh()
 {
     var items : array<SItemUniqueId>;
     var filters : array<EInventoryFilterType>;
@@ -96,8 +107,8 @@ function OnApprovedRefresh()
     var eligible : bool;
     var nativeEligibility : string;
     var callback : CScriptedFlashFunction;
-    AiApprovedEvidence("refresh.request active="+aiApprovedActive+" busy="+aiApprovedBusy);
-    if (!aiApprovedActive || aiApprovedBusy || !_playerInv) return;
+    AiApprovedStatus("refresh.request active="+aiApprovedActive+" busy="+aiApprovedBusy);
+    if (!aiApprovedActive || aiApprovedBusy || !_playerInv) return false;
     aiApprovedBusy = true;
     callback=GetMenuFlash().GetMemberFlashFunction("approvedDiagnostics");
     if(callback)callback.InvokeSelfOneArg(FlashArgBool(GetWitcherPlayer().aiApprovedTrace));
@@ -106,7 +117,7 @@ function OnApprovedRefresh()
     filters.PushBack(IFT_Default); filters.PushBack(IFT_AlchemyItems);
     filters.PushBack(IFT_Weapons); filters.PushBack(IFT_Books);
     _inv.GetAllItems(items);
-    AiApprovedEvidence("owned="+items.Size()+" filter.before="+previous);
+    AiApprovedStatus("owned="+items.Size()+" filter.before="+previous);
     data = m_flashValueStorage.CreateTempFlashArray();
     holder = m_flashValueStorage.CreateTempFlashObject();
     _playerInv.aiApprovedProbe = true;
@@ -144,9 +155,10 @@ function OnApprovedRefresh()
     }
     _playerInv.aiApprovedProbe = false;
     _playerInv.SetFilterType(previous);
-    AiApprovedEvidence("publish="+published+" equipped="+equippedCount+" native.current-filter="+nativeCount+" filter.restored="+_playerInv.GetFilterType()+" probe="+_playerInv.aiApprovedProbe);
+    AiApprovedStatus("publish="+published+" equipped="+equippedCount+" filter.restored="+_playerInv.GetFilterType()+" probe="+_playerInv.aiApprovedProbe);
     m_flashValueStorage.SetFlashArray("inventory.approved.items",data);
     aiApprovedBusy = false;
+    return true;
 }
 // Retain true item IDs on native equip removal, including non-weapon slots.
 @wrapMethod(CR4InventoryMenu)
@@ -186,11 +198,12 @@ function updateInputFeedback() : void
 }
 // Feed the actual Common menu pipeline. Context actions remain native.
 @addMethod(CR4InventoryMenu)
-function OnApprovedMode(mode : int)
+event OnApprovedMode(mode : int)
 {
     var b : SKeyBinding;
-    if (!aiApprovedActive) return;
+    if (!aiApprovedActive) return false;
     aiApprovedFocus=mode;
+    AiApprovedStatus("mode="+mode);
     if(m_currentContext)m_currentContext.UpdateContext();
     RemoveGFxButtonById(89101); RemoveGFxButtonById(89102); RemoveGFxButtonById(89103);
     b.ActionID=89101; b.Gamepad_NavCode="gamepad_L3"; b.Keyboard_KeyCode=IK_Tab;
@@ -206,21 +219,23 @@ function OnApprovedMode(mode : int)
         m_GFxInputBindings.PushBack(b);
     }
     if(GetCommonMenu()) GetCommonMenu().UpdateGFxButtons(m_GFxInputBindings,true);
+    return true;
 }
 
 // Same native provider as ShowItemTooltip, with a request serial to reject
 // hover/old-equipment payloads in the retained persistent presentation.
 @addMethod(CR4InventoryMenu)
-function OnApprovedDetails(item : SItemUniqueId, serial : int)
+event OnApprovedDetails(item : SItemUniqueId, serial : int)
 {
     var payload : CScriptedFlashObject;
-    AiApprovedEvidence("details id="+ItemToFlashUInt(item)+" serial="+serial+" valid="+_inv.IsIdValid(item));
-    if(!aiApprovedActive || !_inv.IsIdValid(item))return;
+    AiApprovedStatus("details id="+ItemToFlashUInt(item)+" serial="+serial+" valid="+_inv.IsIdValid(item));
+    if(!aiApprovedActive || !_inv.IsIdValid(item))return false;
     _tooltipDataProvider.setCurrentInventory(GetCurrentInventory(item));
     payload=_tooltipDataProvider.GetTooltipData(item,_currentInv==_shopInv,true);
     payload.SetMemberFlashInt("aiRequestSerial",serial);
     m_flashValueStorage.SetFlashObject("context.tooltip.data",payload);
-    AiApprovedEvidence("details.published serial="+serial);
+    AiApprovedStatus("details.published serial="+serial);
+    return true;
 }
 
 exec function approvedInventoryTrace(on : bool)

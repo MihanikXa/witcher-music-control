@@ -2,8 +2,8 @@
 import argparse,hashlib,importlib.util,io,json,subprocess,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'build/approved-inventory-runtime-diagnostic-r3'
-DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic-r3'
+OUT=ROOT/'build/approved-inventory-runtime-diagnostic-r4'
+DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic-r4'
 def load(name):
     s=importlib.util.spec_from_file_location(name,ROOT/'tools'/(name+'.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 b=load('build-approved-inventory')
@@ -19,9 +19,9 @@ def prepare():
     write(pin,frozen)
     source=b.BASE/'prepared-inputs'/b.KEY
     if sha(source)!=b.gate.V4_SHA:raise ValueError('Not accepted v4')
-    # Reuse the verified private r2 checkpoint for one changed class, retaining
+    # Reuse the verified private r3 checkpoint for one changed class, retaining
     # its original exact-v4 provenance and all previous candidate files.
-    prior=ROOT/'build/approved-inventory-runtime-diagnostic'
+    prior=ROOT/'build/approved-inventory-runtime-diagnostic-r3'
     if not (OUT/'prepared.json').exists() and (prior/'prepared.json').exists():
         receipt=json.loads((prior/'prepared.json').read_text());candidate=prior/'prepared-inputs'/b.KEY
         if receipt['input_sha256']!=b.gate.V4_SHA or sha(candidate)!=receipt['resource_sha256']:raise ValueError('Prior checkpoint mismatch')
@@ -53,7 +53,7 @@ def prepare():
     write(OUT/'prepared.json',dict(input_sha256=sha(source),resource_sha256=sha(target),abc=str(folder),changes=changes,compiled_classes=[r['class_name'] for r in compiled_changes],incremental_from=previous['resource_sha256'] if previous and before!=b.BEFORE else None,contracts=contracts,native_validation=False,game_execution=False))
 def package():
     if b.freeze()!=json.loads((OUT/'protected-inputs.json').read_text()):raise ValueError('Protected inputs changed')
-    compiler=json.loads((ROOT/'build/approved-inventory-runtime-diagnostic-scripts-final/receipt.json').read_text())
+    compiler=json.loads((ROOT/'build/approved-inventory-runtime-diagnostic-r4-scripts-final/receipt.json').read_text())
     if sha(b.SCRIPT)!=compiler['source_sha256'] or [r['exit_code'] for r in compiler['results']]!=[0,0]:raise ValueError('Diagnostic script compiler mismatch')
     prepared=json.loads((OUT/'prepared.json').read_text())
     transforms=dict(b.p.TRANSFORMS)
@@ -62,7 +62,7 @@ def package():
         expected=fn(b.gate.one(name).read_text(encoding='utf-8-sig'))
         if (Path(prepared['abc'])/(name+'.as')).read_text(encoding='utf-8')!=expected:raise ValueError('Compiled/source mismatch '+name)
     for row in compiler['results']:
-        if sha(ROOT/'build/approved-inventory-runtime-diagnostic-scripts-final'/row['label']/'blob.rsblob')!=row['blob_sha256']:raise ValueError('Compiler blob changed')
+        if sha(ROOT/'build/approved-inventory-runtime-diagnostic-r4-scripts-final'/row['label']/'blob.rsblob')!=row['blob_sha256']:raise ValueError('Compiler blob changed')
     data=(OUT/'prepared-inputs'/b.KEY).read_bytes()
     if hashlib.sha256(data).hexdigest()!=prepared['resource_sha256']:raise ValueError('Prepared resource changed')
     standard=load('native-zlib-control');module=b.b;original=module.zlib.compress
@@ -77,7 +77,7 @@ def package():
     stream=io.BytesIO()
     with zipfile.ZipFile(stream,'w',zipfile.ZIP_DEFLATED) as z:
         for name,value in sorted(members.items()):z.writestr(name,value)
-    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r3-private.zip'
+    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r4-private.zip'
     if path.exists():raise ValueError('Preserve existing diagnostic archive')
     path.write_bytes(stream.getvalue())
     with zipfile.ZipFile(path) as z:
