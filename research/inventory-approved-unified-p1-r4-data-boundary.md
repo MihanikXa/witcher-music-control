@@ -3,6 +3,11 @@
 20 October 2026. **Not functional/accepted; no item parity or action success yet.**
 Follow-up to [bounded diagnosis](inventory-approved-unified-p1-diagnosis.md).
 
+**Subsequent actual user test:** r4 now publishes and binds 38 items from 50
+owned; real Weapons/Other rows and selected native details/comparison appear.
+See [r4 runtime proof and remaining gates](inventory-approved-unified-p1-r4-runtime-proof.md).
+Equip/action, excluded-ID parity, flicker and visual acceptance are still pending.
+
 ## Actual r3 evidence
 
 User screenshot, 3840×2160, SHA-256

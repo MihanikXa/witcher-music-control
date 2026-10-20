@@ -2,6 +2,18 @@
 
 ## Scope and authority
 
+**20 October r4 actual runtime evidence:** real rows/details now display in
+Weapons and Other. User overlay shows owned=50, published=38, binding=38,
+equipped=9, restored Weapons filter and probe=false. Both equipped starter
+swords plus Disglair are visible with correct notches/native comparison and
+level restriction. See [runtime proof](research/inventory-approved-unified-p1-r4-runtime-proof.md).
+This establishes the data/row/details bridge, NOT equip/unequip, full parity,
+flicker-free input or visual acceptance. Twelve exclusions need ID reconciliation.
+Next is one permitted starter-sword unequip/re-equip + selection/model/marker
+check and Inspect/Back. Do not build another package or expand features merely
+to respond to these screenshots. Remaining visible defects: optional lookup
+#1009, clipped rarity label, lingering Drop target and contextual footer cleanup.
+
 **20 October r3 runtime / r4 diagnostic:** the user's screenshot shows the
 custom scene owns browsing (old tabs/dots/orbit removed), but every visited
 category has zero rows. Optional fault is `1 lookup #1009`. See
