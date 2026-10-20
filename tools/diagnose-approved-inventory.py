@@ -14,9 +14,10 @@ def regression():
     tab=next((gate.EXPORT/'scripts').rglob('TabListItem.as')).read_text(encoding='utf-8-sig')
     _,update=v.method(tab,'updateAfterStateChange')
     def erase(t):
-        return re.sub(r':\s*(?:Class|MovieClip|Rectangle|SlotPaperdoll|BitmapData|Matrix|Bitmap)\b','',v.erase(t))
+        return re.sub(r':\s*(?:Class|MovieClip|Rectangle|SlotPaperdoll|BitmapData|Matrix|Bitmap|Error)\b','',v.erase(t))
     js="""const assert=require('node:assert/strict');
 var liveStage={dispatchEvent(e){events.push(e);}},events=[];
+var evidence=[];function aiEvidence(step,detail){evidence.push([step,detail]);}
 function Event(n){this.name=n;} const W3ScrollingList={REPOSITION:'reposition'};
 class Tab {
  constructor(){this.stage=null;this.mcIcon={x:0,y:0,gotoAndStop(){}};this.data=null;this.invalid=true;}
@@ -37,6 +38,10 @@ var aiScene={addChild(o){o.stage=liveStage;}};
 assert.throws(()=>negative(),e=>e instanceof TypeError && /dispatchEvent/.test(e.message));
 assert.equal(events.length,0);
 fixed();assert.equal(events.length,7);
+// Native symbol construction can itself fail. The real corrected method must
+// report each optional-art failure and still return to functional initialization.
+getDefinitionByName=()=>class BrokenTab {constructor(){throw new TypeError('native symbol null');}};
+assert.doesNotThrow(()=>fixed());assert.equal(evidence.filter(x=>x[0]==='rail.icon.skipped').length,7);
 console.log(JSON.stringify({negative_control:'released rail throws on null stage',correction:'attached native tabs dispatch successfully',native_dispatches:events.length,game_execution:false}));
 '''
     OUT.mkdir(exist_ok=True);path=OUT/'rail-lifecycle-regression.js';path.write_text(js)

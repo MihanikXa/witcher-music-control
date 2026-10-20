@@ -6,8 +6,11 @@ Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do n
 **20 October diagnostic receipt:** see
 [bounded Unified P1 diagnosis](research/inventory-approved-unified-p1-diagnosis.md).
 Released rail validation on an unattached native tab reproduces a null-stage
-failure in the authored-method negative control; the exact first in-game fault
-still requires the diagnostic trace. Native category renderers are confirmed
+failure in the authored-method negative control. The user's r2 screenshot now
+confirms `rail.icons.begin → TypeError #1009`, before module/list setup; it does
+not identify the exact operation inside that method. R3 adds per-operation
+evidence and isolates optional icon failures so functional setup can continue;
+the first optional fault remains visible in the overlay. Native category renderers are confirmed
 external siblings (`InventoryGridRef` / `CoreList`), so hiding `mcTabList` alone
 was also insufficient. The private diagnostic fixes those boundaries, uses the
 native runtime tooltip asset provider, gates the inherited subdata alpha/data

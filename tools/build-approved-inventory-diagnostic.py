@@ -2,8 +2,8 @@
 import argparse,hashlib,importlib.util,io,json,subprocess,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'build/approved-inventory-runtime-diagnostic'
-DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic'
+OUT=ROOT/'build/approved-inventory-runtime-diagnostic-r3'
+DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic-r3'
 def load(name):
     s=importlib.util.spec_from_file_location(name,ROOT/'tools'/(name+'.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 b=load('build-approved-inventory')
@@ -12,10 +12,20 @@ def write(p,d):p.write_text(json.dumps(d,indent=2)+'\n')
 def prepare():
     OUT.mkdir(exist_ok=True)
     frozen=b.freeze();pin=OUT/'protected-inputs.json'
-    if pin.exists() and json.loads(pin.read_text())!=frozen:raise ValueError('Protected inputs changed')
+    if pin.exists() and json.loads(pin.read_text())!=frozen:
+        # A user's manual deployment between diagnostic iterations is expected;
+        # capture a NEW local baseline, never silently replace an existing pin.
+        raise ValueError('Protected inputs changed; start a fresh diagnostic OUT')
     write(pin,frozen)
     source=b.BASE/'prepared-inputs'/b.KEY
     if sha(source)!=b.gate.V4_SHA:raise ValueError('Not accepted v4')
+    # Reuse the verified private r2 checkpoint for one changed class, retaining
+    # its original exact-v4 provenance and all previous candidate files.
+    prior=ROOT/'build/approved-inventory-runtime-diagnostic'
+    if not (OUT/'prepared.json').exists() and (prior/'prepared.json').exists():
+        receipt=json.loads((prior/'prepared.json').read_text());candidate=prior/'prepared-inputs'/b.KEY
+        if receipt['input_sha256']!=b.gate.V4_SHA or sha(candidate)!=receipt['resource_sha256']:raise ValueError('Prior checkpoint mismatch')
+        target=OUT/'prepared-inputs'/b.KEY;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(candidate.read_bytes());write(OUT/'prepared.json',receipt)
     transforms=dict(b.p.TRANSFORMS)
     transforms['MenuInventory']=lambda t:b.p.menu(t).replace('aiDiagnosticBuild:Boolean=false','aiDiagnosticBuild:Boolean=true')
     folder=OUT/('abc-'+str(len(list(OUT.glob('abc*')))+1).zfill(2))
@@ -67,7 +77,7 @@ def package():
     stream=io.BytesIO()
     with zipfile.ZipFile(stream,'w',zipfile.ZIP_DEFLATED) as z:
         for name,value in sorted(members.items()):z.writestr(name,value)
-    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r2-private.zip'
+    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r3-private.zip'
     if path.exists():raise ValueError('Preserve existing diagnostic archive')
     path.write_bytes(stream.getvalue())
     with zipfile.ZipFile(path) as z:

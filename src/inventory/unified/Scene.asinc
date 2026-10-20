@@ -97,35 +97,53 @@
       protected function aiConfigureRailIcons() : void
       {
          // Retain native tab icon artwork for the corresponding semantic groups.
-         var type:Class=getDefinitionByName("TabListItemRef") as Class;
          var labels:Array=["","WEAPONS","WEAPONS","POTIONS","POTIONS","DEFAULT","QUEST_ITEMS","INGREDIENTS"];
          var slots:Array=[0,InventorySlotType.SteelSword,InventorySlotType.Armor,InventorySlotType.Potion1,InventorySlotType.Petard1,InventorySlotType.Quickslot1,0,0];
          for(var i:int=1;i<8;i++)
          {
-            var source:SlotPaperdoll=slots[i]?mcPaperDollModule.mcPaperdoll.getRendererForSlotType(slots[i]) as SlotPaperdoll:null;
+            var operation:String="lookup";
+            try
+            {
+            aiEvidence("rail.icon",String(i)+" "+operation);
+            var source:SlotPaperdoll=slots[i] && mcPaperDollModule && mcPaperDollModule.mcPaperdoll?mcPaperDollModule.mcPaperdoll.getRendererForSlotType(slots[i]) as SlotPaperdoll:null;
             if(source && source.defaultIcon)
             {
                // Snapshot the actual native silhouette once at 4x rail resolution.
                // Keep native equipment targets in their original owner/parent.
+               operation="silhouette.bounds";
                var r:Rectangle=source.defaultIcon.getBounds(source.defaultIcon);
                if(r.width>0 && r.height>0)
                {
                   var factor:Number=160/Math.max(r.width,r.height);
+                  operation="silhouette.allocate";
                   var pixels:BitmapData=new BitmapData(Math.max(1,Math.ceil(r.width*factor)),Math.max(1,Math.ceil(r.height*factor)),true,0);
                   var transform:Matrix=new Matrix(factor,0,0,factor,-r.x*factor,-r.y*factor);
+                  operation="silhouette.draw";
                   pixels.draw(source.defaultIcon,transform,new ColorTransform(0,0,0,1,215,208,194,0),null,null,true);
                   var bitmap:Bitmap=new Bitmap(pixels,"auto",true);bitmap.scaleX=bitmap.scaleY=0.25;
+                  operation="silhouette.attach";
                   bitmap.x=34-bitmap.width/2;bitmap.y=43-bitmap.height/2;aiRail[i].addChild(bitmap);
                   continue;
                }
             }
-            var tab:Object=new type();
+            operation="tab.definition";
+            var type:Class=getDefinitionByName("TabListItemRef") as Class;
+            operation="tab.construct";var tab:Object=new type();
             // TabListItem.updateAfterStateChange dispatches on stage. The
             // native renderer must be attached BEFORE synchronous validation.
-            aiScene.addChild(tab);tab.visible=false;
-            tab.setData({icon:labels[i]});tab.validateNow();
+            operation="tab.attach";aiScene.addChild(tab);tab.visible=false;
+            operation="tab.data";tab.setData({icon:labels[i]});
+            operation="tab.validate";tab.validateNow();
+            operation="tab.icon";
             var icon:MovieClip=tab.mcIcon as MovieClip;
             if(icon) { aiRail[i].addChild(icon);icon.x=34;icon.y=43;icon.scaleX=icon.scaleY=0.48;icon.mouseEnabled=icon.mouseChildren=false; }
+            }
+            catch(iconError:Error)
+            {
+               // Optional artwork must never prevent native item enumeration,
+               // row ownership or details from initializing. Preserve labels.
+               aiEvidence("rail.icon.skipped",String(i)+" "+operation+" "+iconError.name+" #"+iconError.errorID+" "+iconError.message);
+            }
          }
       }
       protected function aiNeedsData(e:Event) : void { aiRefresh=true; }

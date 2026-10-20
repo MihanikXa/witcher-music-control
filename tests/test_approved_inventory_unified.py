@@ -77,6 +77,7 @@ class UnifiedInventory(unittest.TestCase):
         self.assertLess(ws.index('GetMemberFlashFunction("approvedDiagnostics")'),ws.index('GetMemberFlashFunction("approvedEnabled")'))
     def test_private_diagnostic_binary_and_script_pins_when_available(self):
         b=load('build-approved-inventory');out=ROOT/'build/approved-inventory-runtime-diagnostic'
+        if (ROOT/'build/approved-inventory-runtime-diagnostic-r3/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r3'
         if not (out/'receipt.json').exists():self.skipTest('Private diagnostic assets not available')
         d=json.loads((out/'receipt.json').read_text());source=(b.BASE/'prepared-inputs'/b.KEY).read_bytes();data=(out/'prepared-inputs'/b.KEY).read_bytes()
         native=b.b.b.m.b.font.native

@@ -11,6 +11,7 @@
          var line:String=String(getTimer())+" "+step+" "+detail;
          trace("ApprovedEvidence "+line);aiEvidenceLines.push(line);
          if(step=="script" && (detail.indexOf("owned=")==0 || detail.indexOf("publish=")==0))aiEvidenceSummary[detail.split("=")[0]]=detail;
+         if(step=="rail.icon.skipped" && !aiEvidenceSummary["iconFault"])aiEvidenceSummary["iconFault"]="FIRST OPTIONAL ICON FAULT: "+detail;
          if(aiEvidenceLines.length>18)aiEvidenceLines.shift();
          if(!aiDiagnosticText)
          {
@@ -18,7 +19,7 @@
             aiDiagnosticText.height=425;aiDiagnosticText.multiline=true;aiDiagnosticText.wordWrap=true;
             aiDiagnosticText.background=true;aiDiagnosticText.backgroundColor=0x111111;
          }
-         aiDiagnosticText.text="DIAGNOSTIC ONLY - F8 snapshot / overlay\n"+String(aiEvidenceSummary["owned"]||"")+"\n"+String(aiEvidenceSummary["publish"]||"")+"\n"+aiEvidenceLines.join("\n");
+         aiDiagnosticText.text="DIAGNOSTIC ONLY - F8 snapshot / overlay\n"+String(aiEvidenceSummary["iconFault"]||"")+"\n"+String(aiEvidenceSummary["owned"]||"")+"\n"+String(aiEvidenceSummary["publish"]||"")+"\n"+aiEvidenceLines.join("\n");
          setChildIndex(aiDiagnosticText,numChildren-1);
       }
       protected function aiData(value:Array) : void

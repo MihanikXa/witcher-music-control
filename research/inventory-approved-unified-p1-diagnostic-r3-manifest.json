@@ -1,0 +1,43 @@
+{
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "86394907411444998c7032a32b5f3c7ddd9552b47efbb5ea7197a0619df62bd7",
+  "zip_sha256": "d93bbbe558ee41cbdc12d1eea337b079355f48351774e8f004a9f4c2e861bd63",
+  "annotation_sha256": "5768901288270aaac4f2a139b7b6debf4f11b0fcd7fabf808117c04915b38bf7",
+  "native_cook_attempted": false,
+  "native_candidate_validated": false,
+  "game_execution": false,
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "version": "Unified P1 \u2014 diagnostic r3, optional-icon fault isolation",
+  "date": "2026-10-20",
+  "zip_path": "deploy/approved-inventory-runtime-diagnostic-r3/Approved-Inventory-P1-DIAGNOSTIC-r3-private.zip",
+  "compiled_classes": [
+    "MenuInventory"
+  ],
+  "runtime_evidence": {
+    "r2_first_failing_boundary": "rail.icons.begin -> TypeError #1009, before module.arrange",
+    "exact_operation": "not established; r3 pins per-operation error",
+    "screenshot_sha256": "12dd31d288e067c60accb0767aa666d220bb63a4e29ac08b756aace7dcf59993",
+    "dimensions": [
+      3840,
+      2160
+    ]
+  },
+  "targeted_tests": 12,
+  "reconstruction_controls_passed": true,
+  "runtime_status": "r3 smoke result pending; no item parity or equip success claimed",
+  "source_hashes": {
+    "src/inventory/unified/approvedInventory.ws": "5768901288270aaac4f2a139b7b6debf4f11b0fcd7fabf808117c04915b38bf7",
+    "src/inventory/unified/Details.asinc": "070d16a67e3fd7196e4784921fc8b1e8ef0159d6cd0e956a64cadc7a036db653",
+    "src/inventory/unified/Diagnostics.asinc": "c64ba5e81a2f42da4a34949c354b61e33aece0c4e4bc3a6723d5c7b7fb7ba515",
+    "src/inventory/unified/List.asinc": "a96da513736696938d0570f54a18362b937869220e71b15e4bec17919a4d516c",
+    "src/inventory/unified/Module.asinc": "9e15678cc13d9e8d18e77bf35429c062e3b85633e803f810c2c3386c08b368d1",
+    "src/inventory/unified/Row.asinc": "1e0253189e2b70da3983218d84a0847a5448dd875166ac8fbadd2a21fed7613d",
+    "src/inventory/unified/Scene.asinc": "50fe44890e18d0dd0452d1399878f758ed8ba3cb984b0ff4f23fcbc55deeccdb",
+    "tools/diagnose-approved-inventory.py": "6c5b68918e638794c32cc035643aab8ca81c418173926813d8e713dcdaf9f0b6",
+    "tools/build-approved-inventory-diagnostic.py": "dec646b394d275e431c7e6ec92383310ec09b27b8eb006d5056835382f1a61f5",
+    "tools/patch-approved-inventory.py": "aa74162268684d162cee434a3d0eaecf7f108194a866a77f9bd1584c6386e39d",
+    "tests/test_approved_inventory_unified.py": "adea688191f6abf1b9797b1d8f8e9ff8c67be68d2bc1de86adb99ed1ab8ec4ee"
+  }
+}

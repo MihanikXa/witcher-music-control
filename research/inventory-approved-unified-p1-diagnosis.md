@@ -1,7 +1,9 @@
 # Unified P1 — bounded failure diagnosis, 19–20 October 2026
 
-**Status: source-reproduced initialization defect; actual first game exception
-still requires the diagnostic trace. This is not a fixed/accepted release.**
+**Latest status, 20 October:** the user's r2 screenshot now confirms the first
+failing **method boundary**: `rail.icons.begin → TypeError #1009`, before
+`rail.icons.end` / module arrangement. Exact operation inside the icon method
+remains unconfirmed. See the runtime follow-up below. Not a fixed/accepted release.
 Authority: [user failure](inventory-approved-unified-p1-runtime-failure.md),
 [approved composition](../design/inventory-reference-accepted-review.md).
 No live game, deployment, settings, merge or save changes were performed.
@@ -219,3 +221,64 @@ are one navigation owner, real rows/details/IDs, successful ordinary native
 action, hidden orbit/grid, unobstructed Geralt, no hard rectangle and no recurrent
 flash. **None is marked passed by the offline checks.** Stop at this smoke gate;
 do not expand categories, Review, merchant or other features.
+
+## R2 actual runtime trace and bounded R3 follow-up — 20 October
+
+User-supplied 3840×2160 PNG SHA-256
+`12dd31d288e067c60accb0767aa666d220bb63a4e29ac08b756aace7dcf59993`;
+private unchanged copy: `build/approved-inventory-runtime-diagnosis-r3/user-r2-runtime-fault.png`.
+Visible trace:
+
+```text
+147 enabled true
+149 enabled true
+187 enter.begin
+189 rail.icons.begin
+189 FAULT TypeError #1009 Error #1009
+```
+
+This establishes an actual game exception inside the icon call, with no successful
+return to `aiArrange`. It does **not** establish that the off-stage validation
+hazard was the exact r2 instruction: r2 already attached fallback tabs first.
+Null paperdoll/list lookup state, native symbol construction/configuration or
+another operation inside that method remain candidates until operation evidence.
+Do not label this a proven item enumeration/filter failure. Item publication,
+custom selection and details request are all later in entry. The diagnostic's
+large black rectangle is its labeled temporary evidence overlay, not the removed
+background gradient or a final details panel.
+
+Read-only deployed verification matches **r2**, not the original P1:
+Inventory `modApprovedInventoryUnifiedP1` priority 11, SHA
+`23f6ce2c3cbaf972e207387a8a65c76f494cc155e8a9403a32d1a3fe8440dd03`;
+annotation SHA `5768901288270aaac4f2a139b7b6debf4f11b0fcd7fabf808117c04915b38bf7`.
+Menus v4 priority 14 / Hoods 16 remain losing Inventory owners. The annotation
+matches the r2 receipt (the audit's `release_exact:false` compares against the
+older original P1 annotation, not against r2). No installation defect is implied.
+
+R3 changes only icon handling / diagnostic presentation in `MenuInventory`: add nullable paperdoll-list
+guard; record category index and exact operation (`lookup`, silhouette bounds /
+allocation / draw / attach, tab definition / construction / attach / data /
+validation / icon extraction); catch/report failures **per optional ornament**.
+The first skipped-icon error stays pinned in the overlay, so later row/data
+messages cannot erase the evidence before the user takes a screenshot.
+An icon failure now preserves the rail label and returns control to functional
+module/list/details initialization. This is failure isolation, not a claim that
+an icon's internal cause is fixed or that the full Inventory now works. All
+category projection, row, details and native action code is unchanged from r2.
+The authored regression now also forces native symbol construction to throw
+for all seven entries and verifies seven diagnostic reports without aborting.
+
+R3 is compiled incrementally from the privately verified exact-v4-derived r2
+checkpoint; only `MenuInventory` changes in that compile. Same nine-class
+source-to-v4 map and unchanged non-code/compatibility controls remain required.
+Annotations are unchanged: reuse their exact successful compiler receipt, without
+another WitcherScript compile or native cook. Package reconstruction is explicitly
+diagnostic-only. R2/original ZIPs and live deployment remain intact.
+
+Next manual test: replace r2 with the r3 diagnostic (same mod subtree, never both
+enabled), same priority/save. Capture the overlay immediately; it should show
+`rail.icon.skipped <index> <operation> ...` where needed, then
+`module.arrange.begin/end`. If a later `FAULT` occurs, stop and supply it. If
+entry finishes, check one real sword row/details/action as above. No visual or
+functional acceptance is inferred from compilation. R3 receipt is
+`inventory-approved-unified-p1-diagnostic-r3-manifest.json`.
