@@ -1,12 +1,13 @@
       public var aiRow:Boolean = false;
       public static var aiDiagnostics:Boolean = false;
       public static var aiEventSequence:uint=0;
+      public static var aiSink:Function;
       protected var aiName:TextField;
       protected var aiType:TextField;
       protected var aiNumber:TextField;
       public var aiSignature:String = "";
       public static function aiLog(event:String, detail:String = "") : void
-      { if(aiDiagnostics) trace("ApprovedInventory " + (++aiEventSequence) + " @" + getTimer() + " " + event + " " + detail); }
+      { if(aiDiagnostics){trace("ApprovedInventory " + (++aiEventSequence) + " @" + getTimer() + " " + event + " " + detail);if(aiSink!=null)aiSink(event,detail);} }
       public function aiBind(value:ItemDataStub) : void
       {
          aiRow = true;

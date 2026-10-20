@@ -9,6 +9,7 @@
       { var r:SlotBase = getSelectedRenderer() as SlotBase; return r ? r.data : null; }
       public function aiEnable() : void
       {
+         SlotBase.aiLog("rows.enable.begin",String(_renderers.length));
          if(aiRows) return;
          aiGridBase = {cols:_columns,rows:_rows,cell:_gridSquareSize,height:_gridRenderHeight,visible:_numRowsVisible,bar:handleScrollBar,offset:_offset,cx:_canvas.x,cy:_canvas.y,barVisible:_scrollBar?_scrollBar.visible:false,highlight:_highlightCanvas?_highlightCanvas.visible:false};
          // Retain original native grid renderers separately for special-mode restore.
@@ -25,6 +26,16 @@
             r.aiRow = true; r.useContextMgr = true; r.validationBounds = null;
             _canvas.addChild(r); setupRenderer(r); r.visible = false; aiPool.push(r);
             SlotBase.aiLog("row-create",String(i));
+         }
+         SlotBase.aiLog("rows.enable.end",String(aiPool.length));
+      }
+      public function aiSnapshot() : void
+      {
+         SlotBase.aiLog("row-counts","items="+aiItems.length+" pool="+aiPool.length+" renderers="+_renderers.length+" top="+aiTop);
+         for each(var r:SlotBase in aiPool)
+         {
+            var rect:Rectangle=r.getBounds(stage);
+            SlotBase.aiLog("row-state","id="+(r.data?r.data.id:0)+" parent="+(r.parent?r.parent.name:"null")+" v="+r.visible+" a="+r.alpha+" selected="+r.selected+" stage="+rect.toString());
          }
       }
       public function aiDisable() : void
@@ -45,6 +56,7 @@
       { for(var i:int=0;i<aiItems.length;i++) if(uint(aiItems[i].id)==id) return i; return -1; }
       public function aiSetItems(items:Array, id:uint = 0, top:int = -1) : void
       {
+         SlotBase.aiLog("rows.items",String(items.length));
          var selected:Object = aiSelected();
          var previousAt:int=selected?aiIndex(uint(selected.id)):aiTop;
          if(!id && selected) id = uint(selected.id);

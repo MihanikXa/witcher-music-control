@@ -3,6 +3,19 @@
 ## Scope and authority
 Work only in the `ui-overhaul` branch of `MihanikXa/witcher-music-control`. Do not alter `main` or `general-merge`. The primary authority for runtime resources is the *installed* The Witcher 3 Remastered 5.01/REDkit version; downloaded font/name-color mods are references, not guaranteed compatibility.
 
+**20 October diagnostic receipt:** see
+[bounded Unified P1 diagnosis](research/inventory-approved-unified-p1-diagnosis.md).
+Released rail validation on an unattached native tab reproduces a null-stage
+failure in the authored-method negative control; the exact first in-game fault
+still requires the diagnostic trace. Native category renderers are confirmed
+external siblings (`InventoryGridRef` / `CoreList`), so hiding `mcTabList` alone
+was also insufficient. The private diagnostic fixes those boundaries, uses the
+native runtime tooltip asset provider, gates the inherited subdata alpha/data
+writer and records real item/selection/action evidence. No runtime acceptance
+or item parity is claimed. Do not expand features or redesign composition;
+next step is the user's short diagnostic smoke procedure. No automatic live
+installation, settings, merge or save edits.
+
 Do not modify the user's installed game, Vortex deployment/staging, Documents settings, saves or third-party packages without a separate, specific user authorization. Reading local files for research is permitted. Avoid blanket settings resets or regenerating the working merged scripts.
 
 ## Most recent Unified P1 user correction — 19 October 2026

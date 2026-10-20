@@ -46,10 +46,13 @@ def prepare():
     write(OUT/'prepared.json',dict(version='Adaptive Inventory v2 — Gear Prototype 1',key=KEY,input_sha256=expected,resource_sha256=b.m.b.audit.sha(data),changes=changes,changed_classes=changed,contracts=contracts,atlas=old.atlas.validate(data),non_code_and_textures_exact=True,hoods_classes_exact=True,runtime_tested=False))
     print('Prepared eight Inventory classes on accepted v4',flush=True)
 def native(): old.native(OUT)
-def reconstruct():
-    commands=json.loads((OUT/'native-commands.json').read_text())
-    if len(commands)!=1 or commands[0]['exit_code'] is not None:raise ValueError('Fallback only for bounded cook startup timeout')
-    if (OUT/'cook.full.log').stat().st_size or (OUT/'cook.stdout.log').stat().st_size:raise ValueError('Nonblank native diagnostics require investigation')
+def reconstruct(*, diagnostic_only=False):
+    # Explicit diagnostic packaging may reuse the same independently tested
+    # reconstruction without manufacturing a native timeout/validation receipt.
+    if not diagnostic_only:
+        commands=json.loads((OUT/'native-commands.json').read_text())
+        if len(commands)!=1 or commands[0]['exit_code'] is not None:raise ValueError('Fallback only for bounded cook startup timeout')
+        if (OUT/'cook.full.log').stat().st_size or (OUT/'cook.stdout.log').stat().st_size:raise ValueError('Nonblank native diagnostics require investigation')
     # Same-key reconstruction of an actual one-movie native bundle, including independent changed controls.
     def bundle(template,data):
         raw=template.read_bytes();entries=list(b.m.b.audit.entries(template))

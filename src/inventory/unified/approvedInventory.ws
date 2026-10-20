@@ -6,6 +6,16 @@
 @addField(W3PlayerWitcher) var aiApprovedTrace : bool;
 
 @addMethod(CR4InventoryMenu)
+function AiApprovedEvidence(message : string)
+{
+    var callback : CScriptedFlashFunction;
+    if (!GetWitcherPlayer().aiApprovedTrace || !GetMenuFlash()) return;
+    callback=GetMenuFlash().GetMemberFlashFunction("approvedEvidence");
+    if(callback)callback.InvokeSelfOneArg(FlashArgString(message));
+    LogChannel('ApprovedInventory',message);
+}
+
+@addMethod(CR4InventoryMenu)
 function AiApprovedEnable(on : bool)
 {
     var callback : CScriptedFlashFunction;
@@ -17,6 +27,9 @@ function AiApprovedEnable(on : bool)
     }
     if (GetMenuFlash())
     {
+        callback = GetMenuFlash().GetMemberFlashFunction("approvedDiagnostics");
+        if(callback)callback.InvokeSelfOneArg(FlashArgBool(GetWitcherPlayer().aiApprovedTrace));
+        AiApprovedEvidence("AiApprovedEnable on="+on+" state="+_defaultInventoryState+" tags="+m_tagsFilter.Size());
         callback = GetMenuFlash().GetMemberFlashFunction("approvedEnabled");
         if (callback) callback.InvokeSelfOneArg(FlashArgBool(on));
     }
@@ -79,9 +92,11 @@ function OnApprovedRefresh()
     var data : CScriptedFlashArray;
     var obj : CScriptedFlashObject;
     var holder : CScriptedFlashObject;
-    var i,j : int;
+    var i,j,published,nativeCount,equippedCount : int;
     var eligible : bool;
+    var nativeEligibility : string;
     var callback : CScriptedFlashFunction;
+    AiApprovedEvidence("refresh.request active="+aiApprovedActive+" busy="+aiApprovedBusy);
     if (!aiApprovedActive || aiApprovedBusy || !_playerInv) return;
     aiApprovedBusy = true;
     callback=GetMenuFlash().GetMemberFlashFunction("approvedDiagnostics");
@@ -91,11 +106,27 @@ function OnApprovedRefresh()
     filters.PushBack(IFT_Default); filters.PushBack(IFT_AlchemyItems);
     filters.PushBack(IFT_Weapons); filters.PushBack(IFT_Books);
     _inv.GetAllItems(items);
+    AiApprovedEvidence("owned="+items.Size()+" filter.before="+previous);
     data = m_flashValueStorage.CreateTempFlashArray();
     holder = m_flashValueStorage.CreateTempFlashObject();
     _playerInv.aiApprovedProbe = true;
     for (i=0; i<items.Size(); i+=1)
     {
+        if(GetWitcherPlayer().IsItemEquipped(items[i]))equippedCount+=1;
+        if(GetWitcherPlayer().aiApprovedTrace)
+        {
+            // Read-only negative control: actual native eligibility without the
+            // equipped-inclusion probe, against the original active filter.
+            _playerInv.aiApprovedProbe=false;_playerInv.SetFilterType(previous);
+            if(_playerInv.ShouldShowItem(items[i]))nativeCount+=1;
+            nativeEligibility="";
+            for(j=0;j<filters.Size();j+=1)
+            {
+                _playerInv.SetFilterType(filters[j]);
+                nativeEligibility+=" "+j+":"+_playerInv.ShouldShowItem(items[i]);
+            }
+            _playerInv.aiApprovedProbe=true;
+        }
         eligible = false;
         for (j=0; j<filters.Size(); j+=1)
         {
@@ -107,10 +138,13 @@ function OnApprovedRefresh()
             obj = holder.CreateFlashObject("red.game.witcher3.menus.common.ItemDataStub");
             _playerInv.SetInventoryFlashObjectForItem(items[i],obj);
             data.PushBackFlashObject(obj);
+            published+=1;
         }
+        AiApprovedEvidence("item="+ItemToFlashUInt(items[i])+" equipped="+GetWitcherPlayer().IsItemEquipped(items[i])+" eligible="+eligible+" group="+_playerInv.AiApprovedGroup(items[i])+" native.filters="+nativeEligibility);
     }
     _playerInv.aiApprovedProbe = false;
     _playerInv.SetFilterType(previous);
+    AiApprovedEvidence("publish="+published+" equipped="+equippedCount+" native.current-filter="+nativeCount+" filter.restored="+_playerInv.GetFilterType()+" probe="+_playerInv.aiApprovedProbe);
     m_flashValueStorage.SetFlashArray("inventory.approved.items",data);
     aiApprovedBusy = false;
 }
@@ -124,6 +158,7 @@ function InventoryRemoveItem(item : SItemUniqueId, optional keepSelectionIdx : b
 @wrapMethod(W3InventoryGridContext)
 function execurePrimaryAction() : void
 {
+    if(invMenuRef)invMenuRef.AiApprovedEvidence("primary id="+ItemToFlashUInt(currentItemId)+" focus="+invMenuRef.aiApprovedFocus);
     if(invMenuRef && invMenuRef.aiApprovedActive && invMenuRef.aiApprovedFocus!=1)return;
     if (invMenuRef && invMenuRef.aiApprovedActive && invComponentRef && invComponentRef.IsIdValid(currentItemId)
         && GetWitcherPlayer().IsItemEquipped(currentItemId)
@@ -179,11 +214,13 @@ function OnApprovedMode(mode : int)
 function OnApprovedDetails(item : SItemUniqueId, serial : int)
 {
     var payload : CScriptedFlashObject;
+    AiApprovedEvidence("details id="+ItemToFlashUInt(item)+" serial="+serial+" valid="+_inv.IsIdValid(item));
     if(!aiApprovedActive || !_inv.IsIdValid(item))return;
     _tooltipDataProvider.setCurrentInventory(GetCurrentInventory(item));
     payload=_tooltipDataProvider.GetTooltipData(item,_currentInv==_shopInv,true);
     payload.SetMemberFlashInt("aiRequestSerial",serial);
     m_flashValueStorage.SetFlashObject("context.tooltip.data",payload);
+    AiApprovedEvidence("details.published serial="+serial);
 }
 
 exec function approvedInventoryTrace(on : bool)

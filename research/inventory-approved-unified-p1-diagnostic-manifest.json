@@ -1,0 +1,62 @@
+{
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "23f6ce2c3cbaf972e207387a8a65c76f494cc155e8a9403a32d1a3fe8440dd03",
+  "zip_path": "deploy/approved-inventory-runtime-diagnostic/Approved-Inventory-P1-DIAGNOSTIC-r2-private.zip",
+  "zip_sha256": "7d2132335c0893da71eb2578d0a1f91ad885a7900debb10984af3f196731bccf",
+  "annotation_sha256": "5768901288270aaac4f2a139b7b6debf4f11b0fcd7fabf808117c04915b38bf7",
+  "native_cook_attempted": false,
+  "native_candidate_validated": false,
+  "game_execution": false,
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "version": "Unified P1 \u2014 diagnostic smoke proof r2",
+  "date": "2026-10-20",
+  "changed_classes": [
+    "SlotBase",
+    "SlotInventoryGrid",
+    "SlotsListBase",
+    "SlotsListGrid",
+    "InventoryTabbedListModule",
+    "ModulePaperdoll",
+    "ContextInfoManager",
+    "TooltipInventory",
+    "MenuInventory"
+  ],
+  "script_controls": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "238f6bdbc59b1247b4a0ecbc1d41f113802b99a10f047ca72354c6a8f852e882"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "0e3dba61b518647caed8774209335f3ca542128b7a69d8faea4c7941c913e007"
+    }
+  ],
+  "reconstruction_controls_passed": true,
+  "targeted_tests": 12,
+  "runtime_status": "pending user trace; not a corrected/accepted release",
+  "runtime_failure_image": {
+    "sha256": "fa59fa05785e0e178fd9d86bd1af91f9e8b6678dc72979841361157e61d0ae41",
+    "dimensions": [
+      2048,
+      1152
+    ]
+  },
+  "source_hashes": {
+    "src/inventory/unified/approvedInventory.ws": "5768901288270aaac4f2a139b7b6debf4f11b0fcd7fabf808117c04915b38bf7",
+    "src/inventory/unified/Details.asinc": "070d16a67e3fd7196e4784921fc8b1e8ef0159d6cd0e956a64cadc7a036db653",
+    "src/inventory/unified/Diagnostics.asinc": "6f938e947458f6a67b2fb1f9ad8eb4b466ce4ef5b2bb46125b869c6a04d5a32e",
+    "src/inventory/unified/List.asinc": "a96da513736696938d0570f54a18362b937869220e71b15e4bec17919a4d516c",
+    "src/inventory/unified/Module.asinc": "9e15678cc13d9e8d18e77bf35429c062e3b85633e803f810c2c3386c08b368d1",
+    "src/inventory/unified/Row.asinc": "1e0253189e2b70da3983218d84a0847a5448dd875166ac8fbadd2a21fed7613d",
+    "src/inventory/unified/Scene.asinc": "adfded12419bf711cf1bf2ba5284fac0e3ba1506c898f7079ad1ed385db353fc",
+    "tools/diagnose-approved-inventory.py": "75b58d31bfa859d07232c974aec7fc913b95e5dea6f8da9763945935027ab104",
+    "tools/build-approved-inventory-diagnostic.py": "9766f1f48c7239c04c2ee4c4c3561a889dfca9e468906fb6e5b44e68b4625350",
+    "tools/patch-approved-inventory.py": "aa74162268684d162cee434a3d0eaecf7f108194a866a77f9bd1584c6386e39d",
+    "tools/build-adaptive-inventory.py": "6e2794cae03186c290eed3e043435a38b3121f42f23655936424f8e431272b03",
+    "tests/test_approved_inventory_unified.py": "ee872e29c6e1aa7e3c819af3c9a79cfb78fb17d3063fca067f44bb897146c316"
+  }
+}

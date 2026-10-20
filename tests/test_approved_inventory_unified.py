@@ -39,11 +39,53 @@ class UnifiedInventory(unittest.TestCase):
         self.assertIn('event.currentTarget!=_imageLoader',p.slot(p.ROOT.joinpath('build/adaptive-inventory-v2-p1/before/scripts/red/game/witcher3/slots/SlotBase.as').read_text(encoding='utf-8-sig')))
     def test_candidate_and_control_compiler_receipt(self):
         b=load('build-approved-inventory');d=json.loads(b.COMPILER.read_text())
-        self.assertEqual(d['source_sha256'],b.sha(b.SCRIPT));self.assertEqual([x['exit_code'] for x in d['results']],[0,0])
+        # Historical release receipt does not validate subsequent diagnostic edits.
+        import zipfile,hashlib
+        with zipfile.ZipFile(b.DEPLOY/'Approved-Inventory-Unified-P1-private.zip') as z:
+            released=z.read('Mods/modApprovedInventoryUnifiedP1/content/scripts/local/approvedInventory.ws')
+        self.assertEqual(d['source_sha256'],hashlib.sha256(released).hexdigest());self.assertEqual([x['exit_code'] for x in d['results']],[0,0])
         self.assertEqual(d['results'][0]['warnings'],d['results'][1]['warnings'])
     def test_tick_has_no_allocation_or_layout_rebuild(self):
         p=load('patch-approved-inventory');src=(ROOT/'src/inventory/unified/Scene.asinc').read_text();a,z=p.p.trace.body_span(src,'protected function aiTick(')
         body=src[a:z]
         for token in ('new Sprite','cleanup','aiArrange','aiSetItems','aiPresent','aiPaintRail'):
             self.assertNotIn(token,body)
+    def test_native_tab_offstage_negative_control(self):
+        r=load('diagnose-approved-inventory').regression()
+        self.assertEqual(r['native_dispatches'],7);self.assertFalse(r['game_execution'])
+    def test_native_delayed_subdata_writer_is_scoped(self):
+        p=load('patch-approved-inventory');module=(ROOT/'src/inventory/unified/Module.asinc').read_text()
+        a,z=p.p.trace.body_span(module,'override protected function updateSubData(')
+        body=module[a:z]
+        self.assertLess(body.index('if(aiModuleBase)'),body.index('super.updateSubData(index)'))
+        native=next((ROOT/'build/adaptive-inventory-v2-p1/before/scripts').rglob('TabbedScrollingListModule.as')).read_text(encoding='utf-8-sig')
+        a,z=p.p.trace.body_span(native,'protected function updateSubData(')
+        self.assertIn('targetUIComponent.alpha = 0',native[a:z]);self.assertIn('GTweener.to(targetUIComponent',native[a:z])
+        core=next((ROOT/'build/adaptive-inventory-v2-p1/before/scripts').rglob('CoreList.as')).read_text(encoding='utf-8-sig')
+        self.assertIn('clip = parent.getChildByName(value + i)',core)
+        self.assertIn('aiModuleBase.tabParking.addChild(parked.tab)',module)
+        self.assertLess(module.index('tabsSaved.push'),module.index('for each(var parked:Object'))
+        inventory_symbol=next((ROOT/'build/adaptive-inventory-v2-p1/before/scripts').rglob('InventoryGridRef.as')).read_text(encoding='utf-8-sig')
+        self.assertIn('mcTabList.itemRendererInstanceName = "mcTabListItem"',inventory_symbol)
+        self.assertIn('saved.parent.addChildAt(saved.tab',module)
+    def test_diagnostics_cover_init_before_refresh_and_keep_native_asset_owner(self):
+        scene=(ROOT/'src/inventory/unified/Scene.asinc').read_text();ws=(ROOT/'src/inventory/unified/approvedInventory.ws').read_text()
+        self.assertIn('RuntimeAssetsManager.getInstanse().getAsset("ItemTooltipRef_mouse")',scene)
+        self.assertIn('if(!RuntimeAssetsManager.getInstanse().isLoaded)return',scene)
+        self.assertIn('catch(error:Error)',scene)
+        self.assertNotIn('drawRect(0,115,1920,850)',scene)
+        self.assertLess(ws.index('GetMemberFlashFunction("approvedDiagnostics")'),ws.index('GetMemberFlashFunction("approvedEnabled")'))
+    def test_private_diagnostic_binary_and_script_pins_when_available(self):
+        b=load('build-approved-inventory');out=ROOT/'build/approved-inventory-runtime-diagnostic'
+        if not (out/'receipt.json').exists():self.skipTest('Private diagnostic assets not available')
+        d=json.loads((out/'receipt.json').read_text());source=(b.BASE/'prepared-inputs'/b.KEY).read_bytes();data=(out/'prepared-inputs'/b.KEY).read_bytes()
+        native=b.b.b.m.b.font.native
+        self.assertEqual([c['tail'] for c in native.chunks(source)[1:]],[c['tail'] for c in native.chunks(data)[1:]])
+        self.assertTrue(all(c['crc_valid'] for c in native.chunks(data)))
+        self.assertEqual(b.sha(b.SCRIPT),d['annotation_sha256'])
+        self.assertEqual(b.sha(Path(d['zip_path'])),d['zip_sha256'])
+        after=Path(d['abc'])/'after/scripts'
+        for name in ('SlotPaperdoll','ItemDataStub','RuntimeAssetsManager','CharacterRendererController','ModuleInputFeedback'):
+            self.assertEqual(b.gate.one(name).read_bytes(),next(after.rglob(name+'.as')).read_bytes())
+        self.assertFalse(d['native_candidate_validated']);self.assertFalse(d['game_execution'])
 if __name__=='__main__':unittest.main()

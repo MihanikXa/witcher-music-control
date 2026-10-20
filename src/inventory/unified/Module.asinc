@@ -1,4 +1,11 @@
       protected var aiModuleBase:Object;
+      override protected function updateSubData(index:int) : void
+      {
+         // The inherited owner writes data/selection and starts a 0->1 alpha
+         // tween on the grid. Only the projection owns this in unified mode.
+         if(aiModuleBase){SlotBase.aiLog("native.subdata.blocked",String(index));mcPlayerGrid.aiNeedData();return;}
+         super.updateSubData(index);
+      }
       public function aiArrange() : void
       {
          if(aiModuleBase)return;
@@ -8,6 +15,22 @@
          var bounds:Rectangle=maskClip.getBounds(this);
          maskClip.x+=365-bounds.x;maskClip.y+=200-bounds.y;
          mcListContainer.x=365;mcListContainer.y=200;mcPlayerGrid.x=mcPlayerGrid.y=0;
+         // CoreList's external renderers are siblings found on parent, not
+         // necessarily descendants of mcTabList. Native ShowRenderers(true)
+         // must not reactivate them while this module owns the presentation.
+         aiModuleBase.tabsSaved=[];aiModuleBase.tabParking=new Sprite();
+         aiModuleBase.tabParking.name="approvedNativeTabsParking";
+         aiModuleBase.tabParking.visible=false;addChild(aiModuleBase.tabParking);
+         for(var i:int=0;i<mcTabList.numRenderers;i++)
+         {
+            var tab:DisplayObject=mcTabList.getRendererAt(i) as DisplayObject;
+            if(tab && tab.parent)
+            {
+               aiModuleBase.tabsSaved.push({tab:tab,parent:tab.parent,index:tab.parent.getChildIndex(tab),visible:tab.visible,x:tab.x,y:tab.y});
+            }
+         }
+         for each(var parked:Object in aiModuleBase.tabsSaved)aiModuleBase.tabParking.addChild(parked.tab);
+         SlotBase.aiLog("tabs.parked",String(aiModuleBase.tabsSaved.length));
          txtTitle.visible=mcTabList.visible=false;
          if(_sectionTitlesContainer)_sectionTitlesContainer.visible=false;
          graphics.clear();mcPlayerGrid.aiEnable();
@@ -20,6 +43,13 @@
          maskClip.x=aiModuleBase.mx;maskClip.y=aiModuleBase.my;maskClip.width=aiModuleBase.mw;maskClip.height=aiModuleBase.mh;
          mcListContainer.x=aiModuleBase.cx;mcListContainer.y=aiModuleBase.cy;mcPlayerGrid.x=aiModuleBase.gx;mcPlayerGrid.y=aiModuleBase.gy;
          txtTitle.visible=aiModuleBase.title;mcTabList.visible=aiModuleBase.tabs;
+         aiModuleBase.tabsSaved.sortOn("index",Array.NUMERIC);
+         for each(var saved:Object in aiModuleBase.tabsSaved)
+         {
+            saved.parent.addChildAt(saved.tab,Math.min(saved.index,saved.parent.numChildren));
+            saved.tab.x=saved.x;saved.tab.y=saved.y;saved.tab.visible=saved.visible;
+         }
+         removeChild(aiModuleBase.tabParking);
          if(_sectionTitlesContainer)_sectionTitlesContainer.visible=aiModuleBase.sections;
          aiModuleBase=null;iaiDrawTabs();
       }

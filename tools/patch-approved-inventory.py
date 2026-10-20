@@ -14,7 +14,8 @@ def scoped(t,sig,old,new):
     a,z=p.trace.body_span(t,sig);return t[:a]+p.one(t[a:z],old,new)+t[z:]
 def menu(t):
     t=imports(t,'red.game.witcher3.slots.SlotsListGrid','red.game.witcher3.constants.InventorySlotType','red.game.witcher3.menus.common.ItemDataStub','flash.geom.Matrix','flash.geom.ColorTransform','flash.display.Bitmap','flash.display.BitmapData','flash.display.Shape','scaleform.clik.events.ListEvent','scaleform.clik.ui.InputDetails','scaleform.clik.constants.InputValue','scaleform.clik.constants.NavigationCode','scaleform.clik.core.InputDelegate','red.game.witcher3.events.ControllerChangeEvent')
-    t=p.add(t,'MenuInventory',code('Scene.asinc'))
+    t=imports(t,'red.game.witcher3.managers.RuntimeAssetsManager')
+    t=p.add(t,'MenuInventory',code('Scene.asinc')+'\n'+code('Diagnostics.asinc'))
     t=p.prefix(t,'public function setInventoryMode(value:int)','         if(aiActive && value==IMS_Player)return;\n         if(value!=IMS_Player)aiLeave();')
     t=p.prefix(t,'protected function iaiTick(e:Event)','         if(aiActive){aiTick();return;}')
     t=p.append(t,'protected function iaiTick(e:Event)','         aiTick();')
@@ -95,7 +96,7 @@ def grid(t):
     t=p.prefix(t,'public function handleInputNavSimple(', '         if(aiRows)return;') if 'public function handleInputNavSimple(' in t else t
     return t
 def module(t):
-    t=imports(t,'flash.geom.Rectangle')
+    t=imports(t,'flash.geom.Rectangle','flash.display.Sprite','flash.display.DisplayObject')
     t=p.add(t,'InventoryTabbedListModule',code('Module.asinc'))
     for sig in ('protected function iaiDrawTabs(', 'protected function iaiClampTabs(', 'override protected function onTabListItemSelected(', 'public function setItemSections('):
         t=p.prefix(t,sig,'         if(aiModuleBase)return;')
