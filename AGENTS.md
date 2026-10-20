@@ -1,5 +1,8 @@
 # Codex instructions — Witcher Music Control
 
+**Negative user main-menu logger test (report97, 2026-10-20):** User reports **no `scriptslog.txt` at the configured path** after the report96 manual logger-only main-menu probe. Observer was **not installed**; this is not a failed script observer test, nor proof `LogChannel` is disabled. User advised to restore original `general.ini` (if needed), **not install diagnostic or launch game again yet**. Current next task is a strictly **read-only source/config/startup-guard/path audit** of DX12 logger activation and one grounded next test, if justified. Prior report96 Trigger/MusicStinger request is unsafe (combat/outro overlap and stale/cancel failures) and must remain disconnected. [Follow-up](research/97-retail-logger-negative-smoke-followup.md).
+
+
 **Current results (2026-10-19; report96):** Native DX12 `LogChannel` file route is source-traced (writable callback startup binding, `[Scripts]` settings, configured directory + `scriptslog.txt`); **retail delivery remains unverified**. Unchanged compiled observer ZIP is preserved: **do not install it yet**. Local staged/rollback `general.ini` and a privacy-filtered read-only checker support one optional **user-operated main-menu-only logger probe**, no save load. No game/config/Vortex changes performed. One local Trigger/MusicStinger starts exact S04-a PCM, but **fails combat/outro protection, dialogue request expiry and targeted cancellation**; reject it as a gateway.289 tests pass; all24 cues/native/release/source pins preserved; authoring stopped. No new bank, controller, global definition or deployment. See [report96](research/96-interface-prerequisites-results.md). **STOP for user logger result/review; do not connect the contextual model to audio.**
 
 
