@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "matched_diagnostics": true,
+  "installed": false,
+  "retail_validated": false,
+  "source_sha256": "4df1b9b7d83b653ab2ef56c9535ef492ad6868bad5a85361ace51e32a15dc81b",
+  "installed_inputs_unchanged": true,
+  "ready_for_optional_manual_test": true,
+  "archive_sha256": "7d7215b4bf5eea0fc025802ccb1fb379312a4f74ed6f2c063c96ecbf427f6dfc",
+  "archive_member": "modWMCVisualSmoke/content/scripts/local/wmcVisualSmoke.ws",
+  "baseline": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "a45fd60ae8f7dc9493852e885f43d80026ab0f0556db00d0ee85688e746aa678",
+    "source_sha256": null,
+    "diagnostic_counts": {
+      "[Error][Assert]": 20893,
+      "[Warning]": 784,
+      "[Error][Script]": 0,
+      "[Error][WCC]": 0
+    },
+    "diagnostic_total": 21695,
+    "all_diagnostic_categories": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20893,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "matched_control": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "c8b18cf5e155e180891cbe5bbc1316353fce9266ab41acae4ffc61600e51ffa5",
+    "source_sha256": "ad4fbd00555392751e6c24a83d680ed76494bc07982bfece4c6f4fe5f14e936b",
+    "diagnostic_counts": {
+      "[Error][Assert]": 20897,
+      "[Warning]": 784,
+      "[Error][Script]": 0,
+      "[Error][WCC]": 0
+    },
+    "diagnostic_total": 21699,
+    "all_diagnostic_categories": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20897,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "candidate": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "0aa723490ab9671cc1c0695599933229b94e5c80e87ae7ba269353f101a00c96",
+    "source_sha256": "4df1b9b7d83b653ab2ef56c9535ef492ad6868bad5a85361ace51e32a15dc81b",
+    "diagnostic_counts": {
+      "[Error][Assert]": 20897,
+      "[Warning]": 784,
+      "[Error][Script]": 0,
+      "[Error][WCC]": 0
+    },
+    "diagnostic_total": 21699,
+    "all_diagnostic_categories": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20897,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "user_observed_argv": {
+    "source": "user supplied PowerShell result after report100",
+    "Status": "Observed",
+    "executable_kind": "installed DX12 witcher3.exe",
+    "DebugScriptsSubstringPresent": true
+  },
+  "failed_first_build": {
+    "root": "build/visual-smoke-v1",
+    "reason": "const global receiver field assignments rejected; no package",
+    "candidate_exit": 1
+  }
+}
