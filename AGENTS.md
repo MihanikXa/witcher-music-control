@@ -2,6 +2,15 @@
 
 ## Scope and authority
 
+**21 October gamepad failure / r5 correction:** user confirms equip/unequip
+generally but explicitly says gamepad cannot equip/unequip, navigation/focus is
+confusing and contextual actions fail. The stats screenshot's white block matches
+the detached custom mask Shape. See [r5 input stability](research/inventory-approved-unified-p1-r5-input-stability.md).
+R5 corrects native tracker priority, D-pad/arrow ownership, projection-based module
+eligibility, late list focus, visible active-region cues and stats mask lifetime.
+Native actions/modals are preserved. Offline tests/compiler controls are not
+gamepad acceptance; next is the short native action/navigation/stats return test.
+
 **20 October r4 actual runtime evidence:** real rows/details now display in
 Weapons and Other. User overlay shows owned=50, published=38, binding=38,
 equipped=9, restored Weapons filter and probe=false. Both equipped starter

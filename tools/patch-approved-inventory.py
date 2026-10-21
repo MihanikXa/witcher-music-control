@@ -28,13 +28,14 @@ def menu(t):
             if(value==0)mcPlayerInventory.focused=1;
             return;
          }''')
-    t=p.append(t,'private function sortingModeClosed()', '         if(aiActive)aiMode(aiFocus);')
+    t=p.append(t,'private function sortingModeClosed()', '         if(aiActive)aiMode(aiFocus,true);')
     t=p.append(t,'private function handleCharStatsShown(', '''
          if(aiActive)
          {
             InputFeedbackManager.removeButton(this,89101);
             InputFeedbackManager.removeButton(this,89102);
             InputFeedbackManager.removeButton(this,89103);
+            InputFeedbackManager.removeButton(this,89104);
          }''')
     t=p.append(t,'private function handleCharStatHidden(', '''
          if(aiActive)
@@ -42,7 +43,7 @@ def menu(t):
             aiDevice(null);
             if(_btn_sort_id!=-1)InputFeedbackManager.removeButton(this,_btn_sort_id);
             _btn_sort_id=InputFeedbackManager.appendButton(this,NavigationCode.GAMEPAD_RSTICK_HOLD,KeyCode.F,"panel_button_common_sort_items");
-            aiMode(aiFocus);
+            aiMode(aiFocus,true);
          }''')
     t=p.prefix(t,'private function handleSortClick(', '         if(aiActive){aiSortCurrent();return;}')
     t=p.prefix(t,'protected function iaiSortContainer(mode:int)','         if(aiActive){mcPlayerInventory.mcPlayerGrid.setCurrentSort(mode);aiSortCurrent();return;}')
@@ -98,6 +99,7 @@ def grid(t):
 def module(t):
     t=imports(t,'flash.geom.Rectangle','flash.display.Sprite','flash.display.DisplayObject')
     t=p.add(t,'InventoryTabbedListModule',code('Module.asinc'))
+    t=p.prefix(t,'override public function hasSelectableItems()', '         if(aiModuleBase)return mcPlayerGrid.data && mcPlayerGrid.data.length>0;')
     for sig in ('protected function iaiDrawTabs(', 'protected function iaiClampTabs(', 'override protected function onTabListItemSelected(', 'public function setItemSections('):
         t=p.prefix(t,sig,'         if(aiModuleBase)return;')
     for sig in ('protected function handleItemUpdate(', 'protected function handleItemsUpdate('):

@@ -33,7 +33,7 @@ function AiApprovedEnable(on : bool)
     aiApprovedActive = on;
     if (!on)
     {
-        RemoveGFxButtonById(89101); RemoveGFxButtonById(89102); RemoveGFxButtonById(89103);
+        RemoveGFxButtonById(89101); RemoveGFxButtonById(89102); RemoveGFxButtonById(89103); RemoveGFxButtonById(89104);
         if(GetCommonMenu()) GetCommonMenu().UpdateGFxButtons(m_GFxInputBindings,true);
     }
     if (GetMenuFlash())
@@ -170,7 +170,7 @@ function InventoryRemoveItem(item : SItemUniqueId, optional keepSelectionIdx : b
 @wrapMethod(W3InventoryGridContext)
 function execurePrimaryAction() : void
 {
-    if(invMenuRef)invMenuRef.AiApprovedEvidence("primary id="+ItemToFlashUInt(currentItemId)+" focus="+invMenuRef.aiApprovedFocus);
+    if(invMenuRef)invMenuRef.AiApprovedStatus("primary id="+ItemToFlashUInt(currentItemId)+" focus="+invMenuRef.aiApprovedFocus);
     if(invMenuRef && invMenuRef.aiApprovedActive && invMenuRef.aiApprovedFocus!=1)return;
     if (invMenuRef && invMenuRef.aiApprovedActive && invComponentRef && invComponentRef.IsIdValid(currentItemId)
         && GetWitcherPlayer().IsItemEquipped(currentItemId)
@@ -205,7 +205,12 @@ event OnApprovedMode(mode : int)
     aiApprovedFocus=mode;
     AiApprovedStatus("mode="+mode);
     if(m_currentContext)m_currentContext.UpdateContext();
-    RemoveGFxButtonById(89101); RemoveGFxButtonById(89102); RemoveGFxButtonById(89103);
+    RemoveGFxButtonById(89101); RemoveGFxButtonById(89102); RemoveGFxButtonById(89103); RemoveGFxButtonById(89104);
+    if(mode==0)
+    {
+        b.ActionID=89104;b.Gamepad_NavCode="enter-gamepad_A";b.Keyboard_KeyCode=IK_Space;
+        b.LocalizationKey="Browse";b.IsLocalized=true;m_GFxInputBindings.PushBack(b);
+    }
     b.ActionID=89101; b.Gamepad_NavCode="gamepad_L3"; b.Keyboard_KeyCode=IK_Tab;
     b.LocalizationKey="Equipment"; b.IsLocalized=true;
     m_GFxInputBindings.PushBack(b);

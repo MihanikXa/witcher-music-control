@@ -51,8 +51,9 @@
       protected function aiPaintRow(g:Graphics, r:Rectangle, k:Number, sel:Boolean, flags:int) : void
       {
          sel=selected; // v4 globally suppresses native grid highlight; rows own it.
-         g.lineStyle(1.2 * k,sel ? 0xCAA469 : 0x565650,sel ? 1 : 0.45,true,"none");
-         g.beginFill(sel ? 0x30291E : 0x111112,sel ? 0.32 : 0.12);
+         var active:Boolean=sel && activeSelectionEnabled;
+         g.lineStyle(1.2 * k,active ? 0xCAA469 : 0x565650,active ? 1 : 0.45,true,"none");
+         g.beginFill(active ? 0x30291E : 0x111112,active ? 0.32 : 0.12);
          g.drawRoundRect(0,0,338,90,3,3); g.endFill(); g.lineStyle();
          if((flags & 4) != 0)
          {

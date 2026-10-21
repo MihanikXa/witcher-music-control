@@ -1,0 +1,49 @@
+{
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "4841bf72b96a656801e01fe069355d11ce40b20c5cfbb8c0a28d718ed7fa5555",
+  "zip_sha256": "2420ef2a564ddef513a9ec402e9d99d4ae7a01dd3ccc6cdd31702fcee70b5f5e",
+  "annotation_sha256": "e7184cac1e6c504be84079263c037e0938082da5ceebebc2ae08797ff115700c",
+  "compiled_classes": [
+    "SlotBase",
+    "InventoryTabbedListModule",
+    "MenuInventory"
+  ],
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "version": "Unified P1 diagnostic r5 \u2014 input, focus and stats mask",
+  "date": "2026-10-21",
+  "zip_path": "deploy/approved-inventory-runtime-diagnostic-r5/Approved-Inventory-P1-DIAGNOSTIC-r5-private.zip",
+  "native_cook_attempted": false,
+  "native_candidate_validated": false,
+  "game_execution": false,
+  "targeted_tests": 14,
+  "reconstruction_controls_passed": true,
+  "runtime_status": "r4 rows/details and general equip observed; r5 gamepad/focus/mask corrections require user runtime test",
+  "screenshot_sha256": "27aa0cdf2ac24d463f171be4be4cc3037c56bd2fa6bb8295956b7d1038682495",
+  "script_controls": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "ccfcbb60dc476ef6d385bb45d0c96a2d0f1af51ad8c47d7af60d51de6816862f"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "5aa28c824ad5511efc3166a8781050c4f18a2b933a4dd8849ed44ccfb70548bb"
+    }
+  ],
+  "source_hashes": {
+    "src/inventory/unified/approvedInventory.ws": "e7184cac1e6c504be84079263c037e0938082da5ceebebc2ae08797ff115700c",
+    "src/inventory/unified/Details.asinc": "070d16a67e3fd7196e4784921fc8b1e8ef0159d6cd0e956a64cadc7a036db653",
+    "src/inventory/unified/Diagnostics.asinc": "ab4cb933b6615fa817af93a323f77f87f98cddd625f90554f88041896e340628",
+    "src/inventory/unified/List.asinc": "a96da513736696938d0570f54a18362b937869220e71b15e4bec17919a4d516c",
+    "src/inventory/unified/Module.asinc": "9e15678cc13d9e8d18e77bf35429c062e3b85633e803f810c2c3386c08b368d1",
+    "src/inventory/unified/Row.asinc": "e5e0f2671b0612a9079d7b9827dc932f7bfc72e5d18bf50a5162a203640871f4",
+    "src/inventory/unified/Scene.asinc": "310b230724e0b2249feb707809d2e74171e4a4560861a305b41eb95d6b6ccd66",
+    "tools/build-approved-inventory-diagnostic.py": "def3706b28abc4824744a3715d4c95d607a77a813df43e3bb9a20cc1c28eaa6d",
+    "tools/patch-approved-inventory.py": "3b8da15004bb9e4b0b26a907ec262aaccb0091f709742a723ce1e9063f3595f8",
+    "tools/verify-approved-inventory-input.py": "6a95e72db83b49b60a15909e65c1886d316b43175b1c6fe4c008744a8ea982eb",
+    "tests/test_approved_inventory_unified.py": "c0771661e86e5b2c7976bc9673d3e71f6335de0b991a510ba5f1e940e0eb7fdf"
+  }
+}

@@ -10,6 +10,8 @@
       protected var aiEmpty:TextField;
       protected var aiPendingName:TextField;
       protected var aiScroll:Shape;
+      protected var aiFocusMark:Shape;
+      protected var aiNavOwners:Object={};
       protected var aiModelMask:Shape;
       protected var aiTip:TooltipInventory;
       protected var aiBase:Object;
@@ -21,6 +23,7 @@
       protected var aiSuspended:Boolean=false;
       protected var aiTargetState:Boolean=false;
       protected var aiSortState:Boolean=false;
+      protected var aiStatsDiagnosticVisible:Boolean=true;
       protected var aiDetailsRect:Rectangle = new Rectangle(747,190,464,730);
       protected var aiLabels:Array = ["Review","Weapons","Armor","Consumables","Bombs","Pockets","Quest Items","Other"];
       public function approvedEnabled(on:Boolean) : void
@@ -65,6 +68,7 @@
          aiEmpty=aiText(aiScene,"No items in this category",385,240,310,19,0xA29F96);aiEmpty.visible=false;
          aiPendingName=aiText(aiScene,"",761,228,435,32,0xD7D0C2);
          aiScroll=new Shape();aiScene.addChild(aiScroll);
+         aiFocusMark=new Shape();aiScene.addChild(aiFocusMark);
          aiEvidence("rail.icons.begin");aiConfigureRailIcons();aiEvidence("rail.icons.end");
          aiEvidence("module.arrange.begin");
          mcPlayerInventory.aiArrange();mcPlayerInventory.visible=true;
@@ -74,7 +78,9 @@
          mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.INDEX_CHANGE,aiSelection,false,0,true);
          mcPlayerInventory.mcPlayerGrid.addEventListener(ListEvent.ITEM_ROLL_OVER,aiHover,false,0,true);
          ContextInfoManager.getInstanse().addEventListener("approvedPayload",aiPayload,false,0,true);
-         InputDelegate.getInstance().addEventListener(InputEvent.INPUT,aiInput,false,120,true);
+         // Native InputManager priority 1 must see down/up before consumption:
+         // it owns device detection and KEY_HOLD generation.
+         InputDelegate.getInstance().addEventListener(InputEvent.INPUT,aiInput,false,0,true);
          InputManager.getInstance().addEventListener(ControllerChangeEvent.CONTROLLER_CHANGE,aiDevice,false,0,true);
          stage.addEventListener(MouseEvent.MOUSE_WHEEL,aiWheel,true,120,true);
          addEventListener(Event.REMOVED_FROM_STAGE,aiRemoved,false,0,true);
@@ -90,7 +96,7 @@
          _rendererController.setDefaultAnchor(mcCharacterRenderer.x,mcCharacterRenderer.y);
          mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),false);
          aiEvidence("targets.hidden");
-         selectTargetModule(mcPlayerInventory);aiRefresh=true;aiPaintRail();aiMode(1);
+         selectTargetModule(mcPlayerInventory);aiRefresh=true;aiPaintRail();aiMode(1,true);
          dispatchEvent(new GameEvent(GameEvent.CALL,"OnSetCurrentPlayerGrid",["inventory.grid.player"]));
          SlotBase.aiLog("enter","player");
       }
@@ -171,6 +177,7 @@
          }
          var state:Object=aiStates[String(group)];
          aiUpdating=true;grid.aiSetItems(list,state?uint(state.id):0,state?int(state.top):0);aiUpdating=false;
+         if(aiFocus==1)aiFocusList();
          aiPaintRail();aiSelectData(true);SlotBase.aiLog("category",String(group));
       }
       protected function aiSortCurrent() : void
@@ -187,7 +194,7 @@
             var rail:Sprite=aiRail[i];rail.graphics.clear();
             rail.graphics.beginFill(0,0.001);rail.graphics.drawRect(0,0,274,86);rail.graphics.endFill();
             rail.graphics.lineStyle(1,0x55554E,0.22);rail.graphics.moveTo(0,85);rail.graphics.lineTo(274,85);
-            if(i==aiGroup) { rail.graphics.beginFill(0xB48C44,0.12);rail.graphics.drawRect(0,0,274,86);rail.graphics.endFill();rail.graphics.lineStyle(1.6,0xB48C44,1);rail.graphics.moveTo(0,0);rail.graphics.lineTo(0,85); }
+            if(i==aiGroup) { rail.graphics.beginFill(0xB48C44,aiFocus==0?0.12:0.025);rail.graphics.drawRect(0,0,274,86);rail.graphics.endFill();rail.graphics.lineStyle(1.6,0xB48C44,aiFocus==0?1:0.35);rail.graphics.moveTo(0,0);rail.graphics.lineTo(0,85); }
             var count:int=0;for each(var d:Object in aiAll)if(int(d.aiGroup)==i)++count;
             var field:TextField=rail.getChildByName("count") as TextField;
             if(!field){field=aiText(rail,"",235,28,34,18,0xCBBBA1);field.name="count";}
@@ -231,27 +238,53 @@
          if(aiFocus==3||aiSuspended||aiTargetState)aiTip.visible=false;
          SlotBase.aiLog("details-payload",String(payload.ItemId));
       }
-      protected function aiMode(mode:int) : void
+      protected function aiFocusList() : void
       {
-         if(!aiActive)return;aiFocus=mode;
+         if(aiModal())return;
+         var grid:SlotsListGrid=mcPlayerInventory.mcPlayerGrid;
+         if(!grid.data.length)return;
+         selectTargetModule(mcPlayerInventory);
+         mcPlayerInventory.focused=1;grid.focused=1;grid.applySelectionContext();
+      }
+      protected function aiMode(mode:int, force:Boolean=false) : void
+      {
+         if(!aiActive || aiFocus==mode&&!force)return;aiFocus=mode;
          mcPlayerInventory.enabled=mcPlayerInventory._inputEnabled=mode==1;
-         if(mode==1)selectTargetModule(mcPlayerInventory);
+         mcPlayerInventory.mcPlayerGrid.enabled=mode==1;
+         mcPlayerInventory.mcPlayerGrid.activeSelectionVisible=mode==1;
+         if(mode==1)aiFocusList();
+         else mcPlayerInventory.mcPlayerGrid.focused=0;
          mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),mode==3);
          ContextInfoManager.aiNativeTargets=mode==3;
          mcPlayerInventory.mcPlayerGrid.visible=mode!=3;
          aiTip.visible=mode!=3 && aiCurrentID!=0;
          if(mode==3){selectTargetModule(mcPaperDollModule);mcPaperDollModule.mcPaperdoll.selectedIndex=mcPaperDollModule.mcPaperDollSlot3.index;}
          dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedMode",[mode]));SlotBase.aiLog("focus",String(mode));
+         aiPaintRail();aiHeader.textColor=mode==1?0xCAA469:0xA29F96;
+         aiFocusMark.graphics.clear();
+         if(mode==2){aiFocusMark.graphics.lineStyle(1.6,0xB48C44,1);aiFocusMark.graphics.moveTo(aiDetailsRect.x-8,aiDetailsRect.y+16);aiFocusMark.graphics.lineTo(aiDetailsRect.x-8,aiDetailsRect.y+85);}
          if(mode==1)aiSelectData(true);
       }
       protected function aiDevice(e:ControllerChangeEvent) : void
       {
          SlotBase.qfGearResetPad();
+         aiNavOwners={};
+         if(aiActive && !aiSuspended && aiFocus==1)aiFocusList();
          if(_btn_switch_sections!=-1){InputFeedbackManager.removeButton(this,_btn_switch_sections);_btn_switch_sections=-1;}
          SlotBase.aiLog("device",InputManager.getInstance().isGamepad()?"pad":"keyboard/mouse");
       }
       protected function aiModal() : Boolean
       { return mcSortingMode.visible || mcSelectionMode.isActive() || SlotsTransferManager.getInstance().isDragging() || _rendererController.isActive(); }
+      protected function aiNavAllow(d:Object,n:String) : Boolean
+      {
+         // One logical press owns both raw D-pad and emulated arrow streams.
+         // Native KEY_HOLD cadence is retained, without a second repeat timer.
+         var owner:Object=aiNavOwners[n];
+         if(d.value==InputValue.KEY_UP){if(owner && owner.code==d.code)delete aiNavOwners[n];return false;}
+         if(d.value==InputValue.KEY_DOWN){if(owner)return false;aiNavOwners[n]={code:d.code};return true;}
+         if(d.value==InputValue.KEY_HOLD)return owner!=null && owner.code==d.code;
+         return false;
+      }
       protected function aiInput(e:InputEvent) : void
       {
          if(SlotBase.aiDiagnostics && e.details && e.details.code==KeyCode.F8)
@@ -261,10 +294,16 @@
          if(e.details.value==InputValue.KEY_UP)aiEvidence("input","code="+e.details.code+" nav="+e.details.navEquivalent+" focus="+aiFocus);
          var d:InputDetails=e.details;CommonUtils.fixupKeyCode(d);CommonUtils.convertWASDCodeToNavEquivalent(d);
          var n:String=d.navEquivalent;var up:Boolean=d.value==InputValue.KEY_UP;
+         if(n==NavigationCode.DPAD_UP)n=NavigationCode.UP;
+         else if(n==NavigationCode.DPAD_DOWN)n=NavigationCode.DOWN;
+         else if(n==NavigationCode.DPAD_LEFT)n=NavigationCode.LEFT;
+         else if(n==NavigationCode.DPAD_RIGHT)n=NavigationCode.RIGHT;
          var directional:Boolean=n==NavigationCode.UP||n==NavigationCode.DOWN||n==NavigationCode.LEFT||n==NavigationCode.RIGHT;
          var back:Boolean=d.code==KeyCode.ESCAPE||n==NavigationCode.GAMEPAD_B;
          var aux:Boolean=d.code==KeyCode.TAB||n==NavigationCode.GAMEPAD_L3;
          var detail:Boolean=d.code==KeyCode.I||n==NavigationCode.GAMEPAD_BACK;
+         var accept:Boolean=n==NavigationCode.GAMEPAD_A||n==NavigationCode.ENTER||d.code==KeyCode.SPACE;
+         if(aiFocus==0 && accept){if(up)aiMode(1);e.handled=true;e.stopImmediatePropagation();return;}
          if(aux||detail||back&&aiFocus!=1)
          { if(up)aiMode(back?1:(aux?(aiFocus==3?1:3):(aiFocus==2?1:2)));e.handled=true;e.stopImmediatePropagation();return; }
          if(aiFocus==3)return;
@@ -272,7 +311,7 @@
          {aiTip.showEquippedTooltip(!up);e.handled=true;e.stopImmediatePropagation();return;}
          if(directional)
          {
-            var allow:Boolean=SlotBase.qfGearPadAllow(d,getTimer());
+            var allow:Boolean=aiNavAllow(d,n);
             if(!up && allow)
             {
                if(n==NavigationCode.LEFT)aiMode(aiFocus==2?1:0);
@@ -312,15 +351,24 @@
          var sorting:Boolean=mcSortingMode.visible;
          if(stats!=aiSuspended || targets!=aiTargetState || sorting!=aiSortState)
          {
+            if(stats!=aiSuspended && aiDiagnosticText)
+            {
+               if(stats){aiStatsDiagnosticVisible=aiDiagnosticText.visible;aiDiagnosticText.visible=false;}
+               else aiDiagnosticText.visible=aiStatsDiagnosticVisible;
+            }
             var resumed:Boolean=(aiSuspended||aiTargetState)&&!stats&&!targets;
             aiSuspended=stats;aiTargetState=targets;aiSortState=sorting;
             ContextInfoManager.aiNativeTargets=targets||stats;
+            // A mask becomes an ordinary white Shape when unassigned. Keep it
+            // off the display tree throughout native stats/preview ownership.
+            if(stats){if(aiModelMask.parent)aiModelMask.parent.removeChild(aiModelMask);}
+            else if(!aiModelMask.parent)addChildAt(aiModelMask,getChildIndex(mcCharacterRenderer));
             mcCharacterRenderer.mask=stats?aiBase.mask:aiModelMask;
             aiScene.visible=!stats;mcPlayerInventory.mcPlayerGrid.visible=!stats&&!targets;
             aiTip.visible=!stats&&!targets&&!sorting&&aiCurrentID!=0;
             aiPendingName.visible=!stats&&!targets;
             mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),!stats&&targets);
-            if(!stats&&!targets&&aiFocus==1)selectTargetModule(mcPlayerInventory);
+            if(!stats&&!targets&&aiFocus==1)aiFocusList();
             if(sorting)setChildIndex(mcSortingMode,numChildren-1);
             if(resumed)aiSelectData(true);
             SlotBase.aiLog("visibility",String(stats)+"/"+String(targets));
@@ -331,7 +379,7 @@
       protected function aiRemoved(e:Event) : void {aiLeave();}
       protected function aiLeave() : void
       {
-         if(!aiActive)return;aiActive=false;ContextInfoManager.aiUnified=ContextInfoManager.aiNativeTargets=false;SlotBase.qfGearGrid=false;SlotBase.qfGearResetPad();
+         if(!aiActive)return;aiActive=false;aiNavOwners={};ContextInfoManager.aiUnified=ContextInfoManager.aiNativeTargets=false;SlotBase.qfGearGrid=false;SlotBase.qfGearResetPad();
          mcPlayerInventory.removeEventListener("approvedRefreshNeeded",aiNeedsData);mcPlayerInventory.removeEventListener("approvedRowsChanged",aiRowsChanged);
          mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.INDEX_CHANGE,aiSelection);mcPlayerInventory.mcPlayerGrid.removeEventListener(ListEvent.ITEM_ROLL_OVER,aiHover);
          ContextInfoManager.getInstanse().removeEventListener("approvedPayload",aiPayload);
