@@ -2,8 +2,8 @@
 import argparse,hashlib,importlib.util,io,json,subprocess,zipfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/'build/approved-inventory-runtime-diagnostic-r5'
-DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic-r5'
+OUT=ROOT/'build/approved-inventory-runtime-diagnostic-r6'
+DEPLOY=ROOT/'deploy/approved-inventory-runtime-diagnostic-r6'
 def load(name):
     s=importlib.util.spec_from_file_location(name,ROOT/'tools'/(name+'.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 b=load('build-approved-inventory')
@@ -19,9 +19,9 @@ def prepare():
     write(pin,frozen)
     source=b.BASE/'prepared-inputs'/b.KEY
     if sha(source)!=b.gate.V4_SHA:raise ValueError('Not accepted v4')
-    # Reuse the verified private r4 checkpoint for changed classes only, retaining
+    # Reuse the verified private r5 checkpoint for changed classes only, retaining
     # its original exact-v4 provenance and all previous candidate files.
-    prior=ROOT/'build/approved-inventory-runtime-diagnostic-r4'
+    prior=ROOT/'build/approved-inventory-runtime-diagnostic-r5'
     if not (OUT/'prepared.json').exists() and (prior/'prepared.json').exists():
         receipt=json.loads((prior/'prepared.json').read_text());candidate=prior/'prepared-inputs'/b.KEY
         if receipt['input_sha256']!=b.gate.V4_SHA or sha(candidate)!=receipt['resource_sha256']:raise ValueError('Prior checkpoint mismatch')
@@ -77,7 +77,7 @@ def package():
     stream=io.BytesIO()
     with zipfile.ZipFile(stream,'w',zipfile.ZIP_DEFLATED) as z:
         for name,value in sorted(members.items()):z.writestr(name,value)
-    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r5-private.zip'
+    DEPLOY.mkdir(exist_ok=True);path=DEPLOY/'Approved-Inventory-P1-DIAGNOSTIC-r6-private.zip'
     if path.exists():raise ValueError('Preserve existing diagnostic archive')
     path.write_bytes(stream.getvalue())
     with zipfile.ZipFile(path) as z:

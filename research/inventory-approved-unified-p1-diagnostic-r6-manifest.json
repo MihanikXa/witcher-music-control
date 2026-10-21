@@ -1,0 +1,47 @@
+{
+  "input_sha256": "a64643afb2bbb5308ecbcfefab14321c530fef978099360f7fc64d8fae57d66a",
+  "resource_sha256": "b6daae8357fcbd561898b962453b3b49bb250702cd0769745d5695be61f4ce24",
+  "zip_sha256": "8e66120185660334070e51b03334c30b93cc464eef185dd7d0413195a3510b42",
+  "annotation_sha256": "e7184cac1e6c504be84079263c037e0938082da5ceebebc2ae08797ff115700c",
+  "compiled_classes": [
+    "SlotBase"
+  ],
+  "contracts": {
+    "original_declarations_retained": 4269
+  },
+  "version": "Unified P1 diagnostic r6 \u2014 persistent selected-row feedback",
+  "date": "2026-10-21",
+  "zip_path": "deploy/approved-inventory-runtime-diagnostic-r6/Approved-Inventory-P1-DIAGNOSTIC-r6-private.zip",
+  "native_cook_attempted": false,
+  "native_candidate_validated": false,
+  "game_execution": false,
+  "reconstruction_controls_passed": true,
+  "runtime_status": "r5 user reports almost everything working; missing row selection cue. R6 runtime test pending.",
+  "screenshot_sha256": "21b1507c96b029f92739c3fbc893d7d202c4c866463f4f7cac3f57aa6c9666fc",
+  "script_controls": [
+    {
+      "label": "api-control",
+      "exit_code": 0,
+      "blob_sha256": "ccfcbb60dc476ef6d385bb45d0c96a2d0f1af51ad8c47d7af60d51de6816862f"
+    },
+    {
+      "label": "candidate",
+      "exit_code": 0,
+      "blob_sha256": "5aa28c824ad5511efc3166a8781050c4f18a2b933a4dd8849ed44ccfb70548bb"
+    }
+  ],
+  "script_compiler_reused_from": "build/approved-inventory-runtime-diagnostic-r5-scripts/receipt.json; annotation unchanged",
+  "source_hashes": {
+    "src/inventory/unified/approvedInventory.ws": "e7184cac1e6c504be84079263c037e0938082da5ceebebc2ae08797ff115700c",
+    "src/inventory/unified/Details.asinc": "070d16a67e3fd7196e4784921fc8b1e8ef0159d6cd0e956a64cadc7a036db653",
+    "src/inventory/unified/Diagnostics.asinc": "ab4cb933b6615fa817af93a323f77f87f98cddd625f90554f88041896e340628",
+    "src/inventory/unified/List.asinc": "a96da513736696938d0570f54a18362b937869220e71b15e4bec17919a4d516c",
+    "src/inventory/unified/Module.asinc": "9e15678cc13d9e8d18e77bf35429c062e3b85633e803f810c2c3386c08b368d1",
+    "src/inventory/unified/Row.asinc": "3a9a0ad3d5a9ccd95f8b0a79aef2349ad8deeba90431cf598e97b73890b4e898",
+    "src/inventory/unified/Scene.asinc": "310b230724e0b2249feb707809d2e74171e4a4560861a305b41eb95d6b6ccd66",
+    "tests/test_approved_inventory_unified.py": "64d8729899acef006a9b9674a93c44620a174a7e942b1d0c1713e5a194cacd7c",
+    "tools/build-approved-inventory-diagnostic.py": "04c0ed2c62218c658746a3a2b627cda15d1f7a3460458bf14679cd010b98cf73",
+    "tools/verify-approved-inventory-row-selection.py": "cfe72008cd9e9f74ee81612cd8da9c756d4a97079aa02bb9631018e1346482d8"
+  },
+  "targeted_tests": 15
+}

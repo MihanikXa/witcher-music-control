@@ -2,6 +2,15 @@
 
 ## Scope and authority
 
+**21 October r5 runtime / r6 selected-row correction:** user reports much better,
+almost everything works, but no visible selected item. Screenshot details still
+follow real selection at focus=1. R5 paint made selected+inactive identical to
+unselected; r6 keeps a visible selected-row border/fill independent of native
+active-focus gating, with stronger active emphasis. Only SlotBase changes from
+r5; no input/action/layout changes. See [r6 selection receipt](research/inventory-approved-unified-p1-r6-selection.md).
+Offline paint regression is not runtime acceptance. Next: D-pad/mouse selection
+matches details, category/Details round-trip and starter-sword equip retention.
+
 **21 October gamepad failure / r5 correction:** user confirms equip/unequip
 generally but explicitly says gamepad cannot equip/unequip, navigation/focus is
 confusing and contextual actions fail. The stats screenshot's white block matches
