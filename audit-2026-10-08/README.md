@@ -1,5 +1,17 @@
 # Witcher mod compatibility — private release ready for testing
 
+## Current next task — comprehensive settings routing and optimization
+
+The user requested a local Codex audit of **all** current mod settings, including
+paths beyond `dx12user.settings` (Smart AutoLoot and other mod-specific
+INI, XML, user.settings, input, Vortex ownership, etc.). See
+[complete settings audit plan](complete-settings-audit-plan.md).
+The earlier assistant-generated 4K settings ZIP was **partial**; treat it only
+as a comparison, not a fresh canonical user profile. Inspect actual current
+mod versions/active winners, produce a private reviewable offline package,
+preserve all working mods/controls, and **never auto-deploy or use
+Computer Use**.
+
 Five installable archives contain 171 real payload files. Start with
 [release.md](release.md) for installation/hashes, [decisions.md](decisions.md)
 for trade-offs, [implementation.md](implementation.md) for actual changes, and
