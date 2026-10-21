@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Current results (2026-10-21; report100):** Installed Vortex source distinguishes main Play parameters from DX12 tool parameters; actual final-process delivery remains unverified. Current general.ini is still the report96 staged logger configuration (left untouched); both bounded logfile candidates absent. New read-only `tools/Get-WmcGameArguments.ps1` emits only game executable path and nullable native flag boolean, no full argv/log. Actual check: NotRunning. Six new tests pass; full301-test run has21 existing audio allocation errors and2 witness subprocess errors, not a full pass. Notification fallback remains conditional on verified argv plus failed logging; no compile/install/launch or game/Vortex/audio changes. **Next: user runs the witness at the main menu and returns JSON; no observer installation.** [Report100](100-logger-argv-or-fallback-results.md). Stop for review.
+
+
 **Second native logger failure (report99, 2026-10-21):** User launched via Vortex, added exact `-debugscripts` to its command line, but reports **still no `scriptslog.txt`**. We have *not* established that the actual DX12 `witcher3.exe` child received the flag or that its effective logger directory was configured; do not ask for another blind main-menu launch. User's graphical settings are their own restoration task, not a scope to edit. Narrow next Codex task is a **read-only installed Vortex/config/log postmortem and one built-in Windows actual-process argv witness**, with a source-validated finite in-game UI notification fallback only if warranted. No automatic install, launch, audio editing or unproven gateway. [Report99](99-second-negative-logger-probe-and-fallback-handoff.md).
 
 

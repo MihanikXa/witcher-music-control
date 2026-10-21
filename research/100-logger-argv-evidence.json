@@ -1,0 +1,91 @@
+{
+  "config": {
+    "descriptor_sha256": "5b681e667f13fa3ce1704a29f887584f1eb70e02e03f5abaf6f7ad6f5c9be9eb",
+    "ordered_pc_layers": [
+      "base\\",
+      "developer\\",
+      "r4game\\",
+      "platform\\pc\\"
+    ],
+    "ini_files_inspected": 21,
+    "logger_rows": [
+      {
+        "path": "base\\general.ini",
+        "line": 6,
+        "key": "LogDebugScripts",
+        "value": "true"
+      },
+      {
+        "path": "base\\general.ini",
+        "line": 7,
+        "key": "DebugScriptsForceFlush",
+        "value": "true"
+      },
+      {
+        "path": "base\\general.ini",
+        "line": 8,
+        "key": "DebugScriptsLogDir",
+        "value": "C:/Dev/witcher-music-control/build/sparse-interface-prerequisites-v1/retail-logs/"
+      }
+    ],
+    "general_sha256": "ec0f09b06fd74984017ad27acbc3564705d0244c7af388e6415f9267a2ecfa4f",
+    "restoration": "staged"
+  },
+  "log_checks": [
+    {
+      "candidate": "configured_probe",
+      "exists": false
+    },
+    {
+      "candidate": "documents_application_candidate",
+      "exists": false
+    }
+  ],
+  "user_config": [
+    {
+      "filename": "user.settings",
+      "exists": true,
+      "logger_values": [
+        {
+          "key": "DebugScriptsForceFlush",
+          "value": "true"
+        },
+        {
+          "key": "DebugScriptsLogDir",
+          "value": "empty"
+        }
+      ]
+    },
+    {
+      "filename": "dx12user.settings",
+      "exists": true,
+      "logger_values": [
+        {
+          "key": "DebugScriptsLogDir",
+          "value": "empty"
+        }
+      ]
+    }
+  ],
+  "dx11_expected_exe_present": false,
+  "vortex_extension_version": "1.7.5",
+  "vortex_executable_file_version": "2.9.0",
+  "vortex_extension_map_sha256": "0d429d065374c86ef9725e9028bd04047285f18913d625a9487e14a3ed5938d4",
+  "extracted_source_sha256": {
+    "StarterInfo.ts": "8bc85d2caf8002f50dc898f011b196b81cbdfc3b935ef573fbe777ea1f16f77e",
+    "toolStarters.ts": "d1cbc1469843576199f76856b258a4abe13f03fca5c525da92820952ba9bc49d",
+    "witcher3-edition.ts": "2ade405440624b34dcb4b51b1bf3662dc26a3dfc12671e6719da9b3e316e712d",
+    "witcher3-index.ts": "ac358bb9634221baf57cc1176a6644610bf7b6b47be3f44d351ca9be712f1e32",
+    "witcher3-util.ts": "bba2f546c4bd6457ff1a90916263f9b9e541d25bfd320c30e8f6e276cb1ef904"
+  },
+  "actual_process_check": {
+    "Status": "NotRunning",
+    "Processes": []
+  },
+  "limits": [
+    "Current Vortex per-entry configuration not exported or decoded from private LevelDB.",
+    "No actual game argv or effective runtime logger directory observed.",
+    "Directory ACL metadata inspected only; successful file creation not demonstrated.",
+    "No game launch, install, configuration write, or fallback compile."
+  ]
+}
