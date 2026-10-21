@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Current results (2026-10-21; report98):** Read-only negative-logger audit traces constructor byte `+0x17c` to a native command-line substring search for `-debugscripts`; **INI settings alone cannot clear the logging-disable gate**. Actual past arguments/retail delivery remain unknown. PC descriptor/native INI load order verified; effective user-store/CVar precedence and exact runtime default-directory suffix remain qualified. Original30-byte `general.ini` is hash-restored; configured log and one Windows-resolved Documents candidate absent. Both known user settings have empty logger directories, not probe-path residue—do not delete them.295 tests pass. No game/config/Vortex/save/observer/Wwise change. **No repeat launch or install yet.** Next user action: identify the launcher used and whether existing game arguments contained `-debugscripts`. Unsafe Stinger stays rejected. See [report98](research/98-native-logger-runtime-activation-results.md). **STOP for review.**
+
+
 **Negative user main-menu logger test (report97, 2026-10-20):** User reports **no `scriptslog.txt` at the configured path** after the report96 manual logger-only main-menu probe. Observer was **not installed**; this is not a failed script observer test, nor proof `LogChannel` is disabled. User advised to restore original `general.ini` (if needed), **not install diagnostic or launch game again yet**. Current next task is a strictly **read-only source/config/startup-guard/path audit** of DX12 logger activation and one grounded next test, if justified. Prior report96 Trigger/MusicStinger request is unsafe (combat/outro overlap and stale/cancel failures) and must remain disconnected. [Follow-up](research/97-retail-logger-negative-smoke-followup.md).
 
 

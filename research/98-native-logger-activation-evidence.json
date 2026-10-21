@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "native": {
+    "image_sha256": "2df765398a3d1f165db418271be7200178320a4466817379f2fa0dc0001fb101",
+    "constructor": 40955936,
+    "constructor_default_write": 40956332,
+    "flag_reference": 40956516,
+    "substring_call": 40956523,
+    "flag_field_write": 40956539,
+    "initializer_guard": 36208235,
+    "skip_target": 36208857,
+    "actual_command_line_observed": false,
+    "ini_alone_cannot_clear_constructor_gate": true,
+    "meaning": "Logging-disabled predicate derived from absence of native -debugscripts substring; not inferred from IsFinalBuild."
+  },
+  "config": {
+    "descriptor_sha256": "5b681e667f13fa3ce1704a29f887584f1eb70e02e03f5abaf6f7ad6f5c9be9eb",
+    "ordered_pc_layers": [
+      "base\\",
+      "developer\\",
+      "r4game\\",
+      "platform\\pc\\"
+    ],
+    "ini_files_inspected": 21,
+    "logger_rows": [],
+    "general_sha256": "a9750eeabb62948d661a3ec785c82919eb4075dad9de6e35aaf9a4a1bc9f86b2",
+    "restoration": "original"
+  },
+  "game_launched": false,
+  "installed_files_modified": false,
+  "observer_installed": false,
+  "dx11_expected_exe_present": false,
+  "actual_test_executable_not_inferred": true,
+  "log_checks": [
+    {
+      "candidate": "configured_probe",
+      "exists": false
+    },
+    {
+      "candidate": "documents_application_candidate",
+      "exists": false
+    }
+  ],
+  "user_config": [
+    {
+      "filename": "user.settings",
+      "exists": true,
+      "logger_values": [
+        {
+          "key": "DebugScriptsForceFlush",
+          "value": "true"
+        },
+        {
+          "key": "DebugScriptsLogDir",
+          "value": "empty"
+        }
+      ]
+    },
+    {
+      "filename": "dx12user.settings",
+      "exists": true,
+      "logger_values": [
+        {
+          "key": "DebugScriptsForceFlush",
+          "value": "true"
+        },
+        {
+          "key": "DebugScriptsLogDir",
+          "value": "empty"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No real runtime command line, effective CVar values, file-open error or event output observed.",
+    "No universal user-settings-versus-native-CVar precedence claim from mere key presence.",
+    "Documents app-directory candidate is not proof of the exact runtime default path.",
+    "No new test is authorized; confirm existing launch route/arguments first."
+  ],
+  "date": "2026-10-21",
+  "user_reported_negative_smoke": "2026-10-20; no file at configured location; observer not installed",
+  "evidence_levels": {
+    "gate": "version-pinned native instructions",
+    "configuration_layers": "installed descriptor and native loader disassembly",
+    "actual_command_line": "not observed",
+    "effective_logger_directory": "not observed",
+    "fresh_logger_output": "none at configured and one source-guided candidate",
+    "general_restored": "exact current hash"
+  },
+  "manual_probes_requested_this_task": 0,
+  "unsafe_stinger_status": "remains rejected; no Wwise execution this task",
+  "observer_zip_sha256": "8cb59a83e77c328b2cd050c252411feefa21b8a257b0abd15d9a85f45ab16568",
+  "observer_source_sha256": "8c78e5fa5b95390364e72a55ed5db73b19215ecf7c55b852c2fe89b053069acc",
+  "private_evidence": {
+    "build/native-logger-activation-v1/ctor.txt": "61a07032e2954ab30c3715c771fad1861642946e512619bdc983eb4c548ba459",
+    "build/native-logger-activation-v1/logger-init.txt": "85d87b96f8514601d647f30d77bd0e871b4bed776711f3c0912167189fccd984",
+    "build/native-logger-activation-v1/logger-path.txt": "01f5959725942da7fbf54119b270482ea58b2f7d337678c359776f9197e20b16",
+    "build/native-logger-activation-v1/cfg-tree-load.txt": "bc0c0ee4c88b67951bfd9c1cc3c657f1ea2be20929307baec57860943735cc64",
+    "build/native-logger-activation-v1/cfg-enumerate.txt": "d38af394167ee42e97cf0bdf1f4342a5060dee845fc571c1d6861a01ecb89558",
+    "build/native-logger-activation-v1/ini-load.txt": "de11ae12cefc52570685a1cfc7213cc3f11131f4207335fb3777f01f01815901",
+    "build/native-logger-activation-v1/ini-parser.txt": "0709bd9e1435d66965bfc67e0924e541aaa806b66f9503fe49874b64dc1ac8a9",
+    "build/native-logger-activation-v1/paths.txt": "e45a353866f62fb1fd3a6aa015bf07181ac6a90fe8e70423a1ec5cdf0252a6e1",
+    "build/native-logger-activation-v1/global-5a5d970-1e7325f.txt": "37a4dd8c99255576d62370dedf6118445e1e522169c41040d70304ba6883d7c2"
+  },
+  "tests": {
+    "passed": true,
+    "python_tests": 295,
+    "new_tests": 6,
+    "log_sha256": "f0d9ba5e51e1002296e2a130f1c17e7c8d499b6d99cdc304d17e4009f2fc2853"
+  }
+}
