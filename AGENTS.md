@@ -1,5 +1,33 @@
 # Codex instructions — independent Witcher 3 UI project
 
+## Latest user-confirmed functionality; details transition flicker — 22 October 2026
+
+User now says **"Everything that was faulty works now"**, and provides two
+consecutive item-selection frames. The **only reported remaining functional
+problem** is a several-frame transition where the middle details panel becomes
+a plain large white title with no stats, then snaps into correctly formatted
+native details. They also explicitly say **the appearance remains far from
+the approved concept**. See
+[22 October source-grounded report](research/inventory-approved-unified-p1-r6-runtime-feedback.md).
+
+**Confirmed code cause:** `Scene.asinc::aiSelectData` displays generic
+`aiPendingName`, calls `TooltipInventory.aiPending` which hides the real
+tooltip on new ID, then native async `OnApprovedDetails` later returns;
+`aiPresent` validates and reveals the formatted details and clears the
+placeholder. This is the user's two screenshot states. Fix with a stable
+formatted presenter, no generic pending title/hide state, one current-ID+
+serial-validated commit. Test rapid controller scrolling and stale payloads,
+consider bounded caching only if runtime latency warrants it.
+
+After this small stability fix, perform a **separate reference-fidelity finish
+pass**: cohesive neutral background/grounding/lighting (not pixel-identical
+scenery), refined item/details typography and category symbols, appropriate
+footer restraint. Preserve the approved rail/list/details/Geralt proportions,
+existing gold equipped marker, current functional category actions and input.
+Do not restart a broad rewrite or Review implementation. All visual fixes
+need in-game screenshot acceptance. Diagnostics overlay is not final UI.
+No automatic installed game/Vortex/save/merge changes.
+
 ## Scope and authority
 
 **21 October r5 runtime / r6 selected-row correction:** user reports much better,
