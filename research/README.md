@@ -1,5 +1,8 @@
 # Music research and design decisions
 
+**Retail negative visual diagnostic (report102; 2026-10-22):** User confirms `Test-Path` TRUE for deployed `Mods/modWMCVisualSmoke/content/scripts/local/wmcVisualSmoke.ws`, yet no `WMCVIS1` messages after loading an existing save; **Seamless and Adaptive HUDs disabled**. Treat report101 smoke as **failed/unproven**, not a HUD-settings question. User advised disable only WMC Visual Smoke and redeploy; preserve working audio. Codex should read-only audit installed source hash/actual merged hooks/timer/UI delivery, then at most one more diagnostic with **independent observable checkpoints**, or explicitly stop if no sound path. No native logger repeats, Wwise changes, Vortex/saves edits, auto install/run. [Report102](102-visual-smoke-negative-runtime-reachability-handoff.md).
+
+
 **Current results (2026-10-21; report101):** User witness confirms actual DX12 argv contains `-debugscripts`; retail file logging is still unproven. Separate finite **WMC Visual Smoke** diagnostic is compiled and staged, NOT installed: two UI calls maximum per game instance, one post-load wrapper, no saved fields/log/audio. Baseline/control/candidate exit0, candidate/control exact diagnostics; all305 tests pass. First const-assignment failure retained. Full enabled-mod compatibility and retail notification delivery remain unverified. **Next optional user action: install only the report101 source ZIP through Vortex, load an existing current-region save and report the WMCVIS1 messages, then remove the diagnostic.** No automatic launch/install, music/config/save/Vortex changes or Wwise work. [Report101](101-finite-visual-context-smoke-results.md). Stop for review.
 
 
