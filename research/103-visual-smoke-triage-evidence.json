@@ -1,0 +1,136 @@
+{
+  "matched_diagnostics": true,
+  "installed": false,
+  "retail_validated": false,
+  "source_sha256": "969cb74af8b970f989fc60ec95d5ed05152e672ce0ee80a64c133de12d0a2a9f",
+  "installed_inputs_unchanged": true,
+  "ready_for_optional_manual_test": true,
+  "archive_sha256": "ad8753381fdfd35a8cf1c59e779f6de248d6cc3ce0bc3bc31f106edbdcca28e0",
+  "archive_member": "modWMCVisualSmokeV2/content/scripts/local/wmcVisualSmokeV2.ws",
+  "baseline": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "ed67838296147968a2bc55dfef4d27a6b4ba899dc401eb006484d4a9158f897d",
+    "source_sha256": null,
+    "diagnostic_counts": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20893,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "matched_control": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "228581a3df55964b3c20ca67f65e87824921dc641b596effb8a555060508001e",
+    "source_sha256": "e7a1eb25d8fd9663594dea25aede516ce074b0de583cc834ce003d3d5057cb62",
+    "diagnostic_counts": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20897,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "candidate": {
+    "exit_code": 0,
+    "timeout": false,
+    "compiled": true,
+    "blob_sha256": "906f2b746ddd181b272f812a1cb43c033020592c5bb55be2ead58bd353f623ac",
+    "source_sha256": "969cb74af8b970f989fc60ec95d5ed05152e672ce0ee80a64c133de12d0a2a9f",
+    "diagnostic_counts": {
+      "[Warning][Core]": 417,
+      "[Error][Core]": 15,
+      "[Error][Assert]": 20897,
+      "[Warning][Shaders]": 1,
+      "[Warning][Engine]": 3,
+      "[Error][Engine]": 3,
+      "[Warning][PhysX]": 1,
+      "[Warning][WCC]": 362
+    }
+  },
+  "read_only_triage": {
+    "contract": {
+      "unit": "milliseconds",
+      "default_ms": 4000,
+      "entrance_tween_seconds": 0.3,
+      "original_ms": [
+        4,
+        12
+      ],
+      "corrected_ms": [
+        4000,
+        12000
+      ],
+      "retail_hook_execution_proven": false
+    },
+    "original_sha256": "4df1b9b7d83b653ab2ef56c9535ef492ad6868bad5a85361ace51e32a15dc81b",
+    "corrected_sha256": "969cb74af8b970f989fc60ec95d5ed05152e672ce0ee80a64c133de12d0a2a9f",
+    "deployed_exists": true,
+    "installed_files_modified": false,
+    "deployed_sha256": "4df1b9b7d83b653ab2ef56c9535ef492ad6868bad5a85361ace51e32a15dc81b",
+    "deployed_matches_v1": true,
+    "relevant_declared_mods": {
+      "mod0000_MergedFiles": {
+        "Enabled": "1",
+        "Priority": "2"
+      },
+      "modzzz_sharedutils": {
+        "Enabled": "1",
+        "Priority": "19"
+      },
+      "modFriendlyHUD": {
+        "Enabled": "1",
+        "Priority": "24"
+      },
+      "modInkIronHUDAliasesTest": {
+        "Enabled": "1",
+        "Priority": "34"
+      },
+      "modInkIronHUDRefinementV4": {
+        "Enabled": "1",
+        "Priority": "36"
+      },
+      "modSeamlessAdaptiveHUD": {
+        "Enabled": "1",
+        "Priority": "37"
+      },
+      "modMonsterHuntContracts": {
+        "Enabled": "1",
+        "Priority": "38"
+      },
+      "modWMCConsolidated": {
+        "Enabled": "1",
+        "Priority": "50"
+      },
+      "modWMCVisualSmoke": {
+        "Enabled": "1",
+        "Priority": "52"
+      }
+    },
+    "pins": {
+      "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\actionscript\\red\\game\\witcher3\\popups\\NotificationModule.as": "d7da229ad461eefbb728588f815a1af78973e451c497f07cc2f2a08d5cd6de85",
+      "L:\\Games\\Steam\\steamapps\\common\\The Witcher 3 REDkit\\r4data\\gameplay\\gui_new\\actionscript\\red\\game\\witcher3\\popups\\OverlayPopupMenu.as": "f3f2b54349c7d923148da20169f51bd65aa447474fa8e080378e79762d7b253c",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\scripts\\engine\\entity.ws": "a94b54d5c704df86dccf08539836f83ec8de90f395b74abb036b1c2668210bf7",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\scripts\\game\\gui\\r4guimanager.ws": "7da7120dd93b1321de8e7331cdf3ac739164733bd384fc59be875efd74a45c9d",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\content\\content0\\scripts\\game\\gui\\popups\\overlayPopup.ws": "ca953ecbb9972507c7da4a650d1c637d07c5a09628a7184176af8e767a4d578a",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\r4Game.ws": "95b7c4f31f6567f482da423e8215929383871ad2a671a91d4dc0f96e3dfc56c9",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\The Witcher 3\\Mods\\mod0000_MergedFiles\\content\\scripts\\game\\player\\r4player.ws": "eb52e8d11e6f12a05276bb9a4eb33cc1113f3f95be2226631701a99e62e4a1a9"
+    },
+    "limits": [
+      "Current disk declarations are not historical Vortex runtime status.",
+      "HUD menu behavior disabled by user is distinct from script mod Enabled flag.",
+      "REDkit ActionScript contract is source evidence; no retail call was observed.",
+      "No complete enabled-mod script cache/assembly or runtime callback proof."
+    ]
+  }
+}

@@ -1,5 +1,8 @@
 # Witcher Music Control
 
+**Current results (2026-10-23; report103):** Deployed V1 source SHA matches report101. Concrete presentation bug found in REDkit UI chain: ShowNotification uses **milliseconds**, while V1 passed4/12 intending seconds (300ms entrance tween). Distinct V2 changes only durations to4000/12000, identifiers/markers and comment; callback/timer/gates unchanged, V1 preserved. Native baseline/control/candidate exit0; exact control diagnostics; all309 tests pass. Retail callback/UI delivery and full enabled-mod assembly remain unproved. **One justified manual test: replace only old visual diagnostic with report103 V2 ZIP in Vortex, observe WMCVIS2 after an existing current-region save load, then remove V2.** No automatic install/launch, HUD/INI changes, save/music/Wwise changes or logger repeats. [Report103](research/103-visual-smoke-runtime-triage-results.md). Stop for review.
+
+
 **Retail negative visual diagnostic (report102; 2026-10-22):** User confirms `Test-Path` TRUE for deployed `Mods/modWMCVisualSmoke/content/scripts/local/wmcVisualSmoke.ws`, yet no `WMCVIS1` messages after loading an existing save; **Seamless and Adaptive HUDs disabled**. Treat report101 smoke as **failed/unproven**, not a HUD-settings question. User advised disable only WMC Visual Smoke and redeploy; preserve working audio. Codex should read-only audit installed source hash/actual merged hooks/timer/UI delivery, then at most one more diagnostic with **independent observable checkpoints**, or explicitly stop if no sound path. No native logger repeats, Wwise changes, Vortex/saves edits, auto install/run. [Report102](research/102-visual-smoke-negative-runtime-reachability-handoff.md).
 
 
