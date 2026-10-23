@@ -1,5 +1,18 @@
 # Inventory reference-fidelity finishing — separate from r7
 
+> **PAUSED — user correction, 23 October 2026.** This document is a
+> **hypothesis inventory**, NOT authorized r8 implementation scope. The user
+> objected that earlier assistant visual judgments were vague, overconfident
+> and partly incorrect. The screenshots used for those judgments were
+> obscured by a diagnostic overlay. Before editing any visuals, obtain a
+> clean full-game screenshot with F8 overlay and developer console hidden,
+> and compare it directly to the exact approved reference supplied by the
+> user. Identify specific observable discrepancies, separate evidence from
+> interpretation, and confirm priorities with the user. Do not automatically
+> implement the proposed background/lighting/typography/icons/footer edits
+> below. A dedicated r7 playtest may remain deferred; r7 was not runtime-verified.
+>
+
 23 October 2026. **Active next pass, authorized after source review of r7.** The user elects to skip a separate r7 playtest because the specific pending-title/hide cause has been removed and verified offline. Incorporate r7 details-transition testing into the r8 visual candidate's in-game test; do not label r7 runtime-confirmed.
 Keep rail/list/details/Geralt proportions and working interactions. No new
 concept, Review ledger, merchant/stash changes or global HDR/lighting adjustments.

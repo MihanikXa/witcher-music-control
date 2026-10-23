@@ -1,6 +1,34 @@
 # Codex instructions — independent Witcher 3 UI project
 
-## 23 October decision — skip isolated r7 playtest, advance to visual finishing
+## Latest user correction — visual pass requires clean evidence (23 October 2026)
+
+The user **rejects the earlier broad r8 visual-finishing handoff as premature**.
+They say the assistant's commentary was partly vague, overconfident and
+incorrect. **DO NOT start r8 code/build work yet.** A screenshot of the
+actual running Inventory with the F8 diagnostic overlay and any developer
+console hidden, compared side by side with the **exact approved reference**,
+must come first. The previously reviewed r6 screenshots show a large debug
+overlay obscuring meaningful proportions/text/background. The assistant's
+guesses about background, Geralt lighting, icon quality, tooltip design and
+footer simplification are **NOT approved defects** and must not be used as
+automatic Codex implementation tasks.
+
+Request one clean 16:9 (or original native-aspect) screenshot with a real
+selected item, unmodified/uncropped where possible, preferably from the
+already working setup. The original approved reference image is already
+user-supplied. Compare observed components **directly**, annotate regions,
+explicitly separate fact from inference and ask for the user's concrete
+priorities. No source change solely because something differs aesthetically.
+Protect approved layout, proportions, working actions, existing gold notch,
+r7 source fix and HUD/Menus baseline. The user is content to skip a
+standalone r7 run; that does NOT authorize speculative visual edits or
+count as r7 runtime acceptance.
+
+After the screenshot comparison and user agreement, replace the earlier
+tentative finishing plan with a **specific evidence-based bounded patch**.
+No automatic game/Vortex/save/config/Script Merger changes.
+
+## Historical decision — skip isolated r7 playtest, advance to visual finishing
 
 The user explicitly accepts moving to the **next visual-finishing pass without
 a dedicated interim r7 playtest**, provided the transition fix is obvious
