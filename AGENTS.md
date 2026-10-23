@@ -1,5 +1,18 @@
 # Codex instructions — independent Witcher 3 UI project
 
+## 23 October r7 — pending runtime transition verification
+
+R6 user confirms previous functional faults work; r7 removes the separate generic
+pending title and retains the formatted tooltip until a current-ID/current-serial
+payload commits. Duplicate/zero-ID replies are rejected; Browse focus return no
+longer forces unchanged details. Only MenuInventory/TooltipInventory change;
+actions, selected row/notch and r6 input remain intact. See
+[r7 transition receipt](research/inventory-approved-unified-p1-r7-details-transition.md).
+Sixteen offline tests and controlled reconstruction are not native rendering or
+flicker acceptance. Next: same-save rapid-selection 60fps recording, equip and
+category/Details round-trip. Visual finishing is a [separate plan](design/inventory-visual-finishing-after-r7.md),
+not implemented in r7. No live install/settings/save/merge edits.
+
 ## Latest user-confirmed functionality; details transition flicker — 22 October 2026
 
 User now says **"Everything that was faulty works now"**, and provides two

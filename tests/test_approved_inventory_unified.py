@@ -5,6 +5,10 @@ ROOT=Path(__file__).resolve().parents[1]
 def load(name):
     s=importlib.util.spec_from_file_location(name,ROOT/'tools'/(name+'.py'));m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
 class UnifiedInventory(unittest.TestCase):
+    def test_retained_details_transition_and_stale_payloads(self):
+        r=load("verify-approved-inventory-details-transition").checks()
+        self.assertTrue(r["r6_negative_control"]);self.assertEqual(r["rapid_selection_events"],120)
+        self.assertFalse(r["native_engine_executed"])
     def test_selected_row_visible_without_native_active_flag(self):
         r=load("verify-approved-inventory-row-selection").checks()
         self.assertTrue(r["r5_negative_control"]);self.assertFalse(r["native_engine_executed"])
@@ -87,6 +91,7 @@ class UnifiedInventory(unittest.TestCase):
         if (ROOT/'build/approved-inventory-runtime-diagnostic-r4/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r4'
         if (ROOT/'build/approved-inventory-runtime-diagnostic-r5/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r5'
         if (ROOT/'build/approved-inventory-runtime-diagnostic-r6/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r6'
+        if (ROOT/'build/approved-inventory-runtime-diagnostic-r7/receipt.json').exists():out=ROOT/'build/approved-inventory-runtime-diagnostic-r7'
         if not (out/'receipt.json').exists():self.skipTest('Private diagnostic assets not available')
         d=json.loads((out/'receipt.json').read_text());source=(b.BASE/'prepared-inputs'/b.KEY).read_bytes();data=(out/'prepared-inputs'/b.KEY).read_bytes()
         native=b.b.b.m.b.font.native

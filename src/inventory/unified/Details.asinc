@@ -2,7 +2,8 @@
       protected var aiItem:uint=0;
       public function aiPending(id:uint,name:String) : void
       {
-         if(aiItem!=id){visible=false;iaiScr=0;}
+         // Retain the last complete panel, including scroll, until aiPresent.
+         // This compatibility hook must not alter visible content while pending.
       }
       public function aiPresent(value:Object,rect:Rectangle) : void
       {

@@ -8,7 +8,6 @@
       protected var aiRail:Array = [];
       protected var aiHeader:TextField;
       protected var aiEmpty:TextField;
-      protected var aiPendingName:TextField;
       protected var aiScroll:Shape;
       protected var aiFocusMark:Shape;
       protected var aiNavOwners:Object={};
@@ -66,7 +65,6 @@
          }
          aiHeader=aiText(aiScene,"",365,158,340,20,0xD7D0C2);
          aiEmpty=aiText(aiScene,"No items in this category",385,240,310,19,0xA29F96);aiEmpty.visible=false;
-         aiPendingName=aiText(aiScene,"",761,228,435,32,0xD7D0C2);
          aiScroll=new Shape();aiScene.addChild(aiScroll);
          aiFocusMark=new Shape();aiScene.addChild(aiFocusMark);
          aiEvidence("rail.icons.begin");aiConfigureRailIcons();aiEvidence("rail.icons.end");
@@ -219,13 +217,12 @@
       {
          if(aiFocus==3 || aiSuspended)return;
          var d:Object=mcPlayerInventory.mcPlayerGrid.aiSelected();
-         if(!d){aiCurrentID=0;aiPendingName.text="";aiTip.visible=false;return;}
+         if(!d){aiCurrentID=0;aiTip.visible=false;return;}
          var id:uint=uint(d.id);
          if(force || aiCurrentID!=id)
          {
-            aiPendingName.text=aiCurrentID!=id||!aiTip.visible?String(d.itemName || ""):"";
             aiCurrentID=id;
-            aiTip.aiPending(aiCurrentID,String(d.itemName||""));
+            // Logical selection changes now; retained formatted details commit later.
             dispatchEvent(new GameEvent(GameEvent.CALL,"OnApprovedDetails",[id,++aiRequestSerial]));
             SlotBase.aiLog("details-request",String(id)+"/"+String(aiRequestSerial));
          }
@@ -233,8 +230,8 @@
       protected function aiPayloadApply(e:Event) : void
       {
          var payload:Object=ContextInfoManager.aiPayload;
-         if(!aiActive || !payload || uint(payload.ItemId)!=aiCurrentID || int(payload.aiRequestSerial)!=aiRequestSerial){SlotBase.aiLog("stale-payload");return;}
-         aiTip.aiPresent(payload,aiDetailsRect);aiPendingName.text="";
+         if(!aiActive || !aiCurrentID || !payload || uint(payload.ItemId)!=aiCurrentID || int(payload.aiRequestSerial)!=aiRequestSerial || aiPayloadRevision==aiRequestSerial){SlotBase.aiLog("stale-payload");return;}
+         aiTip.aiPresent(payload,aiDetailsRect);aiPayloadRevision=aiRequestSerial;
          if(aiFocus==3||aiSuspended||aiTargetState)aiTip.visible=false;
          SlotBase.aiLog("details-payload",String(payload.ItemId));
       }
@@ -263,7 +260,7 @@
          aiPaintRail();aiHeader.textColor=mode==1?0xCAA469:0xA29F96;
          aiFocusMark.graphics.clear();
          if(mode==2){aiFocusMark.graphics.lineStyle(1.6,0xB48C44,1);aiFocusMark.graphics.moveTo(aiDetailsRect.x-8,aiDetailsRect.y+16);aiFocusMark.graphics.lineTo(aiDetailsRect.x-8,aiDetailsRect.y+85);}
-         if(mode==1)aiSelectData(true);
+         if(mode==1)aiSelectData(false);
       }
       protected function aiDevice(e:ControllerChangeEvent) : void
       {
@@ -366,7 +363,6 @@
             mcCharacterRenderer.mask=stats?aiBase.mask:aiModelMask;
             aiScene.visible=!stats;mcPlayerInventory.mcPlayerGrid.visible=!stats&&!targets;
             aiTip.visible=!stats&&!targets&&!sorting&&aiCurrentID!=0;
-            aiPendingName.visible=!stats&&!targets;
             mcPaperDollModule.aiTargets(new Rectangle(365,200,830,720),!stats&&targets);
             if(!stats&&!targets&&aiFocus==1)aiFocusList();
             if(sorting)setChildIndex(mcSortingMode,numChildren-1);
