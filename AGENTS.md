@@ -1,6 +1,32 @@
 # Codex instructions — independent Witcher 3 UI project
 
-## 23 October r7 — pending runtime transition verification
+## 23 October decision — skip isolated r7 playtest, advance to visual finishing
+
+The user explicitly accepts moving to the **next visual-finishing pass without
+a dedicated interim r7 playtest**, provided the transition fix is obvious
+and adequately verified. The latest r7 source review confirms the former
+generic white pending title and explicit tooltip hide were removed; only
+`MenuInventory` and `TooltipInventory` changed, tests reproduce the old
+failure and exercise rapid/out-of-order requests. **This is strong source
+evidence, NOT a claim of r7 in-game acceptance or full frame atomicity.**
+
+**Active next work: one rollbackable r8 visual-fidelity candidate** grounded
+in `design/inventory-visual-finishing-after-r7.md` and the user-approved
+reference image. Keep the r7 retained-details logic and r6 working actions;
+do not block on separately installing/testing r7. Test both visual changes
+AND r7 rapid details transitions in the r8 in-game acceptance. Do not
+restart a structural redesign or add Review acquisition ledger/QoL mods.
+
+Visual priorities: (1) cohesive restrained Inventory-only background and
+grounding without harsh rectangular fills, keeping approved regions/Geralt
+relative scale; (2) Gentium native-tooltip/item-row typography incl. clipped
+rarity field and hierarchy; (3) reliable small category icons without
+premature native SlotPaperdoll lookup #1009; (4) one restrained mode-/device-
+sensitive footer without losing any native actions/Drop access. Keep
+changes bounded, source-owned and regression-testable. No automatic live
+Vortex/game/settings/save/merge edits. No claim of final visual approval.
+
+## Previous 23 October r7 — transition correction
 
 R6 user confirms previous functional faults work; r7 removes the separate generic
 pending title and retains the formatted tooltip until a current-ID/current-serial

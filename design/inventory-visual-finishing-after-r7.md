@@ -1,6 +1,6 @@
 # Inventory reference-fidelity finishing — separate from r7
 
-23 October 2026. Plan only; implement after the user verifies r7 transitions.
+23 October 2026. **Active next pass, authorized after source review of r7.** The user elects to skip a separate r7 playtest because the specific pending-title/hide cause has been removed and verified offline. Incorporate r7 details-transition testing into the r8 visual candidate's in-game test; do not label r7 runtime-confirmed.
 Keep rail/list/details/Geralt proportions and working interactions. No new
 concept, Review ledger, merchant/stash changes or global HDR/lighting adjustments.
 
@@ -43,9 +43,12 @@ into the rail. No full Inventory replacement resource from a QoL mod.
 
 ## Implementation order and review gate
 
-1. Accept r7 with a rapid-selection recording; keep its source/resource baseline.
-   Capture controller and mouse screenshots with diagnostic overlay off. Do not
-   conceal a remaining transition behind typography changes.
+1. Start from r7 directly; a standalone r7 install/test is **not a prerequisite**.
+   Preserve r7's retained-tooltip source and verified baseline. First test of
+   rapid selections and details stability will occur in the r8 candidate
+   alongside visual acceptance. For source comparison, use the user's existing
+   r6 screenshots and the exact approved concept; keep debug overlays off in
+   visual comparison. Do not conceal a possible residual transition behind typography changes.
 2. Produce one measured comparison at 1672×941 or proportional 1080p/4K, using
    both sparse save and populated fixture; freeze outer region bounds. Record
    typography/rarity and background corrections as concrete source owners.
